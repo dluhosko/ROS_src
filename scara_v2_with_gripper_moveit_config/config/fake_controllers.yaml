@@ -1,0 +1,6 @@
+controller_list:
+  - name: fake_SENSO_SCARA_controller
+    joints:
+      - Joint1
+      - Joint2
+      - Joint_GripperBase

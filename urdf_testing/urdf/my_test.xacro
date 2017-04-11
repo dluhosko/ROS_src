@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot name="miro">
+
+
+    <link name ="world"/>
+
+    <joint name="base_to_world" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0.5"/>
+        <axis xyz = "1 0 0"></axis>
+    </joint>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size = " 1 1 1"/>
+            </geometry>
+            <origin xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="rameno1_to_base" type="continuous">
+        <parent link="base_link"/>
+        <child link="rameno1"/>
+        <origin xyz="0 0 0.5"/>
+        <axis xyz = "0 0 1"></axis>
+    </joint>
+
+    <link name="rameno1">
+        <visual>
+            <geometry>
+                <cylinder length="1" radius="0.2"/>
+            </geometry>
+            <origin xyz="0 0 0.5"/>
+        </visual>
+    </link>
+
+
+
+    <joint name="rameno2_to_rameno1" type="continuous">
+        <parent link="rameno1"/>
+        <child link="rameno2"/>
+        <origin xyz="0 0 1"/>
+        <axis xyz = "1 0 0"></axis>
+    </joint>
+
+    <link name="rameno2">
+        <visual>
+            <geometry>
+                <cylinder length="1" radius="0.2"/>
+            </geometry>
+            <origin xyz="0 0 0.5"/>
+        </visual>
+    </link>
+
+
+
+
+
+
+
+</robot>
