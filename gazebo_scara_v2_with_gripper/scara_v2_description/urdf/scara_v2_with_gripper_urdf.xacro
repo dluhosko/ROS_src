@@ -8,7 +8,6 @@
     <!-- Import all Gazebo-customization elements, including Gazebo colors -->
     <xacro:include filename="$(find scara_v2_description)/urdf/scara_v2_with_gripper.gazebo" />
     <!-- ****************************************************************  -->
-
     <!--        Import Material colors        -->
     <xacro:include filename="$(find scara_v2_description)/urdf/materials.xacro" />
     <!-- ***********************************  -->
@@ -23,7 +22,6 @@
         <child link="BaseBox"/>
         <origin xyz="0 0 0.965" rpy="0 0 0" />
         <axis xyz="1 0 0" />
-
     </joint>
 
     <!--           TABLE             -->
@@ -31,9 +29,9 @@
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass value="1" />
-            <inertia ixx="1" ixy="0" ixz="0"
-                    iyy="1" iyz="0"
-                    izz="1" />
+            <inertia ixx="0.01" ixy="0.01" ixz="0.01"
+                    iyy="0.01" iyz="0"
+                    izz="0.01" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -54,10 +52,10 @@
     <link name="CentralStop1">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <mass value="0" />
-            <inertia ixx="1" ixy="0" ixz="0"
-                    iyy="1" iyz="0"
-                    izz="1" />
+            <mass value="1" />
+            <inertia ixx="0.01" ixy="0.01" ixz="0.01"
+                     iyy="0.01" iyz="0.01"
+                     izz="0.01" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -85,9 +83,9 @@
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass value="1" />
-            <inertia ixx="1" ixy="0" ixz="0"
-                    iyy="1" iyz="0"
-                    izz="1" />
+            <inertia ixx="0.01" ixy="0.01" ixz="0.01"
+                     iyy="0.01" iyz="0.01"
+                     izz="0.01" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -119,9 +117,9 @@
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass value="1" />
-            <inertia ixx="1" ixy="0" ixz="0"
-                     iyy="1" iyz="0"
-                     izz="1" />
+            <inertia ixx="0.01" ixy="0.01" ixz="0.01"
+                     iyy="0.01" iyz="0.01"
+                     izz="0.01" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -138,11 +136,12 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint_ScaraBase" type="fixed">
+    <joint name="Joint_ScaraBase" type="revolute">
         <parent link="BaseBox" />
         <child link="ScaraBase" />
         <origin xyz="0.212 0.58 0.141"  rpy="1.5708 0 0" />
         <axis  xyz="1 0 0" />
+        <limit effort="0" lower="0" upper="0" velocity="0"/>
     </joint>
 
 
@@ -178,7 +177,7 @@
         <child link="ScaraLink1" />
         <origin xyz="0 0.051 0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
-        <limit effort="0" lower="-1.57079" upper="1.57079" velocity="0"/>
+        <limit effort="1000" lower="-1.57079" upper="1.57079" velocity="0"/>
     </joint>
 
 
@@ -212,116 +211,117 @@
         <child link="ScaraLink2" />
         <origin xyz="0.24972 -0.081 0" rpy="3.14 -1.5708 0" />
         <axis xyz="0 1 0" />
-        <limit effort="0" lower="-2.65" upper="2.65" velocity="0"/>
+        <limit effort="1000" lower="-2.65" upper="2.65" velocity="0"/>
     </joint>
     <!--**********************************-->
 
 
 
     <!--     GRIPPER JOINTS DEFINITION    -->
-    <link name="GripperBase">
-        <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <mass  value="1" />
-            <inertia  ixx="1E-6" ixy="0" ixz="0"
-                    iyy="1E-6" iyz="0"
-                    izz="1E-6" />
-        </inertial>
-        <visual>
-            <origin  xyz="0 0 0"  rpy="0 0 0" />
-            <geometry>
-                <mesh filename="package://scara_v2_with_gripper/meshes/GripperBase.STL" />
-            </geometry>
-            <material name="sensoDarkGray">
-               <!-- <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />-->
-            </material>
-        </visual>
-        <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <geometry>
-                <mesh filename="package://scara_v2_with_gripper/meshes/GripperBase.STL" />
-            </geometry>
-        </collision>
-    </link>
-    <joint name="Joint_GripperBase" type="prismatic">
-        <parent link="ScaraLink2" />
-        <child link="GripperBase" />
-        <origin xyz="0 -0.0424 0.24305" rpy="3.1416 0 3.1416" />
-        <axis xyz="0 1 0" />
-        <limit effort="1000.0" lower="-0.03" upper="0.03" velocity="1"/>
-    </joint>
+    <!--
+     <link name="GripperBase">
+         <inertial>
+             <origin xyz="0 0 0" rpy="0 0 0" />
+             <mass  value="1" />
+             <inertia  ixx="1E-6" ixy="0" ixz="0"
+                     iyy="1E-6" iyz="0"
+                     izz="1E-6" />
+         </inertial>
+         <visual>
+             <origin  xyz="0 0 0"  rpy="0 0 0" />
+             <geometry>
+                 <mesh filename="package://scara_v2_with_gripper/meshes/GripperBase.STL" />
+             </geometry>
+             <material name="sensoDarkGray">
+             </material>
+         </visual>
+         <collision>
+             <origin xyz="0 0 0" rpy="0 0 0" />
+             <geometry>
+                 <mesh filename="package://scara_v2_with_gripper/meshes/GripperBase.STL" />
+             </geometry>
+         </collision>
+     </link>
+     <joint name="Joint_GripperBase" type="prismatic">
+         <parent link="ScaraLink2" />
+         <child link="GripperBase" />
+         <origin xyz="0 -0.0424 0.24305" rpy="3.1416 0 3.1416" />
+         <axis xyz="0 1 0" />
+         <limit effort="1000.0" lower="-0.03" upper="0.03" velocity="1"/>
+     </joint>
 
 
 
-    <link name="GripperLeft">
-        <inertial>
-            <origin  xyz="0 0 0"  rpy="3.14 0 0" />
-            <mass value="1" />
-            <inertia ixx="1E-6"  ixy="0" ixz="0"
-                    iyy="1E-6" iyz="0"
-                    izz="1E-6" />
-        </inertial>
-        <visual>
-            <origin xyz="0 0 0" rpy="3.14 0 0" />
-            <geometry>
-                <mesh filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />
-            </geometry>
-            <material name="sensoDarkGray">
-            </material>
-        </visual>
-        <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <geometry>
-                <mesh  filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />
-            </geometry>
-        </collision>
-    </link>
-    <joint name="Joint_Gripper" type="prismatic">
-        <parent link="GripperBase" />
-        <child link="GripperLeft" />
-        <origin xyz="-0.0162 0.0984 0" rpy="3.1416 0 0" />
-        <axis xyz="1 0 0" />
-        <limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>
-    </joint>
+     <link name="GripperLeft">
+         <inertial>
+             <origin  xyz="0 0 0"  rpy="3.14 0 0" />
+             <mass value="1" />
+             <inertia ixx="1E-6"  ixy="0" ixz="0"
+                     iyy="1E-6" iyz="0"
+                     izz="1E-6" />
+         </inertial>
+         <visual>
+             <origin xyz="0 0 0" rpy="3.14 0 0" />
+             <geometry>
+                 <mesh filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />
+             </geometry>
+             <material name="sensoDarkGray">
+             </material>
+         </visual>
+         <collision>
+             <origin xyz="0 0 0" rpy="0 0 0" />
+             <geometry>
+                 <mesh  filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />
+             </geometry>
+         </collision>
+     </link>
+     <joint name="Joint_Gripper" type="prismatic">
+         <parent link="GripperBase" />
+         <child link="GripperLeft" />
+         <origin xyz="-0.0162 0.0984 0" rpy="3.1416 0 0" />
+         <axis xyz="1 0 0" />
+         <limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>
+     </joint>
 
 
 
 
-    <link name="GripperRight">
-        <inertial>
-            <origin   xyz="0 0 0" rpy="3.14 0 0" />
-            <mass value="1" />
-            <inertia  ixx="1E-6"  ixy="0" ixz="0"
-                    iyy="1E-6" iyz="0"
-                    izz="1E-6" />
-        </inertial>
-        <visual>
-            <origin  xyz="0 0 0"  rpy="3.14 0 0" />
-            <geometry>
-                <mesh filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />
-            </geometry>
-            <material name="sensoDarkGray">
-            </material>
-        </visual>
-        <collision>
-            <origin  xyz="0 0 0" rpy="0 0 0" />
-            <geometry>
-                <mesh  filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />
-            </geometry>
-        </collision>
-    </link>
-    <joint name="Joint_GripperRight" type="prismatic">
-        <parent link="GripperBase" />
-        <child link="GripperRight" />
-        <origin  xyz="0.0165 0.0984 0" rpy="3.1416 0 3.1416" />
-        <axis  xyz="1 0 0" />
-        <limit effort="1000.0" lower="-0.003" upper="0.003" velocity="1"/>
-        <mimic joint="Joint_Gripper" multiplier="1" offset="0" />
-    </joint>
+     <link name="GripperRight">
+         <inertial>
+             <origin   xyz="0 0 0" rpy="3.14 0 0" />
+             <mass value="1" />
+             <inertia  ixx="1E-6"  ixy="0" ixz="0"
+                     iyy="1E-6" iyz="0"
+                     izz="1E-6" />
+         </inertial>
+         <visual>
+             <origin  xyz="0 0 0"  rpy="3.14 0 0" />
+             <geometry>
+                 <mesh filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />
+             </geometry>
+             <material name="sensoDarkGray">
+             </material>
+         </visual>
+         <collision>
+             <origin  xyz="0 0 0" rpy="0 0 0" />
+             <geometry>
+                 <mesh  filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />
+             </geometry>
+         </collision>
+     </link>
+     <joint name="Joint_GripperRight" type="prismatic">
+         <parent link="GripperBase" />
+         <child link="GripperRight" />
+         <origin  xyz="0.0165 0.0984 0" rpy="3.1416 0 3.1416" />
+         <axis  xyz="1 0 0" />
+         <limit effort="1000.0" lower="-0.003" upper="0.003" velocity="1"/>
+         <mimic joint="Joint_Gripper" multiplier="1" offset="0" />
+     </joint>
+     -->
 
 
 
-    <!--     Transmision definitions      -->
+     <!--     Transmision definitions      -->
     <transmission name="tran1">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Joint1">
@@ -329,7 +329,7 @@
         </joint>
         <actuator name="motor1">
             <hardwareInterface>EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
+            <mechanicalReduction>1000</mechanicalReduction>
         </actuator>
     </transmission>
 
@@ -340,10 +340,10 @@
         </joint>
         <actuator name="motor2">
             <hardwareInterface>EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
+            <mechanicalReduction>1000</mechanicalReduction>
         </actuator>
     </transmission>
-
+    <!--
     <transmission name="tran3">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Joint_GripperBase">
@@ -351,7 +351,7 @@
         </joint>
         <actuator name="motor3">
             <hardwareInterface>EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
+            <mechanicalReduction>1000</mechanicalReduction>
         </actuator>
     </transmission>
 
@@ -362,9 +362,10 @@
         </joint>
         <actuator name="motor4">
             <hardwareInterface>EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
+            <mechanicalReduction>1000</mechanicalReduction>
         </actuator>
     </transmission>
+    -->
     <!-- ***************************** -->
 
 

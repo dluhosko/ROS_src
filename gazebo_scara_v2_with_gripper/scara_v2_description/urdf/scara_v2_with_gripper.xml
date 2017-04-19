@@ -5,7 +5,7 @@
     <!-- Import all Gazebo-customization elements, including Gazebo colors -->
     <gazebo>
         <plugin filename="libgazebo_ros_control.so" name="ros_control">
-            <robotNamespace>/rrbot</robotNamespace>
+            <robotNamespace>/scara_v2</robotNamespace>
         </plugin>
     </gazebo>
 
@@ -38,6 +38,7 @@
     <!-- *************************** -->
 
     <!--___________GRIPPER____________-->
+    <!--
     <gazebo reference="GripperBase">
         <material>Gazebo/Orange</material>
         <mu1>0.2</mu1>
@@ -53,6 +54,7 @@
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
+    -->
     <!-- *************************** -->
 
 
@@ -287,6 +289,7 @@
 
 
     <!--________________GRIPPER JOINTS DEFINITION________________ -->
+    <!--
     <link name="GripperBase">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -386,6 +389,7 @@
         <mimic joint="Joint_Gripper" multiplier="1" offset="0" />
         <dynamics damping="0.7"/>
     </joint>
+    -->
     <!--***********************************************************-->
 
 
@@ -411,7 +415,7 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
-
+    <!--
     <transmission name="tran3">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Joint_GripperBase">
@@ -433,6 +437,7 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
+    -->
     <!-- ***************************** -->
 
 
