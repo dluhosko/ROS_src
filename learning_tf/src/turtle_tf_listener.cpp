@@ -26,10 +26,10 @@ int main(int argc, char** argv){
     ros::Time now = ros::Time::now();
     ros::Time past = now - ros::Duration(5.0);
     listener.waitForTransform("/turtle2", now,
-                              "/turtle1", past,
+                              "/carrot1", past,
                               "/world", ros::Duration(1.0));
     listener.lookupTransform("/turtle2", now,
-                             "/turtle1", past,
+                             "/carrot1", past,
                              "/world", transform);
     }
     catch (tf::TransformException &ex) {
