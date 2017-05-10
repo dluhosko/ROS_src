@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot  name="scara_v2_with_gripper">
+<robot  name="scara_v2" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <!--  Material Color definitions -->
     <material name="white">
@@ -27,6 +27,13 @@
         <color rgba="0.156863 0.156863 0.156863 1 "/>
     </material>
     <!--****************************-->
+
+    <!--**********MACROS************-->
+    <xacro:property name="DEG2RAD" value="0.01745329252" />
+    <xacro:property name="RED2DEG" value="57.295779513" />
+
+    <!--****************************-->
+
 
 
 
@@ -199,7 +206,8 @@
         <child link="ScaraLink1" />
         <origin xyz="0 0.051 0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
-        <limit effort="0" lower="-1.57079" upper="1.57079" velocity="0"/>
+        <!--<limit effort="0" lower="-1.57079" upper="1.57079" velocity="0"/>-->
+        <limit effort="0" lower="${-85*DEG2RAD}" upper="${85*DEG2RAD}" velocity="0"/>
     </joint>
 
 
@@ -234,7 +242,8 @@
         <child link="ScaraLink2" />
         <origin xyz="0.24972 -0.081 0" rpy="3.14 -1.5708 0" />
         <axis xyz="0 1 0" />
-        <limit effort="0" lower="-2.65" upper="2.65" velocity="0"/>
+        <!--<limit effort="0" lower="-2.65" upper="2.65" velocity="0"/>-->
+        <limit effort="0" lower="${-170*DEG2RAD}" upper="${170*DEG2RAD}" velocity="0"/>
     </joint>
     <!--**********************************-->
 
@@ -272,6 +281,14 @@
         <axis xyz="0 1 0" />
         <limit effort="1000.0" lower="-0.03" upper="0.03" velocity="1"/>
     </joint>
+
+    <joint name="Base_to_tool0" type="fixed">
+        <parent link="GripperBase" />
+        <child link="tool0" />
+        <origin xyz="0 0.0984 0" rpy="0 0 0 " />
+    </joint>
+
+    <link name="tool0"/>
 
 
 
@@ -339,7 +356,7 @@
         <child link="GripperRight" />
         <origin  xyz="0.0165 0.0984 0" rpy="3.1416 0 3.1416" />
         <axis  xyz="1 0 0" />
-        <limit effort="1000.0" lower="-0.003" upper="0.003" velocity="1"/>
-        <mimic joint="Joint_Gripper" multiplier="1" offset="0" />
+        <limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>
+        <!--<mimic joint="Joint_Gripper" multiplier="1" offset="0" />-->
     </joint>
 </robot>

@@ -6,5 +6,5 @@ moveit_setup_assistant_config:
     relative_path: config/scara_v2_with_gripper.srdf
   CONFIG:
     author_name: Viktor Dluhos
-    author_email: viktordluhos@gmail.com
-    generated_timestamp: 1493813154
+    author_email: gg@stuba.sk
+    generated_timestamp: 1494446118

@@ -5,8 +5,8 @@
   <description>
      An automatically generated package with all the configuration and launch files for using the scara_v2_with_gripper with the MoveIt! Motion Planning Framework
   </description>
-  <author email="viktordluhos@gmail.com">Viktor Dluhos</author>
-  <maintainer email="viktordluhos@gmail.com">Viktor Dluhos</maintainer>
+  <author email="gg@stuba.sk">Viktor Dluhos</author>
+  <maintainer email="gg@stuba.sk">Viktor Dluhos</maintainer>
 
   <license>BSD</license>
 

@@ -4,3 +4,6 @@ controller_list:
       - Joint1
       - Joint2
       - Joint_GripperBase
+  - name: fake_gripper_controller
+    joints:
+      - Joint_Gripper

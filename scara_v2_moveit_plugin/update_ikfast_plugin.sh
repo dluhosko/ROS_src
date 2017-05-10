@@ -1,0 +1,1 @@
+rosrun moveit_kinematics create_ikfast_moveit_plugin.py scara_v2 scara_arm scara_v2_moveit_plugin /home/viktor/catkin_ws/src/scara_v2_moveit_plugin/src/scara_v2_scara_arm_ikfast_solver.cpp

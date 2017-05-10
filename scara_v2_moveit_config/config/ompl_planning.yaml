@@ -145,3 +145,5 @@ scara_arm:
     - LazyPRMstarkConfigDefault
     - SPARSkConfigDefault
     - SPARStwokConfigDefault
+  projection_evaluator: joints(Joint1,Joint2)
+  longest_valid_segment_fraction: 0.005
