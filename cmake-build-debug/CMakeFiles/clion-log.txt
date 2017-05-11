@@ -24,7 +24,7 @@
 -- ~~  - scara_v2_moveit_config
 -- ~~  - gazebo_msgs
 -- ~~  - matlabtalker
--- ~~  - scara_v2_custom_msgs
+-- ~~  - scara_msgs
 -- ~~  - senso_scara
 -- ~~  - gazebo_ros
 -- ~~  - gazebo_tutorials
@@ -64,9 +64,18 @@
 -- gazebo_msgs: 9 messages, 20 services
 -- +++ processing catkin package: 'matlabtalker'
 -- ==> add_subdirectory(matlabtalker)
--- +++ processing catkin package: 'scara_v2_custom_msgs'
--- ==> add_subdirectory(scara_v2_custom_msgs)
+-- +++ processing catkin package: 'scara_msgs'
+-- ==> add_subdirectory(scara_msgs)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Boost version: 1.58.0
+-- Found the following Boost libraries:
+--   system
+--   filesystem
+--   date_time
+--   thread
+--   chrono
+--   atomic
+-- scara_msgs: 1 messages, 0 services
 -- +++ processing catkin package: 'senso_scara'
 -- ==> add_subdirectory(senso_scara)
 -- +++ processing catkin package: 'gazebo_ros'
@@ -268,7 +277,7 @@ Call Stack (most recent call first):
 
 -- scara_v2_with_gripper_moveit_config: 0 messages, 0 services
 -- Configuring done
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:68 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:69 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -277,16 +286,16 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:68 (add_dependencies):
   "listener" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:59 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:61 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
 
-  The dependency target "beginner_tutorials_generate_messages_cpp" of target
+  The dependency target "{scara_v2_moveit_api_EXPORTED_TARGETS}" of target
   "move_group_interface3_PICKandPLACE" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:64 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:65 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.

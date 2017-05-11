@@ -12,8 +12,9 @@
 #include <visualization_msgs/Marker.h>
 #include "std_msgs/String.h"
 #include <sstream>
-//#include "scara_v2_moveit_api/"
-//#include "scara_v2_moveit_api/pose_and_gripperState.h"
+//#include "scara_v2_moveit_api/pose_and_gripperState.msg"
+//#include "std_msgs/"
+#include "scara_v2_moveit_api/pose_and_gripperState.h"
 
 
 
@@ -34,20 +35,20 @@ void setDesiredAngles (){
     joint_group_positions[0][1] = 0;
     joint_group_positions[0][2] = -0.003;
 
-    //work position
+    //pick position
     joint_group_positions[1][0] = -45;
     joint_group_positions[1][1] = 45;
-    joint_group_positions[1][2] = 0.0025;
+    joint_group_positions[1][2] = 0.00;
 
-    //gripper place pos
+    //work position
     joint_group_positions[2][0] = -20;
     joint_group_positions[2][1] = -60;
-    joint_group_positions[2][2] = 0.0025;
+    joint_group_positions[2][2] = 0.0;
 
-    //home pos
+    //place position
     joint_group_positions[3][0] = 75;
     joint_group_positions[3][1] = 60;
-    joint_group_positions[3][2] = -0.003;
+    joint_group_positions[3][2] = 0.01;
     ROS_INFO("Vector filled up");
 
 }
@@ -75,8 +76,6 @@ void pick(moveit::planning_interface::MoveGroupInterface &group){
 
 }
 void place(moveit::planning_interface::MoveGroupInterface &group){
-
-
 }
 
 void jointControll (moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan my_plan,  double joint1_in_DEG, double joint2_in_DEG, double joint3_in_m){
@@ -126,11 +125,11 @@ geometry_msgs::Pose getTargetCoordinates (moveit::planning_interface::MoveGroupI
 
 int main(int argc, char **argv){
 
-
     int counter = 0;
     bool success;
     static const std::string PLANNING_GROUP = "scara_arm";
     //static const std::string PLANNING_GROUP = "left_gripper";
+    geometry_msgs::Pose target_pose1;
 
     geometry_msgs::PoseStamped ws1;
     moveit::planning_interface::MoveGroupInterface::Plan my_plan;
@@ -138,7 +137,7 @@ int main(int argc, char **argv){
 
     setDesiredAngles();
     ros::init(argc, argv, "PICK_and_PLACE");
-    ros::NodeHandle n;
+    ros::NodeHandle n, nn;
     ros::Rate r(2);
     ros::AsyncSpinner spinner(1);
     spinner.start();
@@ -151,11 +150,19 @@ int main(int argc, char **argv){
     const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
 
     ros::Publisher gripperState_pub = n.advertise<std_msgs::String>("gripper_state_topic", 1000);
+    ros::Publisher grip_topic_pub =  nn.advertise<scara_v2_moveit_api::pose_and_gripperState>("gripper_state", 1000);
 
+    scara_v2_moveit_api::pose_and_gripperState gripperStates;
+    gripperStates.gripperState = false;
+    gripperStates.posX = 0.0;
+    gripperStates.posY = 0.0;
+    gripperStates.posZ = 0.0;
 
 
     while (ros::ok()) {
-        std_msgs::String msg;
+
+        //Get current pose of tool0
+        target_pose1 = getTargetCoordinates(&move_group);
 
         //move to WS1
         current_state = move_group.getCurrentState();
@@ -165,25 +172,27 @@ int main(int argc, char **argv){
             jointControll(&move_group,my_plan, joint_group_positions[counter][0],joint_group_positions[counter][1],joint_group_positions[counter][2]);
             ROS_INFO("Desired joint values : %f  %f  %f", joint_group_positions[counter][0],joint_group_positions[counter][1],joint_group_positions[counter][2]);
             if (counter == 1){
-                msg.data = "gripperPick" ;
-                gripperState_pub.publish(msg);
-                ROS_INFO ("Gripper Pick!");
+                ROS_INFO ("Gripper Pick! and publish");
+                gripperStates.gripperState = true;
+                gripperStates.posX = target_pose1.position.x;
+                gripperStates.posY = target_pose1.position.y;
+                gripperStates.posZ = target_pose1.position.z;
+                grip_topic_pub.publish(gripperStates);
             }
             counter++;
         } else{
             counter = 0 ;
-            msg.data = "gripperPlace" ;
-            gripperState_pub.publish(msg);
-            ROS_INFO ("Gripper Place!");
+            ROS_INFO ("Gripper Place! and publish");
+            gripperStates.gripperState = false;
+            gripperStates.posX = target_pose1.position.x;
+            gripperStates.posY = target_pose1.position.y;
+            gripperStates.posZ = target_pose1.position.z;
+            grip_topic_pub.publish(gripperStates);
         }
-
-
-        //Get WS coordinates
-        geometry_msgs::Pose target_pose1;
-        target_pose1 = getTargetCoordinates(&move_group);
-
-        sleep(5);
+        sleep(3);
     }
+
+
 
     return 0;
 }

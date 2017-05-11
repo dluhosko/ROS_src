@@ -120,56 +120,19 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        BaseBox:
-          Value: true
-        CentralStop1:
-          Value: true
-        CentralStop2:
-          Value: true
-        GripperBase:
-          Value: true
-        GripperLeft:
-          Value: true
-        GripperRight:
-          Value: true
-        ScaraBase:
-          Value: true
-        ScaraLink1:
-          Value: true
-        ScaraLink2:
-          Value: true
-        tool0:
-          Value: true
-        world:
-          Value: true
       Marker Scale: 0.200000003
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        world:
-          BaseBox:
-            CentralStop1:
-              {}
-            CentralStop2:
-              {}
-            ScaraBase:
-              ScaraLink1:
-                ScaraLink2:
-                  GripperBase:
-                    GripperLeft:
-                      {}
-                    GripperRight:
-                      {}
-                    tool0:
-                      {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -194,24 +157,24 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.16710186
+      Distance: 1.29960096
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.130438834
-        Y: 0.343794495
-        Z: 0.234797493
+        X: -0.128003195
+        Y: 0.5219419
+        Z: 0.723720908
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.570397437
+      Pitch: 0.280397356
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.110401504
+      Yaw: 0.0904010162
     Saved: ~
 Window Geometry:
   Displays:

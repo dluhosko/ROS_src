@@ -15,9 +15,10 @@ find_package(catkin REQUIRED COMPONENTS
         std_msgs
         genmsg
         message_generation
+        actionlib
+        scara_msgs
 )
 find_package(Boost REQUIRED system filesystem date_time thread)
-
 
 
 
@@ -29,6 +30,9 @@ add_message_files(
 generate_messages(
         DEPENDENCIES
         std_msgs
+        actionlib_msgs
+        scara_msgs
+
 )
 
 catkin_package(
@@ -38,9 +42,6 @@ catkin_package(
         message_runtime
         std_msgs
 )
-
-
-
 
 
 include_directories(SYSTEM ${Boost_INCLUDE_DIR} ${EIGEN3_INCLUDE_DIRS})
@@ -56,8 +57,8 @@ target_link_libraries(move_group_interface2 ${catkin_LIBRARIES})
 
 add_executable(move_group_interface3_PICKandPLACE ../scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp)
 target_link_libraries(move_group_interface3_PICKandPLACE ${catkin_LIBRARIES})
-add_dependencies(move_group_interface3_PICKandPLACE beginner_tutorials_generate_messages_cpp)
-
+#add_dependencies(move_group_interface3_PICKandPLACE beginner_tutorials_generate_messages_cpp)
+add_dependencies(move_group_interface3_PICKandPLACE {${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 add_executable(cube_publisher ../scara_v2_moveit_api/src/cube_publisher.cpp)
 target_link_libraries(cube_publisher ${catkin_LIBRARIES})
@@ -66,3 +67,4 @@ add_dependencies(cube_publisher beginner_tutorials_generate_messages_cpp)
 add_executable(listener src/listener.cpp)
 target_link_libraries(listener ${catkin_LIBRARIES})
 add_dependencies(listener beginner_tutorials_generate_messages_cpp)
+

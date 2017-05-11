@@ -667,6 +667,9 @@ _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 //Path to a file.
 _file_name:FILEPATH=/home/viktor/catkin_ws/src/gazebo_ros_pkgs/gazebo_plugins/test/range/range_plugin.test
 
+//The directory containing a CMake configuration file for action_.
+action__DIR:PATH=action__DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for actionlib.
 actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
 
@@ -693,6 +696,9 @@ class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
 
 //The directory containing a CMake configuration file for cmake_modules.
 cmake_modules_DIR:PATH=/opt/ros/kinetic/share/cmake_modules/cmake
+
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/kinetic/share/control_msgs/cmake
 
 //The directory containing a CMake configuration file for control_toolbox.
 control_toolbox_DIR:PATH=/opt/ros/kinetic/share/control_toolbox/cmake
@@ -1114,6 +1120,18 @@ rrbot_gazebo_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/gazebo_ros_demos/rrbot
 
 //The directory containing a CMake configuration file for rviz.
 rviz_DIR:PATH=/opt/ros/kinetic/share/rviz/cmake
+
+//The directory containing a CMake configuration file for scara.
+scara_DIR:PATH=scara_DIR-NOTFOUND
+
+//Value Computed by CMake
+scara_msgs_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs
+
+//The directory containing a CMake configuration file for scara_msgs.
+scara_msgs_DIR:PATH=/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake
+
+//Value Computed by CMake
+scara_msgs_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/scara_msgs
 
 //Value Computed by CMake
 scara_urdf_testing_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/scara_urdf_testing
