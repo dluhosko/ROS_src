@@ -33,12 +33,12 @@ void setDesiredAngles (){
     //home
     joint_group_positions[0][0] = 0;
     joint_group_positions[0][1] = 0;
-    joint_group_positions[0][2] = -0.003;
+    joint_group_positions[0][2] = -0.004;
 
     //pick position
     joint_group_positions[1][0] = -45;
     joint_group_positions[1][1] = 45;
-    joint_group_positions[1][2] = 0.00;
+    joint_group_positions[1][2] = 0.05;
 
     //work position
     joint_group_positions[2][0] = -20;
@@ -48,7 +48,7 @@ void setDesiredAngles (){
     //place position
     joint_group_positions[3][0] = 75;
     joint_group_positions[3][1] = 60;
-    joint_group_positions[3][2] = 0.01;
+    joint_group_positions[3][2] = 0.05;
     ROS_INFO("Vector filled up");
 
 }
@@ -163,7 +163,7 @@ int main(int argc, char **argv){
 
         //Get current pose of tool0
         target_pose1 = getTargetCoordinates(&move_group);
-
+        ROS_INFO("Desired joint values : %f  %f  %f",  target_pose1.position.x,target_pose1.position.y,target_pose1.position.z);
         //move to WS1
         current_state = move_group.getCurrentState();
         current_state->copyJointGroupPositions(joint_model_group, joint_group_position);
@@ -189,7 +189,7 @@ int main(int argc, char **argv){
             gripperStates.posZ = target_pose1.position.z;
             grip_topic_pub.publish(gripperStates);
         }
-        sleep(3);
+        sleep(2);
     }
 
 

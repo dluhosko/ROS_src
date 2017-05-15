@@ -11,12 +11,15 @@ find_package(catkin REQUIRED COMPONENTS
         moveit_core
         moveit_ros_planning_interface
         moveit_ros_planning
+        moveit_msgs
         roscpp
         std_msgs
+        sensor_msgs
         genmsg
         message_generation
         actionlib
         scara_msgs
+
 )
 find_package(Boost REQUIRED system filesystem date_time thread)
 
@@ -30,6 +33,7 @@ add_message_files(
 generate_messages(
         DEPENDENCIES
         std_msgs
+        sensor_msgs
         actionlib_msgs
         scara_msgs
 
@@ -41,6 +45,8 @@ catkin_package(
         moveit_ros_planning_interface
         message_runtime
         std_msgs
+        sensor_msgs
+
 )
 
 
@@ -60,11 +66,13 @@ target_link_libraries(move_group_interface3_PICKandPLACE ${catkin_LIBRARIES})
 #add_dependencies(move_group_interface3_PICKandPLACE beginner_tutorials_generate_messages_cpp)
 add_dependencies(move_group_interface3_PICKandPLACE {${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_executable(move_group_interface4_position_control ../scara_v2_moveit_api/src/move_group_interface4_position_control.cpp)
+target_link_libraries(move_group_interface4_position_control ${catkin_LIBRARIES})
+#add_dependencies(move_group_interface3_PICKandPLACE beginner_tutorials_generate_messages_cpp)
+add_dependencies(move_group_interface4_position_control {${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 add_executable(cube_publisher ../scara_v2_moveit_api/src/cube_publisher.cpp)
 target_link_libraries(cube_publisher ${catkin_LIBRARIES})
 add_dependencies(cube_publisher beginner_tutorials_generate_messages_cpp)
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES})
-add_dependencies(listener beginner_tutorials_generate_messages_cpp)
 

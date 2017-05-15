@@ -118,7 +118,7 @@ int main(int argc, char **argv)
 
         ROS_INFO_ONCE("zacal som publikovat marker");
        if (defaultPosition){
-            generateCube(&vis_pub, "BaseBox", 0.47512 , 0.23225 , 0.0198);
+            generateCube(&vis_pub, "world", 0.388509 , 0.160504 , 0.969805);
            if (gripper){
                defaultPosition = false;
 
@@ -129,11 +129,13 @@ int main(int argc, char **argv)
 
 
            if (gripper) {
-               generateCube(&vis_pub, "tool0", 0.0, 0.0, 0.05);
+               generateCube(&vis_pub, "tool0", 0.0, 0.0, 0.0);
                ROS_INFO_ONCE("Gripper pick");
            } else {
-               generateCube(&vis_pub, "BaseBox", positionX, positionY, positionZ - 1.0);
+               generateCube(&vis_pub, "world", positionX, positionY, positionZ);
                ROS_INFO_ONCE("Gripper place");
+               sleep(5);
+               defaultPosition = true;
            }
        }
 

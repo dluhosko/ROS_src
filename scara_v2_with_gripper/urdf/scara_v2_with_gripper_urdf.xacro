@@ -64,13 +64,13 @@
                 <mesh filename="package://scara_v2_with_gripper/meshes/baseBox.STL" />
             </geometry>
             <material name="sensoGray">
-              <!--  <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />-->
             </material>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://scara_v2_with_gripper/meshes/baseBox.STL" />
+                <!--?????????-->
+                <mesh filename="package://scara_v2_with_gripper/meshes/baseBox_modif.stl" />
             </geometry>
         </collision>
     </link>
@@ -89,13 +89,12 @@
                 <mesh filename="package://scara_v2_with_gripper/meshes/CentralStop1.STL" />
             </geometry>
             <material name="red">
-                <!--<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />-->
             </material>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://scara_v2_with_gripper/meshes/CentralStop1.STL" />
+                <mesh filename="package://scara_v2_with_gripper/meshes/CentralStop1_modif.stl" />
             </geometry>
         </collision>
     </link>
@@ -120,13 +119,12 @@
                 <mesh filename="package://scara_v2_with_gripper/meshes/CentralStop2.STL" />
             </geometry>
             <material name="red">
-                <!--<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />-->
             </material>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://scara_v2_with_gripper/meshes/CentralStop2.STL" />
+                <mesh filename="package://scara_v2_with_gripper/meshes/CentralStop2_modif.stl" />
             </geometry>
         </collision>
     </link>
@@ -155,7 +153,6 @@
                 <mesh filename="package://scara_v2_with_gripper/meshes/ScaraBase.STL" />
             </geometry>
             <material  name="sensoSilver">
-                <!--<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />-->
             </material>
         </visual>
         <collision>
@@ -188,10 +185,9 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://scara_v2_with_gripper/meshes/ScaraLink1.STL" />
+                <mesh filename="package://scara_v2_with_gripper/meshes/ScaraLink1.STL" />   <!--ScaraLink1.STL-->
             </geometry>
             <material name="sensoSilver">
-                <!--<color  rgba="0.79216 0.81961 0.93333 1" />-->
             </material>
         </visual>
         <collision>
@@ -227,7 +223,6 @@
                 <mesh  filename="package://scara_v2_with_gripper/meshes/ScaraLink2.STL" />
             </geometry>
             <material  name="sensoSilver">
-                <!--<color rgba="0.79216 0.81961 0.93333 1" />-->
             </material>
         </visual>
         <collision>
@@ -264,7 +259,6 @@
                 <mesh filename="package://scara_v2_with_gripper/meshes/GripperBase.STL" />
             </geometry>
             <material name="sensoDarkGray">
-               <!-- <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />-->
             </material>
         </visual>
         <collision>
@@ -279,7 +273,7 @@
         <child link="GripperBase" />
         <origin xyz="0 -0.0424 0.24305" rpy="3.1416 0 3.1416" />
         <axis xyz="0 1 0" />
-        <limit effort="1000.0" lower="-0.03" upper="0.03" velocity="1"/>
+        <limit effort="1000.0" lower="-0.04" upper="0.05" velocity="1"/>
     </joint>
 
     <joint name="Base_to_tool0" type="fixed">
@@ -306,11 +300,10 @@
                 <mesh filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />
             </geometry>
             <material name="sensoDarkGray">
-               <!-- <color  rgba="0.79216 0.81961 0.93333 1" />-->
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="3.14 0 0" />
             <geometry>
                 <mesh  filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />
             </geometry>
@@ -341,11 +334,10 @@
                 <mesh filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />
             </geometry>
             <material name="sensoDarkGray">
-                <!--<color  rgba="0.79216 0.81961 0.93333 1" />-->
             </material>
         </visual>
         <collision>
-            <origin  xyz="0 0 0" rpy="0 0 0" />
+            <origin  xyz="0 0 0" rpy="3.14 0 0" />
             <geometry>
                 <mesh  filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />
             </geometry>
@@ -357,6 +349,6 @@
         <origin  xyz="0.0165 0.0984 0" rpy="3.1416 0 3.1416" />
         <axis  xyz="1 0 0" />
         <limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>
-        <!--<mimic joint="Joint_Gripper" multiplier="1" offset="0" />-->
+        <mimic joint="Joint_Gripper" multiplier="1" offset="0" />
     </joint>
 </robot>

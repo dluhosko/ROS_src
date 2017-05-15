@@ -1182,6 +1182,12 @@ scara_v2_moveit_config_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-
 scara_v2_moveit_config_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/scara_v2_moveit_config
 
 //Value Computed by CMake
+scara_v2_moveit_config_test_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_config_test
+
+//Value Computed by CMake
+scara_v2_moveit_config_test_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/scara_v2_moveit_config_test
+
+//Value Computed by CMake
 scara_v2_moveit_plugin_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_plugin
 
 //Value Computed by CMake
@@ -1484,7 +1490,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=28
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=29
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
