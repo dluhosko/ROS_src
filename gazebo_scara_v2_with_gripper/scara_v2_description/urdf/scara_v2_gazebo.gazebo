@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot>
+    <!-- ros_control plugin -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/scara_v2_with_gripper</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        </plugin>
+    </gazebo>
+
+
+
+
+    <!--           TABLE           -->
+    <gazebo reference="BaseBox">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="CentralStop1">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="CentralStop2">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <!-- ************************** -->
+
+    <!--____________SCARA___________-->
+    <gazebo reference="ScaraBase">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <gazebo reference="ScaraLink1">
+        <material>Gazebo/Black</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
+
+    <gazebo reference="ScaraLink2">
+        <material>Gazebo/Orange</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
+    <!-- *************************** -->
+
+    <!--____________GRIPPER_________ -->
+    <!--<gazebo reference="GripperBase">-->
+        <!--<material>Gazebo/Orange</material>-->
+        <!--<mu1>0.2</mu1>-->
+        <!--<mu2>0.2</mu2>-->
+    <!--</gazebo>-->
+
+    <!--<gazebo reference="GripperLeft">-->
+        <!--<material>Gazebo/Orange</material>-->
+        <!--<mu1>0.2</mu1>-->
+        <!--<mu2>0.2</mu2>-->
+    <!--</gazebo>-->
+    <!--<gazebo reference="GripperRight">-->
+        <!--<material>Gazebo/Orange</material>-->
+        <!--<mu1>0.2</mu1>-->
+        <!--<mu2>0.2</mu2>-->
+    <!--</gazebo>-->
+    <!-- *************************** -->
+
+</robot>

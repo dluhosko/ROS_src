@@ -16,21 +16,18 @@
         <arg name="use_sim_time" value="$(arg use_sim_time)"/>
         <arg name="headless" value="$(arg headless)"/>
     </include>
-    <!-- OLD -->
-    <!--
-    <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find scara_v2_gazebo)/worlds/scara_v2.world"/>
-    </include>
-    -->
-    <!-- *** -->
 
     <!-- Load the URDF into the ROS Parameter Server -->
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find scara_v2_description)/urdf/scara_v2_with_gripper_urdf.xacro'" />
+    <param name="robot_description"
+           command="$(find xacro)/xacro --inorder '$(find scara_v2_description)/urdf/scara_v2_urdf.xacro'" />
+
+    <!-- Load the URDF into the ROS Parameter Server  OLD -->
+    <!--<param name="robot_description" command="$(find xacro)/xacro &#45;&#45;inorder '$(find scara_v2_description)/urdf/scara_v2_with_gripper_urdf.xacro'" />-->
 
 
     <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-          args="-urdf -model scara_v2 -param robot_description"/>
+          args="-urdf -model scara_v2_with_gripper -param robot_description"/>
 
     <!-- Spawn a SCARA into Gazebo  OLD-->
     <!--
