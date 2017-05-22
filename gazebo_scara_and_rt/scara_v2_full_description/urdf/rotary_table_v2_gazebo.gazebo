@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot>
+    <!-- ros_control plugin -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/rotary_table_v2</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        </plugin>
+    </gazebo>
+
+    <!--__________REFERENCES________________-->
+    <gazebo reference="base">
+        <material>Gazebo/White</material>
+    </gazebo>
+    <gazebo reference="base_link1">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="hole1">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="hole2">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="hole3">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="hole4">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="hole5">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="hole6">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="hole7">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="hole8">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <!---->
+    <gazebo reference="link1">
+        <material>Gazebo/White</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
+    <!--*************************************-->
+
+
+
+</robot>

@@ -42,11 +42,11 @@
     <!-- *************************** -->
 
     <!--____________GRIPPER_________ -->
-    <!--<gazebo reference="GripperBase">-->
-        <!--<material>Gazebo/Orange</material>-->
-        <!--<mu1>0.2</mu1>-->
-        <!--<mu2>0.2</mu2>-->
-    <!--</gazebo>-->
+    <gazebo reference="GripperBase">
+        <material>Gazebo/Orange</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
 
     <!--<gazebo reference="GripperLeft">-->
         <!--<material>Gazebo/Orange</material>-->

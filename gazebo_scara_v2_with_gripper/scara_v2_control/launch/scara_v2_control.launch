@@ -9,11 +9,11 @@
 					  <!--joint1_position_controller-->
 					  <!--joint2_position_controller"/>-->
 
-    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-          output="screen" ns="/scara_v2_with_gripper" args="joint1_position_controller joint2_position_controller joint_state_controller"/>
-
     <!--<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"-->
-          <!--output="screen" ns="/scara_v2_with_gripper" args="joint1_position_controller joint2_position_controller jointGripperBase_position_controller joint_state_controller"/>-->
+          <!--output="screen" ns="/scara_v2_with_gripper" args="joint1_position_controller joint2_position_controller joint_state_controller"/>-->
+
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+          output="screen" ns="/scara_v2_with_gripper" args="joint1_position_controller joint2_position_controller jointGripperBase_position_controller joint_state_controller"/>
 
 
     <!-- convert joint states to TF transforms for rviz, etc -->
