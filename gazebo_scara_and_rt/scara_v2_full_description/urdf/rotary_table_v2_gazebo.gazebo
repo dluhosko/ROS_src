@@ -16,7 +16,7 @@
         <material>Gazebo/Orange</material>
     </gazebo>
     <gazebo reference="hole1">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/Black</material>
     </gazebo>
     <gazebo reference="hole2">
         <material>Gazebo/Orange</material>
