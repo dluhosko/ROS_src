@@ -159,11 +159,12 @@
             </geometry>
         </collision>
     </link>
-    <joint name="base_link1_to_link1" type="continuous">
+    <joint name="base_link1_to_link1" type="revolute">
         <parent link="base_link1"/>
         <child link="link1"/>
         <origin xyz="0 0 0.015" rpy="0 0 0"/>
         <axis xyz="0 0 1" />
+        <limit effort="1000" lower="0" upper="6.29" velocity="0"/>
     </joint>
 
 
@@ -180,7 +181,7 @@
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
-            <material name="white" />
+            <material name="blue" />
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />

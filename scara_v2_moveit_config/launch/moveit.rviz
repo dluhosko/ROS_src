@@ -4,11 +4,13 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /MotionPlanning1
+        - /Global Options1
+        - /MotionPlanning1/Scene Geometry1
+        - /MotionPlanning1/Scene Robot1
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planned Path1
       Splitter Ratio: 0.742560029
-    Tree Height: 332
+    Tree Height: 298
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -224,8 +226,59 @@ Visualization Manager:
       Marker Topic: visualization_marker
       Name: Marker
       Namespaces:
-        my_namespace: true
+        {}
       Queue Size: 100
+      Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        BaseBox:
+          Value: true
+        CentralStop1:
+          Value: true
+        CentralStop2:
+          Value: true
+        GripperBase:
+          Value: true
+        GripperLeft:
+          Value: true
+        GripperRight:
+          Value: true
+        ScaraBase:
+          Value: true
+        ScaraLink1:
+          Value: true
+        ScaraLink2:
+          Value: true
+        tool0:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          BaseBox:
+            CentralStop1:
+              {}
+            CentralStop2:
+              {}
+            ScaraBase:
+              ScaraLink1:
+                ScaraLink2:
+                  GripperBase:
+                    GripperLeft:
+                      {}
+                    GripperRight:
+                      {}
+                    tool0:
+                      {}
+      Update Interval: 0
       Value: true
   Enabled: true
   Global Options:
@@ -249,17 +302,17 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.845396638
-        Y: 0.541657388
+        X: -1.39971638
+        Y: 0.592530429
         Z: 5.81145855e-07
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.334797144
+      Pitch: 0.179797217
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 6.24995327
+      Yaw: 6.11995173
     Saved: ~
 Window Geometry:
   Displays:
@@ -269,9 +322,9 @@ Window Geometry:
     collapsed: false
   Hide Left Dock: false
   Hide Right Dock: false
-  Motion Planning:
+  MotionPlanning:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002b8000003befc0200000005fb000000100044006900730070006c0061007900730100000028000001e1000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a0056006900650077007300000003b0000000b0000000b000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e0067010000020f000001d7000001cc00ffffff00000466000003be00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002b8000003befc0200000006fb000000100044006900730070006c0061007900730100000028000001bf000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a0056006900650077007300000003b0000000b0000000b000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e0067010000020f000001d70000000000000000fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001ed000001f9000001cc00ffffff00000466000003be00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 1828

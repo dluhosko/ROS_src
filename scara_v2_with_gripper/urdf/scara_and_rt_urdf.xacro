@@ -515,7 +515,7 @@
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
-            <material name="white" />
+            <material name="blue" />
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />

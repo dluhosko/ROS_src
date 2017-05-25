@@ -12,8 +12,6 @@
 #include <visualization_msgs/Marker.h>
 #include "std_msgs/String.h"
 #include <sstream>
-//#include "scara_v2_moveit_api/pose_and_gripperState.msg"
-//#include "std_msgs/"
 #include "scara_v2_moveit_api/pose_and_gripperState.h"
 
 
@@ -21,63 +19,122 @@
 const double DEG2RAD=0.01745329252;
 const double RAD2DEG=57.295779513;
 
-std::vector<std::vector<double>> joint_group_positions(4, std::vector<double>(3));
+std::vector<std::vector<double>> joint_group_positions(13, std::vector<double>(3));
+std::vector<std::vector<double>> defaultPositions(11, std::vector<double>(3));
 std::vector<double> joint_group_position;
 
 
 void setDesiredAngles (){
     ROS_INFO("VECTOR SIZE %d x %d \n", joint_group_positions.size(),joint_group_positions[0].size());
 
-
-    //gripper pick pos 0.36641; 0.2078; 1.0199 (-0.57 1.30 0.01)
-    //home
+    //Home position
     joint_group_positions[0][0] = 0;
     joint_group_positions[0][1] = 0;
-    joint_group_positions[0][2] = -0.004;
+    joint_group_positions[0][2] = 0.00;
 
-    //pick position
-    joint_group_positions[1][0] = -45;
-    joint_group_positions[1][1] = 45;
-    joint_group_positions[1][2] = 0.05;
-
+    //Pick position
+    joint_group_positions[1][0] = -0.44*RAD2DEG;
+    joint_group_positions[1][1] = 1.30*RAD2DEG;
+    joint_group_positions[1][2] = 0.01;
     //work position
-    joint_group_positions[2][0] = -20;
-    joint_group_positions[2][1] = -60;
+    joint_group_positions[2][0] = -0.68*RAD2DEG;
+    joint_group_positions[2][1] = -1.45*RAD2DEG;
     joint_group_positions[2][2] = 0.0;
+    //place position 1
+    joint_group_positions[3][0] = 0.21*RAD2DEG;
+    joint_group_positions[3][1] = -1.15*RAD2DEG;
+    joint_group_positions[3][2] = 0.02;
 
-    //place position
-    joint_group_positions[3][0] = 75;
-    joint_group_positions[3][1] = 60;
-    joint_group_positions[3][2] = 0.05;
+    //Pick position
+    joint_group_positions[4][0] = -0.44*RAD2DEG;
+    joint_group_positions[4][1] = 1.30*RAD2DEG;
+    joint_group_positions[4][2] = 0.01;
+    //work position
+    joint_group_positions[5][0] = -0.68*RAD2DEG;
+    joint_group_positions[5][1] = -1.45*RAD2DEG;
+    joint_group_positions[5][2] = 0.0;
+    //place position 2
+    joint_group_positions[6][0] = 0.54*RAD2DEG;
+    joint_group_positions[6][1] = -0.67*RAD2DEG;
+    joint_group_positions[6][2] = 0.03;
+
+    //Pick position
+    joint_group_positions[7][0] = -0.44*RAD2DEG;
+    joint_group_positions[7][1] = 1.30*RAD2DEG;
+    joint_group_positions[7][2] = 0.01;
+    //work position
+    joint_group_positions[8][0] = -0.68*RAD2DEG;
+    joint_group_positions[8][1] = -1.45*RAD2DEG;
+    joint_group_positions[8][2] = 0.0;
+    //place position 3
+    joint_group_positions[9][0] = 0.26*RAD2DEG;
+    joint_group_positions[9][1] = -1.55*RAD2DEG;
+    joint_group_positions[9][2] = 0.03;
+
+    //Pick position
+    joint_group_positions[10][0] = -0.44*RAD2DEG;
+    joint_group_positions[10][1] = 1.30*RAD2DEG;
+    joint_group_positions[10][2] = 0.01;
+    //work position
+    joint_group_positions[11][0] = -0.68*RAD2DEG;
+    joint_group_positions[11][1] = -1.45*RAD2DEG;
+    joint_group_positions[11][2] = 0.0;
+    //place position 4
+    joint_group_positions[12][0] = 0.49*RAD2DEG;
+    joint_group_positions[12][1] = -1.28*RAD2DEG;
+    joint_group_positions[12][2] = 0.03;
     ROS_INFO("Vector filled up");
 
 }
-void openGripper(trajectory_msgs::JointTrajectory &posture){
+void setPositions(){
 
-    posture.joint_names.resize(1);
-    posture.joint_names[0] = "right_gripper";
-    posture.points.resize(1);
-    posture.points[0].positions.resize(1);
-    posture.points[0].positions[0] = 0;
+    ROS_INFO("VECTOR SIZE %d x %d \n", defaultPositions.size(),defaultPositions[0].size());
+    //Home position
+    defaultPositions[0][0] = 0;
+    defaultPositions[0][1] = 0;
+    defaultPositions[0][2] = 0.00;
+    //Pick position
+    defaultPositions[1][0] = -0.44*RAD2DEG;
+    defaultPositions[1][1] = 1.30*RAD2DEG;
+    defaultPositions[1][2] = 0.01;
+    //work position
+    defaultPositions[2][0] = -0.68*RAD2DEG;
+    defaultPositions[2][1] = -1.45*RAD2DEG;
+    defaultPositions[2][2] = 0.0;
 
-
+    //place position 1
+    defaultPositions[3][0] = 0.21*RAD2DEG;
+    defaultPositions[3][1] = -1.15*RAD2DEG;
+    defaultPositions[3][2] = 0.02;
+    //place position 2
+    defaultPositions[4][0] = 0.54*RAD2DEG;
+    defaultPositions[4][1] = -0.67*RAD2DEG;
+    defaultPositions[4][2] = 0.03;
+    //place position 3
+    defaultPositions[5][0] = 0.23*RAD2DEG;
+    defaultPositions[5][1] = -1.25*RAD2DEG;
+    defaultPositions[5][2] = 0.03;
+    //place position 4
+    defaultPositions[6][0] = 0.50*RAD2DEG;
+    defaultPositions[6][1] = -0.90*RAD2DEG;
+    defaultPositions[6][2] = 0.03;
+    //place position 5
+    defaultPositions[7][0] = 0.21*RAD2DEG;
+    defaultPositions[7][1] = -1.45*RAD2DEG;
+    defaultPositions[7][2] = 0.03;
+    //place position 6
+    defaultPositions[8][0] = 0.45*RAD2DEG;
+    defaultPositions[8][1] = -1.12*RAD2DEG;
+    defaultPositions[8][2] = 0.03;
+    //place position 7
+    defaultPositions[9][0] = 0.26*RAD2DEG;
+    defaultPositions[9][1] = -1.55*RAD2DEG;
+    defaultPositions[9][2] = 0.03;
+    //place position 8
+    defaultPositions[10][0] = 0.49*RAD2DEG;
+    defaultPositions[10][1] = -1.28*RAD2DEG;
+    defaultPositions[10][2] = 0.03;
 }
-void closeGripper(trajectory_msgs::JointTrajectory &posture){
-
-    posture.joint_names.resize(1);
-    posture.joint_names[0] = "left_gripper";
-    posture.points.resize(1);
-    posture.points[0].positions.resize(1);
-    posture.points[0].positions[0] = 0.03;
-}
-void pick(moveit::planning_interface::MoveGroupInterface &group){
-    moveit_msgs::Grasp grasp;
-
-
-}
-void place(moveit::planning_interface::MoveGroupInterface &group){
-}
-
 void jointControll (moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan my_plan,  double joint1_in_DEG, double joint2_in_DEG, double joint3_in_m){
 
     bool success;
@@ -90,10 +147,74 @@ void jointControll (moveit::planning_interface::MoveGroupInterface *move_group, 
     ROS_INFO_NAMED("tutorial", "Visualizing plan (joint space goal) %s", success ? "GOOD" : "FAILED");
     move_group->execute(my_plan);
     move_group->move();
-
-
-
 }
+void jointModeControll (moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan my_plan, int mode, int number_of_place_position){
+
+    bool success;
+    if (mode == 0){         //Home position
+        joint_group_position[0] = defaultPositions[0][0]*DEG2RAD;  // radians
+        joint_group_position[1] = defaultPositions[0][1]*DEG2RAD;
+        joint_group_position[2] = defaultPositions[0][2];
+        ROS_INFO("moving to home");
+    }else if (mode == 1){      //pick position
+        joint_group_position[0] = defaultPositions[1][0]*DEG2RAD;  // radians
+        joint_group_position[1] = defaultPositions[1][1]*DEG2RAD;
+        joint_group_position[2] = defaultPositions[1][2];
+        ROS_INFO("moving to pick");
+    }else if (mode == 2){       //work position
+        joint_group_position[0] = defaultPositions[2][0]*DEG2RAD;  // radians
+        joint_group_position[1] = defaultPositions[2][1]*DEG2RAD;
+        joint_group_position[2] = defaultPositions[2][2];
+        ROS_INFO("moving to work");
+    }
+    else if (mode == 3){        //place position
+        if (number_of_place_position == 1){
+            joint_group_position[0] = defaultPositions[3][0]*DEG2RAD;  // radians
+            joint_group_position[1] = defaultPositions[3][1]*DEG2RAD;
+            joint_group_position[2] = defaultPositions[3][2];
+        }else if (number_of_place_position == 2){
+            joint_group_position[0] = defaultPositions[4][0]*DEG2RAD;  // radians
+            joint_group_position[1] = defaultPositions[4][1]*DEG2RAD;
+            joint_group_position[2] = defaultPositions[4][2];
+        }else if (number_of_place_position == 3){
+            joint_group_position[0] = defaultPositions[5][0]*DEG2RAD;  // radians
+            joint_group_position[1] = defaultPositions[5][1]*DEG2RAD;
+            joint_group_position[2] = defaultPositions[5][2];
+        }else if (number_of_place_position == 4){
+            joint_group_position[0] = defaultPositions[6][0]*DEG2RAD;  // radians
+            joint_group_position[1] = defaultPositions[6][1]*DEG2RAD;
+            joint_group_position[2] = defaultPositions[6][2];
+        }else if (number_of_place_position == 5){
+            joint_group_position[0] = defaultPositions[7][0]*DEG2RAD;  // radians
+            joint_group_position[1] = defaultPositions[7][1]*DEG2RAD;
+            joint_group_position[2] = defaultPositions[7][2];
+        }else if (number_of_place_position == 6){
+            joint_group_position[0] = defaultPositions[8][0]*DEG2RAD;  // radians
+            joint_group_position[1] = defaultPositions[8][1]*DEG2RAD;
+            joint_group_position[2] = defaultPositions[8][2];
+        }else if (number_of_place_position == 7){
+            joint_group_position[0] = defaultPositions[9][0]*DEG2RAD;  // radians
+            joint_group_position[1] = defaultPositions[9][1]*DEG2RAD;
+            joint_group_position[2] = defaultPositions[9][2];
+        }else if (number_of_place_position == 8){
+            joint_group_position[0] = defaultPositions[10][0]*DEG2RAD;  // radians
+            joint_group_position[1] = defaultPositions[10][1]*DEG2RAD;
+            joint_group_position[2] = defaultPositions[10][2];
+        }else {
+            ROS_INFO("NOT DEFINED position");
+        }
+        ROS_INFO("moving to place");
+    }else{
+        ROS_INFO("NOT DEFINED mode");
+    }
+    ROS_INFO("Desired joint values: %f  %f  %f",joint_group_position[0],joint_group_position[1],joint_group_position[2]);
+    move_group->setJointValueTarget(joint_group_position);
+    success = move_group->plan(my_plan);
+    ROS_INFO_NAMED("Visualizing plan (joint space goal) %s", success ? "GOOD" : "FAILED");
+    move_group->execute(my_plan);
+    move_group->move();
+}
+
 void positionControll (moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan my_plan,  geometry_msgs::Pose target_pose){
 
     bool success;
@@ -122,10 +243,9 @@ geometry_msgs::Pose getTargetCoordinates (moveit::planning_interface::MoveGroupI
     return target_pose;
 }
 
-
 int main(int argc, char **argv){
 
-    int counter = 0;
+    int counter = 1, mode = 0;
     bool success;
     static const std::string PLANNING_GROUP = "scara_arm";
     //static const std::string PLANNING_GROUP = "left_gripper";
@@ -135,9 +255,11 @@ int main(int argc, char **argv){
     moveit::planning_interface::MoveGroupInterface::Plan my_plan;
     moveit::core::RobotStatePtr current_state;
 
-    setDesiredAngles();
+    //setDesiredAngles();
+    setPositions();
+
     ros::init(argc, argv, "PICK_and_PLACE");
-    ros::NodeHandle n, nn;
+    ros::NodeHandle n, nn,n_rt;
     ros::Rate r(2);
     ros::AsyncSpinner spinner(1);
     spinner.start();
@@ -151,6 +273,7 @@ int main(int argc, char **argv){
 
     ros::Publisher gripperState_pub = n.advertise<std_msgs::String>("gripper_state_topic", 1000);
     ros::Publisher grip_topic_pub =  nn.advertise<scara_v2_moveit_api::pose_and_gripperState>("gripper_state", 1000);
+    ros::Publisher rt_pub = n_rt.advertise<std_msgs::String>("commandForRotaryTable", 1000);
 
     scara_v2_moveit_api::pose_and_gripperState gripperStates;
     gripperStates.gripperState = false;
@@ -158,19 +281,62 @@ int main(int argc, char **argv){
     gripperStates.posY = 0.0;
     gripperStates.posZ = 0.0;
 
+    std_msgs::String msg ;
+    msg.data = "otoc_sa";
+
 
     while (ros::ok()) {
 
+
+
         //Get current pose of tool0
         target_pose1 = getTargetCoordinates(&move_group);
-        ROS_INFO("Desired joint values : %f  %f  %f",  target_pose1.position.x,target_pose1.position.y,target_pose1.position.z);
+        ROS_INFO("Actual joint values : x=%f  y=%f  z=%f",  target_pose1.position.x,target_pose1.position.y,target_pose1.position.z);
         //move to WS1
         current_state = move_group.getCurrentState();
         current_state->copyJointGroupPositions(joint_model_group, joint_group_position);
 
-        if (counter < joint_group_positions.size()){
+        if (mode == 3) {
+            ROS_INFO("mode : %d",mode);
+            jointModeControll(&move_group, my_plan, mode, counter);
+            counter++;
+            if (counter > 8){
+                counter = 1;
+            }
+            ROS_INFO ("Gripper Place! and publish");
+            gripperStates.gripperState = false;
+            gripperStates.posX = target_pose1.position.x;
+            gripperStates.posY = target_pose1.position.y;
+            gripperStates.posZ = target_pose1.position.z;
+            grip_topic_pub.publish(gripperStates);
+
+            mode = 0;
+        }else {
+            ROS_INFO("mode : %d",mode);
+            jointModeControll(&move_group, my_plan, mode, 0);
+            if (mode == 1){
+                ROS_INFO ("Gripper Pick! and publish");
+                gripperStates.gripperState = true;
+                gripperStates.posX = target_pose1.position.x;
+                gripperStates.posY = target_pose1.position.y;
+                gripperStates.posZ = target_pose1.position.z;
+                grip_topic_pub.publish(gripperStates);
+            }
+            if (mode == 2){
+                rt_pub.publish(msg);
+                ROS_INFO("msg rotary table : %s",msg.data.c_str());
+                sleep(2);
+            }
+        }
+
+
+        mode++;
+
+
+
+        /*if (counter < joint_group_positions.size()){
             jointControll(&move_group,my_plan, joint_group_positions[counter][0],joint_group_positions[counter][1],joint_group_positions[counter][2]);
-            ROS_INFO("Desired joint values : %f  %f  %f", joint_group_positions[counter][0],joint_group_positions[counter][1],joint_group_positions[counter][2]);
+            ROS_INFO("Desired joint values [%d]: %f  %f  %f",counter, joint_group_positions[counter][0],joint_group_positions[counter][1],joint_group_positions[counter][2]);
             if (counter == 1){
                 ROS_INFO ("Gripper Pick! and publish");
                 gripperStates.gripperState = true;
@@ -178,6 +344,11 @@ int main(int argc, char **argv){
                 gripperStates.posY = target_pose1.position.y;
                 gripperStates.posZ = target_pose1.position.z;
                 grip_topic_pub.publish(gripperStates);
+            }
+            if (counter==2 || counter==5 || counter==8 || counter==11){
+                rt_pub.publish(msg);
+                ROS_INFO("msg rotary table : %s",msg.data.c_str());
+                sleep(2);
             }
             counter++;
         } else{
@@ -188,7 +359,10 @@ int main(int argc, char **argv){
             gripperStates.posY = target_pose1.position.y;
             gripperStates.posZ = target_pose1.position.z;
             grip_topic_pub.publish(gripperStates);
-        }
+        }*/
+
+
+
         sleep(2);
     }
 
