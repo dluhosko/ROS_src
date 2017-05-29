@@ -78,4 +78,7 @@ add_executable(cube_publisher ../scara_v2_moveit_api/src/cube_publisher.cpp)
 target_link_libraries(cube_publisher ${catkin_LIBRARIES})
 add_dependencies(cube_publisher beginner_tutorials_generate_messages_cpp)
 
+add_executable(multiple_cube_publisher ../scara_v2_moveit_api/src/multiple_cube_publisher.cpp)
+target_link_libraries(multiple_cube_publisher ${catkin_LIBRARIES})
+add_dependencies(multiple_cube_publisher beginner_tutorials_generate_messages_cpp)
 

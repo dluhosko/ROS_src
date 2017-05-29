@@ -44,7 +44,7 @@ geometry_msgs::Pose getTargetCoordinates (moveit::planning_interface::MoveGroupI
 }
 void turn45deg(moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan my_plan){
 
-    static double currentDeg =45;
+    static double currentDeg =0;
     bool success;
 
     if (currentDeg > 360){
@@ -63,7 +63,7 @@ void turn45deg(moveit::planning_interface::MoveGroupInterface *move_group, movei
 
 void chatterCallback(const std_msgs::String::ConstPtr& msg)
 {
-    ROS_INFO("command RT rotate!!");
+    ROS_INFO("[SCARA -> RT]: Command");
     commandForRT = true;
 }
 
@@ -95,12 +95,13 @@ int main(int argc, char **argv){
 
 
     while (ros::ok()){
-        ROS_INFO_ONCE("spustil sa while");
+        ROS_INFO_ONCE("[RT]: Start");
         current_state = move_group.getCurrentState();
         current_state->copyJointGroupPositions(joint_model_group, joint_group_position);
 
         if (commandForRT) {
             turn45deg(&move_group, my_plan);
+            ROS_INFO("[SCARA -> RT]: Command finished");
             commandForRT=false;
         }
 

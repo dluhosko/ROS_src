@@ -118,7 +118,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0.04 0 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -134,7 +134,7 @@
     <joint name="link1_to_hole1" type="fixed">
         <parent link="link1"/>
         <child link="hole1"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0.04 0 0.01" rpy="0 0 0"/>
     </joint>
 
 
@@ -147,7 +147,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0.02828 0.02828 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -163,7 +163,7 @@
     <joint name="link1_to_hole2" type="fixed">
         <parent link="link1"/>
         <child link="hole2"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0.02828 0.02828 0.01" rpy="0 0 0"/>
     </joint>
 
 
@@ -177,7 +177,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0 0.04 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -193,7 +193,7 @@
     <joint name="link1_to_hole3" type="fixed">
         <parent link="link1"/>
         <child link="hole3"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0 0.04 0.01" rpy="0 0 0"/>
     </joint>
 
 
@@ -207,7 +207,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="-0.02828 0.02828 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -223,7 +223,7 @@
     <joint name="link1_to_hole4" type="fixed">
         <parent link="link1"/>
         <child link="hole4"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="-0.02828 0.02828 0.01" rpy="0 0 0"/>
     </joint>
 
 
@@ -236,7 +236,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="-0.04 0 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -252,7 +252,7 @@
     <joint name="link1_to_hole5" type="fixed">
         <parent link="link1"/>
         <child link="hole5"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="-0.04 0 0.01" rpy="0 0 0"/>
     </joint>
 
 
@@ -265,7 +265,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="-0.02828 -0.02828 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -281,7 +281,7 @@
     <joint name="link1_to_hole6" type="fixed">
         <parent link="link1"/>
         <child link="hole6"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="-0.02828 -0.02828 0.01" rpy="0 0 0"/>
     </joint>
 
 
@@ -294,7 +294,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0 -0.04 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -310,7 +310,7 @@
     <joint name="link1_to_hole7" type="fixed">
         <parent link="link1"/>
         <child link="hole7"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0 -0.04 0.01" rpy="0 0 0"/>
     </joint>
 
 
@@ -323,7 +323,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0.02828 -0.02828 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -339,7 +339,7 @@
     <joint name="link1_to_hole8" type="fixed">
         <parent link="link1"/>
         <child link="hole8"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0.02828 -0.02828 0.01" rpy="0 0 0"/>
     </joint>
 
 

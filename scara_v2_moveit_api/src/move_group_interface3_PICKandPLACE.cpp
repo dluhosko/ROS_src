@@ -18,7 +18,6 @@
 
 const double DEG2RAD=0.01745329252;
 const double RAD2DEG=57.295779513;
-
 std::vector<std::vector<double>> joint_group_positions(13, std::vector<double>(3));
 std::vector<std::vector<double>> defaultPositions(11, std::vector<double>(3));
 std::vector<double> joint_group_position;
@@ -285,37 +284,49 @@ int main(int argc, char **argv){
     msg.data = "otoc_sa";
 
 
-    while (ros::ok()) {
+    bool initRT = false;
 
+
+    while (ros::ok()) {
 
 
         //Get current pose of tool0
         target_pose1 = getTargetCoordinates(&move_group);
-        ROS_INFO("Actual joint values : x=%f  y=%f  z=%f",  target_pose1.position.x,target_pose1.position.y,target_pose1.position.z);
+        ROS_INFO("[SCARA]: Actual joint values : x=%f  y=%f  z=%f",  target_pose1.position.x,target_pose1.position.y,target_pose1.position.z);
         //move to WS1
         current_state = move_group.getCurrentState();
         current_state->copyJointGroupPositions(joint_model_group, joint_group_position);
 
         if (mode == 3) {
-            ROS_INFO("mode : %d",mode);
+            //ROS_INFO("mode : %d",mode);
             jointModeControll(&move_group, my_plan, mode, counter);
             counter++;
             if (counter > 8){
                 counter = 1;
             }
-            ROS_INFO ("Gripper Place! and publish");
+            target_pose1 = getTargetCoordinates(&move_group);
+            ROS_INFO ("[SCARA -> CUBE]: Gripper Place! and publish");
             gripperStates.gripperState = false;
             gripperStates.posX = target_pose1.position.x;
             gripperStates.posY = target_pose1.position.y;
             gripperStates.posZ = target_pose1.position.z;
+            ROS_INFO_STREAM(gripperStates);
             grip_topic_pub.publish(gripperStates);
 
             mode = 0;
         }else {
-            ROS_INFO("mode : %d",mode);
+            //tato cast nabehne len raz pri zaciatku
             jointModeControll(&move_group, my_plan, mode, 0);
+            if (!initRT){
+                rt_pub.publish(msg);
+                ROS_INFO("[SCARA -> RT]: RT init : %s",msg.data.c_str());
+                sleep(2);
+                initRT=true;
+            }
+            //
             if (mode == 1){
-                ROS_INFO ("Gripper Pick! and publish");
+                target_pose1 = getTargetCoordinates(&move_group);
+                ROS_INFO ("[SCARA -> CUBE]: Gripper Pick! and publish");
                 gripperStates.gripperState = true;
                 gripperStates.posX = target_pose1.position.x;
                 gripperStates.posY = target_pose1.position.y;
@@ -324,44 +335,13 @@ int main(int argc, char **argv){
             }
             if (mode == 2){
                 rt_pub.publish(msg);
-                ROS_INFO("msg rotary table : %s",msg.data.c_str());
+                ROS_INFO("[SCARA -> RT]: RT turn : %s",msg.data.c_str());
                 sleep(2);
             }
         }
 
 
         mode++;
-
-
-
-        /*if (counter < joint_group_positions.size()){
-            jointControll(&move_group,my_plan, joint_group_positions[counter][0],joint_group_positions[counter][1],joint_group_positions[counter][2]);
-            ROS_INFO("Desired joint values [%d]: %f  %f  %f",counter, joint_group_positions[counter][0],joint_group_positions[counter][1],joint_group_positions[counter][2]);
-            if (counter == 1){
-                ROS_INFO ("Gripper Pick! and publish");
-                gripperStates.gripperState = true;
-                gripperStates.posX = target_pose1.position.x;
-                gripperStates.posY = target_pose1.position.y;
-                gripperStates.posZ = target_pose1.position.z;
-                grip_topic_pub.publish(gripperStates);
-            }
-            if (counter==2 || counter==5 || counter==8 || counter==11){
-                rt_pub.publish(msg);
-                ROS_INFO("msg rotary table : %s",msg.data.c_str());
-                sleep(2);
-            }
-            counter++;
-        } else{
-            counter = 0 ;
-            ROS_INFO ("Gripper Place! and publish");
-            gripperStates.gripperState = false;
-            gripperStates.posX = target_pose1.position.x;
-            gripperStates.posY = target_pose1.position.y;
-            gripperStates.posZ = target_pose1.position.z;
-            grip_topic_pub.publish(gripperStates);
-        }*/
-
-
 
         sleep(2);
     }

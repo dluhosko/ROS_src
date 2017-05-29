@@ -61,7 +61,8 @@ void generateShape ( ros::Publisher *marker_pub , uint32_t shape){
     marker_pub->publish(marker);
 
 }
-void generateCube(ros::Publisher *marker_pub, std::string ParentFrame, double x_offset, double y_offset, double z_offset){
+void generateCube(ros::Publisher *marker_pub, std::string ParentFrame,int cubeNumber, double x_offset, double y_offset, double z_offset){
+
     visualization_msgs::Marker marker;
     marker.header.frame_id = ParentFrame ;
     marker.header.stamp = ros::Time();
@@ -106,8 +107,6 @@ int main(int argc, char **argv)
     //reading gripper state
     ros::Subscriber grip_topic_sub = node_gripper.subscribe("gripper_state",1000,gripperCallback);
 
-
-
     //ros::Publisher grip_topic_pub =  nn.advertise<scara_v2_moveit_api::pose_and_gripperState>("gripper_state", 1000);
 
 
@@ -118,21 +117,17 @@ int main(int argc, char **argv)
 
         ROS_INFO_ONCE("zacal som publikovat marker");
        if (defaultPosition){
-            generateCube(&vis_pub, "world", 0.388509 , 0.160504 , 0.969805);
+            generateCube(&vis_pub, "world",1, 0.388509 , 0.160504 , 0.969805);
            if (gripper){
                defaultPosition = false;
 
            }
-
-        }
-        else {
-
-
+        }else {
            if (gripper) {
-               generateCube(&vis_pub, "tool0", 0.0, 0.0, 0.0);
+               generateCube(&vis_pub, "tool0",1, 0.0, 0.0, 0.0);
                ROS_INFO_ONCE("Gripper pick");
            } else {
-               generateCube(&vis_pub, "world", positionX, positionY, positionZ);
+               generateCube(&vis_pub, "world",1, positionX, positionY, positionZ);
                ROS_INFO_ONCE("Gripper place");
                sleep(5);
                defaultPosition = true;

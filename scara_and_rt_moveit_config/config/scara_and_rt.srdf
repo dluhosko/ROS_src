@@ -245,13 +245,13 @@
     <disable_collisions link1="base_link1" link2="placeHole6" reason="Never" />
     <disable_collisions link1="base_link1" link2="placeHole7" reason="Never" />
     <disable_collisions link1="base_link1" link2="placeHole8" reason="Never" />
-    <disable_collisions link1="hole1" link2="hole2" reason="Default" />
-    <disable_collisions link1="hole1" link2="hole3" reason="Default" />
-    <disable_collisions link1="hole1" link2="hole4" reason="Default" />
-    <disable_collisions link1="hole1" link2="hole5" reason="Default" />
-    <disable_collisions link1="hole1" link2="hole6" reason="Default" />
-    <disable_collisions link1="hole1" link2="hole7" reason="Default" />
-    <disable_collisions link1="hole1" link2="hole8" reason="Default" />
+    <disable_collisions link1="hole1" link2="hole2" reason="Never" />
+    <disable_collisions link1="hole1" link2="hole3" reason="Never" />
+    <disable_collisions link1="hole1" link2="hole4" reason="Never" />
+    <disable_collisions link1="hole1" link2="hole5" reason="Never" />
+    <disable_collisions link1="hole1" link2="hole6" reason="Never" />
+    <disable_collisions link1="hole1" link2="hole7" reason="Never" />
+    <disable_collisions link1="hole1" link2="hole8" reason="Never" />
     <disable_collisions link1="hole1" link2="link1" reason="Adjacent" />
     <disable_collisions link1="hole1" link2="placeBox" reason="Never" />
     <disable_collisions link1="hole1" link2="placeHole1" reason="Never" />
@@ -262,12 +262,12 @@
     <disable_collisions link1="hole1" link2="placeHole6" reason="Never" />
     <disable_collisions link1="hole1" link2="placeHole7" reason="Never" />
     <disable_collisions link1="hole1" link2="placeHole8" reason="Never" />
-    <disable_collisions link1="hole2" link2="hole3" reason="Default" />
-    <disable_collisions link1="hole2" link2="hole4" reason="Default" />
-    <disable_collisions link1="hole2" link2="hole5" reason="Default" />
-    <disable_collisions link1="hole2" link2="hole6" reason="Default" />
-    <disable_collisions link1="hole2" link2="hole7" reason="Default" />
-    <disable_collisions link1="hole2" link2="hole8" reason="Default" />
+    <disable_collisions link1="hole2" link2="hole3" reason="Never" />
+    <disable_collisions link1="hole2" link2="hole4" reason="Never" />
+    <disable_collisions link1="hole2" link2="hole5" reason="Never" />
+    <disable_collisions link1="hole2" link2="hole6" reason="Never" />
+    <disable_collisions link1="hole2" link2="hole7" reason="Never" />
+    <disable_collisions link1="hole2" link2="hole8" reason="Never" />
     <disable_collisions link1="hole2" link2="link1" reason="Adjacent" />
     <disable_collisions link1="hole2" link2="placeBox" reason="Never" />
     <disable_collisions link1="hole2" link2="placeHole1" reason="Never" />
@@ -278,11 +278,11 @@
     <disable_collisions link1="hole2" link2="placeHole6" reason="Never" />
     <disable_collisions link1="hole2" link2="placeHole7" reason="Never" />
     <disable_collisions link1="hole2" link2="placeHole8" reason="Never" />
-    <disable_collisions link1="hole3" link2="hole4" reason="Default" />
-    <disable_collisions link1="hole3" link2="hole5" reason="Default" />
-    <disable_collisions link1="hole3" link2="hole6" reason="Default" />
-    <disable_collisions link1="hole3" link2="hole7" reason="Default" />
-    <disable_collisions link1="hole3" link2="hole8" reason="Default" />
+    <disable_collisions link1="hole3" link2="hole4" reason="Never" />
+    <disable_collisions link1="hole3" link2="hole5" reason="Never" />
+    <disable_collisions link1="hole3" link2="hole6" reason="Never" />
+    <disable_collisions link1="hole3" link2="hole7" reason="Never" />
+    <disable_collisions link1="hole3" link2="hole8" reason="Never" />
     <disable_collisions link1="hole3" link2="link1" reason="Adjacent" />
     <disable_collisions link1="hole3" link2="placeBox" reason="Never" />
     <disable_collisions link1="hole3" link2="placeHole1" reason="Never" />
@@ -293,10 +293,10 @@
     <disable_collisions link1="hole3" link2="placeHole6" reason="Never" />
     <disable_collisions link1="hole3" link2="placeHole7" reason="Never" />
     <disable_collisions link1="hole3" link2="placeHole8" reason="Never" />
-    <disable_collisions link1="hole4" link2="hole5" reason="Default" />
-    <disable_collisions link1="hole4" link2="hole6" reason="Default" />
-    <disable_collisions link1="hole4" link2="hole7" reason="Default" />
-    <disable_collisions link1="hole4" link2="hole8" reason="Default" />
+    <disable_collisions link1="hole4" link2="hole5" reason="Never" />
+    <disable_collisions link1="hole4" link2="hole6" reason="Never" />
+    <disable_collisions link1="hole4" link2="hole7" reason="Never" />
+    <disable_collisions link1="hole4" link2="hole8" reason="Never" />
     <disable_collisions link1="hole4" link2="link1" reason="Adjacent" />
     <disable_collisions link1="hole4" link2="placeBox" reason="Never" />
     <disable_collisions link1="hole4" link2="placeHole1" reason="Never" />
@@ -307,9 +307,9 @@
     <disable_collisions link1="hole4" link2="placeHole6" reason="Never" />
     <disable_collisions link1="hole4" link2="placeHole7" reason="Never" />
     <disable_collisions link1="hole4" link2="placeHole8" reason="Never" />
-    <disable_collisions link1="hole5" link2="hole6" reason="Default" />
-    <disable_collisions link1="hole5" link2="hole7" reason="Default" />
-    <disable_collisions link1="hole5" link2="hole8" reason="Default" />
+    <disable_collisions link1="hole5" link2="hole6" reason="Never" />
+    <disable_collisions link1="hole5" link2="hole7" reason="Never" />
+    <disable_collisions link1="hole5" link2="hole8" reason="Never" />
     <disable_collisions link1="hole5" link2="link1" reason="Adjacent" />
     <disable_collisions link1="hole5" link2="placeBox" reason="Never" />
     <disable_collisions link1="hole5" link2="placeHole1" reason="Never" />
@@ -320,8 +320,8 @@
     <disable_collisions link1="hole5" link2="placeHole6" reason="Never" />
     <disable_collisions link1="hole5" link2="placeHole7" reason="Never" />
     <disable_collisions link1="hole5" link2="placeHole8" reason="Never" />
-    <disable_collisions link1="hole6" link2="hole7" reason="Default" />
-    <disable_collisions link1="hole6" link2="hole8" reason="Default" />
+    <disable_collisions link1="hole6" link2="hole7" reason="Never" />
+    <disable_collisions link1="hole6" link2="hole8" reason="Never" />
     <disable_collisions link1="hole6" link2="link1" reason="Adjacent" />
     <disable_collisions link1="hole6" link2="placeBox" reason="Never" />
     <disable_collisions link1="hole6" link2="placeHole1" reason="Never" />
@@ -332,7 +332,7 @@
     <disable_collisions link1="hole6" link2="placeHole6" reason="Never" />
     <disable_collisions link1="hole6" link2="placeHole7" reason="Never" />
     <disable_collisions link1="hole6" link2="placeHole8" reason="Never" />
-    <disable_collisions link1="hole7" link2="hole8" reason="Default" />
+    <disable_collisions link1="hole7" link2="hole8" reason="Never" />
     <disable_collisions link1="hole7" link2="link1" reason="Adjacent" />
     <disable_collisions link1="hole7" link2="placeBox" reason="Never" />
     <disable_collisions link1="hole7" link2="placeHole1" reason="Never" />
