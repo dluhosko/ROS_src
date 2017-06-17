@@ -176,14 +176,14 @@
 
     <link name="ScaraLink1">
         <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="-1.57 0 0" />
             <mass value="3.8063" />
             <inertia ixx="7.8753E-3" ixy="4.6431E-3" ixz="-1.4702E-5"
                      iyy="6.1309E-2" iyz="-5.8992E-6"
                      izz="6.2681E-2" />
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="-1.57 0 0" />
             <geometry>
                 <mesh filename="package://scara_v2_with_gripper/meshes/ScaraLink1.STL" />   <!--ScaraLink1.STL-->
             </geometry>
@@ -191,7 +191,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="-1.57 0 0" />
             <geometry>
                 <mesh filename="package://scara_v2_with_gripper/meshes/ScaraLink1.STL" />
             </geometry>
@@ -200,8 +200,8 @@
     <joint name="Joint1" type="revolute">
         <parent link="ScaraBase" />
         <child link="ScaraLink1" />
-        <origin xyz="0 0.051 0" rpy="0 0 0" />
-        <axis xyz="0 1 0" />
+        <origin xyz="0 0.051 0" rpy="1.57 0 0" />
+        <axis xyz="0 0 1" />
         <!--<limit effort="0" lower="-1.57079" upper="1.57079" velocity="0"/>-->
         <limit effort="0" lower="${-85*DEG2RAD}" upper="${85*DEG2RAD}" velocity="0"/>
     </joint>
@@ -211,14 +211,14 @@
 
     <link name="ScaraLink2">
         <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="1.57 1.57 0" />
             <mass value="1.5020" />
             <inertia  ixx="5.0471E-2" ixy="3.0689E-4" ixz="-8.5622E-4"
                     iyy="4.7456E-2" iyz="8.7643E-3"
                     izz="5.2228E-3" />
         </inertial>
         <visual>
-            <origin  xyz="0 0 0" rpy="0 0 0" />
+            <origin  xyz="0 0 0" rpy="1.57 0 0" />
             <geometry>
                 <mesh  filename="package://scara_v2_with_gripper/meshes/ScaraLink2.STL" />
             </geometry>
@@ -226,7 +226,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 1.57 0" />
             <geometry>
                 <mesh filename="package://scara_v2_with_gripper/meshes/ScaraLink2.STL" />
             </geometry>
@@ -235,8 +235,8 @@
     <joint name="Joint2" type="revolute">
         <parent link="ScaraLink1" />
         <child link="ScaraLink2" />
-        <origin xyz="0.24972 -0.081 0" rpy="3.14 -1.5708 0" />
-        <axis xyz="0 1 0" />
+        <origin xyz="0.24972  0 0.081" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
         <!--<limit effort="0" lower="-2.65" upper="2.65" velocity="0"/>-->
         <limit effort="0" lower="${-170*DEG2RAD}" upper="${170*DEG2RAD}" velocity="0"/>
     </joint>
@@ -250,7 +250,8 @@
     <joint name="fake_joint" type="revolute">
         <parent link="ScaraLink2" />
         <child link="fake_link" />
-        <origin xyz="0 -0.0424 0.24305" rpy="1.57 0 3.1416" />
+        <!--<origin xyz="0 -0.24305 0.0424 " rpy="0 0 3.1416" />-->
+        <origin xyz="0 -0.24305 -0.0424 " rpy="0 0 3.1416" />
         <axis xyz="0 0 1" />
         <limit effort="1000.0" lower="0.0" upper="0.001" velocity="0"/>
     </joint>

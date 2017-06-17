@@ -106,6 +106,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        fake_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         tool0:
           Alpha: 1
           Show Axes: false
@@ -140,9 +144,11 @@ Visualization Manager:
         ScaraBase:
           Value: false
         ScaraLink1:
-          Value: false
+          Value: true
         ScaraLink2:
-          Value: false
+          Value: true
+        fake_link:
+          Value: true
         tool0:
           Value: true
         world:
@@ -162,13 +168,14 @@ Visualization Manager:
             ScaraBase:
               ScaraLink1:
                 ScaraLink2:
-                  GripperBase:
-                    GripperLeft:
-                      {}
-                    GripperRight:
-                      {}
-                    tool0:
-                      {}
+                  fake_link:
+                    GripperBase:
+                      GripperLeft:
+                        {}
+                      GripperRight:
+                        {}
+                      tool0:
+                        {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -195,16 +202,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.29960096
+      Distance: 1.12718022
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.128003195
-        Y: 0.5219419
-        Z: 0.723720908
+        X: -0.212572187
+        Y: 0.545061052
+        Z: 1.00893307
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Name: Current View
