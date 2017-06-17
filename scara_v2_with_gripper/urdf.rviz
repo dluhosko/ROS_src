@@ -8,6 +8,7 @@ Panels:
         - /Status1
         - /RobotModel1
         - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 565
   - Class: rviz/Selection
@@ -120,19 +121,56 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        BaseBox:
+          Value: false
+        CentralStop1:
+          Value: false
+        CentralStop2:
+          Value: false
+        GripperBase:
+          Value: false
+        GripperLeft:
+          Value: false
+        GripperRight:
+          Value: false
+        ScaraBase:
+          Value: false
+        ScaraLink1:
+          Value: false
+        ScaraLink2:
+          Value: false
+        tool0:
+          Value: true
+        world:
+          Value: false
       Marker Scale: 0.200000003
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        world:
+          BaseBox:
+            CentralStop1:
+              {}
+            CentralStop2:
+              {}
+            ScaraBase:
+              ScaraLink1:
+                ScaraLink2:
+                  GripperBase:
+                    GripperLeft:
+                      {}
+                    GripperRight:
+                      {}
+                    tool0:
+                      {}
       Update Interval: 0
-      Value: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
