@@ -404,7 +404,7 @@
 
 
     <!--____________________Transmision definitions________________-->
-    <!--___SCARA arm_____-->
+    <!--___RT____-->
     <transmission name="RT_tran1">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="base_link1_to_link1">

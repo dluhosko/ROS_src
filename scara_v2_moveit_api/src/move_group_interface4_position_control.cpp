@@ -4,12 +4,8 @@
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit_msgs/GetPositionIK.h>
-
 #include "sensor_msgs/JointState.h"
 
-
-
-//#include "../../ikfast_kinematics_plugin/templates/ikfast.h"
 
 void printDefaultInformation(moveit::planning_interface::MoveGroupInterface *moveGroup){
 
@@ -43,10 +39,7 @@ int main (int argc, char **argv){
     const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
 
     printDefaultInformation(&move_group);
-
-
     //0.34695; 0.19341; 0.97653
-
 
     ros::ServiceClient service_client = n.serviceClient<moveit_msgs::GetPositionIK>("compute_ik");
     while (!service_client.exists()){
@@ -57,6 +50,7 @@ int main (int argc, char **argv){
     //fill request message
     moveit_msgs::GetPositionIK::Request service_request;
     moveit_msgs::GetPositionIK::Response service_response;
+
     service_request.ik_request.group_name = PLANNING_GROUP;
     service_request.ik_request.pose_stamped.header.frame_id="world";
     service_request.ik_request.ik_link_name = "tool0";
@@ -67,10 +61,12 @@ int main (int argc, char **argv){
     service_request.ik_request.pose_stamped.pose.position.z = 1.0196;
 
     //-0.4996; -0.4996; 0.5004; 0.5004
+
     service_request.ik_request.pose_stamped.pose.orientation.x = -0.4996;
     service_request.ik_request.pose_stamped.pose.orientation.y = -0.4996;
     service_request.ik_request.pose_stamped.pose.orientation.z = 0.5004;
     service_request.ik_request.pose_stamped.pose.orientation.w = 0.5004;
+
     //colision avoidance
     service_request.ik_request.avoid_collisions = true;
 
@@ -81,7 +77,7 @@ int main (int argc, char **argv){
         ROS_INFO("bad");
     ROS_INFO_STREAM(service_response);
 
-
+/*
     //Kinematic model tutorial
     robot_model_loader::RobotModelLoader robot_model_loader("robot_description");
     robot_model::RobotModelPtr kinematic_model = robot_model_loader.getModel();
@@ -96,17 +92,13 @@ int main (int argc, char **argv){
     {
         ROS_INFO("Joint %s: %f", joint_names[i].c_str(), joint_values[i]);
     }
-
+*/
     //joint_model_group = kinematic_state-
     //robot_state::JointStateGroup* joint_state_group = kinematic_state->getJointStateGroup(PLANNING_GROUP);
     //service_request.ik_request.robot_state.joint_state.name = joint
 
-
-    ROS_INFO_ONCE("while");
-
     while (ros::ok()){
         ROS_INFO_ONCE("while");
-
     }
 
 

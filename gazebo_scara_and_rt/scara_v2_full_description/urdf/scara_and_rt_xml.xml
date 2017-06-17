@@ -314,7 +314,8 @@
     <joint name="Joint_placeHole1" type="fixed">
         <parent link="placeBox" />
         <child link="placeHole1" />
-        <origin xyz="0.06 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
+        <!--<origin xyz="0.06 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />-->
+        <origin xyz="-0.06 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
         <axis xyz="1 0 0" />
     </joint>
 
@@ -345,7 +346,8 @@
     <joint name="Joint_placeHole2" type="fixed">
         <parent link="placeBox" />
         <child link="placeHole2" />
-        <origin xyz="0.06 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
+        <!--<origin xyz="0.06 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />-->
+        <origin xyz="-0.06 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
         <axis xyz="1 0 0" />
     </joint>
 
@@ -376,7 +378,8 @@
     <joint name="Joint_placeHole3" type="fixed">
         <parent link="placeBox" />
         <child link="placeHole3" />
-        <origin xyz="0.02 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
+        <!--<origin xyz="0.02 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />-->
+        <origin xyz="-0.02 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
         <axis xyz="1 0 0" />
     </joint>
 
@@ -406,7 +409,8 @@
     <joint name="Joint_placeHole4" type="fixed">
         <parent link="placeBox" />
         <child link="placeHole4" />
-        <origin xyz="0.02 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
+        <!--<origin xyz="0.02 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />-->
+        <origin xyz="-0.02 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
         <axis xyz="1 0 0" />
     </joint>
 
@@ -436,7 +440,8 @@
     <joint name="Joint_placeHole5" type="fixed">
         <parent link="placeBox" />
         <child link="placeHole5" />
-        <origin xyz="-0.02 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
+        <!--<origin xyz="-0.02 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />-->
+        <origin xyz="0.02 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
         <axis xyz="1 0 0" />
     </joint>
 
@@ -466,7 +471,8 @@
     <joint name="Joint_placeHole6" type="fixed">
         <parent link="placeBox" />
         <child link="placeHole6" />
-        <origin xyz="-0.02 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
+        <!--<origin xyz="-0.02 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />-->
+        <origin xyz="0.02 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
         <axis xyz="1 0 0" />
     </joint>
 
@@ -496,7 +502,8 @@
     <joint name="Joint_placeHole7" type="fixed">
         <parent link="placeBox" />
         <child link="placeHole7" />
-        <origin xyz="-0.06 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
+        <!--<origin xyz="-0.06 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />-->
+        <origin xyz="0.06 0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
         <axis xyz="1 0 0" />
     </joint>
 
@@ -527,7 +534,8 @@
     <joint name="Joint_placeHole8" type="fixed">
         <parent link="placeBox" />
         <child link="placeHole8" />
-        <origin xyz="-0.06 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
+        <!--<origin xyz="-0.06 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />-->
+        <origin xyz="0.06 -0.03 0.01" rpy="-3.8218E-18 -1.301E-16 -3.1416" />
         <axis xyz="1 0 0" />
     </joint>
     <!-- ******************************-->
