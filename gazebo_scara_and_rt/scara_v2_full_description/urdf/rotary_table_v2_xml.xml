@@ -8,6 +8,7 @@
         </plugin>
     </gazebo>
 
+
     <!--__________REFERENCES________________-->
     <gazebo reference="base">
         <material>Gazebo/White</material>
@@ -41,7 +42,7 @@
     </gazebo>
     <!---->
     <gazebo reference="link1">
-        <material>Gazebo/White</material>
+        <material>Gazebo/Black</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
@@ -102,7 +103,7 @@
     <joint name="world_to_base" type="fixed">
         <parent link="world"/>
         <child link="base"/>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0 0.01" rpy="0 0 0" />
         <axis xyz="1 0 0" />
     </joint>
 
@@ -164,7 +165,7 @@
         <child link="link1"/>
         <origin xyz="0 0 0.015" rpy="0 0 0"/>
         <axis xyz="0 0 1" />
-        <limit effort="1000" lower="0" upper="6.29" velocity="0"/>
+        <limit effort="1000" lower="0" upper="6.29" velocity="10"/>
     </joint>
 
 
@@ -193,7 +194,7 @@
     <joint name="link1_to_hole1" type="fixed">
         <parent link="link1"/>
         <child link="hole1"/>
-        <origin xyz="0.04 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0.04 0 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -222,7 +223,7 @@
     <joint name="link1_to_hole2" type="fixed">
         <parent link="link1"/>
         <child link="hole2"/>
-        <origin xyz="0.02828 0.02828 0.01" rpy="0 0 0"/>
+        <origin xyz="0.02828 0.02828 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -252,7 +253,7 @@
     <joint name="link1_to_hole3" type="fixed">
         <parent link="link1"/>
         <child link="hole3"/>
-        <origin xyz="0 0.04 0.01" rpy="0 0 0"/>
+        <origin xyz="0 0.04 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -282,7 +283,7 @@
     <joint name="link1_to_hole4" type="fixed">
         <parent link="link1"/>
         <child link="hole4"/>
-        <origin xyz="-0.02828 0.02828 0.01" rpy="0 0 0"/>
+        <origin xyz="-0.02828 0.02828 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -311,7 +312,7 @@
     <joint name="link1_to_hole5" type="fixed">
         <parent link="link1"/>
         <child link="hole5"/>
-        <origin xyz="-0.04 0 0.01" rpy="0 0 0"/>
+        <origin xyz="-0.04 0 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -340,7 +341,7 @@
     <joint name="link1_to_hole6" type="fixed">
         <parent link="link1"/>
         <child link="hole6"/>
-        <origin xyz="-0.02828 -0.02828 0.01" rpy="0 0 0"/>
+        <origin xyz="-0.02828 -0.02828 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -369,7 +370,7 @@
     <joint name="link1_to_hole7" type="fixed">
         <parent link="link1"/>
         <child link="hole7"/>
-        <origin xyz="0 -0.04 0.01" rpy="0 0 0"/>
+        <origin xyz="0 -0.04 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -398,14 +399,14 @@
     <joint name="link1_to_hole8" type="fixed">
         <parent link="link1"/>
         <child link="hole8"/>
-        <origin xyz="0.02828 -0.02828 0.01" rpy="0 0 0"/>
+        <origin xyz="0.02828 -0.02828 0.0125" rpy="0 0 0"/>
     </joint>
     <!--*****************************************************-->
 
 
     <!--____________________Transmision definitions________________-->
     <!--___RT____-->
-    <transmission name="RT_tran1">
+    <transmission name="tran1rt">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="base_link1_to_link1">
             <hardwareInterface>EffortJointInterface</hardwareInterface>

@@ -6,4 +6,9 @@
           respawn="false" output="screen">
         <remap from="/joint_states" to="/scara_v2_full/joint_states" />
     </node>
+    <!--<rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />-->
+
+    <!--&lt;!&ndash; spawn controller &ndash;&gt;-->
+    <!--<node name="joint_state_controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller" />-->
+    <!---->
 </launch>

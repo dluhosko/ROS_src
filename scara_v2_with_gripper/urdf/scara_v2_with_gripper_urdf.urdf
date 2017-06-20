@@ -199,7 +199,7 @@
   <joint name="Joint2" type="revolute">
     <parent link="ScaraLink1"/>
     <child link="ScaraLink2"/>
-    <origin rpy="0 0 0" xyz="0.24972  0 0.081"/>
+    <origin rpy="0 0 1.57" xyz="0.24972  0 0.081"/>
     <axis xyz="0 0 1"/>
     <!--<limit effort="0" lower="-2.65" upper="2.65" velocity="0"/>-->
     <limit effort="0" lower="-2.9670597284" upper="2.9670597284" velocity="0"/>
