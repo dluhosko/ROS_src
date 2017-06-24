@@ -5,9 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /MotionPlanning1/Planning Request1
-        - /MotionPlanning1/Planning Metrics1
-        - /MotionPlanning1/Planned Path1
         - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.742560029
@@ -227,7 +224,7 @@ Visualization Manager:
         Show Robot Collision: false
         Show Robot Visual: true
         Show Trail: false
-        State Display Time: 0.01 s
+        State Display Time: 0.05 s
         Trajectory Topic: move_group/display_planned_path
       Planning Metrics:
         Payload: 1
@@ -242,9 +239,9 @@ Visualization Manager:
         Goal State Color: 250; 128; 0
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
-        Planning Group: scara_arm
+        Planning Group: rt
         Query Goal State: true
-        Query Start State: true
+        Query Start State: false
         Show Workspace: false
         Start State Alpha: 1
         Start State Color: 0; 255; 0
@@ -473,10 +470,10 @@ Visualization Manager:
       Focal Shape Size: 0.0500000007
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.729797065
+      Pitch: 0.624797165
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 0.931770504
+      Yaw: 0.491770864
     Saved: ~
 Window Geometry:
   Displays:

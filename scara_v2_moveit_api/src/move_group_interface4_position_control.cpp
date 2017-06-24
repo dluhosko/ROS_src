@@ -24,12 +24,12 @@ int main (int argc, char **argv){
     static const std::string PLANNING_GROUP = "scara_arm";
     geometry_msgs::Pose target_pose;
     geometry_msgs::PoseStamped ws1;
-    //moveit::planning_interface::MoveGroupInterface::Plan my_plan;
+    moveit::planning_interface::MoveGroupInterface::Plan my_plan;
     moveit::core::RobotStatePtr current_state;
     //IKFAST
     moveit_msgs::GetPositionIK IKposition;
-    moveit::planning_interface::MoveGroupInterface::Plan my_plan;
 
+    //IKposition.request.
 
     ros::init(argc, argv, "pose_control");
     ros::NodeHandle n, nn;
@@ -54,10 +54,6 @@ int main (int argc, char **argv){
         ROS_INFO("waiting for service");
         sleep(1.0);
     }
-    move_group.setGoalPositionTolerance(0.1);
-    move_group.setGoalJointTolerance(0.1);
-    move_group.setGoalOrientationTolerance(1);
-    move_group.setGoalTolerance(0.1);
 
     //move_group.setEndEffector("tool0");
     const geometry_msgs::PoseStamped position = move_group.getCurrentPose();
@@ -69,22 +65,60 @@ int main (int argc, char **argv){
     moveit_msgs::RobotState robot_state;
     moveit::core::robotStateToRobotStateMsg(*move_group.getCurrentState(), robot_state, true);
     //fill request message
-    moveit_msgs::GetPositionIK::Request service_request;
-    moveit_msgs::GetPositionIK::Response service_response;
-    service_request.ik_request.group_name = PLANNING_GROUP;
-    service_request.ik_request.pose_stamped.header.frame_id="/world";
-    service_request.ik_request.ik_link_name = "tool0";
-    service_request.ik_request.robot_state=robot_state;
+//    moveit_msgs::GetPositionIK::Request service_request;
+//    moveit_msgs::GetPositionIK::Response service_response;
+//    service_request.ik_request.group_name = PLANNING_GROUP;
+//    service_request.ik_request.pose_stamped.header.frame_id="/world";
+//    service_request.ik_request.ik_link_name = "tool0";
+//    service_request.ik_request.robot_state=robot_state;
+    std::vector<geometry_msgs::Pose> positions;
 
-    ROS_INFO("hovno");
+    geometry_msgs::Pose positionaa;
+    positionaa.position.x = 0.34;
+    positionaa.position.y = 0.23;
+    positionaa.position.z = 1.05;
+    //0.98192; -0.1893; 7.5023e-05; 0.00038916
+//    positionaa.orientation.x = 0.98;
+//    positionaa.orientation.y = -0.189;
+//    positionaa.orientation.z = 0;
+//    positionaa.orientation.w = 0.00039;
+    positionaa.orientation.x = 0;
+    positionaa.orientation.y = 0;
+    positionaa.orientation.z = 0;
+    positionaa.orientation.w = 0;
 
 
 
+/*
+    position:
+    x: 0.637025
+    y: 0.796651
+    z: 1.05641
+    orientation:
+    x: -0.288818
+    y: -0.644892
+    z: 0.645568
+    w: 0.289727
 
-    std::vector<double> joint_group_position;
 
+*/
+    positions.resize(2);
+    moveit::planning_interface::MoveGroupInterface::Plan plan;
+    move_group.setApproximateJointValueTarget(positionaa,"tool0");
 
+    int a = move_group.plan(plan);
+    ROS_INFO_STREAM("PLAN:" << a);
+    if(a){
 
+        int size=plan.trajectory_.joint_trajectory.points.size();
+
+        ROS_INFO_STREAM("moje IK je");
+        ROS_INFO_STREAM(plan.trajectory_.joint_trajectory.points[size-1]);
+    }
+    move_group.execute(plan);
+    move_group.move();
+
+    ROS_INFO_STREAM(position);
 
     /*ROS_INFO_STREAM(robot_state);
     move_group.setStartState(robot_state);
@@ -109,51 +143,30 @@ int main (int argc, char **argv){
     ROS_INFO_STREAM(plan.trajectory_.joint_trajectory.points[0]);
     }
 */
-    //0.49215; 0.88562; 1.0479
+    //0.70468; 0.58; 1.0196
 //    service_request.ik_request.pose_stamped.pose.position.x = position.pose.position.x;
 //    service_request.ik_request.pose_stamped.pose.position.y = position.pose.position.y;
 //    service_request.ik_request.pose_stamped.pose.position.z = position.pose.position.z;
-
-    service_request.ik_request.pose_stamped.pose.position.x = 0.575932;
-    service_request.ik_request.pose_stamped.pose.position.y = 0.873529;
-    service_request.ik_request.pose_stamped.pose.position.z = 1.01;
-
-    //
-
-
-    //-0.056811; -0.70458; 0.70497; 0.057875
+//
+//    //-0.4996; -0.4996; 0.5004; 0.5004
 //    service_request.ik_request.pose_stamped.pose.orientation.x = position.pose.orientation.x;
 //    service_request.ik_request.pose_stamped.pose.orientation.y = position.pose.orientation.y;
 //    service_request.ik_request.pose_stamped.pose.orientation.z = position.pose.orientation.z;
 //    service_request.ik_request.pose_stamped.pose.orientation.w = position.pose.orientation.w;
+//    //colision avoidance
+//    service_request.ik_request.avoid_collisions = true;
+//    service_request.ik_request.attempts = 10;
+//
+//    if (service_client.call(service_request, service_response)) {
+//        ROS_INFO("good");
+//    }
+//    else
+//        ROS_INFO("bad");
+//
+//    ROS_INFO_STREAM("IK zo servisu je");
+//    ROS_INFO_STREAM(service_response);
 
-//    service_request.ik_request.pose_stamped.pose.orientation.x = -0.19714;
-//    service_request.ik_request.pose_stamped.pose.orientation.y = -0.678599;
-//    service_request.ik_request.pose_stamped.pose.orientation.z = 0.679277;
-//    service_request.ik_request.pose_stamped.pose.orientation.w = 0.198047;
-    //colision avoidance
-    service_request.ik_request.avoid_collisions = true;
-    service_request.ik_request.attempts = 10;
-
-    if (service_client.call(service_request, service_response)) {
-        ROS_INFO("good");
-    }
-    else
-        ROS_INFO("bad");
-    ROS_INFO_STREAM("IK zo servisu je");
-    ROS_INFO_STREAM(service_response);
-
-    joint_group_position.push_back(service_response.solution.joint_state.position[0]);   // radians
-    joint_group_position.push_back(service_response.solution.joint_state.position[1]);
-    joint_group_position.push_back(service_response.solution.joint_state.position[2]);
-
-    move_group.setJointValueTarget(joint_group_position);
-    success = move_group.plan(my_plan);
-    ROS_INFO_NAMED("Visualizing plan (joint space goal) %s", success ? "GOOD" : "FAILED");
-    move_group.execute(my_plan);
-    move_group.move();
-
-
+/*
     //Kinematic model tutorial
     robot_model_loader::RobotModelLoader robot_model_loader("robot_description");
     robot_model::RobotModelPtr kinematic_model = robot_model_loader.getModel();
@@ -162,8 +175,6 @@ int main (int argc, char **argv){
     kinematic_state->setToDefaultValues();
     const std::vector<std::string> &joint_names = joint_model_group->getVariableNames();
 
-    //
-    ROS_INFO("0");
     std::vector<double> joint_values;
     kinematic_state->copyJointGroupPositions(joint_model_group, joint_values);
     for (std::size_t i = 0; i < joint_names.size(); ++i)
@@ -176,7 +187,7 @@ int main (int argc, char **argv){
     //service_request.ik_request.robot_state.joint_state.name = joint
 
 
-    ROS_INFO_ONCE("while");
+    ROS_INFO_ONCE("while");*/
     spinner.stop();
 
     /*while (ros::ok()){
