@@ -4,6 +4,7 @@
     <!--              Constants               -->
     <xacro:property name="DEG2RAD" value="0.01745329252" />
     <xacro:property name="RED2DEG" value="57.295779513" />
+    <xacro:property name="M_PI" value="3.141592" />
 
     <!-- ***********************************  -->
 
@@ -483,7 +484,7 @@
         <child link="link1"/>
         <origin xyz="0 0 0.01" rpy="0 0 0"/>
         <axis xyz="0 0 1" />
-        <limit effort="1000" lower="0" upper="6.29" velocity="0"/>
+        <limit effort="100" lower="0" upper="${2*M_PI}" velocity="0.5"/>
     </joint>
 
 
@@ -788,7 +789,7 @@
         <origin xyz="0 0.051 0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
         <!--<limit effort="0" lower="-1.57079" upper="1.57079" velocity="0"/>-->
-        <limit effort="0" lower="${-85*DEG2RAD}" upper="${85*DEG2RAD}" velocity="0"/>
+        <limit effort="100" lower="${-85*DEG2RAD}" upper="${85*DEG2RAD}" velocity="100"/>
     </joint>
 
 
@@ -823,7 +824,7 @@
         <origin xyz="0.24972 -0.081 0" rpy="3.14 -1.5708 0" />
         <axis xyz="0 1 0" />
         <!--<limit effort="0" lower="-2.65" upper="2.65" velocity="0"/>-->
-        <limit effort="0" lower="${-170*DEG2RAD}" upper="${170*DEG2RAD}" velocity="0"/>
+        <limit effort="100" lower="${-170*DEG2RAD}" upper="${170*DEG2RAD}" velocity="100"/>
     </joint>
     <!--**********************************-->
 
@@ -944,10 +945,10 @@
     <transmission name="tran1">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Joint1">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="motor1">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
@@ -955,10 +956,10 @@
     <transmission name="tran2">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="Joint2">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="motor2">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
@@ -967,11 +968,11 @@
     <transmission name="RT_tran1">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="base_link1_to_link1">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="RT_motor">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>100000</mechanicalReduction>
         </actuator>
     </transmission>
     <!--********************-->
