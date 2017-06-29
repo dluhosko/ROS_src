@@ -18,6 +18,8 @@
 #include "sensor_msgs/JointState.h"
 #include "scara_v2_moveit_api/pose_and_gripperState.h"
 #include <sstream>
+#include <iostream>
+using namespace std;
 
 
 
@@ -28,7 +30,7 @@ const double DEG2RAD=0.01745329252;
 const double RAD2DEG=57.295779513;
 std::vector<std::vector<double>> joint_group_positions(13, std::vector<double>(3));
 std::vector<std::vector<double>> defaultPositions(11, std::vector<double>(3));
-std::vector<std::vector<double>> defaultCartesianPosition(11, std::vector<double>(6));
+std::vector<std::vector<double>> defaultCartesianPosition(11, std::vector<double>(7));
 std::vector<double> joint_group_position;
 bool executionOK = false;
 std::vector<geometry_msgs::Pose> waypoints(2);
@@ -175,99 +177,117 @@ bool setCartesianPositions(bool showPositions){
             defaultCartesianPosition[0][0] = 0.704;
             defaultCartesianPosition[0][1] = 0.58;
             defaultCartesianPosition[0][2] = 1.02;
-        //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+        //rpy+w
+            defaultCartesianPosition[0][3] = 0.707;
+            defaultCartesianPosition[0][4] = 0.707;
+            defaultCartesianPosition[0][5] = -0.00028;
+            defaultCartesianPosition[0][6] = -0.00028;
+
     //Pick position
         //xyz
             defaultCartesianPosition[1][0] = 0.4;
             defaultCartesianPosition[1][1] = 0.24;
             defaultCartesianPosition[1][2] = 1.01;
-    //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+        //rpy+w
+            defaultCartesianPosition[1][3] = 0.99;
+            defaultCartesianPosition[1][4] = -0.08;
+            defaultCartesianPosition[1][5] = -0.00077;
+            defaultCartesianPosition[1][6] = 0.00012;
+
     //work position 0.57143; 0.6028; 1.02
-            defaultCartesianPosition[2][0] = -0.57;
-            defaultCartesianPosition[2][1] = 0.60;
+            defaultCartesianPosition[2][0] = 0.58;
+            defaultCartesianPosition[2][1] = 0.59;
             defaultCartesianPosition[2][2] = 1.04;
         //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+            defaultCartesianPosition[2][3] = 0.38;
+            defaultCartesianPosition[2][4] = 0.92;
+            defaultCartesianPosition[2][5] = 0.00059;
+            defaultCartesianPosition[2][6] = -0.00061;
+        //another orientation
+//            defaultCartesianPosition[2][3] = 0.89;
+//            defaultCartesianPosition[2][4] = 0.44;
+//            defaultCartesianPosition[2][5] = -0.0005;
+//            defaultCartesianPosition[2][6] = 0.0006;
     //place position 1 : 0.51; 0.87; 0.9735
         //xyz
             defaultCartesianPosition[3][0] = 0.51;
             defaultCartesianPosition[3][1] = 0.87;
             defaultCartesianPosition[3][2] = 1.01;
         //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+            defaultCartesianPosition[3][3] = 0.11;
+            defaultCartesianPosition[3][4] = 0.99;
+            defaultCartesianPosition[3][5] = 0.00015;
+            defaultCartesianPosition[3][6] = -0.00072;
     //place position 2 : 0.51; 0.93; 0.9735
         //xyz
             defaultCartesianPosition[4][0] = 0.51;
             defaultCartesianPosition[4][1] = 0.93;
             defaultCartesianPosition[4][2] = 1.01;
         //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+            defaultCartesianPosition[4][3] = 0.18;
+            defaultCartesianPosition[4][4] = 0.98;
+            defaultCartesianPosition[4][5] = -0.00013;
+            defaultCartesianPosition[4][6] = -0.00053;
     //place position 3 : 0.47; 0.87; 0.9735
         //xyz
             defaultCartesianPosition[5][0] = 0.47;
             defaultCartesianPosition[5][1] = 0.87;
             defaultCartesianPosition[5][2] = 1.01;
         //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+            defaultCartesianPosition[5][3] = 0.04;
+            defaultCartesianPosition[5][4] = 0.99;
+            defaultCartesianPosition[5][5] = 0.00018;
+            defaultCartesianPosition[5][6] = 0.00018;
     //place position 4 : 0.47; 0.93; 0.9735
         //xyz
             defaultCartesianPosition[6][0] = 0.47;
             defaultCartesianPosition[6][1] = 0.93;
             defaultCartesianPosition[6][2] = 1.01;
         //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+            defaultCartesianPosition[6][3] = 0.08;
+            defaultCartesianPosition[6][4] = 0.99;
+            defaultCartesianPosition[6][5] = 0;
+            defaultCartesianPosition[6][6] = -0.00064;
     //place position 5 : 0.43; 0.87; 0.9735
         //xyz
             defaultCartesianPosition[7][0] = 0.43;
             defaultCartesianPosition[7][1] = 0.87;
             defaultCartesianPosition[7][2] = 1.01;
         //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+            defaultCartesianPosition[7][3] = -0.04;
+            defaultCartesianPosition[7][4] = 0.999;
+            defaultCartesianPosition[7][5] = 0.00027;
+            defaultCartesianPosition[7][6] = -0.0008;
     //place position 6 : 0.43; 0.93; 0.9735
         //xyz
             defaultCartesianPosition[8][0] = 0.43;
             defaultCartesianPosition[8][1] = 0.93;
             defaultCartesianPosition[8][2] = 1.01;
         //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+            defaultCartesianPosition[8][3] = 0.004;
+            defaultCartesianPosition[8][4] = 0.999;
+            defaultCartesianPosition[8][5] = 0;
+            defaultCartesianPosition[8][6] = -0.0072;
     //place position 7 : 0.39; 0.87; 0.9735
         //xyz
             defaultCartesianPosition[9][0] = 0.39;
-            defaultCartesianPosition[9][1] = 0.87;
+            defaultCartesianPosition[9][1] = 0.88;
             defaultCartesianPosition[9][2] = 1.01;
         //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+            defaultCartesianPosition[9][3] = -0.12;
+            defaultCartesianPosition[9][4] = 0.99;
+            defaultCartesianPosition[9][5] = 0.00028;
+            defaultCartesianPosition[9][6] = -0.00084;
     //place position 8 : 0.39; 0.87; 0.9735
         //xyz
             defaultCartesianPosition[10][0] = 0.39;
-            defaultCartesianPosition[10][1] = 0.87;
+            defaultCartesianPosition[10][1] = 0.93;
             defaultCartesianPosition[10][2] = 1.01;
         //rpy
-            defaultCartesianPosition[0][3] = 0.704;
-            defaultCartesianPosition[0][4] = 0.58;
-            defaultCartesianPosition[0][5] = 1.02;
+            defaultCartesianPosition[10][3] = -0.095;
+            defaultCartesianPosition[10][4] = 0.995;
+            defaultCartesianPosition[10][5] = 0;
+            defaultCartesianPosition[10][6] = -0.00078;
 
     if (showPositions){
         ROS_INFO("VECTOR SIZE %d x %d \n", defaultCartesianPosition.size(),defaultCartesianPosition[0].size());
@@ -369,55 +389,99 @@ void positionControll (moveit::planning_interface::MoveGroupInterface *move_grou
         position.position.x = defaultCartesianPosition[0][0];
         position.position.y = defaultCartesianPosition[0][1];
         position.position.z = defaultCartesianPosition[0][2];
-        ROS_INFO("moving to home");
+        position.orientation.x = defaultCartesianPosition[0][3];
+        position.orientation.y = defaultCartesianPosition[0][4];
+        position.orientation.z = defaultCartesianPosition[0][5];
+        position.orientation.w = defaultCartesianPosition[0][6];
+        ROS_INFO("MOVING TO HOME POSITION!");
     }else if (mode == 1){      //pick position
         position.position.x = defaultCartesianPosition[1][0];
         position.position.y = defaultCartesianPosition[1][1];
         position.position.z = defaultCartesianPosition[1][2];
-        ROS_INFO("moving to pick");
+        position.orientation.x = defaultCartesianPosition[1][3];
+        position.orientation.y = defaultCartesianPosition[1][4];
+        position.orientation.z = defaultCartesianPosition[1][5];
+        position.orientation.w = defaultCartesianPosition[1][6];
+        ROS_INFO("MOVING TO PICK POSITION!");
     }else if (mode == 2){       //work position
         position.position.x = defaultCartesianPosition[2][0];
         position.position.y = defaultCartesianPosition[2][1];
         position.position.z = defaultCartesianPosition[2][2];
-        ROS_INFO("moving to work");
+        position.orientation.x = defaultCartesianPosition[2][3];
+        position.orientation.y = defaultCartesianPosition[2][4];
+        position.orientation.z = defaultCartesianPosition[2][5];
+        position.orientation.w = defaultCartesianPosition[2][6];
+        ROS_INFO("MOVING TO WORK POSITION!");
     }
     else if (mode == 3){        //place position
         if (number_of_place_position == 1){
             position.position.x = defaultCartesianPosition[3][0];
             position.position.y = defaultCartesianPosition[3][1];
             position.position.z = defaultCartesianPosition[3][2];
+            position.orientation.x = defaultCartesianPosition[3][3];
+            position.orientation.y = defaultCartesianPosition[3][4];
+            position.orientation.z = defaultCartesianPosition[3][5];
+            position.orientation.w = defaultCartesianPosition[3][6];
         }else if (number_of_place_position == 2){
             position.position.x = defaultCartesianPosition[4][0];
             position.position.y = defaultCartesianPosition[4][1];
             position.position.z = defaultCartesianPosition[4][2];
+            position.orientation.x = defaultCartesianPosition[4][3];
+            position.orientation.y = defaultCartesianPosition[4][4];
+            position.orientation.z = defaultCartesianPosition[4][5];
+            position.orientation.w = defaultCartesianPosition[4][6];
         }else if (number_of_place_position == 3){
             position.position.x = defaultCartesianPosition[5][0];
             position.position.y = defaultCartesianPosition[5][1];
             position.position.z = defaultCartesianPosition[5][2];
+            position.orientation.x = defaultCartesianPosition[5][3];
+            position.orientation.y = defaultCartesianPosition[5][4];
+            position.orientation.z = defaultCartesianPosition[5][5];
+            position.orientation.w = defaultCartesianPosition[5][6];
         }else if (number_of_place_position == 4){
             position.position.x = defaultCartesianPosition[6][0];
             position.position.y = defaultCartesianPosition[6][1];
-            position.position.z = defaultCartesianPosition[6][2];;
+            position.position.z = defaultCartesianPosition[6][2];
+            position.orientation.x = defaultCartesianPosition[6][3];
+            position.orientation.y = defaultCartesianPosition[6][4];
+            position.orientation.z = defaultCartesianPosition[6][5];
+            position.orientation.w = defaultCartesianPosition[6][6];
         }else if (number_of_place_position == 5){
             position.position.x = defaultCartesianPosition[7][0];
             position.position.y = defaultCartesianPosition[7][1];
             position.position.z = defaultCartesianPosition[7][2];
+            position.orientation.x = defaultCartesianPosition[7][3];
+            position.orientation.y = defaultCartesianPosition[7][4];
+            position.orientation.z = defaultCartesianPosition[7][5];
+            position.orientation.w = defaultCartesianPosition[7][6];
         }else if (number_of_place_position == 6){
             position.position.x = defaultCartesianPosition[8][0];
             position.position.y = defaultCartesianPosition[8][1];
             position.position.z = defaultCartesianPosition[8][2];
+            position.orientation.x = defaultCartesianPosition[8][3];
+            position.orientation.y = defaultCartesianPosition[8][4];
+            position.orientation.z = defaultCartesianPosition[8][5];
+            position.orientation.w = defaultCartesianPosition[8][6];
         }else if (number_of_place_position == 7){
             position.position.x = defaultCartesianPosition[9][0];
             position.position.y = defaultCartesianPosition[9][1];
             position.position.z = defaultCartesianPosition[9][2];
+            position.orientation.x = defaultCartesianPosition[9][3];
+            position.orientation.y = defaultCartesianPosition[9][4];
+            position.orientation.z = defaultCartesianPosition[9][5];
+            position.orientation.w = defaultCartesianPosition[9][6];
         }else if (number_of_place_position == 8){
             position.position.x = defaultCartesianPosition[10][0];
             position.position.y = defaultCartesianPosition[10][1];
             position.position.z = defaultCartesianPosition[10][2];
+            position.orientation.x = defaultCartesianPosition[10][3];
+            position.orientation.y = defaultCartesianPosition[10][4];
+            position.orientation.z = defaultCartesianPosition[10][5];
+            position.orientation.w = defaultCartesianPosition[10][6];
         }else {
             ROS_INFO("NOT DEFINED position");
         }
-        ROS_INFO("moving to place pos:%d",number_of_place_position);
+        ROS_INFO("MOVING TO PLACE POSITION!:%d",number_of_place_position);
     }else{
         ROS_INFO("NOT DEFINED mode");
     }
@@ -431,13 +495,13 @@ void positionControll (moveit::planning_interface::MoveGroupInterface *move_grou
         numberOfAttempts++;
     }
     success = move_group->plan(my_plan);
-    ROS_INFO_STREAM("PLAN:" << success);
+   // ROS_INFO_STREAM("PLAN:" << success);
     if(success){
 
         int size=my_plan.trajectory_.joint_trajectory.points.size();
 
-        ROS_INFO_STREAM("moje IK je");
-        ROS_INFO_STREAM(my_plan.trajectory_.joint_trajectory.points[size-1]);
+        //ROS_INFO_STREAM("moje IK je");
+        //ROS_INFO_STREAM(my_plan.trajectory_.joint_trajectory.points[size-1]);
     }
     ROS_INFO_NAMED("tutorial", "Visualizing plan 2 -back (pose goal) %s", success ? "GOOD" : "BAD");
 
@@ -484,14 +548,15 @@ void waitForSubscribers(ros::Publisher gripperState, ros::Publisher gripperTopic
 }
 int menu (){
     ROS_INFO("\n");
-    ROS_INFO("************ SENSODRIVE SCARA *********************");
-    ROS_INFO("**************       menu      **********************");
-    ROS_INFO("Press 1 for:\t JOINT CONTROL");
-    ROS_INFO("Press 2 for:\t POSITION CONTROL");
-    ROS_INFO("Press 5 for:\t INFO");
-    ROS_INFO("Press etc for:\t something");
-    ROS_INFO("Press 9 for:\tEXIT");
-    ROS_INFO("*****************************************************");
+    ROS_INFO("*************** SENSODRIVE SCARA ***************");
+    ROS_INFO("**************       menu        ***************");
+    ROS_INFO("**   Press 1 for:\t JOINT CONTROL     **");
+    ROS_INFO("**   Press 2 for:\t POSITION CONTROL  **");
+    ROS_INFO("**   Press 5 for:\t INFO              **");
+    ROS_INFO("**   Press x for:\t something         **");
+    ROS_INFO("**   Press 9 for:\tEXIT               **");
+    ROS_INFO("***********************************************");
+    ROS_INFO("***********************************************");
     int number;
 
     while (1){
@@ -550,42 +615,48 @@ int main(int argc, char **argv){
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
     const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
 
-    int num = menu();
-    if (num == 1){
-        //setDesiredAngles();
-        if (setPositions(false)){
-            ROS_INFO("default positions for Joint control OK");
-        }
-    }else if (num == 2){
-        if (setCartesianPositions(true)){
-            ROS_INFO("default positions for Cartesian planning  OK");
-            ros::ServiceClient service_client = n.serviceClient<moveit_msgs::GetPositionIK>("compute_ik");
-            ros::Subscriber executeTrajectory = nn.subscribe("execute_trajectory/result",1000,trajectoryExecutionCallback);
-            while (!service_client.exists()){
-                ROS_INFO("waiting for service");
-                sleep(1.0);
-            }
-            position = move_group.getCurrentPose();
-            ROS_INFO_STREAM("REFERENCNY FRAME");
-            ROS_INFO_NAMED("tutorial", "Reference frame: %s", move_group.getPlanningFrame().c_str());
-            ROS_INFO_NAMED("tutorial", "End effector link: %s", move_group.getEndEffectorLink().c_str());
-            selfPosition.position = position.pose.position;
-            selfPosition.orientation = position.pose.orientation;
-            //ROS_INFO("Self position");
-            //ROS_INFO_STREAM(selfPosition);
-            moveit::core::robotStateToRobotStateMsg(*move_group.getCurrentState(), robot_state, true);
-            move_group.setMaxVelocityScalingFactor(0.1);
-            move_group.setMaxAccelerationScalingFactor(0.1);
-        }
-    }else if (num == 5){
-        //doplnit
+    int num ;
 
-    }else if (num == -1){
-        ROS_INFO("program END!");
-        ros::shutdown();
-        spinner.stop();
-        return 0;
-    }
+    do {
+        num = menu();
+        if (num == 1) {
+            //setDesiredAngles();
+            if (setPositions(false)) {
+                ROS_INFO("default positions for Joint control OK");
+            }
+        } else if (num == 2) {
+            if (setCartesianPositions(true)) {
+                ROS_INFO("default positions for Cartesian planning  OK");
+                ros::ServiceClient service_client = n.serviceClient<moveit_msgs::GetPositionIK>("compute_ik");
+                ros::Subscriber executeTrajectory = nn.subscribe("execute_trajectory/result", 1000, trajectoryExecutionCallback);
+                while (!service_client.exists()) {
+                    ROS_INFO("waiting for service");
+                    sleep(1.0);
+                }
+                position = move_group.getCurrentPose();
+                ROS_INFO_STREAM("REFERENCNY FRAME");
+                ROS_INFO_NAMED("tutorial", "Reference frame: %s", move_group.getPlanningFrame().c_str());
+                ROS_INFO_NAMED("tutorial", "End effector link: %s", move_group.getEndEffectorLink().c_str());
+                selfPosition.position = position.pose.position;
+                selfPosition.orientation = position.pose.orientation;
+                //ROS_INFO("Self position");
+                //ROS_INFO_STREAM(selfPosition);
+                moveit::core::robotStateToRobotStateMsg(*move_group.getCurrentState(), robot_state, true);
+                move_group.setMaxVelocityScalingFactor(0.1);
+                move_group.setMaxAccelerationScalingFactor(0.1);
+                move_group.setPlanningTime(10);
+            }
+        } else if (num == 5) {
+           ROS_INFO("INFO");
+
+        } else if (num == -1) {
+            ROS_INFO("program END!");
+            ros::shutdown();
+            spinner.stop();
+            return 0;
+        }
+    }while (num > 2);
+    ROS_INFO("waiting 5s");
     sleep(5);
 
     ros::Publisher gripperState_pub = n.advertise<std_msgs::String>("gripper_state_topic", 1000);
@@ -604,6 +675,7 @@ int main(int argc, char **argv){
 
 
     bool initRT = false;
+    bool moveToHome = true;
 
 
     while (ros::ok()) {
@@ -630,13 +702,25 @@ int main(int argc, char **argv){
                 counter = 1;
             }
             target_pose1 = getTargetCoordinates(&move_group);
-            ROS_INFO ("[SCARA -> CUBE]: Gripper Place! and publish");
+            ROS_INFO ("[SCARA]  ( =>CUBE ) : Gripper Place! and publish");
             gripperStates.gripperState = false;
             gripperStates.posX = target_pose1.position.x;
             gripperStates.posY = target_pose1.position.y;
             gripperStates.posZ = target_pose1.position.z;
             ROS_INFO_STREAM(gripperStates);
             grip_topic_pub.publish(gripperStates);
+
+            if (moveToHome){
+                sleep(2);
+                if (num == 1){
+                    jointModeControll(&move_group, my_plan, 0, 0);
+                }else if (num == 2){
+                    positionControll(&move_group, my_plan, 0, 0);
+                }else{
+                    ROS_ERROR("NOT VALID CONTROL MODE");
+                }
+                ROS_INFO("*****  move to home   *****");
+            }
 
             mode = 0;
         }else {
@@ -650,14 +734,14 @@ int main(int argc, char **argv){
             }
             if (!initRT){
                 rt_pub.publish(msg);
-                ROS_INFO("[SCARA -> RT]: RT init : %s",msg.data.c_str());
+                ROS_INFO("[SCARA] ( =>RT ) : RT init : %s",msg.data.c_str());
                 sleep(2);
                 initRT=true;
             }
             //
             if (mode == 1){
                 target_pose1 = getTargetCoordinates(&move_group);
-                ROS_INFO ("[SCARA -> CUBE]: Gripper Pick! and publish");
+                ROS_INFO ("[SCARA] ( =>CUBE ): Gripper Pick! and publish");
                 gripperStates.gripperState = true;
                 gripperStates.posX = target_pose1.position.x;
                 gripperStates.posY = target_pose1.position.y;
@@ -666,7 +750,7 @@ int main(int argc, char **argv){
             }
             if (mode == 2){
                 rt_pub.publish(msg);
-                ROS_INFO("[SCARA -> RT]: RT turn : %s",msg.data.c_str());
+                ROS_INFO("[SCARA] ( =>RT ): RT turn : %s",msg.data.c_str());
                 sleep(2);
             }
         }

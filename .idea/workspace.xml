@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" buildAllGenerated="true">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
       <config projectName="Project" targetName="polled_camera_generate_messages_eus" />
+      <config projectName="Project" targetName="gazebo_msgs_gencpp" />
       <config projectName="Project" targetName="trajectory_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="gazebo_ros_diff_drive" />
       <config projectName="Project" targetName="scara_msgs_gencpp" />
       <config projectName="Project" targetName="gazebo_ros_camera_utils" />
-      <config projectName="Project" targetName="turtle_tf_broadcaster" />
+      <config projectName="Project" targetName="move_group_interface5_rt" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_nodejs" />
       <config projectName="Project" targetName="gazebo_ros_hand_of_god" />
-      <config projectName="Project" targetName="map_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetModelProperties" />
       <config projectName="Project" targetName="control_toolbox_generate_messages_cpp" />
       <config projectName="Project" targetName="gazebo_ros_gencfg" />
-      <config projectName="Project" targetName="training_gencpp" />
+      <config projectName="Project" targetName="visualization_msgs_generate_messages_py" />
       <config projectName="Project" targetName="nodelet_generate_messages_eus" />
+      <config projectName="Project" targetName="gazebo_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="gazebo_msgs_generate_messages" />
-      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" />
       <config projectName="Project" targetName="run_tests_gazebo_plugins" />
-      <config projectName="Project" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="Project" targetName="gazebo_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="tf_generate_messages_nodejs" />
       <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest_test_range_range_plugin.test" />
       <config projectName="Project" targetName="tf_generate_messages_eus" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_lisp" />
       <config projectName="Project" targetName="multiple_cube_publisher" />
-      <config projectName="Project" targetName="shape_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="gazebo_tutorials" />
-      <config projectName="Project" targetName="scara_msgs_genpy" />
+      <config projectName="Project" targetName="scara_msgs_gennodejs" />
       <config projectName="Project" targetName="gazebo_msgs_genlisp" />
       <config projectName="Project" targetName="gazebo_ros_video" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_DeleteModel" />
@@ -36,48 +37,44 @@
       <config projectName="Project" targetName="gazebo_ros_planar_move" />
       <config projectName="Project" targetName="actionlib_generate_messages_py" />
       <config projectName="Project" targetName="nodelet_generate_messages_nodejs" />
-      <config projectName="Project" targetName="training_generate_messages_py" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="scara_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="gazebo_ros_joint_trajectory" />
+      <config projectName="Project" targetName="gazebo_ros_depth_camera" />
       <config projectName="Project" targetName="gazebo_msgs_genpy" />
-      <config projectName="Project" targetName="training_generate_messages" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetLinkProperties" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gencpp" />
+      <config projectName="Project" targetName="gazebo_msgs_generate_messages_py" />
       <config projectName="Project" targetName="trajectory_msgs_generate_messages_py" />
       <config projectName="Project" targetName="tf_generate_messages_py" />
       <config projectName="Project" targetName="gazebo_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="hokuyo_node" />
       <config projectName="Project" targetName="tf_generate_messages_cpp" />
-      <config projectName="Project" targetName="train" />
       <config projectName="Project" targetName="gtest_main" />
-      <config projectName="Project" targetName="listener" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetPhysicsProperties" />
+      <config projectName="Project" targetName="moveit_ros_manipulation_gencfg" />
       <config projectName="Project" targetName="pub_joint_trajectory_test" />
       <config projectName="Project" targetName="gazebo_ros_projector" />
       <config projectName="Project" targetName="roscpp_generate_messages_py" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SpawnModel" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_py" />
       <config projectName="Project" targetName="scara_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest" />
-      <config projectName="Project" targetName="doxygen" />
+      <config projectName="Project" targetName="std_srvs_generate_messages_eus" />
       <config projectName="Project" targetName="gazebo_ros_api_plugin" />
       <config projectName="Project" targetName="cube_publisher" />
       <config projectName="Project" targetName="clean_test_results" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_LinkState" />
-      <config projectName="Project" targetName="octomap_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="turtlesim_generate_messages_cpp" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="actionlib_generate_messages_cpp" />
       <config projectName="Project" targetName="gazebo_ros_elevator" />
-      <config projectName="Project" targetName="control_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="nav_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="turtlesim_generate_messages_eus" />
-      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
       <config projectName="Project" targetName="bond_generate_messages_lisp" />
       <config projectName="Project" targetName="gazebo_ros_laser" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ModelStates" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="training_gennodejs" />
+      <config projectName="Project" targetName="scara_msgs_genpy" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_py" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_BodyRequest" />
       <config projectName="Project" targetName="actionlib_generate_messages_lisp" />
@@ -90,12 +87,11 @@
       <config projectName="Project" targetName="diagnostic_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ApplyBodyWrench" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="move_group_interface5_rt" />
+      <config projectName="Project" targetName="gazebo_ros_camera" />
       <config projectName="Project" targetName="std_srvs_generate_messages_cpp" />
       <config projectName="Project" targetName="octomap_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="move_group_interface4_position_control" />
       <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gazebo_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="gazebo_ros_paths_plugin" />
       <config projectName="Project" targetName="scara_v2_scara_arm_moveit_ikfast_plugin" />
       <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest" />
@@ -103,22 +99,20 @@
       <config projectName="Project" targetName="nav_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_JointRequest" />
       <config projectName="Project" targetName="object_recognition_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="map_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="scara_msgs_gennodejs" />
-      <config projectName="Project" targetName="map_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="visualization_msgs_generate_messages_py" />
       <config projectName="Project" targetName="nav_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gazebo_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="control_toolbox_generate_messages_py" />
       <config projectName="Project" targetName="diagnostic_msgs_generate_messages_py" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="gazebo_msgs_gencpp" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_nodejs" />
       <config projectName="Project" targetName="nodelet_generate_messages_py" />
       <config projectName="Project" targetName="diagnostic_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="matlabtalker" />
-      <config projectName="Project" targetName="shape_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="octomap_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetPhysicsProperties" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ModelState" />
       <config projectName="Project" targetName="tests" />
       <config projectName="Project" targetName="scara_v2_moveit_api_gencpp" />
       <config projectName="Project" targetName="scara_msgs_generate_messages" />
@@ -133,10 +127,8 @@
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_WorldState" />
       <config projectName="Project" targetName="scara_v2_moveit_api_genpy" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_genpy" />
-      <config projectName="Project" targetName="run_tests_urdf_tutorial" />
       <config projectName="Project" targetName="move_group_interface3_PICKandPLACE" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_genlisp" />
-      <config projectName="Project" targetName="training_generate_messages_eus" />
       <config projectName="Project" targetName="shape_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetJointProperties" />
       <config projectName="Project" targetName="moveit_msgs_generate_messages_py" />
@@ -146,8 +138,6 @@
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetModelState" />
       <config projectName="Project" targetName="diagnostic_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="nodelet_generate_messages_cpp" />
-      <config projectName="Project" targetName="turtle_tf_listener" />
-      <config projectName="Project" targetName="std_srvs_generate_messages_eus" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ContactsState" />
       <config projectName="Project" targetName="gazebo_plugins_gencfg" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_nodejs" />
@@ -155,75 +145,64 @@
       <config projectName="Project" targetName="gazebo_ros_force" />
       <config projectName="Project" targetName="move_group_interface2" />
       <config projectName="Project" targetName="move_group_interface1" />
-      <config projectName="Project" targetName="_run_tests_urdf_tutorial_roslaunch-check_launch" />
+      <config projectName="Project" targetName="map_msgs_generate_messages_py" />
       <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_py" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetLinkState" />
-      <config projectName="Project" targetName="trajectory_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="gazebo_ros_block_laser" />
       <config projectName="Project" targetName="gazebo_ros_f3d" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetModelConfiguration" />
       <config projectName="Project" targetName="controller_manager_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="std_srvs_generate_messages_py" />
-      <config projectName="Project" targetName="training_generate_messages_cpp" />
-      <config projectName="Project" targetName="frame_tf_broadcaster" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetPhysicsProperties" />
+      <config projectName="Project" targetName="map_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="gazebo_ros_imu" />
       <config projectName="Project" targetName="visualization_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="control_toolbox_gencfg" />
       <config projectName="Project" targetName="moveit_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="_run_tests_urdf_tutorial" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="_run_tests_gazebo_plugins" />
+      <config projectName="Project" targetName="polled_camera_generate_messages_py" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_py" />
       <config projectName="Project" targetName="bond_generate_messages_cpp" />
+      <config projectName="Project" targetName="doxygen" />
       <config projectName="Project" targetName="std_srvs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="turtlesim_generate_messages_nodejs" />
+      <config projectName="Project" targetName="gazebo_ros_vacuum_gripper" />
       <config projectName="Project" targetName="bond_generate_messages_eus" />
       <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test" />
       <config projectName="Project" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ContactState" />
       <config projectName="Project" targetName="gtest" />
       <config projectName="Project" targetName="gazebo_ros_multicamera" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_cpp" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetJointProperties" />
       <config projectName="Project" targetName="controller_manager_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="training_genlisp" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_py" />
       <config projectName="Project" targetName="roscpp_generate_messages_eus" />
       <config projectName="Project" targetName="clean_test_results_gazebo_plugins" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_lisp" />
-      <config projectName="Project" targetName="_run_tests_urdf_tutorial_roslaunch-check" />
       <config projectName="Project" targetName="controller_manager_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="control_msgs_generate_messages_py" />
       <config projectName="Project" targetName="gazebo_ros_prosilica" />
-      <config projectName="Project" targetName="parser" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ApplyJointEffort" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="scara_msgs_genlisp" />
       <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test" />
       <config projectName="Project" targetName="_catkin_empty_exported_target" />
       <config projectName="Project" targetName="default_robot_hw_sim" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_geneus" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="control_toolbox_generate_messages_py" />
+      <config projectName="Project" targetName="gazebo_ros_tricycle_drive" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_geneus" />
       <config projectName="Project" targetName="shape_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="tf_listener" />
       <config projectName="Project" targetName="polled_camera_generate_messages_nodejs" />
       <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test" />
-      <config projectName="Project" targetName="run_tests_urdf_tutorial_roslaunch-check_launch" />
-      <config projectName="Project" targetName="run_tests_urdf_tutorial_roslaunch-check" />
       <config projectName="Project" targetName="nav_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_gennodejs" />
       <config projectName="Project" targetName="visualization_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_LinkStates" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_eus" />
-      <config projectName="Project" targetName="shape_msgs_generate_messages_py" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetModelProperties" />
-      <config projectName="Project" targetName="gazebo_ros_tricycle_drive" />
+      <config projectName="Project" targetName="std_srvs_generate_messages_py" />
       <config projectName="Project" targetName="std_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="roscpp_generate_messages_cpp" />
       <config projectName="Project" targetName="bond_generate_messages_py" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetJointProperties" />
-      <config projectName="Project" targetName="clean_test_results_urdf_tutorial" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_py" />
       <config projectName="Project" targetName="moveit_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetModelState" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_eus" />
@@ -231,7 +210,6 @@
       <config projectName="Project" targetName="gazebo_ros_openni_kinect" />
       <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
       <config projectName="Project" targetName="dynamic_reconfigure_gencfg" />
-      <config projectName="Project" targetName="control_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="visualization_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="MultiCameraPlugin" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
@@ -240,76 +218,63 @@
       <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_cpp" />
       <config projectName="Project" targetName="gazebo_ros_gpu_laser" />
       <config projectName="Project" targetName="nav_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="scara_msgs_geneus" />
       <config projectName="Project" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ModelState" />
-      <config projectName="Project" targetName="gazebo_ros_template" />
-      <config projectName="Project" targetName="training_generate_messages_nodejs" />
+      <config projectName="Project" targetName="gazebo_ros_block_laser" />
       <config projectName="Project" targetName="map_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="scara_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="gazebo_ros_skid_steer_drive" />
-      <config projectName="Project" targetName="turtlesim_generate_messages_lisp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetJointTrajectory" />
-      <config projectName="Project" targetName="gazebo_ros_camera" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_geneus" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_cpp" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="octomap_msgs_generate_messages_py" />
       <config projectName="Project" targetName="std_msgs_generate_messages_py" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetWorldProperties" />
       <config projectName="Project" targetName="gazebo_ros_range" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gencpp" />
       <config projectName="Project" targetName="moveit_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_nodejs" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_cpp" />
       <config projectName="Project" targetName="gazebo_ros_bumper" />
       <config projectName="Project" targetName="run_tests" />
+      <config projectName="Project" targetName="std_srvs_generate_messages_lisp" />
       <config projectName="Project" targetName="polled_camera_generate_messages_lisp" />
       <config projectName="Project" targetName="octomap_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="moveit_ros_manipulation_gencfg" />
       <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_lisp" />
       <config projectName="Project" targetName="nodelet_generate_messages_lisp" />
       <config projectName="Project" targetName="controller_manager_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="gazebo_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="gazebo_msgs_gennodejs" />
-      <config projectName="Project" targetName="gazebo_ros_diff_drive" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_gennodejs" />
       <config projectName="Project" targetName="map_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="octomap_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="control_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ODEPhysics" />
-      <config projectName="Project" targetName="trajectory_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ApplyJointEffort" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="object_recognition_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="training_generate_messages_lisp" />
-      <config projectName="Project" targetName="gazebo_ros_vacuum_gripper" />
+      <config projectName="Project" targetName="download_extra_data" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="visualization_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="scara_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="trajectory_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="gazebo_ros_joint_state_publisher" />
-      <config projectName="Project" targetName="scara_msgs_geneus" />
-      <config projectName="Project" targetName="move_group_interface4_position_controll" />
+      <config projectName="Project" targetName="gazebo_ros_template" />
       <config projectName="Project" targetName="controller_manager_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="training_genpy" />
-      <config projectName="Project" targetName="polled_camera_generate_messages_py" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="gazebo_ros_control" />
       <config projectName="Project" targetName="gazebo_ros_utils" />
       <config projectName="Project" targetName="_scara_msgs_generate_messages_check_deps_pose_and_gripperState" />
       <config projectName="Project" targetName="actionlib_generate_messages_nodejs" />
-      <config projectName="Project" targetName="training_geneus" />
       <config projectName="Project" targetName="vision_reconfigure" />
-      <config projectName="Project" targetName="turtlesim_generate_messages_py" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_py" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ODEJointProperties" />
-      <config projectName="Project" targetName="gazebo_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="download_extra_data" />
+      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
       <config projectName="Project" targetName="bond_generate_messages_nodejs" />
-      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="camera_synchronizer" />
-      <config projectName="Project" targetName="std_srvs_generate_messages_lisp" />
-      <config projectName="Project" targetName="gazebo_ros_depth_camera" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="control_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="map_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
     </generated>
@@ -320,12 +285,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="position and joint control v.1 (upraveny moveit)">
+    <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sr_scara_hx_ros" afterPath="$PROJECT_DIR$/sr_scara_hx_ros" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/fake_controllers.yaml" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/fake_controllers.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro" afterPath="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeSystem.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_and_rt_control.yaml" afterPath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_and_rt_control.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_gazebo.gazebo" afterPath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_gazebo.gazebo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_urdf.xacro" afterPath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_urdf.xacro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_gazebo.gazebo" afterPath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_gazebo.gazebo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro" afterPath="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/moveit.rviz" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/moveit.rviz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -341,31 +316,52 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="scara_v2_full_control.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_v2_full_control.yaml">
+      <file leaf-file-name="scara_and_rt_urdf.xacro" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="16520">
+              <caret line="826" column="86" lean-forward="false" selection-start-line="826" selection-start-column="86" selection-end-line="826" selection-end-column="86" />
+              <folding>
+                <marker date="1498732054157" expanded="true" signature="26576:26591" ph="..." />
+                <marker date="1498732054157" expanded="true" signature="31140:31562" ph="..." />
+                <marker date="1498732054157" expanded="true" signature="31233:31341" ph="..." />
+                <marker date="1498732054157" expanded="true" signature="31374:31542" ph="..." />
+                <marker date="1498732054157" expanded="true" signature="31595:32017" ph="..." />
+                <marker date="1498732054157" expanded="true" signature="31688:31796" ph="..." />
+                <marker date="1498732054157" expanded="true" signature="31829:31997" ph="..." />
+                <marker date="1498732054157" expanded="true" signature="32113:32555" ph="..." />
+                <marker date="1498732054157" expanded="true" signature="32219:32327" ph="..." />
+                <marker date="1498732054157" expanded="true" signature="32362:32535" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scara_and_rt_gazebo.gazebo" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_gazebo.gazebo">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1460">
+              <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scara_and_rt_control.launch" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/launch/scara_and_rt_control.launch">
+      <file leaf-file-name="rotary_table_v2_urdf.xacro" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_urdf.xacro">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="199">
+              <caret line="103" column="52" lean-forward="false" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xacro_rt_display.launch" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/launch/xacro_rt_display.launch">
+      <file leaf-file-name="fake_controllers.yaml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/config/fake_controllers.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -374,69 +370,14 @@
       <file leaf-file-name="scara_and_rt_control.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_and_rt_control.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scara_and_rt_world.launch" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_gazebo/launch/scara_and_rt_world.launch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scara_and_rt_urdf.xacro" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="41" column="3" lean-forward="false" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rt_v2_full_control.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/rt_v2_full_control.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scara_and_rt_gazebo.gazebo" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_gazebo.gazebo">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scara_v2_urdf.xacro" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_v2_urdf.xacro">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="595" column="68" lean-forward="true" selection-start-line="595" selection-start-column="68" selection-end-line="595" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scara_v2_gazebo.gazebo" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_v2_gazebo.gazebo">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="320">
+              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+              <folding>
+                <marker date="1498731825750" expanded="true" signature="255:367" ph="joint1_po…controller: &lt;3 keys&gt;" />
+                <marker date="1498731825750" expanded="true" signature="358:367" ph="pid: {3 keys}" />
+                <marker date="1498731825750" expanded="true" signature="508:511" ph="500.0" />
+                <marker date="1498731825750" expanded="true" signature="508:529" ph="pid: {3 keys}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -452,12 +393,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hole</find>
-      <find>hole1</find>
-      <find>string</find>
-      <find>default</find>
-      <find>spin</find>
-      <find>rotate</find>
       <find>rt_pub</find>
       <find>robot</find>
       <find>servi</find>
@@ -466,7 +401,6 @@
       <find>joint1</find>
       <find>goal</find>
       <find>revolute</find>
-      <find>base_link1_to_link1</find>
       <find>current</find>
       <find>nn</find>
       <find>subscr</find>
@@ -481,7 +415,14 @@
       <find>fake_joint</find>
       <find>fake</find>
       <find>base_lin</find>
+      <find>2*M</find>
+      <find>m_</find>
+      <find>base_link1_to_link1</find>
+      <find>base_link1_to_link1base</find>
       <find>base_link</find>
+      <find>m_pi</find>
+      <find>e</find>
+      <find>effort</find>
     </findStrings>
     <replaceStrings>
       <replace>scara_v2_moveit_config</replace>
@@ -525,30 +466,30 @@
         <option value="$PROJECT_DIR$/scara_v2_with_gripper/launch/xacro_display_scara_rt.launch" />
         <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/launch/xacro_scara_and_rt_display.launch" />
         <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_gazebo/launch/scara_and_rt_world.launch" />
-        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_and_rt_control.yaml" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_and_gripperState.msg" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/cube_publisher.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_kdl.cpp" />
         <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_gazebo.gazebo" />
-        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro" />
         <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_xml.xml" />
         <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/launch/scara_and_rt_control.launch" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_config/config/kinematics.yaml" />
         <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/config/kinematics.yaml" />
         <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/launch/scara_v2_full_control.launch" />
         <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_v2_gazebo.gazebo" />
-        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_gazebo.gazebo" />
         <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/rt_v2_full_control.yaml" />
-        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_xml.xml" />
-        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_urdf.xacro" />
         <option value="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_v2_with_gripper_urdf.xacro" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro" />
         <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/config/fake_controllers.yaml" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp" />
+        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_xml.xml" />
+        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_gazebo.gazebo" />
+        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_and_rt_control.yaml" />
+        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro" />
+        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_urdf.xacro" />
       </list>
     </option>
   </component>
@@ -560,10 +501,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="x" value="1345" />
+    <option name="y" value="-4" />
     <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -610,86 +551,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_with_gripper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_with_gripper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="urdf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_moveit_api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_moveit_api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="scara_and_rt_moveit_config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -709,250 +570,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scara_and_rt_moveit_config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_and_rt_moveit_config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_gazebo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_gazebo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="worlds" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_gazebo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_description" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_description" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="urdf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_description" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_control" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_control" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_control" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -995,13 +612,48 @@
       <recent name="$PROJECT_DIR$/scara_urdf_testing/urdf" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="Application.Build All">
+    <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
     </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="clean_test_results" CONFIG_NAME="Debug">
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
+      <method />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
+      <method />
+    </configuration>
+    <configuration default="true" type="FirefoxRemoteDebugType" factoryName="Firefox Remote">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -1011,6 +663,9 @@
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeWebKit" factoryName="NW.js">
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -1028,6 +683,13 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ReactNative" factoryName="React Native">
+      <node-interpreter value="project" />
+      <platform value="ANDROID" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
@@ -1040,6 +702,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="src" />
+      <method />
+    </configuration>
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
+      <node-interpreter value="project" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -1056,25 +739,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="src" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -1106,15 +770,10 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="src" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -1127,16 +786,9 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="src" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
@@ -1149,18 +801,10 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="src" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
@@ -1987,38 +1631,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="frame_tf_broadcaster" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="frame_tf_broadcaster" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="frame_tf_broadcaster">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="turtle_tf_broadcaster" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="turtle_tf_broadcaster" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="turtle_tf_broadcaster">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="turtle_tf_listener" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="turtle_tf_listener" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="turtle_tf_listener">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="turtlesim_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="turtlesim_generate_messages_cpp" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="turtlesim_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="turtlesim_generate_messages_eus" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="turtlesim_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="turtlesim_generate_messages_lisp" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="turtlesim_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="turtlesim_generate_messages_nodejs" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="turtlesim_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="turtlesim_generate_messages_py" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="matlabtalker" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="matlabtalker" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="matlabtalker">
       <envs />
       <method />
@@ -2167,86 +1779,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="parser" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="parser" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="parser">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="train" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="train" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="train">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_gencpp" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_generate_messages" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_generate_messages_cpp" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_generate_messages_eus" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_generate_messages_lisp" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_generate_messages_nodejs" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_generate_messages_py" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_geneus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_geneus" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_genlisp" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_gennodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_gennodejs" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="training_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="training_genpy" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="_run_tests_urdf_tutorial" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_run_tests_urdf_tutorial" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="_run_tests_urdf_tutorial_roslaunch-check" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_run_tests_urdf_tutorial_roslaunch-check" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="_run_tests_urdf_tutorial_roslaunch-check_launch" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_run_tests_urdf_tutorial_roslaunch-check_launch" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="clean_test_results_urdf_tutorial" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="clean_test_results_urdf_tutorial" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="run_tests_urdf_tutorial" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="run_tests_urdf_tutorial" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="run_tests_urdf_tutorial_roslaunch-check" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="run_tests_urdf_tutorial_roslaunch-check" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="run_tests_urdf_tutorial_roslaunch-check_launch" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="run_tests_urdf_tutorial_roslaunch-check_launch" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="gtest" CONFIG_NAME="Debug">
       <envs />
       <method />
@@ -2311,35 +1843,11 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="listener" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="listener" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="listener">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" CONFIG_NAME="Debug">
       <envs />
       <method />
     </configuration>
     <configuration default="false" name="scara_v2_scara_arm_moveit_ikfast_plugin" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="scara_v2_scara_arm_moveit_ikfast_plugin" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="control_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="control_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="control_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="control_msgs_generate_messages_eus" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="control_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="control_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="control_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="control_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="control_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="control_msgs_generate_messages_py" CONFIG_NAME="Debug">
       <envs />
       <method />
     </configuration>
@@ -2391,10 +1899,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="move_group_interface4_position_controll" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="move_group_interface4_position_controll" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="move_group_interface4_position_controll">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="move_group_interface4_position_control" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="move_group_interface4_position_control" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="move_group_interface4_position_control">
       <envs />
       <method />
@@ -2407,7 +1911,7 @@
       <envs />
       <method />
     </configuration>
-    <list size="311">
+    <list size="276">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.clean_test_results" />
       <item index="2" class="java.lang.String" itemvalue="Application.download_extra_data" />
@@ -2614,112 +2118,96 @@
       <item index="203" class="java.lang.String" itemvalue="Application.visualization_msgs_generate_messages_lisp" />
       <item index="204" class="java.lang.String" itemvalue="Application.visualization_msgs_generate_messages_nodejs" />
       <item index="205" class="java.lang.String" itemvalue="Application.visualization_msgs_generate_messages_py" />
-      <item index="206" class="java.lang.String" itemvalue="Application.frame_tf_broadcaster" />
-      <item index="207" class="java.lang.String" itemvalue="Application.turtle_tf_broadcaster" />
-      <item index="208" class="java.lang.String" itemvalue="Application.turtle_tf_listener" />
-      <item index="209" class="java.lang.String" itemvalue="Application.turtlesim_generate_messages_cpp" />
-      <item index="210" class="java.lang.String" itemvalue="Application.turtlesim_generate_messages_eus" />
-      <item index="211" class="java.lang.String" itemvalue="Application.turtlesim_generate_messages_lisp" />
-      <item index="212" class="java.lang.String" itemvalue="Application.turtlesim_generate_messages_nodejs" />
-      <item index="213" class="java.lang.String" itemvalue="Application.turtlesim_generate_messages_py" />
-      <item index="214" class="java.lang.String" itemvalue="Application.matlabtalker" />
-      <item index="215" class="java.lang.String" itemvalue="Application.tf_broadcaster" />
-      <item index="216" class="java.lang.String" itemvalue="Application.tf_listener" />
-      <item index="217" class="java.lang.String" itemvalue="Application.move_group_interface1" />
-      <item index="218" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_cpp" />
-      <item index="219" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_eus" />
-      <item index="220" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_lisp" />
-      <item index="221" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_nodejs" />
-      <item index="222" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_py" />
-      <item index="223" class="java.lang.String" itemvalue="Application.moveit_ros_manipulation_gencfg" />
-      <item index="224" class="java.lang.String" itemvalue="Application.moveit_ros_planning_gencfg" />
-      <item index="225" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_cpp" />
-      <item index="226" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_eus" />
-      <item index="227" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_lisp" />
-      <item index="228" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_nodejs" />
-      <item index="229" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_py" />
-      <item index="230" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_cpp" />
-      <item index="231" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_eus" />
-      <item index="232" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_lisp" />
-      <item index="233" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_nodejs" />
-      <item index="234" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_py" />
-      <item index="235" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_gencpp" />
-      <item index="236" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages" />
-      <item index="237" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_cpp" />
-      <item index="238" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_eus" />
-      <item index="239" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_lisp" />
-      <item index="240" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_nodejs" />
-      <item index="241" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_py" />
-      <item index="242" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_geneus" />
-      <item index="243" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_genlisp" />
-      <item index="244" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_gennodejs" />
-      <item index="245" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_genpy" />
-      <item index="246" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_cpp" />
-      <item index="247" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_eus" />
-      <item index="248" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_lisp" />
-      <item index="249" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_nodejs" />
-      <item index="250" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_py" />
-      <item index="251" class="java.lang.String" itemvalue="Application.parser" />
-      <item index="252" class="java.lang.String" itemvalue="Application.train" />
-      <item index="253" class="java.lang.String" itemvalue="Application.training_gencpp" />
-      <item index="254" class="java.lang.String" itemvalue="Application.training_generate_messages" />
-      <item index="255" class="java.lang.String" itemvalue="Application.training_generate_messages_cpp" />
-      <item index="256" class="java.lang.String" itemvalue="Application.training_generate_messages_eus" />
-      <item index="257" class="java.lang.String" itemvalue="Application.training_generate_messages_lisp" />
-      <item index="258" class="java.lang.String" itemvalue="Application.training_generate_messages_nodejs" />
-      <item index="259" class="java.lang.String" itemvalue="Application.training_generate_messages_py" />
-      <item index="260" class="java.lang.String" itemvalue="Application.training_geneus" />
-      <item index="261" class="java.lang.String" itemvalue="Application.training_genlisp" />
-      <item index="262" class="java.lang.String" itemvalue="Application.training_gennodejs" />
-      <item index="263" class="java.lang.String" itemvalue="Application.training_genpy" />
-      <item index="264" class="java.lang.String" itemvalue="Application._run_tests_urdf_tutorial" />
-      <item index="265" class="java.lang.String" itemvalue="Application._run_tests_urdf_tutorial_roslaunch-check" />
-      <item index="266" class="java.lang.String" itemvalue="Application._run_tests_urdf_tutorial_roslaunch-check_launch" />
-      <item index="267" class="java.lang.String" itemvalue="Application.clean_test_results_urdf_tutorial" />
-      <item index="268" class="java.lang.String" itemvalue="Application.run_tests_urdf_tutorial" />
-      <item index="269" class="java.lang.String" itemvalue="Application.run_tests_urdf_tutorial_roslaunch-check" />
-      <item index="270" class="java.lang.String" itemvalue="Application.run_tests_urdf_tutorial_roslaunch-check_launch" />
-      <item index="271" class="java.lang.String" itemvalue="Application.gtest" />
-      <item index="272" class="java.lang.String" itemvalue="Application.gtest_main" />
-      <item index="273" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_gencpp" />
-      <item index="274" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages" />
-      <item index="275" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_cpp" />
-      <item index="276" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_eus" />
-      <item index="277" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_lisp" />
-      <item index="278" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_nodejs" />
-      <item index="279" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_py" />
-      <item index="280" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_geneus" />
-      <item index="281" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_genlisp" />
-      <item index="282" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_gennodejs" />
-      <item index="283" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_genpy" />
-      <item index="284" class="java.lang.String" itemvalue="Application.move_group_interface2" />
-      <item index="285" class="java.lang.String" itemvalue="Application.move_group_interface3_PICKandPLACE" />
-      <item index="286" class="java.lang.String" itemvalue="Application.cube_publisher" />
-      <item index="287" class="java.lang.String" itemvalue="Application.listener" />
-      <item index="288" class="java.lang.String" itemvalue="Application._scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" />
-      <item index="289" class="java.lang.String" itemvalue="Application.scara_v2_scara_arm_moveit_ikfast_plugin" />
-      <item index="290" class="java.lang.String" itemvalue="Application.control_msgs_generate_messages_cpp" />
-      <item index="291" class="java.lang.String" itemvalue="Application.control_msgs_generate_messages_eus" />
-      <item index="292" class="java.lang.String" itemvalue="Application.control_msgs_generate_messages_lisp" />
-      <item index="293" class="java.lang.String" itemvalue="Application.control_msgs_generate_messages_nodejs" />
-      <item index="294" class="java.lang.String" itemvalue="Application.control_msgs_generate_messages_py" />
-      <item index="295" class="java.lang.String" itemvalue="Application._scara_msgs_generate_messages_check_deps_pose_and_gripperState" />
-      <item index="296" class="java.lang.String" itemvalue="Application.scara_msgs_gencpp" />
-      <item index="297" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages" />
-      <item index="298" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_cpp" />
-      <item index="299" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_eus" />
-      <item index="300" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_lisp" />
-      <item index="301" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_nodejs" />
-      <item index="302" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_py" />
-      <item index="303" class="java.lang.String" itemvalue="Application.scara_msgs_geneus" />
-      <item index="304" class="java.lang.String" itemvalue="Application.scara_msgs_genlisp" />
-      <item index="305" class="java.lang.String" itemvalue="Application.scara_msgs_gennodejs" />
-      <item index="306" class="java.lang.String" itemvalue="Application.scara_msgs_genpy" />
-      <item index="307" class="java.lang.String" itemvalue="Application.move_group_interface4_position_controll" />
-      <item index="308" class="java.lang.String" itemvalue="Application.move_group_interface4_position_control" />
-      <item index="309" class="java.lang.String" itemvalue="Application.move_group_interface5_rt" />
-      <item index="310" class="java.lang.String" itemvalue="Application.multiple_cube_publisher" />
+      <item index="206" class="java.lang.String" itemvalue="Application.matlabtalker" />
+      <item index="207" class="java.lang.String" itemvalue="Application.tf_broadcaster" />
+      <item index="208" class="java.lang.String" itemvalue="Application.tf_listener" />
+      <item index="209" class="java.lang.String" itemvalue="Application.move_group_interface1" />
+      <item index="210" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_cpp" />
+      <item index="211" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_eus" />
+      <item index="212" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_lisp" />
+      <item index="213" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_nodejs" />
+      <item index="214" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_py" />
+      <item index="215" class="java.lang.String" itemvalue="Application.moveit_ros_manipulation_gencfg" />
+      <item index="216" class="java.lang.String" itemvalue="Application.moveit_ros_planning_gencfg" />
+      <item index="217" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_cpp" />
+      <item index="218" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_eus" />
+      <item index="219" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_lisp" />
+      <item index="220" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_nodejs" />
+      <item index="221" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_py" />
+      <item index="222" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_cpp" />
+      <item index="223" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_eus" />
+      <item index="224" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_lisp" />
+      <item index="225" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_nodejs" />
+      <item index="226" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_py" />
+      <item index="227" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_gencpp" />
+      <item index="228" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages" />
+      <item index="229" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_cpp" />
+      <item index="230" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_eus" />
+      <item index="231" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_lisp" />
+      <item index="232" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_nodejs" />
+      <item index="233" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_generate_messages_py" />
+      <item index="234" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_geneus" />
+      <item index="235" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_genlisp" />
+      <item index="236" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_gennodejs" />
+      <item index="237" class="java.lang.String" itemvalue="Application.scara_v2_with_gripper_moveit_config_genpy" />
+      <item index="238" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_cpp" />
+      <item index="239" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_eus" />
+      <item index="240" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_lisp" />
+      <item index="241" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_nodejs" />
+      <item index="242" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_py" />
+      <item index="243" class="java.lang.String" itemvalue="Application.gtest" />
+      <item index="244" class="java.lang.String" itemvalue="Application.gtest_main" />
+      <item index="245" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_gencpp" />
+      <item index="246" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages" />
+      <item index="247" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_cpp" />
+      <item index="248" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_eus" />
+      <item index="249" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_lisp" />
+      <item index="250" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_nodejs" />
+      <item index="251" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_generate_messages_py" />
+      <item index="252" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_geneus" />
+      <item index="253" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_genlisp" />
+      <item index="254" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_gennodejs" />
+      <item index="255" class="java.lang.String" itemvalue="Application.scara_v2_moveit_api_genpy" />
+      <item index="256" class="java.lang.String" itemvalue="Application.move_group_interface2" />
+      <item index="257" class="java.lang.String" itemvalue="Application.move_group_interface3_PICKandPLACE" />
+      <item index="258" class="java.lang.String" itemvalue="Application.cube_publisher" />
+      <item index="259" class="java.lang.String" itemvalue="Application._scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" />
+      <item index="260" class="java.lang.String" itemvalue="Application.scara_v2_scara_arm_moveit_ikfast_plugin" />
+      <item index="261" class="java.lang.String" itemvalue="Application._scara_msgs_generate_messages_check_deps_pose_and_gripperState" />
+      <item index="262" class="java.lang.String" itemvalue="Application.scara_msgs_gencpp" />
+      <item index="263" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages" />
+      <item index="264" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_cpp" />
+      <item index="265" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_eus" />
+      <item index="266" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_lisp" />
+      <item index="267" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_nodejs" />
+      <item index="268" class="java.lang.String" itemvalue="Application.scara_msgs_generate_messages_py" />
+      <item index="269" class="java.lang.String" itemvalue="Application.scara_msgs_geneus" />
+      <item index="270" class="java.lang.String" itemvalue="Application.scara_msgs_genlisp" />
+      <item index="271" class="java.lang.String" itemvalue="Application.scara_msgs_gennodejs" />
+      <item index="272" class="java.lang.String" itemvalue="Application.scara_msgs_genpy" />
+      <item index="273" class="java.lang.String" itemvalue="Application.move_group_interface4_position_control" />
+      <item index="274" class="java.lang.String" itemvalue="Application.move_group_interface5_rt" />
+      <item index="275" class="java.lang.String" itemvalue="Application.multiple_cube_publisher" />
     </list>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="src" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -2832,7 +2320,13 @@
       <workItem from="1498118662733" duration="11873000" />
       <workItem from="1498202328378" duration="16186000" />
       <workItem from="1498325227422" duration="263000" />
-      <workItem from="1498325680206" duration="3914000" />
+      <workItem from="1498325680206" duration="4631000" />
+      <workItem from="1498477023134" duration="10275000" />
+      <workItem from="1498590988021" duration="7000" />
+      <workItem from="1498727603986" duration="1553000" />
+      <workItem from="1498729238946" duration="1607000" />
+      <workItem from="1498731636900" duration="805000" />
+      <workItem from="1498752391410" duration="1286000" />
     </task>
     <task id="LOCAL-00001" summary="Upraveny GAZEBO">
       <created>1492634769980</created>
@@ -2960,34 +2454,41 @@
       <option name="project" value="LOCAL" />
       <updated>1498325481802</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="position and joint control v.1 (upraveny moveit)">
+      <created>1498329750900</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1498329750900</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="379648000" />
+    <option name="totallyTimeSpent" value="395898000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="1345" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21124454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17910448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.4978166" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26236558" sideWeight="0.48853713" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5021834" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.4923581" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2451613" sideWeight="0.4907205" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26236558" sideWeight="0.5092795" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31827956" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36344087" sideWeight="0.8886463" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.4978166" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.4923581" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -3024,39 +2525,11 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_v2_with_gripper_urdf.urdf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2268">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/launch/xacro_scara_display.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/launch/xacro_display.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sr_scara_hx_ros/sr_scara_hx_moveit_gen/launch/planning_context.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sr_scara_hx_ros/sr_scara_hx_moveit_gen/launch/demo_controller.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-55">
@@ -3149,27 +2622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_urdf.xacro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="120" column="16" lean-forward="true" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_xml.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="167" column="64" lean-forward="false" selection-start-line="167" selection-start-column="64" selection-end-line="167" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_gazebo.gazebo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/package.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-55">
@@ -3191,39 +2643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="167" column="1" lean-forward="false" selection-start-line="167" selection-start-column="1" selection-end-line="167" selection-end-column="1" />
-          <folding>
-            <element signature="e#74#139#0" expanded="true" />
-            <element signature="e#1107#3315#0" expanded="false" />
-            <element signature="e#3316#6050#0" expanded="false" />
-            <element signature="e#15072#19246#0" expanded="false" />
-            <element signature="e#19247#19963#0" expanded="false" />
-            <element signature="e#19964#20207#0" expanded="false" />
-            <element signature="e#20775#21920#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2664">
-          <caret line="148" column="55" lean-forward="false" selection-start-line="148" selection-start-column="50" selection-end-line="148" selection-end-column="55" />
-          <folding>
-            <element signature="e#368#883#0" expanded="false" />
-            <element signature="e#884#1436#0" expanded="false" />
-            <element signature="e#1438#1995#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/config/kinematics.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3231,7 +2654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="250" column="21" lean-forward="false" selection-start-line="250" selection-start-column="21" selection-end-line="250" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3239,15 +2661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="210" column="19" lean-forward="false" selection-start-line="210" selection-start-column="19" selection-end-line="210" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/config/fake_controllers.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3255,7 +2668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3263,7 +2675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-108">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3271,7 +2682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="0" lean-forward="true" selection-start-line="8" selection-start-column="152" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3279,7 +2689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="504" column="36" lean-forward="false" selection-start-line="504" selection-start-column="17" selection-end-line="504" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3287,7 +2696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="41" column="47" lean-forward="true" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3295,7 +2703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3303,17 +2710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="353" column="85" lean-forward="false" selection-start-line="353" selection-start-column="85" selection-end-line="353" selection-end-column="85" />
-          <folding>
-            <element signature="e#7476#7496#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3321,7 +2717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="113" lean-forward="false" selection-start-line="3" selection-start-column="113" selection-end-line="3" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3329,7 +2724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="109" lean-forward="true" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="109" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3337,22 +2731,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/launch/xacro_rt_display.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_v2_urdf.xacro">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="595" column="68" lean-forward="true" selection-start-line="595" selection-start-column="68" selection-end-line="595" selection-end-column="68" />
+        <state relative-caret-position="10710">
+          <caret line="595" column="68" lean-forward="false" selection-start-line="595" selection-start-column="68" selection-end-line="595" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -3365,58 +2750,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_gazebo.gazebo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="41" column="3" lean-forward="false" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/rt_v2_full_control.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_v2_full_control.yaml">
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_gazebo/launch/scara_and_rt_world.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="361">
+          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/launch/xacro_rt_display.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/launch/scara_and_rt_control.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="103" column="37" lean-forward="false" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="181" column="41" lean-forward="false" selection-start-line="181" selection-start-column="41" selection-end-line="181" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5472">
+          <caret line="304" column="23" lean-forward="false" selection-start-line="304" selection-start-column="23" selection-end-line="304" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="722" column="0" lean-forward="false" selection-start-line="722" selection-start-column="0" selection-end-line="722" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_v2_full_control.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="38" lean-forward="false" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_xml.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_xml.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_gazebo.gazebo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1120">
+          <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_gazebo.gazebo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1460">
+          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16520">
+          <caret line="826" column="86" lean-forward="false" selection-start-line="826" selection-start-column="86" selection-end-line="826" selection-end-column="86" />
+          <folding>
+            <marker date="1498732054157" expanded="true" signature="26576:26591" ph="..." />
+            <marker date="1498732054157" expanded="true" signature="31140:31562" ph="..." />
+            <marker date="1498732054157" expanded="true" signature="31233:31341" ph="..." />
+            <marker date="1498732054157" expanded="true" signature="31374:31542" ph="..." />
+            <marker date="1498732054157" expanded="true" signature="31595:32017" ph="..." />
+            <marker date="1498732054157" expanded="true" signature="31688:31796" ph="..." />
+            <marker date="1498732054157" expanded="true" signature="31829:31997" ph="..." />
+            <marker date="1498732054157" expanded="true" signature="32113:32555" ph="..." />
+            <marker date="1498732054157" expanded="true" signature="32219:32327" ph="..." />
+            <marker date="1498732054157" expanded="true" signature="32362:32535" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_and_rt_control.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="320">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <marker date="1498731825750" expanded="true" signature="255:367" ph="joint1_po…controller: &lt;3 keys&gt;" />
+            <marker date="1498731825750" expanded="true" signature="358:367" ph="pid: {3 keys}" />
+            <marker date="1498731825750" expanded="true" signature="508:511" ph="500.0" />
+            <marker date="1498731825750" expanded="true" signature="508:529" ph="pid: {3 keys}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/rotary_table_v2_urdf.xacro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="103" column="52" lean-forward="false" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_gazebo/launch/scara_and_rt_world.launch">
+    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/config/fake_controllers.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        <state relative-caret-position="120">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/config/controllers.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

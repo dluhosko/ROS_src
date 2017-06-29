@@ -171,7 +171,7 @@ int main(int argc, char **argv) {
         }
 
         if (lastGripperState==false && gripper==true){
-            ROS_INFO("[SCARA]: Gripper pick");
+            ROS_INFO("[CUBE] ( <=SCARA ): Gripper pick");
             num++;
             //Nastavenie modu na parentframe = tool0
             if (num <=8) {
@@ -179,7 +179,7 @@ int main(int argc, char **argv) {
             }
 
         }else if (lastGripperState==true && gripper==false){
-            ROS_INFO("[SCARA]: Gripper Place");
+            ROS_INFO("[CUBE] ( <=SCARA ): Gripper Place");
             //Nastavenie modu na parentframe = place table (+ pozicie)
             if (num <= 8) {
                 cubeModes[num][0] = 2;

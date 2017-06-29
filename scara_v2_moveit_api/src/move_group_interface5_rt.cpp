@@ -63,7 +63,7 @@ void turn45deg(moveit::planning_interface::MoveGroupInterface *move_group, movei
 
 void chatterCallback(const std_msgs::String::ConstPtr& msg)
 {
-    ROS_INFO("[SCARA -> RT]: Command");
+    ROS_INFO("[RT] ( <=SCARA ): Command");
     commandForRT = true;
 }
 
@@ -101,7 +101,7 @@ int main(int argc, char **argv){
 
         if (commandForRT) {
             turn45deg(&move_group, my_plan);
-            ROS_INFO("[SCARA -> RT]: Command finished");
+            ROS_INFO("[RT] ( <=SCARA ): Command finished");
             commandForRT=false;
         }
 
