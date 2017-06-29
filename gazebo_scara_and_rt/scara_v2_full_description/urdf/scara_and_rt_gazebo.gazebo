@@ -119,29 +119,33 @@
 
     <!--____________SCARA___________-->
     <gazebo reference="ScaraBase">
+        <selfCollide>true</selfCollide>
         <material>Gazebo/Orange</material>
     </gazebo>
 
     <gazebo reference="ScaraLink1">
+        <selfCollide>true</selfCollide>
         <material>Gazebo/Black</material>
-        <mu1>0.2</mu1>
-        <mu2>0.2</mu2>
+        <!--<mu1>0.2</mu1>-->
+        <!--<mu2>0.2</mu2>-->
     </gazebo>
 
     <gazebo reference="ScaraLink2">
+        <selfCollide>true</selfCollide>
         <material>Gazebo/Orange</material>
-        <mu1>0.2</mu1>
-        <mu2>0.2</mu2>
+        <!--<mu1>0.2</mu1>-->
+        <!--<mu2>0.2</mu2>-->
     </gazebo>
     <!-- *************************** -->
 
 
     <!--____________GRIPPER_________ -->
-    <!--<gazebo reference="GripperBase">-->
-        <!--<material>Gazebo/Orange</material>-->
-        <!--<mu1>0.2</mu1>-->
-        <!--<mu2>0.2</mu2>-->
-    <!--</gazebo>-->
+    <gazebo reference="GripperBase">
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/Orange</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
 
     <!--<gazebo reference="GripperLeft">-->
         <!--<material>Gazebo/Orange</material>-->
