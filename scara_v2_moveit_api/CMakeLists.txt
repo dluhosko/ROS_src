@@ -54,7 +54,6 @@ include_directories(SYSTEM ${Boost_INCLUDE_DIR} ${EIGEN3_INCLUDE_DIRS})
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
-
 add_executable(move_group_interface1 ../scara_v2_moveit_api/src/move_group_interface1.cpp)
 target_link_libraries(move_group_interface1 ${catkin_LIBRARIES})
 
@@ -81,4 +80,8 @@ add_dependencies(cube_publisher beginner_tutorials_generate_messages_cpp)
 add_executable(multiple_cube_publisher ../scara_v2_moveit_api/src/multiple_cube_publisher.cpp)
 target_link_libraries(multiple_cube_publisher ${catkin_LIBRARIES})
 add_dependencies(multiple_cube_publisher beginner_tutorials_generate_messages_cpp)
+
+add_executable(gripper_control ../scara_v2_moveit_api/src/gripper_control.cpp)
+target_link_libraries(gripper_control ${catkin_LIBRARIES})
+add_dependencies(gripper_control beginner_tutorials_generate_messages_cpp)
 

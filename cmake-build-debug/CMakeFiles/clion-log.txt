@@ -2,22 +2,12 @@
 -- Using CATKIN_DEVEL_PREFIX: /home/viktor/catkin_ws/src/cmake-build-debug/devel
 -- Using CMAKE_PREFIX_PATH: /home/viktor/catkin_ws/devel;/opt/ros/kinetic
 -- This workspace overlays: /home/viktor/catkin_ws/devel;/opt/ros/kinetic
--- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
 -- Using PYTHON_EXECUTABLE: /usr/bin/python
 -- Using Debian Python package layout
 -- Using empy: /usr/bin/empy
 -- Using CATKIN_ENABLE_TESTING: ON
 -- Call enable_testing()
 -- Using CATKIN_TEST_RESULTS_DIR: /home/viktor/catkin_ws/src/cmake-build-debug/test_results
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
 -- Found gtest sources under '/usr/src/gtest': gtests will be built
 -- Using Python nosetests: /usr/bin/nosetests-2.7
 -- catkin 0.7.6
@@ -108,9 +98,6 @@
 -- +++ processing catkin package: 'gazebo_ros'
 -- ==> add_subdirectory(gazebo_ros_pkgs/gazebo_ros)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
--- Checking for module 'libxml-2.0'
---   Found libxml-2.0, version 2.9.3
 -- Boost version: 1.58.0
 -- Found the following Boost libraries:
 --   thread
@@ -130,26 +117,7 @@ Call Stack (most recent call first):
   gazebo_ros_pkgs/gazebo_ros/CMakeLists.txt:26 (find_package)
 
 
--- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "2.6.1") 
 -- Boost version: 1.58.0
--- Looking for OGRE...
--- OGRE_PREFIX_WATCH changed.
--- Checking for module 'OGRE'
---   Found OGRE, version 1.9.0
--- Found Ogre Ghadamon (1.9.0)
--- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
--- Looking for OGRE_Paging...
--- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
--- Looking for OGRE_Terrain...
--- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
--- Looking for OGRE_Property...
--- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
--- Looking for OGRE_RTShaderSystem...
--- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
--- Looking for OGRE_Volume...
--- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
--- Looking for OGRE_Overlay...
--- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
 -- Boost version: 1.58.0
 -- Found the following Boost libraries:
 --   thread
@@ -157,7 +125,6 @@ Call Stack (most recent call first):
 --   system
 --   date_time
 --   atomic
--- Found TinyXML: /usr/lib/x86_64-linux-gnu/libtinyxml.so  
 -- +++ processing catkin package: 'gazebo_tutorials'
 -- ==> add_subdirectory(gazebo_ros_demos/custom_plugin_tutorial)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
@@ -181,33 +148,12 @@ Call Stack (most recent call first):
 
 
 -- Boost version: 1.58.0
--- Looking for OGRE...
--- Found Ogre Ghadamon (1.9.0)
--- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
--- Looking for OGRE_Paging...
--- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
--- Looking for OGRE_Terrain...
--- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
--- Looking for OGRE_Property...
--- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
--- Looking for OGRE_RTShaderSystem...
--- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
--- Looking for OGRE_Volume...
--- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
--- Looking for OGRE_Overlay...
--- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
 -- +++ processing catkin package: 'robot_setup_tf'
 -- ==> add_subdirectory(robot_setup_tf)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'gazebo_plugins'
 -- ==> add_subdirectory(gazebo_ros_pkgs/gazebo_plugins)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- Checking for module 'OGRE'
---   Found OGRE, version 1.9.0
--- Checking for module 'OGRE-Terrain'
---   Found OGRE-Terrain, version 1.9.0
--- Checking for module 'OGRE-Paging'
---   Found OGRE-Paging, version 1.9.0
 -- Boost version: 1.58.0
 -- Found the following Boost libraries:
 --   thread
@@ -286,15 +232,10 @@ Call Stack (most recent call first):
 -- +++ processing catkin package: 'scara_v2_moveit_plugin'
 -- ==> add_subdirectory(scara_v2_moveit_plugin)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- Looking for sgemm_
--- Looking for sgemm_ - found
 -- A library with BLAS API found.
--- Looking for cheev_
--- Looking for cheev_ - found
 -- A library with LAPACK API found.
 -- +++ processing catkin package: 'scara_v2_moveit_api'
 -- ==> add_subdirectory(scara_v2_moveit_api)
--- Checking for one of the modules 'eigen3'
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- Boost version: 1.58.0
 -- Found the following Boost libraries:
@@ -329,7 +270,7 @@ Call Stack (most recent call first):
 
 -- scara_v2_with_gripper_moveit_config: 0 messages, 0 services
 -- Configuring done
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:71 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:70 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -338,7 +279,7 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:71 (add_dependencies):
   "move_group_interface4_position_control" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:83 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:82 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -347,7 +288,7 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:83 (add_dependencies):
   "multiple_cube_publisher" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:67 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:66 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -356,7 +297,7 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:67 (add_dependencies):
   "move_group_interface3_PICKandPLACE" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:75 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:74 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -365,13 +306,22 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:75 (add_dependencies):
   "move_group_interface5_rt" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:79 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:78 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
 
   The dependency target "beginner_tutorials_generate_messages_cpp" of target
   "cube_publisher" does not exist.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:86 (add_dependencies):
+  Policy CMP0046 is not set: Error on non-existent dependency in
+  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
+  Use the cmake_policy command to set the policy and suppress this warning.
+
+  The dependency target "beginner_tutorials_generate_messages_cpp" of target
+  "gripper_control" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Generating done

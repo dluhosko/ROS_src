@@ -1,4 +1,8 @@
 //
+// Created by viktor on 04/07/17.
+//
+
+//
 // Created by viktor on 09/05/17.
 //
 
@@ -169,128 +173,128 @@ bool setPositions(bool showAngles){
         }
         sleep(2);
     }
-  return true;
+    return true;
 }
 bool setCartesianPositions(bool showPositions){
 
 //    defaultCartesianPosition.resize(11);
 //    defaultCartesianPosition[0].resize(3);
     //Home position
-        //xyz
-            defaultCartesianPosition[0][0] = 0.704;
-            defaultCartesianPosition[0][1] = 0.58;
-            defaultCartesianPosition[0][2] = 1.02;
-        //rpy+w
-            defaultCartesianPosition[0][3] = 0.707;
-            defaultCartesianPosition[0][4] = 0.707;
-            defaultCartesianPosition[0][5] = -0.00028;
-            defaultCartesianPosition[0][6] = -0.00028;
+    //xyz
+    defaultCartesianPosition[0][0] = 0.704;
+    defaultCartesianPosition[0][1] = 0.58;
+    defaultCartesianPosition[0][2] = 1.02;
+    //rpy+w
+    defaultCartesianPosition[0][3] = 0.707;
+    defaultCartesianPosition[0][4] = 0.707;
+    defaultCartesianPosition[0][5] = -0.00028;
+    defaultCartesianPosition[0][6] = -0.00028;
 
     //Pick position
-        //xyz
-            defaultCartesianPosition[1][0] = 0.4;
-            defaultCartesianPosition[1][1] = 0.24;
-            defaultCartesianPosition[1][2] = 1.01;
-        //rpy+w
-            defaultCartesianPosition[1][3] = 0.99;
-            defaultCartesianPosition[1][4] = -0.08;
-            defaultCartesianPosition[1][5] = -0.00077;
-            defaultCartesianPosition[1][6] = 0.00012;
+    //xyz
+    defaultCartesianPosition[1][0] = 0.4;
+    defaultCartesianPosition[1][1] = 0.24;
+    defaultCartesianPosition[1][2] = 1.01;
+    //rpy+w
+    defaultCartesianPosition[1][3] = 0.99;
+    defaultCartesianPosition[1][4] = -0.08;
+    defaultCartesianPosition[1][5] = -0.00077;
+    defaultCartesianPosition[1][6] = 0.00012;
 
     //work position 0.57143; 0.6028; 1.02
-            defaultCartesianPosition[2][0] = 0.58;
-            defaultCartesianPosition[2][1] = 0.59;
-            defaultCartesianPosition[2][2] = 1.04;
-        //rpy
-            defaultCartesianPosition[2][3] = 0.38;
-            defaultCartesianPosition[2][4] = 0.92;
-            defaultCartesianPosition[2][5] = 0.00059;
-            defaultCartesianPosition[2][6] = -0.00061;
-        //another orientation
+    defaultCartesianPosition[2][0] = 0.58;
+    defaultCartesianPosition[2][1] = 0.59;
+    defaultCartesianPosition[2][2] = 1.04;
+    //rpy
+    defaultCartesianPosition[2][3] = 0.38;
+    defaultCartesianPosition[2][4] = 0.92;
+    defaultCartesianPosition[2][5] = 0.00059;
+    defaultCartesianPosition[2][6] = -0.00061;
+    //another orientation
 //            defaultCartesianPosition[2][3] = 0.89;
 //            defaultCartesianPosition[2][4] = 0.44;
 //            defaultCartesianPosition[2][5] = -0.0005;
 //            defaultCartesianPosition[2][6] = 0.0006;
     //place position 1 : 0.51; 0.87; 0.9735
-        //xyz
-            defaultCartesianPosition[3][0] = 0.51;
-            defaultCartesianPosition[3][1] = 0.87;
-            defaultCartesianPosition[3][2] = 1.01;
-        //rpy
-            defaultCartesianPosition[3][3] = 0.11;
-            defaultCartesianPosition[3][4] = 0.99;
-            defaultCartesianPosition[3][5] = 0.00015;
-            defaultCartesianPosition[3][6] = -0.00072;
+    //xyz
+    defaultCartesianPosition[3][0] = 0.51;
+    defaultCartesianPosition[3][1] = 0.87;
+    defaultCartesianPosition[3][2] = 1.01;
+    //rpy
+    defaultCartesianPosition[3][3] = 0.11;
+    defaultCartesianPosition[3][4] = 0.99;
+    defaultCartesianPosition[3][5] = 0.00015;
+    defaultCartesianPosition[3][6] = -0.00072;
     //place position 2 : 0.51; 0.93; 0.9735
-        //xyz
-            defaultCartesianPosition[4][0] = 0.51;
-            defaultCartesianPosition[4][1] = 0.93;
-            defaultCartesianPosition[4][2] = 1.01;
-        //rpy
-            defaultCartesianPosition[4][3] = 0.18;
-            defaultCartesianPosition[4][4] = 0.98;
-            defaultCartesianPosition[4][5] = -0.00013;
-            defaultCartesianPosition[4][6] = -0.00053;
+    //xyz
+    defaultCartesianPosition[4][0] = 0.51;
+    defaultCartesianPosition[4][1] = 0.93;
+    defaultCartesianPosition[4][2] = 1.01;
+    //rpy
+    defaultCartesianPosition[4][3] = 0.18;
+    defaultCartesianPosition[4][4] = 0.98;
+    defaultCartesianPosition[4][5] = -0.00013;
+    defaultCartesianPosition[4][6] = -0.00053;
     //place position 3 : 0.47; 0.87; 0.9735
-        //xyz
-            defaultCartesianPosition[5][0] = 0.47;
-            defaultCartesianPosition[5][1] = 0.87;
-            defaultCartesianPosition[5][2] = 1.01;
-        //rpy
-            defaultCartesianPosition[5][3] = 0.04;
-            defaultCartesianPosition[5][4] = 0.99;
-            defaultCartesianPosition[5][5] = 0.00018;
-            defaultCartesianPosition[5][6] = 0.00018;
+    //xyz
+    defaultCartesianPosition[5][0] = 0.47;
+    defaultCartesianPosition[5][1] = 0.87;
+    defaultCartesianPosition[5][2] = 1.01;
+    //rpy
+    defaultCartesianPosition[5][3] = 0.04;
+    defaultCartesianPosition[5][4] = 0.99;
+    defaultCartesianPosition[5][5] = 0.00018;
+    defaultCartesianPosition[5][6] = 0.00018;
     //place position 4 : 0.47; 0.93; 0.9735
-        //xyz
-            defaultCartesianPosition[6][0] = 0.47;
-            defaultCartesianPosition[6][1] = 0.93;
-            defaultCartesianPosition[6][2] = 1.01;
-        //rpy
-            defaultCartesianPosition[6][3] = 0.08;
-            defaultCartesianPosition[6][4] = 0.99;
-            defaultCartesianPosition[6][5] = 0;
-            defaultCartesianPosition[6][6] = -0.00064;
+    //xyz
+    defaultCartesianPosition[6][0] = 0.47;
+    defaultCartesianPosition[6][1] = 0.93;
+    defaultCartesianPosition[6][2] = 1.01;
+    //rpy
+    defaultCartesianPosition[6][3] = 0.08;
+    defaultCartesianPosition[6][4] = 0.99;
+    defaultCartesianPosition[6][5] = 0;
+    defaultCartesianPosition[6][6] = -0.00064;
     //place position 5 : 0.43; 0.87; 0.9735
-        //xyz
-            defaultCartesianPosition[7][0] = 0.43;
-            defaultCartesianPosition[7][1] = 0.87;
-            defaultCartesianPosition[7][2] = 1.01;
-        //rpy
-            defaultCartesianPosition[7][3] = -0.04;
-            defaultCartesianPosition[7][4] = 0.999;
-            defaultCartesianPosition[7][5] = 0.00027;
-            defaultCartesianPosition[7][6] = -0.0008;
+    //xyz
+    defaultCartesianPosition[7][0] = 0.43;
+    defaultCartesianPosition[7][1] = 0.87;
+    defaultCartesianPosition[7][2] = 1.01;
+    //rpy
+    defaultCartesianPosition[7][3] = -0.04;
+    defaultCartesianPosition[7][4] = 0.999;
+    defaultCartesianPosition[7][5] = 0.00027;
+    defaultCartesianPosition[7][6] = -0.0008;
     //place position 6 : 0.43; 0.93; 0.9735
-        //xyz
-            defaultCartesianPosition[8][0] = 0.43;
-            defaultCartesianPosition[8][1] = 0.93;
-            defaultCartesianPosition[8][2] = 1.01;
-        //rpy
-            defaultCartesianPosition[8][3] = 0.004;
-            defaultCartesianPosition[8][4] = 0.999;
-            defaultCartesianPosition[8][5] = 0;
-            defaultCartesianPosition[8][6] = -0.0072;
+    //xyz
+    defaultCartesianPosition[8][0] = 0.43;
+    defaultCartesianPosition[8][1] = 0.93;
+    defaultCartesianPosition[8][2] = 1.01;
+    //rpy
+    defaultCartesianPosition[8][3] = 0.004;
+    defaultCartesianPosition[8][4] = 0.999;
+    defaultCartesianPosition[8][5] = 0;
+    defaultCartesianPosition[8][6] = -0.0072;
     //place position 7 : 0.39; 0.87; 0.9735
-        //xyz
-            defaultCartesianPosition[9][0] = 0.39;
-            defaultCartesianPosition[9][1] = 0.88;
-            defaultCartesianPosition[9][2] = 1.01;
-        //rpy
-            defaultCartesianPosition[9][3] = -0.12;
-            defaultCartesianPosition[9][4] = 0.99;
-            defaultCartesianPosition[9][5] = 0.00028;
-            defaultCartesianPosition[9][6] = -0.00084;
+    //xyz
+    defaultCartesianPosition[9][0] = 0.39;
+    defaultCartesianPosition[9][1] = 0.88;
+    defaultCartesianPosition[9][2] = 1.01;
+    //rpy
+    defaultCartesianPosition[9][3] = -0.12;
+    defaultCartesianPosition[9][4] = 0.99;
+    defaultCartesianPosition[9][5] = 0.00028;
+    defaultCartesianPosition[9][6] = -0.00084;
     //place position 8 : 0.39; 0.87; 0.9735
-        //xyz
-            defaultCartesianPosition[10][0] = 0.39;
-            defaultCartesianPosition[10][1] = 0.93;
-            defaultCartesianPosition[10][2] = 1.01;
-        //rpy
-            defaultCartesianPosition[10][3] = -0.095;
-            defaultCartesianPosition[10][4] = 0.995;
-            defaultCartesianPosition[10][5] = 0;
-            defaultCartesianPosition[10][6] = -0.00078;
+    //xyz
+    defaultCartesianPosition[10][0] = 0.39;
+    defaultCartesianPosition[10][1] = 0.93;
+    defaultCartesianPosition[10][2] = 1.01;
+    //rpy
+    defaultCartesianPosition[10][3] = -0.095;
+    defaultCartesianPosition[10][4] = 0.995;
+    defaultCartesianPosition[10][5] = 0;
+    defaultCartesianPosition[10][6] = -0.00078;
 
     if (showPositions){
         ROS_INFO("VECTOR SIZE %d x %d \n", defaultCartesianPosition.size(),defaultCartesianPosition[0].size());
@@ -503,7 +507,7 @@ void positionControll (moveit::planning_interface::MoveGroupInterface *move_grou
         numberOfAttempts++;
     }
     success = move_group->plan(my_plan);
-   // ROS_INFO_STREAM("PLAN:" << success);
+    // ROS_INFO_STREAM("PLAN:" << success);
     if(success){
 
         int size=my_plan.trajectory_.joint_trajectory.points.size();
@@ -652,7 +656,7 @@ int main(int argc, char **argv){
                 moveToHome = true;
             }
         } else if (num == 5) {
-           ROS_INFO("INFO");
+            ROS_INFO("INFO");
 
         } else if (num == -1) {
             ROS_INFO("program END!");
@@ -678,17 +682,28 @@ int main(int argc, char **argv){
     std_msgs::String msg ;
     msg.data = "otoc_sa";
     bool initRT = false;
-    bool asyncMode = false;
+    bool asyncMode = true;
     executionOK = true;
 
     while (ros::ok()) {
 
-            //Get current pose of tool0
-            target_pose1 = getTargetCoordinates(&move_group);
-            ROS_INFO("[SCARA]: Actual joint values : x=%f  y=%f  z=%f", target_pose1.position.x, target_pose1.position.y, target_pose1.position.z);
-            //move to WS1
-            current_state = move_group.getCurrentState();
-            current_state->copyJointGroupPositions(joint_model_group, joint_group_position);
+        //Get current pose of tool0
+        target_pose1 = getTargetCoordinates(&move_group);
+        ROS_INFO("[SCARA]: Actual joint values : x=%f  y=%f  z=%f", target_pose1.position.x, target_pose1.position.y, target_pose1.position.z);
+        //move to WS1
+        current_state = move_group.getCurrentState();
+        current_state->copyJointGroupPositions(joint_model_group, joint_group_position);
+
+
+        if (executionOK) {
+            ROS_INFO("STARTED EXECUTING TRAJECTORY");
+            if (asyncMode) {
+                executionOK = false;
+                sleep(2);
+                ROS_INFO("STARTED EXECUTING TRAJECTORY (async mode)");
+            }else{
+                ROS_INFO("STARTED EXECUTING TRAJECTORY (normal mode)");
+            }
 
             if (mode == 3) {
                 //ROS_INFO("mode : %d",mode);
@@ -760,10 +775,16 @@ int main(int argc, char **argv){
             //ros::spinOnce();
             mode++;
             sleep(2);
+        }
+        else {
+            ROS_INFO("****ASYNC EXECUTION OF TRAJECTORY******");
+            sleep(1);
+        }
 
-//        ROS_INFO("waiting for message");
-//        ros::spinOnce();
-//        loop_rate.sleep();
+        ROS_INFO("waiting for message");
+        ros::spinOnce();
+        loop_rate.sleep();
     }
     return 0;
 }
+

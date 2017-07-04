@@ -56,7 +56,6 @@ std::string cubePlaceFrame(int number){
         return "No valid number of cube!";
     }
 }
-
 std::string generateNamespace (int number){
 
     if (number == 1){
@@ -80,7 +79,6 @@ std::string generateNamespace (int number){
     }
 
 }
-
 void generateCube(ros::Publisher *marker_pub, int number){
 
     visualization_msgs::Marker marker;
