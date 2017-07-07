@@ -24,6 +24,7 @@
 #include <sstream>
 #include <iostream>
 #include <std_msgs/Bool.h>
+#include <std_msgs/Float64.h>
 
 using namespace std;
 
@@ -42,6 +43,7 @@ bool executionOK = false;
 bool gripperExecutionState = false;
 std::vector<geometry_msgs::Pose> waypoints(2);
 int counter = 0;
+double torque_value = 0.0;
 
 
 void setDesiredAngles (){
@@ -374,7 +376,7 @@ void jointModeControll (moveit::planning_interface::MoveGroupInterface *move_gro
     }else{
         ROS_INFO("NOT DEFINED mode");
     }
-    ROS_INFO("Desired joint values: %f  %f  %f",joint_group_position[0],joint_group_position[1],joint_group_position[2]);
+    //ROS_INFO("Desired joint values: %f  %f  %f",joint_group_position[0],joint_group_position[1],joint_group_position[2]);
     move_group->setJointValueTarget(joint_group_position);
     success = move_group->plan(my_plan);
     ROS_INFO_NAMED("Visualizing plan (joint space goal) %s", success ? "GOOD" : "FAILED");
@@ -591,12 +593,25 @@ int menu (){
 
 
 }
+bool shakeMode (){
 
+    ROS_INFO("shaking mode");
+    sleep(5);
+    ROS_INFO("Shaking mode end");
+
+    return 1;
+}
+void torqueSensorCallback(const std_msgs::Float64 torqueValue){
+
+    //ROS_INFO("torque CALLBACK %f",torqueValue);
+    torque_value = torqueValue.data;
+}
 
 
 int main(int argc, char **argv){
 
     int counter = 1, mode = 0;
+    int modeExecution = 100;
     int num ;
     bool success;
     static const std::string PLANNING_GROUP = "scara_arm";
@@ -615,7 +630,7 @@ int main(int argc, char **argv){
 
     ros::init(argc, argv, "PICK_and_PLACE");
     ros::NodeHandle n, nn,n_rt;
-    ros::NodeHandle n_gripper,n_sub_rt;
+    ros::NodeHandle n_gripper,n_sub_rt,n_torque;
     ros::Rate r(2);
     ros::AsyncSpinner spinner(1);
     spinner.start();
@@ -673,7 +688,7 @@ int main(int argc, char **argv){
     ros::Publisher rt_pub = n_rt.advertise<std_msgs::String>("commandForRotaryTable", 1000);
     //ros::Subscriber grip_topic_sub = n_gripper.subscribe("gripper_state_execution",1000,gripperExecutionCallback);
     ros::Subscriber executeTrajectory = nn.subscribe("execute_trajectory/result", 1000, trajectoryExecutionCallback);
-
+    ros::Subscriber torqueSensor = n_torque.subscribe("torqueSensor",1000,torqueSensorCallback);
     scara_v2_moveit_api::pose_and_gripperState gripperStates;
     gripperStates.gripperState = false;
     gripperStates.posX = 0.0;
@@ -684,36 +699,66 @@ int main(int argc, char **argv){
     bool initRT = false;
     bool asyncMode = true;
     executionOK = true;
+    //bool moveToHome = true;
 
     while (ros::ok()) {
 
+
+        if (!initRT) {
+            rt_pub.publish(msg);
+            ROS_INFO("[SCARA] ( =>RT ) : RT init : %s", msg.data.c_str());
+            sleep(2);
+            initRT = true;
+        }
+
         //Get current pose of tool0
         target_pose1 = getTargetCoordinates(&move_group);
-        ROS_INFO("[SCARA]: Actual joint values : x=%f  y=%f  z=%f", target_pose1.position.x, target_pose1.position.y, target_pose1.position.z);
+        //ROS_INFO("[SCARA]: Actual joint values : x=%f  y=%f  z=%f", target_pose1.position.x, target_pose1.position.y, target_pose1.position.z);
         //move to WS1
         current_state = move_group.getCurrentState();
         current_state->copyJointGroupPositions(joint_model_group, joint_group_position);
 
 
         if (executionOK) {
-            ROS_INFO("STARTED EXECUTING TRAJECTORY");
+            //ROS_INFO("STARTED EXECUTING TRAJECTORY");
+
             if (asyncMode) {
                 executionOK = false;
-                sleep(2);
-                ROS_INFO("STARTED EXECUTING TRAJECTORY (async mode)");
+                //ROS_INFO("STARTED EXECUTING TRAJECTORY (async mode)");
             }else{
-                ROS_INFO("STARTED EXECUTING TRAJECTORY (normal mode)");
+                //ROS_INFO("STARTED EXECUTING TRAJECTORY (normal mode)");
             }
+            ROS_INFO("mode execution number = %d",modeExecution);
 
-            if (mode == 3) {
-                //ROS_INFO("mode : %d",mode);
-                if (num == 1) {
-                    jointModeControll(&move_group, my_plan, mode, counter,asyncMode);
-                } else if (num == 2) {
-                    positionControll(&move_group, my_plan, mode, counter,asyncMode);
-                } else {
-                    ROS_ERROR("NOT VALID CONTROL MODE");
-                }
+
+            if (modeExecution == 0){
+                ROS_INFO("moving to home EXECUTED");
+                mode = 1;
+                sleep(2);
+            }else if (modeExecution == 1){
+                ROS_INFO("moving to pick EXECUTED");
+                //modeExecution == 100;
+                target_pose1 = getTargetCoordinates(&move_group);
+                ROS_INFO("[SCARA] ( =>CUBE ): Gripper Pick! and publish");
+                gripperStates.gripperState = true;
+                gripperStates.posX = target_pose1.position.x;
+                gripperStates.posY = target_pose1.position.y;
+                gripperStates.posZ = target_pose1.position.z;
+                grip_topic_pub.publish(gripperStates);
+                mode = 2;
+                sleep(2);
+            }else if (modeExecution == 2){
+                ROS_INFO("moving to work EXECUTED");
+                sleep(1);
+                rt_pub.publish(msg);
+                ROS_INFO("[SCARA] ( =>RT ): RT turn : %s", msg.data.c_str());
+
+                shakeMode();
+                mode = 3;
+                sleep(2);
+            }else if (modeExecution == 3){
+                ROS_INFO("moving to place:%d EXECUTED",counter);
+                //modeExecution == 100;
                 counter++;
                 if (counter > 8) {
                     counter = 1;
@@ -727,21 +772,15 @@ int main(int argc, char **argv){
                 ROS_INFO_STREAM(gripperStates);
                 grip_topic_pub.publish(gripperStates);
                 sleep(2);
-
-                if (moveToHome) {
-                    if (num == 1) {
-                        jointModeControll(&move_group, my_plan, 0, 0,asyncMode);
-                    } else if (num == 2) {
-                        positionControll(&move_group, my_plan, 0, 0,asyncMode);
-                    } else {
-                        ROS_ERROR("NOT VALID CONTROL MODE");
-                    }
-                    ROS_INFO("*****  move to home   *****");
-                }
-
                 mode = 0;
-            } else {
-                //tato cast nabehne len raz pri zaciatku
+            }else{
+                ROS_INFO("no mode executed");
+                sleep(2);
+            }
+
+
+            if (mode == 0){
+                ROS_INFO("MODE = %d",mode);
                 if (num == 1) {
                     jointModeControll(&move_group, my_plan, mode, 0,asyncMode);
                 } else if (num == 2) {
@@ -749,38 +788,57 @@ int main(int argc, char **argv){
                 } else {
                     ROS_ERROR("NOT VALID CONTROL MODE");
                 }
-                if (!initRT) {
-                    rt_pub.publish(msg);
-                    ROS_INFO("[SCARA] ( =>RT ) : RT init : %s", msg.data.c_str());
-                    sleep(2);
-                    initRT = true;
+                sleep(3);
+                modeExecution = 0;
+
+            }else if (mode == 1){
+                ROS_INFO("MODE = %d",mode);
+                if (num == 1) {
+                    jointModeControll(&move_group, my_plan, mode, 0,asyncMode);
+                } else if (num == 2) {
+                    positionControll(&move_group, my_plan, mode, 0,asyncMode);
+                } else {
+                    ROS_ERROR("NOT VALID CONTROL MODE");
                 }
-                //
-                if (mode == 1) {
-                    target_pose1 = getTargetCoordinates(&move_group);
-                    ROS_INFO("[SCARA] ( =>CUBE ): Gripper Pick! and publish");
-                    gripperStates.gripperState = true;
-                    gripperStates.posX = target_pose1.position.x;
-                    gripperStates.posY = target_pose1.position.y;
-                    gripperStates.posZ = target_pose1.position.z;
-                    grip_topic_pub.publish(gripperStates);
-                    sleep(2);
+                sleep(3);
+                modeExecution = 1;
+            }else if (mode == 2){
+                ROS_INFO("MODE = %d",mode);
+                if (num == 1) {
+                    jointModeControll(&move_group, my_plan, mode, 0,asyncMode);
+                } else if (num == 2) {
+                    positionControll(&move_group, my_plan, mode, 0,asyncMode);
+                } else {
+                    ROS_ERROR("NOT VALID CONTROL MODE");
                 }
-                if (mode == 2) {
-                    rt_pub.publish(msg);
-                    ROS_INFO("[SCARA] ( =>RT ): RT turn : %s", msg.data.c_str());
-                    sleep(2);
+
+                modeExecution = 2;
+            }else if (mode == 3){
+                ROS_INFO("MODE = %d",mode);
+                if (num == 1) {
+                    jointModeControll(&move_group, my_plan, mode, counter,asyncMode);
+                } else if (num == 2) {
+                    positionControll(&move_group, my_plan, mode, counter,asyncMode);
+                } else {
+                    ROS_ERROR("NOT VALID CONTROL MODE");
                 }
+                sleep(1);
+                modeExecution = 3;
+
             }
-            //ros::spinOnce();
-            mode++;
-            sleep(2);
+
+
         }
         else {
-            ROS_INFO("****ASYNC EXECUTION OF TRAJECTORY******");
+
+            if (torque_value>1.5){
+                move_group.stop();
+
+            }
+            //ROS_INFO("****ASYNC EXECUTION OF TRAJECTORY******");
+            ROS_INFO("torque value = %f ",torque_value);
             sleep(1);
         }
-
         ROS_INFO("waiting for message");
         ros::spinOnce();
         loop_rate.sleep();

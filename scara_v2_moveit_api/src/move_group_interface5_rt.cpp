@@ -54,8 +54,9 @@ void turn45deg(moveit::planning_interface::MoveGroupInterface *move_group, movei
     move_group->setJointValueTarget(joint_group_position);
     success = move_group->plan(my_plan);
     ROS_INFO("Visualizing plan (45) %s", success ? "GOOD" : "FAILED");
-    move_group->execute(my_plan);
-    move_group->move();
+    //move_group->execute(my_plan);
+    move_group->asyncExecute(my_plan);
+    //move_group->move();
     ROS_INFO("current degrees %f",currentDeg);
     currentDeg+=45;
 

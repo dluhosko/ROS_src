@@ -188,16 +188,16 @@ int main(int argc, char **argv) {
 
         }
         lastGripperState = gripper;
-        if (num <= 8) {
-            if (numLast != num) {
-                for (int j = 0; j <= num; j++) {
-                    ROS_INFO("[CUBE INFO]: cube j=%d = ", j);
-                    for (int k = 0; k < 4; k++) {
-                        ROS_INFO_STREAM(cubeModes[j][k]);
-                    }
-                }
-            }
-        }
+//        if (num <= 8) {
+//            if (numLast != num) {
+//                for (int j = 0; j <= num; j++) {
+//                    ROS_INFO("[CUBE INFO]: cube j=%d = ", j);
+//                    for (int k = 0; k < 4; k++) {
+//                        ROS_INFO_STREAM(cubeModes[j][k]);
+//                    }
+//                }
+//            }
+//        }
         //Osetrenie hazadrnych stavov
         if (num <=8) {
             numLast = num;

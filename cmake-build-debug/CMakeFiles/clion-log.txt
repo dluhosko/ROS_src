@@ -270,6 +270,15 @@ Call Stack (most recent call first):
 
 -- scara_v2_with_gripper_moveit_config: 0 messages, 0 services
 -- Configuring done
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:90 (add_dependencies):
+  Policy CMP0046 is not set: Error on non-existent dependency in
+  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
+  Use the cmake_policy command to set the policy and suppress this warning.
+
+  The dependency target "beginner_tutorials_generate_messages_cpp" of target
+  "gripper_control" does not exist.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
 CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:70 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
@@ -279,7 +288,7 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:70 (add_dependencies):
   "move_group_interface4_position_control" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:82 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:86 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -297,6 +306,15 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:66 (add_dependencies):
   "move_group_interface3_PICKandPLACE" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:78 (add_dependencies):
+  Policy CMP0046 is not set: Error on non-existent dependency in
+  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
+  Use the cmake_policy command to set the policy and suppress this warning.
+
+  The dependency target "{scara_v2_moveit_api_EXPORTED_TARGETS}" of target
+  "move_group_interface6_async_PICKandPLACE" does not exist.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
 CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:74 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
@@ -306,22 +324,13 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:74 (add_dependencies):
   "move_group_interface5_rt" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:78 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:82 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
 
   The dependency target "beginner_tutorials_generate_messages_cpp" of target
   "cube_publisher" does not exist.
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:86 (add_dependencies):
-  Policy CMP0046 is not set: Error on non-existent dependency in
-  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
-  Use the cmake_policy command to set the policy and suppress this warning.
-
-  The dependency target "beginner_tutorials_generate_messages_cpp" of target
-  "gripper_control" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Generating done

@@ -73,6 +73,10 @@ add_executable(move_group_interface5_rt ../scara_v2_moveit_api/src/move_group_in
 target_link_libraries(move_group_interface5_rt ${catkin_LIBRARIES})
 add_dependencies(move_group_interface5_rt {${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_executable(move_group_interface6_async_PICKandPLACE ../scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp)
+target_link_libraries(move_group_interface6_async_PICKandPLACE ${catkin_LIBRARIES})
+add_dependencies(move_group_interface6_async_PICKandPLACE {${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 add_executable(cube_publisher ../scara_v2_moveit_api/src/cube_publisher.cpp)
 target_link_libraries(cube_publisher ${catkin_LIBRARIES})
 add_dependencies(cube_publisher beginner_tutorials_generate_messages_cpp)
