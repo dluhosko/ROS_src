@@ -25,6 +25,9 @@
 #include <iostream>
 #include <std_msgs/Bool.h>
 #include <std_msgs/Float64.h>
+#include <pthread.h>
+#include <boost/thread/thread.hpp>
+#include <boost/thread.hpp>
 
 using namespace std;
 
@@ -38,12 +41,15 @@ const double RAD2DEG=57.295779513;
 std::vector<std::vector<double>> joint_group_positions(13, std::vector<double>(3));
 std::vector<std::vector<double>> defaultPositions(11, std::vector<double>(3));
 std::vector<std::vector<double>> defaultCartesianPosition(11, std::vector<double>(7));
+std::vector<std::vector<double>> anglesFromIK(11, std::vector<double>(4));
 std::vector<double> joint_group_position;
 bool executionOK = false;
 bool gripperExecutionState = false;
 std::vector<geometry_msgs::Pose> waypoints(2);
 int counter = 0;
 double torque_value = 0.0;
+bool threadState = true;
+bool threadExecution = false;
 
 
 void setDesiredAngles (){
@@ -316,6 +322,55 @@ bool setCartesianPositions(bool showPositions){
     }
 
     return 1;
+}
+void getAnglesFromIK(moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan my_plan){
+
+    geometry_msgs::Pose position;
+    bool success;
+    int size;
+
+    ROS_INFO("def %d",defaultCartesianPosition.size());
+    for (int i = 0;i<defaultCartesianPosition.size();i++){
+
+        position.position.x = defaultCartesianPosition[i][0];
+        position.position.y = defaultCartesianPosition[i][1];
+        position.position.z = defaultCartesianPosition[i][2];
+        position.orientation.x = defaultCartesianPosition[i][3];
+        position.orientation.y = defaultCartesianPosition[i][4];
+        position.orientation.z = defaultCartesianPosition[i][5];
+        position.orientation.w = defaultCartesianPosition[i][6];
+        //ROS_INFO("positions");
+        //ROS_INFO_STREAM(position);
+        //getchar();
+
+        if (move_group->setApproximateJointValueTarget(position, "tool0")) {
+            ROS_INFO("found IK solution");
+        } else
+            ROS_INFO("only aproximate IK solution");
+
+        success = move_group->plan(my_plan);
+        // ROS_INFO_STREAM("PLAN:" << success);
+        if(success){
+            size=my_plan.trajectory_.joint_trajectory.points.size();
+            ROS_INFO_STREAM(my_plan.trajectory_.joint_trajectory.points[size-1]);
+
+            anglesFromIK[i][0] = my_plan.trajectory_.joint_trajectory.points[size-1].positions[0];
+            anglesFromIK[i][1] = my_plan.trajectory_.joint_trajectory.points[size-1].positions[1];
+            anglesFromIK[i][2] = my_plan.trajectory_.joint_trajectory.points[size-1].positions[2];
+            anglesFromIK[i][3] = 1.0;
+        } else{
+            ROS_INFO("not success");
+            anglesFromIK[i][0] = 0.0;
+            anglesFromIK[i][1] = 0.0;
+            anglesFromIK[i][2] = 0.0;
+            anglesFromIK[i][3] = 0.0;
+        }
+    }
+    for (int i=0;i<anglesFromIK.size();i++){
+        ROS_INFO("final angle %d is %f %f %f [%f]",i,anglesFromIK[i][0],anglesFromIK[i][1],anglesFromIK[i][2], anglesFromIK[i][3]);
+    }
+    getchar();
+
 }
 void jointModeControll (moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan my_plan, int mode, int number_of_place_position, bool asyncMode){
 
@@ -596,11 +651,22 @@ int menu (){
 bool shakeMode (){
 
     ROS_INFO("shaking mode");
-    sleep(5);
+    //pthread_create(&tid, NULL, myThread, NULL);
+
     ROS_INFO("Shaking mode end");
 
     return 1;
 }
+void shakeThread(){
+    for (int i = 0; i < 5; ++i)
+    {
+        ROS_INFO("THREAD : waiting %d seconds", i);
+        sleep(1);
+    }
+    threadExecution = true;
+    ROS_INFO("thread end");
+}
+
 void torqueSensorCallback(const std_msgs::Float64 torqueValue){
 
     //ROS_INFO("torque CALLBACK %f",torqueValue);
@@ -628,6 +694,7 @@ int main(int argc, char **argv){
     bool moveToHome = false;
 
 
+
     ros::init(argc, argv, "PICK_and_PLACE");
     ros::NodeHandle n, nn,n_rt;
     ros::NodeHandle n_gripper,n_sub_rt,n_torque;
@@ -648,7 +715,7 @@ int main(int argc, char **argv){
                 ROS_INFO("default positions for Joint control OK");
             }
         } else if (num == 2) {
-            if (setCartesianPositions(true)) {
+            if (setCartesianPositions(false)) {
                 ROS_INFO("default positions for Cartesian planning  OK");
                 ros::ServiceClient service_client = n.serviceClient<moveit_msgs::GetPositionIK>("compute_ik");
 
@@ -680,8 +747,8 @@ int main(int argc, char **argv){
             return 0;
         }
     }while (num > 2);
-    ROS_INFO("waiting 5s");
-    sleep(5);
+    //ROS_INFO("waiting 5s");
+    //sleep(5);
 
     ros::Publisher gripperState_pub = n.advertise<std_msgs::String>("gripper_state_topic", 1000);
     ros::Publisher grip_topic_pub =  nn.advertise<scara_v2_moveit_api::pose_and_gripperState>("gripper_state", 1000);
@@ -699,7 +766,11 @@ int main(int argc, char **argv){
     bool initRT = false;
     bool asyncMode = true;
     executionOK = true;
+    bool threadStart = true;
     //bool moveToHome = true;
+
+
+    getAnglesFromIK(&move_group,my_plan);
 
     while (ros::ok()) {
 
@@ -728,7 +799,7 @@ int main(int argc, char **argv){
             }else{
                 //ROS_INFO("STARTED EXECUTING TRAJECTORY (normal mode)");
             }
-            ROS_INFO("mode execution number = %d",modeExecution);
+            ROS_INFO("mode = %d  mode execution number = %d",mode, modeExecution);
 
 
             if (modeExecution == 0){
@@ -748,13 +819,29 @@ int main(int argc, char **argv){
                 mode = 2;
                 sleep(2);
             }else if (modeExecution == 2){
-                ROS_INFO("moving to work EXECUTED");
-                sleep(1);
-                rt_pub.publish(msg);
-                ROS_INFO("[SCARA] ( =>RT ): RT turn : %s", msg.data.c_str());
+                ROS_INFO("fcking thread");
+                if (threadStart) {
+                    ROS_INFO("moving to work EXECUTED");
+                    //sleep(1);
+                    rt_pub.publish(msg);
+                    ROS_INFO("[SCARA] ( =>RT ): RT turn : %s", msg.data.c_str());
+                }
+                //shakeMode();
 
-                shakeMode();
-                mode = 3;
+                if (threadStart){
+                    ROS_INFO("thread start");
+                    boost::thread t{shakeThread};
+                    threadStart = false;
+                }
+                if (threadExecution){
+                    ROS_INFO("thread finish");
+                    mode = 3;
+                    threadStart = true;
+                    threadExecution = false;
+                }else{
+                    ROS_INFO("thread working");
+                }
+
                 sleep(2);
             }else if (modeExecution == 3){
                 ROS_INFO("moving to place:%d EXECUTED",counter);
@@ -803,16 +890,20 @@ int main(int argc, char **argv){
                 sleep(3);
                 modeExecution = 1;
             }else if (mode == 2){
-                ROS_INFO("MODE = %d",mode);
-                if (num == 1) {
-                    jointModeControll(&move_group, my_plan, mode, 0,asyncMode);
-                } else if (num == 2) {
-                    positionControll(&move_group, my_plan, mode, 0,asyncMode);
-                } else {
-                    ROS_ERROR("NOT VALID CONTROL MODE");
+                if (threadStart) {
+                    ROS_INFO("MODE = %d", mode);
+                    if (num == 1) {
+                        jointModeControll(&move_group, my_plan, mode, 0, asyncMode);
+                    } else if (num == 2) {
+                        positionControll(&move_group, my_plan, mode, 0, asyncMode);
+                    } else {
+                        ROS_ERROR("NOT VALID CONTROL MODE");
+                    }
+
+                    modeExecution = 2;
                 }
 
-                modeExecution = 2;
+
             }else if (mode == 3){
                 ROS_INFO("MODE = %d",mode);
                 if (num == 1) {
@@ -825,12 +916,16 @@ int main(int argc, char **argv){
                 sleep(1);
                 modeExecution = 3;
 
+            }else{
+                ROS_INFO("no mode selected");
             }
 
 
         }
         else {
-
+            if (threadExecution){
+                executionOK = true;
+            }
             if (torque_value>1.5){
                 move_group.stop();
 
@@ -839,6 +934,8 @@ int main(int argc, char **argv){
             ROS_INFO("torque value = %f ",torque_value);
             sleep(1);
         }
+
+        //ROS_INFO("mode = %d  mode execution number = %d  execution = %d",mode, modeExecution,executionOK);
         ROS_INFO("waiting for message");
         ros::spinOnce();
         loop_rate.sleep();
