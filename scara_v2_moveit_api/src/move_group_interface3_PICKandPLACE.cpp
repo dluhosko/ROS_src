@@ -639,8 +639,7 @@ int main(int argc, char **argv){
                 }
                 position = move_group.getCurrentPose();
                 ROS_INFO_STREAM("REFERENCNY FRAME");
-                ROS_INFO_NAMED("tutorial", "Reference frame: %s", move_group.getPlanningFrame().c_str());
-                ROS_INFO_NAMED("tutorial", "End effector link: %s", move_group.getEndEffectorLink().c_str());
+
                 selfPosition.position = position.pose.position;
                 selfPosition.orientation = position.pose.orientation;
                 //ROS_INFO("Self position");

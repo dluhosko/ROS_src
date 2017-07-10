@@ -48,8 +48,8 @@ bool gripperExecutionState = false;
 std::vector<geometry_msgs::Pose> waypoints(2);
 int counter = 0;
 double torque_value = 0.0;
-bool threadState = true;
 bool threadExecution = false;
+int displayMode = 1;
 
 
 void setDesiredAngles (){
@@ -608,55 +608,136 @@ void trajectoryExecutionCallback(const moveit_msgs::ExecuteTrajectoryActionResul
         executionOK = true;
     }
 }
-int menu (){
-    ROS_INFO("\n");
-    ROS_INFO("*************** SENSODRIVE SCARA ***************");
-    ROS_INFO("**************       menu        ***************");
-    ROS_INFO("**   Press 1 for:\t JOINT CONTROL     **");
-    ROS_INFO("**   Press 2 for:\t POSITION CONTROL  **");
-    ROS_INFO("**   Press 5 for:\t INFO              **");
-    ROS_INFO("**   Press x for:\t something         **");
-    ROS_INFO("**   Press 9 for:\tEXIT               **");
-    ROS_INFO("***********************************************");
-    ROS_INFO("***********************************************");
-    int number;
+void printMenu(){
+    ROS_INFO("\nPRESS number for:");
+    ROS_INFO("1 - Set max velocity:");
+    ROS_INFO("2 - Set max acceleration:");
+    ROS_INFO("3 - Set planning time:");
+    ROS_INFO("4 - Set number of planning attempts:");
+    ROS_INFO("5 - Display information:");
+    ROS_INFO("0 - EXIT:");
+
+}
+int menu (moveit::planning_interface::MoveGroupInterface *move_group){
+
+    int number,num;
 
     while (1){
+        ROS_INFO("\n");
+        ROS_INFO("*************** SENSODRIVE SCARA ***************");
+        ROS_INFO("**************       menu        ***************");
+        ROS_INFO("**   Press 1 for:\t JOINT CONTROL     **");
+        ROS_INFO("**   Press 2 for:\t POSITION CONTROL  **");
+        ROS_INFO("**   Press 3 for:\t POSITION CONTROL  **");
+        ROS_INFO("**   with IK calculation ahead            **");
+        ROS_INFO("**   Press 4 for:\t INFO              **");
+        ROS_INFO("**   Press 5 for:\t SET PARAMETERS    **");
+        ROS_INFO("**   Press 9 for:\tEXIT               **");
+        ROS_INFO("***********************************************");
+        ROS_INFO("***********************************************");
+        ROS_INFO("\nEnter number:");
         number = getchar() - 48;
-        ROS_INFO("number = %d",number);
+       // getchar();
+        if (number != -38) {
+            ROS_INFO("number = %d", number);
+        }
         if (number == 1){
             ROS_INFO("You have choosed %d - JOINT CONTROL",number);
             break;
         }else if (number == 2){
             ROS_INFO("You have choosed %d - POSITION CONTROL",number);
             break;
-        }
-        else if (number == 5){
-            ROS_INFO("You have choosed %d - INFO",number);
+        }else if (number == 3){
+            ROS_INFO("You have choosed %d - POSITION CONTROL with IK calculation ahead",number);
             break;
+        }else if (number == 4){
+            ROS_INFO("You have choosed %d - INFO",number);
+            ROS_INFO("Reference frame: %s", move_group->getPlanningFrame().c_str());
+            ROS_INFO("End effector link: %s", move_group->getEndEffectorLink().c_str());
+            ROS_INFO("Active joints:");
+            std::vector< std::string> activeJoints = move_group->getActiveJoints();
+           for (int i =0;i<activeJoints.size();i++){
+               ROS_INFO("Active link %d : %s",i, activeJoints[i].c_str());
+                }
+            ROS_INFO(".....Current robot model.......");
+            ROS_INFO_STREAM(move_group->getRobotModel());
+            ROS_INFO(".....Current pose.......");
+            geometry_msgs::PoseStamped currentPose = move_group->getCurrentPose();
+            ROS_INFO("X=%f Y=%f Z=%f \n roll=%f pitch=%f yaw=%f",currentPose.pose.position.x,currentPose.pose.position.y, currentPose.pose.position.z,
+                     currentPose.pose.orientation.x, currentPose.pose.orientation.y, currentPose.pose.orientation.z);
+
+            //pridat dalsie informacie
+
+
+        }else if (number == 5){
+            while (1){
+                printMenu();
+                ROS_INFO("\nEnter number:");
+                num = getchar() - 48;
+
+                if (num == 1){
+                    float velocity;
+                    ROS_INFO("enter velocity");
+                    scanf("%f",&velocity);
+                    ROS_INFO("entered %f",velocity);
+                    move_group->setMaxVelocityScalingFactor(velocity);
+                    break;
+                }else if (num == 2){
+                    float acceleration;
+                    ROS_INFO("enter acceleration");
+                    scanf("%f",&acceleration);
+                    ROS_INFO("entered %f",acceleration);
+                    move_group->setMaxAccelerationScalingFactor(acceleration);
+                    break;
+                }else if (num == 3){
+                    float time;
+                    ROS_INFO("enter planning time");
+                    scanf("%f",&time);
+                    ROS_INFO("entered %f",time);
+                    move_group->setPlanningTime(time);
+                    break;
+                }else if (num == 4){
+                    int numOfAttempts;
+                    ROS_INFO("enter number of attempts");
+                    scanf("%d",&numOfAttempts);
+                    ROS_INFO("entered %d",numOfAttempts);
+                    move_group->setNumPlanningAttempts(numOfAttempts);
+                    break;
+                }else if (num == 5){
+                    int displayInfo;
+                    ROS_INFO("1 - FULL information");
+                    ROS_INFO("2 - PARTIAL information");
+                    ROS_INFO("enter number");
+                    scanf("%d",&displayInfo);
+                    ROS_INFO("entered %d",displayInfo);
+                    if (displayInfo >0 && displayInfo<3){
+                        displayMode = displayInfo;
+                    }else {
+                        displayMode = 1;
+                    }
+                    break;
+                }else if (num == 0){
+                    break;
+                }
+            }
+
         }
         else if (number == 9){
             ROS_INFO("You have choosed %d - EXIT",number);
             return -1;
-        }else{
+        }else if (number == -38){
+            continue;
+        }
+        else{
             ROS_INFO("NOT VALID");
         }
         sleep(1);
     }
 
     return number;
-
-
 }
-bool shakeMode (){
 
-    ROS_INFO("shaking mode");
-    //pthread_create(&tid, NULL, myThread, NULL);
 
-    ROS_INFO("Shaking mode end");
-
-    return 1;
-}
 void shakeThread(){
     for (int i = 0; i < 5; ++i)
     {
@@ -708,7 +789,7 @@ int main(int argc, char **argv){
 
 
     do {
-        num = menu();
+        num = menu(&move_group);
         if (num == 1) {
             //setDesiredAngles();
             if (setPositions(false)) {
@@ -724,23 +805,17 @@ int main(int argc, char **argv){
                     sleep(1.0);
                 }
                 position = move_group.getCurrentPose();
-                ROS_INFO_STREAM("REFERENCNY FRAME");
-                ROS_INFO_NAMED("tutorial", "Reference frame: %s", move_group.getPlanningFrame().c_str());
-                ROS_INFO_NAMED("tutorial", "End effector link: %s", move_group.getEndEffectorLink().c_str());
                 selfPosition.position = position.pose.position;
                 selfPosition.orientation = position.pose.orientation;
-                //ROS_INFO("Self position");
-                //ROS_INFO_STREAM(selfPosition);
                 moveit::core::robotStateToRobotStateMsg(*move_group.getCurrentState(), robot_state, true);
-                move_group.setMaxVelocityScalingFactor(0.1);
-                move_group.setMaxAccelerationScalingFactor(0.1);
-                move_group.setPlanningTime(10);
+                //move_group.setMaxVelocityScalingFactor(0.1);
+                //move_group.setMaxAccelerationScalingFactor(0.1);
+                //move_group.setPlanningTime(10);
                 moveToHome = true;
             }
-        } else if (num == 5) {
-            ROS_INFO("INFO");
-
-        } else if (num == -1) {
+        }else if (num == 3){
+            getAnglesFromIK(&move_group,my_plan);
+        }else if (num == -1) {
             ROS_INFO("program END!");
             ros::shutdown();
             spinner.stop();
@@ -750,12 +825,15 @@ int main(int argc, char **argv){
     //ROS_INFO("waiting 5s");
     //sleep(5);
 
+    //Topics init
     ros::Publisher gripperState_pub = n.advertise<std_msgs::String>("gripper_state_topic", 1000);
     ros::Publisher grip_topic_pub =  nn.advertise<scara_v2_moveit_api::pose_and_gripperState>("gripper_state", 1000);
     ros::Publisher rt_pub = n_rt.advertise<std_msgs::String>("commandForRotaryTable", 1000);
     //ros::Subscriber grip_topic_sub = n_gripper.subscribe("gripper_state_execution",1000,gripperExecutionCallback);
     ros::Subscriber executeTrajectory = nn.subscribe("execute_trajectory/result", 1000, trajectoryExecutionCallback);
     ros::Subscriber torqueSensor = n_torque.subscribe("torqueSensor",1000,torqueSensorCallback);
+
+    //gripper message init
     scara_v2_moveit_api::pose_and_gripperState gripperStates;
     gripperStates.gripperState = false;
     gripperStates.posX = 0.0;
@@ -763,6 +841,8 @@ int main(int argc, char **argv){
     gripperStates.posZ = 0.0;
     std_msgs::String msg ;
     msg.data = "otoc_sa";
+
+    //help variables init
     bool initRT = false;
     bool asyncMode = true;
     executionOK = true;
@@ -770,7 +850,7 @@ int main(int argc, char **argv){
     //bool moveToHome = true;
 
 
-    getAnglesFromIK(&move_group,my_plan);
+
 
     while (ros::ok()) {
 

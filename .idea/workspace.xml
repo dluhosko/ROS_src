@@ -290,8 +290,7 @@
     <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sr_scara_hx_ros" afterPath="$PROJECT_DIR$/sr_scara_hx_ros" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo.launch" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo.launch" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -311,14 +310,13 @@
       <file leaf-file-name="move_group_interface3_PICKandPLACE.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="511" column="10" lean-forward="false" selection-start-line="511" selection-start-column="10" selection-end-line="511" selection-end-column="10" />
+            <state relative-caret-position="66">
+              <caret line="624" column="19" lean-forward="false" selection-start-line="624" selection-start-column="19" selection-end-line="624" selection-end-column="19" />
               <folding>
                 <element signature="e#1212#3420#0" expanded="false" />
                 <element signature="e#3421#6155#0" expanded="false" />
                 <element signature="e#12296#16194#0" expanded="false" />
                 <element signature="e#23591#24307#0" expanded="false" />
-                <element signature="e#24592#25866#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -327,17 +325,17 @@
       <file leaf-file-name="move_group_interface6_async_PICKandPLACE.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="715" column="13" lean-forward="true" selection-start-line="715" selection-start-column="13" selection-end-line="715" selection-end-column="13" />
+            <state relative-caret-position="106">
+              <caret line="631" column="60" lean-forward="false" selection-start-line="631" selection-start-column="60" selection-end-line="631" selection-end-column="60" />
               <folding>
                 <element signature="e#115#180#0" expanded="true" />
-                <element signature="e#1524#3732#0" expanded="false" />
-                <element signature="e#3733#6469#0" expanded="false" />
-                <element signature="e#11906#13983#0" expanded="false" />
-                <element signature="e#13984#17884#0" expanded="false" />
-                <element signature="e#17885#25281#0" expanded="false" />
-                <element signature="e#26283#27557#0" expanded="false" />
-                <element signature="e#27710#27901#0" expanded="false" />
+                <element signature="e#1520#3728#0" expanded="false" />
+                <element signature="e#3729#6465#0" expanded="false" />
+                <element signature="e#6466#11901#0" expanded="false" />
+                <element signature="e#11902#13979#0" expanded="false" />
+                <element signature="e#13980#17880#0" expanded="false" />
+                <element signature="e#17881#25277#0" expanded="false" />
+                <marker date="1499698332339" expanded="false" signature="31736:31827" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -366,8 +364,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>m_</find>
-      <find>base_link1_to_link1</find>
       <find>base_link1_to_link1base</find>
       <find>base_link</find>
       <find>m_pi</find>
@@ -394,8 +390,10 @@
       <find>desired</find>
       <find>async</find>
       <find>anglesfromik</find>
-      <find>MODE =</find>
       <find>defaultCartesian</find>
+      <find>MODE =</find>
+      <find>robot_state</find>
+      <find>getrobotmodel</find>
     </findStrings>
     <replaceStrings>
       <replace>scara_v2_moveit_config</replace>
@@ -462,9 +460,9 @@
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" />
         <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo.launch" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp" />
       </list>
     </option>
   </component>
@@ -2392,7 +2390,7 @@
       <workItem from="1499197154112" duration="2358000" />
       <workItem from="1499199689457" duration="636000" />
       <workItem from="1499424504439" duration="309000" />
-      <workItem from="1499674285416" duration="13560000" />
+      <workItem from="1499674285416" duration="19413000" />
     </task>
     <task id="LOCAL-00001" summary="Upraveny GAZEBO">
       <created>1492634769980</created>
@@ -2569,11 +2567,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499424729488</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Move_group_interface6_async with thread simulation of shaking mode">
+      <created>1499692651772</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1499692651772</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="456185000" />
+    <option name="totallyTimeSpent" value="462038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1345" y="24" width="1855" height="1056" extended-state="6" />
@@ -2645,7 +2650,8 @@
     <MESSAGE value="after merge" />
     <MESSAGE value="moveit and gazebo try out // rotary table doesnt work" />
     <MESSAGE value="TO DO:&#10;controller for Rotary table GAZEBO&#10;Gripper control runnable" />
-    <option name="LAST_COMMIT_MESSAGE" value="TO DO:&#10;controller for Rotary table GAZEBO&#10;Gripper control runnable" />
+    <MESSAGE value="Move_group_interface6_async with thread simulation of shaking mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move_group_interface6_async with thread simulation of shaking mode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3001,36 +3007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///opt/ros/kinetic/include/moveit/move_group_interface/move_group_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="431" column="7" lean-forward="false" selection-start-line="431" selection-start-column="7" selection-end-line="431" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="511" column="10" lean-forward="false" selection-start-line="511" selection-start-column="10" selection-end-line="511" selection-end-column="10" />
-          <folding>
-            <element signature="e#1212#3420#0" expanded="false" />
-            <element signature="e#3421#6155#0" expanded="false" />
-            <element signature="e#12296#16194#0" expanded="false" />
-            <element signature="e#23591#24307#0" expanded="false" />
-            <element signature="e#24592#25866#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="288" column="6" lean-forward="false" selection-start-line="288" selection-start-column="6" selection-end-line="288" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface4_position_control.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
@@ -3041,19 +3017,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface3_PICKandPLACE.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="624" column="19" lean-forward="false" selection-start-line="624" selection-start-column="19" selection-end-line="624" selection-end-column="19" />
+          <folding>
+            <element signature="e#1212#3420#0" expanded="false" />
+            <element signature="e#3421#6155#0" expanded="false" />
+            <element signature="e#12296#16194#0" expanded="false" />
+            <element signature="e#23591#24307#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="317" column="6" lean-forward="false" selection-start-line="317" selection-start-column="6" selection-end-line="317" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/moveit/move_group_interface/move_group_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="814" column="28" lean-forward="true" selection-start-line="814" selection-start-column="2" selection-end-line="814" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="715" column="13" lean-forward="true" selection-start-line="715" selection-start-column="13" selection-end-line="715" selection-end-column="13" />
+        <state relative-caret-position="106">
+          <caret line="631" column="60" lean-forward="false" selection-start-line="631" selection-start-column="60" selection-end-line="631" selection-end-column="60" />
           <folding>
             <element signature="e#115#180#0" expanded="true" />
-            <element signature="e#1524#3732#0" expanded="false" />
-            <element signature="e#3733#6469#0" expanded="false" />
-            <element signature="e#11906#13983#0" expanded="false" />
-            <element signature="e#13984#17884#0" expanded="false" />
-            <element signature="e#17885#25281#0" expanded="false" />
-            <element signature="e#26283#27557#0" expanded="false" />
-            <element signature="e#27710#27901#0" expanded="false" />
+            <element signature="e#1520#3728#0" expanded="false" />
+            <element signature="e#3729#6465#0" expanded="false" />
+            <element signature="e#6466#11901#0" expanded="false" />
+            <element signature="e#11902#13979#0" expanded="false" />
+            <element signature="e#13980#17880#0" expanded="false" />
+            <element signature="e#17881#25277#0" expanded="false" />
+            <marker date="1499698332339" expanded="false" signature="31736:31827" ph="{...}" />
           </folding>
         </state>
       </provider>
