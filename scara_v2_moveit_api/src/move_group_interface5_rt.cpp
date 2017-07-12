@@ -6,12 +6,15 @@
 #include <visualization_msgs/Marker.h>
 #include "std_msgs/String.h"
 #include <sstream>
+#include <scara_v2_moveit_api/SimpleService.h>
 
 const double DEG2RAD=0.01745329252;
 const double RAD2DEG=57.295779513;
 std::vector<double> joint_group_positions(4);
 std::vector<double> joint_group_position;
+float currentAngle = 0.0;
 bool commandForRT = false;
+
 
 
 void setDesiredAngles (){
@@ -50,6 +53,7 @@ void turn45deg(moveit::planning_interface::MoveGroupInterface *move_group, movei
     if (currentDeg > 360){
         currentDeg = 45;
     }
+    currentAngle = currentDeg;
     joint_group_position[0] = currentDeg*DEG2RAD;
     move_group->setJointValueTarget(joint_group_position);
     success = move_group->plan(my_plan);
@@ -61,11 +65,15 @@ void turn45deg(moveit::planning_interface::MoveGroupInterface *move_group, movei
     currentDeg+=45;
 
 }
-
-void chatterCallback(const std_msgs::String::ConstPtr& msg)
-{
+void chatterCallback(const std_msgs::String::ConstPtr& msg){
     ROS_INFO("[RT] ( <=SCARA ): Command");
     commandForRT = true;
+}
+bool rt_service_answer(scara_v2_moveit_api::SimpleService::Request &req, scara_v2_moveit_api::SimpleService::Response &res){
+
+    ROS_INFO("Service request!");
+    res.output_message = currentAngle;
+    ROS_INFO("sending back response: [%f]", res.output_message);
 }
 
 int main(int argc, char **argv){
@@ -83,12 +91,15 @@ int main(int argc, char **argv){
     setDesiredAngles();
 
     ros::init(argc, argv, "rt");
-    ros::NodeHandle n;
+    ros::NodeHandle n,n_rt_srtServer;
+
     ros::Rate r(2);
     ros::AsyncSpinner spinner(1);
     spinner.start();
-    //
+    //Topics init
     ros::Subscriber sub = n.subscribe("commandForRotaryTable", 1000, chatterCallback);
+    //Services init
+    ros::ServiceServer service_rt = n_rt_srtServer.advertiseService("rt_service", rt_service_answer);
 
     moveit::planning_interface::MoveGroupInterface move_group(PLANNING_GROUP);
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
@@ -111,6 +122,7 @@ int main(int argc, char **argv){
         sleep(2);
 
     }
+    ros::spinOnce();
 
 
     return 0;

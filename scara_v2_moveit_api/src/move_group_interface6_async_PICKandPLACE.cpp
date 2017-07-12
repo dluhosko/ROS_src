@@ -28,6 +28,7 @@
 #include <pthread.h>
 #include <boost/thread/thread.hpp>
 #include <boost/thread.hpp>
+#include <scara_v2_moveit_api/SimpleService.h>
 
 using namespace std;
 
@@ -50,6 +51,7 @@ int counter = 0;
 double torque_value = 0.0;
 bool threadExecution = false;
 int displayMode = 1;
+int waitingTime = 0;
 
 
 void setDesiredAngles (){
@@ -600,14 +602,6 @@ geometry_msgs::Pose getTargetCoordinates (moveit::planning_interface::MoveGroupI
 
     return target_pose;
 }
-
-void trajectoryExecutionCallback(const moveit_msgs::ExecuteTrajectoryActionResult result){
-
-    ROS_INFO("....TRAJECTORY EXECUTION CALLBACK Status = %d....\n",result.status.status);
-    if (result.status.status == 1 || result.status.status == 3){
-        executionOK = true;
-    }
-}
 void printMenu(){
     ROS_INFO("\nPRESS number for:");
     ROS_INFO("1 - Set max velocity:");
@@ -618,7 +612,7 @@ void printMenu(){
     ROS_INFO("0 - EXIT:");
 
 }
-int menu (moveit::planning_interface::MoveGroupInterface *move_group){
+int menu(moveit::planning_interface::MoveGroupInterface *move_group){
 
     int number,num;
 
@@ -665,6 +659,7 @@ int menu (moveit::planning_interface::MoveGroupInterface *move_group){
             geometry_msgs::PoseStamped currentPose = move_group->getCurrentPose();
             ROS_INFO("X=%f Y=%f Z=%f \n roll=%f pitch=%f yaw=%f",currentPose.pose.position.x,currentPose.pose.position.y, currentPose.pose.position.z,
                      currentPose.pose.orientation.x, currentPose.pose.orientation.y, currentPose.pose.orientation.z);
+            sleep(3);
 
             //pridat dalsie informacie
 
@@ -736,8 +731,6 @@ int menu (moveit::planning_interface::MoveGroupInterface *move_group){
 
     return number;
 }
-
-
 void shakeThread(){
     for (int i = 0; i < 5; ++i)
     {
@@ -747,11 +740,34 @@ void shakeThread(){
     threadExecution = true;
     ROS_INFO("thread end");
 }
+void trajectoryExecutionCallback(const moveit_msgs::ExecuteTrajectoryActionResult result){
 
+    ROS_INFO("....TRAJECTORY EXECUTION CALLBACK Status = %d....\n",result.status.status);
+    if (result.status.status == 1 || result.status.status == 3){
+        executionOK = true;
+    }
+}
 void torqueSensorCallback(const std_msgs::Float64 torqueValue){
 
     //ROS_INFO("torque CALLBACK %f",torqueValue);
     torque_value = torqueValue.data;
+}
+void servicesCheck(ros::ServiceClient *ik_service, ros::ServiceClient *rt_service){
+
+//    while (!ik_service->exists()){
+//        ROS_INFO("waiting for IK service [ %d ] seconds",waitingTime++);
+//        ROS_INFO("Please check the moveit node!");
+//        sleep(1);
+//    }
+//    waitingTime = 0;
+
+    while (!rt_service->exists()) {
+        ROS_INFO("waiting for RT service [ %d ] seconds",waitingTime++);
+        ROS_INFO("Please check the rt node!");
+        sleep(1.0);
+    }
+    waitingTime = 0;
+
 }
 
 
@@ -773,12 +789,15 @@ int main(int argc, char **argv){
     geometry_msgs::PoseStamped position;
     moveit_msgs::RobotState robot_state;
     bool moveToHome = false;
+    scara_v2_moveit_api::SimpleService rt_srv;
+
 
 
 
     ros::init(argc, argv, "PICK_and_PLACE");
     ros::NodeHandle n, nn,n_rt;
     ros::NodeHandle n_gripper,n_sub_rt,n_torque;
+    ros::NodeHandle n_rt_srv;
     ros::Rate r(2);
     ros::AsyncSpinner spinner(1);
     spinner.start();
@@ -786,6 +805,7 @@ int main(int argc, char **argv){
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
     const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
     ros::Rate loop_rate(5);
+    ros::ServiceClient service_client;
 
 
     do {
@@ -798,12 +818,13 @@ int main(int argc, char **argv){
         } else if (num == 2) {
             if (setCartesianPositions(false)) {
                 ROS_INFO("default positions for Cartesian planning  OK");
-                ros::ServiceClient service_client = n.serviceClient<moveit_msgs::GetPositionIK>("compute_ik");
+                service_client = n.serviceClient<moveit_msgs::GetPositionIK>("compute_ik");
 
                 while (!service_client.exists()) {
-                    ROS_INFO("waiting for service");
+                    ROS_INFO("waiting for IK service [ %d ] seconds",waitingTime++);
                     sleep(1.0);
                 }
+                waitingTime = 0;
                 position = move_group.getCurrentPose();
                 selfPosition.position = position.pose.position;
                 selfPosition.orientation = position.pose.orientation;
@@ -832,6 +853,14 @@ int main(int argc, char **argv){
     //ros::Subscriber grip_topic_sub = n_gripper.subscribe("gripper_state_execution",1000,gripperExecutionCallback);
     ros::Subscriber executeTrajectory = nn.subscribe("execute_trajectory/result", 1000, trajectoryExecutionCallback);
     ros::Subscriber torqueSensor = n_torque.subscribe("torqueSensor",1000,torqueSensorCallback);
+    //Services init
+    ros::ServiceClient rt_client = n_rt_srv.serviceClient<scara_v2_moveit_api::SimpleService>("rt_service");
+    while (!rt_client.exists()) {
+        ROS_INFO("waiting for RT service [ %d ] seconds",waitingTime++);
+        sleep(1.0);
+
+    }
+    waitingTime = 0;
 
     //gripper message init
     scara_v2_moveit_api::pose_and_gripperState gripperStates;
@@ -861,6 +890,8 @@ int main(int argc, char **argv){
             sleep(2);
             initRT = true;
         }
+        servicesCheck(&service_client,&rt_client);
+
 
         //Get current pose of tool0
         target_pose1 = getTargetCoordinates(&move_group);
