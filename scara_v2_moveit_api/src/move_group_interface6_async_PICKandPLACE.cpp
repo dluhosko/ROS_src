@@ -51,10 +51,15 @@ bool gripperExecutionState = false;
 std::vector<geometry_msgs::Pose> waypoints(2);
 int counter = 0;
 double torque_value = 0.0;
+double max_torque_value = 1.5;
 bool threadExecution = false;
 bool displayMode = true;
 bool rtService = true;
 int waitingTime = 0;
+bool stop = false;
+moveit::planning_interface::MoveGroupInterface* mg;
+
+
 
 
 void setDesiredAngles (){
@@ -789,6 +794,43 @@ void shakeThread(){
     threadExecution = true;
     ROS_INFO("thread end");
 }
+void forceFeedbackThread(){
+
+    ROS_INFO("forcefeedback thread start");
+    moveit::core::RobotStatePtr current_state;
+    int i=0;
+
+//    while (ros::ok()){
+//        ROS_INFO("[forcefeedback thread] %d",i );
+//        if (i<10){
+//            ROS_INFO("[forcefeedback thread] STOP %d",stop);
+//            sleep(1);
+//        }else{
+//            stop = true;
+//            ROS_INFO("[forcefeedback thread] STOP %d",stop);
+//            mg->stop();
+//        }
+//        i++;
+//        if (i > 15000){
+//            break;
+//        }
+//    }
+
+    while (ros::ok()){
+        //ROS_INFO("[forcefeedback thread] torque value=%f (max=%f)",torque_value, max_torque_value);
+
+        if (torque_value >= max_torque_value){
+            stop = true;
+            ROS_INFO("[forcefeedback thread] STOP %d",stop);
+            mg->stop();
+
+        }
+
+    }
+
+
+
+}
 bool servicesCheck(ros::ServiceClient *ik_service, ros::ServiceClient *rt_service, ros::ServiceClient *moveit_service){
 
 //    while (!ik_service->exists()){
@@ -877,6 +919,8 @@ int main(int argc, char **argv){
     ros::AsyncSpinner spinner(1);
     spinner.start();
     moveit::planning_interface::MoveGroupInterface move_group(PLANNING_GROUP);
+    mg = &move_group;
+    //move_group = new moveit::planning_interface::MoveGroupInterface (PLANNING_GROUP);
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
     const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
     ros::Rate loop_rate(5);
@@ -922,8 +966,6 @@ int main(int argc, char **argv){
             return 0;
         }
     }while (num > 3);
-    //ROS_INFO("waiting 5s");
-    //sleep(5);
 
     //Topics init
     ros::Publisher gripperState_pub = n.advertise<std_msgs::String>("gripper_state_topic", 1000);
@@ -931,22 +973,20 @@ int main(int argc, char **argv){
     ros::Publisher rt_pub = n_rt.advertise<std_msgs::String>("commandForRotaryTable", 1000);
     //ros::Subscriber grip_topic_sub = n_gripper.subscribe("gripper_state_execution",1000,gripperExecutionCallback);
     ros::Subscriber executeTrajectory = nn.subscribe("execute_trajectory/result", 1000, trajectoryExecutionCallback);
-    ros::Subscriber torqueSensor = n_torque.subscribe("torqueSensor",1000,torqueSensorCallback);
+    ros::Subscriber torqueSensor= n_torque.subscribe("torqueSensor",1000,torqueSensorCallback);
     //Services init
-        ros::ServiceClient rt_client = n_rt_srv.serviceClient<scara_v2_moveit_api::SimpleService>("rt_service");
-
-
-        while (!rt_client.exists()) {
-            ROS_WARN("waiting for RT service [ %d ] seconds", waitingTime++);
-            sleep(1.0);
-        }
-        waitingTime = 0;
-
+    ros::ServiceClient rt_client = n_rt_srv.serviceClient<scara_v2_moveit_api::SimpleService>("rt_service");
     ros::ServiceClient moveit_client = n_moveit_srv.serviceClient<roscpp::GetLoggers>("/joint_state_publisher/get_loggers");
+
+
+    while (!rt_client.exists()) {
+        ROS_WARN("waiting for RT service [ %d ] seconds", waitingTime++);
+        sleep(1.0);
+    }
+    waitingTime = 0;
     while (!moveit_client.exists()) {
         ROS_WARN("waiting for moveit service [ %d ] seconds",waitingTime++);
         sleep(1.0);
-
     }
     waitingTime = 0;
 
@@ -959,13 +999,9 @@ int main(int argc, char **argv){
     std_msgs::String msg ;
     msg.data = "otoc_sa";
 
-
-
-
-
+    boost::thread fft{forceFeedbackThread};
 
     while (ros::ok()) {
-
 
         if (!initRT) {
             rt_pub.publish(msg);
@@ -983,15 +1019,14 @@ int main(int argc, char **argv){
             target_pose1 = getTargetCoordinates(&move_group);
             ROS_INFO("[SCARA]: Actual joint values : x=%f  y=%f  z=%f", target_pose1.position.x, target_pose1.position.y, target_pose1.position.z);
         }
-
         //move to WS1
         current_state = move_group.getCurrentState();
         current_state->copyJointGroupPositions(joint_model_group, joint_group_position);
-
-
+        if (stop){
+            ROS_ERROR("program end due to force feedback detection");
+            break;
+        }
         if (executionOK) {
-            ROS_ERROR("FUCK2");
-            //ROS_INFO("STARTED EXECUTING TRAJECTORY");
 
             if (asyncMode) {
                 executionOK = false;
@@ -1002,13 +1037,10 @@ int main(int argc, char **argv){
                 if (displayMode) {
                     ROS_INFO("STARTED EXECUTING TRAJECTORY (normal mode)");
                 }
-
             }
             if (displayMode){
                 ROS_INFO("mode = %d  mode execution number = %d",mode, modeExecution);
             }
-
-
 
             if (modeExecution == 0){
                 ROS_INFO("moving to home EXECUTED");
@@ -1085,7 +1117,6 @@ int main(int argc, char **argv){
                 }
                 sleep(3);
                 modeExecution = 0;
-
             }else if (mode == 1){
                 ROS_INFO("MODE = %d",mode);
                 if (num == 1) {
@@ -1110,8 +1141,6 @@ int main(int argc, char **argv){
 
                     modeExecution = 2;
                 }
-
-
             }else if (mode == 3){
                 ROS_INFO("MODE = %d",mode);
                 if (num == 1) {
@@ -1123,7 +1152,6 @@ int main(int argc, char **argv){
                 }
                 sleep(1);
                 modeExecution = 3;
-
             }else{
                 ROS_INFO("no mode selected");
             }
@@ -1140,7 +1168,7 @@ int main(int argc, char **argv){
             }
             //ROS_INFO("****ASYNC EXECUTION OF TRAJECTORY******");
             ROS_INFO("torque value = %f ",torque_value);
-            sleep(1);
+            //sleep(1);
         }
 
 
