@@ -29,6 +29,8 @@
 #include <boost/thread/thread.hpp>
 #include <boost/thread.hpp>
 #include <scara_v2_moveit_api/SimpleService.h>
+#include <roscpp/GetLoggers.h>
+#include <math.h>
 
 using namespace std;
 
@@ -43,14 +45,15 @@ std::vector<std::vector<double>> joint_group_positions(13, std::vector<double>(3
 std::vector<std::vector<double>> defaultPositions(11, std::vector<double>(3));
 std::vector<std::vector<double>> defaultCartesianPosition(11, std::vector<double>(7));
 std::vector<std::vector<double>> anglesFromIK(11, std::vector<double>(4));
-std::vector<double> joint_group_position;
+std::vector<double> joint_group_position(3);
 bool executionOK = false;
 bool gripperExecutionState = false;
 std::vector<geometry_msgs::Pose> waypoints(2);
 int counter = 0;
 double torque_value = 0.0;
 bool threadExecution = false;
-int displayMode = 1;
+bool displayMode = true;
+bool rtService = true;
 int waitingTime = 0;
 
 
@@ -166,7 +169,7 @@ bool setPositions(bool showAngles){
     if (showAngles) {
         ROS_INFO("VECTOR SIZE %d x %d \n", defaultPositions.size(), defaultPositions[0].size());
         ROS_INFO("default positions:");
-        for (int i = 0; i < defaultCartesianPosition.size(); i++) {
+        for (int i = 0; i < defaultPositions.size(); i++) {
             if (i == 0) {
                 ROS_INFO("HOME pos:     x=%f  y=%f  z=%f", defaultPositions[i][0],
                          defaultPositions[i][1], defaultPositions[i][2]);
@@ -181,9 +184,31 @@ bool setPositions(bool showAngles){
                          defaultPositions[i][1], defaultPositions[i][2]);
             }
         }
-        sleep(2);
+       // sleep(2);
     }
     return true;
+}
+bool setPositionsFromIK(bool showAngles){
+
+    setPositions(true);
+
+    for (int i =0;i<defaultPositions.size();i++){
+        for (int j = 0;j<3;j++){
+            if (j == 2){
+                defaultPositions[i][j] = anglesFromIK[i][j];
+            }else {
+                defaultPositions[i][j] = (ceil(anglesFromIK[i][j] * 100) / 100) * RAD2DEG;
+            }
+        }
+    }
+    for (int i=0;i<defaultPositions.size();i++){
+        ROS_INFO("final angle %d is %f %f %f",i,defaultPositions[i][0],defaultPositions[i][1],defaultPositions[i][2]);
+    }
+    ROS_INFO("Press any key to continue...");
+    getchar();
+    return true;
+
+
 }
 bool setCartesianPositions(bool showPositions){
 
@@ -341,14 +366,11 @@ void getAnglesFromIK(moveit::planning_interface::MoveGroupInterface *move_group,
         position.orientation.y = defaultCartesianPosition[i][4];
         position.orientation.z = defaultCartesianPosition[i][5];
         position.orientation.w = defaultCartesianPosition[i][6];
-        //ROS_INFO("positions");
-        //ROS_INFO_STREAM(position);
-        //getchar();
 
         if (move_group->setApproximateJointValueTarget(position, "tool0")) {
-            ROS_INFO("found IK solution");
+            ROS_WARN("found IK solution");
         } else
-            ROS_INFO("only aproximate IK solution");
+            ROS_WARN("only aproximate IK solution");
 
         success = move_group->plan(my_plan);
         // ROS_INFO_STREAM("PLAN:" << success);
@@ -361,23 +383,29 @@ void getAnglesFromIK(moveit::planning_interface::MoveGroupInterface *move_group,
             anglesFromIK[i][2] = my_plan.trajectory_.joint_trajectory.points[size-1].positions[2];
             anglesFromIK[i][3] = 1.0;
         } else{
-            ROS_INFO("not success");
+            ROS_ERROR("not success");
             anglesFromIK[i][0] = 0.0;
             anglesFromIK[i][1] = 0.0;
             anglesFromIK[i][2] = 0.0;
             anglesFromIK[i][3] = 0.0;
         }
+        //sleep(2);
     }
     for (int i=0;i<anglesFromIK.size();i++){
         ROS_INFO("final angle %d is %f %f %f [%f]",i,anglesFromIK[i][0],anglesFromIK[i][1],anglesFromIK[i][2], anglesFromIK[i][3]);
     }
+    ROS_INFO("Press any key to continue...");
     getchar();
 
 }
 void jointModeControll (moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan my_plan, int mode, int number_of_place_position, bool asyncMode){
 
+    ROS_INFO("joint mode controll");
     bool success;
     if (mode == 0){         //Home position
+        //ROS_INFO("joint mode controll 0");
+        //ROS_INFO("defaultPositions %d x %d ",defaultPositions.size(),defaultPositions[0].size());
+        //ROS_INFO("joint_group_position %d ",joint_group_position.size());
         joint_group_position[0] = defaultPositions[0][0]*DEG2RAD;  // radians
         joint_group_position[1] = defaultPositions[0][1]*DEG2RAD;
         joint_group_position[2] = defaultPositions[0][2];
@@ -609,6 +637,7 @@ void printMenu(){
     ROS_INFO("3 - Set planning time:");
     ROS_INFO("4 - Set number of planning attempts:");
     ROS_INFO("5 - Display information:");
+    ROS_INFO("6 - Co-work with rotary table:");
     ROS_INFO("0 - EXIT:");
 
 }
@@ -701,24 +730,43 @@ int menu(moveit::planning_interface::MoveGroupInterface *move_group){
                 }else if (num == 5){
                     int displayInfo;
                     ROS_INFO("1 - FULL information");
-                    ROS_INFO("2 - PARTIAL information");
+                    ROS_INFO("0 - PARTIAL information");
                     ROS_INFO("enter number");
                     scanf("%d",&displayInfo);
                     ROS_INFO("entered %d",displayInfo);
-                    if (displayInfo >0 && displayInfo<3){
-                        displayMode = displayInfo;
+                    if (displayInfo == 0) {
+                        displayMode = false;
+                        ROS_INFO("PARTIAL information SET");
                     }else {
-                        displayMode = 1;
+                        displayMode = true;
+                        ROS_INFO("FULL information SET");
                     }
                     break;
-                }else if (num == 0){
+                }else if (num == 6){
+                    int cowork;
+                    ROS_INFO("1 - Service feedback from RT");
+                    ROS_INFO("0 - No feedback from RT");
+                    ROS_INFO("enter number");
+                    scanf("%d",&cowork);
+                    ROS_INFO("entered %d",cowork);
+                    if (cowork == 0) {
+                        rtService = false;
+                        ROS_INFO("NO service feedback from RT");
+                    }else {
+                        rtService = true;
+                        ROS_INFO("Service feedback from RT SET");
+                    }
+                    break;
+
+                }
+                else if (num == 0){
                     break;
                 }
             }
 
         }
         else if (number == 9){
-            ROS_INFO("You have choosed %d - EXIT",number);
+            ROS_WARN("You have choosed %d - EXIT",number);
             return -1;
         }else if (number == -38){
             continue;
@@ -729,6 +777,7 @@ int menu(moveit::planning_interface::MoveGroupInterface *move_group){
         sleep(1);
     }
 
+    ROS_INFO_STREAM(number);
     return number;
 }
 void shakeThread(){
@@ -739,6 +788,44 @@ void shakeThread(){
     }
     threadExecution = true;
     ROS_INFO("thread end");
+}
+bool servicesCheck(ros::ServiceClient *ik_service, ros::ServiceClient *rt_service, ros::ServiceClient *moveit_service){
+
+//    while (!ik_service->exists()){
+//        ROS_INFO("waiting for IK service [ %d ] seconds",waitingTime++);
+//        ROS_INFO("Please check the moveit node!");
+//        sleep(1);
+//    }
+//    waitingTime = 0;
+    int waitTime = 0;
+    ROS_INFO("servicesCheck function");
+
+
+        while (!rt_service->exists()) {
+            ROS_WARN("waiting for RT service [ %d ] seconds", waitTime++);
+            ROS_WARN("Please check the rt node!");
+            sleep(1.0);
+            if (waitTime > 20) {
+                ROS_ERROR("_____PROGRAM END!______");
+                return false;
+            }
+        }
+        waitTime = 0;
+
+
+    while (!moveit_service->exists()) {
+        ROS_WARN("waiting for RT service [ %d ] seconds",waitTime++);
+        ROS_WARN("Please check the rt node!");
+        sleep(1.0);
+        if (waitTime >20){
+            ROS_ERROR("_____PROGRAM END!______");
+            return false;
+        }
+    }
+    waitTime = 0;
+
+    return true;
+
 }
 void trajectoryExecutionCallback(const moveit_msgs::ExecuteTrajectoryActionResult result){
 
@@ -752,24 +839,6 @@ void torqueSensorCallback(const std_msgs::Float64 torqueValue){
     //ROS_INFO("torque CALLBACK %f",torqueValue);
     torque_value = torqueValue.data;
 }
-void servicesCheck(ros::ServiceClient *ik_service, ros::ServiceClient *rt_service){
-
-//    while (!ik_service->exists()){
-//        ROS_INFO("waiting for IK service [ %d ] seconds",waitingTime++);
-//        ROS_INFO("Please check the moveit node!");
-//        sleep(1);
-//    }
-//    waitingTime = 0;
-
-    while (!rt_service->exists()) {
-        ROS_INFO("waiting for RT service [ %d ] seconds",waitingTime++);
-        ROS_INFO("Please check the rt node!");
-        sleep(1.0);
-    }
-    waitingTime = 0;
-
-}
-
 
 int main(int argc, char **argv){
 
@@ -790,6 +859,12 @@ int main(int argc, char **argv){
     moveit_msgs::RobotState robot_state;
     bool moveToHome = false;
     scara_v2_moveit_api::SimpleService rt_srv;
+    //help variables init
+    bool initRT = false;
+    bool asyncMode = true;
+    executionOK = true;
+    bool threadStart = true;
+    //bool moveToHome = true;
 
 
 
@@ -797,7 +872,7 @@ int main(int argc, char **argv){
     ros::init(argc, argv, "PICK_and_PLACE");
     ros::NodeHandle n, nn,n_rt;
     ros::NodeHandle n_gripper,n_sub_rt,n_torque;
-    ros::NodeHandle n_rt_srv;
+    ros::NodeHandle n_rt_srv,n_moveit_srv;
     ros::Rate r(2);
     ros::AsyncSpinner spinner(1);
     spinner.start();
@@ -812,16 +887,15 @@ int main(int argc, char **argv){
         num = menu(&move_group);
         if (num == 1) {
             //setDesiredAngles();
-            if (setPositions(false)) {
+            if (setPositions(displayMode)) {
                 ROS_INFO("default positions for Joint control OK");
             }
         } else if (num == 2) {
-            if (setCartesianPositions(false)) {
+            if (setCartesianPositions(displayMode)) {
                 ROS_INFO("default positions for Cartesian planning  OK");
                 service_client = n.serviceClient<moveit_msgs::GetPositionIK>("compute_ik");
-
                 while (!service_client.exists()) {
-                    ROS_INFO("waiting for IK service [ %d ] seconds",waitingTime++);
+                    ROS_WARN("waiting for IK service [ %d ] seconds",waitingTime++);
                     sleep(1.0);
                 }
                 waitingTime = 0;
@@ -829,20 +903,25 @@ int main(int argc, char **argv){
                 selfPosition.position = position.pose.position;
                 selfPosition.orientation = position.pose.orientation;
                 moveit::core::robotStateToRobotStateMsg(*move_group.getCurrentState(), robot_state, true);
-                //move_group.setMaxVelocityScalingFactor(0.1);
-                //move_group.setMaxAccelerationScalingFactor(0.1);
-                //move_group.setPlanningTime(10);
                 moveToHome = true;
             }
         }else if (num == 3){
+            ROS_ERROR("mode 3!");
+            setCartesianPositions(true);
+            setPositions(false);
+            jointModeControll(&move_group, my_plan, 0, 0,false);
+            ROS_INFO("wait!");
+            sleep(2);
             getAnglesFromIK(&move_group,my_plan);
+            setPositionsFromIK(displayMode);
+            num = 1;    //for joint control
         }else if (num == -1) {
-            ROS_INFO("program END!");
+            ROS_WARN("program END!");
             ros::shutdown();
             spinner.stop();
             return 0;
         }
-    }while (num > 2);
+    }while (num > 3);
     //ROS_INFO("waiting 5s");
     //sleep(5);
 
@@ -854,9 +933,18 @@ int main(int argc, char **argv){
     ros::Subscriber executeTrajectory = nn.subscribe("execute_trajectory/result", 1000, trajectoryExecutionCallback);
     ros::Subscriber torqueSensor = n_torque.subscribe("torqueSensor",1000,torqueSensorCallback);
     //Services init
-    ros::ServiceClient rt_client = n_rt_srv.serviceClient<scara_v2_moveit_api::SimpleService>("rt_service");
-    while (!rt_client.exists()) {
-        ROS_INFO("waiting for RT service [ %d ] seconds",waitingTime++);
+        ros::ServiceClient rt_client = n_rt_srv.serviceClient<scara_v2_moveit_api::SimpleService>("rt_service");
+
+
+        while (!rt_client.exists()) {
+            ROS_WARN("waiting for RT service [ %d ] seconds", waitingTime++);
+            sleep(1.0);
+        }
+        waitingTime = 0;
+
+    ros::ServiceClient moveit_client = n_moveit_srv.serviceClient<roscpp::GetLoggers>("/joint_state_publisher/get_loggers");
+    while (!moveit_client.exists()) {
+        ROS_WARN("waiting for moveit service [ %d ] seconds",waitingTime++);
         sleep(1.0);
 
     }
@@ -871,12 +959,7 @@ int main(int argc, char **argv){
     std_msgs::String msg ;
     msg.data = "otoc_sa";
 
-    //help variables init
-    bool initRT = false;
-    bool asyncMode = true;
-    executionOK = true;
-    bool threadStart = true;
-    //bool moveToHome = true;
+
 
 
 
@@ -890,27 +973,41 @@ int main(int argc, char **argv){
             sleep(2);
             initRT = true;
         }
-        servicesCheck(&service_client,&rt_client);
+        if ( !servicesCheck(&service_client,&rt_client,&moveit_client)){    //if services dont work
+            ROS_ERROR("FUCK1");
+            return 0;
+        }
 
+        if (displayMode) {
+            //Get current pose of tool0
+            target_pose1 = getTargetCoordinates(&move_group);
+            ROS_INFO("[SCARA]: Actual joint values : x=%f  y=%f  z=%f", target_pose1.position.x, target_pose1.position.y, target_pose1.position.z);
+        }
 
-        //Get current pose of tool0
-        target_pose1 = getTargetCoordinates(&move_group);
-        //ROS_INFO("[SCARA]: Actual joint values : x=%f  y=%f  z=%f", target_pose1.position.x, target_pose1.position.y, target_pose1.position.z);
         //move to WS1
         current_state = move_group.getCurrentState();
         current_state->copyJointGroupPositions(joint_model_group, joint_group_position);
 
 
         if (executionOK) {
+            ROS_ERROR("FUCK2");
             //ROS_INFO("STARTED EXECUTING TRAJECTORY");
 
             if (asyncMode) {
                 executionOK = false;
-                //ROS_INFO("STARTED EXECUTING TRAJECTORY (async mode)");
+                if (displayMode) {
+                    ROS_INFO("STARTED EXECUTING TRAJECTORY (async mode)");
+                }
             }else{
-                //ROS_INFO("STARTED EXECUTING TRAJECTORY (normal mode)");
+                if (displayMode) {
+                    ROS_INFO("STARTED EXECUTING TRAJECTORY (normal mode)");
+                }
+
             }
-            ROS_INFO("mode = %d  mode execution number = %d",mode, modeExecution);
+            if (displayMode){
+                ROS_INFO("mode = %d  mode execution number = %d",mode, modeExecution);
+            }
+
 
 
             if (modeExecution == 0){
@@ -1046,8 +1143,11 @@ int main(int argc, char **argv){
             sleep(1);
         }
 
+
         //ROS_INFO("mode = %d  mode execution number = %d  execution = %d",mode, modeExecution,executionOK);
-        ROS_INFO("waiting for message");
+        if (displayMode){
+            ROS_INFO("waiting for message");
+        }
         ros::spinOnce();
         loop_rate.sleep();
     }
