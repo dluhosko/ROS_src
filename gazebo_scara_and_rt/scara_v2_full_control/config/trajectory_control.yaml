@@ -9,11 +9,15 @@ scara_and_rt:
       - Joint1
       - Joint2
       - Joint_GripperBase
+      - Joint_Gripper
+      - Joint_GripperRight
 #      - base_link1_to_link1
     gains:
       Joint1: {p: 5000.0, i: 20, d: 120, i_clamp: 0.0}
       Joint2: {p: 5000.0, i: 20, d: 120, i_clamp: 0.0}
       Joint_GripperBase: {p: 1000.0, i: 20, d: 40, i_clamp: 0.0}
+      Joint_Gripper: {p: 1000.0, i: 20, d: 40, i_clamp: 0.0}
+      Joint_GripperRight: {p: 1000.0, i: 20, d: 40, i_clamp: 0.0}
 #      base_link1_to_link1: {p: 100.0, i: 1.0, d: 15.0, i_clamp: 0.0}
     constraints:
       goal_time: 1
@@ -22,6 +26,10 @@ scara_and_rt:
       Joint2:
         goal: 0.1
       Joint_GripperBase:
+        goal: 0.1
+      Joint_Gripper:
+        goal: 0.1
+      Joint_GripperRight:
         goal: 0.1
 rt:
     joint_state_controller:
@@ -32,7 +40,7 @@ rt:
       joints:
         - base_link1_to_link1
       gains:
-        base_link1_to_link1: {p: 100.0, i: 1.0, d: 15.0, i_clamp: 0.0}
+        base_link1_to_link1: {p: 1000.0, i: 1.0, d: 15.0, i_clamp: 0.0}
     constraints:
           goal_time: 1
           base_link1_to_link1:

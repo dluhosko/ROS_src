@@ -147,16 +147,16 @@
         <mu2>0.2</mu2>
     </gazebo>
 
-    <!--<gazebo reference="GripperLeft">-->
-        <!--<material>Gazebo/Orange</material>-->
-        <!--<mu1>0.2</mu1>-->
-        <!--<mu2>0.2</mu2>-->
-    <!--</gazebo>-->
-    <!--<gazebo reference="GripperRight">-->
-        <!--<material>Gazebo/Orange</material>-->
-        <!--<mu1>0.2</mu1>-->
-        <!--<mu2>0.2</mu2>-->
-    <!--</gazebo>-->
+    <gazebo reference="GripperLeft">
+        <material>Gazebo/Black</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
+    <gazebo reference="GripperRight">
+        <material>Gazebo/Black</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
     <!-- *************************** -->
 
 </robot>

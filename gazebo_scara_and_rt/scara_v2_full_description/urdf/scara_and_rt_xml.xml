@@ -115,17 +115,16 @@
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
-    <!--<gazebo reference="GripperLeft">-->
-        <!--<material>Gazebo/Orange</material>-->
-        <!--<mu1>0.2</mu1>-->
-        <!--<mu2>0.2</mu2>-->
-    <!--</gazebo>-->
-    <!--<gazebo reference="GripperRight">-->
-        <!--<material>Gazebo/Orange</material>-->
-        <!--<mu1>0.2</mu1>-->
-        <!--<mu2>0.2</mu2>-->
-    <!--</gazebo>-->
-    <!--&ndash;&gt;-->
+    <gazebo reference="GripperLeft">
+        <material>Gazebo/Orange</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
+    <gazebo reference="GripperRight">
+        <material>Gazebo/Orange</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+    </gazebo>
     <!-- *************************** -->
 
 
@@ -1006,72 +1005,70 @@
 
 
 
-    <!--<link name="GripperLeft">-->
-        <!--<inertial>-->
-            <!--<origin  xyz="0 0 0"  rpy="3.14 0 0" />-->
-            <!--<mass value="1" />-->
-            <!--<inertia-->
-                     <!--ixx="1E-6"  ixy="0" ixz="0"-->
-                     <!--iyy="1E-6" iyz="0"-->
-                     <!--izz="1E-6" />-->
-        <!--</inertial>-->
-        <!--<visual>-->
-            <!--<origin xyz="0 0 0" rpy="3.14 0 0" />-->
-            <!--<geometry>-->
-                <!--<mesh filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />-->
-            <!--</geometry>-->
-            <!--<material name="sensoDarkGray">-->
-            <!--</material>-->
-        <!--</visual>-->
-        <!--<collision>-->
-            <!--<origin xyz="0 0 0" rpy="0 0 0" />-->
-            <!--<geometry>-->
-                <!--<mesh  filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />-->
-            <!--</geometry>-->
-        <!--</collision>-->
-    <!--</link>-->
-    <!--<joint name="Joint_Gripper" type="prismatic">-->
-        <!--<parent link="GripperBase" />-->
-        <!--<child link="GripperLeft" />-->
-        <!--<origin xyz="-0.0162 0.0984 0" rpy="3.1416 0 0" />-->
-        <!--<axis xyz="1 0 0" />-->
-        <!--<limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>-->
-        <!--<dynamics damping="0.7"/>-->
-    <!--</joint>-->
+    <link name="GripperLeft">
+        <inertial>
+            <origin  xyz="0 0 0"  rpy="3.14 0 0" />
+            <mass value="0.1" />
+            <inertia  ixx="0.01" ixy="0.01" ixz="0.01"
+                      iyy="0.01" iyz="0.01"
+                      izz="0.01" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="3.14 0 0" />
+            <geometry>
+                <mesh filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />
+            </geometry>
+            <material name="sensoDarkGray">
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh  filename="package://scara_v2_with_gripper/meshes/gripperLeft_full.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_Gripper" type="prismatic">
+        <parent link="GripperBase" />
+        <child link="GripperLeft" />
+        <origin xyz="-0.0162 0.0984 0" rpy="3.1416 0 0" />
+        <axis xyz="1 0 0" />
+        <limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>
+        <dynamics damping="0.7"/>
+    </joint>
 
-    <!--<link name="GripperRight">-->
-        <!--<inertial>-->
-            <!--<origin   xyz="0 0 0" rpy="3.14 0 0" />-->
-            <!--<mass value="1" />-->
-            <!--<inertia-->
-                     <!--ixx="1E-6"  ixy="0" ixz="0"-->
-                     <!--iyy="1E-6" iyz="0"-->
-                     <!--izz="1E-6" />-->
-        <!--</inertial>-->
-        <!--<visual>-->
-            <!--<origin  xyz="0 0 0"  rpy="3.14 0 0" />-->
-            <!--<geometry>-->
-                <!--<mesh filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />-->
-            <!--</geometry>-->
-            <!--<material name="sensoDarkGray">-->
-            <!--</material>-->
-        <!--</visual>-->
-        <!--<collision>-->
-            <!--<origin  xyz="0 0 0" rpy="0 0 0" />-->
-            <!--<geometry>-->
-                <!--<mesh  filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />-->
-            <!--</geometry>-->
-        <!--</collision>-->
-    <!--</link>-->
-    <!--<joint name="Joint_GripperRight" type="prismatic">-->
-        <!--<parent link="GripperBase" />-->
-        <!--<child link="GripperRight" />-->
-        <!--<origin  xyz="0.0165 0.0984 0" rpy="3.1416 0 3.1416" />-->
-        <!--<axis  xyz="1 0 0" />-->
-        <!--<limit effort="1000.0" lower="-0.003" upper="0.003" velocity="1"/>-->
-        <!--<mimic joint="Joint_Gripper" multiplier="1" offset="0" />-->
+    <link name="GripperRight">
+        <inertial>
+            <origin   xyz="0 0 0" rpy="3.14 0 0" />
+            <mass value="0.1" />
+            <inertia  ixx="0.01" ixy="0.01" ixz="0.01"
+                      iyy="0.01" iyz="0.01"
+                      izz="0.01" />
+        </inertial>
+        <visual>
+            <origin  xyz="0 0 0"  rpy="3.14 0 0" />
+            <geometry>
+                <mesh filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />
+            </geometry>
+            <material name="sensoDarkGray">
+            </material>
+        </visual>
+        <collision>
+            <origin  xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh  filename="package://scara_v2_with_gripper/meshes/gripperRight_full.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint_GripperRight" type="prismatic">
+        <parent link="GripperBase" />
+        <child link="GripperRight" />
+        <origin  xyz="0.0165 0.0984 0" rpy="3.1416 0 3.1416" />
+        <axis  xyz="1 0 0" />
+        <limit effort="1000.0" lower="-0.003" upper="0.003" velocity="1"/>
+        <mimic joint="Joint_Gripper" multiplier="1" offset="0" />
         <!--<dynamics damping="0.7"/>-->
-    <!--</joint>-->
+    </joint>
 
     <!--***********************************************************-->
 
@@ -1112,6 +1109,30 @@
         </actuator>
     </transmission>
     <!--*******************-->
+    <!--_____Gripper_______-->
+    <transmission name="tran4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_Gripper">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor4">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>100</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="tran5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint_GripperRight">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor5">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>100</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <!-- ***************************** -->
+
     <!--___rotary table_____-->
     <transmission name="RT_tran1">
         <type>transmission_interface/SimpleTransmission</type>
@@ -1125,29 +1146,8 @@
     </transmission>
     <!--*******************-->
 
-    <!--_____Gripper_______-->
-    <!--<transmission name="tran3">-->
-        <!--<type>transmission_interface/SimpleTransmission</type>-->
-        <!--<joint name="Joint_GripperBase">-->
-            <!--<hardwareInterface>PositionJointInterface</hardwareInterface>-->
-        <!--</joint>-->
-        <!--<actuator name="motor3">-->
-            <!--<hardwareInterface>PositionJointInterface</hardwareInterface>-->
-            <!--<mechanicalReduction>1</mechanicalReduction>-->
-        <!--</actuator>-->
-    <!--</transmission>-->
 
-    <!--<transmission name="tran4">-->
-        <!--<type>transmission_interface/SimpleTransmission</type>-->
-        <!--<joint name="Joint_Gripper">-->
-            <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
-        <!--</joint>-->
-        <!--<actuator name="motor4">-->
-            <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
-            <!--<mechanicalReduction>1</mechanicalReduction>-->
-        <!--</actuator>-->
-    <!--</transmission>-->
-    <!-- ***************************** -->
+
 
 
 
