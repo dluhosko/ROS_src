@@ -17,9 +17,18 @@
            command="$(find xacro)/xacro --inorder '$(find scara_v2_full_description)/urdf/scara_and_rt_urdf.xacro'" />
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
           args="-urdf -model scara_and_rt -param robot_description"/>
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+        output="screen" ns="/scara_and_rt" args="joint_state_controller"/>
+
     <rosparam file="$(find scara_v2_full_control)/config/trajectory_control.yaml" command="load"/>
     <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-          output="screen" ns="/scara_and_rt" args=" joint_state_controller joint_trajectory_controller"/>
+          output="screen" ns="/scara" args="joint_trajectory_controller"/>
+
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+          output="screen" ns="/rt" args="joint_trajectory_controller"/>
+
+
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
           respawn="false" output="screen">
     </node>
