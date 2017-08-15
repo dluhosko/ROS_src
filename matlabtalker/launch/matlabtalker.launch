@@ -1,3 +1,0 @@
-<launch>
-    <node pkg="matlabtalker" name="matlabtalker" type="matlabtalker"/>
- </launch>

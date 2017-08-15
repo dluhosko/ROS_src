@@ -133,7 +133,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.2 0.15 0.02"/>
+                <box size="0.2 0.12 0.02"/>
             </geometry>
         </collision>
     </link>
@@ -415,7 +415,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.15 0.1 0.02"/>
+                <box size="0.15 0.1 0.01"/>
             </geometry>
         </collision>
     </link>
@@ -475,7 +475,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <cylinder length="0.02" radius="0.06"/>
+                <cylinder length="0.01" radius="0.06"/>
             </geometry>
         </collision>
     </link>
@@ -863,9 +863,9 @@
     </joint>
 
     <!--<joint name="Base_to_tool0" type="fixed">-->
-        <!--<parent link="GripperBase" />-->
-        <!--<child link="tool0" />-->
-        <!--<origin xyz="0 0.0984 0" rpy="0 0 0 " />-->
+    <!--<parent link="GripperBase" />-->
+    <!--<child link="tool0" />-->
+    <!--<origin xyz="0 0.0984 0" rpy="0 0 0 " />-->
     <!--</joint>-->
 
     <!--<link name="tool0"/>-->
@@ -895,12 +895,12 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint_Gripper" type="prismatic">
+    <joint name="Joint_Gripper" type="fixed">
         <parent link="GripperBase" />
         <child link="GripperLeft" />
         <origin xyz="-0.0162 0.0984 0" rpy="3.1416 0 0" />
         <axis xyz="1 0 0" />
-        <limit effort="100.0" lower="0" upper="0.003" velocity="1"/>
+        <!--<limit effort="100.0" lower="0" upper="0.003" velocity="1"/>-->
     </joint>
 
 
@@ -929,12 +929,12 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint_GripperRight" type="prismatic">
+    <joint name="Joint_GripperRight" type="fixed">
         <parent link="GripperBase" />
         <child link="GripperRight" />
         <origin  xyz="0.0165 0.0984 0" rpy="3.1416 0 3.1416" />
         <axis  xyz="1 0 0" />
-        <limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>
+        <!--<limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>-->
         <!--<mimic joint="Joint_Gripper" multiplier="1" offset="0" />-->
     </joint>
 
@@ -976,27 +976,27 @@
     <!--*******************-->
 
     <!--_____Gripper_______-->
-    <transmission name="tran4">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="Joint_Gripper">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="motor4">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>100</mechanicalReduction>
-        </actuator>
-    </transmission>
+    <!--<transmission name="tran4">-->
+    <!--<type>transmission_interface/SimpleTransmission</type>-->
+    <!--<joint name="Joint_Gripper">-->
+    <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
+    <!--</joint>-->
+    <!--<actuator name="motor4">-->
+    <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
+    <!--<mechanicalReduction>100</mechanicalReduction>-->
+    <!--</actuator>-->
+    <!--</transmission>-->
 
-    <transmission name="tran5">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="Joint_GripperRight">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="motor5">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>100</mechanicalReduction>
-        </actuator>
-    </transmission>
+    <!--<transmission name="tran5">-->
+    <!--<type>transmission_interface/SimpleTransmission</type>-->
+    <!--<joint name="Joint_GripperRight">-->
+    <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
+    <!--</joint>-->
+    <!--<actuator name="motor5">-->
+    <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
+    <!--<mechanicalReduction>100</mechanicalReduction>-->
+    <!--</actuator>-->
+    <!--</transmission>-->
     <!-- ***************************** -->
 
     <!--___rotary table___-->

@@ -8,100 +8,127 @@
         </plugin>
     </gazebo>
 
-    <!--__________TABLE________________-->
+    <!--           TABLE           -->
     <gazebo reference="BaseBox">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/Grey</material>
     </gazebo>
     <gazebo reference="CentralStop1">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/Red</material>
     </gazebo>
     <gazebo reference="CentralStop2">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/Red</material>
     </gazebo>
     <!-- ************************** -->
 
-    <!--___________PLACE BOX___________-->
+    <!--__________PLACE BOX_________-->
     <gazebo reference="placeBox">
+        <selfCollide>true</selfCollide>
         <material>Gazebo/White</material>
     </gazebo>
     <gazebo reference="placeHole1">
-        <material>Gazebo/Red</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="placeHole2">
-        <material>Gazebo/Red</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="placeHole3">
-        <material>Gazebo/Red</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="placeHole4">
-        <material>Gazebo/Red</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="placeHole5">
-        <material>Gazebo/Red</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="placeHole6">
-        <material>Gazebo/Red</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="placeHole7">
-        <material>Gazebo/Red</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="placeHole8">
-        <material>Gazebo/Red</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
-    <!--*******************************-->
+    <!--****************************-->
 
     <!--_________ROTARY TABLE________-->
     <gazebo reference="base">
+        <selfCollide>true</selfCollide>
         <material>Gazebo/White</material>
     </gazebo>
     <gazebo reference="base_link1">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/White</material>
     </gazebo>
     <gazebo reference="hole1">
-        <material>Gazebo/Black</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole2">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole3">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole4">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole5">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole6">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole7">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole8">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <!---->
     <gazebo reference="link1">
+        <selfCollide>true</selfCollide>
         <material>Gazebo/White</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
+    <!--<gazebo reference="base_link1_to_link1">-->
+    <!--<kp>10</kp>-->
+    <!--<kd>1000</kd>-->
+    <!--</gazebo>-->
+    <!--*************************************-->
     <!--****************************-->
 
 
     <!--___________SCARA______________-->
     <gazebo reference="ScaraBase">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/GreyGradientSky</material>
     </gazebo>
     <gazebo reference="ScaraLink1">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/GreyGradientSky</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
 
     <gazebo reference="ScaraLink2">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/GreyGradientSky</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
@@ -111,17 +138,17 @@
 
     <!--___________GRIPPER____________-->
     <gazebo reference="GripperBase">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/Black</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
     <gazebo reference="GripperLeft">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/Black</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
     <gazebo reference="GripperRight">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/Black</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
@@ -172,9 +199,9 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass value="1" />
             <inertia
-                     ixx="1" ixy="0" ixz="0"
-                     iyy="1" iyz="0"
-                     izz="1" />
+                    ixx="1" ixy="0" ixz="0"
+                    iyy="1" iyz="0"
+                    izz="1" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -197,9 +224,9 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass value="0" />
             <inertia
-                     ixx="1" ixy="0" ixz="0"
-                     iyy="1" iyz="0"
-                     izz="1" />
+                    ixx="1" ixy="0" ixz="0"
+                    iyy="1" iyz="0"
+                    izz="1" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -228,9 +255,9 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass value="1" />
             <inertia
-                     ixx="1" ixy="0" ixz="0"
-                     iyy="1" iyz="0"
-                     izz="1" />
+                    ixx="1" ixy="0" ixz="0"
+                    iyy="1" iyz="0"
+                    izz="1" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -872,9 +899,9 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass value="1" />
             <inertia
-                     ixx="1" ixy="0" ixz="0"
-                     iyy="1" iyz="0"
-                     izz="1" />
+                    ixx="1" ixy="0" ixz="0"
+                    iyy="1" iyz="0"
+                    izz="1" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -903,9 +930,9 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass value="3.8063" />
             <inertia
-                     ixx="7.8753E-3" ixy="4.6431E-3" ixz="-1.4702E-5"
-                     iyy="6.1309E-2" iyz="-5.8992E-6"
-                     izz="6.2681E-2" />
+                    ixx="7.8753E-3" ixy="4.6431E-3" ixz="-1.4702E-5"
+                    iyy="6.1309E-2" iyz="-5.8992E-6"
+                    izz="6.2681E-2" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -937,9 +964,9 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass value="1.5020" />
             <inertia
-                     ixx="5.0471E-2" ixy="3.0689E-4" ixz="-8.5622E-4"
-                     iyy="4.7456E-2" iyz="8.7643E-3"
-                     izz="5.2228E-3" />
+                    ixx="5.0471E-2" ixy="3.0689E-4" ixz="-8.5622E-4"
+                    iyy="4.7456E-2" iyz="8.7643E-3"
+                    izz="5.2228E-3" />
         </inertial>
         <visual>
             <origin  xyz="0 0 0" rpy="0 0 0" />
@@ -975,9 +1002,9 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <mass  value="1" />
             <inertia
-                     ixx="0.01" ixy="0.01" ixz="0.01"
-                     iyy="0.01" iyz="0.01"
-                     izz="0.01" />
+                    ixx="0.01" ixy="0.01" ixz="0.01"
+                    iyy="0.01" iyz="0.01"
+                    izz="0.01" />
         </inertial>
         <visual>
             <origin  xyz="0 0 0"  rpy="0 0 0" />
@@ -1028,13 +1055,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint_Gripper" type="prismatic">
+    <joint name="Joint_Gripper" type="fixed">
         <parent link="GripperBase" />
         <child link="GripperLeft" />
         <origin xyz="-0.0162 0.0984 0" rpy="3.1416 0 0" />
         <axis xyz="1 0 0" />
-        <limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>
-        <dynamics damping="0.7"/>
+        <!--<limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>-->
+        <!--<dynamics damping="0.7"/>-->
     </joint>
 
     <link name="GripperRight">
@@ -1060,13 +1087,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint_GripperRight" type="prismatic">
+    <joint name="Joint_GripperRight" type="fixed">
         <parent link="GripperBase" />
         <child link="GripperRight" />
         <origin  xyz="0.0165 0.0984 0" rpy="3.1416 0 3.1416" />
         <axis  xyz="1 0 0" />
-        <limit effort="1000.0" lower="-0.003" upper="0.003" velocity="1"/>
-        <mimic joint="Joint_Gripper" multiplier="1" offset="0" />
+        <!--<limit effort="1000.0" lower="-0.003" upper="0.003" velocity="1"/>-->
+        <!--<mimic joint="Joint_Gripper" multiplier="1" offset="0" />-->
         <!--<dynamics damping="0.7"/>-->
     </joint>
 
@@ -1110,27 +1137,27 @@
     </transmission>
     <!--*******************-->
     <!--_____Gripper_______-->
-    <transmission name="tran4">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="Joint_Gripper">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="motor4">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>100</mechanicalReduction>
-        </actuator>
-    </transmission>
+    <!--<transmission name="tran4">-->
+    <!--<type>transmission_interface/SimpleTransmission</type>-->
+    <!--<joint name="Joint_Gripper">-->
+    <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
+    <!--</joint>-->
+    <!--<actuator name="motor4">-->
+    <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
+    <!--<mechanicalReduction>100</mechanicalReduction>-->
+    <!--</actuator>-->
+    <!--</transmission>-->
 
-    <transmission name="tran5">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="Joint_GripperRight">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="motor5">
-            <hardwareInterface>EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>100</mechanicalReduction>
-        </actuator>
-    </transmission>
+    <!--<transmission name="tran5">-->
+    <!--<type>transmission_interface/SimpleTransmission</type>-->
+    <!--<joint name="Joint_GripperRight">-->
+    <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
+    <!--</joint>-->
+    <!--<actuator name="motor5">-->
+    <!--<hardwareInterface>EffortJointInterface</hardwareInterface>-->
+    <!--<mechanicalReduction>100</mechanicalReduction>-->
+    <!--</actuator>-->
+    <!--</transmission>-->
     <!-- ***************************** -->
 
     <!--___rotary table_____-->

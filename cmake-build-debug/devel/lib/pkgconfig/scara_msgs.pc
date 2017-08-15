@@ -1,0 +1,8 @@
+prefix=/home/viktor/catkin_ws/src/cmake-build-debug/devel
+
+Name: scara_msgs
+Description: Description of scara_msgs
+Version: 0.0.0
+Cflags: -I/home/viktor/catkin_ws/src/cmake-build-debug/devel/include
+Libs: -L/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib 
+Requires: message_runtime std_msgs

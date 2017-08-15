@@ -95,3 +95,5 @@ add_executable(gripper_control ../scara_v2_moveit_api/src/gripper_control.cpp)
 target_link_libraries(gripper_control ${catkin_LIBRARIES})
 add_dependencies(gripper_control beginner_tutorials_generate_messages_cpp)
 
+add_executable(jointState_publisher ../scara_v2_moveit_api/src/jointState_publisher.cpp)
+target_link_libraries(jointState_publisher ${catkin_LIBRARIES})

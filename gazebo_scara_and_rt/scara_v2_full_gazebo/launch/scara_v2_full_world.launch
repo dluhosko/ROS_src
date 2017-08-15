@@ -29,9 +29,4 @@
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
           args="-urdf -model scara_v2_full -param robot_description"/>
 
-    <!-- Spawn a SCARA into Gazebo  OLD-->
-    <!--
-    <node name="spawn_scara" pkg="gazebo_ros" type="spawn_model" args="-file $(find scara_v2_with_gripper)/urdf/scara_v2_with_gripper.urdf -urdf -z 1 -model scara" />
-    -->
-    <!-- *******************************-->
 </launch>

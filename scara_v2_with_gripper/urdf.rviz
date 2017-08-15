@@ -7,10 +7,11 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
+        - /RobotModel1/Links1
         - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.5
-    Tree Height: 565
+    Tree Height: 895
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -23,6 +24,7 @@ Panels:
   - Class: rviz/Views
     Expanded:
       - /Current View1
+      - /Current View1/Focal Point1
     Name: Views
     Splitter Ratio: 0.5
   - Class: rviz/Time
@@ -106,10 +108,106 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        fake_link:
+        base:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
+        base_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeBox:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         tool0:
           Alpha: 1
           Show Axes: false
@@ -130,24 +228,62 @@ Visualization Manager:
       Frames:
         All Enabled: false
         BaseBox:
-          Value: false
+          Value: true
         CentralStop1:
-          Value: false
+          Value: true
         CentralStop2:
-          Value: false
+          Value: true
         GripperBase:
-          Value: false
+          Value: true
         GripperLeft:
-          Value: false
+          Value: true
         GripperRight:
-          Value: false
+          Value: true
         ScaraBase:
-          Value: false
+          Value: true
         ScaraLink1:
           Value: true
         ScaraLink2:
           Value: true
-        fake_link:
+        base:
+          Value: true
+        base_link1:
+          Value: true
+        hole1:
+          Value: true
+        hole2:
+          Value: true
+        hole3:
+          Value: true
+        hole4:
+          Value: true
+        hole5:
+          Value: true
+        hole6:
+          Value: true
+        hole7:
+          Value: true
+        hole8:
+          Value: true
+        link1:
+          Value: true
+        placeBox:
+          Value: true
+        placeHole1:
+          Value: true
+        placeHole2:
+          Value: true
+        placeHole3:
+          Value: true
+        placeHole4:
+          Value: true
+        placeHole5:
+          Value: true
+        placeHole6:
+          Value: true
+        placeHole7:
+          Value: true
+        placeHole8:
           Value: true
         tool0:
           Value: true
@@ -168,14 +304,49 @@ Visualization Manager:
             ScaraBase:
               ScaraLink1:
                 ScaraLink2:
-                  fake_link:
-                    GripperBase:
-                      GripperLeft:
-                        {}
-                      GripperRight:
-                        {}
-                      tool0:
-                        {}
+                  GripperBase:
+                    GripperLeft:
+                      {}
+                    GripperRight:
+                      {}
+                    tool0:
+                      {}
+            base:
+              base_link1:
+                link1:
+                  hole1:
+                    {}
+                  hole2:
+                    {}
+                  hole3:
+                    {}
+                  hole4:
+                    {}
+                  hole5:
+                    {}
+                  hole6:
+                    {}
+                  hole7:
+                    {}
+                  hole8:
+                    {}
+            placeBox:
+              placeHole1:
+                {}
+              placeHole2:
+                {}
+              placeHole3:
+                {}
+              placeHole4:
+                {}
+              placeHole5:
+                {}
+              placeHole6:
+                {}
+              placeHole7:
+                {}
+              placeHole8:
+                {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -202,32 +373,32 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.12718022
+      Distance: 2.76696134
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.212572187
-        Y: 0.545061052
-        Z: 1.00893307
-      Focal Shape Fixed Size: true
+        X: -0.0657850951
+        Y: -0.126044616
+        Z: 0.196067005
+      Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.280397356
+      Pitch: 0.715397537
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.0904010162
+      Yaw: 0.900401175
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 846
+  Height: 1176
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000016a000002c4fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000002c4000000dd00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000002c4fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730100000028000002c4000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004b00000003efc0100000002fb0000000800540069006d00650100000000000004b00000030000fffffffb0000000800540069006d006501000000000000045000000000000000000000022b000002c400000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000016a0000040efc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007301000000280000040e000000dd00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000040efc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a0056006900650077007301000000280000040e000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073f0000003efc0100000002fb0000000800540069006d006501000000000000073f0000030000fffffffb0000000800540069006d00650100000000000004500000000000000000000004ba0000040e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -236,6 +407,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1200
+  Width: 1855
   X: 65
-  Y: 206
+  Y: 24

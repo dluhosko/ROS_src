@@ -1,42 +1,54 @@
 <?xml version="1.0"?>
 <robot  name="rotary_table_v2" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <!--  Material Color definitions -->
-    <material name="white">
-        <color rgba="1 1 1 1"/>
-    </material>
-    <material name="blue">
-        <color rgba="0 0 1 1"/>
-    </material>
-    <material name="red">
-        <color rgba="1 0 0 1"/>
-    </material>
-    <material name="green">
-        <color rgba="0 1 0 1"/>
-    </material>
-    <material name="sensoSilver">
-        <color rgba="0.839216 0.839216 0.839216 1"/>
-    </material>
-    <material name="sensoBlack">
-        <color rgba="0 0 0 1 "/>
-    </material>
-    <material name="sensoGray">
-        <color rgba="0.466667 0.533333 0.6 1 "/>
-    </material>
-    <material name="sensoDarkGray">
-        <color rgba="0.156863 0.156863 0.156863 1 "/>
-    </material>
-    <!--****************************-->
-
-    <!--**********MACROS************-->
+    <!--              Constants               -->
     <xacro:property name="DEG2RAD" value="0.01745329252" />
     <xacro:property name="RED2DEG" value="57.295779513" />
-    <!--****************************-->
+    <xacro:property name="M_PI" value="3.141592" />
+    <!-- ***********************************  -->
 
-    <!-- Link and Joint definitions  -->
+    <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+    <xacro:include filename="$(find scara_v2_full_description)/urdf/rotary_table_v2_gazebo.gazebo" />
+    <!-- ****************************************************************  -->
+
+    <!--        Import Material colors        -->
+    <xacro:include filename="$(find scara_v2_full_description)/urdf/materials.xacro" />
+    <!-- ***********************************  -->
 
 
     <link name="world"/>
+    <!--Casual box-->
+    <link name="casualBox">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1" />
+            <inertia ixx="1" ixy="0" ixz="0"
+                     iyy="1" iyz="0"
+                     izz="1" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.5 0.5 0.5"/>
+            </geometry>
+            <material name="white" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.15 0.1 0.02"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="world_to_casualBox" type="fixed">
+        <parent link="world"/>
+        <child link="casualBox"/>
+        <origin xyz="0 0 0.25" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+
+    <!-- Link and Joint definitions  -->
     <link name="base">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -60,9 +72,9 @@
         </collision>
     </link>
     <joint name="world_to_base" type="fixed">
-        <parent link="world"/>
+        <parent link="casualBox"/>
         <child link="base"/>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0 0.26" rpy="0 0 0" />
         <axis xyz="1 0 0" />
     </joint>
 
@@ -119,11 +131,12 @@
             </geometry>
         </collision>
     </link>
-    <joint name="base_link1_to_link1" type="continuous">
+    <joint name="rotary_table_joint" type="revolute">    <!-- joint name base_link1_to_link1-->
         <parent link="base_link1"/>
         <child link="link1"/>
         <origin xyz="0 0 0.015" rpy="0 0 0"/>
         <axis xyz="0 0 1" />
+        <limit effort="100" lower="0" upper="${2*M_PI}" velocity="0.5"/>
     </joint>
 
 
@@ -136,11 +149,11 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0.04 0 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
-            <material name="white" />
+            <material name="blue" />
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -152,7 +165,7 @@
     <joint name="link1_to_hole1" type="fixed">
         <parent link="link1"/>
         <child link="hole1"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0.04 0 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -165,7 +178,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0.02828 0.02828 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -181,7 +194,7 @@
     <joint name="link1_to_hole2" type="fixed">
         <parent link="link1"/>
         <child link="hole2"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0.02828 0.02828 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -195,7 +208,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0 0.04 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -211,7 +224,7 @@
     <joint name="link1_to_hole3" type="fixed">
         <parent link="link1"/>
         <child link="hole3"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0 0.04 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -225,7 +238,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="-0.02828 0.02828 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -241,7 +254,7 @@
     <joint name="link1_to_hole4" type="fixed">
         <parent link="link1"/>
         <child link="hole4"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="-0.02828 0.02828 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -254,7 +267,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="-0.04 0 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -270,7 +283,7 @@
     <joint name="link1_to_hole5" type="fixed">
         <parent link="link1"/>
         <child link="hole5"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="-0.04 0 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -283,7 +296,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="-0.02828 -0.02828 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -299,7 +312,7 @@
     <joint name="link1_to_hole6" type="fixed">
         <parent link="link1"/>
         <child link="hole6"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="-0.02828 -0.02828 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -312,7 +325,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0 -0.04 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -328,7 +341,7 @@
     <joint name="link1_to_hole7" type="fixed">
         <parent link="link1"/>
         <child link="hole7"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0 -0.04 0.0125" rpy="0 0 0"/>
     </joint>
 
 
@@ -341,7 +354,7 @@
                      izz="1E-9" />
         </inertial>
         <visual>
-            <origin xyz="0.02828 -0.02828 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder length="0.005" radius="0.01"/>
             </geometry>
@@ -357,26 +370,8 @@
     <joint name="link1_to_hole8" type="fixed">
         <parent link="link1"/>
         <child link="hole8"/>
-        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <origin xyz="0.02828 -0.02828 0.0125" rpy="0 0 0"/>
     </joint>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </robot>

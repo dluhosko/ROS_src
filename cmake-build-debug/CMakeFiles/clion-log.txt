@@ -13,41 +13,17 @@
 -- catkin 0.7.6
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 24 packages in topological order:
--- ~~  - gazebo_ros_pkgs (metapackage)
+-- ~~  traversing 7 packages in topological order:
 -- ~~  - scara_and_rt_moveit_config
--- ~~  - scara_v2_control
--- ~~  - scara_v2_description
 -- ~~  - scara_v2_full_control
 -- ~~  - scara_v2_full_description
 -- ~~  - scara_v2_full_gazebo
--- ~~  - scara_v2_gazebo
--- ~~  - scara_v2_moveit_config
--- ~~  - scara_v2_moveit_config_test
--- ~~  - sr_scara_hx_description
--- ~~  - sr_scara_hx_moveit_gen
--- ~~  - sr_scara_hx_controller
--- ~~  - gazebo_msgs
--- ~~  - matlabtalker
 -- ~~  - scara_msgs
--- ~~  - gazebo_ros
--- ~~  - robot_setup_tf
--- ~~  - gazebo_plugins
--- ~~  - gazebo_ros_control
--- ~~  - scara_urdf_testing
--- ~~  - scara_v2_moveit_plugin
+-- ~~  - senso_scara_demo
 -- ~~  - scara_v2_moveit_api
--- ~~  - scara_v2_with_gripper_moveit_config
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- +++ processing catkin metapackage: 'gazebo_ros_pkgs'
--- ==> add_subdirectory(gazebo_ros_pkgs/gazebo_ros_pkgs)
 -- +++ processing catkin package: 'scara_and_rt_moveit_config'
 -- ==> add_subdirectory(scara_and_rt_moveit_config)
--- +++ processing catkin package: 'scara_v2_control'
--- ==> add_subdirectory(gazebo_scara_v2_with_gripper/scara_v2_control)
--- +++ processing catkin package: 'scara_v2_description'
--- ==> add_subdirectory(gazebo_scara_v2_with_gripper/scara_v2_description)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'scara_v2_full_control'
 -- ==> add_subdirectory(gazebo_scara_and_rt/scara_v2_full_control)
 -- +++ processing catkin package: 'scara_v2_full_description'
@@ -55,24 +31,6 @@
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'scara_v2_full_gazebo'
 -- ==> add_subdirectory(gazebo_scara_and_rt/scara_v2_full_gazebo)
--- +++ processing catkin package: 'scara_v2_gazebo'
--- ==> add_subdirectory(gazebo_scara_v2_with_gripper/scara_v2_gazebo)
--- +++ processing catkin package: 'scara_v2_moveit_config'
--- ==> add_subdirectory(scara_v2_moveit_config)
--- +++ processing catkin package: 'scara_v2_moveit_config_test'
--- ==> add_subdirectory(scara_v2_moveit_config_test)
--- +++ processing catkin package: 'sr_scara_hx_description'
--- ==> add_subdirectory(sr_scara_hx_ros/sr_scara_hx_description)
--- +++ processing catkin package: 'sr_scara_hx_moveit_gen'
--- ==> add_subdirectory(sr_scara_hx_ros/sr_scara_hx_moveit_gen)
--- +++ processing catkin package: 'sr_scara_hx_controller'
--- ==> add_subdirectory(sr_scara_hx_ros/sr_scara_hx_controller)
--- +++ processing catkin package: 'gazebo_msgs'
--- ==> add_subdirectory(gazebo_ros_pkgs/gazebo_msgs)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- gazebo_msgs: 9 messages, 20 services
--- +++ processing catkin package: 'matlabtalker'
--- ==> add_subdirectory(matlabtalker)
 -- +++ processing catkin package: 'scara_msgs'
 -- ==> add_subdirectory(scara_msgs)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
@@ -85,122 +43,8 @@
 --   chrono
 --   atomic
 -- scara_msgs: 1 messages, 0 services
--- +++ processing catkin package: 'gazebo_ros'
--- ==> add_subdirectory(gazebo_ros_pkgs/gazebo_ros)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   thread
---   signals
---   system
---   filesystem
---   program_options
---   regex
---   iostreams
---   date_time
---   chrono
---   atomic
-CMake Warning at /home/viktor/clion-2016.3.3/bin/cmake/share/cmake-3.6/Modules/FindProtobuf.cmake:387 (message):
-  Protobuf compiler version doesn't match library version 2.6.1
-Call Stack (most recent call first):
-  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:114 (find_package)
-  gazebo_ros_pkgs/gazebo_ros/CMakeLists.txt:26 (find_package)
-
-
--- Boost version: 1.58.0
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   thread
---   chrono
---   system
---   date_time
---   atomic
--- +++ processing catkin package: 'robot_setup_tf'
--- ==> add_subdirectory(robot_setup_tf)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- +++ processing catkin package: 'gazebo_plugins'
--- ==> add_subdirectory(gazebo_ros_pkgs/gazebo_plugins)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   thread
---   signals
---   system
---   filesystem
---   program_options
---   regex
---   iostreams
---   date_time
---   chrono
---   atomic
-CMake Warning at /home/viktor/clion-2016.3.3/bin/cmake/share/cmake-3.6/Modules/FindProtobuf.cmake:387 (message):
-  Protobuf compiler version doesn't match library version 2.6.1
-Call Stack (most recent call first):
-  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:114 (find_package)
-  gazebo_ros_pkgs/gazebo_plugins/CMakeLists.txt:41 (find_package)
-
-
--- Boost version: 1.58.0
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   thread
---   chrono
---   system
---   date_time
---   atomic
-CMake Warning at /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:166 (message):
-  catkin_package() DEPENDS on 'gazebo' but neither 'gazebo_INCLUDE_DIRS' nor
-  'gazebo_LIBRARIES' is defined.
-Call Stack (most recent call first):
-  /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
-  gazebo_ros_pkgs/gazebo_plugins/CMakeLists.txt:87 (catkin_package)
-
-
-CMake Warning at /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:166 (message):
-  catkin_package() DEPENDS on 'SDF' but neither 'SDF_INCLUDE_DIRS' nor
-  'SDF_LIBRARIES' is defined.
-Call Stack (most recent call first):
-  /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
-  gazebo_ros_pkgs/gazebo_plugins/CMakeLists.txt:87 (catkin_package)
-
-
--- +++ processing catkin package: 'gazebo_ros_control'
--- ==> add_subdirectory(gazebo_ros_pkgs/gazebo_ros_control)
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   thread
---   signals
---   system
---   filesystem
---   program_options
---   regex
---   iostreams
---   date_time
---   chrono
---   atomic
-CMake Warning at /home/viktor/clion-2016.3.3/bin/cmake/share/cmake-3.6/Modules/FindProtobuf.cmake:387 (message):
-  Protobuf compiler version doesn't match library version 2.6.1
-Call Stack (most recent call first):
-  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:114 (find_package)
-  gazebo_ros_pkgs/gazebo_ros_control/CMakeLists.txt:19 (find_package)
-
-
--- Boost version: 1.58.0
-CMake Warning at /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:166 (message):
-  catkin_package() DEPENDS on 'gazebo' but neither 'gazebo_INCLUDE_DIRS' nor
-  'gazebo_LIBRARIES' is defined.
-Call Stack (most recent call first):
-  /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
-  gazebo_ros_pkgs/gazebo_ros_control/CMakeLists.txt:22 (catkin_package)
-
-
--- +++ processing catkin package: 'scara_urdf_testing'
--- ==> add_subdirectory(scara_urdf_testing)
--- +++ processing catkin package: 'scara_v2_moveit_plugin'
--- ==> add_subdirectory(scara_v2_moveit_plugin)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- A library with BLAS API found.
--- A library with LAPACK API found.
+-- +++ processing catkin package: 'senso_scara_demo'
+-- ==> add_subdirectory(senso_scara_demo)
 -- +++ processing catkin package: 'scara_v2_moveit_api'
 -- ==> add_subdirectory(scara_v2_moveit_api)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
@@ -213,29 +57,6 @@ Call Stack (most recent call first):
 --   chrono
 --   atomic
 -- scara_v2_moveit_api: 1 messages, 1 services
--- +++ processing catkin package: 'scara_v2_with_gripper_moveit_config'
--- ==> add_subdirectory(scara_v2_with_gripper_moveit_config)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   system
---   filesystem
---   date_time
---   thread
---   chrono
---   atomic
-CMake Warning at cmake-build-debug/scara_v2_with_gripper_moveit_config/cmake/scara_v2_with_gripper_moveit_config-genmsg.cmake:3 (message):
-  Invoking generate_messages() without having added any message or service
-  file before.
-
-  You should either add add_message_files() and/or add_service_files() calls
-  or remove the invocation of generate_messages().
-Call Stack (most recent call first):
-  /opt/ros/kinetic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
-  scara_v2_with_gripper_moveit_config/CMakeLists.txt:17 (generate_messages)
-
-
--- scara_v2_with_gripper_moveit_config: 0 messages, 0 services
 -- Configuring done
 CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:96 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
@@ -255,15 +76,6 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:92 (add_dependencies):
   "multiple_cube_publisher" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:74 (add_dependencies):
-  Policy CMP0046 is not set: Error on non-existent dependency in
-  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
-  Use the cmake_policy command to set the policy and suppress this warning.
-
-  The dependency target "{scara_v2_moveit_api_EXPORTED_TARGETS}" of target
-  "move_group_interface4_position_control" does not exist.
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
 CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:88 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
@@ -273,13 +85,13 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:88 (add_dependencies):
   "cube_publisher" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:70 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:74 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
 
   The dependency target "{scara_v2_moveit_api_EXPORTED_TARGETS}" of target
-  "move_group_interface3_PICKandPLACE" does not exist.
+  "move_group_interface4_position_control" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:84 (add_dependencies):
@@ -316,6 +128,15 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:78 (add_dependencies):
 
   The dependency target "{scara_v2_moveit_api_EXPORTED_TARGETS}" of target
   "move_group_interface5_rt" does not exist.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:70 (add_dependencies):
+  Policy CMP0046 is not set: Error on non-existent dependency in
+  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
+  Use the cmake_policy command to set the policy and suppress this warning.
+
+  The dependency target "{scara_v2_moveit_api_EXPORTED_TARGETS}" of target
+  "move_group_interface3_PICKandPLACE" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Generating done

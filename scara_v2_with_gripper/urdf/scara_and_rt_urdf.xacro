@@ -167,6 +167,38 @@
         <axis xyz="1 0 0" />
     </joint>
 
+    <!--_______Colision object_______-->
+    <!--<link name="colisionBox">-->
+        <!--<inertial>-->
+            <!--<origin xyz="0 0 0" rpy="0 0 0" />-->
+            <!--<mass value="1" />-->
+            <!--<inertia ixx="1" ixy="0" ixz="0"-->
+                     <!--iyy="1" iyz="0"-->
+                     <!--izz="1" />-->
+        <!--</inertial>-->
+        <!--<visual>-->
+            <!--<origin xyz="0 0 0" rpy="0 0 0" />-->
+            <!--<geometry>-->
+                <!--<box size="0.05 0.05 0.2"/>-->
+            <!--</geometry>-->
+            <!--<material name="sensoSilver">-->
+            <!--</material>-->
+        <!--</visual>-->
+        <!--<collision>-->
+            <!--<origin xyz="0 0 0" rpy="0 0 0" />-->
+            <!--<geometry>-->
+                <!--<box size="0.1 0.1 0.2"/>-->
+            <!--</geometry>-->
+        <!--</collision>-->
+    <!--</link>-->
+    <!--<joint name="Joint_colisionBox" type="fixed">-->
+        <!--<parent link="BaseBox" />-->
+        <!--<child link="colisionBox" />-->
+        <!--<origin xyz="0.55 0.40 0.1" rpy="0 0 0" />-->
+        <!--<axis xyz="1 0 0" />-->
+    <!--</joint>-->
+    <!--**************************-->
+
     <link name="placeHole1">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -449,7 +481,6 @@
         <axis xyz="1 0 0" />
     </joint>
 
-
     <link name="base_link1">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -479,7 +510,6 @@
         <axis xyz="0 0 1" />
     </joint>
 
-
     <link name="link1">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -502,14 +532,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="base_link1_to_link1" type="revolute">
+    <joint name="base_link1_to_link1" type="revolute"> <!-- rotary table joint-->
         <parent link="base_link1"/>
         <child link="link1"/>
         <origin xyz="0 0 0.01" rpy="0 0 0"/>
         <axis xyz="0 0 1" />
         <limit effort="1000" lower="0" upper="6.29" velocity="0"/>
     </joint>
-
 
     <link name="hole1">
         <inertial>
@@ -539,7 +568,6 @@
         <origin xyz="0.04 0 0.01" rpy="0 0 0"/>
     </joint>
 
-
     <link name="hole8">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -567,8 +595,6 @@
         <child link="hole8"/>
         <origin xyz="0.02828 0.02828 0.01" rpy="0 0 0"/>
     </joint>
-
-
 
     <link name="hole7">
         <inertial>
@@ -598,8 +624,6 @@
         <origin xyz="0 0.04 0.01" rpy="0 0 0"/>
     </joint>
 
-
-
     <link name="hole6">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -627,7 +651,6 @@
         <child link="hole6"/>
         <origin xyz="-0.02828 0.02828 0.01" rpy="0 0 0"/>
     </joint>
-
 
     <link name="hole5">
         <inertial>
@@ -657,7 +680,6 @@
         <origin xyz="-0.04 0 0.01" rpy="0 0 0"/>
     </joint>
 
-
     <link name="hole4">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -686,7 +708,6 @@
         <origin xyz="-0.02828 -0.02828 0.01" rpy="0 0 0"/>
     </joint>
 
-
     <link name="hole3">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -714,7 +735,6 @@
         <child link="hole3"/>
         <origin xyz="0 -0.04 0.01" rpy="0 0 0"/>
     </joint>
-
 
     <link name="hole2">
         <inertial>
@@ -778,11 +798,6 @@
         <axis  xyz="1 0 0" />
     </joint>
 
-
-
-
-
-
     <link name="ScaraLink1">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -815,9 +830,6 @@
         <limit effort="0" lower="${-85*DEG2RAD}" upper="${85*DEG2RAD}" velocity="0"/>
     </joint>
 
-
-
-
     <link name="ScaraLink2">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -847,29 +859,13 @@
         <origin xyz="0.24972 -0.081 0" rpy="3.14 -1.5708 0" />
         <axis xyz="0 1 0" />
         <!--<limit effort="0" lower="-2.65" upper="2.65" velocity="0"/>-->
-        <limit effort="0" lower="${-170*DEG2RAD}" upper="${170*DEG2RAD}" velocity="0"/>
+        <limit effort="0" lower="${-140*DEG2RAD}" upper="${140*DEG2RAD}" velocity="0"/>
     </joint>
     <!--**********************************-->
 
 
 
     <!--     GRIPPER JOINTS DEFINITION    -->
-    <!--     GRIPPER JOINTS DEFINITION    -->
-    <!--Revolute joint for IKfast-->
-    <!--<link name="fake_link"/>-->
-    <!--<joint name="fake_joint" type="revolute">-->
-        <!--<parent link="ScaraLink2" />-->
-        <!--<child link="fake_link" />-->
-        <!--<origin xyz="0 -0.0424 0.24305" rpy="1.57 0 3.1416" />-->
-        <!--<axis xyz="0 0 1" />-->
-        <!--<limit effort="1000.0" lower="0.0" upper="0.001" velocity="0"/>-->
-    <!--</joint>-->
-
-
-
-
-
-
     <link name="GripperBase">
         <inertial>
             <origin xyz="0 0 0" rpy="1.57 0 0" />
@@ -902,7 +898,6 @@
         <limit effort="1000.0" lower="-0.04" upper="0.05" velocity="1"/>
     </joint>
 
-
     <link name="tool0"/>
     <joint name="Base_to_tool0" type="fixed">
         <parent link="GripperBase" />
@@ -910,9 +905,6 @@
         <origin xyz="0 0 0.0984" rpy="0 0 0 " />
         <axis xyz="0 0 0" />
     </joint>
-
-
-
 
     <link name="GripperLeft">
         <inertial>
@@ -944,9 +936,6 @@
         <axis xyz="1 0 0" />
         <limit effort="1000.0" lower="0" upper="0.003" velocity="1"/>
     </joint>
-
-
-
 
     <link name="GripperRight">
         <inertial>

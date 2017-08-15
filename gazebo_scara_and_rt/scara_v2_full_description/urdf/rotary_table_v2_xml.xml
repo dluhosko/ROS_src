@@ -2,51 +2,67 @@
 
 <robot  name="rotary_table_v2" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+    <!--              Constants               -->
+    <xacro:property name="DEG2RAD" value="0.01745329252" />
+    <xacro:property name="RED2DEG" value="57.295779513" />
+    <xacro:property name="M_PI" value="3.141592" />
+
+    <!-- plugin -->
     <gazebo>
         <plugin filename="libgazebo_ros_control.so" name="ros_control">
             <robotNamespace>/rotary_table_v2</robotNamespace>
         </plugin>
     </gazebo>
 
-
-    <!--__________REFERENCES________________-->
+    <!--_________ROTARY TABLE________-->
     <gazebo reference="base">
+        <selfCollide>true</selfCollide>
         <material>Gazebo/White</material>
     </gazebo>
     <gazebo reference="base_link1">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/White</material>
     </gazebo>
     <gazebo reference="hole1">
-        <material>Gazebo/Black</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole2">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole3">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole4">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole5">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole6">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole7">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <gazebo reference="hole8">
-        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/RedBright</material>
     </gazebo>
     <!---->
     <gazebo reference="link1">
-        <material>Gazebo/Black</material>
+        <selfCollide>true</selfCollide>
+        <material>Gazebo/White</material>
         <mu1>0.2</mu1>
         <mu2>0.2</mu2>
     </gazebo>
-    <!--*************************************-->
+    <!--****************************-->
+
 
     <!--______RViz Material Color definitions_______-->
     <material name="white">
@@ -165,7 +181,8 @@
         <child link="link1"/>
         <origin xyz="0 0 0.015" rpy="0 0 0"/>
         <axis xyz="0 0 1" />
-        <limit effort="1000" lower="0" upper="6.29" velocity="10"/>
+        <limit effort="1000" lower="0" upper="6.28" velocity="10"/>
+        <!--<limit effort="100" lower="0" upper="${2*M_PI}" velocity="0.5"/>-->
     </joint>
 
 

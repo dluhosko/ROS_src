@@ -1,0 +1,8 @@
+prefix=/home/viktor/catkin_ws/src/cmake-build-debug/devel
+
+Name: scara_and_rt_moveit_config
+Description: Description of scara_and_rt_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib 
+Requires: 

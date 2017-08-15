@@ -1,6 +1,0 @@
-controller_list:
-  - name: fake_scara_arm_controller
-    joints:
-      - Joint1
-      - Joint2
-      - Joint_GripperBase

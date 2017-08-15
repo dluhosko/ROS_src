@@ -1,0 +1,8 @@
+prefix=/home/viktor/catkin_ws/src/cmake-build-debug/devel
+
+Name: scara_v2_full_description
+Description: Description of scara_v2_full_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib 
+Requires: 
