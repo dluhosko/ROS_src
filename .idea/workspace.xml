@@ -290,7 +290,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="" />
+    <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="Gazebo gripper control from topic enabled">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -318,8 +320,8 @@
       <file leaf-file-name="jointState_publisher.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/jointState_publisher.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="54" column="26" lean-forward="false" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+            <state relative-caret-position="155">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2728,7 +2730,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="553202000" />
+    <option name="totallyTimeSpent" value="553237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -3114,8 +3116,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/jointState_publisher.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="54" column="26" lean-forward="false" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        <state relative-caret-position="155">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
