@@ -68,6 +68,9 @@ int main(int argc, char **argv){
         //ROS_INFO("published");
         ros::spinOnce();
         loop_rate.sleep();
+
+
+
     }
 
 
