@@ -313,6 +313,15 @@ actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 
+//Value Computed by CMake
+can_interface_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/can_interface
+
+//Dependencies for the target
+can_interface_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+can_interface_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/can_interface
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
@@ -380,6 +389,9 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 
+//The directory containing a CMake configuration file for industrial_trajectory_filters.
+industrial_trajectory_filters_DIR:PATH=/opt/ros/kinetic/share/industrial_trajectory_filters/cmake
+
 //The directory containing a CMake configuration file for interactive_markers.
 interactive_markers_DIR:PATH=/opt/ros/kinetic/share/interactive_markers/cmake
 
@@ -393,7 +405,7 @@ kdl_parser_DIR:PATH=/opt/ros/kinetic/share/kdl_parser/cmake
 laser_geometry_DIR:PATH=/opt/ros/kinetic/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libactionlib.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libindustrial_trajectory_filters.so
 
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/kinetic/share/map_msgs/cmake
@@ -502,6 +514,18 @@ scara_msgs_DIR:PATH=/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/sca
 
 //Value Computed by CMake
 scara_msgs_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/scara_msgs
+
+//Value Computed by CMake
+scara_ros_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/SCARA_Simulink/SCARA_ROS_ert_rtw
+
+//Value Computed by CMake
+scara_ros_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/SCARA_Simulink/SCARA_ROS_ert_rtw
+
+//Value Computed by CMake
+scara_ros_test_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/SCARA_Simulink/SCARA_ROS_test_ert_rtw
+
+//Value Computed by CMake
+scara_ros_test_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/SCARA_Simulink/SCARA_ROS_test_ert_rtw
 
 //Value Computed by CMake
 scara_v2_full_control_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_control
@@ -723,7 +747,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -762,6 +786,10 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Test COMPILER_SUPPORTS_CXX0X
+COMPILER_SUPPORTS_CXX0X:INTERNAL=1
+//Test COMPILER_SUPPORTS_CXX11
+COMPILER_SUPPORTS_CXX11:INTERNAL=1
 Eigen3_CFLAGS:INTERNAL=-I/usr/include/eigen3
 Eigen3_CFLAGS_I:INTERNAL=
 Eigen3_CFLAGS_OTHER:INTERNAL=

@@ -19,11 +19,13 @@ find_package(catkin REQUIRED COMPONENTS
         message_generation
         actionlib
         scara_msgs
+        tf
+        industrial_trajectory_filters
 
-)
+        )
 find_package(Boost REQUIRED system filesystem date_time thread)
 
-
+include_directories(${industrial_trajectory_filters_INCLUDE_DIRS})
 
 add_message_files(
         FILES
@@ -83,6 +85,12 @@ target_link_libraries(move_group_interface6_async_PICKandPLACE ${catkin_LIBRARIE
 add_dependencies(move_group_interface6_async_PICKandPLACE {${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(move_group_interface6_async_PICKandPLACE beginner_tutorials_gencpp)
 
+add_executable(IK_test ../scara_v2_moveit_api/src/IK_test.cpp)
+target_link_libraries(IK_test ${catkin_LIBRARIES})
+
+add_executable(tf_readout ../scara_v2_moveit_api/src/tf_readout.cpp)
+target_link_libraries(tf_readout ${catkin_LIBRARIES})
+
 add_executable(cube_publisher ../scara_v2_moveit_api/src/cube_publisher.cpp)
 target_link_libraries(cube_publisher ${catkin_LIBRARIES})
 add_dependencies(cube_publisher beginner_tutorials_generate_messages_cpp)
@@ -95,5 +103,3 @@ add_executable(gripper_control ../scara_v2_moveit_api/src/gripper_control.cpp)
 target_link_libraries(gripper_control ${catkin_LIBRARIES})
 add_dependencies(gripper_control beginner_tutorials_generate_messages_cpp)
 
-add_executable(jointState_publisher ../scara_v2_moveit_api/src/jointState_publisher.cpp)
-target_link_libraries(jointState_publisher ${catkin_LIBRARIES})

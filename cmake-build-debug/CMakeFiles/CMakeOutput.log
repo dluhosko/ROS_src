@@ -580,3 +580,33 @@ Linking C executable cmTC_d9457
 make[1]: Leaving directory '/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
+Change Dir: /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_314d3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_314d3.dir/build.make CMakeFiles/cmTC_314d3.dir/build
+make[1]: Entering directory '/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_314d3.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_314d3.dir/src.cxx.o -c /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_314d3
+/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_314d3.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTC_314d3.dir/src.cxx.o  -o cmTC_314d3 -rdynamic 
+make[1]: Leaving directory '/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeeded with the following output:
+Change Dir: /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2ab7e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2ab7e.dir/build.make CMakeFiles/cmTC_2ab7e.dir/build
+make[1]: Entering directory '/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2ab7e.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX0X   -std=c++0x -o CMakeFiles/cmTC_2ab7e.dir/src.cxx.o -c /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2ab7e
+/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ab7e.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X    CMakeFiles/cmTC_2ab7e.dir/src.cxx.o  -o cmTC_2ab7e -rdynamic 
+make[1]: Leaving directory '/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }

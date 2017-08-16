@@ -1050,6 +1050,32 @@ visualization_msgs_generate_messages_cpp/fast:
 .PHONY : visualization_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named test_can
+
+# Build rule for target.
+test_can: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_can
+.PHONY : test_can
+
+# fast build rule for target.
+test_can/fast:
+	$(MAKE) -f can_interface/CMakeFiles/test_can.dir/build.make can_interface/CMakeFiles/test_can.dir/build
+.PHONY : test_can/fast
+
+#=============================================================================
+# Target rules for targets named can_interface
+
+# Build rule for target.
+can_interface: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 can_interface
+.PHONY : can_interface
+
+# fast build rule for target.
+can_interface/fast:
+	$(MAKE) -f can_interface/CMakeFiles/can_interface.dir/build.make can_interface/CMakeFiles/can_interface.dir/build
+.PHONY : can_interface/fast
+
+#=============================================================================
 # Target rules for targets named scara_msgs_genpy
 
 # Build rule for target.
@@ -1206,19 +1232,6 @@ scara_msgs_generate_messages_nodejs/fast:
 .PHONY : scara_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named jointState_publisher
-
-# Build rule for target.
-jointState_publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 jointState_publisher
-.PHONY : jointState_publisher
-
-# fast build rule for target.
-jointState_publisher/fast:
-	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/build
-.PHONY : jointState_publisher/fast
-
-#=============================================================================
 # Target rules for targets named gripper_control
 
 # Build rule for target.
@@ -1243,6 +1256,19 @@ multiple_cube_publisher: cmake_check_build_system
 multiple_cube_publisher/fast:
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/build
 .PHONY : multiple_cube_publisher/fast
+
+#=============================================================================
+# Target rules for targets named tf_readout
+
+# Build rule for target.
+tf_readout: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_readout
+.PHONY : tf_readout
+
+# fast build rule for target.
+tf_readout/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build
+.PHONY : tf_readout/fast
 
 #=============================================================================
 # Target rules for targets named octomap_msgs_generate_messages_cpp
@@ -1778,6 +1804,19 @@ _scara_v2_moveit_api_generate_messages_check_deps_SimpleService/fast:
 .PHONY : _scara_v2_moveit_api_generate_messages_check_deps_SimpleService/fast
 
 #=============================================================================
+# Target rules for targets named IK_test
+
+# Build rule for target.
+IK_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 IK_test
+.PHONY : IK_test
+
+# fast build rule for target.
+IK_test/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test.dir/build
+.PHONY : IK_test/fast
+
+#=============================================================================
 # Target rules for targets named scara_v2_moveit_api_generate_messages_cpp
 
 # Build rule for target.
@@ -1936,6 +1975,8 @@ help:
 	@echo "... tf_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... test_can"
+	@echo "... can_interface"
 	@echo "... scara_msgs_genpy"
 	@echo "... scara_msgs_generate_messages"
 	@echo "... _scara_msgs_generate_messages_check_deps_pose_and_gripperState"
@@ -1948,9 +1989,9 @@ help:
 	@echo "... scara_msgs_generate_messages_cpp"
 	@echo "... scara_msgs_geneus"
 	@echo "... scara_msgs_generate_messages_nodejs"
-	@echo "... jointState_publisher"
 	@echo "... gripper_control"
 	@echo "... multiple_cube_publisher"
+	@echo "... tf_readout"
 	@echo "... octomap_msgs_generate_messages_cpp"
 	@echo "... object_recognition_msgs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_lisp"
@@ -1992,6 +2033,7 @@ help:
 	@echo "... scara_v2_moveit_api_generate_messages"
 	@echo "... scara_v2_moveit_api_gennodejs"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_SimpleService"
+	@echo "... IK_test"
 	@echo "... scara_v2_moveit_api_generate_messages_cpp"
 	@echo "... shape_msgs_generate_messages_lisp"
 	@echo "... scara_v2_moveit_api_generate_messages_eus"

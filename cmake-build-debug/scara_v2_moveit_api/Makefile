@@ -166,21 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/rule
-
-# Convenience name for target.
-jointState_publisher: scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/rule
-
-.PHONY : jointState_publisher
-
-# fast build rule for target.
-jointState_publisher/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/build
-.PHONY : jointState_publisher/fast
-
-# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/gripper_control.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/gripper_control.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/gripper_control.dir/rule
@@ -209,6 +194,21 @@ multiple_cube_publisher: scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.
 multiple_cube_publisher/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/build
 .PHONY : multiple_cube_publisher/fast
+
+# Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
+
+# Convenience name for target.
+tf_readout: scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
+
+.PHONY : tf_readout
+
+# fast build rule for target.
+tf_readout/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build
+.PHONY : tf_readout/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule:
@@ -826,6 +826,21 @@ _scara_v2_moveit_api_generate_messages_check_deps_SimpleService/fast:
 .PHONY : _scara_v2_moveit_api_generate_messages_check_deps_SimpleService/fast
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/IK_test.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/IK_test.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/IK_test.dir/rule
+
+# Convenience name for target.
+IK_test: scara_v2_moveit_api/CMakeFiles/IK_test.dir/rule
+
+.PHONY : IK_test
+
+# fast build rule for target.
+IK_test/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test.dir/build
+.PHONY : IK_test/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/rule
@@ -915,6 +930,33 @@ scara_v2_moveit_api_geneus/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_geneus.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_geneus.dir/build
 .PHONY : scara_v2_moveit_api_geneus/fast
 
+src/IK_test.o: src/IK_test.cpp.o
+
+.PHONY : src/IK_test.o
+
+# target to build an object file
+src/IK_test.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test.dir/src/IK_test.cpp.o
+.PHONY : src/IK_test.cpp.o
+
+src/IK_test.i: src/IK_test.cpp.i
+
+.PHONY : src/IK_test.i
+
+# target to preprocess a source file
+src/IK_test.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test.dir/src/IK_test.cpp.i
+.PHONY : src/IK_test.cpp.i
+
+src/IK_test.s: src/IK_test.cpp.s
+
+.PHONY : src/IK_test.s
+
+# target to generate assembly for a file
+src/IK_test.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test.dir/src/IK_test.cpp.s
+.PHONY : src/IK_test.cpp.s
+
 src/cube_publisher.o: src/cube_publisher.cpp.o
 
 .PHONY : src/cube_publisher.o
@@ -968,33 +1010,6 @@ src/gripper_control.s: src/gripper_control.cpp.s
 src/gripper_control.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/gripper_control.dir/build.make scara_v2_moveit_api/CMakeFiles/gripper_control.dir/src/gripper_control.cpp.s
 .PHONY : src/gripper_control.cpp.s
-
-src/jointState_publisher.o: src/jointState_publisher.cpp.o
-
-.PHONY : src/jointState_publisher.o
-
-# target to build an object file
-src/jointState_publisher.cpp.o:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/src/jointState_publisher.cpp.o
-.PHONY : src/jointState_publisher.cpp.o
-
-src/jointState_publisher.i: src/jointState_publisher.cpp.i
-
-.PHONY : src/jointState_publisher.i
-
-# target to preprocess a source file
-src/jointState_publisher.cpp.i:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/src/jointState_publisher.cpp.i
-.PHONY : src/jointState_publisher.cpp.i
-
-src/jointState_publisher.s: src/jointState_publisher.cpp.s
-
-.PHONY : src/jointState_publisher.s
-
-# target to generate assembly for a file
-src/jointState_publisher.cpp.s:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir/src/jointState_publisher.cpp.s
-.PHONY : src/jointState_publisher.cpp.s
 
 src/move_group_interface1.o: src/move_group_interface1.cpp.o
 
@@ -1185,6 +1200,33 @@ src/multiple_cube_publisher.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/src/multiple_cube_publisher.cpp.s
 .PHONY : src/multiple_cube_publisher.cpp.s
 
+src/tf_readout.o: src/tf_readout.cpp.o
+
+.PHONY : src/tf_readout.o
+
+# target to build an object file
+src/tf_readout.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/src/tf_readout.cpp.o
+.PHONY : src/tf_readout.cpp.o
+
+src/tf_readout.i: src/tf_readout.cpp.i
+
+.PHONY : src/tf_readout.i
+
+# target to preprocess a source file
+src/tf_readout.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/src/tf_readout.cpp.i
+.PHONY : src/tf_readout.cpp.i
+
+src/tf_readout.s: src/tf_readout.cpp.s
+
+.PHONY : src/tf_readout.s
+
+# target to generate assembly for a file
+src/tf_readout.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/src/tf_readout.cpp.s
+.PHONY : src/tf_readout.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1195,9 +1237,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... install/strip"
-	@echo "... jointState_publisher"
 	@echo "... gripper_control"
 	@echo "... multiple_cube_publisher"
+	@echo "... tf_readout"
 	@echo "... octomap_msgs_generate_messages_cpp"
 	@echo "... object_recognition_msgs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_lisp"
@@ -1242,21 +1284,22 @@ help:
 	@echo "... scara_v2_moveit_api_generate_messages"
 	@echo "... scara_v2_moveit_api_gennodejs"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_SimpleService"
+	@echo "... IK_test"
 	@echo "... scara_v2_moveit_api_generate_messages_cpp"
 	@echo "... shape_msgs_generate_messages_lisp"
 	@echo "... scara_v2_moveit_api_generate_messages_eus"
 	@echo "... moveit_msgs_generate_messages_py"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState"
 	@echo "... scara_v2_moveit_api_geneus"
+	@echo "... src/IK_test.o"
+	@echo "... src/IK_test.i"
+	@echo "... src/IK_test.s"
 	@echo "... src/cube_publisher.o"
 	@echo "... src/cube_publisher.i"
 	@echo "... src/cube_publisher.s"
 	@echo "... src/gripper_control.o"
 	@echo "... src/gripper_control.i"
 	@echo "... src/gripper_control.s"
-	@echo "... src/jointState_publisher.o"
-	@echo "... src/jointState_publisher.i"
-	@echo "... src/jointState_publisher.s"
 	@echo "... src/move_group_interface1.o"
 	@echo "... src/move_group_interface1.i"
 	@echo "... src/move_group_interface1.s"
@@ -1278,6 +1321,9 @@ help:
 	@echo "... src/multiple_cube_publisher.o"
 	@echo "... src/multiple_cube_publisher.i"
 	@echo "... src/multiple_cube_publisher.s"
+	@echo "... src/tf_readout.o"
+	@echo "... src/tf_readout.i"
+	@echo "... src/tf_readout.s"
 .PHONY : help
 
 

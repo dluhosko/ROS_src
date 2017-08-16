@@ -55,10 +55,15 @@ int main(int argc, char **argv){
     ros::Rate loop_rate(90);
     ros::AsyncSpinner spinner(1);
     spinner.start();
+    bool mode = false;
 
     ros::Publisher publish_jointStates = n_pub.advertise<sensor_msgs::JointState>("/sl_scara_joint_states",1000);
-    ros::Subscriber subscribe_jointValues = n_sub.subscribe("scara_jointStates",1000,jointValuesCallback);
-    //ros::Subscriber subscribe_jointValues_moveit = n_sub1.subscribe("move_group/fake_controller_joint_states",1000,jointStatesCallback);
+    if (mode){
+        ros::Subscriber subscribe_jointValues = n_sub.subscribe("scara_jointStates",1000,jointValuesCallback);
+    }else{
+        ros::Subscriber subscribe_realJointValues = n_sub1.subscribe("scara_realJointStates",1000,jointStatesCallback);
+    }
+
 
     initJointStates();
 

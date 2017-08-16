@@ -108,6 +108,15 @@
 /home/viktor/catkin_ws/src/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_gazebo/CMakeFiles/install.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_gazebo/CMakeFiles/install/local.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_gazebo/CMakeFiles/install/strip.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/CMakeFiles/test.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/CMakeFiles/edit_cache.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/CMakeFiles/rebuild_cache.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/CMakeFiles/list_install_components.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/CMakeFiles/install.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/CMakeFiles/install/local.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/CMakeFiles/install/strip.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/CMakeFiles/test_can.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/CMakeFiles/can_interface.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/CMakeFiles/edit_cache.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/CMakeFiles/rebuild_cache.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/CMakeFiles/install/local.dir
@@ -138,9 +147,9 @@
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/rebuild_cache.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/install.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/install/strip.dir
-/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/jointState_publisher.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/gripper_control.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/tf_readout.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir
@@ -185,6 +194,7 @@
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_gennodejs.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_SimpleService.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/IK_test.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_lisp.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir
