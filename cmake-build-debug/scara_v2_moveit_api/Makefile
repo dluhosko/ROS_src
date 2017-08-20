@@ -601,6 +601,21 @@ move_group_interface5_rt/fast:
 .PHONY : move_group_interface5_rt/fast
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/rule
+
+# Convenience name for target.
+linear_interpolation: scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/rule
+
+.PHONY : linear_interpolation
+
+# fast build rule for target.
+linear_interpolation/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/build.make scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/build
+.PHONY : linear_interpolation/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
@@ -689,6 +704,21 @@ octomap_msgs_generate_messages_nodejs: scara_v2_moveit_api/CMakeFiles/octomap_ms
 octomap_msgs_generate_messages_nodejs/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build
 .PHONY : octomap_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule
+
+# Convenience name for target.
+matlab_ROS_com_tryout: scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule
+
+.PHONY : matlab_ROS_com_tryout
+
+# fast build rule for target.
+matlab_ROS_com_tryout/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build
+.PHONY : matlab_ROS_com_tryout/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/rule:
@@ -1011,6 +1041,60 @@ src/gripper_control.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/gripper_control.dir/build.make scara_v2_moveit_api/CMakeFiles/gripper_control.dir/src/gripper_control.cpp.s
 .PHONY : src/gripper_control.cpp.s
 
+src/linear_interpolation.o: src/linear_interpolation.cpp.o
+
+.PHONY : src/linear_interpolation.o
+
+# target to build an object file
+src/linear_interpolation.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/build.make scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/src/linear_interpolation.cpp.o
+.PHONY : src/linear_interpolation.cpp.o
+
+src/linear_interpolation.i: src/linear_interpolation.cpp.i
+
+.PHONY : src/linear_interpolation.i
+
+# target to preprocess a source file
+src/linear_interpolation.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/build.make scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/src/linear_interpolation.cpp.i
+.PHONY : src/linear_interpolation.cpp.i
+
+src/linear_interpolation.s: src/linear_interpolation.cpp.s
+
+.PHONY : src/linear_interpolation.s
+
+# target to generate assembly for a file
+src/linear_interpolation.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/build.make scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/src/linear_interpolation.cpp.s
+.PHONY : src/linear_interpolation.cpp.s
+
+src/matlab_ROS_com_tryout.o: src/matlab_ROS_com_tryout.cpp.o
+
+.PHONY : src/matlab_ROS_com_tryout.o
+
+# target to build an object file
+src/matlab_ROS_com_tryout.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/src/matlab_ROS_com_tryout.cpp.o
+.PHONY : src/matlab_ROS_com_tryout.cpp.o
+
+src/matlab_ROS_com_tryout.i: src/matlab_ROS_com_tryout.cpp.i
+
+.PHONY : src/matlab_ROS_com_tryout.i
+
+# target to preprocess a source file
+src/matlab_ROS_com_tryout.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/src/matlab_ROS_com_tryout.cpp.i
+.PHONY : src/matlab_ROS_com_tryout.cpp.i
+
+src/matlab_ROS_com_tryout.s: src/matlab_ROS_com_tryout.cpp.s
+
+.PHONY : src/matlab_ROS_com_tryout.s
+
+# target to generate assembly for a file
+src/matlab_ROS_com_tryout.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/src/matlab_ROS_com_tryout.cpp.s
+.PHONY : src/matlab_ROS_com_tryout.cpp.s
+
 src/move_group_interface1.o: src/move_group_interface1.cpp.o
 
 .PHONY : src/move_group_interface1.o
@@ -1267,6 +1351,7 @@ help:
 	@echo "... octomap_msgs_generate_messages_py"
 	@echo "... scara_v2_moveit_api_generate_messages_lisp"
 	@echo "... move_group_interface5_rt"
+	@echo "... linear_interpolation"
 	@echo "... shape_msgs_generate_messages_py"
 	@echo "... list_install_components"
 	@echo "... move_group_interface1"
@@ -1275,6 +1360,7 @@ help:
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... shape_msgs_generate_messages_eus"
 	@echo "... octomap_msgs_generate_messages_nodejs"
+	@echo "... matlab_ROS_com_tryout"
 	@echo "... moveit_ros_planning_gencfg"
 	@echo "... scara_v2_moveit_api_genlisp"
 	@echo "... moveit_ros_manipulation_gencfg"
@@ -1300,6 +1386,12 @@ help:
 	@echo "... src/gripper_control.o"
 	@echo "... src/gripper_control.i"
 	@echo "... src/gripper_control.s"
+	@echo "... src/linear_interpolation.o"
+	@echo "... src/linear_interpolation.i"
+	@echo "... src/linear_interpolation.s"
+	@echo "... src/matlab_ROS_com_tryout.o"
+	@echo "... src/matlab_ROS_com_tryout.i"
+	@echo "... src/matlab_ROS_com_tryout.s"
 	@echo "... src/move_group_interface1.o"
 	@echo "... src/move_group_interface1.i"
 	@echo "... src/move_group_interface1.s"

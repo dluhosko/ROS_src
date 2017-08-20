@@ -38,6 +38,7 @@
       <config projectName="Project" targetName="octomap_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="moveit_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="matlab_ROS_com_tryout" />
       <config projectName="Project" targetName="actionlib_generate_messages_py" />
       <config projectName="Project" targetName="gazebo_ros_gpu_laser" />
       <config projectName="Project" targetName="roscpp_generate_messages_nodejs" />
@@ -88,8 +89,8 @@
       <config projectName="Project" targetName="hokuyo_node" />
       <config projectName="Project" targetName="tf_generate_messages_cpp" />
       <config projectName="Project" targetName="gazebo_ros_depth_camera" />
-      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" />
       <config projectName="Project" targetName="gazebo_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" />
       <config projectName="Project" targetName="roscpp_generate_messages_eus" />
       <config projectName="Project" targetName="bond_generate_messages_eus" />
       <config projectName="Project" targetName="diagnostic_msgs_generate_messages_cpp" />
@@ -100,8 +101,8 @@
       <config projectName="Project" targetName="bond_generate_messages_lisp" />
       <config projectName="Project" targetName="gazebo_ros_ft_sensor" />
       <config projectName="Project" targetName="shape_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_geneus" />
       <config projectName="Project" targetName="gazebo_ros_vacuum_gripper" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_geneus" />
       <config projectName="Project" targetName="controller_manager_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="control_toolbox_generate_messages_eus" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_lisp" />
@@ -115,6 +116,7 @@
       <config projectName="Project" targetName="nodelet_generate_messages_eus" />
       <config projectName="Project" targetName="polled_camera_generate_messages_cpp" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_genlisp" />
+      <config projectName="Project" targetName="scara_gui" />
       <config projectName="Project" targetName="gazebo_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="IK_test" />
       <config projectName="Project" targetName="tf_listener" />
@@ -162,12 +164,12 @@
       <config projectName="Project" targetName="gazebo_ros_template" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_nodejs" />
       <config projectName="Project" targetName="map_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="nodelet_generate_messages_cpp" />
       <config projectName="Project" targetName="polled_camera_generate_messages_nodejs" />
-      <config projectName="Project" targetName="move_group_interface1" />
       <config projectName="Project" targetName="object_recognition_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="move_group_interface1" />
       <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test" />
       <config projectName="Project" targetName="move_group_interface2" />
       <config projectName="Project" targetName="scara_v2_moveit_api_genpy" />
@@ -179,8 +181,8 @@
       <config projectName="Project" targetName="gazebo_msgs_generate_messages_py" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetPhysicsProperties" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
       <config projectName="Project" targetName="object_recognition_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
       <config projectName="Project" targetName="control_toolbox_generate_messages_py" />
       <config projectName="Project" targetName="gazebo_ros_range" />
       <config projectName="Project" targetName="download_extra_data" />
@@ -189,12 +191,12 @@
       <config projectName="Project" targetName="map_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_py" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SpawnModel" />
       <config projectName="Project" targetName="actionlib_generate_messages_lisp" />
       <config projectName="Project" targetName="controller_manager_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="gripper_control" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="moveit_ros_manipulation_gencfg" />
+      <config projectName="Project" targetName="gripper_control" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_py" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_WorldState" />
@@ -237,8 +239,8 @@
       <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_eus" />
       <config projectName="Project" targetName="gtest" />
       <config projectName="Project" targetName="tf_broadcaster" />
-      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="gazebo_msgs_genlisp" />
+      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="jointState_publisher" />
       <config projectName="Project" targetName="std_msgs_generate_messages_py" />
@@ -246,8 +248,8 @@
       <config projectName="Project" targetName="trajectory_msgs_generate_messages_py" />
       <config projectName="Project" targetName="control_toolbox_generate_messages_nodejs" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetLinkState" />
-      <config projectName="Project" targetName="doxygen" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetPhysicsProperties" />
+      <config projectName="Project" targetName="doxygen" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_lisp" />
       <config projectName="Project" targetName="std_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetLinkProperties" />
@@ -287,6 +289,7 @@
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetModelState" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_BodyRequest" />
       <config projectName="Project" targetName="set_model_state-test" />
+      <config projectName="Project" targetName="linear_interpolation" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -295,8 +298,42 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
+    <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="Linear interpolation - not solved!">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab_mfile.launch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/linear_interpolation.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/matlab_ROS_com_tryout.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab.launch" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab_simulink.launch" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/scara_v2_moveit_api.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/scara_v2_moveit_api.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/moveit.rviz" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/moveit.rviz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -315,63 +352,31 @@
       <file leaf-file-name="move_group_interface6_async_PICKandPLACE.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="913" column="44" lean-forward="true" selection-start-line="913" selection-start-column="4" selection-end-line="913" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tf_readout.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/tf_readout.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="107" column="3" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="107" selection-end-column="3" />
+            <state relative-caret-position="18">
+              <caret line="700" column="31" lean-forward="false" selection-start-line="700" selection-start-column="31" selection-end-line="700" selection-end-column="31" />
               <folding>
-                <element signature="e#41#61#0" expanded="true" />
+                <element signature="e#26391#27107#0" expanded="false" />
+                <element signature="e#33184#33375#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IK_test.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/IK_test.cpp">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="50" column="59" lean-forward="false" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
-              <folding>
-                <element signature="e#47#67#0" expanded="true" />
-                <element signature="e#773#1383#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rt_v2_full_control.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/rt_v2_full_control.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1368">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scara_v2_full_control.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/config/scara_v2_full_control.yaml">
+      <file leaf-file-name="linear_interpolation.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/linear_interpolation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ompl_planning.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/config/ompl_planning.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="419">
+              <caret line="264" column="0" lean-forward="true" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -388,17 +393,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>anglesfromik</find>
-      <find>defaultCartesian</find>
-      <find>MODE =</find>
-      <find>robot_state</find>
-      <find>getrobotmodel</find>
-      <find>client</find>
       <find>displayMode</find>
       <find>rtService</find>
       <find>getchar</find>
-      <find>my_plan</find>
-      <find>defaultCartesianPosition</find>
       <find>defaultPositions</find>
       <find>ik</find>
       <find>/scara_and_rt/controller_spawner</find>
@@ -409,7 +406,6 @@
       <find>cubeModes</find>
       <find>geometry</find>
       <find>link_dimensions</find>
-      <find>joint_group_position</find>
       <find>current_state</find>
       <find>publish</find>
       <find>do</find>
@@ -418,6 +414,15 @@
       <find>scara</find>
       <find>offset_x</find>
       <find>basebox</find>
+      <find>positionControll</find>
+      <find>defaultCartesianPosition</find>
+      <find>joint_group_position</find>
+      <find>ws1</find>
+      <find>defaultPose</find>
+      <find>my_plan</find>
+      <find>frame</find>
+      <find>hovno</find>
+      <find>li</find>
     </findStrings>
     <replaceStrings>
       <replace>scara_v2_moveit_config</replace>
@@ -436,10 +441,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scara_v2_with_gripper/launch/xacro_display_scara_rt.launch" />
-        <option value="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/launch/xacro_scara_and_rt_display.launch" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_and_gripperState.msg" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/cube_publisher.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_kdl.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_config/config/kinematics.yaml" />
         <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/config/kinematics.yaml" />
@@ -480,13 +481,17 @@
         <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo.launch" />
         <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_gazebo.launch" />
         <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab.launch" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp" />
         <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_rviz.launch" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/tf.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/jointState_publisher.cpp" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/tf_readout.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/IK_test.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/matlab_ROS_com_tryout.cpp" />
+        <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab_mfile.launch" />
+        <option value="$PROJECT_DIR$/scara_gui/package.xml" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/linear_interpolation.cpp" />
       </list>
     </option>
   </component>
@@ -569,28 +574,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_with_gripper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="urdf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="scara_v2_moveit_api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -614,72 +597,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_control" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gazebo_scara_and_rt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_full_control" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -699,23 +616,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ROS/lwa4p_project" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scara_v2_with_gripper/urdf/more" />
+      <recent name="$PROJECT_DIR$/scara_v2_with_gripper/launch/other" />
+      <recent name="$PROJECT_DIR$/scara_v2_moveit_api/src" />
+      <recent name="$PROJECT_DIR$/scara_urdf_testing/urdf" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scara_and_rt_moveit_config/launch" />
       <recent name="$PROJECT_DIR$/scara_v2_moveit_api/launch" />
       <recent name="$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_control/launch" />
       <recent name="$PROJECT_DIR$/scara_v2_with_gripper/urdf" />
       <recent name="$PROJECT_DIR$/scara_v2_moveit_api/src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scara_v2_with_gripper/urdf/more" />
-      <recent name="$PROJECT_DIR$/scara_v2_with_gripper/launch/other" />
-      <recent name="$PROJECT_DIR$/scara_v2_moveit_api/src" />
-      <recent name="$PROJECT_DIR$/scara_urdf_testing/urdf" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2083,7 +2000,19 @@
       <envs />
       <method />
     </configuration>
-    <list size="286">
+    <configuration default="false" name="linear_interpolation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="linear_interpolation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="linear_interpolation">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="matlab_ROS_com_tryout" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="matlab_ROS_com_tryout" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="matlab_ROS_com_tryout">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="scara_gui" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="scara_gui" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <list size="289">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.clean_test_results" />
       <item index="2" class="java.lang.String" itemvalue="Application.download_extra_data" />
@@ -2370,6 +2299,9 @@
       <item index="283" class="java.lang.String" itemvalue="Application.scara_ros_node" />
       <item index="284" class="java.lang.String" itemvalue="Application.scara_ros_test_node" />
       <item index="285" class="java.lang.String" itemvalue="Application.tf_readout" />
+      <item index="286" class="java.lang.String" itemvalue="Application.linear_interpolation" />
+      <item index="287" class="java.lang.String" itemvalue="Application.matlab_ROS_com_tryout" />
+      <item index="288" class="java.lang.String" itemvalue="Application.scara_gui" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -2531,7 +2463,15 @@
       <workItem from="1502809423292" duration="1428000" />
       <workItem from="1502862700177" duration="3641000" />
       <workItem from="1502880507479" duration="794000" />
-      <workItem from="1502889428646" duration="6954000" />
+      <workItem from="1502889428646" duration="7063000" />
+      <workItem from="1502912794913" duration="2246000" />
+      <workItem from="1502950133764" duration="8132000" />
+      <workItem from="1502958337511" duration="3946000" />
+      <workItem from="1502968681536" duration="1308000" />
+      <workItem from="1502974998945" duration="2243000" />
+      <workItem from="1503037553657" duration="3239000" />
+      <workItem from="1503042525079" duration="4177000" />
+      <workItem from="1503260362194" duration="474000" />
     </task>
     <task id="LOCAL-00001" summary="Upraveny GAZEBO">
       <created>1492634769980</created>
@@ -2778,26 +2718,33 @@
       <option name="project" value="LOCAL" />
       <updated>1502896345303</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="ROS implemented on SENSO-PC + IK+getTF+joint state republisher node (matlab comunication)">
+      <created>1502896481462</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1502896481463</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="567392000" />
+    <option name="totallyTimeSpent" value="593266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24181223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19868995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30645162" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.4978166" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15913978" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048780486" sideWeight="0.33370167" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29892474" sideWeight="0.7854803" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36344087" sideWeight="0.8886463" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.4978166" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2834,8 +2781,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="moveit_API_2 with new moveit_config" />
-    <MESSAGE value="Moveit first pick and place DEMO" />
     <MESSAGE value="Commit before new moveit config with filtered assemblies" />
     <MESSAGE value="IK fast service start" />
     <MESSAGE value="Gazebo simulation (joint 1 and 2 working good)" />
@@ -2859,7 +2804,9 @@
     <MESSAGE value="parallel thread for forcefeedback (torque sensor)" />
     <MESSAGE value="Gazebo gripper control from topic enabled" />
     <MESSAGE value="IK and getTF" />
-    <option name="LAST_COMMIT_MESSAGE" value="IK and getTF" />
+    <MESSAGE value="ROS implemented on SENSO-PC + IK+getTF+joint state republisher node (matlab comunication)" />
+    <MESSAGE value="Linear interpolation - not solved!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Linear interpolation - not solved!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2870,60 +2817,11 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="30" />
+      <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/package.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/cube_publisher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="90" column="8" lean-forward="false" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ikfast_kinematics_plugin/templates/ikfast.h" />
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_plugin/src/scara_v2_scara_arm_ikfast_solver.cpp" />
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_plugin/include/ikfast.h" />
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_plugin/scara_v2_scara_arm_moveit_ikfast_plugin_description.xml" />
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_plugin/CMakeLists.txt" />
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_plugin/package.xml" />
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_plugin/src/scara_v2_scara_arm_ikfast_moveit_plugin.cpp" />
-    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/config/scara_and_rt.srdf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="59" column="68" lean-forward="false" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6858">
-          <caret line="381" column="17" lean-forward="true" selection-start-line="381" selection-start-column="17" selection-end-line="381" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_gazebo/package.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_gazebo/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3024,28 +2922,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface1.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="8" selection-end-column="69" />
-          <folding>
-            <element signature="e#41#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/jointState_publisher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3053,15 +2933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3759">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="91" column="32" lean-forward="false" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3069,7 +2940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="80" column="22" lean-forward="false" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3077,15 +2947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="579">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="25" column="75" lean-forward="false" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3093,7 +2954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3101,7 +2961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3109,7 +2968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3117,7 +2975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3125,7 +2982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3133,7 +2989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3141,7 +2996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3149,7 +3003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3157,15 +3010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="579">
           <caret line="34" column="43" lean-forward="false" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="913" column="44" lean-forward="true" selection-start-line="913" selection-start-column="4" selection-end-line="913" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3173,17 +3017,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="192" column="7" lean-forward="false" selection-start-line="192" selection-start-column="7" selection-end-line="192" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/tf_readout.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
+        <state relative-caret-position="1926">
           <caret line="107" column="3" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="107" selection-end-column="3" />
-          <folding>
-            <element signature="e#41#61#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3191,18 +3031,150 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-877">
           <caret line="795" column="30" lean-forward="false" selection-start-line="795" selection-start-column="21" selection-end-line="795" selection-end-column="30" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/moveit_msgs/RobotTrajectory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/IK_test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="50" column="59" lean-forward="false" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
+        <state relative-caret-position="209">
+          <caret line="207" column="34" lean-forward="true" selection-start-line="207" selection-start-column="34" selection-end-line="207" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/moveit/move_group_interface/move_group_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="117" column="9" lean-forward="false" selection-start-line="117" selection-start-column="9" selection-end-line="117" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="75" lean-forward="false" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/geometry_msgs/Point.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/geometry_msgs/Pose.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/matlab_ROS_com_tryout.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab_simulink.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/jointState_publisher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_gui/CMakeLists.txt.user">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2646">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_gui/include/mrvk_gui/MrvkGuiPlugin.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_gui/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_gui/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_gui/mrvk_gui_plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab_mfile.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="66" lean-forward="false" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_gui/src/MrvkGuiPlugin.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="700" column="31" lean-forward="false" selection-start-line="700" selection-start-column="31" selection-end-line="700" selection-end-column="31" />
           <folding>
-            <element signature="e#47#67#0" expanded="true" />
-            <element signature="e#773#1383#0" expanded="false" />
+            <element signature="e#26391#27107#0" expanded="false" />
+            <element signature="e#33184#33375#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/linear_interpolation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="264" column="0" lean-forward="true" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

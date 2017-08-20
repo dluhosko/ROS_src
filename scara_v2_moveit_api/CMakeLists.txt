@@ -91,6 +91,12 @@ target_link_libraries(IK_test ${catkin_LIBRARIES})
 add_executable(tf_readout ../scara_v2_moveit_api/src/tf_readout.cpp)
 target_link_libraries(tf_readout ${catkin_LIBRARIES})
 
+add_executable(linear_interpolation ../scara_v2_moveit_api/src/linear_interpolation.cpp)
+target_link_libraries(linear_interpolation ${catkin_LIBRARIES})
+
+add_executable(matlab_ROS_com_tryout ../scara_v2_moveit_api/src/matlab_ROS_com_tryout.cpp)
+target_link_libraries(matlab_ROS_com_tryout ${catkin_LIBRARIES})
+
 add_executable(cube_publisher ../scara_v2_moveit_api/src/cube_publisher.cpp)
 target_link_libraries(cube_publisher ${catkin_LIBRARIES})
 add_dependencies(cube_publisher beginner_tutorials_generate_messages_cpp)

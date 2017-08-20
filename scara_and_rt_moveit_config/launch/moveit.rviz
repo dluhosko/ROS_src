@@ -422,132 +422,19 @@ Visualization Manager:
         Show Robot Visual: true
       Value: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        BaseBox:
-          Value: true
-        CentralStop1:
-          Value: true
-        CentralStop2:
-          Value: true
-        GripperBase:
-          Value: true
-        GripperLeft:
-          Value: true
-        GripperRight:
-          Value: true
-        ScaraBase:
-          Value: true
-        ScaraLink1:
-          Value: true
-        ScaraLink2:
-          Value: true
-        base:
-          Value: true
-        base_link1:
-          Value: true
-        hole1:
-          Value: true
-        hole2:
-          Value: true
-        hole3:
-          Value: true
-        hole4:
-          Value: true
-        hole5:
-          Value: true
-        hole6:
-          Value: true
-        hole7:
-          Value: true
-        hole8:
-          Value: true
-        link1:
-          Value: true
-        placeBox:
-          Value: true
-        placeHole1:
-          Value: true
-        placeHole2:
-          Value: true
-        placeHole3:
-          Value: true
-        placeHole4:
-          Value: true
-        placeHole5:
-          Value: true
-        placeHole6:
-          Value: true
-        placeHole7:
-          Value: true
-        placeHole8:
-          Value: true
-        tool0:
-          Value: true
-        world:
-          Value: true
       Marker Scale: 0.200000003
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        world:
-          BaseBox:
-            CentralStop1:
-              {}
-            CentralStop2:
-              {}
-            ScaraBase:
-              ScaraLink1:
-                ScaraLink2:
-                  GripperBase:
-                    GripperLeft:
-                      {}
-                    GripperRight:
-                      {}
-                    tool0:
-                      {}
-            base:
-              base_link1:
-                link1:
-                  hole1:
-                    {}
-                  hole2:
-                    {}
-                  hole3:
-                    {}
-                  hole4:
-                    {}
-                  hole5:
-                    {}
-                  hole6:
-                    {}
-                  hole7:
-                    {}
-                  hole8:
-                    {}
-            placeBox:
-              placeHole1:
-                {}
-              placeHole2:
-                {}
-              placeHole3:
-                {}
-              placeHole4:
-                {}
-              placeHole5:
-                {}
-              placeHole6:
-                {}
-              placeHole7:
-                {}
-              placeHole8:
-                {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
     - Class: rviz/Marker
       Enabled: true
       Marker Topic: visualization_marker
@@ -583,6 +470,7 @@ Visualization Manager:
         Z: 4.61936565e-07
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
+      Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
       Pitch: 0.624797165
