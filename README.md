@@ -37,7 +37,7 @@
     - Publishing cubes into RViz (and Moveit simulation)
 2. gripper_control.cpp
     - Gripper control in Moveit simulation
-3.IK_test.cpp
+3. IK_test.cpp
     - Testing own IK solution for SCARA
 4. linear_interpolation.cpp
     - Testing linear interpolation - **Doesnt work now!**
