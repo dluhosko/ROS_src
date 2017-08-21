@@ -46,6 +46,6 @@
 6. move_group_interface5_rt.cpp
     - Rotary table control node
 7. move_group_interface3_PICKandPLACE.cpp
-    -DEMO application with joint or position controll, but only in synchronized mode -> *No forcefeedback*
+    - DEMO application with joint or position controll, but only in synchronized mode -> *No forcefeedback*
 8. move_group_interface6_async_PICKandPLACE.cpp
-    -DEMO application with joint or position controll in async mode -> *with forcefeddback*
+    - DEMO application with joint or position controll in async mode -> *with forcefeddback*
