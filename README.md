@@ -18,7 +18,7 @@
 
 ## Part 3 - gazebo_scara_and_rt - Gazebo dynamic simulation
 1. **scara_v2_full_description** : Rviz kinematic simulation
-- This is used to test the SCARA manipulator (such as part 1), but here are saved the URDF models for Gazebo
+    - This is used to test the SCARA manipulator (such as part 1), but here are saved the URDF models for Gazebo
 2. **scara_v2_full_gazebo** : Gazebo world for SCARA
 3. **scara_v2_full_control** : Gazebo controllers
 4. **scara_v2_moveit_api** : Source codes for control of SCARA
