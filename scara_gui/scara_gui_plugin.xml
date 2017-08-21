@@ -1,0 +1,19 @@
+<library path="lib/libscara_gui">
+    <class name="scara_gui/ScaraGui" type="scara_gui::ScaraGui" base_class_type="rqt_gui_cpp::Plugin">
+        <description>
+            SCARA GUI plugin
+        </description>
+        <qtgui>
+            <group>
+                <label>Robot</label>
+                <icon type="theme">folder</icon>
+            </group>
+            <group>
+                <label>SCARA</label>
+                <icon type="theme">folder</icon>
+            </group>
+            <icon type="file">Sensodrive-LogoE.gif</icon>
+            <statustip>SCARA GUI.</statustip>
+        </qtgui>
+    </class>
+</library>
