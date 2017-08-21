@@ -14,9 +14,11 @@
 > Run this launchfile for simulation via Simulink (not really helpfull)
 4. roslaunch scara_and_rt_moveit_config demo_matlab_mfile.launch
 > Run this launchfile for simulation via Matlab (PC-Matlab-SLRT-SCARA)
- **Most inportant launchfile!**
- gazebo_scara_and_rt :
- 	-scara_v2_full_description : Rviz kinematic simulation
-	-scara_v2_full_gazebo : Gazebo world for SCARA
-	-scara_v2_full_control : Gazebo controllers
-	-scara_v2_moveit_api : Source codes for control of SCARA
+ **Most important launchfile!**
+
+## Part 3 - gazebo_scara_and_rt - Gazebo dynamic simulation
+1. **scara_v2_full_description** : Rviz kinematic simulation
+- This is used to test the SCARA manipulator (such as part 1), but here are saved the URDF models for Gazebo
+2. **scara_v2_full_gazebo** : Gazebo world for SCARA
+3. **scara_v2_full_control** : Gazebo controllers
+4. **scara_v2_moveit_api** : Source codes for control of SCARA
