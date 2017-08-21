@@ -14,7 +14,7 @@
 > Run this launchfile for simulation via Simulink (not really helpfull)
 4. roslaunch scara_and_rt_moveit_config demo_matlab_mfile.launch
 > Run this launchfile for simulation via Matlab (PC-Matlab-SLRT-SCARA)
-####Most inportant launchfile
+ **Most inportant launchfile!**
  gazebo_scara_and_rt :
  	-scara_v2_full_description : Rviz kinematic simulation
 	-scara_v2_full_gazebo : Gazebo world for SCARA
