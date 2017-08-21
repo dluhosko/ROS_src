@@ -2412,7 +2412,7 @@ can_interface/preinstall:
 can_interface/CMakeFiles/test_can.dir/all:
 	$(MAKE) -f can_interface/CMakeFiles/test_can.dir/build.make can_interface/CMakeFiles/test_can.dir/depend
 	$(MAKE) -f can_interface/CMakeFiles/test_can.dir/build.make can_interface/CMakeFiles/test_can.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=52,53 "Built target test_can"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=57,58 "Built target test_can"
 .PHONY : can_interface/CMakeFiles/test_can.dir/all
 
 # Include target in all.
@@ -2476,6 +2476,415 @@ can_interface/CMakeFiles/can_interface.dir/clean:
 
 # clean rule for target.
 clean: can_interface/CMakeFiles/can_interface.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory scara_gui
+
+# Convenience name for "all" pass in the directory.
+scara_gui/all: scara_gui/CMakeFiles/scara_gui.dir/all
+
+.PHONY : scara_gui/all
+
+# Convenience name for "clean" pass in the directory.
+scara_gui/clean: scara_gui/CMakeFiles/scara_gui.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
+scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
+
+.PHONY : scara_gui/clean
+
+# Convenience name for "preinstall" pass in the directory.
+scara_gui/preinstall:
+
+.PHONY : scara_gui/preinstall
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/scara_gui.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_eus.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_py.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_py.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_py.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_eus.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
+	$(MAKE) -f scara_gui/CMakeFiles/scara_gui.dir/build.make scara_gui/CMakeFiles/scara_gui.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/scara_gui.dir/build.make scara_gui/CMakeFiles/scara_gui.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=32,33,34,35,36 "Built target scara_gui"
+.PHONY : scara_gui/CMakeFiles/scara_gui.dir/all
+
+# Include target in all.
+all: scara_gui/CMakeFiles/scara_gui.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/scara_gui.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/scara_gui.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/scara_gui.dir/rule
+
+# Convenience name for target.
+scara_gui: scara_gui/CMakeFiles/scara_gui.dir/rule
+
+.PHONY : scara_gui
+
+# clean rule for target.
+scara_gui/CMakeFiles/scara_gui.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/scara_gui.dir/build.make scara_gui/CMakeFiles/scara_gui.dir/clean
+.PHONY : scara_gui/CMakeFiles/scara_gui.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/scara_gui.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_cpp"
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_cpp: scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+
+.PHONY : nodelet_generate_messages_cpp
+
+# clean rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_eus"
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_eus: scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+
+.PHONY : nodelet_generate_messages_eus
+
+# clean rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_nodejs"
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_nodejs: scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+
+.PHONY : nodelet_generate_messages_nodejs
+
+# clean rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_py.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_py.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_py.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_py.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_py.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_py"
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/bond_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_py.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_py: scara_gui/CMakeFiles/bond_generate_messages_py.dir/rule
+
+.PHONY : bond_generate_messages_py
+
+# clean rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_py.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_py.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_py"
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_py: scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/rule
+
+.PHONY : nodelet_generate_messages_py
+
+# clean rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_cpp.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_cpp"
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_cpp: scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/rule
+
+.PHONY : bond_generate_messages_cpp
+
+# clean rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_lisp"
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_lisp: scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+
+.PHONY : nodelet_generate_messages_lisp
+
+# clean rule for target.
+scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_nodejs"
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_nodejs: scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+
+.PHONY : bond_generate_messages_nodejs
+
+# clean rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_eus.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_eus.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_eus.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_eus"
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/bond_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_eus: scara_gui/CMakeFiles/bond_generate_messages_eus.dir/rule
+
+.PHONY : bond_generate_messages_eus
+
+# clean rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_lisp.dir
+
+# All Build rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/all:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/depend
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_lisp"
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_lisp: scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/rule
+
+.PHONY : bond_generate_messages_lisp
+
+# clean rule for target.
+scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean:
+	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
+.PHONY : scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 
@@ -2617,11 +3026,11 @@ clean: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_g
 # Target rules for target scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_py.dir/all
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=37,38 "Built target scara_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=42,43 "Built target scara_msgs_generate_messages_py"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2750,7 +3159,7 @@ scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all: gazebo_scara_and
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=33,34 "Built target scara_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=38,39 "Built target scara_msgs_generate_messages_eus"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2783,7 +3192,7 @@ scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all: gazebo_scara_an
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=35 "Built target scara_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=40 "Built target scara_msgs_generate_messages_lisp"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2812,11 +3221,11 @@ clean: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/clean
 # Target rules for target scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=32 "Built target scara_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=37 "Built target scara_msgs_generate_messages_cpp"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2877,11 +3286,11 @@ clean: scara_msgs/CMakeFiles/scara_msgs_geneus.dir/clean
 # Target rules for target scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=36 "Built target scara_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=41 "Built target scara_msgs_generate_messages_nodejs"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3088,7 +3497,7 @@ clean: scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/clean
 scara_v2_moveit_api/CMakeFiles/tf_readout.dir/all:
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=54,55 "Built target tf_readout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=59,60 "Built target tf_readout"
 .PHONY : scara_v2_moveit_api/CMakeFiles/tf_readout.dir/all
 
 # Include target in all.
@@ -3631,36 +4040,6 @@ scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: g
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_manipulation_gencfg.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
@@ -3693,6 +4072,36 @@ scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: g
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/tf_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/tf_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_manipulation_gencfg.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_lisp.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_py.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/depend
@@ -3859,15 +4268,15 @@ clean: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/cl
 # Target rules for target scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir
 
 # All Build rule for target.
-scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_SimpleService.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=46,47 "Built target scara_v2_moveit_api_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=51,52 "Built target scara_v2_moveit_api_generate_messages_nodejs"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3915,36 +4324,6 @@ scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all:
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_manipulation_gencfg.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
@@ -3977,6 +4356,36 @@ scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all:
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/tf_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/tf_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_manipulation_gencfg.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_lisp.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_py.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/depend
@@ -4080,14 +4489,14 @@ clean: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_py.dir/clea
 
 # All Build rule for target.
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_SimpleService.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=44,45 "Built target scara_v2_moveit_api_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=49,50 "Built target scara_v2_moveit_api_generate_messages_lisp"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4135,36 +4544,6 @@ scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_an
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_manipulation_gencfg.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
@@ -4197,6 +4576,36 @@ scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_an
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/tf_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/tf_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_manipulation_gencfg.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_lisp.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_py.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/depend
@@ -4603,14 +5012,14 @@ clean: scara_v2_moveit_api/CMakeFiles/moveit_ros_manipulation_gencfg.dir/clean
 
 # All Build rule for target.
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_SimpleService.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=48,49,50,51 "Built target scara_v2_moveit_api_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=53,54,55,56 "Built target scara_v2_moveit_api_generate_messages_py"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4690,36 +5099,6 @@ scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazeb
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/all
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_manipulation_gencfg.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
@@ -4752,6 +5131,36 @@ scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazeb
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/tf_generate_messages_nodejs.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/tf_generate_messages_py.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/all
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_ros_manipulation_gencfg.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_lisp.dir/all
 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/all: scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_py.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/depend
@@ -4932,15 +5341,15 @@ clean: scara_v2_moveit_api/CMakeFiles/IK_test.dir/clean
 # Target rules for target scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir
 
 # All Build rule for target.
-scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_SimpleService.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=39,40 "Built target scara_v2_moveit_api_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=44,45 "Built target scara_v2_moveit_api_generate_messages_cpp"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5003,13 +5412,13 @@ clean: scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_lisp.dir/clea
 # All Build rule for target.
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
-scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_SimpleService.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=41,42,43 "Built target scara_v2_moveit_api_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=46,47,48 "Built target scara_v2_moveit_api_generate_messages_eus"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.

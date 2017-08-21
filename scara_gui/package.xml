@@ -21,6 +21,6 @@
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
-    <rqt_gui plugin="${prefix}/mrvk_gui_plugin.xml"/>
+    <rqt_gui plugin="${prefix}/scara_gui_plugin.xml"/>
   </export>
 </package>

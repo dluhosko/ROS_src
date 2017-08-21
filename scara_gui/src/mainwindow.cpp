@@ -3,12 +3,24 @@
 
 #include <pluginlib/class_list_macros.h>
 #include <QStringList>
+#include "ros/ros.h"
+
+
+
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    int argc;
+    char **argv;
+    ros::init(argc, argv, "scara_gui_node");
+    ros::NodeHandle n;
+    ros::Rate loop_rate(10);
+
+
 }
 
 MainWindow::~MainWindow()

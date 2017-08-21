@@ -13,12 +13,13 @@
 -- catkin 0.7.6
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 8 packages in topological order:
+-- ~~  traversing 9 packages in topological order:
 -- ~~  - scara_and_rt_moveit_config
 -- ~~  - scara_v2_full_control
 -- ~~  - scara_v2_full_description
 -- ~~  - scara_v2_full_gazebo
 -- ~~  - can_interface
+-- ~~  - scara_gui
 -- ~~  - scara_msgs
 -- ~~  - senso_scara_demo
 -- ~~  - scara_v2_moveit_api
@@ -42,6 +43,8 @@ Call Stack (most recent call first):
   can_interface/CMakeLists.txt:102 (catkin_package)
 
 
+-- +++ processing catkin package: 'scara_gui'
+-- ==> add_subdirectory(scara_gui)
 -- +++ processing catkin package: 'scara_msgs'
 -- ==> add_subdirectory(scara_msgs)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
