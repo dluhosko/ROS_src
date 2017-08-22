@@ -20,7 +20,12 @@
 
 
   <!-- The export tag contains other, unspecified, tags -->
+
+
+  <!--zbytocne-->
   <export>
     <rqt_gui plugin="${prefix}/scara_gui_plugin.xml"/>
   </export>
+
+
 </package>
