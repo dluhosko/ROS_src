@@ -30,6 +30,11 @@ include_directories(${industrial_trajectory_filters_INCLUDE_DIRS})
 add_message_files(
         FILES
         pose_and_gripperState.msg
+        scara_basic_info.msg
+        scara_button_commands.msg
+        scara_desired_joint_values.msg
+        scara_set_parameters.msg
+        scara_target_pose.msg
 )
  add_service_files(
    FILES

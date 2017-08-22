@@ -17,6 +17,11 @@
   <build_depend>sensor_msgs</build_depend>
   <build_depend>message_generation</build_depend>
   <build_depend>pose_and_gripperState</build_depend>
+  <build_depend>scara_basic_info</build_depend>
+  <build_depend>scara_button_commands</build_depend>
+  <build_depend>scara_desired_joint_values</build_depend>
+  <build_depend>scara_set_parameters</build_depend>
+  <build_depend>scara_target_pose</build_depend>
   <build_depend>genmsgs</build_depend>
   <build_depend>scara_msgs</build_depend>
   <build_depend>moveit_msgs</build_depend>
@@ -32,6 +37,11 @@
   <run_depend>sensor_msgs</run_depend>
   <run_depend>message_runtime</run_depend>
   <run_depend>pose_and_gripperState</run_depend>
+  <run_depend>scara_basic_info</run_depend>
+  <run_depend>scara_button_commands</run_depend>
+  <run_depend>scara_desired_joint_values</run_depend>
+  <run_depend>scara_set_parameters</run_depend>
+  <run_depend>scara_target_pose</run_depend>
   <run_depend>genmsgs</run_depend>
   <run_depend>scara_msgs</run_depend>
   <run_depend>tf</run_depend>

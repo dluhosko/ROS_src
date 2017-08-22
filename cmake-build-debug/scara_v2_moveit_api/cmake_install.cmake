@@ -33,7 +33,14 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scara_v2_moveit_api/msg" TYPE FILE FILES "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scara_v2_moveit_api/msg" TYPE FILE FILES
+    "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg"
+    "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_basic_info.msg"
+    "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_button_commands.msg"
+    "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_desired_joint_values.msg"
+    "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_set_parameters.msg"
+    "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_target_pose.msg"
+    )
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

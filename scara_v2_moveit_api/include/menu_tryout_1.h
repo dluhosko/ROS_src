@@ -8,10 +8,18 @@
 #include <ros/ros.h>
 #include "cstdio"
 #include "stdio.h"
+#include "std_msgs/Bool.h"
+#include "std_msgs/Int32.h"
+#include "scara_v2_moveit_api/scara_basic_info.h"
+#include "scara_v2_moveit_api/scara_button_commands.h"
+#include "scara_v2_moveit_api/scara_desired_joint_values.h"
+#include "scara_v2_moveit_api/scara_set_parameters.h"
+#include "scara_v2_moveit_api/scara_target_pose.h"
 
-int input_number;
+int input_number, last_input_number=999;
 double joint1,joint2,joint3;
 double desiredPosX,desiredPosY,desiredPosZ;
+bool startJOINT = false, stopJOINT = false;
 bool startDEMO1 = false, stopDEMO1 = false;
 bool startDEMO2 = false, stopDEMO2 = false;
 bool startCUSTOM = false, stopCUSTOM = false;
@@ -21,18 +29,24 @@ double inputVel, inputAcc, inputPlanTime, inputNumOfAttemps;
 
 bool jointControlMenu(){
 
-    ROS_ERROR("Joint controll");
+    if (input_number != last_input_number){
+        last_input_number = last_input_number;
+        ROS_ERROR("Joint controll");
+    }
+
+
     while (1){
-        printf("\nInput joint 1 value:");
-        scanf("%lf",&joint1);
-        printf("Input joint 2 value:");
-        scanf("%lf",&joint2);
-        printf("Input joint 3 value:");
-        scanf("%lf",&joint3);
-        ROS_WARN("The input values are J1=%f \tJ2=%f \tJ3=%f",joint1,joint2,joint3);
-        printf("Input menu number[1]:");
-        scanf("%d",&input_number);
-        ROS_WARN("\n Menu number is : %d",input_number);
+//        printf("\nInput joint 1 value:");
+//        scanf("%lf",&joint1);
+//        printf("Input joint 2 value:");
+//        scanf("%lf",&joint2);
+//        printf("Input joint 3 value:");
+//        scanf("%lf",&joint3);
+//        ROS_WARN("The input values are J1=%f \tJ2=%f \tJ3=%f",joint1,joint2,joint3);
+//        printf("Input menu number[1]:");
+//        scanf("%d",&input_number);
+//        ROS_WARN("\n Menu number is : %d",input_number);
+
 
         if (input_number == 10){
             return false;
@@ -40,12 +54,26 @@ bool jointControlMenu(){
             return true;
         }
 
-        ROS_INFO("The code is running");
-        //Tu nakodit aby vyuzival ten joint control regulator
-        //
-        //
-        //***************************************************
+        if (startJOINT){
+            startJOINT = false;
+            ROS_INFO("started joint control ...");
+            //Tu nakodit aby vyuzival ten joint control regulator
+            //
+            //
+            //***************************************************
 
+        }else if (stopJOINT){
+            //tu zastavit joint control regulator
+            //
+            //
+            //***************************************************
+        }
+
+
+        ROS_INFO("The code is running and waiting for message");
+
+        //loop_rate.sleep();
+        ros::spinOnce();
     }
 }
 
@@ -60,8 +88,9 @@ bool positionControlDEMO1(){
         printf("\nEnter Stop (1/0):");
         scanf("%d",&stopDEMO1);
         printf("STOP:%s", stopDEMO1 ? "true" : "false");
-        printf("\nInput menu number[2]:");
-        scanf("%d",&input_number);
+
+//        printf("\nInput menu number[2]:");
+//        scanf("%d",&input_number);
 
         if (input_number == 10){
             return false;
@@ -97,8 +126,9 @@ bool positionControlDEMO2(){
         printf("\nEnter Stop (1/0):");
         scanf("%d",&stopDEMO2);
         printf("\nSTOP:%s", stopDEMO2 ? "true" : "false");
-        printf("\nInput menu number[3]:");
-        scanf("%d",&input_number);
+
+//        printf("\nInput menu number[3]:");
+//        scanf("%d",&input_number);
 
         if (input_number == 10){
             return false;
@@ -142,8 +172,8 @@ bool positionControlCustom(){
         scanf("%d",&stopCUSTOM);
         printf("\nSTOP:%s", stopCUSTOM ? "true" : "false");
 
-        printf("\nInput menu number[4]:");
-        scanf("%d",&input_number);
+//        printf("\nInput menu number[4]:");
+//        scanf("%d",&input_number);
 
 
         if (input_number == 10){
@@ -177,8 +207,8 @@ bool getInfoMenu(){
         scanf("%d",&getInfo);
         printf("\nSTART:%s", getInfo ? "true" : "false");
 
-        printf("\nInput menu number[5]:");
-        scanf("%d",&input_number);
+//        printf("\nInput menu number[5]:");
+//        scanf("%d",&input_number);
 
         if (input_number == 10){
             return false;
@@ -205,34 +235,38 @@ bool getInfoMenu(){
 
 bool setParams(){
 
-    ROS_ERROR("Set parameters");
+    if (input_number != last_input_number){
+        last_input_number = input_number;
+        ROS_ERROR("Set parameters");
+    }
+
 
 
     while (1){
 
-        printf("\nInput desired velocity: ");
-        scanf("%lf",&inputVel);
-        printf("Display? (1/0): ");
-        scanf("%d",&velButton);
-        printf("START:%s", velButton ? "true" : "false");
-        printf("\nInput desired acceleration: ");
-        scanf("%lf",&inputAcc);
-        printf("Display? (1/0):");
-        scanf("%d",&accButton);
-        printf("START:%s", accButton ? "true" : "false");
-        printf("\nInput desired planning time: ");
-        scanf("%lf",&inputPlanTime);
-        printf("Display? (1/0):");
-        scanf("%d",&planTimeButton);
-        printf("START:%s", planTimeButton ? "true" : "false");
-        printf("\nInput desired number of attempts: ");
-        scanf("%lf",&inputNumOfAttemps);
-        printf("Display? (1/0):");
-        scanf("%d",&numOfAttempsButton);
-        printf("START:%s", numOfAttempsButton ? "true" : "false");
+//        printf("\nInput desired velocity: ");
+//        scanf("%lf",&inputVel);
+//        printf("Display? (1/0): ");
+//        scanf("%d",&velButton);
+//        printf("START:%s", velButton ? "true" : "false");
+//        printf("\nInput desired acceleration: ");
+//        scanf("%lf",&inputAcc);
+//        printf("Display? (1/0):");
+//        scanf("%d",&accButton);
+//        printf("START:%s", accButton ? "true" : "false");
+//        printf("\nInput desired planning time: ");
+//        scanf("%lf",&inputPlanTime);
+//        printf("Display? (1/0):");
+//        scanf("%d",&planTimeButton);
+//        printf("START:%s", planTimeButton ? "true" : "false");
+//        printf("\nInput desired number of attempts: ");
+//        scanf("%lf",&inputNumOfAttemps);
+//        printf("Display? (1/0):");
+//        scanf("%d",&numOfAttempsButton);
+//        printf("START:%s", numOfAttempsButton ? "true" : "false");
 
-        printf("\nInput menu number[5]:");
-        scanf("%d",&input_number);
+//        printf("\nInput menu number[5]:");
+//        scanf("%d",&input_number);
 
         if (input_number == 10){
             return false;
@@ -254,30 +288,36 @@ bool setParams(){
 
 }
 
-
 bool infoMenu (){
 
-    ROS_INFO("You are in info menu");
-    ROS_INFO("\nWellcome to SCARA\n"
-             "Graphical User Interface\n\n"
-             "Select:\n"
-             "Mode 1 : Joint controll - Apk\n"
-             "Mode 2 : Position controll -Apk\n"
-             "Mode 3 : Position controll (custom IK) - Apk\n"
-             "Mode 4 : Position controll custom move\n"
-             "Mode 5 : Get basic information\n"
-             "Mode 6 : Set parameters\n\n"
-             "This GUI was provided by SENSODRIVE and Viktor Dluhos");
+    ROS_INFO("info menu");
+    if (input_number != last_input_number){
+        ROS_INFO("In IF");
+        last_input_number = input_number;
+        ROS_INFO("You are in info menu");
+        ROS_INFO("\nWellcome to SCARA\n"
+                 "Graphical User Interface\n\n"
+                 "Select:\n"
+                 "Mode 1 : Joint controll - Apk\n"
+                 "Mode 2 : Position controll -Apk\n"
+                 "Mode 3 : Position controll (custom IK) - Apk\n"
+                 "Mode 4 : Position controll custom move\n"
+                 "Mode 5 : Get basic information\n"
+                 "Mode 6 : Set parameters\n\n"
+                 "This GUI was provided by SENSODRIVE and Viktor Dluhos");
 
-    while (1){
-        printf("\nInput menu number:");
-        scanf("%d",&input_number);
-        ROS_WARN("\n Menu number is : %d",input_number);
+        while (1){
+//          printf("\nInput menu number:");
+//          scanf("%d",&input_number);
 
-        if (input_number == 10){
-            return false;
-        }else if (input_number != 0){
-            return true;
+            ROS_WARN("\n Menu number is : %d",input_number);
+            if (input_number == 10){
+                return false;
+            }else if (input_number != 0){
+                return true;
+            }
+            //loop_rate.sleep();
+            ros::spinOnce();
         }
     }
 
@@ -285,8 +325,11 @@ bool infoMenu (){
 
 bool input_recognition(){
 
+    ROS_INFO("Input number is :%d",input_number);
+
     switch (input_number){
         case 0:
+            ROS_INFO("1");
             if (infoMenu())
                 return true;
             else

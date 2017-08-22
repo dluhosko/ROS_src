@@ -1,2 +1,2 @@
-set(scara_v2_moveit_api_MESSAGE_FILES "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg")
+set(scara_v2_moveit_api_MESSAGE_FILES "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg;/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_basic_info.msg;/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_button_commands.msg;/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_desired_joint_values.msg;/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_set_parameters.msg;/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/scara_target_pose.msg")
 set(scara_v2_moveit_api_SERVICE_FILES "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv")

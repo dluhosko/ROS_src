@@ -197,31 +197,181 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="octomap_msgs_generate_messages_cpp">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
+			<Target title="move_group_interface5_rt">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface5_rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 octomap_msgs_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface5_rt"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="object_recognition_msgs_generate_messages_nodejs">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
+			<Target title="move_group_interface5_rt/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface5_rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 object_recognition_msgs_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface5_rt/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="trajectory_msgs_generate_messages_lisp">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
+			<Target title="move_group_interface4_position_control">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface4_position_control" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 trajectory_msgs_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface4_position_control"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="move_group_interface4_position_control/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface4_position_control" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface4_position_control/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="move_group_interface3_PICKandPLACE">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface3_PICKandPLACE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface3_PICKandPLACE"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="move_group_interface3_PICKandPLACE/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface3_PICKandPLACE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface3_PICKandPLACE/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -282,6 +432,46 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="octomap_msgs_generate_messages_cpp">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 octomap_msgs_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="object_recognition_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 object_recognition_msgs_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="trajectory_msgs_generate_messages_lisp">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 trajectory_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -447,66 +637,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface4_position_control">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface4_position_control" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface4_position_control"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="move_group_interface4_position_control/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface4_position_control" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface4_position_control/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="moveit_msgs_generate_messages_eus">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>
@@ -642,66 +772,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_v2_moveit_api_generate_messages_lisp"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="move_group_interface5_rt">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface5_rt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface5_rt"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="move_group_interface5_rt/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface5_rt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface5_rt/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -847,36 +917,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="trajectory_msgs_generate_messages_cpp">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 trajectory_msgs_generate_messages_cpp"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="shape_msgs_generate_messages_eus">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 shape_msgs_generate_messages_eus"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="octomap_msgs_generate_messages_nodejs">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 octomap_msgs_generate_messages_nodejs"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="matlab_ROS_com_tryout">
 				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/matlab_ROS_com_tryout" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
@@ -947,6 +987,106 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="trajectory_msgs_generate_messages_cpp">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 trajectory_msgs_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="shape_msgs_generate_messages_eus">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 shape_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="octomap_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 octomap_msgs_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="menu_tryout_1">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/menu_tryout_1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 menu_tryout_1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="menu_tryout_1/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/menu_tryout_1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 menu_tryout_1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="scara_v2_moveit_api_genlisp">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>
@@ -987,71 +1127,21 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface3_PICKandPLACE">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface3_PICKandPLACE" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface3_PICKandPLACE"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="move_group_interface3_PICKandPLACE/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface3_PICKandPLACE" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface3_PICKandPLACE/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="scara_v2_moveit_api_generate_messages">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_v2_moveit_api_generate_messages"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1072,6 +1162,26 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_SimpleService"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1212,6 +1322,9 @@
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/matlab_ROS_com_tryout.cpp">
 			<Option target="matlab_ROS_com_tryout"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/menu_tryout_1.cpp">
+			<Option target="menu_tryout_1"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/move_group_interface1.cpp">
 			<Option target="move_group_interface1"/>
