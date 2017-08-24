@@ -6,8 +6,8 @@ Panels:
       Expanded:
         - /MotionPlanning1
         - /MotionPlanning1/Planning Request1
-        - /TF1
         - /TF1/Frames1
+        - /RobotModel1
       Splitter Ratio: 0.742560029
     Tree Height: 316
   - Class: rviz/Help
@@ -422,19 +422,132 @@ Visualization Manager:
         Show Robot Visual: true
       Value: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        BaseBox:
+          Value: false
+        CentralStop1:
+          Value: false
+        CentralStop2:
+          Value: false
+        GripperBase:
+          Value: false
+        GripperLeft:
+          Value: false
+        GripperRight:
+          Value: false
+        ScaraBase:
+          Value: false
+        ScaraLink1:
+          Value: false
+        ScaraLink2:
+          Value: false
+        base:
+          Value: false
+        base_link1:
+          Value: false
+        hole1:
+          Value: false
+        hole2:
+          Value: false
+        hole3:
+          Value: false
+        hole4:
+          Value: false
+        hole5:
+          Value: false
+        hole6:
+          Value: false
+        hole7:
+          Value: false
+        hole8:
+          Value: false
+        link1:
+          Value: false
+        placeBox:
+          Value: false
+        placeHole1:
+          Value: false
+        placeHole2:
+          Value: false
+        placeHole3:
+          Value: false
+        placeHole4:
+          Value: false
+        placeHole5:
+          Value: false
+        placeHole6:
+          Value: false
+        placeHole7:
+          Value: false
+        placeHole8:
+          Value: false
+        tool0:
+          Value: true
+        world:
+          Value: false
       Marker Scale: 0.200000003
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        world:
+          BaseBox:
+            CentralStop1:
+              {}
+            CentralStop2:
+              {}
+            ScaraBase:
+              ScaraLink1:
+                ScaraLink2:
+                  GripperBase:
+                    GripperLeft:
+                      {}
+                    GripperRight:
+                      {}
+                    tool0:
+                      {}
+            base:
+              base_link1:
+                link1:
+                  hole1:
+                    {}
+                  hole2:
+                    {}
+                  hole3:
+                    {}
+                  hole4:
+                    {}
+                  hole5:
+                    {}
+                  hole6:
+                    {}
+                  hole7:
+                    {}
+                  hole8:
+                    {}
+            placeBox:
+              placeHole1:
+                {}
+              placeHole2:
+                {}
+              placeHole3:
+                {}
+              placeHole4:
+                {}
+              placeHole5:
+                {}
+              placeHole6:
+                {}
+              placeHole7:
+                {}
+              placeHole8:
+                {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Class: rviz/Marker
       Enabled: true
       Marker Topic: visualization_marker
@@ -443,6 +556,175 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        BaseBox:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        CentralStop1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        CentralStop2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        GripperBase:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        GripperLeft:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        GripperRight:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link Tree Style: Links in Alphabetic Order
+        ScaraBase:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ScaraLink1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ScaraLink2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hole8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeBox:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        placeHole8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tool0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0.00100000005
+      Value: true
+      Visual Enabled: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -473,10 +755,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.624797165
+      Pitch: 0.674797118
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 0.491770864
+      Yaw: 0.561770976
     Saved: ~
 Window Geometry:
   Displays:

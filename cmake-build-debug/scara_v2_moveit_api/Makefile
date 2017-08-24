@@ -196,6 +196,21 @@ multiple_cube_publisher/fast:
 .PHONY : multiple_cube_publisher/fast
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule
+
+# Convenience name for target.
+real_scara_torq_sensor: scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule
+
+.PHONY : real_scara_torq_sensor
+
+# fast build rule for target.
+real_scara_torq_sensor/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build
+.PHONY : real_scara_torq_sensor/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
@@ -1401,6 +1416,33 @@ src/multiple_cube_publisher.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/src/multiple_cube_publisher.cpp.s
 .PHONY : src/multiple_cube_publisher.cpp.s
 
+src/real_scara_torq_sensor.o: src/real_scara_torq_sensor.cpp.o
+
+.PHONY : src/real_scara_torq_sensor.o
+
+# target to build an object file
+src/real_scara_torq_sensor.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/src/real_scara_torq_sensor.cpp.o
+.PHONY : src/real_scara_torq_sensor.cpp.o
+
+src/real_scara_torq_sensor.i: src/real_scara_torq_sensor.cpp.i
+
+.PHONY : src/real_scara_torq_sensor.i
+
+# target to preprocess a source file
+src/real_scara_torq_sensor.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/src/real_scara_torq_sensor.cpp.i
+.PHONY : src/real_scara_torq_sensor.cpp.i
+
+src/real_scara_torq_sensor.s: src/real_scara_torq_sensor.cpp.s
+
+.PHONY : src/real_scara_torq_sensor.s
+
+# target to generate assembly for a file
+src/real_scara_torq_sensor.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/src/real_scara_torq_sensor.cpp.s
+.PHONY : src/real_scara_torq_sensor.cpp.s
+
 src/tf_readout.o: src/tf_readout.cpp.o
 
 .PHONY : src/tf_readout.o
@@ -1440,6 +1482,7 @@ help:
 	@echo "... install/strip"
 	@echo "... gripper_control"
 	@echo "... multiple_cube_publisher"
+	@echo "... real_scara_torq_sensor"
 	@echo "... tf_readout"
 	@echo "... move_group_interface5_rt"
 	@echo "... move_group_interface4_position_control"
@@ -1539,6 +1582,9 @@ help:
 	@echo "... src/multiple_cube_publisher.o"
 	@echo "... src/multiple_cube_publisher.i"
 	@echo "... src/multiple_cube_publisher.s"
+	@echo "... src/real_scara_torq_sensor.o"
+	@echo "... src/real_scara_torq_sensor.i"
+	@echo "... src/real_scara_torq_sensor.s"
 	@echo "... src/tf_readout.o"
 	@echo "... src/tf_readout.i"
 	@echo "... src/tf_readout.s"

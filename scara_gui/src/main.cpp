@@ -8,11 +8,8 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
 
-    //QWidget *qWidget = new QWidget();
-    QMainWindow *qMain = new QMainWindow();
-    Ui::MainWindow mainWindow;
-    mainWindow.setupUi(qMain);
 
+    MainWindow *qMain = new MainWindow();
     qMain->show();
 
     return a.exec();

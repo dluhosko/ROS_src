@@ -53,6 +53,7 @@ void MainWindow::on_jointControl_J1_Slider_3_actionTriggered(int action)
 {
     ui->jointControl_J1_LineEdit->setText(QString::number(ui->jointControl_J1_Slider_3->value() / 100.0) + "rad");
 
+
 }
 void MainWindow::on_jointControl_J2_Slider_3_actionTriggered(int action)
 {

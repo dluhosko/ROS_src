@@ -1401,6 +1401,19 @@ multiple_cube_publisher/fast:
 .PHONY : multiple_cube_publisher/fast
 
 #=============================================================================
+# Target rules for targets named real_scara_torq_sensor
+
+# Build rule for target.
+real_scara_torq_sensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 real_scara_torq_sensor
+.PHONY : real_scara_torq_sensor
+
+# fast build rule for target.
+real_scara_torq_sensor/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build
+.PHONY : real_scara_torq_sensor/fast
+
+#=============================================================================
 # Target rules for targets named tf_readout
 
 # Build rule for target.
@@ -2249,6 +2262,7 @@ help:
 	@echo "... scara_msgs_generate_messages_nodejs"
 	@echo "... gripper_control"
 	@echo "... multiple_cube_publisher"
+	@echo "... real_scara_torq_sensor"
 	@echo "... tf_readout"
 	@echo "... move_group_interface5_rt"
 	@echo "... move_group_interface4_position_control"

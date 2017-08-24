@@ -105,6 +105,10 @@ target_link_libraries(matlab_ROS_com_tryout ${catkin_LIBRARIES})
 add_executable(menu_tryout_1 ../scara_v2_moveit_api/src/menu_tryout_1.cpp)
 target_link_libraries(menu_tryout_1 ${catkin_LIBRARIES})
 
+add_executable(real_scara_torq_sensor ../scara_v2_moveit_api/src/real_scara_torq_sensor.cpp)
+target_link_libraries(real_scara_torq_sensor ${catkin_LIBRARIES})
+
+
 add_executable(cube_publisher ../scara_v2_moveit_api/src/cube_publisher.cpp)
 target_link_libraries(cube_publisher ${catkin_LIBRARIES})
 add_dependencies(cube_publisher beginner_tutorials_generate_messages_cpp)

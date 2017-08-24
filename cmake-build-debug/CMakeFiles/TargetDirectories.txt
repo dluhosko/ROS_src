@@ -167,6 +167,7 @@
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/install/strip.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/gripper_control.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/tf_readout.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir

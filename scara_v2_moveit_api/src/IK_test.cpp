@@ -140,6 +140,7 @@ int main(int argc, char **argv) {
     robot_state::RobotStatePtr kinematic_state(new robot_state::RobotState(kinematic_model));
     kinematic_state->setToDefaultValues();
 
+
     getOffsets();
 
 
