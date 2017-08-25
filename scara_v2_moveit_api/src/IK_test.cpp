@@ -147,15 +147,7 @@ int main(int argc, char **argv) {
     robot_state::RobotStatePtr kinematic_state(new robot_state::RobotState(kinematic_model));
     kinematic_state->setToDefaultValues();
 
-    boost::shared_ptr<urdf::ModelInterface> urdf;
-    getchar();
-    joint_limits_interface::JointLimits limits;
-
-
-
     getOffsets();
-
-
 
     int mode = 1;
     geometry_msgs::Pose points;
@@ -194,7 +186,7 @@ int main(int argc, char **argv) {
 
                 if (success){
                     ROS_INFO("Succesful plan!");
-                    move_group.execute(my_plan);
+                    move_group.execute(my_plan);        //co spravi presne move_group.move / alebo execute ->moze odosielat hned v momente jedotnlive naplanovane polohy??
                     move_group.move();
                     ROS_INFO("moved to place!!\n");
                 } else{

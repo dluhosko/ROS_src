@@ -20,19 +20,19 @@
 #include <joint_limits_interface/joint_limits_rosparam.h>
 #include "moveit_msgs/DisplayTrajectory.h"
 
-moveit_msgs::DisplayTrajectory trajectory;
+geometry_msgs::Pose pos_and_vel;
+moveit_msgs::DisplayTrajectory trajectory1;
+bool subs_ok = false;
 
 
 void displayPathCallback(const moveit_msgs::DisplayTrajectory dispTraj){
 
-    ROS_INFO("%d",dispTraj.trajectory[0].joint_trajectory.points.size());
-    ROS_INFO("trajectory 0");
-    sleep(2);
-    for (int i = 0; i< dispTraj.trajectory[0].joint_trajectory.points.size(); i++)
-    {
-        ROS_INFO_STREAM(dispTraj.trajectory[0].joint_trajectory.points[i]);
-    }
+    subs_ok = true;     //da s ato prerobit ze bude len subs a nebude dalsie porovnavaniee...
+    ROS_INFO("Move dispTraj");
+    trajectory1 = dispTraj;
+    ROS_INFO("Move okay");
 
+    sleep(2);
 }
 
 
@@ -40,14 +40,47 @@ void displayPathCallback(const moveit_msgs::DisplayTrajectory dispTraj){
 int main(int argc, char **argv) {
 
     ros::init(argc, argv, "get_planned_path");
-    ros::NodeHandle n1;
+    ros::NodeHandle n1,n2,n3;
     ros::AsyncSpinner spinner(1);
     spinner.start();
+    ros::Rate loop_rate(10);
 
-    ros::Subscriber trajectory_sub = n1.subscribe<moveit_msgs::DisplayTrajectory>("/move_group/display_planned_path",1000,displayPathCallback);
 
+    ROS_INFO("aspon som tu...");
 
+    ros::Publisher pose_pub = n1.advertise<geometry_msgs::Pose>("/planned_poses_and_velocities",1000);
+    ros::Subscriber trajectory_sub = n3.subscribe("/move_group/display_planned_path",1000,displayPathCallback);
+
+    ROS_INFO("publisher subscriber...");
+    int last_size = 9999;
     while (ros::ok()){
+
+
+        if (subs_ok){
+            ROS_INFO("trajectory size %d  last size %d",trajectory1.trajectory[0].joint_trajectory.points.size(),last_size);
+            if (trajectory1.trajectory[0].joint_trajectory.points.size() !=  last_size){
+                last_size = trajectory1.trajectory[0].joint_trajectory.points.size();
+                //for (int i = 0; i< trajectory1.trajectory[0].joint_trajectory.points.size(); i++)
+                int i =0;
+                while (i< trajectory1.trajectory[0].joint_trajectory.points.size())
+                {
+                    ROS_INFO("Sending message %d",i);
+                    pos_and_vel.position.x = trajectory1.trajectory[0].joint_trajectory.points[i].positions[0];
+                    pos_and_vel.position.y = trajectory1.trajectory[0].joint_trajectory.points[i].positions[1];
+                    pos_and_vel.position.z = trajectory1.trajectory[0].joint_trajectory.points[i].positions[2];
+                    pos_and_vel.orientation.x = trajectory1.trajectory[0].joint_trajectory.points[i].velocities[0];
+                    pos_and_vel.orientation.y = trajectory1.trajectory[0].joint_trajectory.points[i].velocities[1];
+                    pos_and_vel.orientation.z = trajectory1.trajectory[0].joint_trajectory.points[i].velocities[2];
+                    pose_pub.publish(pos_and_vel);
+                    ROS_WARN("message sent!!");
+                    i++;
+                    loop_rate.sleep();
+
+                }
+            }
+        }
+
+
 
         ros::spinOnce();
     }
