@@ -2,6 +2,8 @@
 // Created by viktordluhos on 14/08/17.
 //
 
+//Adding followjointtrajectorygoal
+
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 #include <sstream>
@@ -14,6 +16,10 @@
 #include <moveit/trajectory_processing/iterative_time_parameterization.h>
 #include <industrial_trajectory_filters/filter_base.h>
 #include <industrial_trajectory_filters/uniform_sample_filter.h>
+#include "control_msgs/FollowJointTrajectoryGoal.h"
+#include "joint_limits_interface/joint_limits.h"
+#include <joint_limits_interface/joint_limits_urdf.h>
+#include <joint_limits_interface/joint_limits_rosparam.h>
 
 
 using namespace std;
@@ -53,11 +59,9 @@ void getOffsets(){
     point = getPoseFromTF("world","BaseBox");
     x_offset = x_offset + point.x;
     y_offset = y_offset + point.y;
-    //ROS_INFO("x=%f y=%f z=%f",x_offset, y_offset, z_offset);
     point = getPoseFromTF("BaseBox","ScaraBase");
     x_offset = x_offset + point.x;
     y_offset = y_offset + point.y;
-    //ROS_INFO("x=%f y=%f z=%f",x_offset, y_offset, z_offset);
     point = getPoseFromTF("world","tool0");
     z_offset = point.z;
 
@@ -122,6 +126,7 @@ int main(int argc, char **argv) {
     spinner.start();
 
     moveit::planning_interface::MoveGroupInterface::Plan my_plan;
+
     moveit::core::RobotStatePtr current_state;
     static const std::string PLANNING_GROUP = "scara_arm";
     moveit::planning_interface::MoveGroupInterface move_group(PLANNING_GROUP);
@@ -129,16 +134,23 @@ int main(int argc, char **argv) {
     const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(
             PLANNING_GROUP);
 
+
     //Ziskanie aktualne pozicie
     geometry_msgs::PoseStamped ws1 = move_group.getCurrentPose();
     ROS_INFO("End effector pose [ x=%f , y=%f , z=%f ]", ws1.pose.position.x, ws1.pose.position.y,
              ws1.pose.position.z);
+
 
     //Na overenie limitov klbov
     robot_model_loader::RobotModelLoader robot_model_loader("robot_description");
     robot_model::RobotModelPtr kinematic_model = robot_model_loader.getModel();
     robot_state::RobotStatePtr kinematic_state(new robot_state::RobotState(kinematic_model));
     kinematic_state->setToDefaultValues();
+
+    boost::shared_ptr<urdf::ModelInterface> urdf;
+    getchar();
+    joint_limits_interface::JointLimits limits;
+
 
 
     getOffsets();
@@ -154,8 +166,6 @@ int main(int argc, char **argv) {
 
     while (ros::ok()){
 
-//        points = move_group.getCurrentPose().pose;
-//        waypoints[0] = points;
         if (mode == 1) {
             ROS_INFO("Input X");
             scanf("%lf", &desired_x);
@@ -167,19 +177,6 @@ int main(int argc, char **argv) {
         ROS_INFO("%f %f %f",desired_x,desired_y,desired_z);
 
 
-//        points.position.x = desired_x;
-//        points.position.y = desired_y;
-//        points.position.z = desired_z;
-//        points.orientation.x=0.0;
-//        points.orientation.y=0.0;
-//        points.orientation.z=0.0;
-//        points.orientation.w=0.0;
-
-//        waypoints[1] = points;
-//        for (int i =0;i<waypoints.size();i++){
-//            ROS_INFO_STREAM(waypoints[i]);
-//        }
-
         if (countIK(desired_x,desired_y,desired_z, mode)){
             ROS_INFO("IK start");
 
@@ -189,38 +186,12 @@ int main(int argc, char **argv) {
 
             if (kinematic_state->satisfiesBounds()){
                 mode = 1;
- //               double fraction = move_group.computeCartesianPath(waypoints,
-//                                                             0.01,  // eef_step
-//                                                             0.001,   // jump_threshold
-//                                                             trajectory_msg, false);
-//                ROS_INFO_NAMED("tutorial", "Visualizing plan 4 (cartesian path) (%.2f%% acheived)", fraction * 100.0);
-                //sleep(15.0);
-                //https://github.com/moicez/pentaxis/blob/master/cartesian_trajectories/src/sine.cpp
-//                robot_trajectory::RobotTrajectory rt(move_group.getCurrentState()->getRobotModel(),"scara_arm");
-//                rt.setRobotTrajectoryMsg(*move_group.getCurrentState(), trajectory_msg);
-//                trajectory_processing::IterativeParabolicTimeParameterization iptp;
-//                bool successLinear = iptp.computeTimeStamps(rt);
-//                ROS_INFO("Computed time stamp %s",successLinear?"SUCCEDED":"FAILED");
-//                rt.getRobotTrajectoryMsg(trajectory_msg);
-//
-//                industrial_trajectory_filters::MessageAdapter t_in;
-//                t_in.request.trajectory = trajectory_msg.joint_trajectory;
-//                industrial_trajectory_filters::MessageAdapter t_out;
-//                industrial_trajectory_filters::UniformSampleFilterAdapter adapter;
-//                adapter.update(t_in, t_out);
-//
-//                trajectory_msg.joint_trajectory = t_out.request.trajectory;
-//                my_plan.trajectory_ = trajectory_msg;
-//                if (fraction >= 0.5) {
-//                    ROS_WARN("Plan %f percents",fraction);
-//                    move_group.execute(my_plan);
-//                    move_group.move();
-//                    ROS_INFO("moving there!!!!");
-//                }
-//                else
-//                    ROS_WARN("Could not compute the cartesian path :( <0.7 ");
 
                 success = move_group.plan(my_plan);
+                ROS_INFO("plan!!!");
+                ROS_INFO_STREAM(my_plan.trajectory_);
+                getchar();
+
                 if (success){
                     ROS_INFO("Succesful plan!");
                     move_group.execute(my_plan);

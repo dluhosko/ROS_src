@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
         roscpp
         std_msgs
         sensor_msgs
+        control_msgs
         genmsg
         message_generation
         actionlib
@@ -47,6 +48,7 @@ generate_messages(
         sensor_msgs
         actionlib_msgs
         scara_msgs
+        control_msgs
 
 )
 
@@ -57,6 +59,7 @@ catkin_package(
         message_runtime
         std_msgs
         sensor_msgs
+        control_msgs
 
 )
 
@@ -108,6 +111,8 @@ target_link_libraries(menu_tryout_1 ${catkin_LIBRARIES})
 add_executable(real_scara_torq_sensor ../scara_v2_moveit_api/src/real_scara_torq_sensor.cpp)
 target_link_libraries(real_scara_torq_sensor ${catkin_LIBRARIES})
 
+add_executable(get_and_send_planned_path ../scara_v2_moveit_api/src/get_and_send_planned_path.cpp)
+target_link_libraries(get_and_send_planned_path ${catkin_LIBRARIES})
 
 add_executable(cube_publisher ../scara_v2_moveit_api/src/cube_publisher.cpp)
 target_link_libraries(cube_publisher ${catkin_LIBRARIES})

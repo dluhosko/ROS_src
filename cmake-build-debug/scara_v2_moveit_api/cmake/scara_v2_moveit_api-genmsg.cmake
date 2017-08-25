@@ -2,7 +2,7 @@
 
 message(STATUS "scara_v2_moveit_api: 6 messages, 1 services")
 
-set(MSG_I_FLAGS "-Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg;-Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg;-Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg;-Icontrol_msgs:/opt/ros/kinetic/share/control_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg;-Itrajectory_msgs:/opt/ros/kinetic/share/trajectory_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -482,6 +482,9 @@ endif()
 if(TARGET scara_msgs_generate_messages_cpp)
   add_dependencies(scara_v2_moveit_api_generate_messages_cpp scara_msgs_generate_messages_cpp)
 endif()
+if(TARGET control_msgs_generate_messages_cpp)
+  add_dependencies(scara_v2_moveit_api_generate_messages_cpp control_msgs_generate_messages_cpp)
+endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/scara_v2_moveit_api)
   # install generated code
@@ -501,6 +504,9 @@ if(TARGET actionlib_msgs_generate_messages_eus)
 endif()
 if(TARGET scara_msgs_generate_messages_eus)
   add_dependencies(scara_v2_moveit_api_generate_messages_eus scara_msgs_generate_messages_eus)
+endif()
+if(TARGET control_msgs_generate_messages_eus)
+  add_dependencies(scara_v2_moveit_api_generate_messages_eus control_msgs_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/scara_v2_moveit_api)
@@ -522,6 +528,9 @@ endif()
 if(TARGET scara_msgs_generate_messages_lisp)
   add_dependencies(scara_v2_moveit_api_generate_messages_lisp scara_msgs_generate_messages_lisp)
 endif()
+if(TARGET control_msgs_generate_messages_lisp)
+  add_dependencies(scara_v2_moveit_api_generate_messages_lisp control_msgs_generate_messages_lisp)
+endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/scara_v2_moveit_api)
   # install generated code
@@ -541,6 +550,9 @@ if(TARGET actionlib_msgs_generate_messages_nodejs)
 endif()
 if(TARGET scara_msgs_generate_messages_nodejs)
   add_dependencies(scara_v2_moveit_api_generate_messages_nodejs scara_msgs_generate_messages_nodejs)
+endif()
+if(TARGET control_msgs_generate_messages_nodejs)
+  add_dependencies(scara_v2_moveit_api_generate_messages_nodejs control_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/scara_v2_moveit_api)
@@ -562,4 +574,7 @@ if(TARGET actionlib_msgs_generate_messages_py)
 endif()
 if(TARGET scara_msgs_generate_messages_py)
   add_dependencies(scara_v2_moveit_api_generate_messages_py scara_msgs_generate_messages_py)
+endif()
+if(TARGET control_msgs_generate_messages_py)
+  add_dependencies(scara_v2_moveit_api_generate_messages_py control_msgs_generate_messages_py)
 endif()

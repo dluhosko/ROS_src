@@ -5,4 +5,4 @@ Description: Description of scara_v2_moveit_api
 Version: 0.3.0
 Cflags: -I/usr/local/include
 Libs: -L/usr/local/lib 
-Requires: moveit_core moveit_ros_planning_interface message_runtime std_msgs sensor_msgs
+Requires: moveit_core moveit_ros_planning_interface message_runtime std_msgs sensor_msgs control_msgs

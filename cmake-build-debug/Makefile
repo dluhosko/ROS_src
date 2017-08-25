@@ -1479,6 +1479,71 @@ move_group_interface2/fast:
 .PHONY : move_group_interface2/fast
 
 #=============================================================================
+# Target rules for targets named move_group_interface1
+
+# Build rule for target.
+move_group_interface1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_group_interface1
+.PHONY : move_group_interface1
+
+# fast build rule for target.
+move_group_interface1/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/build
+.PHONY : move_group_interface1/fast
+
+#=============================================================================
+# Target rules for targets named scara_v2_moveit_api_genpy
+
+# Build rule for target.
+scara_v2_moveit_api_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api_genpy
+.PHONY : scara_v2_moveit_api_genpy
+
+# fast build rule for target.
+scara_v2_moveit_api_genpy/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/build
+.PHONY : scara_v2_moveit_api_genpy/fast
+
+#=============================================================================
+# Target rules for targets named scara_v2_moveit_api_generate_messages_py
+
+# Build rule for target.
+scara_v2_moveit_api_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api_generate_messages_py
+.PHONY : scara_v2_moveit_api_generate_messages_py
+
+# fast build rule for target.
+scara_v2_moveit_api_generate_messages_py/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build
+.PHONY : scara_v2_moveit_api_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named scara_v2_moveit_api_generate_messages_nodejs
+
+# Build rule for target.
+scara_v2_moveit_api_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api_generate_messages_nodejs
+.PHONY : scara_v2_moveit_api_generate_messages_nodejs
+
+# fast build rule for target.
+scara_v2_moveit_api_generate_messages_nodejs/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build
+.PHONY : scara_v2_moveit_api_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named get_and_send_planned_path
+
+# Build rule for target.
+get_and_send_planned_path: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 get_and_send_planned_path
+.PHONY : get_and_send_planned_path
+
+# fast build rule for target.
+get_and_send_planned_path/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/get_and_send_planned_path.dir/build.make scara_v2_moveit_api/CMakeFiles/get_and_send_planned_path.dir/build
+.PHONY : get_and_send_planned_path/fast
+
+#=============================================================================
 # Target rules for targets named octomap_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1503,19 +1568,6 @@ object_recognition_msgs_generate_messages_nodejs: cmake_check_build_system
 object_recognition_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build
 .PHONY : object_recognition_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named trajectory_msgs_generate_messages_lisp
-
-# Build rule for target.
-trajectory_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_lisp
-.PHONY : trajectory_msgs_generate_messages_lisp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
-.PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named _scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose
@@ -1687,6 +1739,19 @@ moveit_msgs_generate_messages_eus/fast:
 .PHONY : moveit_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named control_msgs_generate_messages_py
+
+# Build rule for target.
+control_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_py
+.PHONY : control_msgs_generate_messages_py
+
+# fast build rule for target.
+control_msgs_generate_messages_py/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_py.dir/build
+.PHONY : control_msgs_generate_messages_py/fast
+
+#=============================================================================
 # Target rules for targets named object_recognition_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1724,19 +1789,6 @@ octomap_msgs_generate_messages_lisp: cmake_check_build_system
 octomap_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build
 .PHONY : octomap_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named scara_v2_moveit_api_generate_messages_nodejs
-
-# Build rule for target.
-scara_v2_moveit_api_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api_generate_messages_nodejs
-.PHONY : scara_v2_moveit_api_generate_messages_nodejs
-
-# fast build rule for target.
-scara_v2_moveit_api_generate_messages_nodejs/fast:
-	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build
-.PHONY : scara_v2_moveit_api_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named move_group_interface6_async_PICKandPLACE
@@ -1815,19 +1867,6 @@ shape_msgs_generate_messages_py: cmake_check_build_system
 shape_msgs_generate_messages_py/fast:
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_py.dir/build
 .PHONY : shape_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named move_group_interface1
-
-# Build rule for target.
-move_group_interface1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_group_interface1
-.PHONY : move_group_interface1
-
-# fast build rule for target.
-move_group_interface1/fast:
-	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/build
-.PHONY : move_group_interface1/fast
 
 #=============================================================================
 # Target rules for targets named moveit_msgs_generate_messages_nodejs
@@ -1960,30 +1999,56 @@ moveit_ros_manipulation_gencfg/fast:
 .PHONY : moveit_ros_manipulation_gencfg/fast
 
 #=============================================================================
-# Target rules for targets named scara_v2_moveit_api_generate_messages_py
+# Target rules for targets named control_msgs_generate_messages_cpp
 
 # Build rule for target.
-scara_v2_moveit_api_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api_generate_messages_py
-.PHONY : scara_v2_moveit_api_generate_messages_py
+control_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_cpp
+.PHONY : control_msgs_generate_messages_cpp
 
 # fast build rule for target.
-scara_v2_moveit_api_generate_messages_py/fast:
-	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build
-.PHONY : scara_v2_moveit_api_generate_messages_py/fast
+control_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
+.PHONY : control_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named scara_v2_moveit_api_genpy
+# Target rules for targets named trajectory_msgs_generate_messages_lisp
 
 # Build rule for target.
-scara_v2_moveit_api_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api_genpy
-.PHONY : scara_v2_moveit_api_genpy
+trajectory_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_lisp
+.PHONY : trajectory_msgs_generate_messages_lisp
 
 # fast build rule for target.
-scara_v2_moveit_api_genpy/fast:
-	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/build
-.PHONY : scara_v2_moveit_api_genpy/fast
+trajectory_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+.PHONY : trajectory_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named control_msgs_generate_messages_lisp
+
+# Build rule for target.
+control_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_lisp
+.PHONY : control_msgs_generate_messages_lisp
+
+# fast build rule for target.
+control_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_lisp.dir/build
+.PHONY : control_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named control_msgs_generate_messages_nodejs
+
+# Build rule for target.
+control_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_nodejs
+.PHONY : control_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+control_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build
+.PHONY : control_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named scara_v2_moveit_api_generate_messages
@@ -2049,6 +2114,19 @@ _scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values: cm
 _scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values/fast:
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values.dir/build.make scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values.dir/build
 .PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values/fast
+
+#=============================================================================
+# Target rules for targets named control_msgs_generate_messages_eus
+
+# Build rule for target.
+control_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_msgs_generate_messages_eus
+.PHONY : control_msgs_generate_messages_eus
+
+# fast build rule for target.
+control_msgs_generate_messages_eus/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_eus.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_eus.dir/build
+.PHONY : control_msgs_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named _scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info
@@ -2268,9 +2346,13 @@ help:
 	@echo "... move_group_interface4_position_control"
 	@echo "... move_group_interface3_PICKandPLACE"
 	@echo "... move_group_interface2"
+	@echo "... move_group_interface1"
+	@echo "... scara_v2_moveit_api_genpy"
+	@echo "... scara_v2_moveit_api_generate_messages_py"
+	@echo "... scara_v2_moveit_api_generate_messages_nodejs"
+	@echo "... get_and_send_planned_path"
 	@echo "... octomap_msgs_generate_messages_cpp"
 	@echo "... object_recognition_msgs_generate_messages_nodejs"
-	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose"
 	@echo "... trajectory_msgs_generate_messages_nodejs"
 	@echo "... cube_publisher"
@@ -2284,17 +2366,16 @@ help:
 	@echo "... moveit_msgs_generate_messages_cpp"
 	@echo "... object_recognition_msgs_generate_messages_eus"
 	@echo "... moveit_msgs_generate_messages_eus"
+	@echo "... control_msgs_generate_messages_py"
 	@echo "... object_recognition_msgs_generate_messages_cpp"
 	@echo "... octomap_msgs_generate_messages_eus"
 	@echo "... octomap_msgs_generate_messages_lisp"
-	@echo "... scara_v2_moveit_api_generate_messages_nodejs"
 	@echo "... move_group_interface6_async_PICKandPLACE"
 	@echo "... moveit_msgs_generate_messages_lisp"
 	@echo "... octomap_msgs_generate_messages_py"
 	@echo "... scara_v2_moveit_api_generate_messages_lisp"
 	@echo "... linear_interpolation"
 	@echo "... shape_msgs_generate_messages_py"
-	@echo "... move_group_interface1"
 	@echo "... moveit_msgs_generate_messages_nodejs"
 	@echo "... matlab_ROS_com_tryout"
 	@echo "... moveit_ros_planning_gencfg"
@@ -2305,13 +2386,16 @@ help:
 	@echo "... menu_tryout_1"
 	@echo "... scara_v2_moveit_api_genlisp"
 	@echo "... moveit_ros_manipulation_gencfg"
-	@echo "... scara_v2_moveit_api_generate_messages_py"
-	@echo "... scara_v2_moveit_api_genpy"
+	@echo "... control_msgs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... control_msgs_generate_messages_lisp"
+	@echo "... control_msgs_generate_messages_nodejs"
 	@echo "... scara_v2_moveit_api_generate_messages"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands"
 	@echo "... scara_v2_moveit_api_gennodejs"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_SimpleService"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values"
+	@echo "... control_msgs_generate_messages_eus"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info"
 	@echo "... IK_test"
 	@echo "... scara_v2_moveit_api_generate_messages_cpp"

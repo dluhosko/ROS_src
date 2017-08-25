@@ -1,6 +1,7 @@
 //
 // Created by viktor on 22/08/17.
 //
+#include <ros/ros.h>
 #include "../include/menu_tryout_1.h"
 
 using namespace std;
