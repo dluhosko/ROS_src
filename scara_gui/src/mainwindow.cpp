@@ -3,6 +3,7 @@
 
 #include <pluginlib/class_list_macros.h>
 #include <QStringList>
+
 #include "ros/ros.h"
 
 
@@ -17,17 +18,30 @@ MainWindow::MainWindow(QWidget *parent) :
     int argc;
     char **argv;
     ros::init(argc, argv, "scara_gui_node");
-    ros::NodeHandle n1,n2,n3;
+    ros::NodeHandle n1,n2,n3,n4,n5,n6,n7,n8;
     ros::NodeHandle nn1,nn2,nn3;
     ros::Rate loop_rate(10);
 
     aspinner = new ros::AsyncSpinner(2);
     aspinner->start();
 
-
+    //Publishers
     jointControl_pub = n1.advertise<geometry_msgs::PointStamped>("jointControl",1000);
+    positionControl_pub = n2.advertise<geometry_msgs::PointStamped>("positionControl",1000);
+    demo_pub = n3.advertise<std_msgs::Bool>("demoControl",1000);
+    getInfo_pub = n4.advertise<std_msgs::Bool>("getInfo",1000);
+    setVel_pub = n5.advertise<std_msgs::Float64>("setVelocity",1000);
+    setAcc_pub = n6.advertise<std_msgs::Float64>("setAcceleration",1000);
+    setPlanTime_pub = n7.advertise<std_msgs::Float64>("setPlanningTime",1000);
+    setNumOfAttempts_pub = n8.advertise<std_msgs::Float64>("setNumberOfAttempts",1000);
 
-    jointControlValues_sub = nn1.subscribe("jointControlFeedbackValues",1000,&MainWindow::jointControlCallback,this);
+    //Subscribers
+        //demo_rviz.launch
+        jointStates_sub = nn1.subscribe("/move_group/fake_controller_joint_states",1000,&MainWindow::jointStatesCallback, this);
+        //demo_matlab_mfile
+        //.....
+
+    //jointControlValues_sub = nn1.subscribe("jointControlFeedbackValues",1000,&MainWindow::jointControlCallback,this);
 
 
 }
@@ -42,9 +56,9 @@ MainWindow::~MainWindow()
 void MainWindow::on_jointControl_Start_PushButton_3_clicked()
 {
 
-    ui->status_joint1pos_rad_3->display(ui->jointControl_J1_Slider_3->value() / 100.0);
-    ui->status_joint2pos_rad_3->display(ui->jointControl_J2_Slider_3->value() / 100.0);
-    ui->status_joint3pos_rad_3->display(ui->jointControl_J3_Slider_3->value() / 100.0);
+    //ui->status_joint1pos_rad_3->display(ui->jointControl_J1_Slider_3->value() / 100.0);
+    //ui->status_joint2pos_rad_3->display(ui->jointControl_J2_Slider_3->value() / 100.0);
+    //ui->status_joint3pos_rad_3->display(ui->jointControl_J3_Slider_3->value() / 100.0);
 
     //Len test
     ui->jointControl_J1_LineEdit->setText(QString::number(ui->jointControl_J1_Slider_3->value() / 100.0) + "rad");
@@ -216,3 +230,35 @@ void MainWindow::on_workingModes_3_tabBarClicked(int index)
 
 }
 //**********************************************************************//
+
+
+//********************** Callbacks ************************************//
+void MainWindow::jointStatesCallback(const sensor_msgs::JointState jointState){
+
+    ROS_INFO("Subscribe jointStates");
+    ui->status_joint1pos_rad_3->display(jointState.position[1]);
+    ui->status_joint2pos_rad_3->display(jointState.position[2]);
+    ui->status_joint3pos_rad_3->display(jointState.position[3]);
+    ui->status_joint1pos_deg_3->display(jointState.position[1]*180/PI);
+    ui->status_joint2pos_deg_3->display(jointState.position[2]*180/PI);
+    ui->status_joint3pos_deg_3->display(jointState.position[3]*180/PI);
+    //ROS_INFO("%f %f %f",jointState.velocity[1],jointState.velocity[2],jointState.velocity[3]);
+    //ui->status_joint2vel_3->display(jointState.velocity[2]);
+    //ui->status_joint3vel_3->display(jointState.velocity[3]);
+//    ui->status_joint1torq_3->display(jointState.effort[1]);
+//    ui->status_joint2torq_3->display(jointState.effort[2]);
+//    ui->status_joint3torq_3->display(jointState.effort[3]);
+    ui->status_joint1vel_3->display(0.1);
+    ui->status_joint2vel_3->display(0.1);
+    ui->status_joint3vel_3->display(0.1);
+    ui->status_joint1vel_3->display(0.1);
+    ui->status_joint1acc_3->display(0.2);
+    ui->status_joint2acc_3->display(0.2);
+    ui->status_joint3acc_3->display(0.2);
+    ui->status_joint1torq_3->display(0.3);
+    ui->status_joint2torq_3->display(0.3);
+    ui->status_joint3torq_3->display(0.3);
+}
+void MainWindow::jointControlCallback(const geometry_msgs::PointStamped pointStamped){
+    ROS_INFO("joint control callback");
+}

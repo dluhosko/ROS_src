@@ -4,7 +4,11 @@
 #include <QMainWindow>
 #include "ros/ros.h"
 #include "geometry_msgs/PointStamped.h"
-//#include ""
+#include <std_msgs/Bool.h>
+#include <std_msgs/Float64.h>
+#include "sensor_msgs/JointState.h"
+
+const double PI = 3.14159265;
 
 namespace Ui {
 class MainWindow;
@@ -17,11 +21,9 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    void jointControlCallback(const geometry_msgs::PointStamped){
+    void jointControlCallback(const geometry_msgs::PointStamped pointStamped);
 
-        ROS_INFO("Subscribe");
-
-    }
+    void jointStatesCallback(const sensor_msgs::JointState jointState);
 
 private slots:
     void on_jointControl_Start_PushButton_3_clicked();
@@ -59,14 +61,19 @@ private slots:
     void on_jointControl_Stop_PushButton_4_clicked();
 
     void on_positionControlCustom_Reset_PushButton_5_clicked();
+
+
 private:
     Ui::MainWindow *ui;
-    bool jointControl_gripperState = false;
 
     ros::AsyncSpinner *aspinner;
 
-    ros::Publisher jointControl_pub, positionControl_pub, demo_pub, getInfo_pub, setParams_pub;
-    ros::Subscriber jointControlValues_sub, positionControlValues_sub, demoValues_sub, getInfoValues_sub;
+    bool jointControl_gripperState = false;
+    bool newJointStates = false;
+    sensor_msgs::JointState actualJointStates;
+
+    ros::Publisher jointControl_pub, positionControl_pub, demo_pub, getInfo_pub, setVel_pub, setAcc_pub, setPlanTime_pub, setNumOfAttempts_pub;
+    ros::Subscriber jointControlValues_sub, positionControlValues_sub, demoValues_sub, getInfoValues_sub, jointStates_sub;
 
     geometry_msgs::PointStamped jointControlValues;
 
