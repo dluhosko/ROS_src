@@ -24,7 +24,7 @@
 
 using namespace std;
 
-std::vector<double> joint_positions(3);
+std::vector<double> joint_positions(4);
 std::vector<double> link_length(2);
 double x_offset, y_offset, z_offset;
 geometry_msgs::Point point;
@@ -109,8 +109,10 @@ bool countIK(double x, double y, double z,  int mode){
         ROS_ERROR("Target is out of range");
         return false;
     }
+    joint_positions[3] = 0.0;
 
-    ROS_INFO("output joint positions %f %f %f",joint_positions[0],joint_positions[1],joint_positions[2]);
+
+    ROS_INFO("output joint positions %f %f %f %f ",joint_positions[0],joint_positions[1],joint_positions[2],joint_positions[3]);
     return true;
 
 }
@@ -149,6 +151,14 @@ int main(int argc, char **argv) {
 
     getOffsets();
 
+    std::vector< std::string> activeJoints = move_group.getActiveJoints();
+    for (int i =0;i<activeJoints.size();i++){
+        ROS_INFO("Active link %d : %s",i, activeJoints[i].c_str());
+    }
+    ROS_INFO(".....Current robot model.......");
+    ROS_INFO_STREAM(move_group.getRobotModel());
+    getchar();
+
     int mode = 1;
     geometry_msgs::Pose points;
     std::vector<geometry_msgs::Pose> waypoints(2);
@@ -161,6 +171,8 @@ int main(int argc, char **argv) {
         if (mode == 1) {
             ROS_INFO("Input X");
             scanf("%lf", &desired_x);
+            if (desired_x == 0.0)
+                return 0;
             ROS_INFO("Input Y");
             scanf("%lf", &desired_y);
             ROS_INFO("Input Z");

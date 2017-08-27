@@ -31,6 +31,7 @@
     <!--**********MACROS************-->
     <xacro:property name="DEG2RAD" value="0.01745329252" />
     <xacro:property name="RED2DEG" value="57.295779513" />
+    <xacro:property name="M_PI" value="3.141592" />
 
     <!--****************************-->
 
@@ -537,7 +538,7 @@
         <child link="link1"/>
         <origin xyz="0 0 0.01" rpy="0 0 0"/>
         <axis xyz="0 0 1" />
-        <limit effort="1000" lower="0" upper="6.29" velocity="0"/>
+        <limit effort="1000" lower="0" upper="${2*M_PI}" velocity="0"/>
     </joint>
 
     <link name="hole1">
@@ -899,11 +900,13 @@
     </joint>
 
     <link name="tool0"/>
-    <joint name="Base_to_tool0" type="fixed">
+    <joint name="Base_to_tool0" type="revolute">
         <parent link="GripperBase" />
         <child link="tool0" />
         <origin xyz="0 0 0.0984" rpy="0 0 0 " />
-        <axis xyz="0 0 0" />
+        <axis xyz="0 0 1" />
+        <!--<limit effort="0" lower="-2.65" upper="2.65" velocity="0"/>-->
+        <limit effort="0" lower="${-M_PI}" upper="${M_PI}" velocity="0"/>
     </joint>
 
     <link name="GripperLeft">
