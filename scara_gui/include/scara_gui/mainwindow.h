@@ -38,10 +38,6 @@ private slots:
 
     void on_workingModes_3_tabBarClicked(int index);
 
-    void on_positionControl1_Start_PushButton_3_clicked();
-
-    void on_positionControl1_Stop_PushButton_3_clicked();
-
     void on_positionControl2_Start_PushButton_3_clicked();
 
     void on_positionControl2_Stop_PushButton_3_clicked();
@@ -58,8 +54,14 @@ private slots:
 
     void on_setParameters_NumOfAttempts_PushButton_3_clicked();
 
+    void on_positionControlCustom_Stop_PushButton_4_clicked();
+
+    void on_jointControl_Stop_PushButton_4_clicked();
+
+    void on_positionControlCustom_Reset_PushButton_5_clicked();
 private:
     Ui::MainWindow *ui;
+    bool jointControl_gripperState = false;
 
     ros::AsyncSpinner *aspinner;
 

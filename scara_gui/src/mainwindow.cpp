@@ -38,7 +38,7 @@ MainWindow::~MainWindow()
 }
 
 
-
+//********************************************JOINT CONTROL****************************************************//
 void MainWindow::on_jointControl_Start_PushButton_3_clicked()
 {
 
@@ -51,17 +51,16 @@ void MainWindow::on_jointControl_Start_PushButton_3_clicked()
     ui->jointControl_J2_LineEdit->setText(QString::number(ui->jointControl_J2_Slider_3->value() / 100.0) + "rad");
     ui->jointControl_J3_LineEdit->setText(QString::number(ui->jointControl_J3_Slider_3->value() / 100.0) + "rad");
 
+    ui->status_gripper_OnOff_3->display(jointControl_gripperState);
+
 
     //Send the values to ROS!
     //.............
 
 }
-
-
 void MainWindow::on_jointControl_J1_Slider_3_actionTriggered(int action)
 {
     ui->jointControl_J1_LineEdit->setText(QString::number(ui->jointControl_J1_Slider_3->value() / 100.0) + "rad");
-
 
 }
 void MainWindow::on_jointControl_J2_Slider_3_actionTriggered(int action)
@@ -80,8 +79,15 @@ void MainWindow::on_jointControl_Gripper_Checkbox_3_toggled(bool checked)
     }else{
         ui->jointControl_gripper_LineEdit->setText("OFF!");
     }
+    jointControl_gripperState = checked;
+    ui->status_gripper_OnOff_3->display(jointControl_gripperState);
+
 }
 
+void MainWindow::on_jointControl_Stop_PushButton_4_clicked()
+{
+
+}
 
 void MainWindow::on_jointControl_Reset_PushButton_3_clicked()
 {
@@ -97,37 +103,10 @@ void MainWindow::on_jointControl_Reset_PushButton_3_clicked()
 
 
 }
+//********************************************************************************//
 
-void MainWindow::on_workingModes_3_tabBarClicked(int index)
-{
-    if (index == 0){
-        ui->currentWorkingMode_LineEdit->setText("Info");
-    }else{
-        ui->currentWorkingMode_LineEdit->setText(QString::number(index));
-    }
 
-}
-
-void MainWindow::on_positionControl1_Start_PushButton_3_clicked()
-{
-    ui->positionControl1_LineEdit->setText("DEMO application 1 RUNNING!");
-}
-
-void MainWindow::on_positionControl1_Stop_PushButton_3_clicked()
-{
-    ui->positionControl1_LineEdit->setText("DEMO application 1 STOPPED !");
-}
-
-void MainWindow::on_positionControl2_Start_PushButton_3_clicked()
-{
-    ui->positionControl2_LineEdit->setText("DEMO application 2 RUNNING!");
-}
-
-void MainWindow::on_positionControl2_Stop_PushButton_3_clicked()
-{
-    ui->positionControl2_LineEdit->setText("DEMO application 2 STOPPED!");
-}
-
+//***************************** Position Control custom **************************//
 void MainWindow::on_positionControlCustom_Start_PushButton_3_clicked()
 {
     double x = ui->positionControlCustom_X_LineEdit_3->text().toDouble();
@@ -141,7 +120,33 @@ void MainWindow::on_positionControlCustom_Start_PushButton_3_clicked()
 
 
 }
+void MainWindow::on_positionControlCustom_Stop_PushButton_4_clicked()
+{
 
+}
+
+void MainWindow::on_positionControlCustom_Reset_PushButton_5_clicked()
+{
+
+}
+
+//*******************************************************************************//
+
+
+//******************************* DEMO APK *************************************//
+void MainWindow::on_positionControl2_Start_PushButton_3_clicked()
+{
+    ui->positionControl2_LineEdit->setText("DEMO application 2 RUNNING!");
+}
+
+void MainWindow::on_positionControl2_Stop_PushButton_3_clicked()
+{
+    ui->positionControl2_LineEdit->setText("DEMO application 2 STOPPED!");
+}
+//*****************************************************************************//
+
+
+//*************************** Get information ********************************//
 void MainWindow::on_basicInfo_GetInfo_PushButton_3_clicked()
 {
     //Tu budem citat hodnoty z rosu a zapisovat do nizzsich..
@@ -161,7 +166,10 @@ void MainWindow::on_basicInfo_GetInfo_PushButton_3_clicked()
     ui->basicInfo_W_LCDnum_3->display(0.7);
 
 }
+//****************************************************************************//
 
+
+//*************************** Set information *******************************//
 void MainWindow::on_setParameters_Velocity_PushButton_3_clicked()
 {
     double vel = ui->setParameters_Velocity_LineEdit_3->text().toDouble();
@@ -194,3 +202,17 @@ void MainWindow::on_setParameters_NumOfAttempts_PushButton_3_clicked()
     //Len test
     ui->status_joint1acc_3->display(num);
 }
+//************************************************************************//
+
+
+//***************************** Tab widget ******************************//
+void MainWindow::on_workingModes_3_tabBarClicked(int index)
+{
+    if (index == 0){
+        ui->currentWorkingMode_LineEdit->setText("Info");
+    }else{
+        ui->currentWorkingMode_LineEdit->setText(QString::number(index));
+    }
+
+}
+//**********************************************************************//
