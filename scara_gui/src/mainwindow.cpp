@@ -17,8 +17,17 @@ MainWindow::MainWindow(QWidget *parent) :
     int argc;
     char **argv;
     ros::init(argc, argv, "scara_gui_node");
-    ros::NodeHandle n;
+    ros::NodeHandle n1,n2,n3;
+    ros::NodeHandle nn1,nn2,nn3;
     ros::Rate loop_rate(10);
+
+    aspinner = new ros::AsyncSpinner(2);
+    aspinner->start();
+
+
+    jointControl_pub = n1.advertise<geometry_msgs::PointStamped>("jointControl",1000);
+
+    jointControlValues_sub = nn1.subscribe("jointControlFeedbackValues",1000,&MainWindow::jointControlCallback,this);
 
 
 }

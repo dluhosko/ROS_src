@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "ros/ros.h"
+#include "geometry_msgs/PointStamped.h"
+//#include ""
 
 namespace Ui {
 class MainWindow;
@@ -14,6 +17,11 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    void jointControlCallback(const geometry_msgs::PointStamped){
+
+        ROS_INFO("Subscribe");
+
+    }
 
 private slots:
     void on_jointControl_Start_PushButton_3_clicked();
@@ -52,6 +60,14 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    ros::AsyncSpinner *aspinner;
+
+    ros::Publisher jointControl_pub, positionControl_pub, demo_pub, getInfo_pub, setParams_pub;
+    ros::Subscriber jointControlValues_sub, positionControlValues_sub, demoValues_sub, getInfoValues_sub;
+
+    geometry_msgs::PointStamped jointControlValues;
+
 };
 
 #endif // MAINWINDOW_H

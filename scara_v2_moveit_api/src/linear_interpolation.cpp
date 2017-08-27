@@ -156,9 +156,9 @@ int main(int argc, char **argv) {
     const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
     moveit_msgs::RobotTrajectory trajectory_msg;
 
-    ros::ServiceClient client = n.serviceClient<moveit_msgs::GetCartesianPath>("compute_cartesian_path",cartPathService_callback);
-    moveit_msgs::GetCartesianPathRequest req;
-    moveit_msgs::GetCartesianPathResponse res;
+//    ros::ServiceClient client = n.serviceClient<moveit_msgs::GetCartesianPath>("compute_cartesian_path",cartPathService_callback);
+//    moveit_msgs::GetCartesianPathRequest req;
+//    moveit_msgs::GetCartesianPathResponse res;
 
     //ROS_INFO("overenie klbov");
     //Na overenie limitov klbov
