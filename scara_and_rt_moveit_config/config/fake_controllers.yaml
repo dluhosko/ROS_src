@@ -4,7 +4,4 @@ controller_list:
       - Joint1
       - Joint2
       - Joint_GripperBase
-      - Base_to_tool0
-  - name: fake_rt_controller
-    joints:
       - base_link1_to_link1

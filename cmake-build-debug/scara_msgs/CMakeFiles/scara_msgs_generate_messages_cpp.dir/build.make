@@ -53,16 +53,24 @@ CMAKE_BINARY_DIR = /home/viktor/catkin_ws/src/cmake-build-debug
 # Include the progress variables for this target.
 include scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/progress.make
 
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp: devel/include/scara_msgs/robot_info.h
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp: devel/include/scara_msgs/pose_and_gripperState.h
 
+
+devel/include/scara_msgs/robot_info.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+devel/include/scara_msgs/robot_info.h: ../scara_msgs/msg/robot_info.msg
+devel/include/scara_msgs/robot_info.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from scara_msgs/robot_info.msg"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/viktor/catkin_ws/src/scara_msgs/msg/robot_info.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/include/scara_msgs -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 devel/include/scara_msgs/pose_and_gripperState.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 devel/include/scara_msgs/pose_and_gripperState.h: ../scara_msgs/msg/pose_and_gripperState.msg
 devel/include/scara_msgs/pose_and_gripperState.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from scara_msgs/pose_and_gripperState.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from scara_msgs/pose_and_gripperState.msg"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/include/scara_msgs -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 scara_msgs_generate_messages_cpp: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp
+scara_msgs_generate_messages_cpp: devel/include/scara_msgs/robot_info.h
 scara_msgs_generate_messages_cpp: devel/include/scara_msgs/pose_and_gripperState.h
 scara_msgs_generate_messages_cpp: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build.make
 

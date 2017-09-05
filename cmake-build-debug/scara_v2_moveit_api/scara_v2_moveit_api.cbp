@@ -5,7 +5,7 @@
 		<Option title="scara_v2_moveit_api"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\opt\ros\kinetic\;CMake Files\..\..\..\..\opt\ros\kinetic\share\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\opt\ros\kinetic\share\joint_state_publisher\;CMake Files\..\..\..\..\opt\ros\kinetic\share\joint_state_publisher\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\robot_state_publisher\;CMake Files\..\..\..\..\opt\ros\kinetic\share\robot_state_publisher\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\;CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_runtime\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rostime\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rostime\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_ros\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\actionlib\;CMake Files\..\..\..\..\opt\ros\kinetic\share\actionlib\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\actionlib_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genmsg\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genmsg\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\gencpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\gencpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geneus\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geneus\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genlisp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genlisp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\gennodejs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\gennodejs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genpy\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genpy\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_filters\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_filters\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_generation\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_generation\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_py\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_py\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rospy\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rospy\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_kdl\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_kdl\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\kdl_parser\;CMake Files\..\..\..\..\opt\ros\kinetic\share\kdl_parser\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\urdf\;CMake Files\..\..\..\..\opt\ros\kinetic\share\urdf\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole_bridge\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole_bridge\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rviz\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rviz\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\image_transport\;CMake Files\..\..\..\..\opt\ros\kinetic\share\image_transport\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\pluginlib\;CMake Files\..\..\..\..\opt\ros\kinetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\class_loader\;CMake Files\..\..\..\..\opt\ros\kinetic\share\class_loader\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roslib\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roslib\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rospack\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rospack\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\interactive_markers\;CMake Files\..\..\..\..\opt\ros\kinetic\share\interactive_markers\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\visualization_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\visualization_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\laser_geometry\;CMake Files\..\..\..\..\opt\ros\kinetic\share\laser_geometry\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\map_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\map_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\nav_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\nav_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\resource_retriever\;CMake Files\..\..\..\..\opt\ros\kinetic\share\resource_retriever\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rqt_gui\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rqt_gui\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rqt_gui_cpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rqt_gui_cpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\qt_gui\;CMake Files\..\..\..\..\opt\ros\kinetic\share\qt_gui\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\qt_gui_cpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\qt_gui_cpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\nodelet\;CMake Files\..\..\..\..\opt\ros\kinetic\share\nodelet\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\bondcpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\bondcpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\bond\;CMake Files\..\..\..\..\opt\ros\kinetic\share\bond\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\smclib\;CMake Files\..\..\..\..\opt\ros\kinetic\share\smclib\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_core\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_core\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\eigen_conversions\;CMake Files\..\..\..\..\opt\ros\kinetic\share\eigen_conversions\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\eigen_stl_containers\;CMake Files\..\..\..\..\opt\ros\kinetic\share\eigen_stl_containers\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geometric_shapes\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geometric_shapes\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\random_numbers\;CMake Files\..\..\..\..\opt\ros\kinetic\share\random_numbers\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\shape_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\shape_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\trajectory_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\trajectory_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\object_recognition_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\object_recognition_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\octomap_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\octomap_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\srdfdom\;CMake Files\..\..\..\..\opt\ros\kinetic\share\srdfdom\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\urdfdom_py\;CMake Files\..\..\..\..\opt\ros\kinetic\share\urdfdom_py\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_planning_interface\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_planning_interface\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_planning\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_planning\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_perception\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_perception\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_warehouse\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_warehouse\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\warehouse_ros\;CMake Files\..\..\..\..\opt\ros\kinetic\share\warehouse_ros\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_manipulation\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_manipulation\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_move_group\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_move_group\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\industrial_trajectory_filters\;CMake Files\..\..\..\..\opt\ros\kinetic\share\industrial_trajectory_filters\cmake\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\src\;CMake Files\..\..\..\..\usr\src\gtest\;CMake Files\..\..\..\..\usr\src\gtest\cmake\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;CMake Files\cmake-build-debug\scara_and_rt_moveit_config\;CMake Files\cmake-build-debug\scara_and_rt_moveit_config\catkin_generated\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_control\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_control\catkin_generated\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_description\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_description\catkin_generated\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_gazebo\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_gazebo\catkin_generated\;CMake Files\cmake-build-debug\can_interface\;CMake Files\cmake-build-debug\can_interface\catkin_generated\;CMake Files\cmake-build-debug\scara_gui\;CMake Files\cmake-build-debug\scara_gui\catkin_generated\;CMake Files\cmake-build-debug\scara_msgs\;CMake Files\cmake-build-debug\scara_msgs\catkin_generated\;CMake Files\cmake-build-debug\scara_msgs\cmake\;CMake Files\cmake-build-debug\devel\;CMake Files\cmake-build-debug\devel\share\;CMake Files\cmake-build-debug\devel\share\scara_msgs\;CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\;CMake Files\cmake-build-debug\devel\share\scara_v2_moveit_api\;CMake Files\cmake-build-debug\devel\share\scara_v2_moveit_api\cmake\;CMake Files\cmake-build-debug\senso_scara_demo\;CMake Files\cmake-build-debug\senso_scara_demo\catkin_generated\;CMake Files\cmake-build-debug\scara_v2_moveit_api\;CMake Files\cmake-build-debug\scara_v2_moveit_api\catkin_generated\;CMake Files\cmake-build-debug\scara_v2_moveit_api\cmake\;CMake Files\scara_and_rt_moveit_config\;CMake Files\gazebo_scara_and_rt\;CMake Files\gazebo_scara_and_rt\scara_v2_full_control\;CMake Files\gazebo_scara_and_rt\scara_v2_full_description\;CMake Files\gazebo_scara_and_rt\scara_v2_full_gazebo\;CMake Files\can_interface\;CMake Files\scara_gui\;CMake Files\scara_msgs\;CMake Files\senso_scara_demo\;CMake Files\scara_v2_moveit_api\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\opt\ros\kinetic\;CMake Files\..\..\..\..\opt\ros\kinetic\share\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\opt\ros\kinetic\share\joint_state_publisher\;CMake Files\..\..\..\..\opt\ros\kinetic\share\joint_state_publisher\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\robot_state_publisher\;CMake Files\..\..\..\..\opt\ros\kinetic\share\robot_state_publisher\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\;CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_runtime\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rostime\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rostime\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_ros\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\actionlib\;CMake Files\..\..\..\..\opt\ros\kinetic\share\actionlib\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\actionlib_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genmsg\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genmsg\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\gencpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\gencpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geneus\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geneus\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genlisp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genlisp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\gennodejs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\gennodejs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genpy\;CMake Files\..\..\..\..\opt\ros\kinetic\share\genpy\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_filters\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_filters\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_generation\;CMake Files\..\..\..\..\opt\ros\kinetic\share\message_generation\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_py\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_py\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rospy\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rospy\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_kdl\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf2_kdl\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\kdl_parser\;CMake Files\..\..\..\..\opt\ros\kinetic\share\kdl_parser\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\urdf\;CMake Files\..\..\..\..\opt\ros\kinetic\share\urdf\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole_bridge\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole_bridge\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rviz\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rviz\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\image_transport\;CMake Files\..\..\..\..\opt\ros\kinetic\share\image_transport\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\pluginlib\;CMake Files\..\..\..\..\opt\ros\kinetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\class_loader\;CMake Files\..\..\..\..\opt\ros\kinetic\share\class_loader\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roslib\;CMake Files\..\..\..\..\opt\ros\kinetic\share\roslib\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rospack\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rospack\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\interactive_markers\;CMake Files\..\..\..\..\opt\ros\kinetic\share\interactive_markers\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf\;CMake Files\..\..\..\..\opt\ros\kinetic\share\tf\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\visualization_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\visualization_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\laser_geometry\;CMake Files\..\..\..\..\opt\ros\kinetic\share\laser_geometry\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\map_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\map_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\nav_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\nav_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\resource_retriever\;CMake Files\..\..\..\..\opt\ros\kinetic\share\resource_retriever\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rqt_gui\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rqt_gui\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rqt_gui_cpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\rqt_gui_cpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\qt_gui\;CMake Files\..\..\..\..\opt\ros\kinetic\share\qt_gui\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\qt_gui_cpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\qt_gui_cpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\nodelet\;CMake Files\..\..\..\..\opt\ros\kinetic\share\nodelet\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\bondcpp\;CMake Files\..\..\..\..\opt\ros\kinetic\share\bondcpp\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\bond\;CMake Files\..\..\..\..\opt\ros\kinetic\share\bond\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\smclib\;CMake Files\..\..\..\..\opt\ros\kinetic\share\smclib\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_core\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_core\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\eigen_conversions\;CMake Files\..\..\..\..\opt\ros\kinetic\share\eigen_conversions\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\eigen_stl_containers\;CMake Files\..\..\..\..\opt\ros\kinetic\share\eigen_stl_containers\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geometric_shapes\;CMake Files\..\..\..\..\opt\ros\kinetic\share\geometric_shapes\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\random_numbers\;CMake Files\..\..\..\..\opt\ros\kinetic\share\random_numbers\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\shape_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\shape_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\trajectory_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\trajectory_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\object_recognition_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\object_recognition_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\octomap_msgs\;CMake Files\..\..\..\..\opt\ros\kinetic\share\octomap_msgs\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\srdfdom\;CMake Files\..\..\..\..\opt\ros\kinetic\share\srdfdom\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\urdfdom_py\;CMake Files\..\..\..\..\opt\ros\kinetic\share\urdfdom_py\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_planning_interface\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_planning_interface\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_planning\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_planning\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_perception\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_perception\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_warehouse\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_warehouse\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\warehouse_ros\;CMake Files\..\..\..\..\opt\ros\kinetic\share\warehouse_ros\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_manipulation\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_manipulation\cmake\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_move_group\;CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_move_group\cmake\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\src\;CMake Files\..\..\..\..\usr\src\gtest\;CMake Files\..\..\..\..\usr\src\gtest\cmake\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;CMake Files\cmake-build-debug\scara_and_rt_moveit_config\;CMake Files\cmake-build-debug\scara_and_rt_moveit_config\catkin_generated\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_control\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_control\catkin_generated\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_description\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_description\catkin_generated\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_gazebo\;CMake Files\cmake-build-debug\gazebo_scara_and_rt\scara_v2_full_gazebo\catkin_generated\;CMake Files\cmake-build-debug\can_interface\;CMake Files\cmake-build-debug\can_interface\catkin_generated\;CMake Files\cmake-build-debug\scara_msgs\;CMake Files\cmake-build-debug\scara_msgs\catkin_generated\;CMake Files\cmake-build-debug\scara_msgs\cmake\;CMake Files\cmake-build-debug\devel\;CMake Files\cmake-build-debug\devel\share\;CMake Files\cmake-build-debug\devel\share\scara_msgs\;CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\;CMake Files\cmake-build-debug\devel\share\scara_v2_moveit_api\;CMake Files\cmake-build-debug\devel\share\scara_v2_moveit_api\cmake\;CMake Files\cmake-build-debug\scara_gui\;CMake Files\cmake-build-debug\scara_gui\catkin_generated\;CMake Files\cmake-build-debug\senso_scara_demo\;CMake Files\cmake-build-debug\senso_scara_demo\catkin_generated\;CMake Files\cmake-build-debug\torque_sensor\;CMake Files\cmake-build-debug\torque_sensor\catkin_generated\;CMake Files\cmake-build-debug\scara_v2_moveit_api\;CMake Files\cmake-build-debug\scara_v2_moveit_api\catkin_generated\;CMake Files\cmake-build-debug\scara_v2_moveit_api\cmake\;CMake Files\scara_and_rt_moveit_config\;CMake Files\gazebo_scara_and_rt\;CMake Files\gazebo_scara_and_rt\scara_v2_full_control\;CMake Files\gazebo_scara_and_rt\scara_v2_full_description\;CMake Files\gazebo_scara_and_rt\scara_v2_full_gazebo\;CMake Files\can_interface\;CMake Files\scara_msgs\;CMake Files\scara_gui\;CMake Files\senso_scara_demo\;CMake Files\torque_sensor\;CMake Files\scara_v2_moveit_api\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
@@ -17,8 +17,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="gripper_control">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/gripper_control" prefix_auto="0" extension_auto="0"/>
+			<Target title="scara_menu">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/scara_menu" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -29,8 +29,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -41,14 +41,14 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 gripper_control"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_menu"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="gripper_control/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/gripper_control" prefix_auto="0" extension_auto="0"/>
+			<Target title="scara_menu/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/scara_menu" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -59,8 +59,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -71,127 +71,7 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 gripper_control/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="multiple_cube_publisher">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/multiple_cube_publisher" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 multiple_cube_publisher"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="multiple_cube_publisher/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/multiple_cube_publisher" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 multiple_cube_publisher/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="real_scara_torq_sensor">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/real_scara_torq_sensor" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 real_scara_torq_sensor"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="real_scara_torq_sensor/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/real_scara_torq_sensor" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 real_scara_torq_sensor/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_menu/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -209,8 +89,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -239,8 +119,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -257,8 +137,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface5_rt">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface5_rt" prefix_auto="0" extension_auto="0"/>
+			<Target title="real_scara_torq_sensor">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/real_scara_torq_sensor" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -269,8 +149,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -281,14 +161,14 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface5_rt"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 real_scara_torq_sensor"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface5_rt/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface5_rt" prefix_auto="0" extension_auto="0"/>
+			<Target title="real_scara_torq_sensor/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/real_scara_torq_sensor" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -299,8 +179,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -311,14 +191,14 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface5_rt/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 real_scara_torq_sensor/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface4_position_control">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface4_position_control" prefix_auto="0" extension_auto="0"/>
+			<Target title="matlab_communication_tryout">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/matlab_communication_tryout" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -329,8 +209,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -341,14 +221,14 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface4_position_control"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 matlab_communication_tryout"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface4_position_control/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface4_position_control" prefix_auto="0" extension_auto="0"/>
+			<Target title="matlab_communication_tryout/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/matlab_communication_tryout" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -359,8 +239,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -371,14 +251,14 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface4_position_control/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 matlab_communication_tryout/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface3_PICKandPLACE">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface3_PICKandPLACE" prefix_auto="0" extension_auto="0"/>
+			<Target title="gripper_control">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/gripper_control" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -389,8 +269,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -401,14 +281,14 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface3_PICKandPLACE"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 gripper_control"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface3_PICKandPLACE/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface3_PICKandPLACE" prefix_auto="0" extension_auto="0"/>
+			<Target title="gripper_control/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/gripper_control" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -419,8 +299,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -431,14 +311,14 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface3_PICKandPLACE/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 gripper_control/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface2">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface2" prefix_auto="0" extension_auto="0"/>
+			<Target title="multiple_cube_publisher">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/multiple_cube_publisher" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -449,8 +329,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -461,14 +341,14 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface2"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 multiple_cube_publisher"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="move_group_interface2/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface2" prefix_auto="0" extension_auto="0"/>
+			<Target title="multiple_cube_publisher/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/multiple_cube_publisher" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -479,8 +359,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -491,97 +371,7 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface2/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="move_group_interface1">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface1"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="move_group_interface1/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface1/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="scara_v2_moveit_api_genpy">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_v2_moveit_api_genpy"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="scara_v2_moveit_api_generate_messages_py">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_v2_moveit_api_generate_messages_py"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="scara_v2_moveit_api_generate_messages_nodejs">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_v2_moveit_api_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 multiple_cube_publisher/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -599,8 +389,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -629,8 +419,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -667,11 +457,71 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose">
+			<Target title="trajectory_msgs_generate_messages_lisp">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 trajectory_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="move_group_interface2">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="move_group_interface2/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface2/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -699,8 +549,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -729,8 +579,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -752,6 +602,66 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 trajectory_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="IK_test_real_scara">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/IK_test_real_scara" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 IK_test_real_scara"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="IK_test_real_scara/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/IK_test_real_scara" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 IK_test_real_scara/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -837,21 +747,71 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="moveit_msgs_generate_messages_eus">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
+			<Target title="move_group_interface4_position_control">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface4_position_control" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 moveit_msgs_generate_messages_eus"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface4_position_control"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="control_msgs_generate_messages_py">
+			<Target title="move_group_interface4_position_control/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface4_position_control" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface4_position_control/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="moveit_msgs_generate_messages_eus">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 control_msgs_generate_messages_py"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 moveit_msgs_generate_messages_eus"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -887,6 +847,16 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="scara_v2_moveit_api_generate_messages_nodejs">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_v2_moveit_api_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="move_group_interface6_async_PICKandPLACE">
 				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface6_async_PICKandPLACE" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
@@ -899,8 +869,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -929,8 +899,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -977,6 +947,66 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="move_group_interface5_rt">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface5_rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface5_rt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="move_group_interface5_rt/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface5_rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface5_rt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="linear_interpolation">
 				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/linear_interpolation" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
@@ -989,8 +1019,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -1019,8 +1049,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -1047,81 +1077,71 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="move_group_interface1">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="move_group_interface1/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="moveit_msgs_generate_messages_nodejs">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 moveit_msgs_generate_messages_nodejs"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="matlab_ROS_com_tryout">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/matlab_ROS_com_tryout" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 matlab_ROS_com_tryout"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="matlab_ROS_com_tryout/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/matlab_ROS_com_tryout" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 matlab_ROS_com_tryout/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="moveit_ros_planning_gencfg">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 moveit_ros_planning_gencfg"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1157,71 +1177,71 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters">
+			<Target title="matlab_ROS_com_tryout">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/matlab_ROS_com_tryout" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 matlab_ROS_com_tryout"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="matlab_ROS_com_tryout/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/matlab_ROS_com_tryout" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 matlab_ROS_com_tryout/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="moveit_ros_planning_gencfg">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="menu_tryout_1">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/menu_tryout_1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 menu_tryout_1"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="menu_tryout_1/fast">
-				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/menu_tryout_1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 menu_tryout_1/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 moveit_ros_planning_gencfg"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1247,41 +1267,81 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="control_msgs_generate_messages_cpp">
+			<Target title="scara_v2_moveit_api_generate_messages_py">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 control_msgs_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_v2_moveit_api_generate_messages_py"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="trajectory_msgs_generate_messages_lisp">
+			<Target title="scara_v2_moveit_api_genpy">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 trajectory_msgs_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_v2_moveit_api_genpy"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="control_msgs_generate_messages_lisp">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
+			<Target title="move_group_interface3_PICKandPLACE">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface3_PICKandPLACE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 control_msgs_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface3_PICKandPLACE"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="control_msgs_generate_messages_nodejs">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
+			<Target title="move_group_interface3_PICKandPLACE/fast">
+				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/move_group_interface3_PICKandPLACE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;scara_v2_moveit_api&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 control_msgs_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 move_group_interface3_PICKandPLACE/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1292,16 +1352,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 scara_v2_moveit_api_generate_messages"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1327,36 +1377,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="control_msgs_generate_messages_eus">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 control_msgs_generate_messages_eus"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="IK_test">
 				<Option output="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api/IK_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/scara_v2_moveit_api"/>
@@ -1369,8 +1389,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -1399,8 +1419,8 @@
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/viktor/catkin_ws/src/cmake-build-debug/devel/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -1481,6 +1501,9 @@
 		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/IK_test.cpp">
 			<Option target="IK_test"/>
 		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/IK_test_real_scara.cpp">
+			<Option target="IK_test_real_scara"/>
+		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/cube_publisher.cpp">
 			<Option target="cube_publisher"/>
 		</Unit>
@@ -1496,8 +1519,8 @@
 		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/matlab_ROS_com_tryout.cpp">
 			<Option target="matlab_ROS_com_tryout"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/menu_tryout_1.cpp">
-			<Option target="menu_tryout_1"/>
+		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/matlab_communication_tryout.cpp">
+			<Option target="matlab_communication_tryout"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/move_group_interface1.cpp">
 			<Option target="move_group_interface1"/>
@@ -1522,6 +1545,9 @@
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/real_scara_torq_sensor.cpp">
 			<Option target="real_scara_torq_sensor"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/scara_menu.cpp">
+			<Option target="scara_menu"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/src/tf_readout.cpp">
 			<Option target="tf_readout"/>
@@ -1617,6 +1643,18 @@
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/interrogate_setup_dot_py.py">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/catkinConfig-version.cmake">
@@ -2162,6 +2200,42 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig-version.cmake.in">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
 		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkg.context.pc.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig-version.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkg.context.pc.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig-version.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkg.context.pc.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig-version.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkg.context.pc.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig-version.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/em/order_packages.cmake.em">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\"/>
 		</Unit>
@@ -2273,6 +2347,18 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/em/pkg.pc.em">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\"/>
 		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/em/pkg.pc.em">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/em/pkg.pc.em">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/em/pkg.pc.em">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/catkin/cmake/em/pkg.pc.em">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\"/>
+		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/joint_state_publisher/cmake/joint_state_publisherConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\joint_state_publisher\cmake\"/>
 		</Unit>
@@ -2357,6 +2443,24 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
 		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscpp-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscpp-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
+		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
 		</Unit>
@@ -2399,15 +2503,6 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscpp-msg-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
-		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
 		</Unit>
@@ -2417,17 +2512,14 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscpp-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscppConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp/cmake/roscpp-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
@@ -2488,6 +2580,42 @@
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/cpp_common/cmake/cpp_commonConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/message_runtime/cmake/message_runtimeConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\message_runtime\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/message_runtime/cmake/message_runtimeConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\message_runtime\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/message_runtime/cmake/message_runtimeConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\message_runtime\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/message_runtime/cmake/message_runtimeConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\message_runtime\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/message_runtime/cmake/message_runtimeConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\message_runtime\cmake\"/>
@@ -2633,23 +2761,17 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_serialization/cmake/roscpp_serializationConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_serialization/cmake/roscpp_serializationConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_serialization/cmake/roscpp_serializationConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_serialization/cmake/roscpp_serializationConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_serialization/cmake/roscpp_serializationConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
@@ -2704,6 +2826,48 @@
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rostime/cmake/rostimeConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rostime\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rostime/cmake/rostimeConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rostime\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rostime/cmake/rostimeConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rostime\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rostime/cmake/rostimeConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rostime\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rostime/cmake/rostimeConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rostime\cmake\"/>
@@ -2884,6 +3048,42 @@
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosconsole/cmake/rosconsole-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosconsole/cmake/rosconsoleConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosconsole/cmake/rosconsoleConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosconsole/cmake/rosconsole-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosconsole/cmake/rosconsoleConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosconsole/cmake/rosconsoleConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosconsole/cmake/rosconsole-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosgraph_msgs/cmake/rosgraph_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosgraph_msgs/cmake/rosgraph_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosgraph_msgs/cmake/rosgraph_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosgraph_msgs/cmake/rosgraph_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosgraph_msgs/cmake/rosgraph_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosgraph_msgs/cmake/rosgraph_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/rosgraph_msgs/cmake/rosgraph_msgsConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\"/>
@@ -3000,6 +3200,54 @@
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgs-msg-paths.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
@@ -3080,39 +3328,6 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgs-msg-paths.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgs-msg-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgs-msg-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
-		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
 		</Unit>
@@ -3172,6 +3387,39 @@
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/std_msgs/cmake/std_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/xmlrpcpp/cmake/xmlrpcppConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/xmlrpcpp/cmake/xmlrpcppConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/xmlrpcpp/cmake/xmlrpcpp-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/xmlrpcpp/cmake/xmlrpcppConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/xmlrpcpp/cmake/xmlrpcppConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/xmlrpcpp/cmake/xmlrpcpp-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/xmlrpcpp/cmake/xmlrpcppConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\"/>
@@ -3977,6 +4225,15 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
 		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/geometry_msgs/cmake/geometry_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
+		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/geometry_msgs/cmake/geometry_msgs-msg-paths.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
 		</Unit>
@@ -3999,6 +4256,15 @@
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/geometry_msgs/cmake/geometry_msgs-msg-paths.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/geometry_msgs/cmake/geometry_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/message_filters/cmake/message_filtersConfig-version.cmake">
@@ -4553,6 +4819,15 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/sensor_msgs/cmake/sensor_msgsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
 		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/sensor_msgs/cmake/sensor_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/sensor_msgs/cmake/sensor_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/sensor_msgs/cmake/sensor_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
+		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/sensor_msgs/cmake/sensor_msgs-msg-paths.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
 		</Unit>
@@ -4581,6 +4856,15 @@
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/sensor_msgs/cmake/sensor_msgs-msg-paths.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/sensor_msgs/cmake/sensor_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/sensor_msgs/cmake/sensor_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/sensor_msgs/cmake/sensor_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/interactive_markers/cmake/interactive_markersConfig-version.cmake">
@@ -4958,9 +5242,6 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/trajectory_msgs/cmake/trajectory_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\trajectory_msgs\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/trajectory_msgs/cmake/trajectory_msgs-msg-paths.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\trajectory_msgs\cmake\"/>
-		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/trajectory_msgs/cmake/trajectory_msgsConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\trajectory_msgs\cmake\"/>
 		</Unit>
@@ -4970,9 +5251,6 @@
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/trajectory_msgs/cmake/trajectory_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\trajectory_msgs\cmake\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/trajectory_msgs/cmake/trajectory_msgs-msg-paths.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\trajectory_msgs\cmake\"/>
-		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/object_recognition_msgs/cmake/object_recognition_msgsConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\object_recognition_msgs\cmake\"/>
 		</Unit>
@@ -5128,42 +5406,6 @@
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/moveit_ros_move_group/cmake/moveit_ros_move_groupConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\moveit_ros_move_group\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/control_msgs/cmake/control_msgsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/control_msgs/cmake/control_msgsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/control_msgs/cmake/control_msgs-msg-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/control_msgs/cmake/control_msgs-msg-paths.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/control_msgs/cmake/control_msgsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/control_msgs/cmake/control_msgsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/control_msgs/cmake/control_msgs-msg-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/control_msgs/cmake/control_msgs-msg-paths.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\control_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/industrial_trajectory_filters/cmake/industrial_trajectory_filtersConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\industrial_trajectory_filters\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/industrial_trajectory_filters/cmake/industrial_trajectory_filtersConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\industrial_trajectory_filters\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/industrial_trajectory_filters/cmake/industrial_trajectory_filtersConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\industrial_trajectory_filters\cmake\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/../../../../opt/ros/kinetic/share/industrial_trajectory_filters/cmake/industrial_trajectory_filtersConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\industrial_trajectory_filters\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/../../../../usr/src/gtest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\src\gtest\"/>
@@ -5312,24 +5554,6 @@
 		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/catkin_generated/package.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\can_interface\catkin_generated\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/ordered_paths.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/ordered_paths.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/package.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/ordered_paths.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/ordered_paths.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/package.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
-		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/catkin_generated/ordered_paths.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\scara_msgs\catkin_generated\"/>
 		</Unit>
@@ -5378,7 +5602,25 @@
 		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\"/>
 		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\"/>
+		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgs-msg-paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\devel\share\scara_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgs-msg-paths.cmake">
@@ -5402,6 +5644,24 @@
 		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/scara_v2_moveit_api/cmake/scara_v2_moveit_api-msg-paths.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\devel\share\scara_v2_moveit_api\cmake\"/>
 		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/package.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui/catkin_generated/package.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\scara_gui\catkin_generated\"/>
+		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/senso_scara_demo/catkin_generated/ordered_paths.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\senso_scara_demo\catkin_generated\"/>
 		</Unit>
@@ -5419,6 +5679,24 @@
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/senso_scara_demo/catkin_generated/package.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\senso_scara_demo\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/torque_sensor/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\torque_sensor\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/torque_sensor/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\torque_sensor\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/torque_sensor/catkin_generated/package.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\torque_sensor\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/torque_sensor/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\torque_sensor\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/torque_sensor/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\torque_sensor\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/torque_sensor/catkin_generated/package.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\torque_sensor\catkin_generated\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/catkin_generated/ordered_paths.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\scara_v2_moveit_api\catkin_generated\"/>
@@ -5516,18 +5794,6 @@
 		<Unit filename="/home/viktor/catkin_ws/src/can_interface/package.xml">
 			<Option virtualFolder="CMake Files\can_interface\"/>
 		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/scara_gui/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\scara_gui\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/scara_gui/package.xml">
-			<Option virtualFolder="CMake Files\scara_gui\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/scara_gui/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\scara_gui\"/>
-		</Unit>
-		<Unit filename="/home/viktor/catkin_ws/src/scara_gui/package.xml">
-			<Option virtualFolder="CMake Files\scara_gui\"/>
-		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/scara_msgs/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\scara_msgs\"/>
 		</Unit>
@@ -5540,6 +5806,18 @@
 		<Unit filename="/home/viktor/catkin_ws/src/scara_msgs/package.xml">
 			<Option virtualFolder="CMake Files\scara_msgs\"/>
 		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/scara_gui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\scara_gui\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/scara_gui/package.xml">
+			<Option virtualFolder="CMake Files\scara_gui\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/scara_gui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\scara_gui\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/scara_gui/package.xml">
+			<Option virtualFolder="CMake Files\scara_gui\"/>
+		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/senso_scara_demo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\senso_scara_demo\"/>
 		</Unit>
@@ -5551,6 +5829,18 @@
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/senso_scara_demo/package.xml">
 			<Option virtualFolder="CMake Files\senso_scara_demo\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/torque_sensor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\torque_sensor\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/torque_sensor/package.xml">
+			<Option virtualFolder="CMake Files\torque_sensor\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/torque_sensor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\torque_sensor\"/>
+		</Unit>
+		<Unit filename="/home/viktor/catkin_ws/src/torque_sensor/package.xml">
+			<Option virtualFolder="CMake Files\torque_sensor\"/>
 		</Unit>
 		<Unit filename="/home/viktor/catkin_ws/src/scara_v2_moveit_api/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\scara_v2_moveit_api\"/>

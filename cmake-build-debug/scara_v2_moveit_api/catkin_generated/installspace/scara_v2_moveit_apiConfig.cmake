@@ -153,7 +153,7 @@ foreach(t ${scara_v2_moveit_api_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "moveit_core;moveit_ros_planning_interface;message_runtime;std_msgs;sensor_msgs;control_msgs")
+set(depends "moveit_core;moveit_ros_planning_interface;message_runtime;std_msgs;sensor_msgs")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

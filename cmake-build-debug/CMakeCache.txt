@@ -343,9 +343,6 @@ catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
 
-//The directory containing a CMake configuration file for control_msgs.
-control_msgs_DIR:PATH=/opt/ros/kinetic/share/control_msgs/cmake
-
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 
@@ -407,9 +404,6 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 
-//The directory containing a CMake configuration file for industrial_trajectory_filters.
-industrial_trajectory_filters_DIR:PATH=/opt/ros/kinetic/share/industrial_trajectory_filters/cmake
-
 //The directory containing a CMake configuration file for interactive_markers.
 interactive_markers_DIR:PATH=/opt/ros/kinetic/share/interactive_markers/cmake
 
@@ -423,7 +417,7 @@ kdl_parser_DIR:PATH=/opt/ros/kinetic/share/kdl_parser/cmake
 laser_geometry_DIR:PATH=/opt/ros/kinetic/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libindustrial_trajectory_filters.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libtf2.so
 
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/kinetic/share/map_msgs/cmake
@@ -457,9 +451,6 @@ moveit_ros_planning_DIR:PATH=/opt/ros/kinetic/share/moveit_ros_planning/cmake
 
 //The directory containing a CMake configuration file for moveit_ros_planning_interface.
 moveit_ros_planning_interface_DIR:PATH=/opt/ros/kinetic/share/moveit_ros_planning_interface/cmake
-
-//The directory containing a CMake configuration file for moveit_ros_planning_scene_monitor.
-moveit_ros_planning_scene_monitor_DIR:PATH=moveit_ros_planning_scene_monitor_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for moveit_ros_warehouse.
 moveit_ros_warehouse_DIR:PATH=/opt/ros/kinetic/share/moveit_ros_warehouse/cmake
@@ -545,9 +536,6 @@ scara_and_rt_moveit_config_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/scara_an
 //Value Computed by CMake
 scara_gui_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/scara_gui
 
-//Dependencies for the target
-scara_gui_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/librqt_gui_cpp.so;general;/opt/ros/kinetic/lib/libqt_gui_cpp.so;general;/opt/ros/kinetic/lib/libnodeletlib.so;general;/opt/ros/kinetic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;Qt5::Widgets;
-
 //Value Computed by CMake
 scara_gui_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/scara_gui
 
@@ -559,18 +547,6 @@ scara_msgs_DIR:PATH=/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/sca
 
 //Value Computed by CMake
 scara_msgs_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/scara_msgs
-
-//Value Computed by CMake
-scara_ros_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/SCARA_Simulink/SCARA_ROS_ert_rtw
-
-//Value Computed by CMake
-scara_ros_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/SCARA_Simulink/SCARA_ROS_ert_rtw
-
-//Value Computed by CMake
-scara_ros_test_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/SCARA_Simulink/SCARA_ROS_test_ert_rtw
-
-//Value Computed by CMake
-scara_ros_test_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/SCARA_Simulink/SCARA_ROS_test_ert_rtw
 
 //Value Computed by CMake
 scara_v2_full_control_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_control
@@ -634,6 +610,12 @@ tf2_ros_DIR:PATH=/opt/ros/kinetic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/kinetic/share/tf/cmake
+
+//Value Computed by CMake
+torque_sensor_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/torque_sensor
+
+//Value Computed by CMake
+torque_sensor_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/torque_sensor
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/kinetic/share/trajectory_msgs/cmake
@@ -795,7 +777,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

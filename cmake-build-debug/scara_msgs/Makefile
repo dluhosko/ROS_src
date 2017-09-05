@@ -181,6 +181,21 @@ scara_msgs_genpy/fast:
 .PHONY : scara_msgs_genpy/fast
 
 # Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+scara_msgs_gennodejs: scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+
+.PHONY : scara_msgs_gennodejs
+
+# fast build rule for target.
+scara_msgs_gennodejs/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build
+.PHONY : scara_msgs_gennodejs/fast
+
+# Convenience name for target.
 scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule
@@ -196,21 +211,6 @@ scara_msgs_generate_messages/fast:
 .PHONY : scara_msgs_generate_messages/fast
 
 # Convenience name for target.
-scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule
-.PHONY : scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule
-
-# Convenience name for target.
-_scara_msgs_generate_messages_check_deps_pose_and_gripperState: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule
-
-.PHONY : _scara_msgs_generate_messages_check_deps_pose_and_gripperState
-
-# fast build rule for target.
-_scara_msgs_generate_messages_check_deps_pose_and_gripperState/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/build.make scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/build
-.PHONY : _scara_msgs_generate_messages_check_deps_pose_and_gripperState/fast
-
-# Convenience name for target.
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule
@@ -224,6 +224,21 @@ scara_msgs_generate_messages_py: scara_msgs/CMakeFiles/scara_msgs_generate_messa
 scara_msgs_generate_messages_py/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build
 .PHONY : scara_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule
+.PHONY : scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule
+
+# Convenience name for target.
+_scara_msgs_generate_messages_check_deps_robot_info: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule
+
+.PHONY : _scara_msgs_generate_messages_check_deps_robot_info
+
+# fast build rule for target.
+_scara_msgs_generate_messages_check_deps_robot_info/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/build.make scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/build
+.PHONY : _scara_msgs_generate_messages_check_deps_robot_info/fast
 
 # Convenience name for target.
 scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/rule:
@@ -256,19 +271,19 @@ scara_msgs_genlisp/fast:
 .PHONY : scara_msgs_genlisp/fast
 
 # Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule
+.PHONY : scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule
 
 # Convenience name for target.
-scara_msgs_gennodejs: scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+_scara_msgs_generate_messages_check_deps_pose_and_gripperState: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule
 
-.PHONY : scara_msgs_gennodejs
+.PHONY : _scara_msgs_generate_messages_check_deps_pose_and_gripperState
 
 # fast build rule for target.
-scara_msgs_gennodejs/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build
-.PHONY : scara_msgs_gennodejs/fast
+_scara_msgs_generate_messages_check_deps_pose_and_gripperState/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/build.make scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/build
+.PHONY : _scara_msgs_generate_messages_check_deps_pose_and_gripperState/fast
 
 # Convenience name for target.
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/rule:
@@ -355,15 +370,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... install/local"
 	@echo "... scara_msgs_genpy"
+	@echo "... scara_msgs_gennodejs"
 	@echo "... scara_msgs_generate_messages"
-	@echo "... _scara_msgs_generate_messages_check_deps_pose_and_gripperState"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... scara_msgs_generate_messages_py"
+	@echo "... _scara_msgs_generate_messages_check_deps_robot_info"
 	@echo "... scara_msgs_gencpp"
 	@echo "... install"
 	@echo "... scara_msgs_genlisp"
-	@echo "... scara_msgs_gennodejs"
+	@echo "... _scara_msgs_generate_messages_check_deps_pose_and_gripperState"
 	@echo "... scara_msgs_generate_messages_eus"
 	@echo "... scara_msgs_generate_messages_lisp"
 	@echo "... scara_msgs_generate_messages_cpp"

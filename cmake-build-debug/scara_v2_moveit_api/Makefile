@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/viktor/catkin_ws/src/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -101,15 +90,16 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : list_install_components/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -121,6 +111,16 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target test
 test:
@@ -166,6 +166,66 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/scara_menu.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_menu.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/scara_menu.dir/rule
+
+# Convenience name for target.
+scara_menu: scara_v2_moveit_api/CMakeFiles/scara_menu.dir/rule
+
+.PHONY : scara_menu
+
+# fast build rule for target.
+scara_menu/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_menu.dir/build
+.PHONY : scara_menu/fast
+
+# Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
+
+# Convenience name for target.
+tf_readout: scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
+
+.PHONY : tf_readout
+
+# fast build rule for target.
+tf_readout/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build
+.PHONY : tf_readout/fast
+
+# Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule
+
+# Convenience name for target.
+real_scara_torq_sensor: scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule
+
+.PHONY : real_scara_torq_sensor
+
+# fast build rule for target.
+real_scara_torq_sensor/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build
+.PHONY : real_scara_torq_sensor/fast
+
+# Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/rule
+
+# Convenience name for target.
+matlab_communication_tryout: scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/rule
+
+.PHONY : matlab_communication_tryout
+
+# fast build rule for target.
+matlab_communication_tryout/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/build
+.PHONY : matlab_communication_tryout/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/gripper_control.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/gripper_control.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/gripper_control.dir/rule
@@ -194,156 +254,6 @@ multiple_cube_publisher: scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.
 multiple_cube_publisher/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/build.make scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/build
 .PHONY : multiple_cube_publisher/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule
-
-# Convenience name for target.
-real_scara_torq_sensor: scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/rule
-
-.PHONY : real_scara_torq_sensor
-
-# fast build rule for target.
-real_scara_torq_sensor/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build
-.PHONY : real_scara_torq_sensor/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
-
-# Convenience name for target.
-tf_readout: scara_v2_moveit_api/CMakeFiles/tf_readout.dir/rule
-
-.PHONY : tf_readout
-
-# fast build rule for target.
-tf_readout/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build
-.PHONY : tf_readout/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/rule
-
-# Convenience name for target.
-move_group_interface5_rt: scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/rule
-
-.PHONY : move_group_interface5_rt
-
-# fast build rule for target.
-move_group_interface5_rt/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/build
-.PHONY : move_group_interface5_rt/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/rule
-
-# Convenience name for target.
-move_group_interface4_position_control: scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/rule
-
-.PHONY : move_group_interface4_position_control
-
-# fast build rule for target.
-move_group_interface4_position_control/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/build
-.PHONY : move_group_interface4_position_control/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/rule
-
-# Convenience name for target.
-move_group_interface3_PICKandPLACE: scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/rule
-
-.PHONY : move_group_interface3_PICKandPLACE
-
-# fast build rule for target.
-move_group_interface3_PICKandPLACE/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/build
-.PHONY : move_group_interface3_PICKandPLACE/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/rule
-
-# Convenience name for target.
-move_group_interface2: scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/rule
-
-.PHONY : move_group_interface2
-
-# fast build rule for target.
-move_group_interface2/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/build
-.PHONY : move_group_interface2/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/rule
-
-# Convenience name for target.
-move_group_interface1: scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/rule
-
-.PHONY : move_group_interface1
-
-# fast build rule for target.
-move_group_interface1/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/build
-.PHONY : move_group_interface1/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/rule
-
-# Convenience name for target.
-scara_v2_moveit_api_genpy: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/rule
-
-.PHONY : scara_v2_moveit_api_genpy
-
-# fast build rule for target.
-scara_v2_moveit_api_genpy/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/build
-.PHONY : scara_v2_moveit_api_genpy/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/rule
-
-# Convenience name for target.
-scara_v2_moveit_api_generate_messages_py: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/rule
-
-.PHONY : scara_v2_moveit_api_generate_messages_py
-
-# fast build rule for target.
-scara_v2_moveit_api_generate_messages_py/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build
-.PHONY : scara_v2_moveit_api_generate_messages_py/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-scara_v2_moveit_api_generate_messages_nodejs: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/rule
-
-.PHONY : scara_v2_moveit_api_generate_messages_nodejs
-
-# fast build rule for target.
-scara_v2_moveit_api_generate_messages_nodejs/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build
-.PHONY : scara_v2_moveit_api_generate_messages_nodejs/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/get_and_send_planned_path.dir/rule:
@@ -391,19 +301,34 @@ object_recognition_msgs_generate_messages_nodejs/fast:
 .PHONY : object_recognition_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose.dir/rule
+scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose.dir/rule
+trajectory_msgs_generate_messages_lisp: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose
+.PHONY : trajectory_msgs_generate_messages_lisp
 
 # fast build rule for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose.dir/build.make scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose.dir/build
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose/fast
+trajectory_msgs_generate_messages_lisp/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+.PHONY : trajectory_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/rule
+
+# Convenience name for target.
+move_group_interface2: scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/rule
+
+.PHONY : move_group_interface2
+
+# fast build rule for target.
+move_group_interface2/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/build
+.PHONY : move_group_interface2/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
@@ -449,6 +374,21 @@ trajectory_msgs_generate_messages_eus: scara_v2_moveit_api/CMakeFiles/trajectory
 trajectory_msgs_generate_messages_eus/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
 .PHONY : trajectory_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/rule
+
+# Convenience name for target.
+IK_test_real_scara: scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/rule
+
+.PHONY : IK_test_real_scara
+
+# fast build rule for target.
+IK_test_real_scara/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/build
+.PHONY : IK_test_real_scara/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule:
@@ -571,6 +511,21 @@ object_recognition_msgs_generate_messages_eus/fast:
 .PHONY : object_recognition_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/rule
+
+# Convenience name for target.
+move_group_interface4_position_control: scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/rule
+
+.PHONY : move_group_interface4_position_control
+
+# fast build rule for target.
+move_group_interface4_position_control/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/build
+.PHONY : move_group_interface4_position_control/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
@@ -584,21 +539,6 @@ moveit_msgs_generate_messages_eus: scara_v2_moveit_api/CMakeFiles/moveit_msgs_ge
 moveit_msgs_generate_messages_eus/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build.make scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build
 .PHONY : moveit_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_py.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_py: scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-
-.PHONY : control_msgs_generate_messages_py
-
-# fast build rule for target.
-control_msgs_generate_messages_py/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_py.dir/build
-.PHONY : control_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule:
@@ -644,6 +584,21 @@ octomap_msgs_generate_messages_lisp: scara_v2_moveit_api/CMakeFiles/octomap_msgs
 octomap_msgs_generate_messages_lisp/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build
 .PHONY : octomap_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+scara_v2_moveit_api_generate_messages_nodejs: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/rule
+
+.PHONY : scara_v2_moveit_api_generate_messages_nodejs
+
+# fast build rule for target.
+scara_v2_moveit_api_generate_messages_nodejs/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build
+.PHONY : scara_v2_moveit_api_generate_messages_nodejs/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/rule:
@@ -706,6 +661,21 @@ scara_v2_moveit_api_generate_messages_lisp/fast:
 .PHONY : scara_v2_moveit_api_generate_messages_lisp/fast
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/rule
+
+# Convenience name for target.
+move_group_interface5_rt: scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/rule
+
+.PHONY : move_group_interface5_rt
+
+# fast build rule for target.
+move_group_interface5_rt/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/build
+.PHONY : move_group_interface5_rt/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/linear_interpolation.dir/rule
@@ -736,6 +706,21 @@ shape_msgs_generate_messages_py/fast:
 .PHONY : shape_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/rule
+
+# Convenience name for target.
+move_group_interface1: scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/rule
+
+.PHONY : move_group_interface1
+
+# fast build rule for target.
+move_group_interface1/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/build
+.PHONY : move_group_interface1/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
@@ -749,36 +734,6 @@ moveit_msgs_generate_messages_nodejs: scara_v2_moveit_api/CMakeFiles/moveit_msgs
 moveit_msgs_generate_messages_nodejs/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build
 .PHONY : moveit_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule
-
-# Convenience name for target.
-matlab_ROS_com_tryout: scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule
-
-.PHONY : matlab_ROS_com_tryout
-
-# fast build rule for target.
-matlab_ROS_com_tryout/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build
-.PHONY : matlab_ROS_com_tryout/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
-
-# Convenience name for target.
-moveit_ros_planning_gencfg: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
-
-.PHONY : moveit_ros_planning_gencfg
-
-# fast build rule for target.
-moveit_ros_planning_gencfg/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/build.make scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/build
-.PHONY : moveit_ros_planning_gencfg/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
@@ -826,34 +781,34 @@ octomap_msgs_generate_messages_nodejs/fast:
 .PHONY : octomap_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters.dir/rule
+scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule
 
 # Convenience name for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters.dir/rule
+matlab_ROS_com_tryout: scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/rule
 
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters
+.PHONY : matlab_ROS_com_tryout
 
 # fast build rule for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters.dir/build.make scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters.dir/build
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters/fast
+matlab_ROS_com_tryout/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build
+.PHONY : matlab_ROS_com_tryout/fast
 
 # Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/rule
+scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
 
 # Convenience name for target.
-menu_tryout_1: scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/rule
+moveit_ros_planning_gencfg: scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
 
-.PHONY : menu_tryout_1
+.PHONY : moveit_ros_planning_gencfg
 
 # fast build rule for target.
-menu_tryout_1/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/build.make scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/build
-.PHONY : menu_tryout_1/fast
+moveit_ros_planning_gencfg/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/build.make scara_v2_moveit_api/CMakeFiles/moveit_ros_planning_gencfg.dir/build
+.PHONY : moveit_ros_planning_gencfg/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genlisp.dir/rule:
@@ -886,64 +841,49 @@ moveit_ros_manipulation_gencfg/fast:
 .PHONY : moveit_ros_manipulation_gencfg/fast
 
 # Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/rule
 
 # Convenience name for target.
-control_msgs_generate_messages_cpp: scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
+scara_v2_moveit_api_generate_messages_py: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/rule
 
-.PHONY : control_msgs_generate_messages_cpp
+.PHONY : scara_v2_moveit_api_generate_messages_py
 
 # fast build rule for target.
-control_msgs_generate_messages_cpp/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
-.PHONY : control_msgs_generate_messages_cpp/fast
+scara_v2_moveit_api_generate_messages_py/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build
+.PHONY : scara_v2_moveit_api_generate_messages_py/fast
 
 # Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_lisp: scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+scara_v2_moveit_api_genpy: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/rule
 
-.PHONY : trajectory_msgs_generate_messages_lisp
+.PHONY : scara_v2_moveit_api_genpy
 
 # fast build rule for target.
-trajectory_msgs_generate_messages_lisp/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
-.PHONY : trajectory_msgs_generate_messages_lisp/fast
+scara_v2_moveit_api_genpy/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir/build
+.PHONY : scara_v2_moveit_api_genpy/fast
 
 # Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule
+scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/rule
 
 # Convenience name for target.
-control_msgs_generate_messages_lisp: scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule
+move_group_interface3_PICKandPLACE: scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/rule
 
-.PHONY : control_msgs_generate_messages_lisp
+.PHONY : move_group_interface3_PICKandPLACE
 
 # fast build rule for target.
-control_msgs_generate_messages_lisp/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_lisp.dir/build
-.PHONY : control_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_nodejs: scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : control_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-control_msgs_generate_messages_nodejs/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build
-.PHONY : control_msgs_generate_messages_nodejs/fast
+move_group_interface3_PICKandPLACE/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/build.make scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/build
+.PHONY : move_group_interface3_PICKandPLACE/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages.dir/rule:
@@ -959,21 +899,6 @@ scara_v2_moveit_api_generate_messages: scara_v2_moveit_api/CMakeFiles/scara_v2_m
 scara_v2_moveit_api_generate_messages/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages.dir/build
 .PHONY : scara_v2_moveit_api_generate_messages/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands.dir/rule
-
-# Convenience name for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands.dir/rule
-
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands
-
-# fast build rule for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands.dir/build.make scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands.dir/build
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_gennodejs.dir/rule:
@@ -1004,51 +929,6 @@ _scara_v2_moveit_api_generate_messages_check_deps_SimpleService: scara_v2_moveit
 _scara_v2_moveit_api_generate_messages_check_deps_SimpleService/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_SimpleService.dir/build.make scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_SimpleService.dir/build
 .PHONY : _scara_v2_moveit_api_generate_messages_check_deps_SimpleService/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values.dir/rule
-
-# Convenience name for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values.dir/rule
-
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values
-
-# fast build rule for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values.dir/build.make scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values.dir/build
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_eus.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_eus: scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
-
-.PHONY : control_msgs_generate_messages_eus
-
-# fast build rule for target.
-control_msgs_generate_messages_eus/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_eus.dir/build.make scara_v2_moveit_api/CMakeFiles/control_msgs_generate_messages_eus.dir/build
-.PHONY : control_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info.dir/rule
-
-# Convenience name for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info.dir/rule
-
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info
-
-# fast build rule for target.
-_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info.dir/build.make scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info.dir/build
-.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info/fast
 
 # Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/IK_test.dir/rule:
@@ -1181,6 +1061,33 @@ src/IK_test.s: src/IK_test.cpp.s
 src/IK_test.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test.dir/src/IK_test.cpp.s
 .PHONY : src/IK_test.cpp.s
+
+src/IK_test_real_scara.o: src/IK_test_real_scara.cpp.o
+
+.PHONY : src/IK_test_real_scara.o
+
+# target to build an object file
+src/IK_test_real_scara.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/src/IK_test_real_scara.cpp.o
+.PHONY : src/IK_test_real_scara.cpp.o
+
+src/IK_test_real_scara.i: src/IK_test_real_scara.cpp.i
+
+.PHONY : src/IK_test_real_scara.i
+
+# target to preprocess a source file
+src/IK_test_real_scara.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/src/IK_test_real_scara.cpp.i
+.PHONY : src/IK_test_real_scara.cpp.i
+
+src/IK_test_real_scara.s: src/IK_test_real_scara.cpp.s
+
+.PHONY : src/IK_test_real_scara.s
+
+# target to generate assembly for a file
+src/IK_test_real_scara.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/build.make scara_v2_moveit_api/CMakeFiles/IK_test_real_scara.dir/src/IK_test_real_scara.cpp.s
+.PHONY : src/IK_test_real_scara.cpp.s
 
 src/cube_publisher.o: src/cube_publisher.cpp.o
 
@@ -1317,32 +1224,32 @@ src/matlab_ROS_com_tryout.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_ROS_com_tryout.dir/src/matlab_ROS_com_tryout.cpp.s
 .PHONY : src/matlab_ROS_com_tryout.cpp.s
 
-src/menu_tryout_1.o: src/menu_tryout_1.cpp.o
+src/matlab_communication_tryout.o: src/matlab_communication_tryout.cpp.o
 
-.PHONY : src/menu_tryout_1.o
+.PHONY : src/matlab_communication_tryout.o
 
 # target to build an object file
-src/menu_tryout_1.cpp.o:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/build.make scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/src/menu_tryout_1.cpp.o
-.PHONY : src/menu_tryout_1.cpp.o
+src/matlab_communication_tryout.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/src/matlab_communication_tryout.cpp.o
+.PHONY : src/matlab_communication_tryout.cpp.o
 
-src/menu_tryout_1.i: src/menu_tryout_1.cpp.i
+src/matlab_communication_tryout.i: src/matlab_communication_tryout.cpp.i
 
-.PHONY : src/menu_tryout_1.i
+.PHONY : src/matlab_communication_tryout.i
 
 # target to preprocess a source file
-src/menu_tryout_1.cpp.i:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/build.make scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/src/menu_tryout_1.cpp.i
-.PHONY : src/menu_tryout_1.cpp.i
+src/matlab_communication_tryout.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/src/matlab_communication_tryout.cpp.i
+.PHONY : src/matlab_communication_tryout.cpp.i
 
-src/menu_tryout_1.s: src/menu_tryout_1.cpp.s
+src/matlab_communication_tryout.s: src/matlab_communication_tryout.cpp.s
 
-.PHONY : src/menu_tryout_1.s
+.PHONY : src/matlab_communication_tryout.s
 
 # target to generate assembly for a file
-src/menu_tryout_1.cpp.s:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/build.make scara_v2_moveit_api/CMakeFiles/menu_tryout_1.dir/src/menu_tryout_1.cpp.s
-.PHONY : src/menu_tryout_1.cpp.s
+src/matlab_communication_tryout.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/build.make scara_v2_moveit_api/CMakeFiles/matlab_communication_tryout.dir/src/matlab_communication_tryout.cpp.s
+.PHONY : src/matlab_communication_tryout.cpp.s
 
 src/move_group_interface1.o: src/move_group_interface1.cpp.o
 
@@ -1560,6 +1467,33 @@ src/real_scara_torq_sensor.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/src/real_scara_torq_sensor.cpp.s
 .PHONY : src/real_scara_torq_sensor.cpp.s
 
+src/scara_menu.o: src/scara_menu.cpp.o
+
+.PHONY : src/scara_menu.o
+
+# target to build an object file
+src/scara_menu.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_menu.dir/src/scara_menu.cpp.o
+.PHONY : src/scara_menu.cpp.o
+
+src/scara_menu.i: src/scara_menu.cpp.i
+
+.PHONY : src/scara_menu.i
+
+# target to preprocess a source file
+src/scara_menu.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_menu.dir/src/scara_menu.cpp.i
+.PHONY : src/scara_menu.cpp.i
+
+src/scara_menu.s: src/scara_menu.cpp.s
+
+.PHONY : src/scara_menu.s
+
+# target to generate assembly for a file
+src/scara_menu.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_menu.dir/src/scara_menu.cpp.s
+.PHONY : src/scara_menu.cpp.s
+
 src/tf_readout.o: src/tf_readout.cpp.o
 
 .PHONY : src/tf_readout.o
@@ -1593,31 +1527,26 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... install/strip"
+	@echo "... scara_menu"
+	@echo "... tf_readout"
+	@echo "... real_scara_torq_sensor"
+	@echo "... edit_cache"
+	@echo "... matlab_communication_tryout"
 	@echo "... gripper_control"
 	@echo "... multiple_cube_publisher"
-	@echo "... real_scara_torq_sensor"
-	@echo "... tf_readout"
-	@echo "... move_group_interface5_rt"
-	@echo "... move_group_interface4_position_control"
-	@echo "... move_group_interface3_PICKandPLACE"
-	@echo "... move_group_interface2"
-	@echo "... list_install_components"
-	@echo "... move_group_interface1"
-	@echo "... scara_v2_moveit_api_genpy"
-	@echo "... scara_v2_moveit_api_generate_messages_py"
-	@echo "... scara_v2_moveit_api_generate_messages_nodejs"
 	@echo "... get_and_send_planned_path"
 	@echo "... octomap_msgs_generate_messages_cpp"
 	@echo "... object_recognition_msgs_generate_messages_nodejs"
-	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... move_group_interface2"
 	@echo "... install/local"
 	@echo "... trajectory_msgs_generate_messages_nodejs"
 	@echo "... cube_publisher"
 	@echo "... trajectory_msgs_generate_messages_eus"
+	@echo "... IK_test_real_scara"
 	@echo "... object_recognition_msgs_generate_messages_lisp"
 	@echo "... shape_msgs_generate_messages_cpp"
 	@echo "... scara_v2_moveit_api_gencpp"
@@ -1626,39 +1555,36 @@ help:
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... moveit_msgs_generate_messages_cpp"
 	@echo "... object_recognition_msgs_generate_messages_eus"
+	@echo "... move_group_interface4_position_control"
 	@echo "... moveit_msgs_generate_messages_eus"
-	@echo "... control_msgs_generate_messages_py"
 	@echo "... object_recognition_msgs_generate_messages_cpp"
 	@echo "... octomap_msgs_generate_messages_eus"
 	@echo "... octomap_msgs_generate_messages_lisp"
+	@echo "... scara_v2_moveit_api_generate_messages_nodejs"
 	@echo "... move_group_interface6_async_PICKandPLACE"
 	@echo "... moveit_msgs_generate_messages_lisp"
 	@echo "... octomap_msgs_generate_messages_py"
 	@echo "... scara_v2_moveit_api_generate_messages_lisp"
+	@echo "... move_group_interface5_rt"
 	@echo "... linear_interpolation"
 	@echo "... shape_msgs_generate_messages_py"
+	@echo "... list_install_components"
+	@echo "... move_group_interface1"
 	@echo "... moveit_msgs_generate_messages_nodejs"
-	@echo "... matlab_ROS_com_tryout"
-	@echo "... moveit_ros_planning_gencfg"
 	@echo "... test"
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... shape_msgs_generate_messages_eus"
 	@echo "... octomap_msgs_generate_messages_nodejs"
-	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters"
-	@echo "... menu_tryout_1"
+	@echo "... matlab_ROS_com_tryout"
+	@echo "... moveit_ros_planning_gencfg"
 	@echo "... scara_v2_moveit_api_genlisp"
 	@echo "... moveit_ros_manipulation_gencfg"
-	@echo "... control_msgs_generate_messages_cpp"
-	@echo "... trajectory_msgs_generate_messages_lisp"
-	@echo "... control_msgs_generate_messages_lisp"
-	@echo "... control_msgs_generate_messages_nodejs"
+	@echo "... scara_v2_moveit_api_generate_messages_py"
+	@echo "... scara_v2_moveit_api_genpy"
+	@echo "... move_group_interface3_PICKandPLACE"
 	@echo "... scara_v2_moveit_api_generate_messages"
-	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands"
 	@echo "... scara_v2_moveit_api_gennodejs"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_SimpleService"
-	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values"
-	@echo "... control_msgs_generate_messages_eus"
-	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info"
 	@echo "... IK_test"
 	@echo "... scara_v2_moveit_api_generate_messages_cpp"
 	@echo "... shape_msgs_generate_messages_lisp"
@@ -1669,6 +1595,9 @@ help:
 	@echo "... src/IK_test.o"
 	@echo "... src/IK_test.i"
 	@echo "... src/IK_test.s"
+	@echo "... src/IK_test_real_scara.o"
+	@echo "... src/IK_test_real_scara.i"
+	@echo "... src/IK_test_real_scara.s"
 	@echo "... src/cube_publisher.o"
 	@echo "... src/cube_publisher.i"
 	@echo "... src/cube_publisher.s"
@@ -1684,9 +1613,9 @@ help:
 	@echo "... src/matlab_ROS_com_tryout.o"
 	@echo "... src/matlab_ROS_com_tryout.i"
 	@echo "... src/matlab_ROS_com_tryout.s"
-	@echo "... src/menu_tryout_1.o"
-	@echo "... src/menu_tryout_1.i"
-	@echo "... src/menu_tryout_1.s"
+	@echo "... src/matlab_communication_tryout.o"
+	@echo "... src/matlab_communication_tryout.i"
+	@echo "... src/matlab_communication_tryout.s"
 	@echo "... src/move_group_interface1.o"
 	@echo "... src/move_group_interface1.i"
 	@echo "... src/move_group_interface1.s"
@@ -1711,6 +1640,9 @@ help:
 	@echo "... src/real_scara_torq_sensor.o"
 	@echo "... src/real_scara_torq_sensor.i"
 	@echo "... src/real_scara_torq_sensor.s"
+	@echo "... src/scara_menu.o"
+	@echo "... src/scara_menu.i"
+	@echo "... src/scara_menu.s"
 	@echo "... src/tf_readout.o"
 	@echo "... src/tf_readout.i"
 	@echo "... src/tf_readout.s"

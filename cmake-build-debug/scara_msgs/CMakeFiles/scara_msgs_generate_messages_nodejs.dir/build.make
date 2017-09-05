@@ -53,15 +53,22 @@ CMAKE_BINARY_DIR = /home/viktor/catkin_ws/src/cmake-build-debug
 # Include the progress variables for this target.
 include scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.make
 
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/robot_info.js
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/pose_and_gripperState.js
 
 
+devel/share/gennodejs/ros/scara_msgs/msg/robot_info.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/scara_msgs/msg/robot_info.js: ../scara_msgs/msg/robot_info.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from scara_msgs/robot_info.msg"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/viktor/catkin_ws/src/scara_msgs/msg/robot_info.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/gennodejs/ros/scara_msgs/msg
+
 devel/share/gennodejs/ros/scara_msgs/msg/pose_and_gripperState.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 devel/share/gennodejs/ros/scara_msgs/msg/pose_and_gripperState.js: ../scara_msgs/msg/pose_and_gripperState.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from scara_msgs/pose_and_gripperState.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from scara_msgs/pose_and_gripperState.msg"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/gennodejs/ros/scara_msgs/msg
 
 scara_msgs_generate_messages_nodejs: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs
+scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/robot_info.js
 scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/pose_and_gripperState.js
 scara_msgs_generate_messages_nodejs: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make
 

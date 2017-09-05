@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>826</width>
-    <height>712</height>
+    <height>772</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>20</x>
       <y>90</y>
       <width>361</width>
-      <height>491</height>
+      <height>541</height>
      </rect>
     </property>
     <property name="layoutDirection">
@@ -63,7 +63,7 @@
        <x>10</x>
        <y>60</y>
        <width>331</width>
-       <height>421</height>
+       <height>461</height>
       </rect>
      </property>
      <property name="layoutDirection">
@@ -92,7 +92,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Wellcome to SCARA&lt;br/&gt;Graphical User Interface&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Select:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 1 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Joint controll&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 2 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Position controll&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 3 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;DEMO application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 4 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Position controll custom move&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 5 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Get basic information&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 6 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Set parameters&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;This GUI was provided by SENSODRIVE &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;and Viktor Dluhos&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Wellcome to SCARA&lt;br/&gt;Graphical User Interface&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Select:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 1 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Joint controll&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 2 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Position controll&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 3 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;DEMO application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 4 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Teach mode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 5 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Get basic information&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 6 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Set parameters&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;This GUI was provided by SENSODRIVE &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;and Viktor Dluhos&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_157">
@@ -117,7 +117,7 @@
      </widget>
      <widget class="QWidget" name="mode1_3">
       <attribute name="title">
-       <string>  1 </string>
+       <string>1</string>
       </attribute>
       <widget class="QLabel" name="label_99">
        <property name="geometry">
@@ -183,10 +183,10 @@
         <item row="2" column="1">
          <widget class="QSlider" name="jointControl_J3_Slider_3">
           <property name="minimum">
-           <number>-157</number>
+           <number>0</number>
           </property>
           <property name="maximum">
-           <number>157</number>
+           <number>5</number>
           </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -210,7 +210,7 @@
         <item row="2" column="0">
          <widget class="QLabel" name="label_124">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Joint3[deg]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Joint3[mm]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -318,7 +318,7 @@
      </widget>
      <widget class="QWidget" name="mode2_3">
       <attribute name="title">
-       <string>  2 </string>
+       <string>2</string>
       </attribute>
       <widget class="QLabel" name="label_128">
        <property name="geometry">
@@ -337,7 +337,7 @@
        <property name="geometry">
         <rect>
          <x>180</x>
-         <y>280</y>
+         <y>320</y>
          <width>131</width>
          <height>41</height>
         </rect>
@@ -350,7 +350,7 @@
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>280</y>
+         <y>320</y>
          <width>131</width>
          <height>41</height>
         </rect>
@@ -365,10 +365,13 @@
          <x>20</x>
          <y>60</y>
          <width>291</width>
-         <height>211</height>
+         <height>241</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_12">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="positionControlCustom_X_LineEdit_3"/>
+        </item>
         <item row="1" column="1">
          <widget class="QLineEdit" name="positionControlCustom_Y_LineEdit_3"/>
         </item>
@@ -381,9 +384,6 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Position X [m] : &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="positionControlCustom_X_LineEdit_3"/>
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="label_130">
@@ -399,13 +399,45 @@
           </property>
          </widget>
         </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_126">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Gripper :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="positionControl_Gripper_Checkbox_4">
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="tristate">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
       <widget class="QPushButton" name="positionControlCustom_Reset_PushButton_5">
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>330</y>
+         <y>370</y>
          <width>291</width>
          <height>41</height>
         </rect>
@@ -417,7 +449,7 @@
      </widget>
      <widget class="QWidget" name="mode3_3">
       <attribute name="title">
-       <string>  3 </string>
+       <string>3</string>
       </attribute>
       <widget class="QLabel" name="label_127">
        <property name="geometry">
@@ -475,9 +507,377 @@
        </property>
       </widget>
      </widget>
+     <widget class="QWidget" name="mode4_3">
+      <attribute name="title">
+       <string>4</string>
+      </attribute>
+      <widget class="QTabWidget" name="teachMode_tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>311</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>         Teach             </string>
+        </attribute>
+        <widget class="QWidget" name="gridLayoutWidget_16">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>291</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_16">
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_189">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Mode &lt;br/&gt;[Pick=1 Place=0]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="teachMode_Xpos_lineEdit"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="teachMode_Ypos_lineEdit"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="teachMode_Zpos_lineEdit"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_186">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Position X [m] : &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_187">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Position Y [m]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_188">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Position Z [m]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLCDNumber" name="teachMode_modeDisplay_lcdnumber"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="teachMode_teachButton">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>141</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Teach</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_190">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>230</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Info&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="teachMode_stopTeachButton">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>170</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>STOP teaching</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="teachMode_info_textEdit">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>260</y>
+           <width>271</width>
+           <height>71</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>                run               </string>
+        </attribute>
+        <widget class="QLineEdit" name="teachModeRun_info_lineEdit">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>251</width>
+           <height>41</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="teachModeRun_start_pushbutton">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>111</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Start apk</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="teachModeRun_stop_pushbutton">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>30</y>
+           <width>111</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="toolTipDuration">
+          <number>-1</number>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Stop apk</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_185">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>-10</y>
+         <width>261</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Teach mode (position)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>5</string>
+      </attribute>
+      <widget class="QTabWidget" name="teachMode_tabWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>311</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_8">
+        <attribute name="title">
+         <string>         Teach             </string>
+        </attribute>
+        <widget class="QWidget" name="gridLayoutWidget_19">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>291</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_19">
+          <item row="1" column="1">
+           <widget class="QLCDNumber" name="teachModeHand_J2_LCD"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_203">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Mode &lt;br/&gt;[Pick=1 Place=0]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLCDNumber" name="teachMode_modeDisplayHand_lcdnumber_"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_205">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Joint2 [rad]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_206">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Joint 3 [mm]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_204">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Joint 1 [rad]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLCDNumber" name="teachModeHand_J1_LCD"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLCDNumber" name="teachModeHand_J3_LCD"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="teachMode_teachButtonHand_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>141</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Teach</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_207">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>230</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Info&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="teachMode_stopTeachButtonHand_4">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>170</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>STOP teaching</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="teachMode_infoHand_textEdit_4">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>260</y>
+           <width>271</width>
+           <height>71</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_9">
+        <attribute name="title">
+         <string>                run               </string>
+        </attribute>
+        <widget class="QLineEdit" name="teachModeRun_infoHand_lineEdit_4">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>251</width>
+           <height>41</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="teachModeRun_startHand_pushbutton_4">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>111</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Start apk</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="teachModeRun_stopHand_pushbutton_4">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>30</y>
+           <width>111</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="toolTipDuration">
+          <number>-1</number>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Stop apk</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_192">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>0</y>
+         <width>261</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Teach mode by hand&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
      <widget class="QWidget" name="mode5_3">
       <attribute name="title">
-       <string>  4 </string>
+       <string>6</string>
       </attribute>
       <widget class="QLabel" name="label_132">
        <property name="geometry">
@@ -511,7 +911,7 @@
          <x>10</x>
          <y>70</y>
          <width>301</width>
-         <height>321</height>
+         <height>341</height>
         </rect>
        </property>
        <property name="currentIndex">
@@ -527,7 +927,7 @@
            <x>10</x>
            <y>0</y>
            <width>281</width>
-           <height>300</height>
+           <height>311</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_13">
@@ -727,7 +1127,7 @@
      </widget>
      <widget class="QWidget" name="mode6_3">
       <attribute name="title">
-       <string>  5 </string>
+       <string>7</string>
       </attribute>
       <widget class="QLabel" name="label_152">
        <property name="geometry">
@@ -748,7 +1148,7 @@
          <x>10</x>
          <y>50</y>
          <width>303</width>
-         <height>311</height>
+         <height>331</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_15">
@@ -844,7 +1244,7 @@
       <x>390</x>
       <y>90</y>
       <width>421</width>
-      <height>491</height>
+      <height>541</height>
      </rect>
     </property>
     <property name="title">
@@ -934,14 +1334,14 @@
        <item>
         <widget class="QLabel" name="label_160">
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [rad]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [°]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_161">
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [°]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [rad]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -1034,14 +1434,14 @@
        <item>
         <widget class="QLabel" name="label_166">
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [rad]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [°]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_167">
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [°]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [rad]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -1134,14 +1534,14 @@
        <item>
         <widget class="QLabel" name="label_172">
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [rad]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [mm]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_173">
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [°]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pos [mm]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -1173,7 +1573,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>360</y>
+       <y>430</y>
        <width>401</width>
        <height>101</height>
       </rect>
@@ -1249,44 +1649,105 @@
       </layout>
      </widget>
     </widget>
+    <widget class="QGroupBox" name="joint1Box_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>340</y>
+       <width>401</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLabel" name="label_181">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;End effector pose&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_25">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>381</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_25">
+       <item>
+        <widget class="QLCDNumber" name="status_pose_X"/>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="status_pose_Y"/>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="status_pose_Z"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_26">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>381</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_26">
+       <item>
+        <widget class="QLabel" name="label_182">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;x [m]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_183">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;y [m]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_184">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;z [m]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
    </widget>
    <widget class="QPushButton" name="centralStop">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>590</y>
-      <width>171</width>
-      <height>71</height>
+      <x>20</x>
+      <y>640</y>
+      <width>241</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="text">
      <string>STOP</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_39">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>781</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../catkin_ws/src/scara_gui/pictures/Sensodrive-LogoE.gif</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>590</y>
+      <x>280</x>
+      <y>640</y>
       <width>101</width>
       <height>80</height>
      </rect>
@@ -1316,6 +1777,48 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLineEdit" name="error_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>660</y>
+      <width>401</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>640</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Error messages&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_191">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>761</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../Documents/Sensodrive-LogoE.gif</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

@@ -20,21 +20,22 @@
 #include "joint_limits_interface/joint_limits.h"
 #include <joint_limits_interface/joint_limits_urdf.h>
 #include <joint_limits_interface/joint_limits_rosparam.h>
+#include <moveit_msgs/ExecuteTrajectoryActionResult.h>
 
 
 using namespace std;
 
-std::vector<double> joint_positions(4);
+std::vector<double> joint_positions(3);
 std::vector<double> link_length(2);
 double x_offset, y_offset, z_offset;
 geometry_msgs::Point point;
+bool executionOK = false;
 
 geometry_msgs::Point getPoseFromTF(std::string source, std::string target) {
 
     geometry_msgs::Point point;
     tf::TransformListener listener;
     tf::StampedTransform transform;
-
     try {
         listener.waitForTransform(source, target, ros::Time(0), ros::Duration(1));
         listener.lookupTransform(source, target, ros::Time(0), transform);
@@ -109,12 +110,17 @@ bool countIK(double x, double y, double z,  int mode){
         ROS_ERROR("Target is out of range");
         return false;
     }
-    joint_positions[3] = 0.0;
 
-
-    ROS_INFO("output joint positions %f %f %f %f ",joint_positions[0],joint_positions[1],joint_positions[2],joint_positions[3]);
+    ROS_INFO("output joint positions %f %f %f",joint_positions[0],joint_positions[1],joint_positions[2]);
     return true;
 
+}
+void trajectoryExecutionCallback(const moveit_msgs::ExecuteTrajectoryActionResult result){
+
+    ROS_INFO("....TRAJECTORY EXECUTION CALLBACK Status = %d....\n",result.status.status);
+    if (result.status.status == 1 || result.status.status == 3){
+        executionOK = true;
+    }
 }
 
 int main(int argc, char **argv) {
@@ -123,9 +129,11 @@ int main(int argc, char **argv) {
 
 
     ros::init(argc, argv, "move_group_interface_tutorial");
-    ros::NodeHandle node_handle;
+    ros::NodeHandle nn;
     ros::AsyncSpinner spinner(1);
     spinner.start();
+
+    ros::Subscriber executeTrajectory = nn.subscribe("execute_trajectory/result", 1000, trajectoryExecutionCallback);
 
     moveit::planning_interface::MoveGroupInterface::Plan my_plan;
 
@@ -149,15 +157,15 @@ int main(int argc, char **argv) {
     robot_state::RobotStatePtr kinematic_state(new robot_state::RobotState(kinematic_model));
     kinematic_state->setToDefaultValues();
 
+    boost::shared_ptr<urdf::ModelInterface> urdf;
+    getchar();
+    joint_limits_interface::JointLimits limits;
+
+
+
     getOffsets();
 
-    std::vector< std::string> activeJoints = move_group.getActiveJoints();
-    for (int i =0;i<activeJoints.size();i++){
-        ROS_INFO("Active link %d : %s",i, activeJoints[i].c_str());
-    }
-    ROS_INFO(".....Current robot model.......");
-    ROS_INFO_STREAM(move_group.getRobotModel());
-    getchar();
+
 
     int mode = 1;
     geometry_msgs::Pose points;
@@ -171,8 +179,6 @@ int main(int argc, char **argv) {
         if (mode == 1) {
             ROS_INFO("Input X");
             scanf("%lf", &desired_x);
-            if (desired_x == 0.0)
-                return 0;
             ROS_INFO("Input Y");
             scanf("%lf", &desired_y);
             ROS_INFO("Input Z");
@@ -192,14 +198,16 @@ int main(int argc, char **argv) {
                 mode = 1;
 
                 success = move_group.plan(my_plan);
-                ROS_INFO("plan!!!");
-                ROS_INFO_STREAM(my_plan.trajectory_);
-                getchar();
+                //ROS_INFO("plan!!!");
+                //ROS_INFO_STREAM(my_plan.trajectory_);
+                //getchar();
 
                 if (success){
                     ROS_INFO("Succesful plan!");
-                    move_group.execute(my_plan);        //co spravi presne move_group.move / alebo execute ->moze odosielat hned v momente jedotnlive naplanovane polohy??
+                    move_group.execute(my_plan);
                     move_group.move();
+                    //Tu urobit odosielanie tych pozicii..
+
                     ROS_INFO("moved to place!!\n");
                 } else{
                     ROS_ERROR("Bad plan");

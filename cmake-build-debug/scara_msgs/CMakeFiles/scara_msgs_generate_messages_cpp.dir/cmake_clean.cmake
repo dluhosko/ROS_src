@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/scara_msgs_generate_messages_cpp"
+  "../devel/include/scara_msgs/robot_info.h"
   "../devel/include/scara_msgs/pose_and_gripperState.h"
 )
 

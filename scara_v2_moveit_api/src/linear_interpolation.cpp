@@ -15,14 +15,10 @@
 #include <moveit/trajectory_processing/iterative_time_parameterization.h>
 #include <industrial_trajectory_filters/filter_base.h>
 #include <industrial_trajectory_filters/uniform_sample_filter.h>
-#include "moveit_msgs/GetCartesianPath.h"
-#include "moveit_msgs/GetCartesianPathRequest.h"
-#include "moveit_msgs/GetCartesianPathResponse.h"
-#include "moveit/robot_state/conversions.h"
 
 using namespace std;
 
-std::vector<double> joint_positions(4);
+std::vector<double> joint_positions(3);
 std::vector<double> link_length(2);
 double x_offset, y_offset, z_offset;
 geometry_msgs::Point point;
@@ -31,30 +27,71 @@ std::vector<geometry_msgs::Pose> setPointToWaypoints(std::vector<geometry_msgs::
 
     geometry_msgs::Pose points;
     //Start position 1
-    points.position.x = 0.578;
-    points.position.y = 0.509;
-    points.position.z = 1.019;
-    points.orientation.x = 1;
-    points.orientation.y = 0;
-    points.orientation.z = 0.0006;
-    points.orientation.w = -0.0005;
+    points.position.x = 0.59677;
+    points.position.y = 0.78055;
+    points.position.z = 1.0198;
+    points.orientation.x = 0.29045;
+    points.orientation.y = 0.95689;
+    points.orientation.z = 0.00015729;
+    points.orientation.w = -0.00065183;
     waypoints.push_back(points);
 
     //Finish position 1
-    points.position.x = 0.576;
-    points.position.y = 0.726;
-    points.position.z = 1.019;
-    points.orientation.x = 1;
-    points.orientation.y = 0;
-    points.orientation.z = 0.0006;
-    points.orientation.w = -0.0005;
+    points.position.x = 0.31352;
+    points.position.y = 0.78075;
+    points.position.z = 1.0198;
+    points.orientation.x =-0.32139;
+    points.orientation.y = 0.94695;
+    points.orientation.z = 0.00060969;
+    points.orientation.w =-0.00089261;
     waypoints.push_back(points);
+
+//    for (int i=0;i<waypoints.size();i++){
+//        ROS_INFO_STREAM(waypoints[i]);
+//    }
+//    sleep(2);
 
     return waypoints;
 
 
 }
+bool positionControll (moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan my_plan, geometry_msgs::Pose position){
+
+    bool success;
+    int numberOfAttempts =0;
+
+
+    while (numberOfAttempts<3) {
+        if (move_group->setApproximateJointValueTarget(position, "tool0")) {
+            ROS_INFO("found IK solution");
+            break;
+        } else
+            ROS_INFO("only aproximate IK solution");
+        numberOfAttempts++;
+    }
+    success = move_group->plan(my_plan);
+    if(success){
+
+        int size=my_plan.trajectory_.joint_trajectory.points.size();
+
+        ROS_INFO_STREAM("moje IK je");
+        ROS_INFO_STREAM(my_plan.trajectory_.joint_trajectory.points[size-1]);
+    }else{
+        ROS_ERROR("could not create plan!");
+        return 0;
+    }
+    ROS_INFO_NAMED("tutorial", "Visualizing plan 2 -back (pose goal) %s", success ? "GOOD" : "BAD");
+
+    move_group->execute(my_plan);
+    move_group->move();
+    ROS_INFO("\n\nmy plan");
+    ROS_INFO_STREAM(my_plan.trajectory_);
+    return 1;
+
+
+}
 bool countIK(double x, double y, double z,  int mode){
+
     ROS_INFO("input numbers %f %f %f",x,y,z);
     x = x - x_offset;
     y = y - y_offset;
@@ -85,9 +122,8 @@ bool countIK(double x, double y, double z,  int mode){
         ROS_ERROR("Target is out of range");
         return false;
     }
-    joint_positions[3] = 0.5;
 
-    ROS_INFO("output joint positions %f %f %f %f ",joint_positions[0],joint_positions[1],joint_positions[2],joint_positions[3]);
+    ROS_INFO("output joint positions %f %f %f",joint_positions[0],joint_positions[1],joint_positions[2]);
     return true;
 
 }
@@ -144,7 +180,7 @@ int main(int argc, char **argv) {
     bool success;
 
     ros::init(argc, argv, "move_group_interface_tutorial");
-    ros::NodeHandle n;
+    ros::NodeHandle node_handle;
     ros::AsyncSpinner spinner(1);
     spinner.start();
 
@@ -156,9 +192,21 @@ int main(int argc, char **argv) {
     const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
     moveit_msgs::RobotTrajectory trajectory_msg;
 
-//    ros::ServiceClient client = n.serviceClient<moveit_msgs::GetCartesianPath>("compute_cartesian_path",cartPathService_callback);
-//    moveit_msgs::GetCartesianPathRequest req;
-//    moveit_msgs::GetCartesianPathResponse res;
+
+    geometry_msgs::Pose kkt;
+    //0.70476; 0.58; 1.0196
+    kkt.position.x = 0.70476;
+    kkt.position.y = 0.58;
+    kkt.position.z =  1.0196;
+    //rpy+w
+    //0.70711; 0.7071; -0.00027767; -0.00028542
+    kkt.orientation.x = 0.70711;
+    kkt.orientation.y = 0.7071;
+    kkt.orientation.z = -0.00027767;
+    kkt.orientation.w = -0.00028542;
+//    ROS_INFO_STREAM(kkt);
+//    getchar();
+
 
     //ROS_INFO("overenie klbov");
     //Na overenie limitov klbov
@@ -169,122 +217,83 @@ int main(int argc, char **argv) {
     //getchar();
 
     current_state = move_group.getCurrentState();
+    ROS_WARN("moving to default pose!!");
     getOffsets();
+    countIK(kkt.position.x,kkt.position.y,kkt.position.z, 1);
+    move_group.setJointValueTarget(joint_positions);
+    kinematic_state->setJointGroupPositions(joint_model_group, joint_positions);
+    success = move_group.plan(my_plan);
 
-    geometry_msgs::PoseStamped ws1 = move_group.getCurrentPose();
-    std::vector< std::string> activeJoints = move_group.getActiveJoints();
-    for (int i =0;i<activeJoints.size();i++){
-        ROS_INFO("Active link %d : %s",i, activeJoints[i].c_str());
+    if (success){
+        ROS_INFO("Succesful plan!");
+        move_group.execute(my_plan);
+        move_group.move();
+        ROS_INFO("moved to place!!\n");
+    } else{
+        ROS_ERROR("Bad plan");
     }
-    ROS_INFO(".....Current robot model.......");
-    ROS_INFO_STREAM(move_group.getRobotModel());
-    ROS_INFO("Reference frame: %s", move_group.getPlanningFrame().c_str());
-    ROS_INFO("End effector link: %s", move_group.getEndEffectorLink().c_str());
-    move_group.setPoseReferenceFrame(move_group.getEndEffectorLink().c_str());
+    geometry_msgs::PoseStamped ws1 = move_group.getCurrentPose();
+    ROS_INFO("Effector x=%f , y=%f , z=%f \n", ws1.pose.position.x, ws1.pose.position.y, ws1.pose.position.z);
+    ROS_INFO("Press any key");
     getchar();
+
+
 
 
     std::vector<geometry_msgs::Pose> waypoints;
     waypoints = setPointToWaypoints(waypoints);
 
-    countIK(waypoints[1].position.x, waypoints[1].position.y, waypoints[1].position.z, 2);
-    move_group.setJointValueTarget(joint_positions);
-    kinematic_state->setJointGroupPositions(joint_model_group, joint_positions);
-    success = move_group.plan(my_plan);
-    if (success){
-        ROS_INFO("Succesful plan!");
-        move_group.execute(my_plan);
-        move_group.move();
-        ROS_INFO("moved to place!!\n");
-    } else{
-        ROS_ERROR("Bad plan");
+    //Solve IK from points (clasic solver)
+    if (positionControll(&move_group, my_plan, waypoints[1])){
+        ROS_INFO("Visualised movement to position 2");
+    }else{
+        ROS_INFO("Could not visualise movement to position 2");
     }
-    for (int i=0;i<my_plan.trajectory_.joint_trajectory.points.size();i++){
-            ROS_INFO("%d : %f %f %f %f",i,my_plan.trajectory_.joint_trajectory.points[i].positions[0],my_plan.trajectory_.joint_trajectory.points[i].positions[1],
-                 my_plan.trajectory_.joint_trajectory.points[i].positions[2], my_plan.trajectory_.joint_trajectory.points[i].positions[3]);
+    ROS_INFO("Press any key");
+    getchar();
+    if (positionControll(&move_group, my_plan, waypoints[0])){
+        ROS_INFO("Visualised movement to position 1");
+        //ROS_INFO("Plan for the First position is ");
+        //ROS_INFO_STREAM(my_plan.trajectory_);
+    }else{
+        ROS_INFO("Could not visualise movement to position 1");
     }
+    ROS_INFO("Press any key");
     getchar();
 
-    countIK(waypoints[0].position.x, waypoints[0].position.y, waypoints[0].position.z, 2);
-    move_group.setJointValueTarget(joint_positions);
-    kinematic_state->setJointGroupPositions(joint_model_group, joint_positions);
-    success = move_group.plan(my_plan);
-    if (success){
-        ROS_INFO("Succesful plan!");
-        move_group.execute(my_plan);
-        move_group.move();
-        ROS_INFO("moved to place!!\n");
-    } else{
-        ROS_ERROR("Bad plan");
-    }
-    for (int i=0;i<my_plan.trajectory_.joint_trajectory.points.size();i++){
-        ROS_INFO("%d : %f %f %f %f",i,my_plan.trajectory_.joint_trajectory.points[i].positions[0],my_plan.trajectory_.joint_trajectory.points[i].positions[1],
-                 my_plan.trajectory_.joint_trajectory.points[i].positions[2], my_plan.trajectory_.joint_trajectory.points[i].positions[3]);
-    }
-    getchar();
 
-    //service
-//    req.avoid_collisions = true;
-//    req.jump_threshold = 0.05;
-//    req.group_name = PLANNING_GROUP;
-//    //req.link_name = "tool0";
-//    req.waypoints = waypoints;
-//    req.max_step = 0.05;
-//    req.header.frame_id = move_group.getPoseReferenceFrame();
-//    req.header.stamp = ros::Time::now();
-//    moveit_msgs::RobotState robotState;
-//    robot_state::RobotStatePtr considered_start_state_;
-//    considered_start_state_.reset(new robot_state::RobotState()
-//    robot_state::robotStateToRobotStateMsg(*considered_start_state_, req.start_state);
-//    //robot_state::RobotState start_state(* move_group.getCurrentState());
-//    //req.start_state = start_state;
-
-
-
-
-    geometry_msgs::PoseStamped currentPose = move_group.getCurrentPose();
-    ROS_INFO("Desired: %f %f %f",waypoints[0].position.x, waypoints[0].position.y, waypoints[0].position.z);
-    ROS_INFO("Current: X=%f Y=%f Z=%f",currentPose.pose.position.x,currentPose.pose.position.y, currentPose.pose.position.z);
-    getchar();
-
-    move_group.setGoalOrientationTolerance(1);
-    move_group.setGoalPositionTolerance(0.1);
-
-    //std::vector<geometry_msgs::Pose> waypoint(1);
-    //waypoint[0] = waypoints[1];
 
     ROS_INFO("linear interpolation");
     //linear interpolation!
-    double fraction = move_group.computeCartesianPath(waypoints,0.001,0.0,trajectory_msg, true);
+    double fraction = move_group.computeCartesianPath(waypoints,0.1,0.0,trajectory_msg, true);
     ROS_INFO("computed fraction = %f",fraction);
-    getchar();
-
+   // getchar();
     robot_trajectory::RobotTrajectory rt(move_group.getCurrentState()->getRobotModel(),"scara_arm");
     rt.setRobotTrajectoryMsg(*move_group.getCurrentState(), trajectory_msg);
     trajectory_processing::IterativeParabolicTimeParameterization iptp;
-    if (iptp.computeTimeStamps(rt)){
-        ROS_INFO("iptp OK!");
-    }else{
-        ROS_INFO("iptp BAD!");
-    }
-    //getchar();
 
+    move_group.setJointValueTarget(joint_positions);
+    kinematic_state->setJointGroupPositions(joint_model_group, joint_positions);
+
+    rt.getRobotTrajectoryMsg(trajectory_msg);
+    ROS_INFO("\nWaypoints");
+    for (int i =0;i<waypoints.size();i++){
+        ROS_INFO_STREAM(waypoints[i]);
+    }
+    ROS_INFO("\ntrajectory_msg");
+    ROS_INFO_STREAM(trajectory_msg.joint_trajectory);
+    ROS_INFO("Press any key");
+    getchar();
 
     my_plan.trajectory_ = trajectory_msg;
-    for (int i=0;i<my_plan.trajectory_.joint_trajectory.points.size(); i++){
-        ROS_INFO("%d : %f %f %f %f",i,my_plan.trajectory_.joint_trajectory.points[i].positions[0],my_plan.trajectory_.joint_trajectory.points[i].positions[1],
-                 my_plan.trajectory_.joint_trajectory.points[i].positions[2], my_plan.trajectory_.joint_trajectory.points[i].positions[3]);
-    }
-    //if (fraction >= 0.5) {
+    if (fraction >= 0.5) {
         ROS_WARN("Plan %f percents",fraction);
         move_group.execute(my_plan);
         move_group.move();
         ROS_INFO("moving there!!!!");
-    //}
-    //else
-    //    ROS_WARN("Could not compute the cartesian path :( <0.5 ");
-
-    getchar();
+    }
+    else
+        ROS_WARN("Could not compute the cartesian path :( <0.5 ");
 
 
 

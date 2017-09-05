@@ -907,7 +907,7 @@ int main(int argc, char **argv){
     executionOK = true;
     bool threadStart = true;
     //bool moveToHome = true;
-    int a;
+
 
 
 
