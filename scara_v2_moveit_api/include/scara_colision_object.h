@@ -8,17 +8,23 @@
 #include "ros/ros.h"
 #include <geometric_shapes/solid_primitive_dims.h>
 #include <visualization_msgs/Marker.h>
+#include "moveit_msgs/CollisionObject.h"
+#include <moveit/move_group_interface/move_group_interface.h>
+#include <moveit/planning_scene_interface/planning_scene_interface.h>
+#include "moveit/robot_model_loader/robot_model_loader.h"
 #include "std_msgs/Bool.h"
 #include "std_msgs/Int32.h"
 #include "geometry_msgs/Point.h"
 
-const double SIZE_Z = 0.5, POS_Z = 0.969805;
+const double SIZE_Z = 0.26, POS_Z = 1.1;
 
 bool custom_object_enabled = false, real_object_enabled = false;
 double pos_x_real = 0.0, pos_y_real = 0.0, pos_x_cust = 0.0, pos_y_cust = 0.0;
 double size_x_real = 0.05, size_y_real = 0.05, size_x_cust = 0.05, size_y_cust = 0.05;
 
 visualization_msgs::Marker markerCustom, markerReal;
+std::vector<moveit_msgs::CollisionObject> collision_objects_custom, collision_objects_real;
+std::vector<std::string> collision_object_custom_ids, collision_object_real_ids;
 
 
 void customPosCallback (const geometry_msgs::Point positionValue){
@@ -95,7 +101,7 @@ void customObjectPositionChangeCallback (const std_msgs::Int32 movementCommand){
 
 }
 
-void publishCustomColisionObject(ros::Publisher *marker_pub){
+void publishCustomVisualObject(ros::Publisher *marker_pub){
 
     //ROS_INFO("Position x=%f y=%f z=%f",pos_x_cust, pos_y_cust, POS_Z);
     //ROS_INFO("Size x=%f y=%f z=%f", size_x_cust, size_y_cust, SIZE_Z);
@@ -135,7 +141,7 @@ void publishCustomColisionObject(ros::Publisher *marker_pub){
     //ROS_INFO("published a cube");
 }
 
-void publishRealColisionObject(ros::Publisher *marker_pub){
+void publishRealVisualObject(ros::Publisher *marker_pub){
 
     //ROS_INFO("Position x=%f y=%f z=%f",pos_x_real, pos_y_real, POS_Z);
     //ROS_INFO("Size x=%f y=%f z=%f", size_x_real, size_y_real, SIZE_Z);
@@ -173,4 +179,75 @@ void publishRealColisionObject(ros::Publisher *marker_pub){
 
 }
 
+void publishCustomColisionObject(moveit::planning_interface::MoveGroupInterface *mg, moveit::planning_interface::PlanningSceneInterface *planning_scene_interface){
+
+    moveit_msgs::CollisionObject collision_object_custom;
+    collision_object_custom.header.frame_id = mg->getPlanningFrame();
+    collision_object_custom.id = "custom_collision_object";
+    shape_msgs::SolidPrimitive primitive;
+    primitive.type = primitive.BOX;
+    primitive.dimensions.resize(3);
+    primitive.dimensions[0] = size_x_cust;
+    primitive.dimensions[1] = size_y_cust;
+    primitive.dimensions[2] = SIZE_Z;
+    geometry_msgs::Pose box_pose;
+    box_pose.orientation.w = 1.0;
+    box_pose.position.x = pos_x_cust;
+    box_pose.position.y = pos_y_cust;
+    box_pose.position.z = POS_Z;
+
+    collision_object_custom.primitives.push_back(primitive);
+    collision_object_custom.primitive_poses.push_back(box_pose);
+    collision_object_custom.operation = collision_object_custom.ADD;
+
+    collision_objects_custom[0] = collision_object_custom;
+
+    //atach collision object to to planning scene
+    if (custom_object_enabled){
+        planning_scene_interface->addCollisionObjects(collision_objects_custom);
+        ROS_INFO("added");
+        usleep(500000);
+    }else{
+        collision_object_custom_ids[0] = collision_object_custom.id;
+        planning_scene_interface->removeCollisionObjects(collision_object_custom_ids);
+        ROS_INFO("removed");
+        usleep(500000);
+    }
+}
+
+void publishRealColisionObject(moveit::planning_interface::MoveGroupInterface *mg, moveit::planning_interface::PlanningSceneInterface *planning_scene_interface){
+
+    moveit_msgs::CollisionObject collision_object_real;
+    collision_object_real.header.frame_id = mg->getPlanningFrame();
+    collision_object_real.id = "real_collision_object";
+    shape_msgs::SolidPrimitive primitive;
+    primitive.type = primitive.BOX;
+    primitive.dimensions.resize(3);
+    primitive.dimensions[0] = size_x_real;
+    primitive.dimensions[1] = size_y_real;
+    primitive.dimensions[2] = SIZE_Z;
+    geometry_msgs::Pose box_pose;
+    box_pose.orientation.w = 1.0;
+    box_pose.position.x = pos_x_real;
+    box_pose.position.y = pos_y_real;
+    box_pose.position.z = POS_Z;
+
+    collision_object_real.primitives.push_back(primitive);
+    collision_object_real.primitive_poses.push_back(box_pose);
+    collision_object_real.operation = collision_object_real.ADD;
+
+    collision_objects_real[0] = collision_object_real;
+
+    //atach collision object to to planning scene
+    if (real_object_enabled){
+        planning_scene_interface->addCollisionObjects(collision_objects_real);
+        ROS_INFO("added");
+        usleep(500000);
+    }else{
+        collision_object_real_ids[0] = collision_object_real.id;
+        planning_scene_interface->removeCollisionObjects(collision_object_real_ids);
+        ROS_INFO("removed");
+        usleep(500000);
+    }
+}
 #endif //PROJECT_SCARA_COLISION_OBJECT_H

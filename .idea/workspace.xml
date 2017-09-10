@@ -320,64 +320,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_gui/Sensodrive-LogoE.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_gui/user_interface/Sensodrive-LogoE.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_colision_object.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/launch/gui_SCARA.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/setup_cached.sh" afterPath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/setup_cached.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_control/scara_v2_full_control.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_control/scara_v2_full_control.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_description/scara_v2_full_description.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_description/scara_v2_full_description.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_gazebo/scara_v2_full_gazebo.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_gazebo/scara_v2_full_gazebo.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_and_rt_moveit_config/scara_and_rt_moveit_config.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_and_rt_moveit_config/scara_and_rt_moveit_config.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/scara_msgs.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/scara_msgs.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/catkin_generated/stamps/scara_v2_moveit_api/package.xml.stamp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/catkin_generated/stamps/scara_v2_moveit_api/package.xml.stamp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/scara_v2_moveit_api.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/scara_v2_moveit_api.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/senso_scara_demo/senso_scara_demo.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/senso_scara_demo/senso_scara_demo.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/.setup_assistant" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/.setup_assistant" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/fake_controllers.yaml" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/fake_controllers.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/joint_limits.yaml" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/joint_limits.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/ompl_planning.yaml" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/ompl_planning.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/scara_and_rt.srdf" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/config/scara_and_rt.srdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/moveit.rviz" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/moveit.rviz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/ompl_planning_pipeline.launch.xml" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/ompl_planning_pipeline.launch.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/scara_and_rt_moveit_controller_manager.launch.xml" afterPath="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/scara_and_rt_moveit_controller_manager.launch.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_gui/CMakeLists.txt" afterPath="$PROJECT_DIR$/scara_gui/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h" afterPath="$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_gui/src/mainwindow.cpp" afterPath="$PROJECT_DIR$/scara_gui/src/mainwindow.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_gui/user_interface/mainwindow.ui" afterPath="$PROJECT_DIR$/scara_gui/user_interface/mainwindow.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/package.xml" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/package.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/cube_publisher.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/cube_publisher.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/get_and_send_planned_path.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/get_and_send_planned_path.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro" afterPath="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_colision_object.h" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_colision_object.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -393,90 +338,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mainwindow.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="160" column="74" lean-forward="false" selection-start-line="160" selection-start-column="74" selection-end-line="160" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainwindow.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scara_gui/src/mainwindow.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="935" column="0" lean-forward="false" selection-start-line="935" selection-start-column="2" selection-end-line="938" selection-end-column="37" />
-              <folding>
-                <element signature="e#22612#22927#0" expanded="false" />
-                <element signature="e#22929#23176#0" expanded="false" />
-                <element signature="e#23178#23426#0" expanded="false" />
-                <element signature="e#23428#23683#0" expanded="false" />
-                <element signature="e#23685#23945#0" expanded="false" />
-                <element signature="e#23947#24208#0" expanded="false" />
-                <element signature="e#24299#24789#0" expanded="false" />
-                <element signature="e#24791#25186#0" expanded="false" />
-                <element signature="e#25188#25569#0" expanded="false" />
-                <element signature="e#25571#25955#0" expanded="false" />
-                <element signature="e#25957#26327#0" expanded="false" />
-                <element signature="e#26329#26501#0" expanded="false" />
-                <element signature="e#26503#26675#0" expanded="false" />
-                <element signature="e#26677#26851#0" expanded="false" />
-                <element signature="e#26853#27027#0" expanded="false" />
-                <element signature="e#27029#27204#0" expanded="false" />
-                <element signature="e#27294#27827#0" expanded="false" />
-                <element signature="e#27915#28369#0" expanded="false" />
-                <element signature="e#28456#28725#0" expanded="false" />
-                <element signature="e#28816#32382#0" expanded="false" />
-                <element signature="e#33433#33691#0" expanded="false" />
-                <element signature="e#33693#34385#0" expanded="false" />
-                <element signature="e#35758#35848#0" expanded="false" />
-                <element signature="e#35850#35996#0" expanded="false" />
-                <element signature="e#35998#36152#0" expanded="false" />
-                <element signature="e#36154#36307#0" expanded="false" />
-                <element signature="e#36309#36552#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scara_menu.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="124" column="23" lean-forward="true" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scara_and_rt_urdf.xacro" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="891" column="34" lean-forward="false" selection-start-line="891" selection-start-column="17" selection-end-line="891" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scara_colision_object.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="scara_colision_object.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_colision_object.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="137" column="58" lean-forward="false" selection-start-line="137" selection-start-column="58" selection-end-line="137" selection-end-column="58" />
+            <state relative-caret-position="432">
+              <caret line="233" column="0" lean-forward="true" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
               <folding>
                 <element signature="e#122#142#0" expanded="true" />
-                <element signature="e#655#889#0" expanded="false" />
-                <element signature="e#891#1104#0" expanded="false" />
-                <element signature="e#1106#1338#0" expanded="false" />
-                <element signature="e#1340#1551#0" expanded="false" />
-                <element signature="e#1553#1710#0" expanded="false" />
-                <element signature="e#1712#1863#0" expanded="false" />
-                <element signature="e#1865#2558#0" expanded="false" />
-                <element signature="e#2560#4088#0" expanded="false" />
-                <element signature="e#4090#5426#0" expanded="false" />
+                <element signature="e#1055#1289#0" expanded="false" />
+                <element signature="e#1291#1504#0" expanded="false" />
+                <element signature="e#1506#1738#0" expanded="false" />
+                <element signature="e#1740#1951#0" expanded="false" />
+                <element signature="e#1953#2110#0" expanded="false" />
+                <element signature="e#2112#2263#0" expanded="false" />
+                <element signature="e#2265#2958#0" expanded="false" />
+                <element signature="e#2960#4486#0" expanded="false" />
+                <element signature="e#4488#5822#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -485,8 +362,8 @@
       <file leaf-file-name="scara_colision_object.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+            <state relative-caret-position="666">
+              <caret line="47" column="74" lean-forward="false" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -497,6 +374,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-886">
               <caret line="63" column="44" lean-forward="false" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scara_menu.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1044">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="66" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -540,9 +427,9 @@
       <find>jointControl_jointValues</find>
       <find>displayRealColObj_pub</find>
       <find>colObjArrows_pub</find>
-      <find>joint_gripperba</find>
       <find>setText</find>
       <find>getinfo</find>
+      <find>joint_gripperba</find>
     </findStrings>
     <replaceStrings>
       <replace>scara_v2_moveit_config</replace>
@@ -607,11 +494,11 @@
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/IK_test.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.h" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_colision_object.h" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h" />
         <option value="$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h" />
         <option value="$PROJECT_DIR$/scara_gui/src/mainwindow.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_colision_object.h" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp" />
       </list>
     </option>
   </component>
@@ -2822,14 +2709,7 @@
       <workItem from="1503984791409" duration="1822000" />
       <workItem from="1504546539012" duration="4392000" />
       <workItem from="1504588720116" duration="446000" />
-      <workItem from="1505035853880" duration="8109000" />
-    </task>
-    <task id="LOCAL-00016" summary="snaha o novy ikfast s upravenym urdf">
-      <created>1497727732256</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1497727732256</updated>
+      <workItem from="1505035853880" duration="14939000" />
     </task>
     <task id="LOCAL-00017" summary="dae bez cisla je SCARA s fake_jointom a dae1 je scara bez fake_jointu">
       <created>1497938021193</created>
@@ -3167,19 +3047,26 @@
       <option name="project" value="LOCAL" />
       <updated>1504588756776</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="SENSO PC + MY PC sync  + get information tab completed!">
+      <created>1505044101633</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1505044101634</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="724776000" />
+    <option name="totallyTimeSpent" value="731606000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20796943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1959607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23655914" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24390244" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048780486" sideWeight="0.33370167" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.49017468" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29892474" sideWeight="0.7854803" order="9" side_tool="false" content_ui="tabs" />
@@ -3223,7 +3110,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Move_group_interface6_async new MENU" />
     <MESSAGE value="RT service (works, just does not return value - ERROR to solve! )" />
     <MESSAGE value="Forward calculation of IK" />
     <MESSAGE value="parallel thread for forcefeedback (torque sensor)" />
@@ -3248,11 +3134,12 @@
     <MESSAGE value="Added Qtcreator project" />
     <MESSAGE value="before simulink build" />
     <MESSAGE value="my pc + senso pc" />
-    <option name="LAST_COMMIT_MESSAGE" value="my pc + senso pc" />
+    <MESSAGE value="SENSO PC + MY PC sync  + get information tab completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="SENSO PC + MY PC sync  + get information tab completed!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="39" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3341,13 +3228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="46" column="67" lean-forward="false" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface1.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -3602,57 +3482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_colision_object.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="137" column="58" lean-forward="false" selection-start-line="137" selection-start-column="58" selection-end-line="137" selection-end-column="58" />
-          <folding>
-            <element signature="e#122#142#0" expanded="true" />
-            <element signature="e#655#889#0" expanded="false" />
-            <element signature="e#891#1104#0" expanded="false" />
-            <element signature="e#1106#1338#0" expanded="false" />
-            <element signature="e#1340#1551#0" expanded="false" />
-            <element signature="e#1553#1710#0" expanded="false" />
-            <element signature="e#1712#1863#0" expanded="false" />
-            <element signature="e#1865#2558#0" expanded="false" />
-            <element signature="e#2560#4088#0" expanded="false" />
-            <element signature="e#4090#5426#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="891" column="34" lean-forward="false" selection-start-line="891" selection-start-column="17" selection-end-line="891" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="124" column="23" lean-forward="true" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="184" column="6" lean-forward="false" selection-start-line="184" selection-start-column="6" selection-end-line="184" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -3671,8 +3500,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_gui/src/mainwindow.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="935" column="0" lean-forward="false" selection-start-line="935" selection-start-column="2" selection-end-line="938" selection-end-column="37" />
+        <state relative-caret-position="12330">
+          <caret line="943" column="45" lean-forward="false" selection-start-line="943" selection-start-column="45" selection-end-line="943" selection-end-column="45" />
           <folding>
             <element signature="e#22612#22927#0" expanded="false" />
             <element signature="e#22929#23176#0" expanded="false" />
@@ -3701,6 +3530,67 @@
             <element signature="e#35998#36152#0" expanded="false" />
             <element signature="e#36154#36307#0" expanded="false" />
             <element signature="e#36309#36552#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="891" column="34" lean-forward="false" selection-start-line="891" selection-start-column="17" selection-end-line="891" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="58" />
+          <folding>
+            <element signature="e#41#61#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="66" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="47" column="74" lean-forward="false" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_colision_object.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="233" column="0" lean-forward="true" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding>
+            <element signature="e#122#142#0" expanded="true" />
+            <element signature="e#1055#1289#0" expanded="false" />
+            <element signature="e#1291#1504#0" expanded="false" />
+            <element signature="e#1506#1738#0" expanded="false" />
+            <element signature="e#1740#1951#0" expanded="false" />
+            <element signature="e#1953#2110#0" expanded="false" />
+            <element signature="e#2112#2263#0" expanded="false" />
+            <element signature="e#2265#2958#0" expanded="false" />
+            <element signature="e#2960#4486#0" expanded="false" />
+            <element signature="e#4488#5822#0" expanded="false" />
           </folding>
         </state>
       </provider>
