@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a177e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a177e.dir/build.make CMakeFiles/cmTC_a177e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c9267/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c9267.dir/build.make CMakeFiles/cmTC_c9267.dir/build
 make[1]: Entering directory '/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a177e.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_a177e.dir/CheckSymbolExists.c.o   -c /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_a177e
-/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a177e.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_a177e.dir/CheckSymbolExists.c.o  -o cmTC_a177e -rdynamic 
-CMakeFiles/cmTC_a177e.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_c9267.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c9267.dir/CheckSymbolExists.c.o   -c /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c9267
+/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9267.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c9267.dir/CheckSymbolExists.c.o  -o cmTC_c9267 -rdynamic 
+CMakeFiles/cmTC_c9267.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_a177e.dir/build.make:97: recipe for target 'cmTC_a177e' failed
-make[1]: *** [cmTC_a177e] Error 1
+CMakeFiles/cmTC_c9267.dir/build.make:97: recipe for target 'cmTC_c9267' failed
+make[1]: *** [cmTC_c9267] Error 1
 make[1]: Leaving directory '/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_a177e/fast' failed
-make: *** [cmTC_a177e/fast] Error 2
+Makefile:126: recipe for target 'cmTC_c9267/fast' failed
+make: *** [cmTC_c9267/fast] Error 2
 
 File /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e5824/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e5824.dir/build.make CMakeFiles/cmTC_e5824.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3ffb4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ffb4.dir/build.make CMakeFiles/cmTC_3ffb4.dir/build
 make[1]: Entering directory '/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e5824.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e5824.dir/CheckFunctionExists.c.o   -c /home/viktor/clion-2016.3.3/bin/cmake/share/cmake-3.6/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e5824
-/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5824.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e5824.dir/CheckFunctionExists.c.o  -o cmTC_e5824 -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_3ffb4.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3ffb4.dir/CheckFunctionExists.c.o   -c /home/viktor/clion-2016.3.3/bin/cmake/share/cmake-3.6/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3ffb4
+/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ffb4.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3ffb4.dir/CheckFunctionExists.c.o  -o cmTC_3ffb4 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_e5824.dir/build.make:97: recipe for target 'cmTC_e5824' failed
-make[1]: *** [cmTC_e5824] Error 1
+CMakeFiles/cmTC_3ffb4.dir/build.make:97: recipe for target 'cmTC_3ffb4' failed
+make[1]: *** [cmTC_3ffb4] Error 1
 make[1]: Leaving directory '/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_e5824/fast' failed
-make: *** [cmTC_e5824/fast] Error 2
+Makefile:126: recipe for target 'cmTC_3ffb4/fast' failed
+make: *** [cmTC_3ffb4/fast] Error 2
 
 

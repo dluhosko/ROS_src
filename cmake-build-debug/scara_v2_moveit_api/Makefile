@@ -436,6 +436,21 @@ scara_v2_moveit_api_gencpp/fast:
 .PHONY : scara_v2_moveit_api_gencpp/fast
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/rule
+
+# Convenience name for target.
+scara_colision_object: scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/rule
+
+.PHONY : scara_colision_object
+
+# fast build rule for target.
+scara_colision_object/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/build
+.PHONY : scara_colision_object/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
@@ -1467,6 +1482,33 @@ src/real_scara_torq_sensor.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/src/real_scara_torq_sensor.cpp.s
 .PHONY : src/real_scara_torq_sensor.cpp.s
 
+src/scara_colision_object.o: src/scara_colision_object.cpp.o
+
+.PHONY : src/scara_colision_object.o
+
+# target to build an object file
+src/scara_colision_object.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/src/scara_colision_object.cpp.o
+.PHONY : src/scara_colision_object.cpp.o
+
+src/scara_colision_object.i: src/scara_colision_object.cpp.i
+
+.PHONY : src/scara_colision_object.i
+
+# target to preprocess a source file
+src/scara_colision_object.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/src/scara_colision_object.cpp.i
+.PHONY : src/scara_colision_object.cpp.i
+
+src/scara_colision_object.s: src/scara_colision_object.cpp.s
+
+.PHONY : src/scara_colision_object.s
+
+# target to generate assembly for a file
+src/scara_colision_object.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/src/scara_colision_object.cpp.s
+.PHONY : src/scara_colision_object.cpp.s
+
 src/scara_menu.o: src/scara_menu.cpp.o
 
 .PHONY : src/scara_menu.o
@@ -1550,6 +1592,7 @@ help:
 	@echo "... object_recognition_msgs_generate_messages_lisp"
 	@echo "... shape_msgs_generate_messages_cpp"
 	@echo "... scara_v2_moveit_api_gencpp"
+	@echo "... scara_colision_object"
 	@echo "... object_recognition_msgs_generate_messages_py"
 	@echo "... shape_msgs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_py"
@@ -1640,6 +1683,9 @@ help:
 	@echo "... src/real_scara_torq_sensor.o"
 	@echo "... src/real_scara_torq_sensor.i"
 	@echo "... src/real_scara_torq_sensor.s"
+	@echo "... src/scara_colision_object.o"
+	@echo "... src/scara_colision_object.i"
+	@echo "... src/scara_colision_object.s"
 	@echo "... src/scara_menu.o"
 	@echo "... src/scara_menu.i"
 	@echo "... src/scara_menu.s"
