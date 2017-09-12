@@ -5,8 +5,9 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /Marker1
-        - /Marker2
+        - /MotionPlanning1/Planning Request1
+        - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.742560029
     Tree Height: 371
   - Class: rviz/Help
@@ -110,11 +111,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          colisionBox:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           placeBox:
             Alpha: 1
             Show Axes: false
@@ -188,7 +184,7 @@ Visualization Manager:
         Colliding Link Color: 255; 0; 0
         Goal State Alpha: 1
         Goal State Color: 250; 128; 0
-        Interactive Marker Size: 0
+        Interactive Marker Size: 0.100000001
         Joint Violation Color: 255; 0; 255
         Planning Group: scara_arm
         Query Goal State: true
@@ -254,11 +250,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           ScaraLink2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          colisionBox:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -336,6 +327,92 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        BaseBox:
+          Value: false
+        CentralStop1:
+          Value: false
+        CentralStop2:
+          Value: false
+        GripperBase:
+          Value: false
+        GripperLeft:
+          Value: false
+        GripperRight:
+          Value: false
+        ScaraBase:
+          Value: false
+        ScaraLink1:
+          Value: false
+        ScaraLink2:
+          Value: false
+        placeBox:
+          Value: false
+        placeHole1:
+          Value: false
+        placeHole2:
+          Value: false
+        placeHole3:
+          Value: false
+        placeHole4:
+          Value: false
+        placeHole5:
+          Value: false
+        placeHole6:
+          Value: false
+        placeHole7:
+          Value: false
+        placeHole8:
+          Value: false
+        tool0:
+          Value: false
+        world:
+          Value: false
+      Marker Scale: 0.100000001
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          BaseBox:
+            CentralStop1:
+              {}
+            CentralStop2:
+              {}
+            ScaraBase:
+              ScaraLink1:
+                ScaraLink2:
+                  GripperBase:
+                    GripperLeft:
+                      {}
+                    GripperRight:
+                      {}
+                    tool0:
+                      {}
+            placeBox:
+              placeHole1:
+                {}
+              placeHole2:
+                {}
+              placeHole3:
+                {}
+              placeHole4:
+                {}
+              placeHole5:
+                {}
+              placeHole6:
+                {}
+              placeHole7:
+                {}
+              placeHole8:
+                {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -351,25 +428,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.99650002
+      Distance: 2.86890626
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.189831018
-        Y: 0.585293353
+        X: 0.0309070945
+        Y: 0.36584419
         Z: 2.23518001e-07
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.554796934
+      Pitch: 0.524796844
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 5.62494993
+      Yaw: 0.836763144
     Saved: ~
 Window Geometry:
   Displays:

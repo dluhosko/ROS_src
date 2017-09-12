@@ -33,6 +33,9 @@ void MainWindow::on_jointControl_Start_PushButton_3_clicked()
 
     ui->status_gripper_OnOff_3->display(jointControl_gripperState);
 
+    ui->basicInfo_RobotModel_TextBrowser_3->setText();
+
+    ui->error_lineEdit->setText("hovno");
 
     //Send the values to ROS!
     //.............
@@ -98,6 +101,8 @@ void MainWindow::on_positionControlCustom_Start_PushButton_3_clicked()
     ui->status_joint2vel_3->display(y);
     ui->status_joint3vel_3->display(z);
 
+    //ui->teachMode_infoHand_textEdit_4->setTextColor(Q);
+
 
 
 }
@@ -108,7 +113,7 @@ void MainWindow::on_positionControlCustom_Stop_PushButton_4_clicked()
 
 void MainWindow::on_positionControlCustom_Reset_PushButton_5_clicked()
 {
-
+    ui->positionControlCustom_X_LineEdit_3->setText(QString::number(0.0));
 }
 
 //*******************************************************************************//
@@ -218,3 +223,208 @@ void MainWindow::hovno(){
 
 
 
+
+void MainWindow::on_positionControl_Gripper_Checkbox_4_toggled(bool checked)
+{
+
+}
+
+
+
+
+
+
+
+void MainWindow::on_teachMode_teachButton_clicked()
+{
+    //ui->teachModeRun_info_lineEdit
+}
+
+void MainWindow::on_teachMode_stopTeachButton_clicked()
+{
+
+    ui->
+
+}
+
+void MainWindow::on_teachMode_tabWidget_tabBarClicked(int index)
+{
+
+}
+
+void MainWindow::on_teachModeRun_start_pushbutton_clicked()
+{
+
+}
+
+void MainWindow::on_teachModeRun_stop_pushbutton_clicked()
+{
+
+}
+
+
+
+void MainWindow::on_teachMode_teachButtonHand_4_clicked()
+{
+
+}
+
+void MainWindow::on_teachModeRun_startHand_pushbutton_4_clicked()
+{
+
+}
+
+void MainWindow::on_teachModeRun_stopHand_pushbutton_4_clicked()
+{
+
+}
+
+void MainWindow::on_teachMode_tabWidget_2_tabBarClicked(int index)
+{
+
+}
+
+
+
+void MainWindow::on_teachMode_stopTeachButtonHand_4_clicked()
+{
+
+}
+
+
+
+
+
+
+
+
+
+void MainWindow::on_centralStop_clicked()
+{
+
+}
+
+void MainWindow::on_moveit_checkBox_toggled(bool checked)
+{
+
+}
+
+void MainWindow::on_colisionObject_CustomObj_checkButton_toggled(bool checked)
+{
+
+}
+
+void MainWindow::on_colisionObject_RealObj_checkButton_toggled(bool checked)
+{
+
+}
+
+void MainWindow::on_colisionObject_Reset_pushbutton_clicked()
+{
+
+}
+
+void MainWindow::on_colisionObject_Up_pushbutton_clicked()
+{
+
+}
+
+void MainWindow::on_colisionObject_Left_pushbutton_clicked()
+{
+
+}
+
+void MainWindow::on_colisionObject_Down_pushbutton_clicked()
+{
+
+}
+
+void MainWindow::on_colisionObject_Right_pushbutton_clicked()
+{
+
+}
+
+void MainWindow::on_setParameters_Torque_PushButton_3_clicked()
+{
+
+}
+
+
+
+void MainWindow::on_colisionObject_CustomObj_enterpushButton_clicked()
+{
+
+}
+
+void MainWindow::on_colisionObject_RealObj_enterPushButton_clicked()
+{
+
+}
+
+
+void MainWindow::on_moveit_gripper_checkBox_toggled(bool checked)
+{
+
+}
+
+
+
+
+
+
+void MainWindow::on_colisionObject_CustomObj_posChangeenterpushButton_2_clicked()
+{
+
+}
+
+void MainWindow::on_colisionObject_CustomObj_SizeenterpushButton_clicked()
+{
+
+}
+
+void MainWindow::on_colisionObject_RealObj_SizeenterpushButton_2_clicked()
+{
+
+}
+
+void MainWindow::on_setParameters_Precision_PushButton_4_clicked()
+{
+
+}
+
+void MainWindow::on_teachModeRun_collision_checkbox_toggled(bool checked)
+{
+
+}
+
+
+
+
+void MainWindow::on_teachModeRun_collisiongui_checkbox_clicked()
+{
+
+}
+
+
+
+
+
+void MainWindow::on_positionControl2_collision_checkbox_toggled(bool checked)
+{
+
+}
+
+void MainWindow::on_teachModeRun_collisiongui_checkbox_toggled(bool checked)
+{
+
+}
+
+void MainWindow::on_positionControlCustom_collision_checkbox_toggled(bool checked)
+{
+
+}
+
+void MainWindow::on_jointControl_collision_checkbox_toggled(bool checked)
+{
+
+}

@@ -17,10 +17,10 @@
    <widget class="QGroupBox" name="controlGroupBox">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>0</x>
       <y>90</y>
-      <width>361</width>
-      <height>631</height>
+      <width>381</width>
+      <height>611</height>
      </rect>
     </property>
     <property name="layoutDirection">
@@ -60,9 +60,9 @@
     <widget class="QTabWidget" name="workingModes_3">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>20</x>
        <y>60</y>
-       <width>341</width>
+       <width>351</width>
        <height>531</height>
       </rect>
      </property>
@@ -85,21 +85,21 @@
       <widget class="QLabel" name="label_98">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>20</x>
          <y>20</y>
          <width>291</width>
-         <height>421</height>
+         <height>461</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Wellcome to SCARA&lt;br/&gt;Graphical User Interface&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Select:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 1 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Joint controll&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 2 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Position controll&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 3 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;DEMO application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 4 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Teach mode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 5 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Teach mode with HAND&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 6 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Custom movement in Moveit!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 7 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Get basic information&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 8 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Set parameters&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 9 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Colision object&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; font-style:italic;&quot;&gt;This GUI was provided by SENSODRIVE &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; font-style:italic;&quot;&gt;and Viktor Dluhos&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Wellcome to SCARA&lt;br/&gt;Graphical User Interface&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Select:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 1  : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Joint controll&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 2  : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Position controll&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 3  : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;DEMO application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 4  : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Teach mode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 5  : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Teach mode with HAND&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 6  : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Custom movement in Moveit!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 7  : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Get basic information&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 8  : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Set parameters&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 9  : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Colision object&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Mode 10 : &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Virtual cube&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; font-style:italic;&quot;&gt;This GUI was provided by SENSODRIVE &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; font-style:italic;&quot;&gt;and Viktor Dluhos&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_157">
        <property name="geometry">
         <rect>
          <x>180</x>
-         <y>400</y>
+         <y>430</y>
          <width>121</width>
          <height>31</height>
         </rect>
@@ -282,7 +282,7 @@
          <x>10</x>
          <y>290</y>
          <width>321</width>
-         <height>131</height>
+         <height>181</height>
         </rect>
        </property>
        <property name="frameShape">
@@ -329,6 +329,32 @@
         <property name="text">
          <string>RESET</string>
         </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QLabel" name="label_31">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Collision object&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QCheckBox" name="jointControl_collision_checkbox">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>
@@ -429,7 +455,7 @@
          <x>10</x>
          <y>310</y>
          <width>311</width>
-         <height>111</height>
+         <height>161</height>
         </rect>
        </property>
        <property name="frameShape">
@@ -477,6 +503,32 @@
          <string>STOP</string>
         </property>
        </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>291</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Collision object&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QCheckBox" name="positionControlCustom_collision_checkbox">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="mode3_3">
@@ -502,7 +554,7 @@
          <x>20</x>
          <y>60</y>
          <width>291</width>
-         <height>201</height>
+         <height>231</height>
         </rect>
        </property>
        <property name="frameShape">
@@ -553,6 +605,32 @@
          <string>Stop apk</string>
         </property>
        </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>170</y>
+          <width>251</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Collision object&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QCheckBox" name="positionControl2_collision_checkbox">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="mode4_3">
@@ -569,7 +647,7 @@
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -687,7 +765,7 @@
            <x>10</x>
            <y>20</y>
            <width>281</width>
-           <height>181</height>
+           <height>241</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -738,6 +816,32 @@
            <string>Start apk</string>
           </property>
          </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>170</y>
+            <width>251</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_28">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Collision object&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QCheckBox" name="teachModeRun_collisiongui_checkbox">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </widget>
       </widget>
@@ -765,11 +869,11 @@
          <x>10</x>
          <y>40</y>
          <width>311</width>
-         <height>371</height>
+         <height>441</height>
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab_8">
         <attribute name="title">
@@ -808,7 +912,7 @@
           <item row="2" column="0">
            <widget class="QLabel" name="label_206">
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Joint 3 [mm]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Joint 3 [cm]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -887,7 +991,7 @@
            <x>10</x>
            <y>10</y>
            <width>291</width>
-           <height>111</height>
+           <height>171</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -938,12 +1042,38 @@
            <string>Start apk</string>
           </property>
          </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>120</y>
+            <width>251</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Collision object&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QCheckBox" name="teachModeRun_collision_checkbox">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
         <widget class="QTextEdit" name="teachMode_teachedPositions_textEdit_4">
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>150</y>
+           <y>220</y>
            <width>291</width>
            <height>181</height>
           </rect>
@@ -957,8 +1087,8 @@
         <widget class="QLabel" name="label_195">
          <property name="geometry">
           <rect>
-           <x>20</x>
-           <y>120</y>
+           <x>30</x>
+           <y>180</y>
            <width>261</width>
            <height>31</height>
           </rect>
@@ -1549,7 +1679,7 @@
           <height>182</height>
          </rect>
         </property>
-        <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0">
+        <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0">
          <item row="6" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
@@ -1956,15 +2086,25 @@
          </item>
         </layout>
        </widget>
-       <zorder>gridLayoutWidget_3</zorder>
-       <zorder>label_17</zorder>
-       <zorder>colisionObject_CustomObj_sizeXLineEdit_4</zorder>
       </widget>
-      <zorder>label_193</zorder>
-      <zorder>frame</zorder>
-      <zorder>frame_2</zorder>
-      <zorder>frame_3</zorder>
-      <zorder>label_17</zorder>
+     </widget>
+     <widget class="QWidget" name="tab_6">
+      <attribute name="title">
+       <string>10</string>
+      </attribute>
+      <widget class="QLabel" name="label_196">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>331</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Virtual cube&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;In this mode a virtual cube is displayed &lt;br/&gt;in RViz program in ROS. In this mode&lt;br/&gt;the SCARA robotic arm cannot exceed &lt;br/&gt;this virtual cube.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QLabel" name="controlBox_label_5">
@@ -1987,7 +2127,7 @@
       <x>390</x>
       <y>90</y>
       <width>421</width>
-      <height>631</height>
+      <height>611</height>
      </rect>
     </property>
     <property name="title">
@@ -2396,7 +2536,7 @@
        <x>10</x>
        <y>350</y>
        <width>401</width>
-       <height>141</height>
+       <height>131</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -2550,7 +2690,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>510</y>
+       <y>480</y>
        <width>401</width>
        <height>111</height>
       </rect>
@@ -2664,36 +2804,26 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>730</y>
-      <width>351</width>
-      <height>191</height>
+      <y>710</y>
+      <width>361</width>
+      <height>151</height>
      </rect>
     </property>
     <property name="text">
      <string>STOP program</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="error_lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>750</y>
-      <width>401</width>
-      <height>171</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>730</y>
-      <width>151</width>
+      <x>400</x>
+      <y>720</y>
+      <width>401</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Error messages&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Status and error messages&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_191">
@@ -2715,13 +2845,21 @@
      <bool>true</bool>
     </property>
    </widget>
-   <zorder>controlGroupBox</zorder>
-   <zorder>feedbackGroupBox</zorder>
-   <zorder>centralStop</zorder>
-   <zorder>error_lineEdit</zorder>
-   <zorder>label</zorder>
-   <zorder>label_191</zorder>
-   <zorder>frame_13</zorder>
+   <widget class="QLineEdit" name="error_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>740</y>
+      <width>401</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

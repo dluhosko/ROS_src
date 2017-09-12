@@ -57,6 +57,84 @@ private slots:
 
     void on_status_joint1vel_3_overflow();
 
+    void on_positionControl_Gripper_Checkbox_4_toggled(bool checked);
+
+    void on_teachMode_teachButton_clicked();
+
+    void on_teachMode_stopTeachButton_clicked();
+
+    void on_teachMode_tabWidget_tabBarClicked(int index);
+
+    void on_teachModeRun_start_pushbutton_clicked();
+
+    void on_teachModeRun_stop_pushbutton_clicked();
+
+    void on_teachMode_teachButton_4_clicked();
+
+    void on_teachMode_stopTeachButton_4_clicked();
+
+    void on_teachModeRun_start_pushbutton_4_clicked();
+
+    void on_teachModeRun_stop_pushbutton_4_clicked();
+
+    void on_teachMode_tabWidget_2_tabBarClicked(int index);
+
+    void on_teachModeRun_startHand_pushbutton_4_clicked();
+
+    void on_teachModeRun_stopHand_pushbutton_4_clicked();
+
+    void on_teachMode_teachButtonHand_4_clicked();
+
+    void on_teachMode_stopTeachButtonHand_4_clicked();
+
+    void on_centralStop_clicked();
+
+    void on_moveit_checkBox_toggled(bool checked);
+
+    void on_colisionObject_CustomObj_checkButton_toggled(bool checked);
+
+    void on_colisionObject_RealObj_checkButton_toggled(bool checked);
+
+    void on_colisionObject_Reset_pushbutton_clicked();
+
+    void on_colisionObject_Up_pushbutton_clicked();
+
+    void on_colisionObject_Left_pushbutton_clicked();
+
+    void on_colisionObject_Down_pushbutton_clicked();
+
+    void on_colisionObject_Right_pushbutton_clicked();
+
+    void on_setParameters_Torque_PushButton_3_clicked();
+
+    void on_colisionObject_CustomObj_enterpushButton_clicked();
+
+    void on_colisionObject_RealObj_enterPushButton_clicked();
+
+    void on_checkBox_toggled(bool checked);
+
+    void on_moveit_gripper_checkBox_toggled(bool checked);
+
+    void on_colisionObject_CustomObj_posChangeenterpushButton_2_clicked();
+
+    void on_colisionObject_CustomObj_SizeenterpushButton_clicked();
+
+    void on_colisionObject_RealObj_SizeenterpushButton_2_clicked();
+
+    void on_setParameters_Precision_PushButton_4_clicked();
+
+    void on_teachModeRun_collision_checkbox_toggled(bool checked);
+
+    void on_teachModeRun_collisiongui_checkbox_clicked();
+
+    void on_positionControl2_collision_checkbox_toggled(bool checked);
+
+    void on_teachModeRun_collisiongui_checkbox_toggled(bool checked);
+
+    void on_positionControlCustom_collision_checkbox_toggled(bool checked);
+
+    void on_jointControl_collision_checkbox_toggled(bool checked);
+
 private:
     //Ui::MainWindow *ui;
     bool jointControl_gripperState = false;

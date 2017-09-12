@@ -42,7 +42,7 @@ int count1 = 0;
 int last_trajectory_size = -5;
 int jointControl_counter = 0, positionControl_counter = 0, demoControl_counter = 0, teachMode_counter = 0, teachModeHand_counter = 0;
 double x_offset, y_offset, z_offset;
-double max_torque_value = 5.0, torque_value = 0.0;
+double max_torque_value = 3.5, torque_value = 0.0;
 double maxJointDeviation = 0.1;
 double J3_position = 0.0;
 
@@ -60,7 +60,7 @@ std::vector<std::vector<double>> teachPositionsHand;
 std::vector<geometry_msgs::Point> desiredPositionsDEMO(11);
 std::vector<geometry_msgs::Point> teachPositions;
 
-std_msgs::Bool moveitMode;
+std_msgs::Bool moveitMode, displayVirtualCube;
 std_msgs::Byte selectedMode;
 std_msgs::Byte gripper_state;
 std_msgs::Int32 centralStop_msg;
@@ -80,6 +80,7 @@ moveit::planning_interface::MoveGroupInterface::Plan my_plan;
 moveit::planning_interface::MoveGroupInterface *mg;
 ros::Publisher *info_pub;
 ros::Publisher *desPos_pub;
+ros::Publisher *colPos_pub;
 
 //************************************************** Functions *************************************************************//
 
@@ -291,17 +292,25 @@ void sendEndEffectorPose(ros::Publisher *pub,moveit::planning_interface::MoveGro
 //This function send error codes to GUI node
 void sendErrorCode(ros::Publisher *pub, int code){
 
-    //**********************************************************************//
-    //   This function send error codes to GUI node                         //
-    //   Description of the error codes:                                    //
-    //      0 - Everything OK! (just at the start of the program)           //
-    //      1 - Bad input joint values -> joint values are not in range     //
-    //          or they are in colision state (joint control mode)          //
-    //      2 - Could not create a good plan (in position control)          //
-    //      3 - IK detects colision -> change IK calculation (pos. control) //
-    //      4 - IK could not find a suitable solution (pos. control)        //
-    //      5 - Cannot solve IK (pos. control)                              //
-    //      6 - ......                                                      //
+    //***********************************************************************//
+    //   This function send error codes to GUI node                          //
+    //   Description of the error codes:                                     //
+    //      0  - Everything OK! (just at the start of the program)           //
+    //      1  - Bad input joint values -> joint values are not in range     //
+    //          or they are in colision state (joint control mode)           //
+    //      2  - Could not create a good plan (in position control)          //
+    //      3  - IK detects colision -> change IK calculation (pos. control) //
+    //      4  - IK could not find a suitable solution (pos. control)        //
+    //      5  - Cannot solve IK (pos. control)                              //
+    //      6  - Something wrong with the function                           //
+    //      7  - Bad plan or out of bounds (joint control)
+    //      8  - Replanning trajectory (DEMO)
+    //      9  - Teached new position (teach mode GUI)
+    //      10 - Stopped teaching (teach mode GUI)
+    //      11 - Size not ok (teach mode GUI)
+    //      12 - Teached new position (teach mode HAND)
+    //      13 - Stopped teaching (teach mode HAND)
+    //      14 - Size not ok (teach mode HAND)
     //**********************************************************************//
     errorCodeMsg.data = code;
     for (int i=0;i<10;i++){
@@ -320,7 +329,9 @@ void sendJointPoses(ros::Publisher *pose_and_vel_pub,ros::Publisher *accel_pub, 
 
     if ((i != 999) && (i != 998)){
         if (i >= last_trajectory_size){
-            i= last_trajectory_size-1;
+            i = last_trajectory_size - 1;
+        }else if (i <= 0){
+            i = 0;
         }
     }
 
@@ -667,6 +678,36 @@ void sendPositionToGUI(double input_x, double input_y, double input_z){
 
 }
 
+int getActualCounterNumber (){
+
+    switch (current_mode){
+        case 1:
+            ROS_INFO("Joint control plan");
+            return jointControl_counter + 5;
+            break;
+        case 2:
+            ROS_INFO("Position control plan");
+            return positionControl_counter + 5;
+            break;
+        case 3:
+            ROS_INFO("DEMO mode plan");
+            return demoControl_counter + 5;
+            break;
+        case 4:
+            ROS_INFO("TEACH mode plan");
+            return teachMode_counter + 5;
+            break;
+        case 5:
+            ROS_INFO("TEACH mode HAND plan");
+            return teachMode_counter + 5;
+            break;
+        default:
+            ROS_ERROR("No mode for real collision object");
+            return -1;
+            break;
+    }
+
+}
 
 //******************************************************************************************************************************//
 

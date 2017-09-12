@@ -209,6 +209,16 @@ void MainWindow::on_jointControl_Reset_PushButton_3_clicked(){
 
 
 }
+
+void MainWindow::on_jointControl_collision_checkbox_toggled(bool checked){
+
+    //ROS
+    dispRealObj_msg.data = checked;
+    for (int i=0;i<100;i++){
+        displayRealColObj_pub.publish(dispRealObj_msg);
+    }
+
+}
 //................................................................................//
 
 
@@ -282,6 +292,16 @@ void MainWindow::on_positionControl_Gripper_Checkbox_4_toggled(bool checked){
         gripperState_pub.publish(gripperState_msg);
     }
 }
+
+void MainWindow::on_positionControlCustom_collision_checkbox_toggled(bool checked){
+
+    //ROS
+    dispRealObj_msg.data = checked;
+    for (int i=0;i<100;i++){
+        displayRealColObj_pub.publish(dispRealObj_msg);
+    }
+
+}
 //...............................................................................//
 
 
@@ -316,6 +336,16 @@ void MainWindow::on_positionControl2_Stop_PushButton_3_clicked(){
     for (int i=0;i<100;i++){
         start_pub.publish(startState_msg);
     }
+}
+
+void MainWindow::on_positionControl2_collision_checkbox_toggled(bool checked){
+
+    //ROS
+    dispRealObj_msg.data = checked;
+    for (int i=0;i<100;i++){
+        displayRealColObj_pub.publish(dispRealObj_msg);
+    }
+
 }
 //...............................................................................//
 
@@ -402,6 +432,16 @@ void MainWindow::on_teachModeRun_stop_pushbutton_clicked(){
     for (int i=0;i<100;i++){
         teachMode_startState.publish(teachModeState_msg);
     }
+}
+
+void MainWindow::on_teachModeRun_collisiongui_checkbox_toggled(bool checked){
+
+    //ROS
+    dispRealObj_msg.data = checked;
+    for (int i=0;i<100;i++){
+        displayRealColObj_pub.publish(dispRealObj_msg);
+    }
+
 }
 //...............................................................................//
 
@@ -541,6 +581,15 @@ void MainWindow::on_teachMode_tabWidget_2_tabBarClicked(int index){
         j=0;
     }
 }
+
+void MainWindow::on_teachModeRun_collision_checkbox_toggled(bool checked){
+
+    //ROS
+    dispRealObj_msg.data = checked;
+    for (int i=0;i<100;i++){
+        displayRealColObj_pub.publish(dispRealObj_msg);
+    }
+}
 //...............................................................................//
 
 
@@ -585,10 +634,11 @@ void MainWindow::on_basicInfo_GetInfo_PushButton_3_clicked(){
         getInfo_pub.publish(getInfoState_msg);
     //}
 
-    ui->basicInfo_RobotModel_TextBrowser_3->setText(QString::fromStdString(robot_model));
-    ui->basicInfo_ReferenceFrame_TextBrowser_3->setText(QString::fromStdString(reference_frame));
-    ui->basicInfo_EffectorLink_TextBrowser_3->setText(QString::fromStdString(effector_link));
-    ui->basicInfo_ActiveJoints_TextBrowser_3->setText(QString::fromStdString(active_joints));
+    ui->basicInfo_RobotModel_TextBrowser_3->setText("scara_arm");
+    ui->basicInfo_ReferenceFrame_TextBrowser_3->setText("world");
+    ui->basicInfo_EffectorLink_TextBrowser_3->setText("tool0");
+    ui->basicInfo_ActiveJoints_TextBrowser_3->setText("Joint1 , Joint2, Joint_GripperBase");
+
 
 }
 //...............................................................................//
@@ -770,7 +820,7 @@ void MainWindow::on_colisionObject_Right_pushbutton_clicked(){
 //...............................................................................//
 
 
-//***************************** Tab widget ******************************//
+//******************************** Tab widget ***********************************//
 void MainWindow::on_workingModes_3_tabBarClicked(int index){
     //GUI
     if (index == 0){
@@ -795,7 +845,7 @@ void MainWindow::on_workingModes_3_tabBarClicked(int index){
 
 
 
-//******************************* CENTRAL STOP *********************************//
+//******************************* CENTRAL STOP **********************************//
 void MainWindow::on_centralStop_clicked(){
 
     //kill matlab
@@ -805,6 +855,7 @@ void MainWindow::on_centralStop_clicked(){
     }
     //kill roslaunch
     system("pkill roslaunch");
+
     ui->error_lineEdit->setText("CENTRAL STOP PUSHED! Matlab and ROS stopped!");
 
     //kill GUI
@@ -832,7 +883,7 @@ bool MainWindow::filterValues(double inputValue) {
 
 
 
-//********************** Callbacks ************************************//
+//********************** Callbacks **********************************************//
 void MainWindow::jointStatesCallback(const sensor_msgs::JointState jointState){
 
     //Save current joint state -> for teach mode
@@ -919,6 +970,7 @@ void MainWindow::jointStatesCallback(const sensor_msgs::JointState jointState){
     }
 
     ui->status_pose_Z->display(1.04-jointState.position[2]);
+    ui->status_pose_Zdesired->display(1.04-jointState.position[2]);//////
 
 }
 
@@ -929,14 +981,19 @@ void MainWindow::jointControlCallback(const geometry_msgs::PointStamped pointSta
 void MainWindow::getInfoCallback(const scara_msgs::robot_info robotInfo){
 
     //ROS_INFO("robot info callback");
-    robot_model = robotInfo.robot_model;
-    reference_frame = robotInfo.reference_frame;
-    effector_link = robotInfo.efector_link;
-    active_joints = robotInfo.active_joints;
-//    ROS_INFO_STREAM(robot_model);
-//    ROS_INFO_STREAM(reference_frame);
-//    ROS_INFO_STREAM(effector_link);
-//    ROS_INFO_STREAM(active_joints);
+    std::string robot_model = robotInfo.robot_model;
+    std::string reference_frame = robotInfo.reference_frame;
+    std::string effector_link = robotInfo.efector_link;
+    std::string active_joints = robotInfo.active_joints;
+    ROS_INFO_STREAM(robot_model);
+    ROS_INFO_STREAM(reference_frame);
+    ROS_INFO_STREAM(effector_link);
+    ROS_INFO_STREAM(active_joints);
+
+//    ui->basicInfo_RobotModel_TextBrowser_3->setText(QString::fromStdString(robotInfo.robot_model));
+//    ui->basicInfo_ReferenceFrame_TextBrowser_3->setText(QString::fromStdString(robotInfo.reference_frame));
+//    ui->basicInfo_EffectorLink_TextBrowser_3->setText(QString::fromStdString(robotInfo.efector_link));
+//    ui->basicInfo_ActiveJoints_TextBrowser_3->setText(QString::fromStdString(robotInfo.active_joints));
 
     ui->basicInfo_X_LCDnum_3->display(robotInfo.position_x);
     ui->basicInfo_Y_LCDnum_6->display(robotInfo.position_y);
@@ -983,37 +1040,80 @@ void MainWindow::actualAccCallback(const geometry_msgs::Point accValues){
 
 void MainWindow::errorCodeCallback(const std_msgs::Int32 errorCode){
 
-    //ROS_INFO("hovno %d",errorCode.data);
+    if (lastErrorCode != errorCode.data){
 
-    switch (errorCode.data){
-        case 0:
-            ROS_INFO("Everything OK!");
-            ui->error_lineEdit->setText("Everything OK!");
-            break;
-        case 1:
-            ROS_INFO("[joint control] : Bad input joint values");
-            ui->error_lineEdit->setText("[joint control] : Bad input joint values");
-            break;
-        case 2:
-            ROS_INFO("[position control] : Bad plan");
-            ui->error_lineEdit->setText("[joint control] : Bad plan");
-            break;
-        case 3:
-            ROS_INFO("[position control] : Colision warining! changing mode");
-            ui->error_lineEdit->setText("[position control] : Colision warining! changing mode");
-            break;
-        case 4:
-            ROS_INFO("[position control] : Cannot solve IK please enter new positions");
-            ui->error_lineEdit->setText("[position control] : Cannot solve IK please enter new positions");
-            break;
-        case 5:
-            ROS_INFO("[position control] : No solution found for desired position");
-            ui->error_lineEdit->setText("[position control] : No solution found for desired position");
-            break;
-        default:
-            ROS_ERROR("fuck...");
-            break;
+        lastErrorCode = errorCode.data;
+
+        switch (errorCode.data){
+            case 0:
+                //ROS_INFO("Everything OK!");
+                ui->error_lineEdit->setText("Everything OK!");
+                break;
+            case 1:
+                //ROS_INFO("[joint control] : Bad input joint values");
+                ui->error_lineEdit->setText("[joint control] : Bad input joint values");
+                break;
+            case 2:
+                //ROS_INFO("[position control] : Bad plan");
+                ui->error_lineEdit->setText("[joint control] : Bad plan");
+                break;
+            case 3:
+                //ROS_INFO("[position control] : Colision warining! changing mode");
+                ui->error_lineEdit->setText("[position control] : Colision warining! changing mode");
+                break;
+            case 4:
+                //ROS_INFO("[position control] : Cannot solve IK please enter new positions");
+                ui->error_lineEdit->setText("[position control] : Cannot solve IK please enter new positions");
+                break;
+            case 5:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[position control] : No solution found for desired position");
+                break;
+            case 6:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[joint control] : Something wrong with the function and cannot execute plan");
+                break;
+            case 7:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("Bad plan or out of bounds ! cannot execute plan");
+                break;
+            case 8:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[DEMO control] : replanning trajectory");
+                break;
+            case 9:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[TEACH mode GUI] : teached new position!");
+                break;
+            case 10:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[TEACH mode GUI] : stopped teaching!");
+            case 11:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[TEACH mode GUI] : size NOT OK!");
+                break;
+            case 12:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[TEACH mode HAND] : teached new position!");
+                break;
+            case 13:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[TEACH mode HAND] : stopped teaching!");
+                break;
+            case 14:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[TEACH mode HAND] : size NOT OK!");
+                break;
+            case 15:
+                //ROS_INFO("[position control] : No solution found for desired position");
+                ui->error_lineEdit->setText("[TEACH mode HAND] : size NOT OK!");
+                break;
+            default:
+                break;
+        }
     }
+
+
 }
 
 void MainWindow::kktinaCallback(const geometry_msgs::Pose pose){
@@ -1042,6 +1142,6 @@ void MainWindow::desiredPoseCallback(const geometry_msgs::Point desiredPose){
 
     ui->status_pose_Xdesired->display(desiredPose.x);
     ui->status_pose_Ydesired->display(desiredPose.y);
-    ui->status_pose_Zdesired->display(desiredPose.z);
+    //ui->status_pose_Zdesired->display(desiredPose.z);
 
 }

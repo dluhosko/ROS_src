@@ -17,10 +17,12 @@
 #include "geometry_msgs/Point.h"
 
 const double SIZE_Z = 0.26, POS_Z = 1.1;
+const double VIRTUALCUBE_X_POS = 0.587, VIRTUALCUBE_Y_POS = 0.58, VIRTUALCUBE_X_SIZE = 0.15, VIRTUALCUBE_Y_SIZE = 0.3;
 
-bool custom_object_enabled = false, real_object_enabled = false;
+bool custom_object_enabled = false, real_object_enabled = false, virtual_cube_enabled = false;
 double pos_x_real = 0.0, pos_y_real = 0.0, pos_x_cust = 0.0, pos_y_cust = 0.0;
-double size_x_real = 0.05, size_y_real = 0.05, size_x_cust = 0.05, size_y_cust = 0.05;
+double size_x_real = 0.1, size_y_real = 0.01, size_x_cust = 0.05, size_y_cust = 0.05;
+
 
 visualization_msgs::Marker markerCustom, markerReal;
 std::vector<moveit_msgs::CollisionObject> collision_objects_custom, collision_objects_real;
@@ -43,11 +45,11 @@ void customSizeCallback (const geometry_msgs::Point sizeValue){
 
 }
 
-void realPosCallback (const geometry_msgs::Point positionValue){
+void realPosCallback (const geometry_msgs::Pose positionValue){
 
     //ROS_INFO("Custom object position callback [x=%f y=%f]",positionValue.x, positionValue.y);
-    pos_x_real = positionValue.x;
-    pos_y_real = positionValue.y;
+    pos_x_real = positionValue.position.x;
+    pos_y_real = positionValue.position.y;
 
 }
 
@@ -70,6 +72,13 @@ void realObjEnabledCallback (const std_msgs::Bool enabled){
 
     //ROS_INFO("Real object enabled callback");
     real_object_enabled = enabled.data;
+
+}
+
+void virtualCubeEnabledCallback(const std_msgs::Bool enabled){
+
+    //ROS_INFO("Virtual cube enabled callback");
+    virtual_cube_enabled = enabled.data;
 
 }
 
@@ -105,7 +114,7 @@ void publishCustomVisualObject(ros::Publisher *marker_pub){
 
     //ROS_INFO("Position x=%f y=%f z=%f",pos_x_cust, pos_y_cust, POS_Z);
     //ROS_INFO("Size x=%f y=%f z=%f", size_x_cust, size_y_cust, SIZE_Z);
-    //ROS_INFO("Display %d",custom_object_enabled);
+    //ROS_INFO("Display custom %d",custom_object_enabled);
 
     visualization_msgs::Marker markerCustom;
     markerCustom.header.frame_id = "world" ;
@@ -114,38 +123,39 @@ void publishCustomVisualObject(ros::Publisher *marker_pub){
     markerCustom.id = 0;
     markerCustom.type = visualization_msgs::Marker::CUBE;
 
-    if (custom_object_enabled){
+    if (virtual_cube_enabled){
+        //ROS_INFO("Virtual cube enabled");
         markerCustom.action = visualization_msgs::Marker::ADD;
         //0.47512 ; 0.23225; 1.0198 pick place
-        markerCustom.pose.position.x = pos_x_cust;
-        markerCustom.pose.position.y = pos_y_cust;
+        markerCustom.pose.position.x = VIRTUALCUBE_X_POS;
+        markerCustom.pose.position.y = VIRTUALCUBE_Y_POS;
         markerCustom.pose.position.z = POS_Z;
         //
         markerCustom.pose.orientation.x = 0.0;
         markerCustom.pose.orientation.y = 0.0;
         markerCustom.pose.orientation.z = 0.0;
         markerCustom.pose.orientation.w = 1.0;
-        markerCustom.scale.x = size_x_cust;
-        markerCustom.scale.y = size_y_cust;
+        markerCustom.scale.x = VIRTUALCUBE_X_SIZE;
+        markerCustom.scale.y = VIRTUALCUBE_Y_SIZE;
         markerCustom.scale.z = SIZE_Z;  //0.02;
-        markerCustom.color.a = 1.0; // Don't forget to set the alpha!
+        markerCustom.color.a = 0.3; // Don't forget to set the alpha!
         markerCustom.color.r = 0.0;
         markerCustom.color.g = 1.0;
-        markerCustom.color.b = 0.0;
+        markerCustom.color.b = 1.0;
     }else{
+        ROS_INFO("Virtual cube disabled");
         markerCustom.action = visualization_msgs::Marker::DELETE;
     }
 
     markerCustom.lifetime = ros::Duration();
     marker_pub->publish(markerCustom);
-    //ROS_INFO("published a cube");
 }
 
 void publishRealVisualObject(ros::Publisher *marker_pub){
 
     //ROS_INFO("Position x=%f y=%f z=%f",pos_x_real, pos_y_real, POS_Z);
     //ROS_INFO("Size x=%f y=%f z=%f", size_x_real, size_y_real, SIZE_Z);
-    //ROS_INFO("Display %d",real_object_enabled);
+    //ROS_INFO("Display real %d",real_object_enabled);
 
     visualization_msgs::Marker markerReal;
     markerReal.header.frame_id = "world" ;
@@ -205,12 +215,12 @@ void publishCustomColisionObject(moveit::planning_interface::MoveGroupInterface 
     //atach collision object to to planning scene
     if (custom_object_enabled){
         planning_scene_interface->addCollisionObjects(collision_objects_custom);
-        ROS_INFO("added");
+        //ROS_INFO("Custom: added");
         usleep(500000);
     }else{
         collision_object_custom_ids[0] = collision_object_custom.id;
         planning_scene_interface->removeCollisionObjects(collision_object_custom_ids);
-        ROS_INFO("removed");
+        //ROS_INFO("Custom: removed");
         usleep(500000);
     }
 }
@@ -240,14 +250,15 @@ void publishRealColisionObject(moveit::planning_interface::MoveGroupInterface *m
 
     //atach collision object to to planning scene
     if (real_object_enabled){
+        usleep(1000000);
         planning_scene_interface->addCollisionObjects(collision_objects_real);
-        ROS_INFO("added");
-        usleep(500000);
+        //ROS_INFO("Real: added");
+        usleep(1000000);
     }else{
         collision_object_real_ids[0] = collision_object_real.id;
         planning_scene_interface->removeCollisionObjects(collision_object_real_ids);
-        ROS_INFO("removed");
-        usleep(500000);
+        //ROS_INFO("Real: removed");
+        usleep(1000000);
     }
 }
 #endif //PROJECT_SCARA_COLISION_OBJECT_H

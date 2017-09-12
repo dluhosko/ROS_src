@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
 
     bool defaultPosition = true;
     ros::init(argc, argv, "scara_colision_object");
-    ros::NodeHandle n1,n2,n3,n4,n5,n6,n7,n8,n9;
+    ros::NodeHandle n1,n2,n3,n4,n5,n6,n7,n8,n9,n10;
     ros::Rate loop_rate(5);
 
     moveit::core::RobotStatePtr current_state;
@@ -25,11 +25,12 @@ int main(int argc, char **argv) {
     //Create subscriber for position and size of colision objects
     ros::Subscriber customPos_sub = n3.subscribe("CustomObjectPosition",1000,customPosCallback);
     ros::Subscriber customSize_sub = n4.subscribe("CustomObjectSize",1000,customSizeCallback);
-    ros::Subscriber realPos_sub = n5.subscribe("RealObjectPosition",1000,realPosCallback);
+    ros::Subscriber realPos_sub = n5.subscribe("collisionPose",1000,realPosCallback);
     ros::Subscriber realSize_sub = n6.subscribe("RealObjectSize",1000,realSizeCallback);
     ros::Subscriber customObjEnabled_sub = n7.subscribe("displayCustomColisionObject",1000,customObjEnabledCallback);
     ros::Subscriber realbjEnabled_sub = n8.subscribe("displayRealColisionObject",1000,realObjEnabledCallback);
     ros::Subscriber customObjectPositionChange_sub = n9.subscribe("colisionObjectMovement", 1000, customObjectPositionChangeCallback);
+    ros::Subscriber virtualCube_sub = n10.subscribe("displayVirtualCube",1000,virtualCubeEnabledCallback);
 
     collision_objects_custom.resize(1);
     collision_object_custom_ids.resize(1);
@@ -40,8 +41,8 @@ int main(int argc, char **argv) {
 
     while (ros::ok()){
 
-        ROS_INFO_ONCE("Started publishing!");
-        //publishCustomVisualObject(&customColObj_pub);
+        ROS_WARN_ONCE("Publishing collision object node has started!");
+        publishCustomVisualObject(&customColObj_pub);
         //publishRealVisualObject(&realColObj_pub);
 
         publishCustomColisionObject(&move_group, &planning_scene_interface);
