@@ -143,7 +143,7 @@ void publishCustomVisualObject(ros::Publisher *marker_pub){
         markerCustom.color.g = 1.0;
         markerCustom.color.b = 1.0;
     }else{
-        ROS_INFO("Virtual cube disabled");
+        //ROS_INFO("Virtual cube disabled");
         markerCustom.action = visualization_msgs::Marker::DELETE;
     }
 

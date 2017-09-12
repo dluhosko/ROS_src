@@ -37,7 +37,7 @@ bool moveitState = false;
 int IK_mode = 1;
 int DEMO_mode = -1;
 int teach_mode = -1;
-int current_mode = 10;
+int current_mode = 999;
 int count1 = 0;
 int last_trajectory_size = -5;
 int jointControl_counter = 0, positionControl_counter = 0, demoControl_counter = 0, teachMode_counter = 0, teachModeHand_counter = 0;

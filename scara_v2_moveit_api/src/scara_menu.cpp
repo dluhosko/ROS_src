@@ -208,6 +208,12 @@ int main(int argc, char **argv){
     }
     sleep(6);
 
+    //virtual cube init
+    displayVirtualCube.data = false;
+    for (int i=0;i<10;i++){
+        virtualCube_pub.publish(displayVirtualCube);
+    }
+
 
 
     //Paralel thread for Colision detection START

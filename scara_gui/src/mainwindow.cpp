@@ -471,18 +471,18 @@ void MainWindow::on_teachMode_teachButtonHand_4_clicked(){
             jointControl_Values_msg.point.z = actualJointStates.position[2];
 
             if (teachModeIndexHand == 0){
-                ui->teachMode_infoHand_textEdit_4->setText("X = " + QString::number(jointControl_Values_msg.point.x) + " Y= " +
-                                                           QString::number(jointControl_Values_msg.point.y) + " Z= " +
+                ui->teachMode_infoHand_textEdit_4->setText("J1= " + QString::number(jointControl_Values_msg.point.x) + " J2= " +
+                                                           QString::number(jointControl_Values_msg.point.y) + " J3= " +
                                                            QString::number(jointControl_Values_msg.point.z) + " ] \n" + "Operation type = Pick");
                 ui->teachMode_modeDisplayHand_lcdnumber_->display(0.0);
             }else if(teachModeIndexHand%2 == 0){
-                ui->teachMode_infoHand_textEdit_4->setText("[ X = " + QString::number(jointControl_Values_msg.point.x) + " Y= " +
-                                                           QString::number(jointControl_Values_msg.point.y) + " Z= " +
+                ui->teachMode_infoHand_textEdit_4->setText("[ J1 = " + QString::number(jointControl_Values_msg.point.x) + " J2= " +
+                                                           QString::number(jointControl_Values_msg.point.y) + " J3= " +
                                                            QString::number(jointControl_Values_msg.point.z) + " ] \n" + "Operation type = Pick");
                 ui->teachMode_modeDisplayHand_lcdnumber_->display(0.0);
             }else{
-                ui->teachMode_infoHand_textEdit_4->setText("[ X = " + QString::number(jointControl_Values_msg.point.x) + " Y= " +
-                                                           QString::number(jointControl_Values_msg.point.y) + " Z= " +
+                ui->teachMode_infoHand_textEdit_4->setText("[ J1= " + QString::number(jointControl_Values_msg.point.x) + " J2= " +
+                                                           QString::number(jointControl_Values_msg.point.y) + " J3= " +
                                                            QString::number(jointControl_Values_msg.point.z) + " ] \n" + "Operation type = Place");
                 ui->teachMode_modeDisplayHand_lcdnumber_->display(1.0);
             }
@@ -604,6 +604,12 @@ void MainWindow::on_moveit_checkBox_toggled(bool checked){
     for (int i=0;i<100;i++){
         moveitMode_pub.publish(moveitMode_msg);
     }
+    if (checked){
+        ui->moveit_lineEdit->setText("Movement in Moveit! enabled");
+    }else{
+        ui->moveit_lineEdit->setText("Movement in Moveit! disabled");
+    }
+
 }
 
 void MainWindow::on_moveit_gripper_checkBox_toggled(bool checked){
