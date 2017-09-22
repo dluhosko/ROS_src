@@ -124,7 +124,8 @@ void MainWindow::on_jointControl_Start_PushButton_3_clicked(){
     //Send to ROS
     jointControl_Values_msg.point.x = ui->jointControl_J1_Slider_3->value() / 100.0;
     jointControl_Values_msg.point.y = ui->jointControl_J2_Slider_3->value() / 100.0;
-    jointControl_Values_msg.point.z = -(ui->jointControl_J3_Slider_3->value() / 100.0) + 0.04;
+    //jointControl_Values_msg.point.z = -(ui->jointControl_J3_Slider_3->value() / 100.0) + 0.04;
+    jointControl_Values_msg.point.z = (ui->jointControl_J3_Slider_3->value() / 100.0);
     if (gripperState)
         gripperState_msg.data = true;
     else
@@ -198,7 +199,8 @@ void MainWindow::on_jointControl_Reset_PushButton_3_clicked(){
     //Send to ROS
     jointControl_Values_msg.point.x = 0.0;
     jointControl_Values_msg.point.y = 0.0;
-    jointControl_Values_msg.point.z = 0.04;
+    //jointControl_Values_msg.point.z = 0.04;
+    jointControl_Values_msg.point.z = 0.0;
     gripperState_msg.data = false;
     startState_msg.data = true;
     for (int i=0;i<100;i++){
@@ -266,7 +268,7 @@ void MainWindow::on_positionControlCustom_Reset_PushButton_5_clicked(){
     //Start Pose of SCARA
     positionControl_Values_msg.x = 0.7;
     positionControl_Values_msg.y = 0.57;
-    positionControl_Values_msg.z = 1.0196;
+    positionControl_Values_msg.z = 1.04;
     gripperState_msg.data = false;
     startState_msg.data = true;
     for (int i=0;i<100;i++){
@@ -1015,7 +1017,7 @@ void MainWindow::actualPoseCallback(const geometry_msgs::Pose pose){
 
     ui->status_pose_X->display(pose.position.x);
     ui->status_pose_Y->display(pose.position.y);
-    //ui->status_pose_Z->display(pose.position.z+0.02);
+    ui->status_pose_Z->display(pose.position.z);
 }
 
 void MainWindow::actualAccCallback(const geometry_msgs::Point accValues){
@@ -1148,6 +1150,6 @@ void MainWindow::desiredPoseCallback(const geometry_msgs::Point desiredPose){
 
     ui->status_pose_Xdesired->display(desiredPose.x);
     ui->status_pose_Ydesired->display(desiredPose.y);
-    //ui->status_pose_Zdesired->display(desiredPose.z);
+    ui->status_pose_Zdesired->display(desiredPose.z);
 
 }

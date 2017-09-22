@@ -18,33 +18,21 @@
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
 #include "moveit/robot_model_loader/robot_model_loader.h"
+#include <moveit_msgs/ExecuteTrajectoryActionResult.h>
 #include <tf/transform_listener.h>
 #include "scara_msgs/robot_info.h"
 
 //Global variables
-bool start_state = false;
-bool teach_start_state = false;
-bool button_state = false;
 bool success;
-bool colisionDetection = false;
-bool executionOK = true;
-bool initTeachedPositions = true;
-bool zeroPositionForTeach = true;
-bool pick = false;
-bool central_stop = false;
-bool moveitState = false;
+bool executionOK = true, executionOKButWaitForPick = true, initTeachedPositions = true, zeroPositionForTeach = true;
+bool start_state = false, teach_start_state = false, button_state = false, colisionDetection = false, lastCollisionDetection = false, pick = false, central_stop = false, moveitState = false;
 
-int IK_mode = 1;
-int DEMO_mode = -1;
-int teach_mode = -1;
-int current_mode = 999;
-int count1 = 0;
-int last_trajectory_size = -5;
+int IK_mode = 1, DEMO_mode = -1, teach_mode = -1, current_mode = 999, count1 = 0, last_trajectory_size = -5;
 int jointControl_counter = 0, positionControl_counter = 0, demoControl_counter = 0, teachMode_counter = 0, teachModeHand_counter = 0;
-double x_offset, y_offset, z_offset;
-double max_torque_value = 3.5, torque_value = 0.0;
-double maxJointDeviation = 0.1;
-double J3_position = 0.0;
+
+double x_offset, y_offset, z_offset, J3_position = 0.0;
+double max_torque_value = 3.5, torque_value = 0.0, maxJointDeviation = 0.1;
+double currentTorqueValueJ1 = 0.0, currentTorqueValueJ2 = 0.0;
 
 std::vector<double> jointControl_jointValues(3);
 std::vector<double> jointControl_lastJointValues{9.99,9.99,9.99};
@@ -61,20 +49,12 @@ std::vector<geometry_msgs::Point> desiredPositionsDEMO(11);
 std::vector<geometry_msgs::Point> teachPositions;
 
 std_msgs::Bool moveitMode, displayVirtualCube;
-std_msgs::Byte selectedMode;
-std_msgs::Byte gripper_state;
-std_msgs::Int32 centralStop_msg;
-std_msgs::Int32 errorCodeMsg;
-geometry_msgs::Point point;
-geometry_msgs::Point desiredPositions;
-geometry_msgs::Pose endEffectorPose;
+std_msgs::Byte selectedMode, gripper_state;
+std_msgs::Int32 centralStop_msg, errorCodeMsg;
+geometry_msgs::Point point, desiredPositions, acc, currentTeachPoint, lastTeachPoint;
+geometry_msgs::Pose endEffectorPose, pos_and_vel;
 geometry_msgs::PoseStamped ws1;
-geometry_msgs::Pose pos_and_vel;
-geometry_msgs::Point acc;
 sensor_msgs::JointState currentJointStates;
-geometry_msgs::Point currentTeachPoint, lastTeachPoint;
-
-
 
 moveit::planning_interface::MoveGroupInterface::Plan my_plan;
 moveit::planning_interface::MoveGroupInterface *mg;
@@ -102,6 +82,29 @@ bool jointModeControll (moveit::planning_interface::MoveGroupInterface *move_gro
     move_group->asyncExecute(my_plan);
     //move_group->asyncMove();
 
+}
+
+void prepareValuesForPickOrPlace(moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan *plan, int trajectory_size, bool UpOrDown){
+
+    jointControl_jointValues[0] = plan->trajectory_.joint_trajectory.points[trajectory_size-1].positions[0];
+    jointControl_jointValues[1] = plan->trajectory_.joint_trajectory.points[trajectory_size-1].positions[1];
+    if (UpOrDown){
+        jointControl_jointValues[2] = 0.00;
+    }else{
+        jointControl_jointValues[2] = 0.04;
+    }
+    ROS_INFO("Desired joints %f %f %f", jointControl_jointValues[0], jointControl_jointValues[1], jointControl_jointValues[2]);
+    move_group->setJointValueTarget(jointControl_jointValues);
+
+}
+
+bool setValuesForPickOrPlace(moveit::planning_interface::MoveGroupInterface *move_group){
+
+    success = move_group->plan(my_plan);
+    if (!success){
+        return false;
+    }
+    move_group->execute(my_plan);
 }
 
 //This functions server as a support function to function getOffsets
@@ -179,12 +182,10 @@ bool calculateIK(double x, double y, double z,  int mode, int working_mode, int 
     //                    index of desiredJointsDEMO should be the solution saved               //
     //******************************************************************************************//
 
-    //ROS_INFO("input numbers %f %f %f",x,y,z);
+    //ROS_ERROR("Input values x= %f y=%f z=%f", x, y, z);
     x = x - x_offset;
     y = y - y_offset;
-    z = -(z - z_offset);
-    //ROS_INFO("input numbers - offset = %f %f %f",x,y,z);
-    //sleep(2);
+    //z = -(z - z_offset);  //pre realnu scaru
 
     double c2 = (pow(x,2.0) + pow(y,2.0) - pow(link_length[0],2.0) - pow(link_length[1],2.0))/(2*link_length[0]*link_length[1]);
     if ((1-c2) > 0.0 ){
@@ -205,12 +206,23 @@ bool calculateIK(double x, double y, double z,  int mode, int working_mode, int 
         return false;
     }
 
-    joint_positions[2] = -0.8*z + 0.024;
-    if (joint_positions[2] <=0.0){  //pridat error hlasku...........................................................
+    //pre realnu scaru
+//    joint_positions[2] = -0.8*z + 0.024;
+    //pre simulaciu
+    joint_positions[2] = -z + 1.04;
+
+    if (joint_positions[2] <=0.0){
         joint_positions[2] =0.0;
-    }else if (joint_positions[2] >=0.04){   //pridat error hlasku...................................................
+    }else if (joint_positions[2] >=0.04){
         joint_positions[2] =0.04;
     }
+
+
+
+
+    //ROS_ERROR("Output joint values J1=%f J2=%f J3=%f",joint_positions[0], joint_positions[1], joint_positions[2]);
+    //sleep(1);
+
 
     if (working_mode == 1){             //DEMO
         for (int i=0;i<joint_positions.size();i++)
@@ -283,7 +295,7 @@ void sendEndEffectorPose(ros::Publisher *pub,moveit::planning_interface::MoveGro
     ws1 = move_group->getCurrentPose();
     endEffectorPose.position.x = ws1.pose.position.x;
     endEffectorPose.position.y = ws1.pose.position.y;
-    endEffectorPose.position.z = ws1.pose.position.z;
+    endEffectorPose.position.z = ws1.pose.position.z + 0.02;
     //ROS_INFO("Publishing pose x=%f y=%f z=%f",endEffectorPose.position.x, endEffectorPose.position.y, endEffectorPose.position.z);
     pub->publish(endEffectorPose);
 
@@ -334,7 +346,6 @@ void sendJointPoses(ros::Publisher *pose_and_vel_pub,ros::Publisher *accel_pub, 
             i = 0;
         }
     }
-
 
 
 
@@ -420,6 +431,25 @@ void sendJointPoses(ros::Publisher *pose_and_vel_pub,ros::Publisher *accel_pub, 
 
 }
 
+//This function is used only in simulation and it is used to force SCARA to go back some steps in plan when collision detecion appears
+bool goBackSomeSteps(moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan *plan, int current_counter, int number_of_steps){
+
+    ROS_WARN("Going back %d steps due to collision!",number_of_steps);
+    int number = current_counter - number_of_steps;
+    if (number <= 0){
+        number = 0;
+    }
+    jointControl_jointValues = plan->trajectory_.joint_trajectory.points[number].positions;
+    move_group->setJointValueTarget(jointControl_jointValues);
+    success = move_group->plan(my_plan);
+    if (!success){
+        ROS_ERROR("Could not create a plan!");
+        return false;
+    }
+    ROS_INFO("my plan size %d",my_plan.trajectory_.joint_trajectory.points.size());
+    move_group->execute(my_plan);
+}
+
 //This function checks if they are enough publishers on the input topic
 void waitForPublishers (ros::Subscriber *sub, int numOfPublishers){
 
@@ -457,7 +487,7 @@ void setDesiredPosesDEMO(){
     //Pick position
     desiredPositionsDEMO[1].x = 0.4;
     desiredPositionsDEMO[1].y = 0.24;
-    desiredPositionsDEMO[1].z = 1.04;
+    desiredPositionsDEMO[1].z = 1.0;
     //Work position
     desiredPositionsDEMO[2].x = 0.58;
     desiredPositionsDEMO[2].y = 0.59;
@@ -465,35 +495,35 @@ void setDesiredPosesDEMO(){
     //Place position 1
     desiredPositionsDEMO[3].x = 0.51;
     desiredPositionsDEMO[3].y = 0.87;
-    desiredPositionsDEMO[3].z = 1.04;
+    desiredPositionsDEMO[3].z = 1.00;
     //Place position 2
     desiredPositionsDEMO[4].x = 0.51;
     desiredPositionsDEMO[4].y = 0.93;
-    desiredPositionsDEMO[4].z = 1.04;
+    desiredPositionsDEMO[4].z = 1.00;
     //Place position 3
     desiredPositionsDEMO[5].x = 0.47;
     desiredPositionsDEMO[5].y = 0.87;
-    desiredPositionsDEMO[5].z = 1.04;
+    desiredPositionsDEMO[5].z = 1.00;
     //Place position 4
     desiredPositionsDEMO[6].x = 0.47;
     desiredPositionsDEMO[6].y = 0.93;
-    desiredPositionsDEMO[6].z = 1.04;
+    desiredPositionsDEMO[6].z = 1.00;
     //Place position 5
     desiredPositionsDEMO[7].x = 0.43;
     desiredPositionsDEMO[7].y = 0.87;
-    desiredPositionsDEMO[7].z = 1.04;
+    desiredPositionsDEMO[7].z = 1.00;
     //Place position 6
     desiredPositionsDEMO[8].x = 0.43;
     desiredPositionsDEMO[8].y = 0.93;
-    desiredPositionsDEMO[8].z = 1.04;
+    desiredPositionsDEMO[8].z = 1.00;
     //Place position 7
     desiredPositionsDEMO[9].x = 0.39;
     desiredPositionsDEMO[9].y = 0.87;
-    desiredPositionsDEMO[9].z = 1.04;
+    desiredPositionsDEMO[9].z = 1.00;
     //Place position 8
     desiredPositionsDEMO[10].x = 0.39;
     desiredPositionsDEMO[10].y = 0.93;
-    desiredPositionsDEMO[10].z = 1.04;
+    desiredPositionsDEMO[10].z = 1.00;
 
 }
 
@@ -667,7 +697,7 @@ void initMatlab(ros::Publisher *pub_gripper, ros::Publisher *pub_centralStop, ro
 
 }
 
-//This function sends the desired position to GUI
+//This function sends the desired position to GUI       ////////////////////////opravit tuto funkciu///////////////////////////////////////
 void sendPositionToGUI(double input_x, double input_y, double input_z){
 
     desiredPositions.x = input_x;
@@ -875,7 +905,7 @@ void infoCallback(const std_msgs::Bool mode){
 
     activeJoints.clear();
 
-}                              //GUI -> MENU
+}                                    //GUI -> MENU
 
 void buttonStateCallback(const std_msgs::Byte buttonState){
 
@@ -895,6 +925,23 @@ void jointStatesCallback (const sensor_msgs::JointState jointStates){
     currentJointStates = jointStates;
 }            //REAL SCARA -> MENU
 
+void torqueJ1Callback (const std_msgs::Float64 torqueValue){
+
+    currentTorqueValueJ1 = std::abs(torqueValue.data);
+}                     //USER -> MENU
+
+void torqueJ2Callback (const std_msgs::Float64 torqueValue){
+
+    currentTorqueValueJ2 = std::abs(torqueValue.data);
+}                     //USER -> MENU
+
+void trajectoryExecutionCallback(const moveit_msgs::ExecuteTrajectoryActionResult result){
+
+    //ROS_WARN("....TRAJECTORY EXECUTION CALLBACK Status = %d....\n",result.status.status);
+    if (result.status.status == 1 || result.status.status == 3){
+        executionOK = true;
+    }
+}   //Moveit -> MENU
 
 
 
