@@ -47,12 +47,12 @@ std::vector<std::vector<double>> desiredJointsDEMO(11, std::vector<double>(3));
 std::vector<std::vector<double>> desiredJointsTeach;
 std::vector<std::vector<double>> teachPositionsHand;
 std::vector<geometry_msgs::Point> desiredPositionsDEMO(11);
-std::vector<geometry_msgs::Point> teachPositions, teachCubePositions;
+std::vector<geometry_msgs::Point> teachPositions;
 
-std_msgs::Bool moveitMode, displayVirtualCube;
+std_msgs::Bool moveitMode, displayVirtualCube, displayCube;
 std_msgs::Byte selectedMode, gripper_state;
-std_msgs::Int32 centralStop_msg, errorCodeMsg;
-geometry_msgs::Point point, desiredPositions, acc, currentTeachPoint, lastTeachPoint;
+std_msgs::Int32 centralStop_msg, errorCodeMsg, numOfCubesMsg;
+geometry_msgs::Point point, desiredPositions, acc, currentTeachPoint, lastTeachPoint, teachCubePositions;
 geometry_msgs::Pose endEffectorPose, pos_and_vel;
 geometry_msgs::PoseStamped ws1;
 sensor_msgs::JointState currentJointStates;

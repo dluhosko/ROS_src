@@ -159,13 +159,19 @@ void cubePositionsFromTeachCallback (const geometry_msgs::Point position){
 void displayCubesCallback (const std_msgs::Bool enabled){
 
     ROS_INFO("Display cubes %d",enabled.data);
-    cubes_enabled = enabled.data;
-
-    for (int i=0;i<number_of_cubes;i++){
-        ROS_INFO("%d [%f %f %f %f]",i,cube_id_and_pos[i][0],cube_id_and_pos[i][1],
-                 cube_id_and_pos[i][2],cube_id_and_pos[i][3]);
+    if (global_counter < number_of_cubes){
+        ROS_INFO("Not enought input cubes! %d/%d",global_counter,number_of_cubes);
+        cubes_enabled = false;
+    }else{
+        cubes_enabled = enabled.data;
+        for (int i=0;i<number_of_cubes;i++){
+            ROS_INFO("%d [%f %f %f %f]",i,cube_id_and_pos[i][0],cube_id_and_pos[i][1],
+                     cube_id_and_pos[i][2],cube_id_and_pos[i][3]);
+        }
+        sleep(1);
+    }else{
+        ROS_WARN("Not allowed more cubes!");
     }
-    sleep(1);
 
 }
 
@@ -281,7 +287,7 @@ void publishCustomColisionObject(moveit::planning_interface::MoveGroupInterface 
         collision_object_custom_ids[0] = collision_object_custom.id;
         planning_scene_interface->removeCollisionObjects(collision_object_custom_ids);
         //ROS_INFO("Custom: removed");
-        usleep(500000);
+        //usleep(500000);
     }
 }
 
@@ -310,7 +316,7 @@ void publishRealColisionObject(moveit::planning_interface::MoveGroupInterface *m
 
     //atach collision object to to planning scene
     if (real_object_enabled){
-        usleep(1000000);
+        //usleep(1000000);
         planning_scene_interface->addCollisionObjects(collision_objects_real);
         //ROS_INFO("Real: added");
         usleep(1000000);
@@ -318,7 +324,7 @@ void publishRealColisionObject(moveit::planning_interface::MoveGroupInterface *m
         collision_object_real_ids[0] = collision_object_real.id;
         planning_scene_interface->removeCollisionObjects(collision_object_real_ids);
         //ROS_INFO("Real: removed");
-        usleep(1000000);
+        //usleep(1000000);
     }
 }
 
@@ -435,9 +441,10 @@ bool generateCube(visualization_msgs::Marker *vis_marker,ros::Publisher *marker_
     vis_marker->type = visualization_msgs::Marker::CUBE;
     vis_marker->action = visualization_msgs::Marker::ADD;
     //0.47512 ; 0.23225; 1.0198 pick place
+    //pridat if ked je zdvihnuty a ked lezi... podla id
     vis_marker->pose.position.x = cube_id_and_pos[number][1];
     vis_marker->pose.position.y = cube_id_and_pos[number][2];
-    vis_marker->pose.position.z = cube_id_and_pos[number][3];
+    vis_marker->pose.position.z = cube_id_and_pos[number][3] - 0.05;
     //
     vis_marker->pose.orientation.x = 0.0;
     vis_marker->pose.orientation.y = 0.0;
@@ -455,7 +462,7 @@ bool generateCube(visualization_msgs::Marker *vis_marker,ros::Publisher *marker_
 
     vis_marker->lifetime = ros::Duration();
     marker_pub->publish( *vis_marker );
-    ROS_INFO("displayed a cube");
+    //ROS_INFO("displayed a cube");
 
 }   //Just for simulation
 #endif //PROJECT_SCARA_COLISION_OBJECT_H

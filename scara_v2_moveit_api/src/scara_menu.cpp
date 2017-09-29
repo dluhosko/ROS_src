@@ -782,11 +782,24 @@ int main(int argc, char **argv){
                                 ROS_INFO("size ok");
                             }
 
+                            numOfCubesMsg.data = desiredJointsTeachSize/2;
+                            numOfCubes_pub.publish(numOfCubesMsg);
+
                             for (int i=0; i<desiredJointsTeachSize; i++){
                                 ROS_WARN("[%d] J1=%f J2=%f J3=%f",i,desiredJointsTeach[i][0],desiredJointsTeach[i][1],desiredJointsTeach[i][2]);
+                                if (i == 0 || i%2==0){
+                                    usleep(200000);
+                                    teachCubePositions = teachPositions[i];
+                                    teachedCubePositions_pub.publish(teachCubePositions);
+
+                                }
                             }
+
+                            displayCube.data = true;
+                            displayCubes_pub.publish(displayCube);
+
                             initTeachedPositions = false;
-                            sleep(2);
+                            sleep(1);
                         }
 
 
