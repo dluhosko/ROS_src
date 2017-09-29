@@ -21,6 +21,7 @@
 #include <moveit_msgs/ExecuteTrajectoryActionResult.h>
 #include <tf/transform_listener.h>
 #include "scara_msgs/robot_info.h"
+#include "scara_v2_moveit_api/pose_and_gripperState.h"
 
 //Global variables
 bool success;
@@ -46,7 +47,7 @@ std::vector<std::vector<double>> desiredJointsDEMO(11, std::vector<double>(3));
 std::vector<std::vector<double>> desiredJointsTeach;
 std::vector<std::vector<double>> teachPositionsHand;
 std::vector<geometry_msgs::Point> desiredPositionsDEMO(11);
-std::vector<geometry_msgs::Point> teachPositions;
+std::vector<geometry_msgs::Point> teachPositions, teachCubePositions;
 
 std_msgs::Bool moveitMode, displayVirtualCube;
 std_msgs::Byte selectedMode, gripper_state;
@@ -84,17 +85,31 @@ bool jointModeControll (moveit::planning_interface::MoveGroupInterface *move_gro
 
 }
 
-void prepareValuesForPickOrPlace(moveit::planning_interface::MoveGroupInterface *move_group, moveit::planning_interface::MoveGroupInterface::Plan *plan, int trajectory_size, bool UpOrDown){
+void prepareValuesForPickOrPlace(moveit::planning_interface::MoveGroupInterface *move_group, int trajectory_size, double joint1, double joint2, double joint3){
 
-    jointControl_jointValues[0] = plan->trajectory_.joint_trajectory.points[trajectory_size-1].positions[0];
-    jointControl_jointValues[1] = plan->trajectory_.joint_trajectory.points[trajectory_size-1].positions[1];
-    if (UpOrDown){
-        jointControl_jointValues[2] = 0.00;
-    }else{
-        jointControl_jointValues[2] = 0.04;
-    }
-    ROS_INFO("Desired joints %f %f %f", jointControl_jointValues[0], jointControl_jointValues[1], jointControl_jointValues[2]);
-    move_group->setJointValueTarget(jointControl_jointValues);
+
+        if (joint1 !=  -1.0){
+            jointControl_jointValues[0] = joint1;
+        } else
+            ROS_INFO("no change in joint 1");
+        if (joint2 != -1.0){
+            jointControl_jointValues[1] = joint2;
+        } else
+            ROS_INFO("no change in joint 2");
+        if (joint3 != -1.0){
+            jointControl_jointValues[2] = joint3;
+            if (jointControl_jointValues[2] >= 0.04){
+                jointControl_jointValues[2] = 0.04;
+            }
+            if (jointControl_jointValues[2] <= 0.00){
+                jointControl_jointValues[2] = 0.00;
+            }
+        }
+
+        ROS_INFO("Desired joints %f %f %f", jointControl_jointValues[0], jointControl_jointValues[1], jointControl_jointValues[2]);
+        move_group->setJointValueTarget(jointControl_jointValues);
+        sleep(1);
+
 
 }
 
@@ -102,6 +117,7 @@ bool setValuesForPickOrPlace(moveit::planning_interface::MoveGroupInterface *mov
 
     success = move_group->plan(my_plan);
     if (!success){
+        ROS_ERROR("Something went wrong in pick or place");
         return false;
     }
     move_group->execute(my_plan);
@@ -356,7 +372,7 @@ void sendJointPoses(ros::Publisher *pose_and_vel_pub,ros::Publisher *accel_pub, 
         pos_and_vel.position.z =  0.04;
         pos_and_vel.orientation.x =  currentJointStates.velocity[0];
         pos_and_vel.orientation.y =  currentJointStates.velocity[1];
-//        pos_and_vel.orientation.z =  currentJointStates.velocity[2];
+        //pos_and_vel.orientation.z =  currentJointStates.velocity[2];
         pos_and_vel.orientation.z =  0.0;
         acc.x = 0.0;
         acc.y = 0.0;
@@ -419,11 +435,35 @@ void sendJointPoses(ros::Publisher *pose_and_vel_pub,ros::Publisher *accel_pub, 
             pos_and_vel.orientation.z = plan->trajectory_.joint_trajectory.points[i].velocities[2];
         }
 
+        //Pouzite len pre simulaciu SCARY, pri realnej SCARE vymazat lebo gripper bude lietat hore dole
+        if (i+1 == last_trajectory_size){
+            pos_and_vel.orientation.x = 0.0;
+            pos_and_vel.orientation.y = 0.0;
+            pos_and_vel.orientation.z = 0.0;
+
+            acc.x = 0.0;
+            acc.y = 0.0;
+            acc.z = 0.0;
+            //ROS_INFO("Last point of trajectory");
+        }else{
+            pos_and_vel.orientation.x = plan->trajectory_.joint_trajectory.points[i].velocities[0];
+            pos_and_vel.orientation.y = plan->trajectory_.joint_trajectory.points[i].velocities[1];
+            pos_and_vel.orientation.z = plan->trajectory_.joint_trajectory.points[i].velocities[2];
+
+            acc.x = plan->trajectory_.joint_trajectory.points[i].accelerations[0];
+            acc.y = plan->trajectory_.joint_trajectory.points[i].accelerations[1];
+            acc.z = plan->trajectory_.joint_trajectory.points[i].accelerations[2];
+            //ROS_INFO("not last point %d",i);
+        }
+        ///////////////////
 
 
-        acc.x = plan->trajectory_.joint_trajectory.points[i].accelerations[0];
-        acc.y = plan->trajectory_.joint_trajectory.points[i].accelerations[1];
-        acc.z = 0.0;
+
+        //Realna scara
+//        acc.x = plan->trajectory_.joint_trajectory.points[i].accelerations[0];
+//        acc.y = plan->trajectory_.joint_trajectory.points[i].accelerations[1];
+//        acc.z = 0.0;
+
     }
 
     pose_and_vel_pub->publish(pos_and_vel);
@@ -828,7 +868,7 @@ void setPrecisionCallback(const std_msgs::Float64 precisionValue){
     ROS_INFO("Precision value changed to %f",precisionValue.data);
     maxJointDeviation = precisionValue.data;
 
-}                //GUI -> MENU
+}               //GUI -> MENU
 
 void setVelCallback(const std_msgs::Float64 velocityValue){
 
@@ -942,8 +982,6 @@ void trajectoryExecutionCallback(const moveit_msgs::ExecuteTrajectoryActionResul
         executionOK = true;
     }
 }   //Moveit -> MENU
-
-
 
 #endif //PROJECT_SCARA_MENU_H
 
