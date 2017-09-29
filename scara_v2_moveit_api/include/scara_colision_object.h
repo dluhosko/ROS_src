@@ -22,12 +22,12 @@ const double SIZE_Z = 0.26, POS_Z = 1.1;
 const double VIRTUALCUBE_X_POS = 0.587, VIRTUALCUBE_Y_POS = 0.58, VIRTUALCUBE_X_SIZE = 0.15, VIRTUALCUBE_Y_SIZE = 0.3;
 
 bool custom_object_enabled = false, real_object_enabled = false, virtual_cube_enabled = false, gripperState = false, lastGripperState = false, cubes_enabled = false;
-int number_of_cubes = 0, global_counter = 0;
+int number_of_cubes = 0, global_counter = 0, j=0;
 double pos_x_real = 0.0, pos_y_real = 0.0, pos_x_cust = 0.0, pos_y_cust = 0.0;
 double size_x_real = 0.1, size_y_real = 0.01, size_x_cust = 0.05, size_y_cust = 0.05;
 double cube_position_x = 0.0, cube_position_y = 0.0, cube_position_z = 0.0;
 double r,g,b;
-std::vector<std::vector<double>> cube_id_and_pos;
+std::vector<std::vector<double>> cube_id_and_pos, default_cube_id_and_pos;
 
 
 visualization_msgs::Marker markerCustom, markerReal;
@@ -136,6 +136,12 @@ void numOfCubesCallback (const std_msgs::Int32 numberOfAllCubes){
     for (int i=0;i<number_of_cubes;i++){
         cube_id_and_pos[i].resize(4);
     }
+    //Memory
+    default_cube_id_and_pos.clear();
+    default_cube_id_and_pos.resize(number_of_cubes);
+    for (int i=0;i<number_of_cubes;i++){
+        default_cube_id_and_pos[i].resize(4);
+    }
 
     ROS_INFO("New vector size %d x %d",cube_id_and_pos.size(), cube_id_and_pos[0].size());
     global_counter = 0;
@@ -150,6 +156,10 @@ void cubePositionsFromTeachCallback (const geometry_msgs::Point position){
         cube_id_and_pos[global_counter][1] = position.x;
         cube_id_and_pos[global_counter][2] = position.y;
         cube_id_and_pos[global_counter][3] = position.z;
+        default_cube_id_and_pos[global_counter][0] = 0.0;
+        default_cube_id_and_pos[global_counter][1] = position.x;
+        default_cube_id_and_pos[global_counter][2] = position.y;
+        default_cube_id_and_pos[global_counter][3] = position.z;
         global_counter++;
     }
 
@@ -159,22 +169,50 @@ void cubePositionsFromTeachCallback (const geometry_msgs::Point position){
 void displayCubesCallback (const std_msgs::Bool enabled){
 
     ROS_INFO("Display cubes %d",enabled.data);
-    if (global_counter < number_of_cubes){
-        ROS_INFO("Not enought input cubes! %d/%d",global_counter,number_of_cubes);
-        cubes_enabled = false;
-    }else{
-        cubes_enabled = enabled.data;
-        for (int i=0;i<number_of_cubes;i++){
-            ROS_INFO("%d [%f %f %f %f]",i,cube_id_and_pos[i][0],cube_id_and_pos[i][1],
-                     cube_id_and_pos[i][2],cube_id_and_pos[i][3]);
+    cubes_enabled = enabled.data;
+
+    while (ros::ok()){
+
+
+        if (global_counter < number_of_cubes){
+            ROS_INFO("Not enought input cubes! %d/%d",global_counter,number_of_cubes);
+
+        }else{
+            //cubes_enabled = enabled.data;
+            for (int i=0;i<number_of_cubes;i++){
+                ROS_INFO("%d [%f %f %f %f]",i,cube_id_and_pos[i][0],cube_id_and_pos[i][1],
+                         cube_id_and_pos[i][2],cube_id_and_pos[i][3]);
+            }
+            sleep(1);
+            break;
         }
-        sleep(1);
-    }else{
-        ROS_WARN("Not allowed more cubes!");
+        sleep(0.1);
+        ros::spinOnce();
     }
+
 
 }
 
+void gripperStateCallback (const scara_v2_moveit_api::pose_and_gripperState gripperInfo){
+
+    ROS_INFO("Heard message : gripperState=%d  posX=%f  posY=%f  posZ=%f", gripperInfo.gripperState, gripperInfo.posX,  gripperInfo.posY,  gripperInfo.posZ);
+    gripperState = gripperInfo.gripperState;
+    if (!gripperState && lastGripperState){
+        ROS_INFO("cube place");
+        cube_id_and_pos[j][0] = 0.0;
+        cube_id_and_pos[j][1] = gripperInfo.posX;
+        cube_id_and_pos[j][2] = gripperInfo.posY;
+        cube_id_and_pos[j][3] = gripperInfo.posZ;
+
+        j++;
+    }else if (gripperState && !lastGripperState){
+        ROS_INFO("cube pick");
+        cube_id_and_pos[j][0] = 1.0;
+    }
+    lastGripperState = gripperState;
+
+
+}
 
 void publishCustomVisualObject(ros::Publisher *marker_pub){
 
@@ -424,8 +462,6 @@ void changeColorOfCube(int number){
 
 bool generateCube(visualization_msgs::Marker *vis_marker,ros::Publisher *marker_pub, int number){
 
-
-
     if (cube_id_and_pos[number][0] == 0.0){
         vis_marker->header.frame_id = "world";
     }else if (cube_id_and_pos[number][0] == 1.0){
@@ -438,27 +474,37 @@ bool generateCube(visualization_msgs::Marker *vis_marker,ros::Publisher *marker_
     std::string name_space = "cube" + number;
     vis_marker->ns = name_space;
     vis_marker->id = 0;
-    vis_marker->type = visualization_msgs::Marker::CUBE;
-    vis_marker->action = visualization_msgs::Marker::ADD;
-    //0.47512 ; 0.23225; 1.0198 pick place
-    //pridat if ked je zdvihnuty a ked lezi... podla id
-    vis_marker->pose.position.x = cube_id_and_pos[number][1];
-    vis_marker->pose.position.y = cube_id_and_pos[number][2];
-    vis_marker->pose.position.z = cube_id_and_pos[number][3] - 0.05;
-    //
-    vis_marker->pose.orientation.x = 0.0;
-    vis_marker->pose.orientation.y = 0.0;
-    vis_marker->pose.orientation.z = 0.0;
-    vis_marker->pose.orientation.w = 1.0;
-    vis_marker->scale.x = 0.015;
-    vis_marker->scale.y = 0.015;
-    vis_marker->scale.z = 0.015;
+    vis_marker->type = visualization_msgs::Marker::CYLINDER;
+    if (cubes_enabled){
+        vis_marker->action = visualization_msgs::Marker::ADD;
+        //0.47512 ; 0.23225; 1.0198 pick place
 
-    changeColorOfCube(number);
-    vis_marker->color.a = 1.0; // Don't forget to set the alpha!
-    vis_marker->color.r = r;
-    vis_marker->color.g = g;
-    vis_marker->color.b = b;
+        if (cube_id_and_pos[number][0] == 1.0){ //pick
+            vis_marker->pose.position.x = 0;
+            vis_marker->pose.position.y = 0;
+            vis_marker->pose.position.z = 0;
+        }else{  //place
+            vis_marker->pose.position.x = cube_id_and_pos[number][1];
+            vis_marker->pose.position.y = cube_id_and_pos[number][2];
+//            vis_marker->pose.position.z = cube_id_and_pos[number][3] - 0.06;
+            vis_marker->pose.position.z = 0.98;
+        }
+        vis_marker->pose.orientation.x = 0.0;
+        vis_marker->pose.orientation.y = 0.0;
+        vis_marker->pose.orientation.z = 0.0;
+        vis_marker->pose.orientation.w = 1.0;
+        vis_marker->scale.x = 0.02;
+        vis_marker->scale.y = 0.02;
+        vis_marker->scale.z = 0.025;
+        changeColorOfCube(number);
+        vis_marker->color.a = 1.0; // Don't forget to set the alpha!
+        vis_marker->color.r = r;
+        vis_marker->color.g = g;
+        vis_marker->color.b = b;
+
+    }else{
+        vis_marker->action = visualization_msgs::Marker::DELETE;
+    }
 
     vis_marker->lifetime = ros::Duration();
     marker_pub->publish( *vis_marker );

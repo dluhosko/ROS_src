@@ -156,7 +156,7 @@ int main(int argc, char **argv){
             }
         }
     }
-    sleep(2);
+    //sleep(2);
 
 
     //Waiting for subscribers
@@ -694,6 +694,9 @@ int main(int argc, char **argv){
                         counter1 = 0;
                         desiredJointsTeachSize = 0;
                         executionOKButWaitForPick = true;
+                        clearOnce = true;
+                        displayCube.data = false;
+                        displayCubes_pub.publish(displayCube);
                         break;
                     }
 
@@ -719,6 +722,13 @@ int main(int argc, char **argv){
 
                     if (teach_mode == 0){           //teach mode
                         //desiredJointsTeach.clear();
+                        if (clearOnce){
+                            teachPositions.clear();
+                            initTeachedPositions = true;
+                            clearOnce = false;
+                            count1 = 0;
+                        }
+
                         ROS_INFO_ONCE("teaching now");
                         if (start_state){     //if teach button was pushed
                             if (teachPointChanged()){
@@ -735,6 +745,7 @@ int main(int argc, char **argv){
 
                     }else if (teach_mode == 1)   {                      //run mode
 
+                        clearOnce = true;
                         //Set mode for joint control
                         selectedMode.data = 6;
                         mode_pub.publish(selectedMode);
@@ -795,6 +806,8 @@ int main(int argc, char **argv){
                                 }
                             }
 
+                            teachedCubePositions_pub.publish(teachCubePositions);
+                            sleep(0.5);
                             displayCube.data = true;
                             displayCubes_pub.publish(displayCube);
 
@@ -837,12 +850,14 @@ int main(int argc, char **argv){
                                     setValuesForPickOrPlace(&move_group);
 
                                     usleep(500000);
+                                    manipulationWithCubesMsg.gripperState = true;
+                                    gripperState_pub.publish(manipulationWithCubesMsg);
+
                                     gripper_state.data = 1;
                                     gripper_pub.publish(gripper_state);
                                     usleep(500000);
                                     pick = false;
                                     //sendJointPoses(&pose_pub,&acc_pub, &my_plan, last_trajectory_size-1);
-
                                     ROS_WARN("PICK up 0");
                                     prepareValuesForPickOrPlace(&move_group, last_trajectory_size, -1.00, -1.00, 0.00);
                                     kinematic_state->setJointGroupPositions(joint_model_group, jointControl_jointValues);
@@ -860,6 +875,9 @@ int main(int argc, char **argv){
                                     setValuesForPickOrPlace(&move_group);
 
                                     usleep(500000);
+                                    manipulationWithCubesMsg.gripperState = true;
+                                    gripperState_pub.publish(manipulationWithCubesMsg);
+
                                     gripper_state.data = 1;
                                     gripper_pub.publish(gripper_state);
                                     usleep(500000);
@@ -870,6 +888,8 @@ int main(int argc, char **argv){
                                     prepareValuesForPickOrPlace(&move_group, last_trajectory_size, -1.00, -1.00, 0.00);
                                     kinematic_state->setJointGroupPositions(joint_model_group, jointControl_jointValues);
                                     setValuesForPickOrPlace(&move_group);
+
+
 
                                     executionOKButWaitForPick = true;
 
@@ -884,10 +904,18 @@ int main(int argc, char **argv){
                                     setValuesForPickOrPlace(&move_group);
 
                                     usleep(500000);
+                                    manipulationWithCubesMsg.gripperState = false;
+                                    manipulationWithCubesMsg.posX = teachPositions[count1].x;
+                                    manipulationWithCubesMsg.posY = teachPositions[count1].y;
+                                    manipulationWithCubesMsg.posZ = teachPositions[count1].z;
+                                    ROS_INFO_STREAM(manipulationWithCubesMsg);
+                                    gripperState_pub.publish(manipulationWithCubesMsg);
+
                                     gripper_state.data = 0;
                                     gripper_pub.publish(gripper_state);
                                     usleep(500000);
                                     pick = false;
+
                                     //sendJointPoses(&pose_pub,&acc_pub, &my_plan, last_trajectory_size-1);
                                     ROS_WARN("PLACE up");
                                     prepareValuesForPickOrPlace(&move_group, last_trajectory_size, -1.00, -1.00, 0.00);
@@ -993,6 +1021,9 @@ int main(int argc, char **argv){
                         teachPositionsHandSize = 0;
                         teachPositionsHand.clear();
                         teachPositions.clear();
+                        cubePositions.clear();
+                        displayCube.data = false;
+                        displayCubes_pub.publish(displayCube);
                         break;
                     }
 
@@ -1028,7 +1059,12 @@ int main(int argc, char **argv){
                             //if (valuesChanged()){
                             ROS_WARN("teached new position !!!!\nJ1=%f J2=%f J3=%f", jointControl_jointValues[0],
                                      jointControl_jointValues[1], jointControl_jointValues[2]);
+                            jointControl_jointValues[2] = 0.0;
                             teachPositionsHand.push_back(jointControl_jointValues);
+
+                            ws1 = move_group.getCurrentPose();
+                            cubePositions.push_back(ws1.pose.position);
+                            ROS_INFO("new position %f %f %f",ws1.pose.position.x, ws1.pose.position.y, ws1.pose.position.z);
                             sendErrorCode(&errorMessage_pub, 12);
                             help = 1;
                             start_state = false;
@@ -1080,6 +1116,25 @@ int main(int argc, char **argv){
                             gripper_pub.publish(gripper_state);
                             initMode = true;
                             teachMode_counter = 999;
+
+                            numOfCubesMsg.data = teachPositionsHandSize/2;
+                            numOfCubes_pub.publish(numOfCubesMsg);
+
+                            for (int i=0; i<teachPositionsHandSize; i++){
+                                ROS_WARN("[%d] x=%f y=%f z=%f",i,cubePositions[i].x,cubePositions[i].y,cubePositions[i].z);
+                                if (i == 0 || i%2==0){
+                                    usleep(200000);
+                                    cubePositions[i].z = 1.04;
+                                    teachCubePositions = cubePositions[i];
+                                    teachedCubePositions_pub.publish(teachCubePositions);
+
+                                }
+                            }
+
+                            teachedCubePositions_pub.publish(teachCubePositions);
+                            sleep(0.5);
+                            displayCube.data = true;
+                            displayCubes_pub.publish(displayCube);
                         }
 
 
@@ -1093,7 +1148,7 @@ int main(int argc, char **argv){
                                          teachPositionsHand[count1][1], teachPositionsHand[count1][2],
                                          count1,teachPositionsHandSize-1 );
                                 sleep(2);
-                                //sendPositionToGUI(0, 0, 0);
+                                sendPositionToGUI(cubePositions[count1].x, cubePositions[count1].y, cubePositions[count1].z);
                                 move_group.setJointValueTarget(teachPositionsHand[count1]);
                                 jointModeControll(&move_group);
                                 last_trajectory_size = -5;
@@ -1122,6 +1177,9 @@ int main(int argc, char **argv){
                                     kinematic_state->setJointGroupPositions(joint_model_group, jointControl_jointValues);
                                     setValuesForPickOrPlace(&move_group);
                                     usleep(500000);
+                                    manipulationWithCubesMsg.gripperState = true;
+                                    gripperState_pub.publish(manipulationWithCubesMsg);
+
                                     gripper_state.data = 1;
                                     gripper_pub.publish(gripper_state);
                                     usleep(500000);
@@ -1145,6 +1203,9 @@ int main(int argc, char **argv){
                                     kinematic_state->setJointGroupPositions(joint_model_group, jointControl_jointValues);
                                     setValuesForPickOrPlace(&move_group);
                                     usleep(500000);
+                                    manipulationWithCubesMsg.gripperState = true;
+                                    gripperState_pub.publish(manipulationWithCubesMsg);
+
                                     gripper_state.data = 1;
                                     gripper_pub.publish(gripper_state);
                                     usleep(500000);
@@ -1166,6 +1227,13 @@ int main(int argc, char **argv){
                                     kinematic_state->setJointGroupPositions(joint_model_group, jointControl_jointValues);
                                     setValuesForPickOrPlace(&move_group);
                                     usleep(500000);
+                                    manipulationWithCubesMsg.gripperState = false;
+                                    manipulationWithCubesMsg.posX = cubePositions[count1].x;
+                                    manipulationWithCubesMsg.posY = cubePositions[count1].y;
+                                    manipulationWithCubesMsg.posZ = cubePositions[count1].z;
+                                    gripperState_pub.publish(manipulationWithCubesMsg);
+                                    ROS_INFO_STREAM(manipulationWithCubesMsg);
+
                                     gripper_state.data = 0;
                                     gripper_pub.publish(gripper_state);
                                     usleep(500000);

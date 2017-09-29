@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
     bool defaultPosition = true;
     int i=0;
     ros::init(argc, argv, "scara_colision_object");
-    ros::NodeHandle n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,n12,n13,n14,n15;
+    ros::NodeHandle n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,n12,n13,n14,n15,n16;
     ros::Rate loop_rate(10);
 
     moveit::core::RobotStatePtr current_state;
@@ -38,6 +38,7 @@ int main(int argc, char **argv) {
     ros::Subscriber numOfTeachedPoints_sub = n13.subscribe("numberOfTeachedPoints",1000,numOfCubesCallback);
     ros::Subscriber cubesEnables_sub = n14.subscribe("displayCubes",1000,displayCubesCallback);
     ros::Subscriber teachedCubePositions_sub = n15.subscribe("teachedCubePositions",1000,cubePositionsFromTeachCallback);
+    ros::Subscriber gripperState_sub = n16.subscribe("gripper_state",1000,gripperStateCallback);
 
     collision_objects_custom.resize(1);
     collision_object_custom_ids.resize(1);
@@ -55,12 +56,16 @@ int main(int argc, char **argv) {
         publishCustomColisionObject(&move_group, &planning_scene_interface);
         publishRealColisionObject(&move_group, &planning_scene_interface);
 
-        if (cubes_enabled){
-            for (int i=0; i<number_of_cubes; i++){
-                generateCube(&marker, &cubeObj_pub, i);
-            }
-
+        for (int i=0; i<number_of_cubes; i++){
+            generateCube(&marker, &cubeObj_pub, i);
         }
+
+        if (j == number_of_cubes && number_of_cubes>=1){
+            sleep(3.5);
+            cube_id_and_pos = default_cube_id_and_pos;
+            j=0;
+        }
+
 
 
         ros::spinOnce();

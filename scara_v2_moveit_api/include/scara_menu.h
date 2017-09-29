@@ -25,7 +25,7 @@
 
 //Global variables
 bool success;
-bool executionOK = true, executionOKButWaitForPick = true, initTeachedPositions = true, zeroPositionForTeach = true;
+bool executionOK = true, executionOKButWaitForPick = true, initTeachedPositions = true, zeroPositionForTeach = true, clearOnce = true;
 bool start_state = false, teach_start_state = false, button_state = false, colisionDetection = false, lastCollisionDetection = false, pick = false, central_stop = false, moveitState = false;
 
 int IK_mode = 1, DEMO_mode = -1, teach_mode = -1, current_mode = 999, count1 = 0, last_trajectory_size = -5;
@@ -47,7 +47,7 @@ std::vector<std::vector<double>> desiredJointsDEMO(11, std::vector<double>(3));
 std::vector<std::vector<double>> desiredJointsTeach;
 std::vector<std::vector<double>> teachPositionsHand;
 std::vector<geometry_msgs::Point> desiredPositionsDEMO(11);
-std::vector<geometry_msgs::Point> teachPositions;
+std::vector<geometry_msgs::Point> teachPositions, cubePositions;
 
 std_msgs::Bool moveitMode, displayVirtualCube, displayCube;
 std_msgs::Byte selectedMode, gripper_state;
@@ -56,6 +56,7 @@ geometry_msgs::Point point, desiredPositions, acc, currentTeachPoint, lastTeachP
 geometry_msgs::Pose endEffectorPose, pos_and_vel;
 geometry_msgs::PoseStamped ws1;
 sensor_msgs::JointState currentJointStates;
+scara_v2_moveit_api::pose_and_gripperState manipulationWithCubesMsg;
 
 moveit::planning_interface::MoveGroupInterface::Plan my_plan;
 moveit::planning_interface::MoveGroupInterface *mg;

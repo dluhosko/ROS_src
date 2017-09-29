@@ -1039,9 +1039,9 @@ void MainWindow::actualPoseCallback(const geometry_msgs::Pose pose){
     //ROS_INFO("Pose callback");
 
     //Pre realnu scaru
-//    ui->status_pose_X->display(pose.position.x);
-//    ui->status_pose_Y->display(pose.position.y);
-//    ui->status_pose_Z->display(pose.position.z);
+    ui->status_pose_X->display(pose.position.x);
+    ui->status_pose_Y->display(pose.position.y);
+    ui->status_pose_Z->display(pose.position.z);
 
 }
 
