@@ -228,6 +228,7 @@
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_genpy.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages.dir
+/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_gennodejs.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_SimpleService.dir
 /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/IK_test.dir

@@ -2064,6 +2064,19 @@ scara_v2_moveit_api_generate_messages/fast:
 .PHONY : scara_v2_moveit_api_generate_messages/fast
 
 #=============================================================================
+# Target rules for targets named rotary_table_can_test
+
+# Build rule for target.
+rotary_table_can_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_can_test
+.PHONY : rotary_table_can_test
+
+# fast build rule for target.
+rotary_table_can_test/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/build
+.PHONY : rotary_table_can_test/fast
+
+#=============================================================================
 # Target rules for targets named scara_v2_moveit_api_gennodejs
 
 # Build rule for target.
@@ -2339,6 +2352,7 @@ help:
 	@echo "... scara_v2_moveit_api_genpy"
 	@echo "... move_group_interface3_PICKandPLACE"
 	@echo "... scara_v2_moveit_api_generate_messages"
+	@echo "... rotary_table_can_test"
 	@echo "... scara_v2_moveit_api_gennodejs"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_SimpleService"
 	@echo "... IK_test"
