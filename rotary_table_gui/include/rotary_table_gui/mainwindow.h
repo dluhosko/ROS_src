@@ -2,7 +2,19 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include "ros/ros.h"
+#include "ros/publisher.h"
+#include "ros/subscriber.h"
+#include "geometry_msgs/PointStamped.h"
+#include <std_msgs/Bool.h>
+#include <std_msgs/Int32.h>
+#include <std_msgs/Float64.h>
+#include "sensor_msgs/JointState.h"
+#include "geometry_msgs/Point.h"
+#include "geometry_msgs/Pose.h"
+#include "std_msgs/Int32.h"
+#include "std_msgs/Byte.h"
+#include "scara_msgs/robot_info.h"
 
 const double RAD_TO_DEG = 57.2957795130;
 const double DEG_TO_RAD = 0.0174532925;

@@ -170,7 +170,7 @@ public:
         tab_1->setObjectName(QStringLiteral("tab_1"));
         label_98 = new QLabel(tab_1);
         label_98->setObjectName(QStringLiteral("label_98"));
-        label_98->setGeometry(QRect(20, 10, 341, 431));
+        label_98->setGeometry(QRect(20, 10, 341, 451));
         label = new QLabel(tab_1);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(50, 60, 291, 151));
@@ -658,7 +658,7 @@ public:
         label_3->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">Rotary table GUI</span></p></body></html>", 0));
         label_4->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\">Control</span></p></body></html>", 0));
         label_5->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\">Position and Status</span></p></body></html>", 0));
-        label_98->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">Wellcome to ROTARY TABLE<br/>Graphical User Interface</span></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><span style=\" font-size:10pt; font-weight:600; font-style:italic;\">This GUI was provided by SENSODRIVE </span></p><p><span style=\" font-size:10pt; font-weight:600; font-style:italic;\">and Viktor Dluhos</span></p><p><br/></p></body></html>", 0));
+        label_98->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">Wellcome to ROTARY TABLE<br/>Graphical User Interface</span></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><span style=\" font-size:10pt; font-weight:600; font-style:italic;\">This GUI was provided by SENSODRIVE </span></p><p><span style=\" font-size:10pt; font-weight:600; font-style:italic;\">and Viktor Dluhos</span></p><p><br/></p></body></html>", 0));
         label->setText(QString());
         label_9->setText(QString());
         control_Tabwidget->setTabText(control_Tabwidget->indexOf(tab_1), QApplication::translate("MainWindow", "     Info      ", 0));

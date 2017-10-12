@@ -1,5 +1,9 @@
-#include "mainwindow.h"
+#include "../include/rotary_table_gui/mainwindow.h"
 #include "ui_mainwindow.h"
+#include <pluginlib/class_list_macros.h>
+#include <QStringList>
+#include <std_msgs/Int32.h>
+#include "ros/ros.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -33,11 +37,6 @@ void MainWindow::on_config_ON_PB_clicked(){
 
     ui->status_TE->setTextColor(QColor("orange"));
     ui->status_TE->append("trying to get to state ON - Check working state");
-    QPixmap pixmap("/home/viktor/catkin_ws/src/rotary_table_gui/pictures/Sensodrive-LogoE.gif");
-    QMatrix rm;
-    rm.rotate(-90);
-    pixmap = pixmap.transformed(rm);
-    ui->label_2->setPixmap(pixmap);
 
 }
 
@@ -45,11 +44,6 @@ void MainWindow::on_config_ERROR_PB_clicked(){
 
     ui->status_TE->setTextColor(QColor("orange"));
     ui->status_TE->append("trying to get to state ERROR - Check working state");
-    QPixmap pixmap("/home/viktor/catkin_ws/src/rotary_table_gui/pictures/Sensodrive-LogoE.gif");
-    QMatrix rm;
-    rm.rotate(90);
-    pixmap = pixmap.transformed(rm);
-    ui->label_2->setPixmap(pixmap);
 
 }
 
