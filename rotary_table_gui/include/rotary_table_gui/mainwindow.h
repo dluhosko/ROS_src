@@ -72,7 +72,10 @@ private slots:
 
     void on_direction_RIGHT_CB_toggled(bool checked);
 
+    //Custom functions
     void printCurrentWorkingStateOnWidget(const int modeNumber);
+
+    void sendWorkingMode(const int modeSelect);
 
 private:
     Ui::MainWindow *ui;
@@ -82,7 +85,9 @@ private:
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
     double currentAngleDeg = 0.0, currentAngleRad = 0.0;
 
-    ros::Publisher rotate_DEC_pub, rotate_HEX_pub, useless_pub;
+    std_msgs::Int32 int32_msg;
+
+    ros::Publisher rotate_DEC_pub, rotate_HEX_pub, workingState_pub, useless_pub;
     ros::Subscriber currentAngleDeg_sub, currentWorkingState_sub, status_sub, useless_sub;
 
 };

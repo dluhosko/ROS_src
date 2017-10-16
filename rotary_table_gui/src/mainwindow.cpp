@@ -28,7 +28,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ROS_INFO("rotate_DEC_RT");
     rotate_HEX_pub = n2.advertise<std_msgs::String>("rotate_HEX_RT",1000);
     ROS_INFO("rotate_HEX_RT");
-//    rotate_HEX_pub = n3.advertise<std_msgs::Int32>("useless_pub",1000);
+    workingState_pub = n3.advertise<std_msgs::Int32>("set_working_mode_RT",1000);
+    ROS_INFO("set_working_mode_RT");
+//    rotate_HEX_pub = n4.advertise<std_msgs::Int32>("useless_pub",1000);
 //    ROS_INFO("useless_pub_RT");
 
     ROS_WARN("Init subscribers:");
@@ -46,12 +48,12 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-/****************************************/
-
+/******************* Config tab *********************/
 void MainWindow::on_config_OFF_PB_clicked(){
 
     ui->status_TE->setTextColor(QColor("orange"));
     ui->status_TE->append("trying to get to state OFF - Check working state");
+    sendWorkingMode(1);
 
 }
 
@@ -59,6 +61,7 @@ void MainWindow::on_config_READY_PB_clicked(){
 
     ui->status_TE->setTextColor(QColor("orange"));
     ui->status_TE->append("trying to get to state READY - Check working state");
+    sendWorkingMode(2);
 
 }
 
@@ -66,6 +69,7 @@ void MainWindow::on_config_ON_PB_clicked(){
 
     ui->status_TE->setTextColor(QColor("orange"));
     ui->status_TE->append("trying to get to state ON - Check working state");
+    sendWorkingMode(3);
 
 }
 
@@ -73,12 +77,13 @@ void MainWindow::on_config_ERROR_PB_clicked(){
 
     ui->status_TE->setTextColor(QColor("orange"));
     ui->status_TE->append("trying to get to state ERROR - Check working state");
+    sendWorkingMode(4);
 
 }
 
-/*********************************************/
+/*****************************************************/
 
-
+/**************** Relative Control *******************/
 void MainWindow::on_relativeControl_slider_SLIDER_actionTriggered(int action){
 
     //GUI
@@ -122,7 +127,11 @@ void MainWindow::on_relativeControl_input_PB_clicked(){
     ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_input_LE->text().toDouble()) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
 
 }
+/*****************************************************/
 
+
+
+/**************** Absolute Control ******************/
 void MainWindow::on_absoluteControl_slider_SLIDER_actionTriggered(int action){
 
     //GUI
@@ -151,7 +160,10 @@ void MainWindow::on_absoluteControl_input_PB_clicked(){
     ui->status_TE->append("Moving[absolute] to " + ui->absoluteControl_input_LE->text() + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
 
 }
+/*****************************************************/
 
+
+/******************** Velocity **********************/
 void MainWindow::on_MaxVelocity_input_PB_clicked(){
 
     //GUI
@@ -161,7 +173,10 @@ void MainWindow::on_MaxVelocity_input_PB_clicked(){
 
 
 }
+/*****************************************************/
 
+
+/******************** Direction **********************/
 void MainWindow::on_direction_LEFT_PB_clicked(){
 
     //GUI
@@ -195,8 +210,8 @@ void MainWindow::on_direction_LEFT_CB_toggled(bool checked){
 
 }
 
-void MainWindow::on_direction_RIGHT_CB_toggled(bool checked)
-{
+void MainWindow::on_direction_RIGHT_CB_toggled(bool checked){
+
     if(checked){
         ui->direction_LE->setText("Right");
         ui->direction_LEFT_CB->setChecked(false);
@@ -204,11 +219,10 @@ void MainWindow::on_direction_RIGHT_CB_toggled(bool checked)
     }
 
 }
-
-/*********************************************/
-
+/*****************************************************/
 
 
+/*********************** STOP ************************/
 void MainWindow::on_stop_PB_clicked(){
 
     //GUI
@@ -237,8 +251,11 @@ void MainWindow::on_centralStop_PB_clicked(){
     //QApplication::quit();
 
 }
+/*****************************************************/
 
-//********************** Custom functons *****************************************//
+
+
+/***************** Custom functons *******************/
 void MainWindow::printCurrentWorkingStateOnWidget(const int modeNumber){
 
     switch (modeNumber){
@@ -276,9 +293,19 @@ void MainWindow::printCurrentWorkingStateOnWidget(const int modeNumber){
     }
 
 }
-//*******************************************************************************//
 
-//********************** Callbacks **********************************************//
+void MainWindow::sendWorkingMode(const int mode){
+
+    //ROS_INFO("Sending choosen mode %d",mode);
+    int32_msg.data = mode;
+    workingState_pub.publish(int32_msg);
+
+}
+/*****************************************************/
+
+
+
+/******************* Callbacks ***********************/
 void MainWindow::CurrentAngleCallback(const std_msgs::Int32 currentAngle){
 
     //ROS_INFO("Current angle callback %d",currentAngle);
@@ -299,5 +326,5 @@ void MainWindow::UselessCallback(const std_msgs::Int32 uselessInfo){
     //ROS_INFO("Useless callback... nothing to show");
 
 }
-
+/*****************************************************/
 
