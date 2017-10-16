@@ -15,6 +15,7 @@
 #include "std_msgs/Int32.h"
 #include "std_msgs/Byte.h"
 #include "scara_msgs/robot_info.h"
+#include <stdlib.h>
 
 const double RAD_TO_DEG = 57.2957795130;
 const double DEG_TO_RAD = 0.0174532925;
@@ -77,6 +78,8 @@ private slots:
 
     void sendWorkingMode(const int modeSelect);
 
+    int hex2dec(char hex_value[]);
+
 private:
     Ui::MainWindow *ui;
 
@@ -84,6 +87,7 @@ private:
 
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
     double currentAngleDeg = 0.0, currentAngleRad = 0.0;
+    char hexString[16];
 
     std_msgs::Int32 int32_msg;
 

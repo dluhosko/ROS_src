@@ -4,7 +4,6 @@
 #include <QStringList>
 #include <std_msgs/Int32.h>
 #include <std_msgs/String.h>
-#include "stdlib.h"
 #include "ros/ros.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -230,6 +229,57 @@ void MainWindow::on_stop_PB_clicked(){
     ui->status_TE->append("Movement STOPPED!");
     ui->status_TE->setTextColor(QColor("black"));
 
+    int hex_size = 9;
+    int value = 400;
+    char hexValue[20];
+    char modifHexValue[hex_size];
+    int decValue;
+    sprintf(hexValue,"%x",value);
+    //printf(hexString, "%X", value);
+    ROS_WARN("DEC=%d normal HEX=%s",value,hexValue);
+    ROS_INFO("hex size = %d",std::strlen(hexValue));
+    ROS_INFO("modif hex size = %d",hex_size);
+
+
+    for (int i=0;i<hex_size;i++){
+        if (i < (hex_size-1) -std::strlen(hexValue)){
+            modifHexValue[i] = '0';
+        }else{
+            modifHexValue[i] = hexValue[i - ((hex_size-1) -std::strlen(hexValue))];
+        }
+        //getchar();
+
+    }
+    modifHexValue[hex_size] = '\0';
+    ROS_INFO("modif HEX=%s",modifHexValue);
+
+    //convert from standard format CAN to SENSO format
+    char help1,help2;
+    for (int i=0;i<hex_size-1-2;i+=4){
+        help1= modifHexValue[i];
+        help2= modifHexValue[i+1];
+        modifHexValue[i] = modifHexValue[i+2];
+        modifHexValue[i+1] = modifHexValue[i+3];
+        modifHexValue[i+2] = help1;
+        modifHexValue[i+3] = help2;
+    }
+    modifHexValue[hex_size] = '\0';
+    ROS_INFO("senso modif HEX=%s",modifHexValue);
+
+    //Convert from SENSO format to standart CAN format
+    for (int i=0;i<hex_size-1-2;i+=4){
+        help1= modifHexValue[i];
+        help2= modifHexValue[i+1];
+        modifHexValue[i] = modifHexValue[i+2];
+        modifHexValue[i+1] = modifHexValue[i+3];
+        modifHexValue[i+2] = help1;
+        modifHexValue[i+3] = help2;
+    }
+    modifHexValue[hex_size] = '\0';
+    ROS_INFO("normal format modif HEX=%s",modifHexValue);
+
+    decValue=hex2dec(modifHexValue);
+    ROS_WARN("DEC=%d HEX=%s",decValue,modifHexValue);
     //ROS
 
 }
@@ -300,6 +350,26 @@ void MainWindow::sendWorkingMode(const int mode){
     int32_msg.data = mode;
     workingState_pub.publish(int32_msg);
 
+}
+
+int MainWindow::hex2dec(char hex_value[]){
+
+    int length = std::strlen(hex_value);
+    int power = 1;
+    int dec_value;
+
+    for (int i=length-1;i>=0;i--){
+
+        if (hex_value[i]>='0' && hex_value[i]<='9'){
+            dec_value += (hex_value[i] - 48) * power;
+            power = power * 16;
+        }else if (hex_value[i]>='A' && hex_value[i]<='F'){
+            dec_value += (hex_value[i] - 55) * power;
+            power = power * 16;
+        }
+    }
+
+    return dec_value;
 }
 /*****************************************************/
 
