@@ -31,6 +31,12 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    void CurrentAngleCallback(const std_msgs::Int32 currentAngle);
+
+    void CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkingState);
+
+    void UselessCallback(const std_msgs::Int32 uselessInfo);
+
 private slots:
     void on_config_OFF_PB_clicked();
 
@@ -66,11 +72,19 @@ private slots:
 
     void on_direction_RIGHT_CB_toggled(bool checked);
 
+    void printCurrentWorkingStateOnWidget(const int modeNumber);
+
 private:
     Ui::MainWindow *ui;
 
+    ros::AsyncSpinner *aspinner;
+
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
     double currentAngleDeg = 0.0, currentAngleRad = 0.0;
+
+    ros::Publisher rotate_DEC_pub, rotate_HEX_pub, useless_pub;
+    ros::Subscriber currentAngleDeg_sub, currentWorkingState_sub, status_sub, useless_sub;
+
 };
 
 #endif // MAINWINDOW_H

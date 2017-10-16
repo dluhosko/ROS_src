@@ -1,44 +1,11 @@
-#include "../include/rotary_table_gui/mainwindow.h"
+#include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <pluginlib/class_list_macros.h>
-#include <QStringList>
-#include <std_msgs/Int32.h>
-#include <std_msgs/String.h>
-#include "stdlib.h"
-#include "ros/ros.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    int argc;
-    char **argv;
-    ros::init(argc, argv, "scara_gui_node");
-    ros::NodeHandle n1,n2,n3,n4,nn1,nn2,nn3,nn4;
-    ros::Rate loop_rate(10);
-
-    ROS_INFO("spinner for GUI start\n");
-    aspinner = new ros::AsyncSpinner(2);
-    aspinner->start();
-
-    ROS_WARN("Init publishers:");
-    rotate_DEC_pub = n1.advertise<std_msgs::Int32>("rotate_DEC_RT",1000);
-    ROS_INFO("rotate_DEC_RT");
-    rotate_HEX_pub = n2.advertise<std_msgs::String>("rotate_HEX_RT",1000);
-    ROS_INFO("rotate_HEX_RT");
-//    rotate_HEX_pub = n3.advertise<std_msgs::Int32>("useless_pub",1000);
-//    ROS_INFO("useless_pub_RT");
-
-    ROS_WARN("Init subscribers:");
-    currentAngleDeg_sub = nn1.subscribe("currentAngleDeg_RT",1000,&MainWindow::CurrentAngleCallback, this);
-    ROS_INFO("currentAngleDeg_RT");
-    currentWorkingState_sub = nn2.subscribe("currentWorkingState_RT",1000,&MainWindow::CurrentWorkingStateCallback, this);
-    ROS_INFO("currentWorkingState_RT");
-    useless_sub = nn3.subscribe("useless_sub_RT",1000,&MainWindow::UselessCallback, this);
-    ROS_INFO("useless_sub_RT");
-
 }
 
 MainWindow::~MainWindow()
@@ -66,6 +33,12 @@ void MainWindow::on_config_ON_PB_clicked(){
 
     ui->status_TE->setTextColor(QColor("orange"));
     ui->status_TE->append("trying to get to state ON - Check working state");
+    QPixmap pixmap("/home/viktor/catkin_ws/src/rotary_table_gui/pictures/Sensodrive-LogoE.gif");
+    QMatrix rm;
+    rm.rotate(-90);
+    pixmap = pixmap.transformed(rm);
+    ui->label_2->setPixmap(pixmap);
+    ui->config_workingState_LE->
 
 }
 
@@ -73,6 +46,11 @@ void MainWindow::on_config_ERROR_PB_clicked(){
 
     ui->status_TE->setTextColor(QColor("orange"));
     ui->status_TE->append("trying to get to state ERROR - Check working state");
+    QPixmap pixmap("/home/viktor/catkin_ws/src/rotary_table_gui/pictures/Sensodrive-LogoE.gif");
+    QMatrix rm;
+    rm.rotate(90);
+    pixmap = pixmap.transformed(rm);
+    ui->label_2->setPixmap(pixmap);
 
 }
 
@@ -235,68 +213,6 @@ void MainWindow::on_centralStop_PB_clicked(){
     //Kill GUI
     //sleep(3);
     //QApplication::quit();
-
-}
-
-//********************** Custom functons *****************************************//
-void MainWindow::printCurrentWorkingStateOnWidget(const int modeNumber){
-
-    switch (modeNumber){
-        case 1: //OFF
-        {
-            ROS_INFO("State: OFF");
-            ui->config_workingState_LE->setText("State: OFF");
-            break;
-        }
-        case 2: //READY
-        {
-            ROS_INFO("State: READY");
-            ui->config_workingState_LE->setText("State: READY");
-            break;
-        }
-        case 3: //ON
-        {
-            ROS_INFO("State: ON");
-            ui->config_workingState_LE->setText("State: ON");
-            break;
-        }
-        case 4: //ERROR
-        {
-            ROS_INFO("State: ERROR");
-            ui->config_workingState_LE->setText("State: ERROR");
-            break;
-        }
-        default:
-        {
-            ROS_ERROR("Something wrong with state messages ... check connection");
-            ui->config_workingState_LE->setText("Something wrong with state messages ... check connection!!!!");
-            break;
-        }
-
-    }
-
-}
-//*******************************************************************************//
-
-//********************** Callbacks **********************************************//
-void MainWindow::CurrentAngleCallback(const std_msgs::Int32 currentAngle){
-
-    //ROS_INFO("Current angle callback %d",currentAngle);
-
-
-
-}
-
-void MainWindow::CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkingState){
-
-    //ROS_INFO("Current working state callback %d",currentWorkingState);
-    printCurrentWorkingStateOnWidget(currentWorkingState.data);
-
-}
-
-void MainWindow::UselessCallback(const std_msgs::Int32 uselessInfo){
-
-    //ROS_INFO("Useless callback... nothing to show");
 
 }
 
