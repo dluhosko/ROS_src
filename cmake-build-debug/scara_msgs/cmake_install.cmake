@@ -36,6 +36,7 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scara_msgs/msg" TYPE FILE FILES
     "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg"
     "/home/viktor/catkin_ws/src/scara_msgs/msg/robot_info.msg"
+    "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg"
     )
 endif()
 

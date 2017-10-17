@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/viktor/catkin_ws/src/cmake-build-debug
 include scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/progress.make
 
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_py: devel/lib/python2.7/dist-packages/scara_msgs/msg/_robot_info.py
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_py: devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_velocity_direction.py
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_py: devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_and_gripperState.py
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_py: devel/lib/python2.7/dist-packages/scara_msgs/msg/__init__.py
 
@@ -63,19 +64,26 @@ devel/lib/python2.7/dist-packages/scara_msgs/msg/_robot_info.py: ../scara_msgs/m
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG scara_msgs/robot_info"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/viktor/catkin_ws/src/scara_msgs/msg/robot_info.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/scara_msgs/msg
 
+devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_velocity_direction.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_velocity_direction.py: ../scara_msgs/msg/pose_velocity_direction.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG scara_msgs/pose_velocity_direction"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/scara_msgs/msg
+
 devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_and_gripperState.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_and_gripperState.py: ../scara_msgs/msg/pose_and_gripperState.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG scara_msgs/pose_and_gripperState"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG scara_msgs/pose_and_gripperState"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/scara_msgs/msg
 
 devel/lib/python2.7/dist-packages/scara_msgs/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 devel/lib/python2.7/dist-packages/scara_msgs/msg/__init__.py: devel/lib/python2.7/dist-packages/scara_msgs/msg/_robot_info.py
+devel/lib/python2.7/dist-packages/scara_msgs/msg/__init__.py: devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_velocity_direction.py
 devel/lib/python2.7/dist-packages/scara_msgs/msg/__init__.py: devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_and_gripperState.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for scara_msgs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for scara_msgs"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/scara_msgs/msg --initpy
 
 scara_msgs_generate_messages_py: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py
 scara_msgs_generate_messages_py: devel/lib/python2.7/dist-packages/scara_msgs/msg/_robot_info.py
+scara_msgs_generate_messages_py: devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_velocity_direction.py
 scara_msgs_generate_messages_py: devel/lib/python2.7/dist-packages/scara_msgs/msg/_pose_and_gripperState.py
 scara_msgs_generate_messages_py: devel/lib/python2.7/dist-packages/scara_msgs/msg/__init__.py
 scara_msgs_generate_messages_py: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make

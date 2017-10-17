@@ -971,21 +971,21 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/can_interface/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="scara_msgs_genpy">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 scara_msgs_genpy"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="scara_msgs_gennodejs">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 scara_msgs_gennodejs"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="scara_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 scara_msgs_generate_messages_nodejs"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1041,6 +1041,26 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="scara_msgs_genpy">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 scara_msgs_genpy"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_scara_msgs_generate_messages_check_deps_pose_velocity_direction">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 _scara_msgs_generate_messages_check_deps_pose_velocity_direction"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="_scara_msgs_generate_messages_check_deps_pose_and_gripperState">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs"/>
 				<Option type="4"/>
@@ -1086,16 +1106,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 scara_msgs_geneus"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="scara_msgs_generate_messages_nodejs">
-				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 scara_msgs_generate_messages_nodejs"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs/Makefile&quot;  VERBOSE=1 clean"/>
@@ -2188,6 +2198,16 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 object_recognition_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>

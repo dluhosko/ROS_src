@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/viktor/catkin_ws/src/cmake-build-debug
 include scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/progress.make
 
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp: devel/include/scara_v2_moveit_api/pose_and_gripperState.h
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp: devel/include/scara_v2_moveit_api/pose_velocity_direction.h
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp: devel/include/scara_v2_moveit_api/SimpleService.h
 
 
@@ -63,15 +64,22 @@ devel/include/scara_v2_moveit_api/pose_and_gripperState.h: /opt/ros/kinetic/shar
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from scara_v2_moveit_api/pose_and_gripperState.msg"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/include/scara_v2_moveit_api -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+devel/include/scara_v2_moveit_api/pose_velocity_direction.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+devel/include/scara_v2_moveit_api/pose_velocity_direction.h: ../scara_v2_moveit_api/msg/pose_velocity_direction.msg
+devel/include/scara_v2_moveit_api/pose_velocity_direction.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from scara_v2_moveit_api/pose_velocity_direction.msg"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/include/scara_v2_moveit_api -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 devel/include/scara_v2_moveit_api/SimpleService.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 devel/include/scara_v2_moveit_api/SimpleService.h: ../scara_v2_moveit_api/srv/SimpleService.srv
 devel/include/scara_v2_moveit_api/SimpleService.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 devel/include/scara_v2_moveit_api/SimpleService.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from scara_v2_moveit_api/SimpleService.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from scara_v2_moveit_api/SimpleService.srv"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/include/scara_v2_moveit_api -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 scara_v2_moveit_api_generate_messages_cpp: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp
 scara_v2_moveit_api_generate_messages_cpp: devel/include/scara_v2_moveit_api/pose_and_gripperState.h
+scara_v2_moveit_api_generate_messages_cpp: devel/include/scara_v2_moveit_api/pose_velocity_direction.h
 scara_v2_moveit_api_generate_messages_cpp: devel/include/scara_v2_moveit_api/SimpleService.h
 scara_v2_moveit_api_generate_messages_cpp: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/build.make
 

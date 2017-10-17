@@ -63,7 +63,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab_1">
      <attribute name="title">
@@ -95,7 +95,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>/home/viktor/catkin_ws/src/rotary_table_gui/pictures/IMG_20171006_175133_preview.jpeg</pixmap>
+       <pixmap>../../rotary_table_gui/pictures/IMG_20171006_175133_preview.jpeg</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -114,7 +114,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>/home/viktor/catkin_ws/src/rotary_table_gui/pictures/IMG_20171006_175125_preview.jpeg</pixmap>
+       <pixmap>../../rotary_table_gui/pictures/IMG_20171006_175125_preview.jpeg</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -138,7 +138,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>/home/viktor/catkin_ws/src/rotary_table_gui/pictures/Screenshot from 2017-10-11 16-52-30.png</pixmap>
+       <pixmap>../../rotary_table_gui/pictures/Screenshot from 2017-10-11 16-52-30.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -284,6 +284,12 @@
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
             <widget class="QSlider" name="relativeControl_slider_SLIDER">
+             <property name="maximum">
+              <number>3600</number>
+             </property>
+             <property name="singleStep">
+              <number>1</number>
+             </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -334,6 +340,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <widget class="QSlider" name="absoluteControl_slider_SLIDER">
+           <property name="maximum">
+            <number>3600</number>
+           </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -807,7 +816,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>/home/viktor/catkin_ws/src/rotary_table_gui/pictures/Sensodrive-LogoE.gif</pixmap>
+     <pixmap>/home/viktor/catkin_ws/src/ROTARY_TABLE_GUI_1/Sensodrive-LogoE.gif</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

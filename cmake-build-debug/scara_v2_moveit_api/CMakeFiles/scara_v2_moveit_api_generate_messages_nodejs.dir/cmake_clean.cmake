@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs"
   "../devel/share/gennodejs/ros/scara_v2_moveit_api/msg/pose_and_gripperState.js"
+  "../devel/share/gennodejs/ros/scara_v2_moveit_api/msg/pose_velocity_direction.js"
   "../devel/share/gennodejs/ros/scara_v2_moveit_api/srv/SimpleService.js"
 )
 

@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/viktor/catkin_ws/src/cmake-build-debug
 include scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/progress.make
 
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_and_gripperState.py
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_velocity_direction.py
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/_SimpleService.py
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/__init__.py
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/__init__.py
@@ -64,25 +65,33 @@ devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_and_gripperState
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG scara_v2_moveit_api/pose_and_gripperState"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg
 
+devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_velocity_direction.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_velocity_direction.py: ../scara_v2_moveit_api/msg/pose_velocity_direction.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG scara_v2_moveit_api/pose_velocity_direction"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg
+
 devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/_SimpleService.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
 devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/_SimpleService.py: ../scara_v2_moveit_api/srv/SimpleService.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV scara_v2_moveit_api/SimpleService"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV scara_v2_moveit_api/SimpleService"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv
 
 devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/__init__.py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_and_gripperState.py
+devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/__init__.py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_velocity_direction.py
 devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/__init__.py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/_SimpleService.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for scara_v2_moveit_api"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for scara_v2_moveit_api"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg --initpy
 
 devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/__init__.py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_and_gripperState.py
+devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/__init__.py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_velocity_direction.py
 devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/__init__.py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/_SimpleService.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for scara_v2_moveit_api"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python srv __init__.py for scara_v2_moveit_api"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv --initpy
 
 scara_v2_moveit_api_generate_messages_py: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py
 scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_and_gripperState.py
+scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/_pose_velocity_direction.py
 scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/_SimpleService.py
 scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/msg/__init__.py
 scara_v2_moveit_api_generate_messages_py: devel/lib/python2.7/dist-packages/scara_v2_moveit_api/srv/__init__.py

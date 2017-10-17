@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     aspinner->start();
 
     ROS_WARN("Init publishers:");
-    rotate_DEC_pub = n1.advertise<std_msgs::Int32>("rotate_DEC_RT",1000);
+    rotate_DEC_pub = n1.advertise<scara_msgs::pose_velocity_direction>("rotate_DEC_RT",1000);
     ROS_INFO("rotate_DEC_RT");
     rotate_HEX_pub = n2.advertise<std_msgs::String>("rotate_HEX_RT",1000);
     ROS_INFO("rotate_HEX_RT");
@@ -39,6 +39,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ROS_INFO("currentWorkingState_RT");
     useless_sub = nn3.subscribe("useless_sub_RT",1000,&MainWindow::UselessCallback, this);
     ROS_INFO("useless_sub_RT");
+
+    ui->direction_RIGHT_CB->setChecked(true);
+    ui->direction_LEFT_CB->setChecked(false);
 
 }
 
@@ -86,7 +89,7 @@ void MainWindow::on_config_ERROR_PB_clicked(){
 void MainWindow::on_relativeControl_slider_SLIDER_actionTriggered(int action){
 
     //GUI
-    ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_slider_SLIDER->value()) + " deg");
+    ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg");
 
 }
 
@@ -94,17 +97,27 @@ void MainWindow::on_relativeControl_slider_PB_clicked(){
 
     //GUI
    if (directionOfRotation){
-        ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_slider_SLIDER->value()) + " deg");
-        ui->desiredPositionDeg_LCD->display(ui->relativeControl_slider_SLIDER->value() + currentAngleDeg);
-        ui->desiredPositionRad_LCD->display((ui->relativeControl_slider_SLIDER->value() + currentAngleDeg) * DEG_TO_RAD);
-        currentAngleDeg+=ui->relativeControl_slider_SLIDER->value();
+        currentAngleDeg+=ui->relativeControl_slider_SLIDER->value()/10.0;
+
     }else{
-        ui->relativeControl_slider_LE->setText(QString::number(-ui->relativeControl_slider_SLIDER->value()) + " deg");
-        ui->desiredPositionDeg_LCD->display(-ui->relativeControl_slider_SLIDER->value() + currentAngleDeg);
-        ui->desiredPositionRad_LCD->display((-ui->relativeControl_slider_SLIDER->value() + currentAngleDeg) * DEG_TO_RAD);
-        currentAngleDeg-=ui->relativeControl_slider_SLIDER->value();
+        currentAngleDeg-=ui->relativeControl_slider_SLIDER->value()/10.0;
     }
-   ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_slider_SLIDER->value()) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+    if (currentAngleDeg >= 360.0){
+        currentAngleDeg = currentAngleDeg - 360.0;
+    }else if (currentAngleDeg <= 0.0){
+        currentAngleDeg = currentAngleDeg + 360.0;
+    }
+
+    ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg");
+    ui->desiredPositionDeg_LCD->display(currentAngleDeg);
+    ui->desiredPositionRad_LCD->display(currentAngleDeg * DEG_TO_RAD);
+
+   ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+
+
+    pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_slider_SLIDER->value());  //deg
+    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
+    rotate_DEC_pub.publish(pose_velocity_direction_msg);
 
 
 }
@@ -113,17 +126,26 @@ void MainWindow::on_relativeControl_input_PB_clicked(){
 
     //GUI
    if (directionOfRotation){
-        ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_input_LE->text().toDouble()) + " deg");
-        ui->desiredPositionDeg_LCD->display(ui->relativeControl_input_LE->text().toDouble() + currentAngleDeg);
-        ui->desiredPositionRad_LCD->display((ui->absoluteControl_input_LE->text().toDouble() + currentAngleDeg) * DEG_TO_RAD);
         currentAngleDeg+=ui->relativeControl_input_LE->text().toDouble();
     }else{
-        ui->relativeControl_slider_LE->setText(QString::number(-ui->relativeControl_input_LE->text().toDouble()) + " deg");
-        ui->desiredPositionDeg_LCD->display(-ui->relativeControl_input_LE->text().toDouble() + currentAngleDeg);
-        ui->desiredPositionRad_LCD->display((-ui->absoluteControl_input_LE->text().toDouble() + currentAngleDeg) * DEG_TO_RAD);
         currentAngleDeg-=ui->relativeControl_input_LE->text().toDouble();
     }
+    if (currentAngleDeg >= 360.0){
+        currentAngleDeg = currentAngleDeg - 360.0;
+    }else if (currentAngleDeg <= 0.0){
+        currentAngleDeg = currentAngleDeg + 360.0;
+    }
+
+    ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_input_LE->text().toDouble()) + " deg");
+    ui->desiredPositionDeg_LCD->display(currentAngleDeg);
+    ui->desiredPositionRad_LCD->display(currentAngleDeg * DEG_TO_RAD);
+
     ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_input_LE->text().toDouble()) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+
+    pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_input_LE->text().toDouble()*10); //deg
+    ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
+    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
+    rotate_DEC_pub.publish(pose_velocity_direction_msg);
 
 }
 /*****************************************************/
@@ -134,17 +156,37 @@ void MainWindow::on_relativeControl_input_PB_clicked(){
 void MainWindow::on_absoluteControl_slider_SLIDER_actionTriggered(int action){
 
     //GUI
-    ui->absoluteControl_slider_LE->setText(QString::number(ui->absoluteControl_slider_SLIDER->value()) + " deg");
+    ui->absoluteControl_slider_LE->setText(QString::number(ui->absoluteControl_slider_SLIDER->value()/10.0) + " deg");
 
 }
 
 void MainWindow::on_absoluteControl_slider_PB_clicked(){
 
     //GUI
-    ui->absoluteControl_slider_LE->setText(QString::number(ui->absoluteControl_slider_SLIDER->value()) + " deg");
-    ui->desiredPositionDeg_LCD->display(ui->absoluteControl_slider_SLIDER->value());
-    ui->desiredPositionRad_LCD->display(ui->absoluteControl_slider_SLIDER->value()*DEG_TO_RAD);
-    ui->status_TE->append("Moving[absolute] to " + QString::number(ui->absoluteControl_slider_SLIDER->value()) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+    ui->absoluteControl_slider_LE->setText(QString::number(ui->absoluteControl_slider_SLIDER->value()/10.0) + " deg");
+    ui->desiredPositionDeg_LCD->display(ui->absoluteControl_slider_SLIDER->value()/10.0);
+    ui->desiredPositionRad_LCD->display((ui->absoluteControl_slider_SLIDER->value()/10.0)*DEG_TO_RAD);
+    ui->status_TE->append("Moving[absolute] to " + QString::number(ui->absoluteControl_slider_SLIDER->value()/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+
+    double desiredRotation = (double)(ui->absoluteControl_slider_SLIDER->value())/10.0;
+    ROS_INFO("desrot=%f currentrot=%f",desiredRotation,currentAngleDeg);
+    /************************* choose the nearest direction **************************************/
+//    if (abs(desiredRotation  - currentAngleDeg) < abs((360-currentAngleDeg)+desiredRotation)){
+//        ROS_INFO("rotationg LEFT .. %f degrees",abs(desiredRotation  - currentAngleDeg));
+//
+//    }else{
+//        ROS_INFO("rotationg RIGHT .. %f degrees",abs((360-currentAngleDeg)+desiredRotation));
+//    }
+    /************************************************************************************************/
+
+    if (directionOfRotation){
+        pose_velocity_direction_msg.rotation = (int)((desiredRotation - currentAngleDeg)*10.0);
+    }else{
+        pose_velocity_direction_msg.rotation = (int)(((360-desiredRotation)+currentAngleDeg)*10.0);
+    }
+    ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
+    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
+    rotate_DEC_pub.publish(pose_velocity_direction_msg);
 
 
 
@@ -158,6 +200,17 @@ void MainWindow::on_absoluteControl_input_PB_clicked(){
     ui->desiredPositionRad_LCD->display(ui->absoluteControl_input_LE->text().toDouble()*DEG_TO_RAD);
     ui->status_TE->append("Moving[absolute] to " + ui->absoluteControl_input_LE->text() + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
 
+    double desiredRotation = ui->absoluteControl_input_LE->text().toDouble();
+    ROS_INFO("desrot=%f currentrot=%f",desiredRotation,currentAngleDeg);
+    if (directionOfRotation){
+        pose_velocity_direction_msg.rotation = (int)((desiredRotation - currentAngleDeg)*10.0);
+    }else{
+        pose_velocity_direction_msg.rotation = (int)(((360-desiredRotation)+currentAngleDeg)*10.0);
+    }
+    ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
+    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
+    rotate_DEC_pub.publish(pose_velocity_direction_msg);
+
 }
 /*****************************************************/
 
@@ -169,6 +222,8 @@ void MainWindow::on_MaxVelocity_input_PB_clicked(){
     ui->maxVelocityDeg_LCD->display(ui->MaxVelocity_input_LE->text().toDouble());
     ui->maxVelocityRad_LCD->display(ui->MaxVelocity_input_LE->text().toDouble()*DEG_TO_RAD);
     ui->status_TE->append("Max velocity set to " + ui->MaxVelocity_input_LE->text() + " deg/s");
+
+    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
 
 
 }
@@ -184,6 +239,7 @@ void MainWindow::on_direction_LEFT_PB_clicked(){
     ui->direction_LE->setText("Left");
 
     //ROS
+    pose_velocity_direction_msg.direction = false;
     directionOfRotation = false;
 
 }
@@ -196,6 +252,7 @@ void MainWindow::on_direction_RIGHT_PB_clicked(){
     ui->direction_LE->setText("Right");
 
     //ROS
+    pose_velocity_direction_msg.direction = true;
     directionOfRotation = true;
 }
 
@@ -204,6 +261,7 @@ void MainWindow::on_direction_LEFT_CB_toggled(bool checked){
     if(checked){
         ui->direction_LE->setText("Left");
         ui->direction_RIGHT_CB->setChecked(false);
+        pose_velocity_direction_msg.direction = false;
         directionOfRotation = false;
     }
 
@@ -214,6 +272,7 @@ void MainWindow::on_direction_RIGHT_CB_toggled(bool checked){
     if(checked){
         ui->direction_LE->setText("Right");
         ui->direction_LEFT_CB->setChecked(false);
+        pose_velocity_direction_msg.direction = true;
         directionOfRotation = true;
     }
 
@@ -221,7 +280,7 @@ void MainWindow::on_direction_RIGHT_CB_toggled(bool checked){
 /*****************************************************/
 
 
-/*********************** STOP ************************/
+/*********************** STOP ************************/     //pridat prikaz na zastavenie
 void MainWindow::on_stop_PB_clicked(){
 
     //GUI
@@ -229,57 +288,57 @@ void MainWindow::on_stop_PB_clicked(){
     ui->status_TE->append("Movement STOPPED!");
     ui->status_TE->setTextColor(QColor("black"));
 
-    int hex_size = 9;
-    int value = 400;
-    char hexValue[20];
-    char modifHexValue[hex_size];
-    int decValue;
-    sprintf(hexValue,"%x",value);
-    //printf(hexString, "%X", value);
-    ROS_WARN("DEC=%d normal HEX=%s",value,hexValue);
-    ROS_INFO("hex size = %d",std::strlen(hexValue));
-    ROS_INFO("modif hex size = %d",hex_size);
-
-
-    for (int i=0;i<hex_size;i++){
-        if (i < (hex_size-1) -std::strlen(hexValue)){
-            modifHexValue[i] = '0';
-        }else{
-            modifHexValue[i] = hexValue[i - ((hex_size-1) -std::strlen(hexValue))];
-        }
-        //getchar();
-
-    }
-    modifHexValue[hex_size] = '\0';
-    ROS_INFO("modif HEX=%s",modifHexValue);
-
-    //convert from standard format CAN to SENSO format
-    char help1,help2;
-    for (int i=0;i<hex_size-1-2;i+=4){
-        help1= modifHexValue[i];
-        help2= modifHexValue[i+1];
-        modifHexValue[i] = modifHexValue[i+2];
-        modifHexValue[i+1] = modifHexValue[i+3];
-        modifHexValue[i+2] = help1;
-        modifHexValue[i+3] = help2;
-    }
-    modifHexValue[hex_size] = '\0';
-    ROS_INFO("senso modif HEX=%s",modifHexValue);
-
-    //Convert from SENSO format to standard CAN format
-    for (int i=0;i<hex_size-1-2;i+=4){
-        help1= modifHexValue[i];
-        help2= modifHexValue[i+1];
-        modifHexValue[i] = modifHexValue[i+2];
-        modifHexValue[i+1] = modifHexValue[i+3];
-        modifHexValue[i+2] = help1;
-        modifHexValue[i+3] = help2;
-    }
-    modifHexValue[hex_size] = '\0';
-    ROS_INFO("normal format modif HEX=%s",modifHexValue);
-
-    decValue=hex2dec(modifHexValue);
-    ROS_WARN("DEC=%d HEX=%s",decValue,modifHexValue);
+//    int hex_size = 9;
+//    int value = 400;
+//    char hexValue[20];
+//    char modifHexValue[hex_size];
+//    int decValue;
+//    sprintf(hexValue,"%x",value);
+//    //printf(hexString, "%X", value);
+//    ROS_WARN("DEC=%d normal HEX=%s",value,hexValue);
+//    ROS_INFO("hex size = %d",std::strlen(hexValue));
+//    ROS_INFO("modif hex size = %d",hex_size);
+//
+//
+//    for (int i=0;i<hex_size;i++){
+//        if (i < (hex_size-1) -std::strlen(hexValue)){
+//            modifHexValue[i] = '0';
+//        }else{
+//            modifHexValue[i] = hexValue[i - ((hex_size-1) -std::strlen(hexValue))];
+//        }
+//        //getchar();
+//
+//    }
+//    modifHexValue[hex_size] = '\0';
+//    ROS_INFO("modif HEX=%s",modifHexValue);
+//
+//    //convert from standard format CAN to SENSO format
+//    char help1,help2;
+//    for (int i=0;i<hex_size-1-2;i+=4){
+//        help1= modifHexValue[i];
+//        help2= modifHexValue[i+1];
+//        modifHexValue[i] = modifHexValue[i+2];
+//        modifHexValue[i+1] = modifHexValue[i+3];
+//        modifHexValue[i+2] = help1;
+//        modifHexValue[i+3] = help2;
+//    }
+//    modifHexValue[hex_size] = '\0';
+//    ROS_INFO("senso modif HEX=%s",modifHexValue);
+//
+//    //Convert from SENSO format to standard CAN format
+//    for (int i=0;i<hex_size-1-2;i+=4){
+//        help1= modifHexValue[i];
+//        help2= modifHexValue[i+1];
+//        modifHexValue[i] = modifHexValue[i+2];
+//        modifHexValue[i+1] = modifHexValue[i+3];
+//        modifHexValue[i+2] = help1;
+//        modifHexValue[i+3] = help2;
+//    }
+//    modifHexValue[hex_size] = '\0';
+//    ROS_INFO("normal format modif HEX=%s",modifHexValue);
+//
+//    decValue=hex2dec(modifHexValue);
+//    ROS_WARN("DEC=%d HEX=%s",decValue,modifHexValue);
     //ROS
 
 }
@@ -300,7 +359,7 @@ void MainWindow::on_centralStop_PB_clicked(){
     //sleep(3);
     //QApplication::quit();
 
-}
+}   //pridat prikaz na zastavenie a vypnutie programu
 /*****************************************************/
 
 

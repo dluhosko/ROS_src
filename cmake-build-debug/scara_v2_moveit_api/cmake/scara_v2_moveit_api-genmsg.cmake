@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "scara_v2_moveit_api: 1 messages, 1 services")
+message(STATUS "scara_v2_moveit_api: 2 messages, 1 services")
 
 set(MSG_I_FLAGS "-Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg;-Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg")
 
@@ -22,6 +22,11 @@ add_custom_target(_scara_v2_moveit_api_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "scara_v2_moveit_api" "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg" ""
 )
 
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg" NAME_WE)
+add_custom_target(_scara_v2_moveit_api_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "scara_v2_moveit_api" "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg" ""
+)
+
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv" NAME_WE)
 add_custom_target(_scara_v2_moveit_api_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "scara_v2_moveit_api" "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv" ""
@@ -35,6 +40,12 @@ add_custom_target(_scara_v2_moveit_api_generate_messages_check_deps_${_filename}
 ### Generating Messages
 _generate_msg_cpp(scara_v2_moveit_api
   "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/scara_v2_moveit_api
+)
+_generate_msg_cpp(scara_v2_moveit_api
+  "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/scara_v2_moveit_api
@@ -62,6 +73,8 @@ add_dependencies(scara_v2_moveit_api_generate_messages scara_v2_moveit_api_gener
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_cpp _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg" NAME_WE)
+add_dependencies(scara_v2_moveit_api_generate_messages_cpp _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_cpp _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
 
@@ -76,6 +89,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS scara_v2_moveit_api_generate_messag
 ### Generating Messages
 _generate_msg_eus(scara_v2_moveit_api
   "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/scara_v2_moveit_api
+)
+_generate_msg_eus(scara_v2_moveit_api
+  "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/scara_v2_moveit_api
@@ -103,6 +122,8 @@ add_dependencies(scara_v2_moveit_api_generate_messages scara_v2_moveit_api_gener
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_eus _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg" NAME_WE)
+add_dependencies(scara_v2_moveit_api_generate_messages_eus _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_eus _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
 
@@ -117,6 +138,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS scara_v2_moveit_api_generate_messag
 ### Generating Messages
 _generate_msg_lisp(scara_v2_moveit_api
   "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/scara_v2_moveit_api
+)
+_generate_msg_lisp(scara_v2_moveit_api
+  "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/scara_v2_moveit_api
@@ -144,6 +171,8 @@ add_dependencies(scara_v2_moveit_api_generate_messages scara_v2_moveit_api_gener
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_lisp _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg" NAME_WE)
+add_dependencies(scara_v2_moveit_api_generate_messages_lisp _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_lisp _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
 
@@ -158,6 +187,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS scara_v2_moveit_api_generate_messag
 ### Generating Messages
 _generate_msg_nodejs(scara_v2_moveit_api
   "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/scara_v2_moveit_api
+)
+_generate_msg_nodejs(scara_v2_moveit_api
+  "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/scara_v2_moveit_api
@@ -185,6 +220,8 @@ add_dependencies(scara_v2_moveit_api_generate_messages scara_v2_moveit_api_gener
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_nodejs _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg" NAME_WE)
+add_dependencies(scara_v2_moveit_api_generate_messages_nodejs _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_nodejs _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
 
@@ -199,6 +236,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS scara_v2_moveit_api_generate_messag
 ### Generating Messages
 _generate_msg_py(scara_v2_moveit_api
   "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/scara_v2_moveit_api
+)
+_generate_msg_py(scara_v2_moveit_api
+  "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/scara_v2_moveit_api
@@ -225,6 +268,8 @@ add_dependencies(scara_v2_moveit_api_generate_messages scara_v2_moveit_api_gener
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg" NAME_WE)
+add_dependencies(scara_v2_moveit_api_generate_messages_py _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_py _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv" NAME_WE)
 add_dependencies(scara_v2_moveit_api_generate_messages_py _scara_v2_moveit_api_generate_messages_check_deps_${_filename})

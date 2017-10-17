@@ -421,6 +421,21 @@ object_recognition_msgs_generate_messages_lisp/fast:
 .PHONY : object_recognition_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction.dir/rule
+
+# Convenience name for target.
+_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction.dir/rule
+
+.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction
+
+# fast build rule for target.
+_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction.dir/build.make scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction.dir/build
+.PHONY : _scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
@@ -1675,6 +1690,7 @@ help:
 	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... IK_test_real_scara"
 	@echo "... object_recognition_msgs_generate_messages_lisp"
+	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction"
 	@echo "... shape_msgs_generate_messages_cpp"
 	@echo "... scara_v2_moveit_api_gencpp"
 	@echo "... scara_colision_object"

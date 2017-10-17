@@ -6,7 +6,15 @@
 #define PROJECT_ROTARY_TABLE_MENU_H
 
 #include <ros/ros.h>
+#include <std_msgs/Int32.h>
+#include <std_msgs/String.h>
+#include "scara_v2_moveit_api/pose_velocity_direction.h"
+#include "scara_v2_moveit_api/pose_and_gripperState.h"
+//pridat include z CAN kniznice
 
+
+std_msgs::Int32 int32_msg;
+scara_v2_moveit_api::pose_velocity_direction posVelDir_msg;
 
 
 int hex2dec(char hex_value[]){
@@ -69,6 +77,20 @@ void convertCANmsg(char* inputCANmsg, int size_of_msg){
 
 }
 
+
+//************************************** Callbacks ********************************************/
+void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction desiredPositionVelocityDirection){
+
+    ROS_INFO("rotateCommandCallback : desired rotation=%d , desired velocity=%d desired direction =%s",desiredPositionVelocityDirection.rotation,
+             desiredPositionVelocityDirection.velocity, desiredPositionVelocityDirection.direction?"Right":"Left");
+
+}
+
+void workingStateCommandCallback(const std_msgs::Int32 mode){
+
+    ROS_INFO("workingStateCommandCallback : desired mode=%d",mode.data);
+
+}
 
 
 

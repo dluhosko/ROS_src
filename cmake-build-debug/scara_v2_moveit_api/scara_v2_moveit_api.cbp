@@ -737,6 +737,16 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction">
+				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 _scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="shape_msgs_generate_messages_cpp">
 				<Option working_dir="/home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api"/>
 				<Option type="4"/>

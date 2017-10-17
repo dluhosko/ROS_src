@@ -89,6 +89,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/home/viktor/clion-2016.3.3/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -121,17 +132,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/viktor/clion-2016.3.3/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,21 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
-
-# Convenience name for target.
-scara_msgs_genpy: scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
-
-.PHONY : scara_msgs_genpy
-
-# fast build rule for target.
-scara_msgs_genpy/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_genpy.dir/build.make scara_msgs/CMakeFiles/scara_msgs_genpy.dir/build
-.PHONY : scara_msgs_genpy/fast
-
-# Convenience name for target.
 scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
@@ -194,6 +179,21 @@ scara_msgs_gennodejs: scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
 scara_msgs_gennodejs/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build
 .PHONY : scara_msgs_gennodejs/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+scara_msgs_generate_messages_nodejs: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : scara_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+scara_msgs_generate_messages_nodejs/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build
+.PHONY : scara_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule:
@@ -271,6 +271,36 @@ scara_msgs_genlisp/fast:
 .PHONY : scara_msgs_genlisp/fast
 
 # Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
+
+# Convenience name for target.
+scara_msgs_genpy: scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
+
+.PHONY : scara_msgs_genpy
+
+# fast build rule for target.
+scara_msgs_genpy/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_genpy.dir/build.make scara_msgs/CMakeFiles/scara_msgs_genpy.dir/build
+.PHONY : scara_msgs_genpy/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_velocity_direction.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_velocity_direction.dir/rule
+.PHONY : scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_velocity_direction.dir/rule
+
+# Convenience name for target.
+_scara_msgs_generate_messages_check_deps_pose_velocity_direction: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_velocity_direction.dir/rule
+
+.PHONY : _scara_msgs_generate_messages_check_deps_pose_velocity_direction
+
+# fast build rule for target.
+_scara_msgs_generate_messages_check_deps_pose_velocity_direction/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_velocity_direction.dir/build.make scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_velocity_direction.dir/build
+.PHONY : _scara_msgs_generate_messages_check_deps_pose_velocity_direction/fast
+
+# Convenience name for target.
 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule
 .PHONY : scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule
@@ -345,21 +375,6 @@ scara_msgs_geneus/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_geneus.dir/build.make scara_msgs/CMakeFiles/scara_msgs_geneus.dir/build
 .PHONY : scara_msgs_geneus/fast
 
-# Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-scara_msgs_generate_messages_nodejs: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : scara_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-scara_msgs_generate_messages_nodejs/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build
-.PHONY : scara_msgs_generate_messages_nodejs/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -369,8 +384,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install/local"
-	@echo "... scara_msgs_genpy"
 	@echo "... scara_msgs_gennodejs"
+	@echo "... test"
+	@echo "... scara_msgs_generate_messages_nodejs"
 	@echo "... scara_msgs_generate_messages"
 	@echo "... list_install_components"
 	@echo "... install/strip"
@@ -379,13 +395,13 @@ help:
 	@echo "... scara_msgs_gencpp"
 	@echo "... install"
 	@echo "... scara_msgs_genlisp"
+	@echo "... scara_msgs_genpy"
+	@echo "... _scara_msgs_generate_messages_check_deps_pose_velocity_direction"
 	@echo "... _scara_msgs_generate_messages_check_deps_pose_and_gripperState"
 	@echo "... scara_msgs_generate_messages_eus"
 	@echo "... scara_msgs_generate_messages_lisp"
 	@echo "... scara_msgs_generate_messages_cpp"
 	@echo "... scara_msgs_geneus"
-	@echo "... test"
-	@echo "... scara_msgs_generate_messages_nodejs"
 .PHONY : help
 
 

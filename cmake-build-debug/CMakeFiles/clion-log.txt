@@ -56,7 +56,7 @@ Call Stack (most recent call first):
 --   thread
 --   chrono
 --   atomic
--- scara_msgs: 2 messages, 0 services
+-- scara_msgs: 3 messages, 0 services
 -- +++ processing catkin package: 'rotary_table_gui'
 -- ==> add_subdirectory(rotary_table_gui)
 CMake Warning at cmake-build-debug/rotary_table_gui/cmake/rotary_table_gui-genmsg.cmake:3 (message):
@@ -100,9 +100,9 @@ Call Stack (most recent call first):
 --   thread
 --   chrono
 --   atomic
--- scara_v2_moveit_api: 1 messages, 1 services
+-- scara_v2_moveit_api: 2 messages, 1 services
 -- Configuring done
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:100 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:101 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -111,7 +111,7 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:100 (add_dependencies)
   "gripper_control" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:96 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:97 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -120,7 +120,7 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:96 (add_dependencies):
   "multiple_cube_publisher" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:92 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:93 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -129,7 +129,7 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:92 (add_dependencies):
   "cube_publisher" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:78 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:79 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -138,7 +138,7 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:78 (add_dependencies):
   "move_group_interface4_position_control" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:88 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:89 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
@@ -147,13 +147,22 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:88 (add_dependencies):
   "move_group_interface6_async_PICKandPLACE" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:87 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:88 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
 
   The dependency target "{scara_v2_moveit_api_EXPORTED_TARGETS}" of target
   "move_group_interface6_async_PICKandPLACE" does not exist.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:84 (add_dependencies):
+  Policy CMP0046 is not set: Error on non-existent dependency in
+  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
+  Use the cmake_policy command to set the policy and suppress this warning.
+
+  The dependency target "beginner_tutorials_gencpp" of target
+  "move_group_interface5_rt" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:83 (add_dependencies):
@@ -161,20 +170,11 @@ CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:83 (add_dependencies):
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
 
-  The dependency target "beginner_tutorials_gencpp" of target
-  "move_group_interface5_rt" does not exist.
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:82 (add_dependencies):
-  Policy CMP0046 is not set: Error on non-existent dependency in
-  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
-  Use the cmake_policy command to set the policy and suppress this warning.
-
   The dependency target "{scara_v2_moveit_api_EXPORTED_TARGETS}" of target
   "move_group_interface5_rt" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:74 (add_dependencies):
+CMake Warning (dev) at scara_v2_moveit_api/CMakeLists.txt:75 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
