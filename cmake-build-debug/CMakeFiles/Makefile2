@@ -2412,7 +2412,7 @@ can_interface/preinstall:
 can_interface/CMakeFiles/test_can.dir/all:
 	$(MAKE) -f can_interface/CMakeFiles/test_can.dir/build.make can_interface/CMakeFiles/test_can.dir/depend
 	$(MAKE) -f can_interface/CMakeFiles/test_can.dir/build.make can_interface/CMakeFiles/test_can.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=77,78 "Built target test_can"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=85,86 "Built target test_can"
 .PHONY : can_interface/CMakeFiles/test_can.dir/all
 
 # Include target in all.
@@ -2623,7 +2623,7 @@ scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all: scara_msgs/CMakeF
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=61,62,63 "Built target scara_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=69,70,71 "Built target scara_msgs_generate_messages_py"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2785,7 +2785,7 @@ scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all: scara_msgs/CMake
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=54,55,56 "Built target scara_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=62,63,64 "Built target scara_msgs_generate_messages_eus"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2819,7 +2819,7 @@ scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all: scara_msgs/CMak
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=57,58 "Built target scara_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=65,66 "Built target scara_msgs_generate_messages_lisp"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2853,7 +2853,7 @@ scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all: scara_msgs/CMake
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=52,53 "Built target scara_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=60,61 "Built target scara_msgs_generate_messages_cpp"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2919,7 +2919,7 @@ scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all: scara_msgs/CM
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=59,60 "Built target scara_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=67,68 "Built target scara_msgs_generate_messages_nodejs"
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2945,6 +2945,459 @@ clean: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory rotary_table_gui
+
+# Convenience name for "all" pass in the directory.
+rotary_table_gui/all: rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all
+rotary_table_gui/all: rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/all
+
+.PHONY : rotary_table_gui/all
+
+# Convenience name for "clean" pass in the directory.
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/rotary_table_gui.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
+rotary_table_gui/clean: rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
+
+.PHONY : rotary_table_gui/clean
+
+# Convenience name for "preinstall" pass in the directory.
+rotary_table_gui/preinstall:
+
+.PHONY : rotary_table_gui/preinstall
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/rotary_table_gui.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_eus.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_py.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_py.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/all
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
+	$(MAKE) -f rotary_table_gui/CMakeFiles/rotary_table_gui.dir/build.make rotary_table_gui/CMakeFiles/rotary_table_gui.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/rotary_table_gui.dir/build.make rotary_table_gui/CMakeFiles/rotary_table_gui.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=42,43,44,45,46,47 "Built target rotary_table_gui"
+.PHONY : rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all
+
+# Include target in all.
+all: rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 18
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/rotary_table_gui.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/rotary_table_gui.dir/rule
+
+# Convenience name for target.
+rotary_table_gui: rotary_table_gui/CMakeFiles/rotary_table_gui.dir/rule
+
+.PHONY : rotary_table_gui
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/rotary_table_gui.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/rotary_table_gui.dir/build.make rotary_table_gui/CMakeFiles/rotary_table_gui.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/rotary_table_gui.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/rotary_table_gui.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_cpp"
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_cpp: rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+
+.PHONY : nodelet_generate_messages_cpp
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_eus"
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_eus: rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+
+.PHONY : nodelet_generate_messages_eus
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_nodejs"
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_nodejs: rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+
+.PHONY : nodelet_generate_messages_nodejs
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_py"
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_py: rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/rule
+
+.PHONY : bond_generate_messages_py
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_py"
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_py: rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/rule
+
+.PHONY : nodelet_generate_messages_py
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_cpp"
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_cpp: rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/rule
+
+.PHONY : bond_generate_messages_cpp
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/build.make rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/build.make rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target rotary_table_gui_generate_messages"
+.PHONY : rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/all
+
+# Include target in all.
+all: rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/rule
+
+# Convenience name for target.
+rotary_table_gui_generate_messages: rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/rule
+
+.PHONY : rotary_table_gui_generate_messages
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/build.make rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_lisp"
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nodelet_generate_messages_lisp: rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+
+.PHONY : nodelet_generate_messages_lisp
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_nodejs"
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_nodejs: rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+
+.PHONY : bond_generate_messages_nodejs
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_eus"
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_eus: rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/rule
+
+.PHONY : bond_generate_messages_eus
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir
+
+# All Build rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/all:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/depend
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_lisp"
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+bond_generate_messages_lisp: rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/rule
+
+.PHONY : bond_generate_messages_lisp
+
+# clean rule for target.
+rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
+.PHONY : rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory scara_gui
 
 # Convenience name for "all" pass in the directory.
@@ -2955,17 +3408,7 @@ scara_gui/all: scara_gui/CMakeFiles/scara_gui_generate_messages.dir/all
 
 # Convenience name for "clean" pass in the directory.
 scara_gui/clean: scara_gui/CMakeFiles/scara_gui.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean
 scara_gui/clean: scara_gui/CMakeFiles/scara_gui_generate_messages.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
-scara_gui/clean: scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
 
 .PHONY : scara_gui/clean
 
@@ -2998,19 +3441,19 @@ scara_gui/CMakeFiles/scara_gui.dir/all: scara_msgs/CMakeFiles/scara_msgs_generat
 scara_gui/CMakeFiles/scara_gui.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/all
 scara_gui/CMakeFiles/scara_gui.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/all
 scara_gui/CMakeFiles/scara_gui.dir/all: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_py.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_eus.dir/all
-scara_gui/CMakeFiles/scara_gui.dir/all: scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/all
+scara_gui/CMakeFiles/scara_gui.dir/all: rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
 	$(MAKE) -f scara_gui/CMakeFiles/scara_gui.dir/build.make scara_gui/CMakeFiles/scara_gui.dir/depend
 	$(MAKE) -f scara_gui/CMakeFiles/scara_gui.dir/build.make scara_gui/CMakeFiles/scara_gui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=44,45,46,47,48,49 "Built target scara_gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=52,53,54,55,56,57 "Built target scara_gui"
 .PHONY : scara_gui/CMakeFiles/scara_gui.dir/all
 
 # Include target in all.
@@ -3037,134 +3480,6 @@ scara_gui/CMakeFiles/scara_gui.dir/clean:
 
 # clean rule for target.
 clean: scara_gui/CMakeFiles/scara_gui.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_cpp"
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_cpp: scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-
-.PHONY : nodelet_generate_messages_cpp
-
-# clean rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_eus"
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_eus: scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-
-.PHONY : nodelet_generate_messages_eus
-
-# clean rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_nodejs"
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_nodejs: scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-
-.PHONY : nodelet_generate_messages_nodejs
-
-# clean rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_py.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_py.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_py.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_py.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_py.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_py"
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/bond_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_py: scara_gui/CMakeFiles/bond_generate_messages_py.dir/rule
-
-.PHONY : bond_generate_messages_py
-
-# clean rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_py.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/bond_generate_messages_py.dir/clean
 
 .PHONY : clean
 
@@ -3202,198 +3517,6 @@ scara_gui/CMakeFiles/scara_gui_generate_messages.dir/clean:
 
 # clean rule for target.
 clean: scara_gui/CMakeFiles/scara_gui_generate_messages.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_py.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_py"
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_py: scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-.PHONY : nodelet_generate_messages_py
-
-# clean rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_cpp.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_cpp"
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_cpp: scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-.PHONY : bond_generate_messages_cpp
-
-# clean rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target nodelet_generate_messages_lisp"
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_lisp: scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-.PHONY : nodelet_generate_messages_lisp
-
-# clean rule for target.
-scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
-.PHONY : scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_nodejs"
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_nodejs: scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-
-.PHONY : bond_generate_messages_nodejs
-
-# clean rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_eus.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_eus.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_eus.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_eus"
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/bond_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_eus: scara_gui/CMakeFiles/bond_generate_messages_eus.dir/rule
-
-.PHONY : bond_generate_messages_eus
-
-# clean rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/bond_generate_messages_eus.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scara_gui/CMakeFiles/bond_generate_messages_lisp.dir
-
-# All Build rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/all:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/depend
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num= "Built target bond_generate_messages_lisp"
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_lisp: scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-.PHONY : bond_generate_messages_lisp
-
-# clean rule for target.
-scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
-.PHONY : scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
-
-# clean rule for target.
-clean: scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 
@@ -3464,7 +3587,7 @@ torque_sensor/CMakeFiles/torque_sensor_node.dir/all: gazebo_scara_and_rt/scara_v
 torque_sensor/CMakeFiles/torque_sensor_node.dir/all: gazebo_scara_and_rt/scara_v2_full_description/CMakeFiles/roscpp_generate_messages_py.dir/all
 	$(MAKE) -f torque_sensor/CMakeFiles/torque_sensor_node.dir/build.make torque_sensor/CMakeFiles/torque_sensor_node.dir/depend
 	$(MAKE) -f torque_sensor/CMakeFiles/torque_sensor_node.dir/build.make torque_sensor/CMakeFiles/torque_sensor_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=81,82,83,84,85,86,87,88 "Built target torque_sensor_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=89,90,91,92,93,94,95,96 "Built target torque_sensor_node"
 .PHONY : torque_sensor/CMakeFiles/torque_sensor_node.dir/all
 
 # Include target in all.
@@ -3498,6 +3621,7 @@ clean: torque_sensor/CMakeFiles/torque_sensor_node.dir/clean
 # Directory level rules for directory scara_v2_moveit_api
 
 # Convenience name for "all" pass in the directory.
+scara_v2_moveit_api/all: scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/all
 scara_v2_moveit_api/all: scara_v2_moveit_api/CMakeFiles/scara_menu.dir/all
 scara_v2_moveit_api/all: scara_v2_moveit_api/CMakeFiles/tf_readout.dir/all
 scara_v2_moveit_api/all: scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/all
@@ -3523,6 +3647,7 @@ scara_v2_moveit_api/all: scara_v2_moveit_api/CMakeFiles/IK_test.dir/all
 .PHONY : scara_v2_moveit_api/all
 
 # Convenience name for "clean" pass in the directory.
+scara_v2_moveit_api/clean: scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/clean
 scara_v2_moveit_api/clean: scara_v2_moveit_api/CMakeFiles/scara_menu.dir/clean
 scara_v2_moveit_api/clean: scara_v2_moveit_api/CMakeFiles/tf_readout.dir/clean
 scara_v2_moveit_api/clean: scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/clean
@@ -3592,13 +3717,50 @@ scara_v2_moveit_api/preinstall:
 .PHONY : scara_v2_moveit_api/preinstall
 
 #=============================================================================
+# Target rules for target scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir
+
+# All Build rule for target.
+scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/all:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/depend
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=48,49 "Built target rotary_table_menu"
+.PHONY : scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/all
+
+# Include target in all.
+all: scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles 0
+.PHONY : scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/rule
+
+# Convenience name for target.
+rotary_table_menu: scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/rule
+
+.PHONY : rotary_table_menu
+
+# clean rule for target.
+scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/clean:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/clean
+.PHONY : scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/clean
+
+# clean rule for target.
+clean: scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target scara_v2_moveit_api/CMakeFiles/scara_menu.dir
 
 # All Build rule for target.
 scara_v2_moveit_api/CMakeFiles/scara_menu.dir/all:
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_menu.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_menu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=50,51 "Built target scara_menu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=58,59 "Built target scara_menu"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_menu.dir/all
 
 # Include target in all.
@@ -3635,7 +3797,7 @@ clean: scara_v2_moveit_api/CMakeFiles/scara_menu.dir/clean
 scara_v2_moveit_api/CMakeFiles/tf_readout.dir/all:
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build.make scara_v2_moveit_api/CMakeFiles/tf_readout.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=79,80 "Built target tf_readout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=87,88 "Built target tf_readout"
 .PHONY : scara_v2_moveit_api/CMakeFiles/tf_readout.dir/all
 
 # Include target in all.
@@ -4224,7 +4386,7 @@ clean: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_gencpp.dir/clean
 scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/all:
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=42,43 "Built target scara_colision_object"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=50,51 "Built target scara_colision_object"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_colision_object.dir/all
 
 # Include target in all.
@@ -4673,7 +4835,7 @@ scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=71,72 "Built target scara_v2_moveit_api_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=79,80 "Built target scara_v2_moveit_api_generate_messages_nodejs"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4893,7 +5055,7 @@ scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/al
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=69,70 "Built target scara_v2_moveit_api_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=77,78 "Built target scara_v2_moveit_api_generate_messages_lisp"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5416,7 +5578,7 @@ scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all:
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=73,74,75,76 "Built target scara_v2_moveit_api_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=81,82,83,84 "Built target scara_v2_moveit_api_generate_messages_py"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5783,7 +5945,7 @@ scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=64,65 "Built target scara_v2_moveit_api_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=72,73 "Built target scara_v2_moveit_api_generate_messages_cpp"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5852,7 +6014,7 @@ scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all: scara_v2_moveit_api/CMakeFiles/_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState.dir/all
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/depend
 	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/build.make scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=66,67,68 "Built target scara_v2_moveit_api_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=74,75,76 "Built target scara_v2_moveit_api_generate_messages_eus"
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.

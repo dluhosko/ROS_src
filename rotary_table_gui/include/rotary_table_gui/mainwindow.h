@@ -14,6 +14,8 @@
 #include "geometry_msgs/Pose.h"
 #include "std_msgs/Int32.h"
 #include "std_msgs/Byte.h"
+#include "std_msgs/UInt8MultiArray.h"
+#include "std_msgs/String.h"
 #include "scara_msgs/robot_info.h"
 #include <stdlib.h>
 
@@ -90,6 +92,8 @@ private:
     char hexString[16];
 
     std_msgs::Int32 int32_msg;
+    std_msgs::UInt8MultiArray uInt8MultiArray_msg;
+    std_msgs::String string_msg;
 
     ros::Publisher rotate_DEC_pub, rotate_HEX_pub, workingState_pub, useless_pub;
     ros::Subscriber currentAngleDeg_sub, currentWorkingState_sub, status_sub, useless_sub;

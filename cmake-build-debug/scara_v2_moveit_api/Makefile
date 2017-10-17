@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/rule
+.PHONY : scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/rule
+
+# Convenience name for target.
+rotary_table_menu: scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/rule
+
+.PHONY : rotary_table_menu
+
+# fast build rule for target.
+rotary_table_menu/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build
+.PHONY : rotary_table_menu/fast
+
+# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/scara_menu.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_menu.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_menu.dir/rule
@@ -1524,6 +1539,33 @@ src/rotary_table_can_test.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/src/rotary_table_can_test.cpp.s
 .PHONY : src/rotary_table_can_test.cpp.s
 
+src/rotary_table_menu.o: src/rotary_table_menu.cpp.o
+
+.PHONY : src/rotary_table_menu.o
+
+# target to build an object file
+src/rotary_table_menu.cpp.o:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/src/rotary_table_menu.cpp.o
+.PHONY : src/rotary_table_menu.cpp.o
+
+src/rotary_table_menu.i: src/rotary_table_menu.cpp.i
+
+.PHONY : src/rotary_table_menu.i
+
+# target to preprocess a source file
+src/rotary_table_menu.cpp.i:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/src/rotary_table_menu.cpp.i
+.PHONY : src/rotary_table_menu.cpp.i
+
+src/rotary_table_menu.s: src/rotary_table_menu.cpp.s
+
+.PHONY : src/rotary_table_menu.s
+
+# target to generate assembly for a file
+src/rotary_table_menu.cpp.s:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/src/rotary_table_menu.cpp.s
+.PHONY : src/rotary_table_menu.cpp.s
+
 src/scara_colision_object.o: src/scara_colision_object.cpp.o
 
 .PHONY : src/scara_colision_object.o
@@ -1614,6 +1656,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... install/strip"
+	@echo "... rotary_table_menu"
 	@echo "... scara_menu"
 	@echo "... tf_readout"
 	@echo "... real_scara_torq_sensor"
@@ -1729,6 +1772,9 @@ help:
 	@echo "... src/rotary_table_can_test.o"
 	@echo "... src/rotary_table_can_test.i"
 	@echo "... src/rotary_table_can_test.s"
+	@echo "... src/rotary_table_menu.o"
+	@echo "... src/rotary_table_menu.i"
+	@echo "... src/rotary_table_menu.s"
 	@echo "... src/scara_colision_object.o"
 	@echo "... src/scara_colision_object.i"
 	@echo "... src/scara_colision_object.s"

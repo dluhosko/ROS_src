@@ -266,7 +266,7 @@ void MainWindow::on_stop_PB_clicked(){
     modifHexValue[hex_size] = '\0';
     ROS_INFO("senso modif HEX=%s",modifHexValue);
 
-    //Convert from SENSO format to standart CAN format
+    //Convert from SENSO format to standard CAN format
     for (int i=0;i<hex_size-1-2;i+=4){
         help1= modifHexValue[i];
         help2= modifHexValue[i+1];

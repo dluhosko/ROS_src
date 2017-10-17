@@ -2,316 +2,319 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" buildAllGenerated="true">
     <generated>
-      <config projectName="Project" targetName="polled_camera_generate_messages_eus" />
-      <config projectName="Project" targetName="trajectory_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="gazebo_ros_diff_drive" />
-      <config projectName="Project" targetName="scara_msgs_gencpp" />
-      <config projectName="Project" targetName="gazebo_ros_camera_utils" />
-      <config projectName="Project" targetName="move_group_interface5_rt" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gazebo_ros_hand_of_god" />
-      <config projectName="Project" targetName="map_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="control_toolbox_generate_messages_cpp" />
-      <config projectName="Project" targetName="gazebo_ros_gencfg" />
-      <config projectName="Project" targetName="visualization_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="gazebo_msgs_generate_messages" />
-      <config projectName="Project" targetName="run_tests_gazebo_plugins" />
-      <config projectName="Project" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="Project" targetName="tf_generate_messages_nodejs" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_genlisp" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="tf_generate_messages_eus" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_lisp" />
-      <config projectName="Project" targetName="multiple_cube_publisher" />
-      <config projectName="Project" targetName="control_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="gazebo_tutorials" />
-      <config projectName="Project" targetName="scara_msgs_genpy" />
-      <config projectName="Project" targetName="gazebo_msgs_genlisp" />
-      <config projectName="Project" targetName="gazebo_ros_video" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_DeleteModel" />
-      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="control_toolbox_generate_messages_eus" />
-      <config projectName="Project" targetName="moveit_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="polled_camera_generate_messages_cpp" />
-      <config projectName="Project" targetName="gazebo_ros_planar_move" />
-      <config projectName="Project" targetName="polled_camera_generate_messages_py" />
-      <config projectName="Project" targetName="nodelet_generate_messages_nodejs" />
-      <config projectName="Project" targetName="trajectory_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="scara_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gazebo_ros_joint_trajectory" />
-      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose" />
-      <config projectName="Project" targetName="gazebo_msgs_genpy" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetLinkProperties" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gencpp" />
-      <config projectName="Project" targetName="trajectory_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="tf_generate_messages_py" />
-      <config projectName="Project" targetName="gazebo_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="hokuyo_node" />
-      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters" />
-      <config projectName="Project" targetName="tf_generate_messages_cpp" />
-      <config projectName="Project" targetName="gtest_main" />
-      <config projectName="Project" targetName="moveit_ros_manipulation_gencfg" />
-      <config projectName="Project" targetName="pub_joint_trajectory_test" />
-      <config projectName="Project" targetName="gazebo_ros_projector" />
-      <config projectName="Project" targetName="roscpp_generate_messages_py" />
-      <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest_test_range_range_plugin.test" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SpawnModel" />
-      <config projectName="Project" targetName="shape_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="linear_interpolation" />
-      <config projectName="Project" targetName="scara_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest" />
-      <config projectName="Project" targetName="doxygen" />
-      <config projectName="Project" targetName="IK_test" />
-      <config projectName="Project" targetName="gazebo_ros_api_plugin" />
-      <config projectName="Project" targetName="cube_publisher" />
-      <config projectName="Project" targetName="clean_test_results" />
-      <config projectName="Project" targetName="scara_ros_node" />
-      <config projectName="Project" targetName="gazebo_ros_elevator" />
-      <config projectName="Project" targetName="control_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="nav_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="bond_generate_messages_lisp" />
-      <config projectName="Project" targetName="gazebo_ros_laser" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ModelStates" />
-      <config projectName="Project" targetName="scara_menu" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_py" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_BodyRequest" />
-      <config projectName="Project" targetName="actionlib_generate_messages_lisp" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetLinkProperties" />
-      <config projectName="Project" targetName="gazebo_msgs_geneus" />
-      <config projectName="Project" targetName="gazebo_ros_p3d" />
-      <config projectName="Project" targetName="gazebo_ros_depth_camera" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_eus" />
-      <config projectName="Project" targetName="scara_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ApplyBodyWrench" />
-      <config projectName="Project" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gazebo_ros_camera" />
-      <config projectName="Project" targetName="std_srvs_generate_messages_cpp" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="octomap_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="move_group_interface4_position_control" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gazebo_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="gazebo_ros_paths_plugin" />
-      <config projectName="Project" targetName="scara_v2_scara_arm_moveit_ikfast_plugin" />
-      <config projectName="Project" targetName="control_toolbox_gencfg" />
-      <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetLinkState" />
-      <config projectName="Project" targetName="nav_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_JointRequest" />
-      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="scara_msgs_gennodejs" />
-      <config projectName="Project" targetName="scara_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="nav_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gazebo_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="control_toolbox_generate_messages_py" />
-      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="tf2_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gripper_control" />
-      <config projectName="Project" targetName="tf_listener" />
-      <config projectName="Project" targetName="gazebo_msgs_gencpp" />
-      <config projectName="Project" targetName="nodelet_generate_messages_py" />
-      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="matlabtalker" />
-      <config projectName="Project" targetName="IK_test_real_scara" />
-      <config projectName="Project" targetName="std_srvs_generate_messages_py" />
-      <config projectName="Project" targetName="shape_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="octomap_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetPhysicsProperties" />
-      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info" />
-      <config projectName="Project" targetName="tests" />
-      <config projectName="Project" targetName="_scara_msgs_generate_messages_check_deps_robot_info" />
-      <config projectName="Project" targetName="scara_msgs_generate_messages" />
-      <config projectName="Project" targetName="set_model_state-test" />
-      <config projectName="Project" targetName="nodelet_generate_messages_eus" />
-      <config projectName="Project" targetName="gazebo_ros_ft_sensor" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gennodejs" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="test_can" />
-      <config projectName="Project" targetName="tf2_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages" />
-      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_WorldState" />
-      <config projectName="Project" targetName="nav_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_genpy" />
-      <config projectName="Project" targetName="move_group_interface3_PICKandPLACE" />
-      <config projectName="Project" targetName="shape_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetJointProperties" />
-      <config projectName="Project" targetName="moveit_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="tf_generate_messages_lisp" />
-      <config projectName="Project" targetName="gazebo_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_genlisp" />
-      <config projectName="Project" targetName="gazebo_ros_joint_pose_trajectory" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetModelState" />
-      <config projectName="Project" targetName="matlab_communication_tryout" />
-      <config projectName="Project" targetName="std_srvs_generate_messages_eus" />
-      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ContactsState" />
-      <config projectName="Project" targetName="gazebo_plugins_gencfg" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_LinkState" />
-      <config projectName="Project" targetName="scara_ros_test_node" />
-      <config projectName="Project" targetName="control_toolbox_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gazebo_ros_force" />
-      <config projectName="Project" targetName="move_group_interface2" />
-      <config projectName="Project" targetName="move_group_interface1" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_py" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetLinkState" />
-      <config projectName="Project" targetName="gazebo_ros_block_laser" />
-      <config projectName="Project" targetName="gazebo_ros_f3d" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetModelConfiguration" />
-      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetPhysicsProperties" />
-      <config projectName="Project" targetName="map_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="nodelet_generate_messages_cpp" />
-      <config projectName="Project" targetName="gazebo_ros_imu" />
       <config projectName="Project" targetName="visualization_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="can_interface" />
-      <config projectName="Project" targetName="moveit_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="jointState_publisher" />
-      <config projectName="Project" targetName="polled_camera_generate_messages_lisp" />
-      <config projectName="Project" targetName="scara_gui" />
-      <config projectName="Project" targetName="_run_tests_gazebo_plugins" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_py" />
-      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="std_srvs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gazebo_ros_vacuum_gripper" />
-      <config projectName="Project" targetName="bond_generate_messages_eus" />
-      <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test" />
-      <config projectName="Project" targetName="roscpp_generate_messages_nodejs" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_cpp" />
-      <config projectName="Project" targetName="real_scara_torq_sensor" />
-      <config projectName="Project" targetName="gtest" />
-      <config projectName="Project" targetName="gazebo_ros_multicamera" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_cpp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetJointProperties" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_genpy" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="roscpp_generate_messages_eus" />
-      <config projectName="Project" targetName="clean_test_results_gazebo_plugins" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_lisp" />
-      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="gazebo_ros_prosilica" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ApplyJointEffort" />
-      <config projectName="Project" targetName="scara_msgs_genlisp" />
-      <config projectName="Project" targetName="scara_colision_object" />
-      <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="_catkin_empty_exported_target" />
-      <config projectName="Project" targetName="default_robot_hw_sim" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_geneus" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_geneus" />
-      <config projectName="Project" targetName="shape_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="bond_generate_messages_cpp" />
-      <config projectName="Project" targetName="polled_camera_generate_messages_nodejs" />
-      <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test" />
-      <config projectName="Project" targetName="move_group_interface6_async_PICKandPLACE" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_gennodejs" />
-      <config projectName="Project" targetName="torque_sensor_node" />
-      <config projectName="Project" targetName="scara_gui_generate_messages" />
-      <config projectName="Project" targetName="visualization_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_LinkStates" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_eus" />
-      <config projectName="Project" targetName="tf_readout" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetModelProperties" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ContactState" />
-      <config projectName="Project" targetName="gazebo_ros_tricycle_drive" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="Project" targetName="bond_generate_messages_py" />
-      <config projectName="Project" targetName="shape_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="moveit_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetModelState" />
-      <config projectName="Project" targetName="_scara_msgs_generate_messages_check_deps_pose_and_gripperState" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_eus" />
-      <config projectName="Project" targetName="moveit_ros_planning_gencfg" />
-      <config projectName="Project" targetName="gazebo_ros_openni_kinect" />
-      <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="Project" targetName="dynamic_reconfigure_gencfg" />
-      <config projectName="Project" targetName="control_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="visualization_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="MultiCameraPlugin" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="tf_broadcaster" />
-      <config projectName="Project" targetName="control_toolbox_generate_messages_lisp" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_gencpp" />
-      <config projectName="Project" targetName="gazebo_ros_gpu_laser" />
-      <config projectName="Project" targetName="nav_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="scara_msgs_geneus" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ModelState" />
-      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands" />
-      <config projectName="Project" targetName="map_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="scara_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="gazebo_ros_skid_steer_drive" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetJointTrajectory" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="octomap_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetWorldProperties" />
-      <config projectName="Project" targetName="gazebo_ros_range" />
-      <config projectName="Project" targetName="moveit_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_nodejs" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_cpp" />
-      <config projectName="Project" targetName="gazebo_ros_bumper" />
-      <config projectName="Project" targetName="run_tests" />
-      <config projectName="Project" targetName="std_srvs_generate_messages_lisp" />
-      <config projectName="Project" targetName="octomap_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="rotary_table_can_test" />
-      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_lisp" />
-      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="gazebo_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="moveit_display_time" />
-      <config projectName="Project" targetName="gazebo_msgs_gennodejs" />
-      <config projectName="Project" targetName="nodelet_generate_messages_lisp" />
-      <config projectName="Project" targetName="map_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="octomap_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="control_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="get_and_send_planned_path" />
-      <config projectName="Project" targetName="sensor_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ODEPhysics" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="actionlib_generate_messages_py" />
-      <config projectName="Project" targetName="trajectory_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="visualization_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="menu_tryout_1" />
-      <config projectName="Project" targetName="trajectory_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="gazebo_ros_joint_state_publisher" />
-      <config projectName="Project" targetName="gazebo_ros_template" />
-      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="gazebo_ros_control" />
-      <config projectName="Project" targetName="tf2_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="gazebo_ros_utils" />
-      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values" />
-      <config projectName="Project" targetName="actionlib_generate_messages_nodejs" />
-      <config projectName="Project" targetName="download_extra_data" />
-      <config projectName="Project" targetName="vision_reconfigure" />
-      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_SimpleService" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ODEJointProperties" />
-      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
-      <config projectName="Project" targetName="matlab_ROS_com_tryout" />
+      <config projectName="Project" targetName="gazebo_ros_hand_of_god" />
       <config projectName="Project" targetName="bond_generate_messages_nodejs" />
-      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="camera_synchronizer" />
-      <config projectName="Project" targetName="map_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" />
+      <config projectName="Project" targetName="gazebo_msgs_gencpp" />
+      <config projectName="Project" targetName="roscpp_generate_messages_py" />
+      <config projectName="Project" targetName="nav_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="gazebo_ros_bumper" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetModelProperties" />
+      <config projectName="Project" targetName="rotary_table_menu" />
+      <config projectName="Project" targetName="scara_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages" />
+      <config projectName="Project" targetName="scara_msgs_gencpp" />
+      <config projectName="Project" targetName="clean_test_results" />
+      <config projectName="Project" targetName="polled_camera_generate_messages_py" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ApplyJointEffort" />
+      <config projectName="Project" targetName="gazebo_ros_projector" />
+      <config projectName="Project" targetName="octomap_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="moveit_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="_run_tests_gazebo_plugins" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="polled_camera_generate_messages_lisp" />
+      <config projectName="Project" targetName="octomap_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="real_scara_torq_sensor" />
+      <config projectName="Project" targetName="gazebo_ros_camera" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="gazebo_msgs_geneus" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="cube_publisher" />
+      <config projectName="Project" targetName="bond_generate_messages_py" />
+      <config projectName="Project" targetName="dynamic_reconfigure_gencfg" />
+      <config projectName="Project" targetName="scara_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="scara_msgs_geneus" />
+      <config projectName="Project" targetName="rotary_table_gui_generate_messages" />
+      <config projectName="Project" targetName="_catkin_empty_exported_target" />
+      <config projectName="Project" targetName="octomap_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="moveit_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="torque_sensor_node" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="matlab_ROS_com_tryout" />
+      <config projectName="Project" targetName="gazebo_ros_gpu_laser" />
+      <config projectName="Project" targetName="actionlib_generate_messages_py" />
+      <config projectName="Project" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="control_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="std_srvs_generate_messages_cpp" />
+      <config projectName="Project" targetName="IK_test_real_scara" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetLinkProperties" />
+      <config projectName="Project" targetName="bond_generate_messages_cpp" />
+      <config projectName="Project" targetName="gazebo_ros_multicamera" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_gencpp" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="control_toolbox_generate_messages_cpp" />
+      <config projectName="Project" targetName="gazebo_ros_camera_utils" />
+      <config projectName="Project" targetName="rotary_table_gui" />
       <config projectName="Project" targetName="control_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_py" />
+      <config projectName="Project" targetName="menu_tryout_1" />
+      <config projectName="Project" targetName="vision_reconfigure" />
+      <config projectName="Project" targetName="std_srvs_generate_messages_eus" />
+      <config projectName="Project" targetName="scara_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="rotary_table_can_test" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ODEPhysics" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetLinkState" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ContactsState" />
+      <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest" />
+      <config projectName="Project" targetName="gazebo_ros_utils" />
+      <config projectName="Project" targetName="gazebo_ros_imu" />
+      <config projectName="Project" targetName="gazebo_msgs_generate_messages" />
+      <config projectName="Project" targetName="multiple_cube_publisher" />
+      <config projectName="Project" targetName="get_and_send_planned_path" />
+      <config projectName="Project" targetName="tf_generate_messages_eus" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ApplyBodyWrench" />
+      <config projectName="Project" targetName="tf_readout" />
+      <config projectName="Project" targetName="scara_msgs_generate_messages" />
+      <config projectName="Project" targetName="nav_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="move_group_interface3_PICKandPLACE" />
+      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_LinkStates" />
+      <config projectName="Project" targetName="control_toolbox_generate_messages_lisp" />
+      <config projectName="Project" targetName="scara_ros_node" />
+      <config projectName="Project" targetName="clean_test_results_gazebo_plugins" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="gazebo_tutorials" />
+      <config projectName="Project" targetName="gazebo_ros_joint_trajectory" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_cpp" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="gazebo_ros_prosilica" />
+      <config projectName="Project" targetName="std_srvs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gennodejs" />
+      <config projectName="Project" targetName="hokuyo_node" />
+      <config projectName="Project" targetName="tf_generate_messages_cpp" />
+      <config projectName="Project" targetName="gazebo_ros_depth_camera" />
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_pose_and_gripperState" />
+      <config projectName="Project" targetName="moveit_display_time" />
+      <config projectName="Project" targetName="gazebo_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="roscpp_generate_messages_eus" />
+      <config projectName="Project" targetName="bond_generate_messages_eus" />
+      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="tests" />
+      <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test" />
+      <config projectName="Project" targetName="octomap_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="control_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages" />
+      <config projectName="Project" targetName="bond_generate_messages_lisp" />
+      <config projectName="Project" targetName="gazebo_ros_ft_sensor" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="control_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_geneus" />
+      <config projectName="Project" targetName="gazebo_ros_vacuum_gripper" />
+      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="control_toolbox_generate_messages_eus" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_lisp" />
+      <config projectName="Project" targetName="scara_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="moveit_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ODEJointProperties" />
+      <config projectName="Project" targetName="gazebo_ros_planar_move" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_gennodejs" />
+      <config projectName="Project" targetName="gazebo_ros_video" />
+      <config projectName="Project" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="Project" targetName="polled_camera_generate_messages_cpp" />
+      <config projectName="Project" targetName="nodelet_generate_messages_eus" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_genlisp" />
+      <config projectName="Project" targetName="scara_gui" />
+      <config projectName="Project" targetName="gazebo_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="IK_test" />
+      <config projectName="Project" targetName="tf_listener" />
+      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="gazebo_ros_tricycle_drive" />
+      <config projectName="Project" targetName="scara_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters" />
+      <config projectName="Project" targetName="map_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="std_srvs_generate_messages_lisp" />
+      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="scara_msgs_gennodejs" />
+      <config projectName="Project" targetName="gazebo_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="tf_generate_messages_lisp" />
+      <config projectName="Project" targetName="MultiCameraPlugin" />
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands" />
+      <config projectName="Project" targetName="polled_camera_generate_messages_eus" />
+      <config projectName="Project" targetName="gazebo_ros_f3d" />
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_SimpleService" />
+      <config projectName="Project" targetName="gazebo_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="scara_v2_scara_arm_moveit_ikfast_plugin" />
+      <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_JointRequest" />
+      <config projectName="Project" targetName="visualization_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ModelStates" />
+      <config projectName="Project" targetName="tf_generate_messages_py" />
+      <config projectName="Project" targetName="gazebo_ros_elevator" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_eus" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="actionlib_generate_messages_nodejs" />
+      <config projectName="Project" targetName="move_group_interface4_position_control" />
+      <config projectName="Project" targetName="gazebo_msgs_gennodejs" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetJointTrajectory" />
+      <config projectName="Project" targetName="nav_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="visualization_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_nodejs" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ContactState" />
+      <config projectName="Project" targetName="octomap_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="gazebo_ros_gencfg" />
+      <config projectName="Project" targetName="map_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="gazebo_ros_control" />
+      <config projectName="Project" targetName="control_toolbox_gencfg" />
+      <config projectName="Project" targetName="gazebo_ros_template" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_nodejs" />
+      <config projectName="Project" targetName="map_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_desired_joint_values" />
+      <config projectName="Project" targetName="nodelet_generate_messages_cpp" />
+      <config projectName="Project" targetName="polled_camera_generate_messages_nodejs" />
+      <config projectName="Project" targetName="move_group_interface1" />
+      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test" />
+      <config projectName="Project" targetName="move_group_interface2" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_genpy" />
+      <config projectName="Project" targetName="moveit_ros_planning_gencfg" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="nav_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="test_can" />
+      <config projectName="Project" targetName="gazebo_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetPhysicsProperties" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
+      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="control_toolbox_generate_messages_py" />
+      <config projectName="Project" targetName="gazebo_ros_range" />
+      <config projectName="Project" targetName="download_extra_data" />
+      <config projectName="Project" targetName="gazebo_ros_paths_plugin" />
+      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="map_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SpawnModel" />
+      <config projectName="Project" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="moveit_ros_manipulation_gencfg" />
+      <config projectName="Project" targetName="gripper_control" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_WorldState" />
+      <config projectName="Project" targetName="gazebo_ros_block_laser" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="matlabtalker" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetJointProperties" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_py" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_py" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetJointProperties" />
+      <config projectName="Project" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_LinkState" />
+      <config projectName="Project" targetName="gazebo_ros_skid_steer_drive" />
+      <config projectName="Project" targetName="move_group_interface5_rt" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="gtest_main" />
+      <config projectName="Project" targetName="matlab_communication_tryout" />
+      <config projectName="Project" targetName="scara_msgs_genlisp" />
+      <config projectName="Project" targetName="gazebo_ros_laser" />
+      <config projectName="Project" targetName="moveit_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="gazebo_ros_joint_pose_trajectory" />
+      <config projectName="Project" targetName="control_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="gazebo_ros_p3d" />
+      <config projectName="Project" targetName="camera_synchronizer" />
+      <config projectName="Project" targetName="gazebo_ros_openni_kinect" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetWorldProperties" />
+      <config projectName="Project" targetName="can_interface" />
+      <config projectName="Project" targetName="visualization_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="tf_generate_messages_nodejs" />
+      <config projectName="Project" targetName="scara_gui_generate_messages" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_nodejs" />
+      <config projectName="Project" targetName="run_tests_gazebo_plugins" />
+      <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest" />
+      <config projectName="Project" targetName="scara_ros_test_node" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_genlisp" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_genpy" />
+      <config projectName="Project" targetName="gazebo_ros_force" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gencpp" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_eus" />
+      <config projectName="Project" targetName="gtest" />
+      <config projectName="Project" targetName="tf_broadcaster" />
+      <config projectName="Project" targetName="gazebo_msgs_genlisp" />
+      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="jointState_publisher" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="gazebo_ros_diff_drive" />
+      <config projectName="Project" targetName="control_toolbox_generate_messages_nodejs" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetLinkState" />
+      <config projectName="Project" targetName="doxygen" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetPhysicsProperties" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_lisp" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetLinkProperties" />
+      <config projectName="Project" targetName="_scara_msgs_generate_messages_check_deps_robot_info" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_cpp" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ModelState" />
+      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="std_srvs_generate_messages_py" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_DeleteModel" />
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_cpp" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetModelState" />
+      <config projectName="Project" targetName="run_tests" />
+      <config projectName="Project" targetName="nodelet_generate_messages_py" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetModelConfiguration" />
+      <config projectName="Project" targetName="nodelet_generate_messages_lisp" />
+      <config projectName="Project" targetName="gazebo_plugins_gencfg" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="gazebo_ros_api_plugin" />
+      <config projectName="Project" targetName="default_robot_hw_sim" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="map_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="moveit_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_eus" />
+      <config projectName="Project" targetName="gazebo_ros_joint_state_publisher" />
+      <config projectName="Project" targetName="move_group_interface6_async_PICKandPLACE" />
+      <config projectName="Project" targetName="pub_joint_trajectory_test" />
+      <config projectName="Project" targetName="nodelet_generate_messages_nodejs" />
+      <config projectName="Project" targetName="nav_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="run_tests_gazebo_plugins_rostest_test_range_range_plugin.test" />
+      <config projectName="Project" targetName="scara_colision_object" />
+      <config projectName="Project" targetName="gazebo_msgs_genpy" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="scara_menu" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_geneus" />
+      <config projectName="Project" targetName="visualization_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="scara_msgs_genpy" />
+      <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_lisp" />
+      <config projectName="Project" targetName="_scara_msgs_generate_messages_check_deps_pose_and_gripperState" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetModelState" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_BodyRequest" />
+      <config projectName="Project" targetName="set_model_state-test" />
+      <config projectName="Project" targetName="linear_interpolation" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -321,9 +324,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.cpp.autosave" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.ui.autosave" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/ROTARY_TABLE_GUI.pro.user" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/ROTARY_TABLE_GUI.pro.user" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CTestTestfile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CTestTestfile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/order_packages.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/order_packages.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_control/scara_v2_full_control.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_control/scara_v2_full_control.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_description/scara_v2_full_description.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_description/scara_v2_full_description.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_gazebo/scara_v2_full_gazebo.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_gazebo/scara_v2_full_gazebo.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_and_rt_moveit_config/scara_and_rt_moveit_config.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_and_rt_moveit_config/scara_and_rt_moveit_config.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/scara_msgs.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/scara_msgs.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/scara_v2_moveit_api.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/scara_v2_moveit_api.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/senso_scara_demo/senso_scara_demo.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/senso_scara_demo/senso_scara_demo.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" afterPath="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" afterPath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -339,43 +380,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mainwindow.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainwindow.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="238" column="21" lean-forward="true" selection-start-line="238" selection-start-column="21" selection-end-line="238" selection-end-column="21" />
+            <state relative-caret-position="224">
+              <caret line="354" column="16" lean-forward="false" selection-start-line="354" selection-start-column="16" selection-end-line="354" selection-end-column="16" />
               <folding>
-                <element signature="e#9983#10377#0" expanded="false" />
                 <element signature="e#10437#11502#0" expanded="false" />
-                <element signature="e#12219#12413#0" expanded="false" />
-                <element signature="e#12415#12644#0" expanded="false" />
-                <element signature="e#12646#12773#0" expanded="false" />
-                <marker date="1508171041866" expanded="false" signature="1689:1848" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="1895:2056" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="2100:2258" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="2305:2466" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="2658:2787" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="2844:3924" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="3980:5105" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="5297:5426" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="5483:5979" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="6035:6521" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="6685:6973" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="7135:7325" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="7375:7564" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="7625:7784" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="7846:8004" ph="{...}" />
-                <marker date="1508171041866" expanded="false" signature="11552:11673" ph="{...}" />
+                <element signature="e#11504#11673#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainwindow.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scara_gui/src/mainwindow.cpp">
+      <file leaf-file-name="rotary_table_menu.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="1069" column="46" lean-forward="false" selection-start-line="1069" selection-start-column="46" selection-end-line="1069" selection-end-column="46" />
+            <state relative-caret-position="684">
+              <caret line="38" column="82" lean-forward="false" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -384,19 +406,23 @@
       <file leaf-file-name="mainwindow.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="34" />
+            <state relative-caret-position="349">
+              <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainwindow.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h">
+      <file leaf-file-name="rotary_table_menu.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2815">
-              <caret line="172" column="4" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="234">
+              <caret line="36" column="82" lean-forward="false" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
+              <folding>
+                <element signature="e#138#867#0" expanded="false" />
+                <element signature="e#869#1424#0" expanded="false" />
+                <element signature="e#1426#1845#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -460,8 +486,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab.launch" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/tf.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface6_async_PICKandPLACE.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/matlab_ROS_com_tryout.cpp" />
         <option value="$PROJECT_DIR$/scara_and_rt_moveit_config/launch/demo_matlab_mfile.launch" />
@@ -505,12 +529,14 @@
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_CAN_test.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_can_test.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_can_test.h" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/rotary_table_gui/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/rotary_table_gui/package.xml" />
         <option value="$PROJECT_DIR$/rotary_table_gui/src/main.cpp" />
-        <option value="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
         <option value="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
+        <option value="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
       </list>
     </option>
   </component>
@@ -522,7 +548,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1089" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1855" />
     <option name="height" value="1056" />
@@ -575,7 +601,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scara_gui" />
+              <option name="myItemId" value="scara_v2_moveit_api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -593,7 +619,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scara_gui" />
+              <option name="myItemId" value="scara_v2_moveit_api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -615,15 +641,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scara_gui" />
+              <option name="myItemId" value="scara_v2_moveit_api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -714,19 +736,19 @@
     <property name="settings.editor.selected.configurable" value="xslt.associations" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scara_v2_moveit_api/include" />
-      <recent name="$PROJECT_DIR$/scara_v2_with_gripper/urdf/more" />
-      <recent name="$PROJECT_DIR$/scara_v2_with_gripper/launch/other" />
-      <recent name="$PROJECT_DIR$/scara_v2_moveit_api/src" />
-      <recent name="$PROJECT_DIR$/scara_urdf_testing/urdf" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scara_v2_moveit_api/launch" />
       <recent name="$PROJECT_DIR$/scara_gui/user_interface" />
       <recent name="$PROJECT_DIR$/scara_gui/src" />
       <recent name="$PROJECT_DIR$/scara_msgs/msg" />
       <recent name="$PROJECT_DIR$/scara_and_rt_moveit_config/launch" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scara_v2_moveit_api/include" />
+      <recent name="$PROJECT_DIR$/scara_v2_with_gripper/urdf/more" />
+      <recent name="$PROJECT_DIR$/scara_v2_with_gripper/launch/other" />
+      <recent name="$PROJECT_DIR$/scara_v2_moveit_api/src" />
+      <recent name="$PROJECT_DIR$/scara_urdf_testing/urdf" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2194,7 +2216,19 @@
       <envs />
       <method />
     </configuration>
-    <list size="311">
+    <configuration default="false" name="rotary_table_gui" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rotary_table_gui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="rotary_table_gui">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="rotary_table_gui_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rotary_table_gui_generate_messages" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="rotary_table_menu" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rotary_table_menu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="rotary_table_menu">
+      <envs />
+      <method />
+    </configuration>
+    <list size="314">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.clean_test_results" />
       <item index="2" class="java.lang.String" itemvalue="Application.download_extra_data" />
@@ -2506,6 +2540,9 @@
       <item index="308" class="java.lang.String" itemvalue="Application.scara_gui_generate_messages" />
       <item index="309" class="java.lang.String" itemvalue="Application.scara_colision_object" />
       <item index="310" class="java.lang.String" itemvalue="Application.rotary_table_can_test" />
+      <item index="311" class="java.lang.String" itemvalue="Application.rotary_table_gui" />
+      <item index="312" class="java.lang.String" itemvalue="Application.rotary_table_gui_generate_messages" />
+      <item index="313" class="java.lang.String" itemvalue="Application.rotary_table_menu" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -2704,14 +2741,8 @@
       <workItem from="1507661415376" duration="1051000" />
       <workItem from="1507742446285" duration="206000" />
       <workItem from="1507827269231" duration="2482000" />
-      <workItem from="1508151254341" duration="14914000" />
-    </task>
-    <task id="LOCAL-00028" summary="RT service (works, just does not return value - ERROR to solve! )">
-      <created>1499873995329</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1499873995329</updated>
+      <workItem from="1508151254341" duration="15159000" />
+      <workItem from="1508235560921" duration="5020000" />
     </task>
     <task id="LOCAL-00029" summary="Forward calculation of IK">
       <created>1500474202703</created>
@@ -3049,14 +3080,21 @@
       <option name="project" value="LOCAL" />
       <updated>1508159743578</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="rotary_table_gui: conversion dec2hex and hex2dec complete, CAN format complete">
+      <created>1508171517939</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1508171517939</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="818309000" />
+    <option name="totallyTimeSpent" value="823574000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1089" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19541484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -3105,7 +3143,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SCARA GUI implemented and builded but not tested!" />
     <MESSAGE value="new menu tryout (for cooperation with real GUI)" />
     <MESSAGE value="new menu tryout (for cooperation with real GUI) - added messages and ready for try out!" />
     <MESSAGE value="GUI OK" />
@@ -3130,7 +3167,8 @@
     <MESSAGE value="scara_menu prebuild to simulation version  added rotary table GUI (qt version)" />
     <MESSAGE value="rotary_table_gui: added topics and switch" />
     <MESSAGE value="rotary_table_gui: added sending working mode select" />
-    <option name="LAST_COMMIT_MESSAGE" value="rotary_table_gui: added sending working mode select" />
+    <MESSAGE value="rotary_table_gui: conversion dec2hex and hex2dec complete, CAN format complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="rotary_table_gui: conversion dec2hex and hex2dec complete, CAN format complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3183,20 +3221,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/real_scara_torq_sensor.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="74" column="13" lean-forward="false" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gazebo_scara_and_rt/scara_v2_full_description/urdf/scara_and_rt_urdf.xacro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="486" column="54" lean-forward="false" selection-start-line="486" selection-start-column="45" selection-end-line="486" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///opt/ros/kinetic/include/moveit/trajectory_processing/iterative_time_parameterization.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -3386,19 +3410,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5670">
-          <caret line="315" column="6" lean-forward="false" selection-start-line="315" selection-start-column="6" selection-end-line="315" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_CAN_test.cpp" />
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3423,13 +3439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
-          <caret line="132" column="38" lean-forward="false" selection-start-line="132" selection-start-column="38" selection-end-line="132" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/can_interface/include/can_interface/can_interface.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -3448,14 +3457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="1163" column="47" lean-forward="false" selection-start-line="1163" selection-start-column="47" selection-end-line="1163" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3513,56 +3514,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h">
+    <entry file="file://$PROJECT_DIR$/scara_gui/src/mainwindow.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2815">
-          <caret line="172" column="4" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="32" />
+        <state relative-caret-position="18">
+          <caret line="1069" column="46" lean-forward="false" selection-start-line="1069" selection-start-column="46" selection-end-line="1069" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_gui/src/mainwindow.cpp">
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="1069" column="46" lean-forward="false" selection-start-line="1069" selection-start-column="46" selection-end-line="1069" selection-end-column="46" />
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="135" column="39" lean-forward="false" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="51" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2095">
+          <caret line="172" column="4" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="34" />
+        <state relative-caret-position="349">
+          <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="238" column="21" lean-forward="true" selection-start-line="238" selection-start-column="21" selection-end-line="238" selection-end-column="21" />
+        <state relative-caret-position="224">
+          <caret line="354" column="16" lean-forward="false" selection-start-line="354" selection-start-column="16" selection-end-line="354" selection-end-column="16" />
           <folding>
-            <element signature="e#9983#10377#0" expanded="false" />
             <element signature="e#10437#11502#0" expanded="false" />
-            <element signature="e#12219#12413#0" expanded="false" />
-            <element signature="e#12415#12644#0" expanded="false" />
-            <element signature="e#12646#12773#0" expanded="false" />
-            <marker date="1508171041866" expanded="false" signature="1689:1848" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="1895:2056" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="2100:2258" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="2305:2466" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="2658:2787" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="2844:3924" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="3980:5105" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="5297:5426" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="5483:5979" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="6035:6521" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="6685:6973" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="7135:7325" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="7375:7564" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="7625:7784" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="7846:8004" ph="{...}" />
-            <marker date="1508171041866" expanded="false" signature="11552:11673" ph="{...}" />
+            <element signature="e#11504#11673#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="82" lean-forward="false" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="36" column="82" lean-forward="false" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
+          <folding>
+            <element signature="e#138#867#0" expanded="false" />
+            <element signature="e#869#1424#0" expanded="false" />
+            <element signature="e#1426#1845#0" expanded="false" />
           </folding>
         </state>
       </provider>

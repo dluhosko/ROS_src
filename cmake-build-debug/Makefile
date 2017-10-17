@@ -1245,17 +1245,17 @@ scara_msgs_generate_messages_nodejs/fast:
 .PHONY : scara_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named scara_gui
+# Target rules for targets named rotary_table_gui
 
 # Build rule for target.
-scara_gui: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 scara_gui
-.PHONY : scara_gui
+rotary_table_gui: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui
+.PHONY : rotary_table_gui
 
 # fast build rule for target.
-scara_gui/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/scara_gui.dir/build.make scara_gui/CMakeFiles/scara_gui.dir/build
-.PHONY : scara_gui/fast
+rotary_table_gui/fast:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/rotary_table_gui.dir/build.make rotary_table_gui/CMakeFiles/rotary_table_gui.dir/build
+.PHONY : rotary_table_gui/fast
 
 #=============================================================================
 # Target rules for targets named nodelet_generate_messages_cpp
@@ -1267,7 +1267,7 @@ nodelet_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 nodelet_generate_messages_cpp/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_cpp.dir/build
 .PHONY : nodelet_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1280,7 +1280,7 @@ nodelet_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 nodelet_generate_messages_eus/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_eus.dir/build
 .PHONY : nodelet_generate_messages_eus/fast
 
 #=============================================================================
@@ -1293,7 +1293,7 @@ nodelet_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 nodelet_generate_messages_nodejs/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
 .PHONY : nodelet_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1306,8 +1306,112 @@ bond_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 bond_generate_messages_py/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_py.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_py.dir/build
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_py.dir/build
 .PHONY : bond_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_py
+
+# Build rule for target.
+nodelet_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_py
+.PHONY : nodelet_generate_messages_py
+
+# fast build rule for target.
+nodelet_generate_messages_py/fast:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_py.dir/build
+.PHONY : nodelet_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_cpp
+
+# Build rule for target.
+bond_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_cpp
+.PHONY : bond_generate_messages_cpp
+
+# fast build rule for target.
+bond_generate_messages_cpp/fast:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_cpp.dir/build
+.PHONY : bond_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rotary_table_gui_generate_messages
+
+# Build rule for target.
+rotary_table_gui_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_gui_generate_messages
+.PHONY : rotary_table_gui_generate_messages
+
+# fast build rule for target.
+rotary_table_gui_generate_messages/fast:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/build.make rotary_table_gui/CMakeFiles/rotary_table_gui_generate_messages.dir/build
+.PHONY : rotary_table_gui_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_lisp
+
+# Build rule for target.
+nodelet_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_lisp
+.PHONY : nodelet_generate_messages_lisp
+
+# fast build rule for target.
+nodelet_generate_messages_lisp/fast:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make rotary_table_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+.PHONY : nodelet_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_nodejs
+
+# Build rule for target.
+bond_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_nodejs
+.PHONY : bond_generate_messages_nodejs
+
+# fast build rule for target.
+bond_generate_messages_nodejs/fast:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build
+.PHONY : bond_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_eus
+
+# Build rule for target.
+bond_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_eus
+.PHONY : bond_generate_messages_eus
+
+# fast build rule for target.
+bond_generate_messages_eus/fast:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_eus.dir/build
+.PHONY : bond_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_lisp
+
+# Build rule for target.
+bond_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_lisp
+.PHONY : bond_generate_messages_lisp
+
+# fast build rule for target.
+bond_generate_messages_lisp/fast:
+	$(MAKE) -f rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make rotary_table_gui/CMakeFiles/bond_generate_messages_lisp.dir/build
+.PHONY : bond_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named scara_gui
+
+# Build rule for target.
+scara_gui: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 scara_gui
+.PHONY : scara_gui
+
+# fast build rule for target.
+scara_gui/fast:
+	$(MAKE) -f scara_gui/CMakeFiles/scara_gui.dir/build.make scara_gui/CMakeFiles/scara_gui.dir/build
+.PHONY : scara_gui/fast
 
 #=============================================================================
 # Target rules for targets named scara_gui_generate_messages
@@ -1323,84 +1427,6 @@ scara_gui_generate_messages/fast:
 .PHONY : scara_gui_generate_messages/fast
 
 #=============================================================================
-# Target rules for targets named nodelet_generate_messages_py
-
-# Build rule for target.
-nodelet_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_py
-.PHONY : nodelet_generate_messages_py
-
-# fast build rule for target.
-nodelet_generate_messages_py/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_py.dir/build
-.PHONY : nodelet_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named bond_generate_messages_cpp
-
-# Build rule for target.
-bond_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_cpp
-.PHONY : bond_generate_messages_cpp
-
-# fast build rule for target.
-bond_generate_messages_cpp/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_cpp.dir/build
-.PHONY : bond_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named nodelet_generate_messages_lisp
-
-# Build rule for target.
-nodelet_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_lisp
-.PHONY : nodelet_generate_messages_lisp
-
-# fast build rule for target.
-nodelet_generate_messages_lisp/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-.PHONY : nodelet_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named bond_generate_messages_nodejs
-
-# Build rule for target.
-bond_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_nodejs
-.PHONY : bond_generate_messages_nodejs
-
-# fast build rule for target.
-bond_generate_messages_nodejs/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_nodejs.dir/build
-.PHONY : bond_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named bond_generate_messages_eus
-
-# Build rule for target.
-bond_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_eus
-.PHONY : bond_generate_messages_eus
-
-# fast build rule for target.
-bond_generate_messages_eus/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_eus.dir/build
-.PHONY : bond_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named bond_generate_messages_lisp
-
-# Build rule for target.
-bond_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_lisp
-.PHONY : bond_generate_messages_lisp
-
-# fast build rule for target.
-bond_generate_messages_lisp/fast:
-	$(MAKE) -f scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build.make scara_gui/CMakeFiles/bond_generate_messages_lisp.dir/build
-.PHONY : bond_generate_messages_lisp/fast
-
-#=============================================================================
 # Target rules for targets named torque_sensor_node
 
 # Build rule for target.
@@ -1412,6 +1438,19 @@ torque_sensor_node: cmake_check_build_system
 torque_sensor_node/fast:
 	$(MAKE) -f torque_sensor/CMakeFiles/torque_sensor_node.dir/build.make torque_sensor/CMakeFiles/torque_sensor_node.dir/build
 .PHONY : torque_sensor_node/fast
+
+#=============================================================================
+# Target rules for targets named rotary_table_menu
+
+# Build rule for target.
+rotary_table_menu: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rotary_table_menu
+.PHONY : rotary_table_menu
+
+# fast build rule for target.
+rotary_table_menu/fast:
+	$(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_menu.dir/build
+.PHONY : rotary_table_menu/fast
 
 #=============================================================================
 # Target rules for targets named scara_menu
@@ -2289,19 +2328,22 @@ help:
 	@echo "... scara_msgs_generate_messages_cpp"
 	@echo "... scara_msgs_geneus"
 	@echo "... scara_msgs_generate_messages_nodejs"
-	@echo "... scara_gui"
+	@echo "... rotary_table_gui"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_eus"
 	@echo "... nodelet_generate_messages_nodejs"
 	@echo "... bond_generate_messages_py"
-	@echo "... scara_gui_generate_messages"
 	@echo "... nodelet_generate_messages_py"
 	@echo "... bond_generate_messages_cpp"
+	@echo "... rotary_table_gui_generate_messages"
 	@echo "... nodelet_generate_messages_lisp"
 	@echo "... bond_generate_messages_nodejs"
 	@echo "... bond_generate_messages_eus"
 	@echo "... bond_generate_messages_lisp"
+	@echo "... scara_gui"
+	@echo "... scara_gui_generate_messages"
 	@echo "... torque_sensor_node"
+	@echo "... rotary_table_menu"
 	@echo "... scara_menu"
 	@echo "... tf_readout"
 	@echo "... real_scara_torq_sensor"

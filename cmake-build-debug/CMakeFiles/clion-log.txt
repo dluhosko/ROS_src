@@ -13,13 +13,14 @@
 -- catkin 0.7.6
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 10 packages in topological order:
+-- ~~  traversing 11 packages in topological order:
 -- ~~  - scara_and_rt_moveit_config
 -- ~~  - scara_v2_full_control
 -- ~~  - scara_v2_full_description
 -- ~~  - scara_v2_full_gazebo
 -- ~~  - can_interface
 -- ~~  - scara_msgs
+-- ~~  - rotary_table_gui
 -- ~~  - scara_gui
 -- ~~  - senso_scara_demo
 -- ~~  - torque_sensor
@@ -56,6 +57,20 @@ Call Stack (most recent call first):
 --   chrono
 --   atomic
 -- scara_msgs: 2 messages, 0 services
+-- +++ processing catkin package: 'rotary_table_gui'
+-- ==> add_subdirectory(rotary_table_gui)
+CMake Warning at cmake-build-debug/rotary_table_gui/cmake/rotary_table_gui-genmsg.cmake:3 (message):
+  Invoking generate_messages() without having added any message or service
+  file before.
+
+  You should either add add_message_files() and/or add_service_files() calls
+  or remove the invocation of generate_messages().
+Call Stack (most recent call first):
+  /opt/ros/kinetic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
+  rotary_table_gui/CMakeLists.txt:21 (generate_messages)
+
+
+-- rotary_table_gui: 0 messages, 0 services
 -- +++ processing catkin package: 'scara_gui'
 -- ==> add_subdirectory(scara_gui)
 CMake Warning at cmake-build-debug/scara_gui/cmake/scara_gui-genmsg.cmake:3 (message):
