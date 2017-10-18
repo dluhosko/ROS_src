@@ -37,7 +37,7 @@ int main(int argc, char **argv){
 
 
         /********************** test of convesion *********************/
-        int inputNumber;
+        /*int inputNumber;
         ROS_INFO("enter decimal number");
         scanf("%d",&inputNumber);
 
@@ -47,7 +47,7 @@ int main(int argc, char **argv){
         fillEmptyBytesInCANmsg(hexaNumber,modifHexaNumber,8);
         ROS_INFO("Fill missing bytes (%s) -> (%s)",hexaNumber,modifHexaNumber);
 
-        ROS_WARN("hexaNumber=%s /*hexNum=%s",hexaNumber,hexNum);
+        ROS_WARN("hexaNumber=%s /*hexNum=%s  (size %d/%d)",hexaNumber,hexNum,std::strlen(hexaNumber),std::strlen(hexNum));
         ROS_WARN("modifHexaNumber=%s /*modifHexNum=%s",modifHexaNumber,modifHexNum);
         sleep(2);
 
@@ -58,7 +58,7 @@ int main(int argc, char **argv){
         ROS_INFO("convert hexa number CAN SENSODRIVE to CAN clasic (%s)",modifHexaNumber);
 
 
-        ROS_INFO("hexa(%s) to decimal(%d)",modifHexaNumber,hex2dec(modifHexaNumber));
+        ROS_INFO("hexa(%s) to decimal(%d)",modifHexaNumber,hex2dec(modifHexaNumber));*/
         /*********************** end of test *************************/
 
 

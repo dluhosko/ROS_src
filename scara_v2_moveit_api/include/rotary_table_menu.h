@@ -12,7 +12,12 @@
 #include "scara_v2_moveit_api/pose_and_gripperState.h"
 //pridat include z CAN kniznice
 
+const int SIZE_OF_1B_MESSAGE = 3, SIZE_OF_2B_MESSAGE=5, SIZE_OF_4B_MESSAGE = 9;
 char *hexNum, *modifHexNum;
+char char_1B[SIZE_OF_1B_MESSAGE];
+char char_2B_position[SIZE_OF_2B_MESSAGE], char_2B_velocity[SIZE_OF_2B_MESSAGE], char_2B_position_modif[SIZE_OF_2B_MESSAGE], char_2B_velocity_modif[SIZE_OF_2B_MESSAGE];
+uint8_t uint8_4B_message[SIZE_OF_4B_MESSAGE-1];
+
 
 std_msgs::Int32 int32_msg;
 scara_v2_moveit_api::pose_velocity_direction posVelDir_msg;
@@ -46,28 +51,37 @@ int hex2dec(char hex_value[]){
     return dec_value;
 }
 
+void char2uint8_t(char* input1, char* input2, uint8_t* output,int size_of_output){
+
+    for (int i=0;i<size_of_output-1;i++){
+        if (i < 4){
+            output[i] = (uint8_t)(input1[i]);
+        }else{
+            output[i] = (uint8_t)(input2[i-4]);
+        }
+        ROS_WARN("%d",output[i]);
+    }
+
+}
+
 void fillEmptyBytesInCANmsg(char* inputCANmsg,char* outputCANmsg, int size_of_msg){
 
     ROS_INFO("input size %d , output size %d and entered size %d",std::strlen(inputCANmsg),std::strlen(outputCANmsg),size_of_msg);
-    size_of_msg++;
 
-    for (int i=0;i<size_of_msg+1;i++){
+    for (int i=0;i<size_of_msg-1;i++){
         if (i < (size_of_msg-1) -std::strlen(inputCANmsg)){
             outputCANmsg[i] = '0';
         }else{
             outputCANmsg[i] = inputCANmsg[i - ((size_of_msg-1) -std::strlen(inputCANmsg))];
         }
-        //getchar();
-
     }
     outputCANmsg[size_of_msg] = '\0';
 
-}   /**************************** Upravit funkciu aby fungovala na globalne pointre ***************************************/
+}
 
 void convertCANmsg(char* inputCANmsg, int size_of_msg){
 
     char help1,help2;
-    size_of_msg++;
     for (int i=0;i<std::strlen(inputCANmsg)-1-2;i+=4){
         help1= inputCANmsg[i];
         help2= inputCANmsg[i+1];
@@ -76,8 +90,6 @@ void convertCANmsg(char* inputCANmsg, int size_of_msg){
         inputCANmsg[i+2] = help1;
         inputCANmsg[i+3] = help2;
     }
-    inputCANmsg[size_of_msg] = '\0';
-
 
 }
 
@@ -122,9 +134,37 @@ void sendDesiredWorkingState(int inputNumber){
 //************************************** Callbacks ********************************************/
 void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction desiredPositionVelocityDirection){
 
-    ROS_INFO("rotateCommandCallback : desired rotation=%d , desired velocity=%d desired direction =%s",desiredPositionVelocityDirection.rotation,
-             desiredPositionVelocityDirection.velocity, desiredPositionVelocityDirection.direction?"Right":"Left");
+//    ROS_INFO("rotateCommandCallback : desired rotation=%d , desired velocity=%d desired direction =%s",desiredPositionVelocityDirection.rotation,
+//             desiredPositionVelocityDirection.velocity, desiredPositionVelocityDirection.direction?"Right":"Left");
     posVelDir_msg = desiredPositionVelocityDirection;
+
+    sprintf(char_2B_position,"%x", desiredPositionVelocityDirection.rotation);
+    sprintf(char_2B_velocity,"%x", desiredPositionVelocityDirection.velocity);
+    /************************** Dorobit smer otacania **************************/
+    ROS_INFO("Rotation DEC=%d , rotation HEX=%s , Velocity DEC =%d , velocity HEX=%s",
+             desiredPositionVelocityDirection.rotation,char_2B_position,desiredPositionVelocityDirection.velocity,char_2B_velocity);
+    //Fill empty Bytes in HEX numbers
+
+    fillEmptyBytesInCANmsg(char_2B_position,char_2B_position_modif,SIZE_OF_2B_MESSAGE);
+    fillEmptyBytesInCANmsg(char_2B_velocity,char_2B_velocity_modif,SIZE_OF_2B_MESSAGE);
+    ROS_INFO("NOT FILLED HEX numbers: position=%s velocity=%s FILLED HEX numbers: position=%s velocity=%s",
+             char_2B_position,char_2B_velocity,char_2B_position_modif,char_2B_velocity_modif);
+    //Convert HEX number to specific CAN format
+    ROS_INFO("Standard CAN : %s(%d) %s(%d)",char_2B_position_modif,std::strlen(char_2B_position_modif),char_2B_velocity_modif,std::strlen(char_2B_velocity_modif));
+    convertCANmsg(char_2B_position_modif,SIZE_OF_2B_MESSAGE);
+    convertCANmsg(char_2B_velocity_modif,SIZE_OF_2B_MESSAGE);
+    ROS_INFO("SENSO CAN : %s(%d) %s(%d)",char_2B_position_modif,std::strlen(char_2B_position_modif),char_2B_velocity_modif,std::strlen(char_2B_velocity_modif));
+
+    char2uint8_t(char_2B_position_modif,char_2B_velocity_modif,uint8_4B_message,SIZE_OF_4B_MESSAGE);
+    for (int i=0;i<SIZE_OF_4B_MESSAGE-1;i++){
+        ROS_WARN("[%d] %d",i,uint8_4B_message[i]);
+    }
+
+
+
+
+
+
 
     /************************** create CAN msg **********************************/
     /************************** create CAN msg **********************************/
