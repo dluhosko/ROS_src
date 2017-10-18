@@ -16,7 +16,7 @@ const int SIZE_OF_1B_MESSAGE = 3, SIZE_OF_2B_MESSAGE=5, SIZE_OF_4B_MESSAGE = 9;
 char *hexNum, *modifHexNum;
 char char_1B[SIZE_OF_1B_MESSAGE];
 char char_2B_position[SIZE_OF_2B_MESSAGE], char_2B_velocity[SIZE_OF_2B_MESSAGE], char_2B_position_modif[SIZE_OF_2B_MESSAGE], char_2B_velocity_modif[SIZE_OF_2B_MESSAGE];
-uint8_t uint8_4B_message[SIZE_OF_4B_MESSAGE-1];
+uint8_t uint8_4B_message[SIZE_OF_4B_MESSAGE-1], uint8_1B_message[SIZE_OF_1B_MESSAGE-1];
 
 
 std_msgs::Int32 int32_msg;
@@ -54,12 +54,13 @@ int hex2dec(char hex_value[]){
 void char2uint8_t(char* input1, char* input2, uint8_t* output,int size_of_output){
 
     for (int i=0;i<size_of_output-1;i++){
+        ROS_INFO_STREAM(i);
+        ROS_INFO_STREAM(strlen(input1));
         if (i < 4){
             output[i] = (uint8_t)(input1[i]);
         }else{
             output[i] = (uint8_t)(input2[i-4]);
         }
-        ROS_WARN("%d",output[i]);
     }
 
 }
@@ -99,37 +100,79 @@ void sendDesiredWorkingState(int inputNumber){
         case 1: //OFF
         {
             ROS_INFO("desired state OFF");
+            char word[] = "10";
+            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
+            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
+                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
+            }
             /************************** create CAN msg **********************************/
+
+
+
             break;
         }
         case 2: //READY
         {
             ROS_INFO("desired state READY");
+            char word[] = "12";
+            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
+            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
+                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
+            }
             /************************** create CAN msg **********************************/
+
+
+
+
             break;
         }
         case 3: //ON
         {
             ROS_INFO("desired state ON");
+            char word[] = "14";
+            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
+            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
+                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
+            }
             /************************** create CAN msg **********************************/
+
+
+
+
             break;
         }
         case 4: //ERROR
         {
             ROS_INFO("desired state ERROR");
+            char word[] = "1f";
+            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
+            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
+                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
+            }
             /************************** create CAN msg **********************************/
+
+
+
             break;
         }
         default:
         {
             ROS_ERROR("Invalid number");
+            char word[] = "12";
+            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
+            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
+                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
+            }
             /************************** create CAN msg **********************************/
+
+
+
+
             break;
         }
     }
 
 }   /**********************Create CAN msg ***********************************/
-
 
 //************************************** Callbacks ********************************************/
 void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction desiredPositionVelocityDirection){
@@ -160,16 +203,10 @@ void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction de
         ROS_WARN("[%d] %d",i,uint8_4B_message[i]);
     }
 
-
-
-
-
-
-
     /************************** create CAN msg **********************************/
-    /************************** create CAN msg **********************************/
-    /************************** create CAN msg **********************************/
-    /************************** create CAN msg **********************************/
+
+
+
 
 }   /************************** create CAN msg **********************************/
 
