@@ -170,15 +170,6 @@ void MainWindow::on_absoluteControl_slider_PB_clicked(){
 
     double desiredRotation = (double)(ui->absoluteControl_slider_SLIDER->value())/10.0;
     ROS_INFO("desrot=%f currentrot=%f",desiredRotation,currentAngleDeg);
-    /************************* choose the nearest direction **************************************/
-//    if (abs(desiredRotation  - currentAngleDeg) < abs((360-currentAngleDeg)+desiredRotation)){
-//        ROS_INFO("rotationg LEFT .. %f degrees",abs(desiredRotation  - currentAngleDeg));
-//
-//    }else{
-//        ROS_INFO("rotationg RIGHT .. %f degrees",abs((360-currentAngleDeg)+desiredRotation));
-//    }
-    /************************************************************************************************/
-
     if (directionOfRotation){
         pose_velocity_direction_msg.rotation = (int)((desiredRotation - currentAngleDeg)*10.0);
     }else{
@@ -195,12 +186,17 @@ void MainWindow::on_absoluteControl_slider_PB_clicked(){
 void MainWindow::on_absoluteControl_input_PB_clicked(){
 
     //GUI
-    ui->absoluteControl_slider_LE->setText(QString::number(ui->absoluteControl_input_LE->text().toDouble()) + " deg");
-    ui->desiredPositionDeg_LCD->display(ui->absoluteControl_input_LE->text().toDouble());
-    ui->desiredPositionRad_LCD->display(ui->absoluteControl_input_LE->text().toDouble()*DEG_TO_RAD);
-    ui->status_TE->append("Moving[absolute] to " + ui->absoluteControl_input_LE->text() + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+    double temp1 = abs(ui->absoluteControl_input_LE->text().toDouble());
+    while (temp1 >=360){
+        temp1-=360;
+    }
 
-    double desiredRotation = ui->absoluteControl_input_LE->text().toDouble();
+    ui->absoluteControl_slider_LE->setText(QString::number(temp1) + " deg");
+    ui->desiredPositionDeg_LCD->display(temp1);
+    ui->desiredPositionRad_LCD->display(temp1*DEG_TO_RAD);
+    ui->status_TE->append("Moving[absolute] to " + QString::number(temp1) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+
+    double desiredRotation = temp1;
     ROS_INFO("desrot=%f currentrot=%f",desiredRotation,currentAngleDeg);
     if (directionOfRotation){
         pose_velocity_direction_msg.rotation = (int)((desiredRotation - currentAngleDeg)*10.0);
@@ -280,7 +276,7 @@ void MainWindow::on_direction_RIGHT_CB_toggled(bool checked){
 /*****************************************************/
 
 
-/*********************** STOP ************************/     //pridat prikaz na zastavenie
+/*********************** STOP ************************/
 void MainWindow::on_stop_PB_clicked(){
 
     //GUI
@@ -288,58 +284,10 @@ void MainWindow::on_stop_PB_clicked(){
     ui->status_TE->append("Movement STOPPED!");
     ui->status_TE->setTextColor(QColor("black"));
 
-//    int hex_size = 9;
-//    int value = 400;
-//    char hexValue[20];
-//    char modifHexValue[hex_size];
-//    int decValue;
-//    sprintf(hexValue,"%x",value);
-//    //printf(hexString, "%X", value);
-//    ROS_WARN("DEC=%d normal HEX=%s",value,hexValue);
-//    ROS_INFO("hex size = %d",std::strlen(hexValue));
-//    ROS_INFO("modif hex size = %d",hex_size);
-//
-//
-//    for (int i=0;i<hex_size;i++){
-//        if (i < (hex_size-1) -std::strlen(hexValue)){
-//            modifHexValue[i] = '0';
-//        }else{
-//            modifHexValue[i] = hexValue[i - ((hex_size-1) -std::strlen(hexValue))];
-//        }
-//        //getchar();
-//
-//    }
-//    modifHexValue[hex_size] = '\0';
-//    ROS_INFO("modif HEX=%s",modifHexValue);
-//
-//    //convert from standard format CAN to SENSO format
-//    char help1,help2;
-//    for (int i=0;i<hex_size-1-2;i+=4){
-//        help1= modifHexValue[i];
-//        help2= modifHexValue[i+1];
-//        modifHexValue[i] = modifHexValue[i+2];
-//        modifHexValue[i+1] = modifHexValue[i+3];
-//        modifHexValue[i+2] = help1;
-//        modifHexValue[i+3] = help2;
-//    }
-//    modifHexValue[hex_size] = '\0';
-//    ROS_INFO("senso modif HEX=%s",modifHexValue);
-//
-//    //Convert from SENSO format to standard CAN format
-//    for (int i=0;i<hex_size-1-2;i+=4){
-//        help1= modifHexValue[i];
-//        help2= modifHexValue[i+1];
-//        modifHexValue[i] = modifHexValue[i+2];
-//        modifHexValue[i+1] = modifHexValue[i+3];
-//        modifHexValue[i+2] = help1;
-//        modifHexValue[i+3] = help2;
-//    }
-//    modifHexValue[hex_size] = '\0';
-//    ROS_INFO("normal format modif HEX=%s",modifHexValue);
-//
-//    decValue=hex2dec(modifHexValue);
-//    ROS_WARN("DEC=%d HEX=%s",decValue,modifHexValue);
     //ROS
+    pose_velocity_direction_msg.rotation = 0;
+    rotate_DEC_pub.publish(pose_velocity_direction_msg);
+
 
 }
 
@@ -350,16 +298,13 @@ void MainWindow::on_centralStop_PB_clicked(){
     ui->status_TE->append("***************************************");
     ui->status_TE->append("CENTRAL STOP -> EXITING PROGRAM!");
     ui->status_TE->append("***************************************");
-
-
     //kill roslaunch
-
-
+    //..............
     //Kill GUI
-    //sleep(3);
-    //QApplication::quit();
+    sleep(3);
+    QApplication::quit();
 
-}   //pridat prikaz na zastavenie a vypnutie programu
+}
 /*****************************************************/
 
 
@@ -430,6 +375,16 @@ int MainWindow::hex2dec(char hex_value[]){
 
     return dec_value;
 }
+
+void MainWindow::rotateImg(double angle) {
+
+    QPixmap pixmap("/home/viktor/catkin_ws/src/rotary_table_gui/pictures/rt/rt_gif.gif");
+    QMatrix rm;
+    rm.rotate(angle);
+    pixmap = pixmap.transformed(rm);
+    ui->label_14->setPixmap(pixmap);
+
+}
 /*****************************************************/
 
 
@@ -437,7 +392,9 @@ int MainWindow::hex2dec(char hex_value[]){
 /******************* Callbacks ***********************/
 void MainWindow::CurrentAngleCallback(const std_msgs::Int32 currentAngle){
 
-    //ROS_INFO("Current angle callback %d",currentAngle);
+    ROS_INFO("Current angle callback %.1f",(double)(currentAngle.data)/10.0);
+    rotateImg((double)(currentAngle.data)/10.0);
+    currentAngleDeg = (double)(currentAngle.data)/10.0;
 
 
 
@@ -445,7 +402,7 @@ void MainWindow::CurrentAngleCallback(const std_msgs::Int32 currentAngle){
 
 void MainWindow::CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkingState){
 
-    //ROS_INFO("Current working state callback %d",currentWorkingState);
+    ROS_INFO("Current working state callback %d",currentWorkingState.data);
     printCurrentWorkingStateOnWidget(currentWorkingState.data);
 
 }

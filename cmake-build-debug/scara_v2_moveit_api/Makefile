@@ -946,21 +946,6 @@ scara_v2_moveit_api_generate_messages/fast:
 .PHONY : scara_v2_moveit_api_generate_messages/fast
 
 # Convenience name for target.
-scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/rule
-.PHONY : scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/rule
-
-# Convenience name for target.
-rotary_table_can_test: scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/rule
-
-.PHONY : rotary_table_can_test
-
-# fast build rule for target.
-rotary_table_can_test/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/build
-.PHONY : rotary_table_can_test/fast
-
-# Convenience name for target.
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_gennodejs.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_gennodejs.dir/rule
 .PHONY : scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_gennodejs.dir/rule
@@ -1527,33 +1512,6 @@ src/real_scara_torq_sensor.cpp.s:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/build.make scara_v2_moveit_api/CMakeFiles/real_scara_torq_sensor.dir/src/real_scara_torq_sensor.cpp.s
 .PHONY : src/real_scara_torq_sensor.cpp.s
 
-src/rotary_table_can_test.o: src/rotary_table_can_test.cpp.o
-
-.PHONY : src/rotary_table_can_test.o
-
-# target to build an object file
-src/rotary_table_can_test.cpp.o:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/src/rotary_table_can_test.cpp.o
-.PHONY : src/rotary_table_can_test.cpp.o
-
-src/rotary_table_can_test.i: src/rotary_table_can_test.cpp.i
-
-.PHONY : src/rotary_table_can_test.i
-
-# target to preprocess a source file
-src/rotary_table_can_test.cpp.i:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/src/rotary_table_can_test.cpp.i
-.PHONY : src/rotary_table_can_test.cpp.i
-
-src/rotary_table_can_test.s: src/rotary_table_can_test.cpp.s
-
-.PHONY : src/rotary_table_can_test.s
-
-# target to generate assembly for a file
-src/rotary_table_can_test.cpp.s:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/build.make scara_v2_moveit_api/CMakeFiles/rotary_table_can_test.dir/src/rotary_table_can_test.cpp.s
-.PHONY : src/rotary_table_can_test.cpp.s
-
 src/rotary_table_menu.o: src/rotary_table_menu.cpp.o
 
 .PHONY : src/rotary_table_menu.o
@@ -1727,7 +1685,6 @@ help:
 	@echo "... scara_v2_moveit_api_genpy"
 	@echo "... move_group_interface3_PICKandPLACE"
 	@echo "... scara_v2_moveit_api_generate_messages"
-	@echo "... rotary_table_can_test"
 	@echo "... scara_v2_moveit_api_gennodejs"
 	@echo "... _scara_v2_moveit_api_generate_messages_check_deps_SimpleService"
 	@echo "... IK_test"
@@ -1785,9 +1742,6 @@ help:
 	@echo "... src/real_scara_torq_sensor.o"
 	@echo "... src/real_scara_torq_sensor.i"
 	@echo "... src/real_scara_torq_sensor.s"
-	@echo "... src/rotary_table_can_test.o"
-	@echo "... src/rotary_table_can_test.i"
-	@echo "... src/rotary_table_can_test.s"
 	@echo "... src/rotary_table_menu.o"
 	@echo "... src/rotary_table_menu.i"
 	@echo "... src/rotary_table_menu.s"

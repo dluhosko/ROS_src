@@ -130,9 +130,6 @@ target_link_libraries(scara_menu ${catkin_LIBRARIES})
 add_executable(scara_colision_object ../scara_v2_moveit_api/src/scara_colision_object.cpp)
 target_link_libraries(scara_colision_object ${catkin_LIBRARIES})
 
-add_executable(rotary_table_can_test ../scara_v2_moveit_api/src/rotary_table_can_test.cpp)
-target_link_libraries(rotary_table_can_test ${catkin_LIBRARIES})
-
 add_executable(rotary_table_menu ../scara_v2_moveit_api/src/rotary_table_menu.cpp)
 target_link_libraries(rotary_table_menu ${catkin_LIBRARIES})
 

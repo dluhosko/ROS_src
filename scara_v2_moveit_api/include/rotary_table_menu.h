@@ -12,9 +12,13 @@
 #include "scara_v2_moveit_api/pose_and_gripperState.h"
 //pridat include z CAN kniznice
 
+char *hexNum, *modifHexNum;
 
 std_msgs::Int32 int32_msg;
 scara_v2_moveit_api::pose_velocity_direction posVelDir_msg;
+
+ros::Publisher currentRotationInDeg_pub, currentWorkingState_pub;
+ros::Subscriber rotateCommand_sub, workingStateCommand_sub;
 
 
 int hex2dec(char hex_value[]){
@@ -58,7 +62,7 @@ void fillEmptyBytesInCANmsg(char* inputCANmsg,char* outputCANmsg, int size_of_ms
     }
     outputCANmsg[size_of_msg] = '\0';
 
-}
+}   /**************************** Upravit funkciu aby fungovala na globalne pointre ***************************************/
 
 void convertCANmsg(char* inputCANmsg, int size_of_msg){
 
@@ -77,20 +81,65 @@ void convertCANmsg(char* inputCANmsg, int size_of_msg){
 
 }
 
+void sendDesiredWorkingState(int inputNumber){
+
+    switch (inputNumber){
+        case 1: //OFF
+        {
+            ROS_INFO("desired state OFF");
+            /************************** create CAN msg **********************************/
+            break;
+        }
+        case 2: //READY
+        {
+            ROS_INFO("desired state READY");
+            /************************** create CAN msg **********************************/
+            break;
+        }
+        case 3: //ON
+        {
+            ROS_INFO("desired state ON");
+            /************************** create CAN msg **********************************/
+            break;
+        }
+        case 4: //ERROR
+        {
+            ROS_INFO("desired state ERROR");
+            /************************** create CAN msg **********************************/
+            break;
+        }
+        default:
+        {
+            ROS_ERROR("Invalid number");
+            /************************** create CAN msg **********************************/
+            break;
+        }
+    }
+
+}   /**********************Create CAN msg ***********************************/
+
 
 //************************************** Callbacks ********************************************/
 void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction desiredPositionVelocityDirection){
 
     ROS_INFO("rotateCommandCallback : desired rotation=%d , desired velocity=%d desired direction =%s",desiredPositionVelocityDirection.rotation,
              desiredPositionVelocityDirection.velocity, desiredPositionVelocityDirection.direction?"Right":"Left");
+    posVelDir_msg = desiredPositionVelocityDirection;
 
-}
+    /************************** create CAN msg **********************************/
+    /************************** create CAN msg **********************************/
+    /************************** create CAN msg **********************************/
+    /************************** create CAN msg **********************************/
+
+}   /************************** create CAN msg **********************************/
 
 void workingStateCommandCallback(const std_msgs::Int32 mode){
 
     ROS_INFO("workingStateCommandCallback : desired mode=%d",mode.data);
+    sendDesiredWorkingState(mode.data);
 
 }
+
 
 
 

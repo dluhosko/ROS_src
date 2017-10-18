@@ -10,6 +10,8 @@ int main(int argc, char **argv){
 
     char hexaNumber[20];
     char modifHexaNumber[24];
+    hexNum = hexaNumber;
+    modifHexNum = modifHexaNumber;
 
     ros::init(argc, argv, "menu_node");
     ros::NodeHandle n1,n2,n3,n4;
@@ -20,22 +22,22 @@ int main(int argc, char **argv){
 
 
     ROS_WARN("Init publishers:");
-    ros::Publisher currentRotationInDeg_pub = n1.advertise<std_msgs::Int32>("currentAngleDeg_RT",1000);
+    currentRotationInDeg_pub = n1.advertise<std_msgs::Int32>("currentAngleDeg_RT",1000);
     ROS_INFO("currentAngleDeg_RT");
-    ros::Publisher currentWorkingState_pub = n2.advertise<std_msgs::Int32>("currentWorkingState_RT",1000);
+    currentWorkingState_pub = n2.advertise<std_msgs::Int32>("currentWorkingState_RT",1000);
     ROS_INFO("currentWorkingState_RT");
 
     ROS_WARN("Init subscribers:");
-    ros::Subscriber rotateCommand_sub = nn1.subscribe("rotate_DEC_RT",1000,rotateCommandCallback);
+    rotateCommand_sub = nn1.subscribe("rotate_DEC_RT",1000,rotateCommandCallback);
     ROS_INFO("rotate_DEC_RT");
-    ros::Subscriber workingStateCommand_sub = nn2.subscribe("set_working_mode_RT",1000,workingStateCommandCallback);
+    workingStateCommand_sub = nn2.subscribe("set_working_mode_RT",1000,workingStateCommandCallback);
     ROS_INFO("set_working_mode_RT");
 
     while (ros::ok()){
 
 
         /********************** test of convesion *********************/
-        /*int inputNumber;
+        int inputNumber;
         ROS_INFO("enter decimal number");
         scanf("%d",&inputNumber);
 
@@ -45,6 +47,10 @@ int main(int argc, char **argv){
         fillEmptyBytesInCANmsg(hexaNumber,modifHexaNumber,8);
         ROS_INFO("Fill missing bytes (%s) -> (%s)",hexaNumber,modifHexaNumber);
 
+        ROS_WARN("hexaNumber=%s /*hexNum=%s",hexaNumber,hexNum);
+        ROS_WARN("modifHexaNumber=%s /*modifHexNum=%s",modifHexaNumber,modifHexNum);
+        sleep(2);
+
         convertCANmsg(modifHexaNumber,8);
         ROS_INFO("convert hexa number CAN clasic to CAN SENSODRIVE (%s)",modifHexaNumber);
 
@@ -52,7 +58,7 @@ int main(int argc, char **argv){
         ROS_INFO("convert hexa number CAN SENSODRIVE to CAN clasic (%s)",modifHexaNumber);
 
 
-        ROS_INFO("hexa(%s) to decimal(%d)",modifHexaNumber,hex2dec(modifHexaNumber));*/
+        ROS_INFO("hexa(%s) to decimal(%d)",modifHexaNumber,hex2dec(modifHexaNumber));
         /*********************** end of test *************************/
 
 

@@ -82,6 +82,8 @@ private slots:
 
     int hex2dec(char hex_value[]);
 
+    void rotateImg(double angle);
+
 private:
     Ui::MainWindow *ui;
 
