@@ -18,6 +18,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
+  "devel/share/can_interface/cmake/can_interfaceConfig-version.cmake"
+  "devel/share/can_interface/cmake/can_interfaceConfig.cmake"
   "devel/share/rotary_table_gui/cmake/rotary_table_gui-msg-paths.cmake"
   "devel/share/scara_gui/cmake/scara_gui-msg-paths.cmake"
   "devel/share/scara_msgs/cmake/scara_msgs-msg-extras.cmake"

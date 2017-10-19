@@ -21,6 +21,7 @@ find_package(catkin REQUIRED COMPONENTS
         actionlib
         scara_msgs
         tf
+        can_interface
 
 )
 find_package(Boost REQUIRED system filesystem date_time thread)

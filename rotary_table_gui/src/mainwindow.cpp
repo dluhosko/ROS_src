@@ -299,7 +299,7 @@ void MainWindow::on_centralStop_PB_clicked(){
     ui->status_TE->append("CENTRAL STOP -> EXITING PROGRAM!");
     ui->status_TE->append("***************************************");
     //kill roslaunch
-    //..............
+    //system("pkill roslaunch");
     //Kill GUI
     sleep(3);
     QApplication::quit();

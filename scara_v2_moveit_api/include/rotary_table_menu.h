@@ -10,21 +10,15 @@
 #include <std_msgs/String.h>
 #include "scara_v2_moveit_api/pose_velocity_direction.h"
 #include "scara_v2_moveit_api/pose_and_gripperState.h"
+#include <can_interface/can_interface.h>
 //pridat include z CAN kniznice
-
-const int SIZE_OF_1B_MESSAGE = 3, SIZE_OF_2B_MESSAGE=5, SIZE_OF_4B_MESSAGE = 9;
-char *hexNum, *modifHexNum;
-char char_1B[SIZE_OF_1B_MESSAGE];
-char char_2B_position[SIZE_OF_2B_MESSAGE], char_2B_velocity[SIZE_OF_2B_MESSAGE], char_2B_position_modif[SIZE_OF_2B_MESSAGE], char_2B_velocity_modif[SIZE_OF_2B_MESSAGE];
-uint8_t uint8_4B_message[SIZE_OF_4B_MESSAGE-1], uint8_1B_message[SIZE_OF_1B_MESSAGE-1];
-
 
 std_msgs::Int32 int32_msg;
 scara_v2_moveit_api::pose_velocity_direction posVelDir_msg;
 
-ros::Publisher currentRotationInDeg_pub, currentWorkingState_pub;
+ros::Publisher currentRotationInDeg_pub, currentStatus_pub, currentError_pub;
 ros::Subscriber rotateCommand_sub, workingStateCommand_sub;
-
+Can_interface *can;
 
 int hex2dec(char hex_value[]){
 
@@ -94,121 +88,166 @@ void convertCANmsg(char* inputCANmsg, int size_of_msg){
 
 }
 
+void clearArray(uint8_t *array, int size_of_array){
+
+    for (int i=0;i<size_of_array;i++){
+        array[i] = 0;
+    }
+
+}
+
 void sendDesiredWorkingState(int inputNumber){
+
+    uint8_t data_to_send[8];            //Create data array to be send
+    can_frame frame;                    //Create CAN frame
+    frame.can_id = 0x200;               //Define ID of frame
+    frame.can_dlc = 1;                  //Define Length of frame
 
     switch (inputNumber){
         case 1: //OFF
         {
             ROS_INFO("desired state OFF");
-            char word[] = "10";
-            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
-            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
-                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
-            }
-            /************************** create CAN msg **********************************/
-
-
-
+            clearArray(data_to_send,8);
+            int data = 0x10;                                                  //10
+            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to be send to array of size 8
+            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
+            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
             break;
         }
         case 2: //READY
         {
             ROS_INFO("desired state READY");
-            char word[] = "12";
-            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
-            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
-                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
-            }
-            /************************** create CAN msg **********************************/
-
-
-
-
+            clearArray(data_to_send,8);
+            int data = 0x12;                                                   //12
+            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
+            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
+            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
             break;
         }
         case 3: //ON
         {
             ROS_INFO("desired state ON");
-            char word[] = "14";
-            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
-            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
-                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
-            }
-            /************************** create CAN msg **********************************/
-
-
-
-
+            clearArray(data_to_send,8);
+            int data = 0x14;                                                //14
+            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
+            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
+            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
             break;
         }
         case 4: //ERROR
         {
             ROS_INFO("desired state ERROR");
-            char word[] = "1f";
-            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
-            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
-                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
-            }
-            /************************** create CAN msg **********************************/
-
-
-
+            clearArray(data_to_send,8);
+            int data = 0x1f;                                                //1f
+            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
+            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
+            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
             break;
         }
         default:
         {
             ROS_ERROR("Invalid number");
-            char word[] = "12";
-            char2uint8_t(word,word,uint8_1B_message,SIZE_OF_1B_MESSAGE);
-            for (int i=0;i<SIZE_OF_1B_MESSAGE-1;i++){
-                ROS_WARN("[%d] char=%c => uint8_t=%d",i,word[i],uint8_1B_message[i]);
-            }
-            /************************** create CAN msg **********************************/
+            clearArray(data_to_send,8);
+            int data = 0x12;                                                //12 -> go back to ready
+            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
+            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
+            //can->writeCAN(&frame);                                          //write CAN message to CAN bus
+            sleep(1);
+
+            clearArray(data_to_send,8);
+            data = 0x10;                                                    //10 -> go back to stop
+            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
+            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
+            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+            break;
+        }
+    }
+
+}
+
+void decodeCANmsg(can_frame *frame){
+
+    switch (frame->can_id){
+        case 0x210:
+        {
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
+            //uint8_t data_from_can[4];
+            //clearArray(data_from_can,4);
+            //memcpy(data_from_can,frame->data, 4*sizeof(uint8_t));
+            int32_msg.data = 0;
+            int32_msg.data = frame->data[1] << 4 | frame->data[0];  //Status msg
+            currentStatus_pub.publish(int32_msg);                 //Send status msg
+            ROS_INFO("Sending STATUS msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
+
+            int32_msg.data = 0;
+            int32_msg.data = frame->data[3] << 4 | frame->data[2];  //Status msg
+            currentError_pub
+
 
 
 
 
             break;
         }
+        case 0x211:
+        {
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
+            uint8_t data_from_can[8];
+            clearArray(data_from_can,8);
+            for (int i=0;i<8;i+=2){
+                data_from_can[i]= frame->data[i+1];
+                data_from_can[i+1]= frame->data[i];
+            }
+
+            break;
+        }
+        case 0x212:
+        {
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
+            uint8_t data_from_can[8];
+            clearArray(data_from_can,8);
+            for (int i=0;i<8;i+=2){
+                data_from_can[i]= frame->data[i+1];
+                data_from_can[i+1]= frame->data[i];
+            }
+
+            break;
+        }
+        default:{
+            break;
+        }
     }
 
-}   /**********************Create CAN msg ***********************************/
+}
 
 //************************************** Callbacks ********************************************/
 void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction desiredPositionVelocityDirection){
 
-//    ROS_INFO("rotateCommandCallback : desired rotation=%d , desired velocity=%d desired direction =%s",desiredPositionVelocityDirection.rotation,
-//             desiredPositionVelocityDirection.velocity, desiredPositionVelocityDirection.direction?"Right":"Left");
-    posVelDir_msg = desiredPositionVelocityDirection;
 
-    sprintf(char_2B_position,"%x", desiredPositionVelocityDirection.rotation);
-    sprintf(char_2B_velocity,"%x", desiredPositionVelocityDirection.velocity);
-    /************************** Dorobit smer otacania **************************/
-    ROS_INFO("Rotation DEC=%d , rotation HEX=%s , Velocity DEC =%d , velocity HEX=%s",
-             desiredPositionVelocityDirection.rotation,char_2B_position,desiredPositionVelocityDirection.velocity,char_2B_velocity);
-    //Fill empty Bytes in HEX numbers
+    //Direction 0x226!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    int rot = desiredPositionVelocityDirection.rotation;
+    int vel = desiredPositionVelocityDirection.velocity;
+    bool dir = desiredPositionVelocityDirection.direction;
+    uint8_t data[8];
 
-    fillEmptyBytesInCANmsg(char_2B_position,char_2B_position_modif,SIZE_OF_2B_MESSAGE);
-    fillEmptyBytesInCANmsg(char_2B_velocity,char_2B_velocity_modif,SIZE_OF_2B_MESSAGE);
-    ROS_INFO("NOT FILLED HEX numbers: position=%s velocity=%s FILLED HEX numbers: position=%s velocity=%s",
-             char_2B_position,char_2B_velocity,char_2B_position_modif,char_2B_velocity_modif);
-    //Convert HEX number to specific CAN format
-    ROS_INFO("Standard CAN : %s(%d) %s(%d)",char_2B_position_modif,std::strlen(char_2B_position_modif),char_2B_velocity_modif,std::strlen(char_2B_velocity_modif));
-    convertCANmsg(char_2B_position_modif,SIZE_OF_2B_MESSAGE);
-    convertCANmsg(char_2B_velocity_modif,SIZE_OF_2B_MESSAGE);
-    ROS_INFO("SENSO CAN : %s(%d) %s(%d)",char_2B_position_modif,std::strlen(char_2B_position_modif),char_2B_velocity_modif,std::strlen(char_2B_velocity_modif));
+    memcpy(data,&rot,2*sizeof(uint8_t));
+    memcpy(data+2,&vel,2*sizeof(uint8_t));
 
-    char2uint8_t(char_2B_position_modif,char_2B_velocity_modif,uint8_4B_message,SIZE_OF_4B_MESSAGE);
-    for (int i=0;i<SIZE_OF_4B_MESSAGE-1;i++){
-        ROS_WARN("[%d] %d",i,uint8_4B_message[i]);
-    }
+    can_frame frame;                //Create CAN frame
+    frame.can_id = 0x201;           //Define header of CAN message
+    frame.can_dlc = 4;              //Define lenght of CAN message
+    memcpy(&frame.data, data, sizeof(data));    //Copy data to CAN frame
 
-    /************************** create CAN msg **********************************/
+    for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
+    //can->writeCAN(&frame);        //Send message via CAN
 
-
-
-
-}   /************************** create CAN msg **********************************/
+}   /**************Direction****************/
 
 void workingStateCommandCallback(const std_msgs::Int32 mode){
 
