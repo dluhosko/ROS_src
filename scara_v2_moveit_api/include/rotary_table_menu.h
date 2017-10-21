@@ -11,83 +11,15 @@
 #include "scara_v2_moveit_api/pose_velocity_direction.h"
 #include "scara_v2_moveit_api/pose_and_gripperState.h"
 #include <can_interface/can_interface.h>
-//pridat include z CAN kniznice
 
+//*********************************** Global Variables ****************************************//
 std_msgs::Int32 int32_msg;
 scara_v2_moveit_api::pose_velocity_direction posVelDir_msg;
-
-ros::Publisher currentRotationInDeg_pub, currentStatus_pub, currentError_pub;
+ros::Publisher currentRotationInDeg_pub, currentVelocityInDeg_pub, currentStatus_pub, currentError_pub;
 ros::Subscriber rotateCommand_sub, workingStateCommand_sub;
 Can_interface *can;
 
-int hex2dec(char hex_value[]){
-
-    int length = std::strlen(hex_value);
-    int power = 1;
-    int dec_value = 0;
-
-    for (int i=length-1;i>=0;i--){
-
-        if (hex_value[i]>='0' && hex_value[i]<='9'){
-            dec_value += (hex_value[i] - 48) * power;
-            power = power * 16;
-        }else if (hex_value[i]>='A' && hex_value[i]<='F'){
-            dec_value += (hex_value[i] - 55) * power;
-            power = power * 16;
-        }else if (hex_value[i]>='a' && hex_value[i]<='f'){
-            dec_value += (hex_value[i] - 87) * power;
-            power = power * 16;
-        }
-        ROS_INFO("hex value =%c dec value=%d , power = %d",hex_value[i],dec_value,power);
-        sleep(2);
-    }
-
-    return dec_value;
-}
-
-void char2uint8_t(char* input1, char* input2, uint8_t* output,int size_of_output){
-
-    for (int i=0;i<size_of_output-1;i++){
-        ROS_INFO_STREAM(i);
-        ROS_INFO_STREAM(strlen(input1));
-        if (i < 4){
-            output[i] = (uint8_t)(input1[i]);
-        }else{
-            output[i] = (uint8_t)(input2[i-4]);
-        }
-    }
-
-}
-
-void fillEmptyBytesInCANmsg(char* inputCANmsg,char* outputCANmsg, int size_of_msg){
-
-    ROS_INFO("input size %d , output size %d and entered size %d",std::strlen(inputCANmsg),std::strlen(outputCANmsg),size_of_msg);
-
-    for (int i=0;i<size_of_msg-1;i++){
-        if (i < (size_of_msg-1) -std::strlen(inputCANmsg)){
-            outputCANmsg[i] = '0';
-        }else{
-            outputCANmsg[i] = inputCANmsg[i - ((size_of_msg-1) -std::strlen(inputCANmsg))];
-        }
-    }
-    outputCANmsg[size_of_msg] = '\0';
-
-}
-
-void convertCANmsg(char* inputCANmsg, int size_of_msg){
-
-    char help1,help2;
-    for (int i=0;i<std::strlen(inputCANmsg)-1-2;i+=4){
-        help1= inputCANmsg[i];
-        help2= inputCANmsg[i+1];
-        inputCANmsg[i] = inputCANmsg[i+2];
-        inputCANmsg[i+1] = inputCANmsg[i+3];
-        inputCANmsg[i+2] = help1;
-        inputCANmsg[i+3] = help2;
-    }
-
-}
-
+//************************************* Functions *********************************************//
 void clearArray(uint8_t *array, int size_of_array){
 
     for (int i=0;i<size_of_array;i++){
@@ -169,54 +101,74 @@ void sendDesiredWorkingState(int inputNumber){
         }
     }
 
-}
+}   //Just uncomment can->writeCAN
 
 void decodeCANmsg(can_frame *frame){
 
     switch (frame->can_id){
-        case 0x210:
+        case 0x210:     //Status answer
         {
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
-            //uint8_t data_from_can[4];
-            //clearArray(data_from_can,4);
-            //memcpy(data_from_can,frame->data, 4*sizeof(uint8_t));
-            int32_msg.data = 0;
-            int32_msg.data = frame->data[1] << 4 | frame->data[0];  //Status msg
-            currentStatus_pub.publish(int32_msg);                 //Send status msg
+            uint8_t data_from_can[8];
+            clearArray(data_from_can,8);
+            memcpy(data_from_can,frame->data,8*sizeof(uint8_t));
+
+            int32_msg.data = 0;                                         //Send STATUS
+            int32_msg.data = frame->data[1] << 4 | frame->data[0];      //Posibility 1 (Status msg)
+            memcpy(&int32_msg.data,data_from_can,2*sizeof(uint8_t));    //Posibility 2 (Status msg)
+            currentStatus_pub.publish(int32_msg);                       //Send status msg
             ROS_INFO("Sending STATUS msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
 
-            int32_msg.data = 0;
-            int32_msg.data = frame->data[3] << 4 | frame->data[2];  //Status msg
-            currentError_pub
-
-
-
-
-
+            int32_msg.data = 0;                                         //Send ERROR
+            int32_msg.data = frame->data[3] << 4 | frame->data[2];      //Posibility 1 (Error msg)
+            memcpy(&int32_msg.data,data_from_can+2,2*sizeof(uint8_t));  //Posibility 2 (Error msg)
+            currentError_pub.publish(int32_msg);
+            ROS_INFO("Sending ERROR msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
             break;
         }
-        case 0x211:
+        case 0x211:     //Position and Velocity answer
         {
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
             uint8_t data_from_can[8];
             clearArray(data_from_can,8);
-            for (int i=0;i<8;i+=2){
-                data_from_can[i]= frame->data[i+1];
-                data_from_can[i+1]= frame->data[i];
-            }
+            memcpy(data_from_can,frame->data,8*sizeof(uint8_t));
 
+            int32_msg.data = 0;                                         //Current Position
+            memcpy(&int32_msg.data,data_from_can,2*sizeof(uint8_t));    //Posibility 2
+            currentRotationInDeg_pub.publish(int32_msg);
+            ROS_INFO("Sending current POSITION dec=%d (hex=%x) [inc]",int32_msg.data,int32_msg.data);
+
+            int32_msg.data = 0;                                         //Current Difference to desired angle
+            memcpy(&int32_msg.data,data_from_can+2,2*sizeof(uint8_t));  //Posibility 2
+            ROS_INFO("Differece between current and desired angle dec=%d (hex=%x) [inc]",int32_msg.data,int32_msg.data);
+
+            int32_msg.data = 0;                                         //Desired max velocity
+            memcpy(&int32_msg.data,data_from_can+4,2*sizeof(uint8_t));  //Posibility 2
+            //currentRotationInDeg_pub.publish(int32_msg);
+            ROS_INFO("Desired max velocity dec=%d (hex=%x) [1/min]",int32_msg.data,int32_msg.data);
+
+            int32_msg.data = 0;                                         //Current velocity
+            memcpy(&int32_msg.data,data_from_can+6,2*sizeof(uint8_t));  //Posibility 2
+            currentRotationInDeg_pub.publish(int32_msg);
+            ROS_INFO("Desired max velocity dec=%d (hex=%x) [1/min]",int32_msg.data,int32_msg.data);
             break;
         }
-        case 0x212:
+        case 0x212:     //Basic Position and Revolution answer
         {
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
             uint8_t data_from_can[8];
             clearArray(data_from_can,8);
-            for (int i=0;i<8;i+=2){
-                data_from_can[i]= frame->data[i+1];
-                data_from_can[i+1]= frame->data[i];
-            }
+            memcpy(data_from_can,frame->data,8*sizeof(uint8_t));
 
+            //Actual Basic Position
+            int actualBasicPosition;
+            memcpy(&actualBasicPosition, data_from_can, 4*sizeof(uint8_t));
+            ROS_INFO("Actual Basic Position is %d",actualBasicPosition);
+
+            //Revolution counter (not implemented in CAN)
+            int revolutionCounter;
+            memcpy(&revolutionCounter,data_from_can+4,4*sizeof(uint8_t));
+            ROS_INFO("Revolution counter is %d  [rev]",actualBasicPosition);
             break;
         }
         default:{
@@ -226,7 +178,7 @@ void decodeCANmsg(can_frame *frame){
 
 }
 
-//************************************** Callbacks ********************************************/
+//************************************** Callbacks ********************************************//
 void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction desiredPositionVelocityDirection){
 
 
@@ -247,7 +199,7 @@ void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction de
     for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
     //can->writeCAN(&frame);        //Send message via CAN
 
-}   /**************Direction****************/
+}   /**************    Direction to solve (225) !!!!   ****************/
 
 void workingStateCommandCallback(const std_msgs::Int32 mode){
 
@@ -255,10 +207,5 @@ void workingStateCommandCallback(const std_msgs::Int32 mode){
     sendDesiredWorkingState(mode.data);
 
 }
-
-
-
-
-
 
 #endif //PROJECT_ROTARY_TABLE_MENU_H

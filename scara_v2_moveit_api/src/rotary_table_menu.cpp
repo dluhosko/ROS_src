@@ -34,9 +34,11 @@ int main(int argc, char **argv){
     ROS_WARN("Init publishers:");
         currentRotationInDeg_pub = n1.advertise<std_msgs::Int32>("currentAngleDeg_RT",1000);
         ROS_INFO("currentAngleDeg_RT");
-        currentStatus_pub = n2.advertise<std_msgs::Int32>("currentWorkingState_RT",1000);
+        currentVelocityInDeg_pub = n2.advertise<std_msgs::Int32>("currentVelocityPerMinute_RT",1000);
+        ROS_INFO("currentAngleDeg_RT");
+        currentStatus_pub = n3.advertise<std_msgs::Int32>("currentWorkingState_RT",1000);
         ROS_INFO("currentWorkingState_RT");
-        currentError_pub = n3.advertise<std_msgs::Int32>("currentWorkingError_RT",1000);
+        currentError_pub = n4.advertise<std_msgs::Int32>("currentWorkingError_RT",1000);
         ROS_INFO("currentWorkingError_RT");
     //dodat aj rychlost
 
@@ -50,8 +52,6 @@ int main(int argc, char **argv){
 
         can->readCAN(&frame);
         decodeCANmsg(&frame);
-
-
 
         ros::spinOnce();
         loop_rate.sleep();

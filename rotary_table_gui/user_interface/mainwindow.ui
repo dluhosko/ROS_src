@@ -383,7 +383,7 @@
           </size>
          </property>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Edit max velocity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Edit max velocity [deg/s]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -460,7 +460,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_1">
      <attribute name="title">
@@ -653,14 +653,14 @@
         <item>
          <widget class="QLabel" name="label_23">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Position [deg]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Rotation [deg/s]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="label_24">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Position [rad]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Rotation [rots/min]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -828,10 +828,10 @@
      <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>40</y>
-        <width>251</width>
-        <height>191</height>
+        <x>60</x>
+        <y>50</y>
+        <width>210</width>
+        <height>210</height>
        </rect>
       </property>
       <property name="text">
@@ -847,17 +847,17 @@
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>360</y>
-        <width>191</width>
-        <height>51</height>
+        <x>50</x>
+        <y>370</y>
+        <width>221</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>/home/viktor/catkin_ws/src/rotary_table_gui/pictures/Sensodrive-LogoE.gif</pixmap>
+       <pixmap>/home/viktor/catkin_ws/src/rotary_table_gui/pictures/sensodrive_rgb kopie.gif</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -868,17 +868,17 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>50</y>
-      <width>771</width>
-      <height>121</height>
+      <x>0</x>
+      <y>20</y>
+      <width>831</width>
+      <height>151</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>/home/viktor/catkin_ws/src/rotary_table_gui/pictures/Sensodrive-LogoE.gif</pixmap>
+     <pixmap>/home/viktor/catkin_ws/src/rotary_table_gui/pictures/sensodrive_rgb kopie.gif</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

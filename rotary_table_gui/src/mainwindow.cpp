@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     int argc;
     char **argv;
     ros::init(argc, argv, "scara_gui_node");
-    ros::NodeHandle n1,n2,n3,n4,nn1,nn2,nn3,nn4;
+    ros::NodeHandle n,nn;
     ros::Rate loop_rate(10);
 
     ROS_INFO("spinner for GUI start\n");
@@ -23,21 +23,25 @@ MainWindow::MainWindow(QWidget *parent) :
     aspinner->start();
 
     ROS_WARN("Init publishers:");
-    rotate_DEC_pub = n1.advertise<scara_msgs::pose_velocity_direction>("rotate_DEC_RT",1000);
+    rotate_DEC_pub = n.advertise<scara_msgs::pose_velocity_direction>("rotate_DEC_RT",1000);
     ROS_INFO("rotate_DEC_RT");
-    rotate_HEX_pub = n2.advertise<std_msgs::String>("rotate_HEX_RT",1000);
+    rotate_HEX_pub = n.advertise<std_msgs::String>("rotate_HEX_RT",1000);
     ROS_INFO("rotate_HEX_RT");
-    workingState_pub = n3.advertise<std_msgs::Int32>("set_working_mode_RT",1000);
+    workingState_pub = n.advertise<std_msgs::Int32>("set_working_mode_RT",1000);
     ROS_INFO("set_working_mode_RT");
 //    rotate_HEX_pub = n4.advertise<std_msgs::Int32>("useless_pub",1000);
 //    ROS_INFO("useless_pub_RT");
 
     ROS_WARN("Init subscribers:");
-    currentAngleDeg_sub = nn1.subscribe("currentAngleDeg_RT",1000,&MainWindow::CurrentAngleCallback, this);
+    currentAngleDeg_sub = nn.subscribe("currentAngleDeg_RT",1000,&MainWindow::CurrentAngleCallback, this);
     ROS_INFO("currentAngleDeg_RT");
-    currentWorkingState_sub = nn2.subscribe("currentWorkingState_RT",1000,&MainWindow::CurrentWorkingStateCallback, this);
+    currentState_sub = nn.subscribe("currentWorkingState_RT",1000,&MainWindow::CurrentWorkingStateCallback, this);
     ROS_INFO("currentWorkingState_RT");
-    useless_sub = nn3.subscribe("useless_sub_RT",1000,&MainWindow::UselessCallback, this);
+    currentError_sub = nn.subscribe("currentWorkingError_RT",1000,&MainWindow::CurrentWorkingErrorCallback, this);
+    ROS_INFO("currentWorkingError_RT");
+    currentVelocityPerMinute_sub = nn.subscribe("currentVelocityPerMinute_RT",1000,&MainWindow::CurrentVelocityCallback, this);
+    ROS_INFO("currentVelocityPerMinute_RT");
+    useless_sub = nn.subscribe("useless_sub_RT",1000,&MainWindow::UselessCallback, this);
     ROS_INFO("useless_sub_RT");
 
     ui->direction_RIGHT_CB->setChecked(true);
@@ -85,6 +89,7 @@ void MainWindow::on_config_ERROR_PB_clicked(){
 
 /*****************************************************/
 
+
 /**************** Relative Control *******************/
 void MainWindow::on_relativeControl_slider_SLIDER_actionTriggered(int action){
 
@@ -96,12 +101,11 @@ void MainWindow::on_relativeControl_slider_SLIDER_actionTriggered(int action){
 void MainWindow::on_relativeControl_slider_PB_clicked(){
 
     //GUI
-   if (directionOfRotation){
-        currentAngleDeg+=ui->relativeControl_slider_SLIDER->value()/10.0;
-
-    }else{
-        currentAngleDeg-=ui->relativeControl_slider_SLIDER->value()/10.0;
-    }
+//   if (directionOfRotation){
+//        currentAngleDeg+=ui->relativeControl_slider_SLIDER->value()/10.0;
+//    }else{
+//        currentAngleDeg-=ui->relativeControl_slider_SLIDER->value()/10.0;
+//    }
     if (currentAngleDeg >= 360.0){
         currentAngleDeg = currentAngleDeg - 360.0;
     }else if (currentAngleDeg <= 0.0){
@@ -111,12 +115,10 @@ void MainWindow::on_relativeControl_slider_PB_clicked(){
     ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg");
     ui->desiredPositionDeg_LCD->display(currentAngleDeg);
     ui->desiredPositionRad_LCD->display(currentAngleDeg * DEG_TO_RAD);
-
-   ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
-
+    ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
 
     pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_slider_SLIDER->value());  //deg
-    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
+    pose_velocity_direction_msg.velocity = floor((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
 
 
@@ -125,14 +127,14 @@ void MainWindow::on_relativeControl_slider_PB_clicked(){
 void MainWindow::on_relativeControl_input_PB_clicked(){
 
     //GUI
-   if (directionOfRotation){
-        currentAngleDeg+=ui->relativeControl_input_LE->text().toDouble();
-    }else{
-        currentAngleDeg-=ui->relativeControl_input_LE->text().toDouble();
-    }
+//   if (directionOfRotation){
+//        currentAngleDeg+=ui->relativeControl_input_LE->text().toDouble();
+//    }else{
+//        currentAngleDeg-=ui->relativeControl_input_LE->text().toDouble();
+//    }
     if (currentAngleDeg >= 360.0){
         currentAngleDeg = currentAngleDeg - 360.0;
-    }else if (currentAngleDeg <= 0.0){
+    }else if (currentAngleDeg < 0.0){
         currentAngleDeg = currentAngleDeg + 360.0;
     }
 
@@ -143,13 +145,12 @@ void MainWindow::on_relativeControl_input_PB_clicked(){
     ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_input_LE->text().toDouble()) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
 
     pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_input_LE->text().toDouble()*10); //deg
-    ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
-    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
+    //ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
+    pose_velocity_direction_msg.velocity = floor(ui->MaxVelocity_input_LE->text().toDouble()*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); //deg
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
 
 }
 /*****************************************************/
-
 
 
 /**************** Absolute Control ******************/
@@ -176,7 +177,7 @@ void MainWindow::on_absoluteControl_slider_PB_clicked(){
         pose_velocity_direction_msg.rotation = (int)(((360-desiredRotation)+currentAngleDeg)*10.0);
     }
     ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
-    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
+    pose_velocity_direction_msg.velocity = floor((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
 
 
@@ -204,7 +205,7 @@ void MainWindow::on_absoluteControl_input_PB_clicked(){
         pose_velocity_direction_msg.rotation = (int)(((360-desiredRotation)+currentAngleDeg)*10.0);
     }
     ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
-    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
+    pose_velocity_direction_msg.velocity = floor((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
 
 }
@@ -219,7 +220,7 @@ void MainWindow::on_MaxVelocity_input_PB_clicked(){
     ui->maxVelocityRad_LCD->display(ui->MaxVelocity_input_LE->text().toDouble()*DEG_TO_RAD);
     ui->status_TE->append("Max velocity set to " + ui->MaxVelocity_input_LE->text() + " deg/s");
 
-    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble(); //deg
+    pose_velocity_direction_msg.velocity = floor((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
 
 
 }
@@ -238,7 +239,7 @@ void MainWindow::on_direction_LEFT_PB_clicked(){
     pose_velocity_direction_msg.direction = false;
     directionOfRotation = false;
 
-}
+}   /************************ spracovat direction v menu!!!! ******************************/
 
 void MainWindow::on_direction_RIGHT_PB_clicked(){
 
@@ -250,7 +251,7 @@ void MainWindow::on_direction_RIGHT_PB_clicked(){
     //ROS
     pose_velocity_direction_msg.direction = true;
     directionOfRotation = true;
-}
+}     /************************ spracovat direction v menu!!!! ******************************/
 
 void MainWindow::on_direction_LEFT_CB_toggled(bool checked){
 
@@ -261,7 +262,7 @@ void MainWindow::on_direction_LEFT_CB_toggled(bool checked){
         directionOfRotation = false;
     }
 
-}
+}     /************************ spracovat direction v menu!!!! ******************************/
 
 void MainWindow::on_direction_RIGHT_CB_toggled(bool checked){
 
@@ -272,7 +273,7 @@ void MainWindow::on_direction_RIGHT_CB_toggled(bool checked){
         directionOfRotation = true;
     }
 
-}
+}     /************************ spracovat direction v menu!!!! ******************************/
 /*****************************************************/
 
 
@@ -286,6 +287,7 @@ void MainWindow::on_stop_PB_clicked(){
 
     //ROS
     pose_velocity_direction_msg.rotation = 0;
+    pose_velocity_direction_msg.velocity = 0;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
 
 
@@ -298,11 +300,16 @@ void MainWindow::on_centralStop_PB_clicked(){
     ui->status_TE->append("***************************************");
     ui->status_TE->append("CENTRAL STOP -> EXITING PROGRAM!");
     ui->status_TE->append("***************************************");
+
+    pose_velocity_direction_msg.rotation = 0;
+    pose_velocity_direction_msg.velocity = 0;
+    rotate_DEC_pub.publish(pose_velocity_direction_msg);
+
     //kill roslaunch
     //system("pkill roslaunch");
     //Kill GUI
-    sleep(3);
-    QApplication::quit();
+    //sleep(3); //Sleep zabranuje vypisu
+    //QApplication::quit();
 
 }
 /*****************************************************/
@@ -310,47 +317,8 @@ void MainWindow::on_centralStop_PB_clicked(){
 
 
 /***************** Custom functons *******************/
-void MainWindow::printCurrentWorkingStateOnWidget(const int modeNumber){
-
-    switch (modeNumber){
-        case 1: //OFF
-        {
-            ROS_INFO("State: OFF");
-            ui->config_workingState_LE->setText("State: OFF");
-            break;
-        }
-        case 2: //READY
-        {
-            ROS_INFO("State: READY");
-            ui->config_workingState_LE->setText("State: READY");
-            break;
-        }
-        case 3: //ON
-        {
-            ROS_INFO("State: ON");
-            ui->config_workingState_LE->setText("State: ON");
-            break;
-        }
-        case 4: //ERROR
-        {
-            ROS_INFO("State: ERROR");
-            ui->config_workingState_LE->setText("State: ERROR");
-            break;
-        }
-        default:
-        {
-            ROS_ERROR("Something wrong with state messages ... check connection");
-            ui->config_workingState_LE->setText("Something wrong with state messages ... check connection!!!!");
-            break;
-        }
-
-    }
-
-}
-
 void MainWindow::sendWorkingMode(const int mode){
 
-    //ROS_INFO("Sending choosen mode %d",mode);
     int32_msg.data = mode;
     workingState_pub.publish(int32_msg);
 
@@ -392,20 +360,187 @@ void MainWindow::rotateImg(double angle) {
 /******************* Callbacks ***********************/
 void MainWindow::CurrentAngleCallback(const std_msgs::Int32 currentAngle){
 
+    /**    Current angle is in increments. So [Deg] = [Increment] * 0.1  **/
+
     ROS_INFO("Current angle callback %.1f",(double)(currentAngle.data)/10.0);
     rotateImg((double)(currentAngle.data)/10.0);
-    currentAngleDeg = (double)(currentAngle.data)/10.0;
+    currentAngleDeg = (double)(currentAngle.data)/10.0; //Globalna premenna v ktorej je ulozena aktualna pozicia
 
+    ui->currentPositionDeg_LCD->display(currentAngleDeg);
+    ui->currentPositionRad_LCD->display(currentAngleDeg*DEG_TO_RAD);
 
+}
+
+void MainWindow::CurrentVelocityCallback(const std_msgs::Int32 currentVelocity){
+
+    /**  Current velocity is in 1/min  **/
+
+    currentVelocityDeg = currentVelocity.data*ROTATIONperMINUTE_TO_DEGREES_per_SECOND;  //Globalna premenna v ktorej je ulozena aktualna rychlost
+    ROS_INFO("Current velocity callback %.1f",currentVelocityDeg);
+    ui->currentVelocityDeg_LCD->display(currentVelocityDeg);
+    ui->currentVelocityRad_LCD->display(currentVelocity.data);
 
 }
 
 void MainWindow::CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkingState){
 
-    ROS_INFO("Current working state callback %d",currentWorkingState.data);
-    printCurrentWorkingStateOnWidget(currentWorkingState.data);
+    ROS_INFO("Current working state callback %x",currentWorkingState.data);
 
-}
+    switch (currentWorkingState.data){
+        case 0x0000:    //State: Start
+        {
+            //ui->config_workingState_LE->setText("Current working state : Start");
+            ROS_INFO("State: Start");
+            break;
+        }
+        case 0x0002:    //State: Referencing
+        {
+            //ui->config_workingState_LE->setText("Current working state : Referencing");
+            ROS_INFO("State: Referencing");
+            break;
+        }
+        case 0x0004:    //State: Homing
+        {
+            //ui->config_workingState_LE->setText("Current working state : Homing");
+            ROS_INFO("State: Homing");
+            break;
+        }
+        case 0xc008:    //fall through -> OR
+        case 0x0008:    //State: Running
+        {
+            //ui->config_workingState_LE->setText("Current working state : Running");
+            ROS_INFO("State: Running");
+            break;
+        }
+        case 0x0080:    //State: Error
+        {
+
+            ROS_INFO("State: Error");
+            break;
+        }
+        case 0x0100:    //State: Ready
+        {
+
+            ROS_INFO("State: Ready");
+            break;
+        }
+        case 0x0200:    //Warning of 90% overload level before error
+        {
+
+            ROS_INFO("Warning of 90% overload level before error");
+            break;
+        }
+        case 0x0400:    //Position reached
+        {
+
+            ROS_INFO("Position reached");
+            break;
+        }
+        case 0x4000:    //Test CPU Watchdog Successful
+        {
+
+            ROS_INFO("Test CPU Watchdog Successful");
+            break;
+        }
+        case 0x8000:    //RSG Mode: CAN / not IO Mode
+        {
+
+            ROS_INFO("RSG Mode: CAN / not IO Mode");
+            break;
+        }
+        default:
+        {
+            ROS_ERROR("Not recognized message [%x]",currentWorkingState.data);
+            break;
+        }
+
+    }
+
+
+
+
+}   /****** Dorobit fall through pre stavy ktore si zistim *********/
+
+void MainWindow::CurrentWorkingErrorCallback(const std_msgs::Int32 currentWorkingError){
+
+    ROS_INFO("Current working error callback %x",currentWorkingError.data);
+
+    switch (currentWorkingError.data){
+        case 0x0001:    //Over current in Output Stage
+        {
+
+            ROS_WARN("Over current in Output Stage");
+            break;
+        }
+        case 0x0002:    //Supply Voltage too High
+        {
+
+            ROS_WARN("Supply Voltage too High");
+            break;
+        }
+        case 0x0004:    //Supply Voltage too Low
+        {
+
+            ROS_WARN("Supply Voltage too Low");
+            break;
+        }
+        case 0x0008:    //Over temperature in Output Stage
+        {
+
+            ROS_WARN("Over temperature in Output Stage");
+            break;
+        }
+        case 0x0010:    //Hall Sensor Fault
+        {
+
+            ROS_WARN("Hall Sensor Fault");
+            break;
+        }
+        case 0x0020:    //CAN Bus Error
+        {
+
+            ROS_WARN("CAN Bus Error");
+            break;
+        }
+        case 0x0040:    //Hall Sensors swapped / Encoder fault (reset only by reboot)
+        {
+
+            ROS_WARN("Hall Sensors swapped / Encoder fault (reset only by reboot)");
+            break;
+        }
+        case 0x0200:    //Motor Overload Error
+        {
+
+            ROS_WARN("Motor Overload Error");
+            break;
+        }
+        case 0x0400:    //Referencing error
+        {
+
+            ROS_WARN("Referencing error");
+            break;
+        }
+        case 0x0800:    //Overtemperature in Brake Chopper
+        {
+
+            ROS_WARN("Overtemperature in Brake Chopper");
+            break;
+        }
+        case 0x1000:    //RSG delayed more than 1 rotation
+        {
+
+            ROS_WARN("RSG delayed more than 1 rotation");
+            break;
+        }
+        default:
+        {
+            ROS_ERROR("Not recognized message [%x]",currentWorkingError.data);
+            break;
+        }
+
+    }
+
+}   /****** Dorobit fall through pre stavy ktore si zistim *********/
 
 void MainWindow::UselessCallback(const std_msgs::Int32 uselessInfo){
 

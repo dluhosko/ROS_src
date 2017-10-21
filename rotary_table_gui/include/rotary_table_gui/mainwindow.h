@@ -21,6 +21,8 @@
 
 const double RAD_TO_DEG = 57.2957795130;
 const double DEG_TO_RAD = 0.0174532925;
+const double ROTATIONperMINUTE_TO_DEGREES_per_SECOND = ((2*M_PI) / 60) * RAD_TO_DEG;
+const double DEGREES_per_SECOND_TO_ROTATIONperMINUTE = (60/(2*M_PI)) * DEG_TO_RAD;
 
 namespace Ui {
 class MainWindow;
@@ -34,9 +36,14 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    //Callbacks
     void CurrentAngleCallback(const std_msgs::Int32 currentAngle);
 
+    void CurrentVelocityCallback(const std_msgs::Int32 currentVelocity);
+
     void CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkingState);
+
+    void CurrentWorkingErrorCallback(const std_msgs::Int32 currentWorkingError);
 
     void UselessCallback(const std_msgs::Int32 uselessInfo);
 
@@ -76,7 +83,6 @@ private slots:
     void on_direction_RIGHT_CB_toggled(bool checked);
 
     //Custom functions
-    void printCurrentWorkingStateOnWidget(const int modeNumber);
 
     void sendWorkingMode(const int modeSelect);
 
@@ -90,7 +96,7 @@ private:
     ros::AsyncSpinner *aspinner;
 
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
-    double currentAngleDeg = 0.0, currentAngleRad = 0.0;
+    double currentAngleDeg = 0.0, currentVelocityDeg = 0.0;
     char hexString[16];
 
     std_msgs::Int32 int32_msg;
@@ -99,7 +105,7 @@ private:
     scara_msgs::pose_velocity_direction pose_velocity_direction_msg;
 
     ros::Publisher rotate_DEC_pub, rotate_HEX_pub, workingState_pub, useless_pub;
-    ros::Subscriber currentAngleDeg_sub, currentWorkingState_sub, status_sub, useless_sub;
+    ros::Subscriber currentAngleDeg_sub, currentVelocityPerMinute_sub, currentState_sub, currentError_sub, status_sub, useless_sub;
 
 };
 
