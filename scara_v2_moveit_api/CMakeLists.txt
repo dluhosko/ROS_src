@@ -32,6 +32,7 @@ add_message_files(
         FILES
         pose_and_gripperState.msg
         pose_velocity_direction.msg
+        status_rt.msg
 )
  add_service_files(
    FILES

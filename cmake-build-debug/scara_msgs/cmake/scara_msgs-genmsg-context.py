@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg;/home/viktor/catkin_ws/src/scara_msgs/msg/robot_info.msg;/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg"
+messages_str = "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg;/home/viktor/catkin_ws/src/scara_msgs/msg/robot_info.msg;/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg;/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg"
 services_str = ""
 pkg_name = "scara_msgs"
 dependencies_str = "std_msgs"

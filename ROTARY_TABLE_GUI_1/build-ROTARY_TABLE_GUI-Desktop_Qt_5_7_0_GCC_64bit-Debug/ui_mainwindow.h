@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLCDNumber>
@@ -56,7 +57,7 @@ public:
     QWidget *horizontalLayoutWidget_18;
     QHBoxLayout *horizontalLayout_18;
     QLabel *label_26;
-    QLineEdit *config_workingState_LE;
+    QLineEdit *config_workingState_TE;
     QWidget *tab_3;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
@@ -135,6 +136,30 @@ public:
     QLabel *label_27;
     QLineEdit *direction_LE;
     QWidget *tab_21;
+    QFrame *frame_7;
+    QWidget *gridLayoutWidget;
+    QGridLayout *gridLayout;
+    QLabel *label_31;
+    QLabel *label_33;
+    QLCDNumber *status_ChopperTemp_LCD;
+    QLCDNumber *status_powerStageTemp_LCD;
+    QLabel *label_34;
+    QLCDNumber *status_MicroprocesorTemp_LCD;
+    QLabel *label_32;
+    QLCDNumber *filteredMotorCurrent_LCD;
+    QLabel *label_35;
+    QLabel *label_39;
+    QLabel *label_36;
+    QLabel *label_37;
+    QFrame *frame_10;
+    QWidget *horizontalLayoutWidget_19;
+    QHBoxLayout *horizontalLayout_19;
+    QLabel *label_30;
+    QLineEdit *config_workingState_LE;
+    QWidget *tab;
+    QLabel *label_13;
+    QLabel *label_14;
+    QLabel *label_15;
     QLabel *label_2;
     QPushButton *stop_PB;
     QPushButton *centralStop_PB;
@@ -170,16 +195,16 @@ public:
         tab_1->setObjectName(QStringLiteral("tab_1"));
         label_98 = new QLabel(tab_1);
         label_98->setObjectName(QStringLiteral("label_98"));
-        label_98->setGeometry(QRect(20, 10, 341, 451));
+        label_98->setGeometry(QRect(20, 10, 341, 431));
         label = new QLabel(tab_1);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(50, 60, 291, 151));
-        label->setPixmap(QPixmap(QString::fromUtf8("../IMG_20171006_175133_preview.jpeg")));
+        label->setPixmap(QPixmap(QString::fromUtf8("../../rotary_table_gui/pictures/IMG_20171006_175133_preview.jpeg")));
         label->setScaledContents(true);
         label_9 = new QLabel(tab_1);
         label_9->setObjectName(QStringLiteral("label_9"));
         label_9->setGeometry(QRect(90, 220, 191, 151));
-        label_9->setPixmap(QPixmap(QString::fromUtf8("../IMG_20171006_175125_preview.jpeg")));
+        label_9->setPixmap(QPixmap(QString::fromUtf8("../../rotary_table_gui/pictures/IMG_20171006_175125_preview.jpeg")));
         label_9->setScaledContents(true);
         control_Tabwidget->addTab(tab_1, QString());
         tab_2 = new QWidget();
@@ -187,7 +212,7 @@ public:
         label_28 = new QLabel(tab_2);
         label_28->setObjectName(QStringLiteral("label_28"));
         label_28->setGeometry(QRect(10, 10, 361, 231));
-        label_28->setPixmap(QPixmap(QString::fromUtf8("../Screenshot from 2017-10-11 16-52-30.png")));
+        label_28->setPixmap(QPixmap(QString::fromUtf8("../../rotary_table_gui/pictures/Screenshot from 2017-10-11 16-52-30.png")));
         label_28->setScaledContents(true);
         frame_8 = new QFrame(tab_2);
         frame_8->setObjectName(QStringLiteral("frame_8"));
@@ -224,10 +249,10 @@ public:
 
         horizontalLayout_18->addWidget(label_26);
 
-        config_workingState_LE = new QLineEdit(horizontalLayoutWidget_18);
-        config_workingState_LE->setObjectName(QStringLiteral("config_workingState_LE"));
+        config_workingState_TE = new QLineEdit(horizontalLayoutWidget_18);
+        config_workingState_TE->setObjectName(QStringLiteral("config_workingState_TE"));
 
-        horizontalLayout_18->addWidget(config_workingState_LE);
+        horizontalLayout_18->addWidget(config_workingState_TE);
 
         control_Tabwidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
@@ -254,6 +279,8 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         relativeControl_slider_SLIDER = new QSlider(verticalLayoutWidget);
         relativeControl_slider_SLIDER->setObjectName(QStringLiteral("relativeControl_slider_SLIDER"));
+        relativeControl_slider_SLIDER->setMaximum(3600);
+        relativeControl_slider_SLIDER->setSingleStep(1);
         relativeControl_slider_SLIDER->setOrientation(Qt::Horizontal);
 
         horizontalLayout->addWidget(relativeControl_slider_SLIDER);
@@ -301,6 +328,7 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         absoluteControl_slider_SLIDER = new QSlider(verticalLayoutWidget);
         absoluteControl_slider_SLIDER->setObjectName(QStringLiteral("absoluteControl_slider_SLIDER"));
+        absoluteControl_slider_SLIDER->setMaximum(3600);
         absoluteControl_slider_SLIDER->setOrientation(Qt::Horizontal);
 
         horizontalLayout_3->addWidget(absoluteControl_slider_SLIDER);
@@ -596,11 +624,126 @@ public:
         positionAndStatus_TabWidget->addTab(tab_11, QString());
         tab_21 = new QWidget();
         tab_21->setObjectName(QStringLiteral("tab_21"));
+        frame_7 = new QFrame(tab_21);
+        frame_7->setObjectName(QStringLiteral("frame_7"));
+        frame_7->setGeometry(QRect(10, 100, 301, 281));
+        frame_7->setFrameShape(QFrame::StyledPanel);
+        frame_7->setFrameShadow(QFrame::Raised);
+        gridLayoutWidget = new QWidget(frame_7);
+        gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
+        gridLayoutWidget->setGeometry(QRect(10, 10, 281, 261));
+        gridLayout = new QGridLayout(gridLayoutWidget);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        label_31 = new QLabel(gridLayoutWidget);
+        label_31->setObjectName(QStringLiteral("label_31"));
+
+        gridLayout->addWidget(label_31, 0, 0, 1, 1);
+
+        label_33 = new QLabel(gridLayoutWidget);
+        label_33->setObjectName(QStringLiteral("label_33"));
+
+        gridLayout->addWidget(label_33, 2, 0, 1, 1);
+
+        status_ChopperTemp_LCD = new QLCDNumber(gridLayoutWidget);
+        status_ChopperTemp_LCD->setObjectName(QStringLiteral("status_ChopperTemp_LCD"));
+
+        gridLayout->addWidget(status_ChopperTemp_LCD, 2, 1, 1, 1);
+
+        status_powerStageTemp_LCD = new QLCDNumber(gridLayoutWidget);
+        status_powerStageTemp_LCD->setObjectName(QStringLiteral("status_powerStageTemp_LCD"));
+
+        gridLayout->addWidget(status_powerStageTemp_LCD, 0, 1, 1, 1);
+
+        label_34 = new QLabel(gridLayoutWidget);
+        label_34->setObjectName(QStringLiteral("label_34"));
+
+        gridLayout->addWidget(label_34, 3, 0, 1, 1);
+
+        status_MicroprocesorTemp_LCD = new QLCDNumber(gridLayoutWidget);
+        status_MicroprocesorTemp_LCD->setObjectName(QStringLiteral("status_MicroprocesorTemp_LCD"));
+
+        gridLayout->addWidget(status_MicroprocesorTemp_LCD, 1, 1, 1, 1);
+
+        label_32 = new QLabel(gridLayoutWidget);
+        label_32->setObjectName(QStringLiteral("label_32"));
+
+        gridLayout->addWidget(label_32, 1, 0, 1, 1);
+
+        filteredMotorCurrent_LCD = new QLCDNumber(gridLayoutWidget);
+        filteredMotorCurrent_LCD->setObjectName(QStringLiteral("filteredMotorCurrent_LCD"));
+
+        gridLayout->addWidget(filteredMotorCurrent_LCD, 3, 1, 1, 1);
+
+        label_35 = new QLabel(gridLayoutWidget);
+        label_35->setObjectName(QStringLiteral("label_35"));
+        label_35->setMaximumSize(QSize(40, 16777215));
+
+        gridLayout->addWidget(label_35, 0, 2, 1, 1);
+
+        label_39 = new QLabel(gridLayoutWidget);
+        label_39->setObjectName(QStringLiteral("label_39"));
+
+        gridLayout->addWidget(label_39, 1, 2, 1, 1);
+
+        label_36 = new QLabel(gridLayoutWidget);
+        label_36->setObjectName(QStringLiteral("label_36"));
+
+        gridLayout->addWidget(label_36, 2, 2, 1, 1);
+
+        label_37 = new QLabel(gridLayoutWidget);
+        label_37->setObjectName(QStringLiteral("label_37"));
+
+        gridLayout->addWidget(label_37, 3, 2, 1, 1);
+
+        frame_10 = new QFrame(tab_21);
+        frame_10->setObjectName(QStringLiteral("frame_10"));
+        frame_10->setGeometry(QRect(10, 10, 311, 81));
+        frame_10->setFrameShape(QFrame::StyledPanel);
+        frame_10->setFrameShadow(QFrame::Raised);
+        horizontalLayoutWidget_19 = new QWidget(frame_10);
+        horizontalLayoutWidget_19->setObjectName(QStringLiteral("horizontalLayoutWidget_19"));
+        horizontalLayoutWidget_19->setGeometry(QRect(0, 0, 301, 80));
+        horizontalLayout_19 = new QHBoxLayout(horizontalLayoutWidget_19);
+        horizontalLayout_19->setSpacing(6);
+        horizontalLayout_19->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_19->setObjectName(QStringLiteral("horizontalLayout_19"));
+        horizontalLayout_19->setContentsMargins(0, 0, 0, 0);
+        label_30 = new QLabel(horizontalLayoutWidget_19);
+        label_30->setObjectName(QStringLiteral("label_30"));
+
+        horizontalLayout_19->addWidget(label_30);
+
+        config_workingState_LE = new QLineEdit(horizontalLayoutWidget_19);
+        config_workingState_LE->setObjectName(QStringLiteral("config_workingState_LE"));
+
+        horizontalLayout_19->addWidget(config_workingState_LE);
+
         positionAndStatus_TabWidget->addTab(tab_21, QString());
+        tab = new QWidget();
+        tab->setObjectName(QStringLiteral("tab"));
+        label_13 = new QLabel(tab);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setGeometry(QRect(20, 20, 291, 441));
+        label_13->setPixmap(QPixmap(QString::fromUtf8("../../rotary_table_gui/pictures/rt/rt_stol_gif.gif")));
+        label_13->setScaledContents(true);
+        label_14 = new QLabel(tab);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setGeometry(QRect(60, 50, 210, 210));
+        label_14->setPixmap(QPixmap(QString::fromUtf8("../../rotary_table_gui/pictures/rt/rt_gif.gif")));
+        label_14->setScaledContents(true);
+        label_15 = new QLabel(tab);
+        label_15->setObjectName(QStringLiteral("label_15"));
+        label_15->setGeometry(QRect(50, 370, 221, 61));
+        label_15->setPixmap(QPixmap(QString::fromUtf8("../../rotary_table_gui/pictures/sensodrive_rgb kopie.gif")));
+        label_15->setScaledContents(true);
+        positionAndStatus_TabWidget->addTab(tab, QString());
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(20, 50, 771, 121));
-        label_2->setPixmap(QPixmap(QString::fromUtf8("../Sensodrive-LogoE.gif")));
+        label_2->setGeometry(QRect(0, 20, 831, 151));
+        label_2->setPixmap(QPixmap(QString::fromUtf8("../../rotary_table_gui/pictures/sensodrive_rgb kopie.gif")));
         label_2->setScaledContents(true);
         stop_PB = new QPushButton(centralWidget);
         stop_PB->setObjectName(QStringLiteral("stop_PB"));
@@ -646,7 +789,7 @@ public:
         retranslateUi(MainWindow);
 
         control_Tabwidget->setCurrentIndex(1);
-        positionAndStatus_TabWidget->setCurrentIndex(0);
+        positionAndStatus_TabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -658,7 +801,7 @@ public:
         label_3->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">Rotary table GUI</span></p></body></html>", 0));
         label_4->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\">Control</span></p></body></html>", 0));
         label_5->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\">Position and Status</span></p></body></html>", 0));
-        label_98->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">Wellcome to ROTARY TABLE<br/>Graphical User Interface</span></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><span style=\" font-size:10pt; font-weight:600; font-style:italic;\">This GUI was provided by SENSODRIVE </span></p><p><span style=\" font-size:10pt; font-weight:600; font-style:italic;\">and Viktor Dluhos</span></p><p><br/></p></body></html>", 0));
+        label_98->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">Wellcome to ROTARY TABLE<br/>Graphical User Interface</span></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><span style=\" font-size:10pt; font-weight:600; font-style:italic;\">This GUI was provided by SENSODRIVE </span></p><p><span style=\" font-size:10pt; font-weight:600; font-style:italic;\">and Viktor Dluhos</span></p><p><br/></p></body></html>", 0));
         label->setText(QString());
         label_9->setText(QString());
         control_Tabwidget->setTabText(control_Tabwidget->indexOf(tab_1), QApplication::translate("MainWindow", "     Info      ", 0));
@@ -675,7 +818,7 @@ public:
         label_7->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Absolute position control</span></p></body></html>", 0));
         absoluteControl_slider_PB->setText(QApplication::translate("MainWindow", "PushButton", 0));
         absoluteControl_input_PB->setText(QApplication::translate("MainWindow", "PushButton", 0));
-        label_8->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Edit max velocity</span></p></body></html>", 0));
+        label_8->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Edit max velocity [deg/s]</span></p></body></html>", 0));
         MaxVelocity_input_PB->setText(QApplication::translate("MainWindow", "PushButton", 0));
         label_25->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Edit direction of rotation</span></p></body></html>", 0));
         direction_LEFT_CB->setText(QString());
@@ -690,14 +833,27 @@ public:
         label_20->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [deg/s]</span></p></body></html>", 0));
         label_21->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [rad/s]</span></p></body></html>", 0));
         label_22->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Current velocity</span></p></body></html>", 0));
-        label_23->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [deg]</span></p></body></html>", 0));
-        label_24->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [rad]</span></p></body></html>", 0));
+        label_23->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Rotation [deg/s]</span></p></body></html>", 0));
+        label_24->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Rotation [rots/min]</span></p></body></html>", 0));
         label_16->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Current position</span></p></body></html>", 0));
         label_17->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [deg]</span></p></body></html>", 0));
         label_18->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [rad]</span></p></body></html>", 0));
         label_27->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Direction</span></p></body></html>", 0));
-        positionAndStatus_TabWidget->setTabText(positionAndStatus_TabWidget->indexOf(tab_11), QApplication::translate("MainWindow", "                Position         ", 0));
-        positionAndStatus_TabWidget->setTabText(positionAndStatus_TabWidget->indexOf(tab_21), QApplication::translate("MainWindow", "             Status             ", 0));
+        positionAndStatus_TabWidget->setTabText(positionAndStatus_TabWidget->indexOf(tab_11), QApplication::translate("MainWindow", "      Position    ", 0));
+        label_31->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">Power stage<br/>Temperature </span></p></body></html>", 0));
+        label_33->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">Chopper<br/>Temperature</span></p></body></html>", 0));
+        label_34->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">Filtered<br/>motor current</span></p></body></html>", 0));
+        label_32->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">Microprocessor<br/>Temperature</span></p></body></html>", 0));
+        label_35->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[\302\260C]</span></p></body></html>", 0));
+        label_39->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[\302\260C]</span></p></body></html>", 0));
+        label_36->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[\302\260C]</span></p></body></html>", 0));
+        label_37->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[mA]</span></p></body></html>", 0));
+        label_30->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Current<br/>Working state</span></p></body></html>", 0));
+        positionAndStatus_TabWidget->setTabText(positionAndStatus_TabWidget->indexOf(tab_21), QApplication::translate("MainWindow", "    Status    ", 0));
+        label_13->setText(QString());
+        label_14->setText(QString());
+        label_15->setText(QString());
+        positionAndStatus_TabWidget->setTabText(positionAndStatus_TabWidget->indexOf(tab), QApplication::translate("MainWindow", "  Visualisation", 0));
         label_2->setText(QString());
         stop_PB->setText(QApplication::translate("MainWindow", "STOP", 0));
         centralStop_PB->setText(QApplication::translate("MainWindow", "CENTRAL STOP and EXIT", 0));

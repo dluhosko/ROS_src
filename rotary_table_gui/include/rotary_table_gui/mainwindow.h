@@ -17,6 +17,7 @@
 #include "std_msgs/UInt8MultiArray.h"
 #include "std_msgs/String.h"
 #include "scara_msgs/pose_velocity_direction.h"
+#include "scara_msgs/status_rt.h"
 #include <stdlib.h>
 
 const double RAD_TO_DEG = 57.2957795130;
@@ -45,7 +46,7 @@ public:
 
     void CurrentWorkingErrorCallback(const std_msgs::Int32 currentWorkingError);
 
-    void UselessCallback(const std_msgs::Int32 uselessInfo);
+    void CurrentStatusCallback(const scara_msgs::status_rt status);  //Zmenit typ spravy na svoj preddefinovany
 
 private slots:
     void on_config_OFF_PB_clicked();
@@ -103,6 +104,7 @@ private:
     std_msgs::UInt8MultiArray uInt8MultiArray_msg;
     std_msgs::String string_msg;
     scara_msgs::pose_velocity_direction pose_velocity_direction_msg;
+    scara_msgs::status_rt status_msg;
 
     ros::Publisher rotate_DEC_pub, rotate_HEX_pub, workingState_pub, useless_pub;
     ros::Subscriber currentAngleDeg_sub, currentVelocityPerMinute_sub, currentState_sub, currentError_sub, status_sub, useless_sub;

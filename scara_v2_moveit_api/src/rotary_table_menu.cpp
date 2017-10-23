@@ -8,10 +8,8 @@
 
 int main(int argc, char **argv){
 
-
     ros::init(argc, argv, "menu_node");
-    ros::NodeHandle n1,n2,n3,n4;
-    ros::NodeHandle nn1,nn2,nn3,nn4;
+    ros::NodeHandle n, nn;
     ros::Rate loop_rate(10);
     ros::AsyncSpinner spinner(1);
     spinner.start();
@@ -32,26 +30,31 @@ int main(int argc, char **argv){
 //    }
 
     ROS_WARN("Init publishers:");
-        currentRotationInDeg_pub = n1.advertise<std_msgs::Int32>("currentAngleDeg_RT",1000);
+        currentRotationInDeg_pub = n.advertise<std_msgs::Int32>("currentAngleDeg_RT",1000);
         ROS_INFO("currentAngleDeg_RT");
-        currentVelocityInDeg_pub = n2.advertise<std_msgs::Int32>("currentVelocityPerMinute_RT",1000);
+        currentVelocityInDeg_pub = n.advertise<std_msgs::Int32>("currentVelocityPerMinute_RT",1000);
         ROS_INFO("currentAngleDeg_RT");
-        currentStatus_pub = n3.advertise<std_msgs::Int32>("currentWorkingState_RT",1000);
+        currentWorkingState_pub = n.advertise<std_msgs::Int32>("currentWorkingState_RT",1000);
         ROS_INFO("currentWorkingState_RT");
-        currentError_pub = n4.advertise<std_msgs::Int32>("currentWorkingError_RT",1000);
+        currentError_pub = n.advertise<std_msgs::Int32>("currentWorkingError_RT",1000);
         ROS_INFO("currentWorkingError_RT");
+        tempAndCurrentStatus_pub = n.advertise<scara_v2_moveit_api::status_rt>("currentStatus_RT",1000);
+
     //dodat aj rychlost
 
     ROS_WARN("Init subscribers:");
-        rotateCommand_sub = nn1.subscribe("rotate_DEC_RT",1000,rotateCommandCallback);
+        rotateCommand_sub = nn.subscribe("rotate_DEC_RT",1000,rotateCommandCallback);
         ROS_INFO("rotate_DEC_RT");
-        workingStateCommand_sub = nn2.subscribe("set_working_mode_RT",1000,workingStateCommandCallback);
+        workingStateCommand_sub = nn.subscribe("set_working_mode_RT",1000,workingStateCommandCallback);
         ROS_INFO("set_working_mode_RT");
 
     while (ros::ok()){
 
         can->readCAN(&frame);
         decodeCANmsg(&frame);
+        requestTemperature();
+
+        sleep(5);
 
         ros::spinOnce();
         loop_rate.sleep();

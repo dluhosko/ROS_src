@@ -56,6 +56,7 @@ include scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/progress.mak
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp: devel/share/common-lisp/ros/scara_msgs/msg/robot_info.lisp
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp: devel/share/common-lisp/ros/scara_msgs/msg/pose_velocity_direction.lisp
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp: devel/share/common-lisp/ros/scara_msgs/msg/pose_and_gripperState.lisp
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp: devel/share/common-lisp/ros/scara_msgs/msg/status_rt.lisp
 
 
 devel/share/common-lisp/ros/scara_msgs/msg/robot_info.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
@@ -73,10 +74,16 @@ devel/share/common-lisp/ros/scara_msgs/msg/pose_and_gripperState.lisp: ../scara_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from scara_msgs/pose_and_gripperState.msg"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/common-lisp/ros/scara_msgs/msg
 
+devel/share/common-lisp/ros/scara_msgs/msg/status_rt.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+devel/share/common-lisp/ros/scara_msgs/msg/status_rt.lisp: ../scara_msgs/msg/status_rt.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from scara_msgs/status_rt.msg"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/common-lisp/ros/scara_msgs/msg
+
 scara_msgs_generate_messages_lisp: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp
 scara_msgs_generate_messages_lisp: devel/share/common-lisp/ros/scara_msgs/msg/robot_info.lisp
 scara_msgs_generate_messages_lisp: devel/share/common-lisp/ros/scara_msgs/msg/pose_velocity_direction.lisp
 scara_msgs_generate_messages_lisp: devel/share/common-lisp/ros/scara_msgs/msg/pose_and_gripperState.lisp
+scara_msgs_generate_messages_lisp: devel/share/common-lisp/ros/scara_msgs/msg/status_rt.lisp
 scara_msgs_generate_messages_lisp: scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/build.make
 
 .PHONY : scara_msgs_generate_messages_lisp

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "scara_msgs: 3 messages, 0 services")
+message(STATUS "scara_msgs: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -32,6 +32,11 @@ add_custom_target(_scara_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "scara_msgs" "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg" ""
 )
 
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg" NAME_WE)
+add_custom_target(_scara_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "scara_msgs" "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -56,6 +61,12 @@ _generate_msg_cpp(scara_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/scara_msgs
 )
+_generate_msg_cpp(scara_msgs
+  "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/scara_msgs
+)
 
 ### Generating Services
 
@@ -76,6 +87,8 @@ add_dependencies(scara_msgs_generate_messages_cpp _scara_msgs_generate_messages_
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_cpp _scara_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg" NAME_WE)
+add_dependencies(scara_msgs_generate_messages_cpp _scara_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_cpp _scara_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -105,6 +118,12 @@ _generate_msg_eus(scara_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/scara_msgs
 )
+_generate_msg_eus(scara_msgs
+  "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/scara_msgs
+)
 
 ### Generating Services
 
@@ -125,6 +144,8 @@ add_dependencies(scara_msgs_generate_messages_eus _scara_msgs_generate_messages_
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_eus _scara_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg" NAME_WE)
+add_dependencies(scara_msgs_generate_messages_eus _scara_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_eus _scara_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -154,6 +175,12 @@ _generate_msg_lisp(scara_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/scara_msgs
 )
+_generate_msg_lisp(scara_msgs
+  "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/scara_msgs
+)
 
 ### Generating Services
 
@@ -174,6 +201,8 @@ add_dependencies(scara_msgs_generate_messages_lisp _scara_msgs_generate_messages
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_lisp _scara_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg" NAME_WE)
+add_dependencies(scara_msgs_generate_messages_lisp _scara_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_lisp _scara_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -203,6 +232,12 @@ _generate_msg_nodejs(scara_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/scara_msgs
 )
+_generate_msg_nodejs(scara_msgs
+  "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/scara_msgs
+)
 
 ### Generating Services
 
@@ -223,6 +258,8 @@ add_dependencies(scara_msgs_generate_messages_nodejs _scara_msgs_generate_messag
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_nodejs _scara_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg" NAME_WE)
+add_dependencies(scara_msgs_generate_messages_nodejs _scara_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_nodejs _scara_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -252,6 +289,12 @@ _generate_msg_py(scara_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/scara_msgs
 )
+_generate_msg_py(scara_msgs
+  "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/scara_msgs
+)
 
 ### Generating Services
 
@@ -272,6 +315,8 @@ add_dependencies(scara_msgs_generate_messages_py _scara_msgs_generate_messages_c
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_py _scara_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg" NAME_WE)
+add_dependencies(scara_msgs_generate_messages_py _scara_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg" NAME_WE)
 add_dependencies(scara_msgs_generate_messages_py _scara_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

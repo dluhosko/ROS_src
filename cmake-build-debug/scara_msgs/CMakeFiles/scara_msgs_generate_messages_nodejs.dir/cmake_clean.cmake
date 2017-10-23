@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "../devel/share/gennodejs/ros/scara_msgs/msg/robot_info.js"
   "../devel/share/gennodejs/ros/scara_msgs/msg/pose_velocity_direction.js"
   "../devel/share/gennodejs/ros/scara_msgs/msg/pose_and_gripperState.js"
+  "../devel/share/gennodejs/ros/scara_msgs/msg/status_rt.js"
 )
 
 # Per-language clean rules from dependency scanning.

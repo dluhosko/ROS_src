@@ -55,6 +55,7 @@ include scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nod
 
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs: devel/share/gennodejs/ros/scara_v2_moveit_api/msg/pose_and_gripperState.js
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs: devel/share/gennodejs/ros/scara_v2_moveit_api/msg/pose_velocity_direction.js
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs: devel/share/gennodejs/ros/scara_v2_moveit_api/msg/status_rt.js
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs: devel/share/gennodejs/ros/scara_v2_moveit_api/srv/SimpleService.js
 
 
@@ -68,14 +69,20 @@ devel/share/gennodejs/ros/scara_v2_moveit_api/msg/pose_velocity_direction.js: ..
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from scara_v2_moveit_api/pose_velocity_direction.msg"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/gennodejs/ros/scara_v2_moveit_api/msg
 
+devel/share/gennodejs/ros/scara_v2_moveit_api/msg/status_rt.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/scara_v2_moveit_api/msg/status_rt.js: ../scara_v2_moveit_api/msg/status_rt.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from scara_v2_moveit_api/status_rt.msg"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/status_rt.msg -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/gennodejs/ros/scara_v2_moveit_api/msg
+
 devel/share/gennodejs/ros/scara_v2_moveit_api/srv/SimpleService.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 devel/share/gennodejs/ros/scara_v2_moveit_api/srv/SimpleService.js: ../scara_v2_moveit_api/srv/SimpleService.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from scara_v2_moveit_api/SimpleService.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from scara_v2_moveit_api/SimpleService.srv"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/gennodejs/ros/scara_v2_moveit_api/srv
 
 scara_v2_moveit_api_generate_messages_nodejs: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs
 scara_v2_moveit_api_generate_messages_nodejs: devel/share/gennodejs/ros/scara_v2_moveit_api/msg/pose_and_gripperState.js
 scara_v2_moveit_api_generate_messages_nodejs: devel/share/gennodejs/ros/scara_v2_moveit_api/msg/pose_velocity_direction.js
+scara_v2_moveit_api_generate_messages_nodejs: devel/share/gennodejs/ros/scara_v2_moveit_api/msg/status_rt.js
 scara_v2_moveit_api_generate_messages_nodejs: devel/share/gennodejs/ros/scara_v2_moveit_api/srv/SimpleService.js
 scara_v2_moveit_api_generate_messages_nodejs: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make
 

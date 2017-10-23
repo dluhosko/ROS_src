@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "../devel/include/scara_msgs/robot_info.h"
   "../devel/include/scara_msgs/pose_velocity_direction.h"
   "../devel/include/scara_msgs/pose_and_gripperState.h"
+  "../devel/include/scara_msgs/status_rt.h"
 )
 
 # Per-language clean rules from dependency scanning.

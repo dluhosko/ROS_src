@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg;/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg"
+messages_str = "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg;/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg;/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/status_rt.msg"
 services_str = "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv"
 pkg_name = "scara_v2_moveit_api"
 dependencies_str = "std_msgs;sensor_msgs;actionlib_msgs;scara_msgs"

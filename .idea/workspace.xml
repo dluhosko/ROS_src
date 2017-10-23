@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" buildAllGenerated="true">
     <generated>
+      <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_status_rt" />
       <config projectName="Project" targetName="polled_camera_generate_messages_eus" />
       <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction" />
       <config projectName="Project" targetName="scara_msgs_gencpp" />
@@ -67,6 +68,7 @@
       <config projectName="Project" targetName="cube_publisher" />
       <config projectName="Project" targetName="clean_test_results" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_LinkState" />
+      <config projectName="Project" targetName="_scara_msgs_generate_messages_check_deps_status_rt" />
       <config projectName="Project" targetName="scara_ros_node" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="gazebo_ros_elevator" />
@@ -325,14 +327,90 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="Done: subscriber to Status and Error from CAN, modified SENSODRIVE logo, adjust rotary table disk&#10;&#10;TO DO: test the incomming signals from RT and then modify STATUS and ERROR decoding in GUI, change line edit to text edit and -&gt; then write current status to text edit, find out how to set direction of rotation">
+    <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="Done: subscriber to Status and Error from CAN, modified SENSODRIVE logo, adjust rotary table disk&#10;&#10;TO DO: test the incomming signals from RT and then modify STATUS and ERROR decoding in GUI, change line edit to text edit and -&gt; then write current status to text edit, find out how to set direction of rotation`">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rotary_table_gui/pictures/sensodrive_rgb kopie.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_msgs/msg/status_rt.msg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/msg/status_rt.msg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/ROTARY_TABLE_GUI" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/ROTARY_TABLE_GUI" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/mainwindow.o" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/mainwindow.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/ROTARY_TABLE_GUI.pro.user" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/ROTARY_TABLE_GUI.pro.user" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.ui" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/ui_mainwindow.h" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/ui_mainwindow.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgs-msg-extras.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/devel/share/scara_msgs/cmake/scara_msgs-msg-extras.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/scara_v2_moveit_api/cmake/scara_v2_moveit_api-msg-extras.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/devel/share/scara_v2_moveit_api/cmake/scara_v2_moveit_api-msg-extras.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gtest.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gtest.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gtest_main.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gtest_main.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/catkin_generated/installspace/scara_msgs-msg-extras.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/catkin_generated/installspace/scara_msgs-msg-extras.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/catkin_generated/scara_msgs-msg-extras.cmake.develspace.in" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/catkin_generated/scara_msgs-msg-extras.cmake.develspace.in" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/catkin_generated/scara_msgs-msg-extras.cmake.installspace.in" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/catkin_generated/scara_msgs-msg-extras.cmake.installspace.in" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/cmake/scara_msgs-genmsg-context.py" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/cmake/scara_msgs-genmsg-context.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/cmake/scara_msgs-genmsg.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/cmake/scara_msgs-genmsg.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/scara_msgs.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_msgs/scara_msgs.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/cube_publisher.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/cube_publisher.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/gripper_control.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/gripper_control.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface1.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface2.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface3_PICKandPLACE.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface4_position_control.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface5_rt.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/move_group_interface6_async_PICKandPLACE.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/multiple_cube_publisher.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_nodejs.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/catkin_generated/installspace/scara_v2_moveit_api-msg-extras.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/catkin_generated/installspace/scara_v2_moveit_api-msg-extras.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/catkin_generated/scara_v2_moveit_api-msg-extras.cmake.develspace.in" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/catkin_generated/scara_v2_moveit_api-msg-extras.cmake.develspace.in" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/catkin_generated/scara_v2_moveit_api-msg-extras.cmake.installspace.in" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/catkin_generated/scara_v2_moveit_api-msg-extras.cmake.installspace.in" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/cmake/scara_v2_moveit_api-genmsg-context.py" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/cmake/scara_v2_moveit_api-genmsg-context.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/cmake/scara_v2_moveit_api-genmsg.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/cmake/scara_v2_moveit_api-genmsg.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/scara_v2_moveit_api.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/scara_v2_moveit_api/scara_v2_moveit_api.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" afterPath="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" afterPath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/user_interface/mainwindow.ui" afterPath="$PROJECT_DIR$/rotary_table_gui/user_interface/mainwindow.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_msgs/CMakeLists.txt" afterPath="$PROJECT_DIR$/scara_msgs/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
     </list>
@@ -350,69 +428,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mainwindow.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="280" column="27" lean-forward="true" selection-start-line="280" selection-start-column="27" selection-end-line="280" selection-end-column="27" />
-              <folding>
-                <element signature="e#1996#2253#0" expanded="false" />
-                <element signature="e#2255#2461#0" expanded="false" />
-                <element signature="e#2463#2663#0" expanded="false" />
-                <element signature="e#2665#2871#0" expanded="false" />
-                <element signature="e#3200#4412#0" expanded="false" />
-                <element signature="e#4414#5694#0" expanded="false" />
-                <element signature="e#5753#6019#0" expanded="false" />
-                <element signature="e#6021#7292#0" expanded="false" />
-                <element signature="e#7294#8465#0" expanded="false" />
-                <element signature="e#8524#9076#0" expanded="false" />
-                <element signature="e#9135#9479#0" expanded="false" />
-                <element signature="e#9572#9859#0" expanded="false" />
-                <element signature="e#9954#10227#0" expanded="false" />
-                <element signature="e#10322#10594#0" expanded="false" />
-                <element signature="e#10746#11161#0" expanded="false" />
-                <element signature="e#12001#12485#0" expanded="false" />
-                <element signature="e#12487#12735#0" expanded="false" />
-                <element signature="e#12795#13375#0" expanded="false" />
-                <element signature="e#13377#13842#0" expanded="false" />
-                <element signature="e#13844#15901#0" expanded="false" />
-                <element signature="e#15971#17934#0" expanded="false" />
-                <element signature="e#18004#18131#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainwindow.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1494">
-              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="rotary_table_menu.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="93" lean-forward="false" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="93" />
+            <state relative-caret-position="990">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rotary_table_menu.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rotary_table_menu.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3150">
-              <caret line="175" column="9" lean-forward="false" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
+            <state relative-caret-position="258">
+              <caret line="253" column="24" lean-forward="false" selection-start-line="253" selection-start-column="24" selection-end-line="253" selection-end-column="24" />
               <folding>
-                <element signature="e#716#936#0" expanded="false" />
-                <element signature="e#938#5239#0" expanded="false" />
-                <element signature="e#9012#9993#0" expanded="false" />
-                <element signature="e#10066#10244#0" expanded="false" />
+                <element signature="e#845#1065#0" expanded="false" />
+                <element signature="e#5403#10008#0" expanded="false" />
+                <element signature="e#12744#12922#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -429,15 +463,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>switch</find>
-      <find>gripperState_pub</find>
-      <find>displayed</find>
-      <find>teachCubePositions</find>
-      <find>initTeachedPositions</find>
-      <find>wait for</find>
-      <find>actualPose_pub</find>
-      <find>actualPose</find>
-      <find>Sensodrive</find>
       <find>CurrentWorkingStateCallback</find>
       <find>pose_and</find>
       <find>pose_and_gripperState</find>
@@ -452,13 +477,22 @@
       <find>SIZE_OF_1B_MESSAGE</find>
       <find>hexaNumber</find>
       <find>data</find>
-      <find>memcpy</find>
       <find>convertCANmsg</find>
       <find>fillEmptyBytesInCANmsg</find>
       <find>char2uint8_t</find>
       <find>currentWorkingState_sub</find>
       <find>hex2dec</find>
       <find>le</find>
+      <find>status_sub</find>
+      <find>TE</find>
+      <find>currentStatus</find>
+      <find>current</find>
+      <find>number</find>
+      <find>pose_velocity_direction</find>
+      <find>currentStatus_pub</find>
+      <find>clearArray</find>
+      <find>display</find>
+      <find>memcpy</find>
     </findStrings>
     <replaceStrings>
       <replace>scara_v2_moveit_config</replace>
@@ -477,7 +511,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/scara_gui/scara_gui_plugin.xml" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_target_pose.msg" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_desired_joint_values.msg" />
@@ -522,12 +555,13 @@
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/package.xml" />
         <option value="$PROJECT_DIR$/scara_gui/package.xml" />
         <option value="$PROJECT_DIR$/scara_msgs/package.xml" />
-        <option value="$PROJECT_DIR$/scara_msgs/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/msg/status_rt.msg" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
+        <option value="$PROJECT_DIR$/scara_msgs/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
         <option value="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
       </list>
     </option>
   </component>
@@ -610,25 +644,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scara_gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_gui" />
+              <option name="myItemId" value="scara_v2_moveit_api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -650,77 +666,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rotary_table_gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rotary_table_gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user_interface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rotary_table_gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rotary_table_gui" />
+              <option name="myItemId" value="scara_v2_moveit_api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rotary_table_gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -745,19 +695,19 @@
     <property name="settings.editor.selected.configurable" value="xslt.associations" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scara_msgs/msg" />
-      <recent name="$PROJECT_DIR$/scara_gui/msg" />
-      <recent name="$PROJECT_DIR$/scara_v2_moveit_api/launch" />
-      <recent name="$PROJECT_DIR$/scara_gui/user_interface" />
-      <recent name="$PROJECT_DIR$/scara_gui/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scara_v2_moveit_api/include" />
       <recent name="$PROJECT_DIR$/scara_v2_with_gripper/urdf/more" />
       <recent name="$PROJECT_DIR$/scara_v2_with_gripper/launch/other" />
       <recent name="$PROJECT_DIR$/scara_v2_moveit_api/src" />
       <recent name="$PROJECT_DIR$/scara_urdf_testing/urdf" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scara_msgs/msg" />
+      <recent name="$PROJECT_DIR$/scara_gui/msg" />
+      <recent name="$PROJECT_DIR$/scara_v2_moveit_api/launch" />
+      <recent name="$PROJECT_DIR$/scara_gui/user_interface" />
+      <recent name="$PROJECT_DIR$/scara_gui/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2245,7 +2195,15 @@
       <envs />
       <method />
     </configuration>
-    <list size="316">
+    <configuration default="false" name="_scara_v2_moveit_api_generate_messages_check_deps_status_rt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_scara_v2_moveit_api_generate_messages_check_deps_status_rt" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_scara_msgs_generate_messages_check_deps_status_rt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_scara_msgs_generate_messages_check_deps_status_rt" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <list size="318">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.clean_test_results" />
       <item index="2" class="java.lang.String" itemvalue="Application.download_extra_data" />
@@ -2562,6 +2520,8 @@
       <item index="313" class="java.lang.String" itemvalue="Application.rotary_table_menu" />
       <item index="314" class="java.lang.String" itemvalue="Application._scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction" />
       <item index="315" class="java.lang.String" itemvalue="Application._scara_msgs_generate_messages_check_deps_pose_velocity_direction" />
+      <item index="316" class="java.lang.String" itemvalue="Application._scara_v2_moveit_api_generate_messages_check_deps_status_rt" />
+      <item index="317" class="java.lang.String" itemvalue="Application._scara_msgs_generate_messages_check_deps_status_rt" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -2768,14 +2728,10 @@
       <workItem from="1508359609160" duration="1844000" />
       <workItem from="1508409966742" duration="16391000" />
       <workItem from="1508571317416" duration="5031000" />
-      <workItem from="1508577407907" duration="1133000" />
-    </task>
-    <task id="LOCAL-00035" summary="IK and getTF">
-      <created>1502896345303</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1502896345303</updated>
+      <workItem from="1508577407907" duration="1321000" />
+      <workItem from="1508730821377" duration="5984000" />
+      <workItem from="1508747975083" duration="4701000" />
+      <workItem from="1508772851988" duration="75000" />
     </task>
     <task id="LOCAL-00036" summary="ROS implemented on SENSO-PC + IK+getTF+joint state republisher node (matlab comunication)">
       <created>1502896481462</created>
@@ -3113,26 +3069,33 @@
       <option name="project" value="LOCAL" />
       <updated>1508421857156</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Done: subscriber to Status and Error from CAN, modified SENSODRIVE logo, adjust rotary table disk&#10;&#10;TO DO: test the incomming signals from RT and then modify STATUS and ERROR decoding in GUI, change line edit to text edit and -&gt; then write current status to text edit, find out how to set direction of rotation">
+      <created>1508578804325</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1508578804326</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="869835000" />
+    <option name="totallyTimeSpent" value="880783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14956331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19868995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.4978166" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24408603" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24408603" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048780486" sideWeight="0.33370167" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29892474" sideWeight="0.7854803" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36344087" sideWeight="0.8886463" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.4978166" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3198,7 +3161,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="45" />
+      <option name="time" value="46" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3247,20 +3210,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="1284" column="24" lean-forward="false" selection-start-line="1284" selection-start-column="24" selection-end-line="1284" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="891" column="34" lean-forward="false" selection-start-line="891" selection-start-column="17" selection-end-line="891" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface1.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -3381,41 +3330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_basic_info.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_target_pose.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_set_parameters.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_desired_joint_values.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_button_commands.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_and_gripperState.msg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -3444,13 +3358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_velocity_direction.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_colision_object.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -3470,13 +3377,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_msgs/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -3524,18 +3424,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_can_test.cpp" />
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_can_test.h" />
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_gui/src/mainwindow.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="877" column="4" lean-forward="false" selection-start-line="877" selection-start-column="4" selection-end-line="877" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3546,69 +3438,113 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_target_pose.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_set_parameters.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_desired_joint_values.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_button_commands.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/scara_basic_info.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_velocity_direction.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/status_rt.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_msgs/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/include/linux/can.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="145" column="16" lean-forward="false" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="16" />
+        <state relative-caret-position="224">
+          <caret line="104" column="12" lean-forward="false" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_msgs/msg/status_rt.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="280" column="27" lean-forward="true" selection-start-line="280" selection-start-column="27" selection-end-line="280" selection-end-column="27" />
-          <folding>
-            <element signature="e#1996#2253#0" expanded="false" />
-            <element signature="e#2255#2461#0" expanded="false" />
-            <element signature="e#2463#2663#0" expanded="false" />
-            <element signature="e#2665#2871#0" expanded="false" />
-            <element signature="e#3200#4412#0" expanded="false" />
-            <element signature="e#4414#5694#0" expanded="false" />
-            <element signature="e#5753#6019#0" expanded="false" />
-            <element signature="e#6021#7292#0" expanded="false" />
-            <element signature="e#7294#8465#0" expanded="false" />
-            <element signature="e#8524#9076#0" expanded="false" />
-            <element signature="e#9135#9479#0" expanded="false" />
-            <element signature="e#9572#9859#0" expanded="false" />
-            <element signature="e#9954#10227#0" expanded="false" />
-            <element signature="e#10322#10594#0" expanded="false" />
-            <element signature="e#10746#11161#0" expanded="false" />
-            <element signature="e#12001#12485#0" expanded="false" />
-            <element signature="e#12487#12735#0" expanded="false" />
-            <element signature="e#12795#13375#0" expanded="false" />
-            <element signature="e#13377#13842#0" expanded="false" />
-            <element signature="e#13844#15901#0" expanded="false" />
-            <element signature="e#15971#17934#0" expanded="false" />
-            <element signature="e#18004#18131#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="810">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1494">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="439">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="93" lean-forward="false" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="93" />
+        <state relative-caret-position="990">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
-          <caret line="175" column="9" lean-forward="false" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
+        <state relative-caret-position="258">
+          <caret line="253" column="24" lean-forward="false" selection-start-line="253" selection-start-column="24" selection-end-line="253" selection-end-column="24" />
           <folding>
-            <element signature="e#716#936#0" expanded="false" />
-            <element signature="e#938#5239#0" expanded="false" />
-            <element signature="e#9012#9993#0" expanded="false" />
-            <element signature="e#10066#10244#0" expanded="false" />
+            <element signature="e#845#1065#0" expanded="false" />
+            <element signature="e#5403#10008#0" expanded="false" />
+            <element signature="e#12744#12922#0" expanded="false" />
           </folding>
         </state>
       </provider>

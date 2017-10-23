@@ -55,6 +55,7 @@ include scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus
 
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/msg/pose_and_gripperState.l
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/msg/pose_velocity_direction.l
+scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/msg/status_rt.l
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/srv/SimpleService.l
 scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/manifest.l
 
@@ -69,18 +70,24 @@ devel/share/roseus/ros/scara_v2_moveit_api/msg/pose_velocity_direction.l: ../sca
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from scara_v2_moveit_api/pose_velocity_direction.msg"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/roseus/ros/scara_v2_moveit_api/msg
 
+devel/share/roseus/ros/scara_v2_moveit_api/msg/status_rt.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+devel/share/roseus/ros/scara_v2_moveit_api/msg/status_rt.l: ../scara_v2_moveit_api/msg/status_rt.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from scara_v2_moveit_api/status_rt.msg"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/status_rt.msg -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/roseus/ros/scara_v2_moveit_api/msg
+
 devel/share/roseus/ros/scara_v2_moveit_api/srv/SimpleService.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 devel/share/roseus/ros/scara_v2_moveit_api/srv/SimpleService.l: ../scara_v2_moveit_api/srv/SimpleService.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from scara_v2_moveit_api/SimpleService.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from scara_v2_moveit_api/SimpleService.srv"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv -Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p scara_v2_moveit_api -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/roseus/ros/scara_v2_moveit_api/srv
 
 devel/share/roseus/ros/scara_v2_moveit_api/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for scara_v2_moveit_api"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for scara_v2_moveit_api"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_v2_moveit_api && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/roseus/ros/scara_v2_moveit_api scara_v2_moveit_api std_msgs sensor_msgs actionlib_msgs scara_msgs
 
 scara_v2_moveit_api_generate_messages_eus: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus
 scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/msg/pose_and_gripperState.l
 scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/msg/pose_velocity_direction.l
+scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/msg/status_rt.l
 scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/srv/SimpleService.l
 scara_v2_moveit_api_generate_messages_eus: devel/share/roseus/ros/scara_v2_moveit_api/manifest.l
 scara_v2_moveit_api_generate_messages_eus: scara_v2_moveit_api/CMakeFiles/scara_v2_moveit_api_generate_messages_eus.dir/build.make

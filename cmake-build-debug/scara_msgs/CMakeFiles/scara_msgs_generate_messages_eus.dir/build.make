@@ -56,6 +56,7 @@ include scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/progress.make
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/msg/robot_info.l
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/msg/pose_velocity_direction.l
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/msg/pose_and_gripperState.l
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/msg/status_rt.l
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/manifest.l
 
 
@@ -74,14 +75,20 @@ devel/share/roseus/ros/scara_msgs/msg/pose_and_gripperState.l: ../scara_msgs/msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from scara_msgs/pose_and_gripperState.msg"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/roseus/ros/scara_msgs/msg
 
+devel/share/roseus/ros/scara_msgs/msg/status_rt.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+devel/share/roseus/ros/scara_msgs/msg/status_rt.l: ../scara_msgs/msg/status_rt.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from scara_msgs/status_rt.msg"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/roseus/ros/scara_msgs/msg
+
 devel/share/roseus/ros/scara_msgs/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for scara_msgs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for scara_msgs"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/roseus/ros/scara_msgs scara_msgs std_msgs
 
 scara_msgs_generate_messages_eus: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus
 scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/msg/robot_info.l
 scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/msg/pose_velocity_direction.l
 scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/msg/pose_and_gripperState.l
+scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/msg/status_rt.l
 scara_msgs_generate_messages_eus: devel/share/roseus/ros/scara_msgs/manifest.l
 scara_msgs_generate_messages_eus: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build.make
 

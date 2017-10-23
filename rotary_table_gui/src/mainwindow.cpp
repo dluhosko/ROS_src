@@ -41,8 +41,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ROS_INFO("currentWorkingError_RT");
     currentVelocityPerMinute_sub = nn.subscribe("currentVelocityPerMinute_RT",1000,&MainWindow::CurrentVelocityCallback, this);
     ROS_INFO("currentVelocityPerMinute_RT");
-    useless_sub = nn.subscribe("useless_sub_RT",1000,&MainWindow::UselessCallback, this);
-    ROS_INFO("useless_sub_RT");
+    status_sub = nn.subscribe("currentStatus_RT",1000,&MainWindow::CurrentStatusCallback, this);
+    ROS_INFO("currentStatus_RT");
 
     ui->direction_RIGHT_CB->setChecked(true);
     ui->direction_LEFT_CB->setChecked(false);
@@ -309,9 +309,9 @@ void MainWindow::on_centralStop_PB_clicked(){
     //system("pkill roslaunch");
     //Kill GUI
     //sleep(3); //Sleep zabranuje vypisu
-    //QApplication::quit();
+    QApplication::quit();
 
-}
+} /** Poriesit delay aby pred tym vypisal do TE **/
 /*****************************************************/
 
 
@@ -353,6 +353,7 @@ void MainWindow::rotateImg(double angle) {
     ui->label_14->setPixmap(pixmap);
 
 }
+
 /*****************************************************/
 
 
@@ -384,72 +385,95 @@ void MainWindow::CurrentVelocityCallback(const std_msgs::Int32 currentVelocity){
 
 void MainWindow::CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkingState){
 
-    ROS_INFO("Current working state callback %x",currentWorkingState.data);
+    //ROS_INFO("Current working state callback %x",currentWorkingState.data);
 
     switch (currentWorkingState.data){
         case 0x0000:    //State: Start
         {
-            //ui->config_workingState_LE->setText("Current working state : Start");
+            ui->config_workingState_TE->setTextColor(QColor("orange"));
+            ui->config_workingState_TE->append("Current working state : Start");
+            ui->config_workingState_LE->setText("Working state: Start");
             ROS_INFO("State: Start");
             break;
         }
         case 0x0002:    //State: Referencing
         {
-            //ui->config_workingState_LE->setText("Current working state : Referencing");
+            ui->config_workingState_TE->setTextColor(QColor("orange"));
+            ui->config_workingState_TE->append("Current working state : Referencing");
+            ui->config_workingState_LE->setText("Working state: Referencing");
             ROS_INFO("State: Referencing");
             break;
         }
         case 0x0004:    //State: Homing
         {
-            //ui->config_workingState_LE->setText("Current working state : Homing");
+            ui->config_workingState_TE->setTextColor(QColor("orange"));
+            ui->config_workingState_TE->append("Current working state : Homing");
+            ui->config_workingState_LE->setText("Working state: Homing");
             ROS_INFO("State: Homing");
             break;
         }
         case 0xc008:    //fall through -> OR
         case 0x0008:    //State: Running
         {
-            //ui->config_workingState_LE->setText("Current working state : Running");
+            ui->config_workingState_TE->setTextColor(QColor("green"));
+            ui->config_workingState_TE->append("Current working state : Running");
+            ui->config_workingState_LE->setText("Working state: Running");
             ROS_INFO("State: Running");
             break;
         }
         case 0x0080:    //State: Error
         {
-
+            ui->config_workingState_TE->setTextColor(QColor("red"));
+            ui->config_workingState_TE->append("Current working state : Error (pleaae chceck the error message in status tab)");
+            ui->config_workingState_LE->setText("Working state : Error");
             ROS_INFO("State: Error");
             break;
         }
         case 0x0100:    //State: Ready
         {
-
+            ui->config_workingState_TE->setTextColor(QColor("orange"));
+            ui->config_workingState_TE->append("Current working state : Ready");
+            ui->config_workingState_LE->setText("Working state : Ready");
             ROS_INFO("State: Ready");
             break;
         }
         case 0x0200:    //Warning of 90% overload level before error
         {
-
+            ui->config_workingState_TE->setTextColor(QColor("red"));
+            ui->config_workingState_TE->append("Warning of 90% overload level before error");
+            ui->config_workingState_LE->setText("90% overload level before error");
             ROS_INFO("Warning of 90% overload level before error");
             break;
         }
         case 0x0400:    //Position reached
         {
-
+            ui->config_workingState_TE->setTextColor(QColor("green"));
+            ui->config_workingState_TE->append("Position reached");
+            ui->config_workingState_LE->setText("Position reached");
             ROS_INFO("Position reached");
             break;
         }
         case 0x4000:    //Test CPU Watchdog Successful
         {
-
+            ui->config_workingState_TE->setTextColor(QColor("black"));
+            ui->config_workingState_TE->append("Test CPU Watchdog Successful");
+            ui->config_workingState_LE->setText("Test CPU Watchdog Successful");
             ROS_INFO("Test CPU Watchdog Successful");
             break;
         }
         case 0x8000:    //RSG Mode: CAN / not IO Mode
         {
-
+            ui->config_workingState_TE->setTextColor(QColor("black"));
+            ui->config_workingState_TE->append("RSG Mode: CAN / not IO Mode");
+            ui->config_workingState_LE->setText("RSG Mode: CAN / not IO Mode");
             ROS_INFO("RSG Mode: CAN / not IO Mode");
             break;
         }
         default:
         {
+            ui->config_workingState_TE->setTextColor(QColor("red"));
+            ui->config_workingState_TE->append("Not recognized message " + QString::number(currentWorkingState.data));
+            ui->config_workingState_LE->setText("Not recognized message " + QString::number(currentWorkingState.data));
             ROS_ERROR("Not recognized message [%x]",currentWorkingState.data);
             break;
         }
@@ -542,10 +566,17 @@ void MainWindow::CurrentWorkingErrorCallback(const std_msgs::Int32 currentWorkin
 
 }   /****** Dorobit fall through pre stavy ktore si zistim *********/
 
-void MainWindow::UselessCallback(const std_msgs::Int32 uselessInfo){
+void MainWindow::CurrentStatusCallback(const scara_msgs::status_rt status){
 
-    //ROS_INFO("Useless callback... nothing to show");
+    ROS_INFO("Status msg: temp1 = %x(%d), temp2=%x(%d), temp3=%x(%d), current=%x(%d)",status.power_stage_temperature,status.power_stage_temperature,
+    status.microprocessor_temperature,status.microprocessor_temperature,status.chopper_temperature,status.chopper_temperature,
+    status.filtered_motor_current, status.filtered_motor_current);
 
-}
+    ui->status_powerStageTemp_LCD->display(status.power_stage_temperature);
+    ui->status_MicroprocesorTemp_LCD->display(status.microprocessor_temperature);
+    ui->status_ChopperTemp_LCD->display(status.chopper_temperature);
+    ui->filteredMotorCurrent_LCD->display(status.filtered_motor_current);
+
+}   /** Bude treba preratat hodnotu  statusu na realne jednotky  **/
 /*****************************************************/
 

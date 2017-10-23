@@ -37,6 +37,7 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
     "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg"
     "/home/viktor/catkin_ws/src/scara_msgs/msg/robot_info.msg"
     "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg"
+    "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg"
     )
 endif()
 

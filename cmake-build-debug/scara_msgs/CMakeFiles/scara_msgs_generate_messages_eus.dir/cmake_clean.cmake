@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "../devel/share/roseus/ros/scara_msgs/msg/robot_info.l"
   "../devel/share/roseus/ros/scara_msgs/msg/pose_velocity_direction.l"
   "../devel/share/roseus/ros/scara_msgs/msg/pose_and_gripperState.l"
+  "../devel/share/roseus/ros/scara_msgs/msg/status_rt.l"
   "../devel/share/roseus/ros/scara_msgs/manifest.l"
 )
 

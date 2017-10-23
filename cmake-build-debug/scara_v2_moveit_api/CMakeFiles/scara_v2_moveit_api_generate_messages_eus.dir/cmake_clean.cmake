@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/scara_v2_moveit_api_generate_messages_eus"
   "../devel/share/roseus/ros/scara_v2_moveit_api/msg/pose_and_gripperState.l"
   "../devel/share/roseus/ros/scara_v2_moveit_api/msg/pose_velocity_direction.l"
+  "../devel/share/roseus/ros/scara_v2_moveit_api/msg/status_rt.l"
   "../devel/share/roseus/ros/scara_v2_moveit_api/srv/SimpleService.l"
   "../devel/share/roseus/ros/scara_v2_moveit_api/manifest.l"
 )

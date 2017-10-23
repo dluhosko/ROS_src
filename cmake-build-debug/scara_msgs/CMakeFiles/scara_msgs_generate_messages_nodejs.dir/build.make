@@ -56,6 +56,7 @@ include scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/progress.m
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/robot_info.js
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/pose_velocity_direction.js
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/pose_and_gripperState.js
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/status_rt.js
 
 
 devel/share/gennodejs/ros/scara_msgs/msg/robot_info.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
@@ -73,10 +74,16 @@ devel/share/gennodejs/ros/scara_msgs/msg/pose_and_gripperState.js: ../scara_msgs
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from scara_msgs/pose_and_gripperState.msg"
 	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/gennodejs/ros/scara_msgs/msg
 
+devel/share/gennodejs/ros/scara_msgs/msg/status_rt.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/scara_msgs/msg/status_rt.js: ../scara_msgs/msg/status_rt.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/viktor/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from scara_msgs/status_rt.msg"
+	cd /home/viktor/catkin_ws/src/cmake-build-debug/scara_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg -Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p scara_msgs -o /home/viktor/catkin_ws/src/cmake-build-debug/devel/share/gennodejs/ros/scara_msgs/msg
+
 scara_msgs_generate_messages_nodejs: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs
 scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/robot_info.js
 scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/pose_velocity_direction.js
 scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/pose_and_gripperState.js
+scara_msgs_generate_messages_nodejs: devel/share/gennodejs/ros/scara_msgs/msg/status_rt.js
 scara_msgs_generate_messages_nodejs: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make
 
 .PHONY : scara_msgs_generate_messages_nodejs
