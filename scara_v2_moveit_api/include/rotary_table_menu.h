@@ -193,6 +193,8 @@ void decodeCANmsg(can_frame *frame){
         }
     }
 
+    ROS_ERROR("Pato sedi vedla mna");
+
 }
 
 void requestTemperature(){
@@ -251,10 +253,10 @@ void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction de
     int vel = desiredPositionVelocityDirection.velocity;
     bool dir = desiredPositionVelocityDirection.direction;
     uint8_t data[8];
-    if (changeDirection(dir)){
-        ROS_INFO("sleep for 3 seconds");
-        sleep(3);
-    }
+//    if (changeDirection(dir)){
+//        ROS_INFO("sleep for 3 seconds");
+//        sleep(3);
+//    }
 
     memcpy(data,&rot,2*sizeof(uint8_t));
     memcpy(data+2,&vel,2*sizeof(uint8_t));

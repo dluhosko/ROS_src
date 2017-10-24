@@ -16,6 +16,7 @@ int main(int argc, char **argv){
 
     uint8_t data[8];
     can_frame frame;
+    frame.can_id = 0x00;
 
     can = new Can_interface();
     std::vector<int > ids;
@@ -23,7 +24,8 @@ int main(int argc, char **argv){
     ids.push_back(0x211);
     ids.push_back(0x212);
 //    try {
-//        can->initCAN("can0", ids, -1);
+        can->initCAN("can0", ids, 100);
+    
 //    } catch(std::exception& e){
 //            ROS_ERROR("%s", e.what());
 //        return -1;
@@ -50,14 +52,17 @@ int main(int argc, char **argv){
 
     while (ros::ok()){
 
+        ROS_WARN("1");
         can->readCAN(&frame);
         decodeCANmsg(&frame);
-        requestTemperature();
+        //requestTemperature();
 
-        sleep(5);
+        ROS_WARN("2");
+        //sleep(5);
 
         ros::spinOnce();
         loop_rate.sleep();
+        ROS_WARN("3");
     }
 
 
