@@ -57,7 +57,7 @@ public:
     QWidget *horizontalLayoutWidget_18;
     QHBoxLayout *horizontalLayout_18;
     QLabel *label_26;
-    QLineEdit *config_workingState_TE;
+    QTextEdit *config_workingState_TE;
     QWidget *tab_3;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
@@ -78,6 +78,13 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLineEdit *absoluteControl_input_LE;
     QPushButton *absoluteControl_input_PB;
+    QLabel *label_40;
+    QHBoxLayout *horizontalLayout_20;
+    QPushButton *smooth_minusOne_PB;
+    QPushButton *smooth_minusHalf_PB;
+    QLabel *label_41;
+    QPushButton *smooth_plusHalf_PB;
+    QPushButton *smooth_plusOne_PB;
     QLabel *label_8;
     QHBoxLayout *horizontalLayout_5;
     QLineEdit *MaxVelocity_input_LE;
@@ -155,7 +162,12 @@ public:
     QWidget *horizontalLayoutWidget_19;
     QHBoxLayout *horizontalLayout_19;
     QLabel *label_30;
-    QLineEdit *config_workingState_LE;
+    QTextEdit *status_workingState_TE;
+    QFrame *frame_11;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout_8;
+    QLabel *label_38;
+    QTextEdit *status_error_TE;
     QWidget *tab;
     QLabel *label_13;
     QLabel *label_14;
@@ -190,7 +202,7 @@ public:
         label_5->setGeometry(QRect(490, 180, 241, 31));
         control_Tabwidget = new QTabWidget(centralWidget);
         control_Tabwidget->setObjectName(QStringLiteral("control_Tabwidget"));
-        control_Tabwidget->setGeometry(QRect(50, 210, 391, 511));
+        control_Tabwidget->setGeometry(QRect(20, 210, 421, 511));
         tab_1 = new QWidget();
         tab_1->setObjectName(QStringLiteral("tab_1"));
         label_98 = new QLabel(tab_1);
@@ -249,7 +261,7 @@ public:
 
         horizontalLayout_18->addWidget(label_26);
 
-        config_workingState_TE = new QLineEdit(horizontalLayoutWidget_18);
+        config_workingState_TE = new QTextEdit(horizontalLayoutWidget_18);
         config_workingState_TE->setObjectName(QStringLiteral("config_workingState_TE"));
 
         horizontalLayout_18->addWidget(config_workingState_TE);
@@ -259,7 +271,7 @@ public:
         tab_3->setObjectName(QStringLiteral("tab_3"));
         verticalLayoutWidget = new QWidget(tab_3);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(20, 10, 352, 451));
+        verticalLayoutWidget->setGeometry(QRect(10, 10, 401, 451));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -361,6 +373,48 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_4);
+
+        label_40 = new QLabel(verticalLayoutWidget);
+        label_40->setObjectName(QStringLiteral("label_40"));
+        label_40->setMaximumSize(QSize(16777215, 20));
+
+        verticalLayout->addWidget(label_40);
+
+        horizontalLayout_20 = new QHBoxLayout();
+        horizontalLayout_20->setSpacing(6);
+        horizontalLayout_20->setObjectName(QStringLiteral("horizontalLayout_20"));
+        smooth_minusOne_PB = new QPushButton(verticalLayoutWidget);
+        smooth_minusOne_PB->setObjectName(QStringLiteral("smooth_minusOne_PB"));
+        smooth_minusOne_PB->setMaximumSize(QSize(75, 16777215));
+
+        horizontalLayout_20->addWidget(smooth_minusOne_PB);
+
+        smooth_minusHalf_PB = new QPushButton(verticalLayoutWidget);
+        smooth_minusHalf_PB->setObjectName(QStringLiteral("smooth_minusHalf_PB"));
+        smooth_minusHalf_PB->setMaximumSize(QSize(75, 16777215));
+
+        horizontalLayout_20->addWidget(smooth_minusHalf_PB);
+
+        label_41 = new QLabel(verticalLayoutWidget);
+        label_41->setObjectName(QStringLiteral("label_41"));
+        label_41->setMaximumSize(QSize(50, 16777215));
+
+        horizontalLayout_20->addWidget(label_41);
+
+        smooth_plusHalf_PB = new QPushButton(verticalLayoutWidget);
+        smooth_plusHalf_PB->setObjectName(QStringLiteral("smooth_plusHalf_PB"));
+        smooth_plusHalf_PB->setMaximumSize(QSize(75, 16777215));
+
+        horizontalLayout_20->addWidget(smooth_plusHalf_PB);
+
+        smooth_plusOne_PB = new QPushButton(verticalLayoutWidget);
+        smooth_plusOne_PB->setObjectName(QStringLiteral("smooth_plusOne_PB"));
+        smooth_plusOne_PB->setMaximumSize(QSize(75, 16777215));
+
+        horizontalLayout_20->addWidget(smooth_plusOne_PB);
+
+
+        verticalLayout->addLayout(horizontalLayout_20);
 
         label_8 = new QLabel(verticalLayoutWidget);
         label_8->setObjectName(QStringLiteral("label_8"));
@@ -626,12 +680,12 @@ public:
         tab_21->setObjectName(QStringLiteral("tab_21"));
         frame_7 = new QFrame(tab_21);
         frame_7->setObjectName(QStringLiteral("frame_7"));
-        frame_7->setGeometry(QRect(10, 100, 301, 281));
+        frame_7->setGeometry(QRect(10, 230, 311, 241));
         frame_7->setFrameShape(QFrame::StyledPanel);
         frame_7->setFrameShadow(QFrame::Raised);
         gridLayoutWidget = new QWidget(frame_7);
         gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(10, 10, 281, 261));
+        gridLayoutWidget->setGeometry(QRect(10, 10, 291, 221));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
@@ -700,12 +754,12 @@ public:
 
         frame_10 = new QFrame(tab_21);
         frame_10->setObjectName(QStringLiteral("frame_10"));
-        frame_10->setGeometry(QRect(10, 10, 311, 81));
+        frame_10->setGeometry(QRect(10, 10, 311, 101));
         frame_10->setFrameShape(QFrame::StyledPanel);
         frame_10->setFrameShadow(QFrame::Raised);
         horizontalLayoutWidget_19 = new QWidget(frame_10);
         horizontalLayoutWidget_19->setObjectName(QStringLiteral("horizontalLayoutWidget_19"));
-        horizontalLayoutWidget_19->setGeometry(QRect(0, 0, 301, 80));
+        horizontalLayoutWidget_19->setGeometry(QRect(0, 0, 311, 101));
         horizontalLayout_19 = new QHBoxLayout(horizontalLayoutWidget_19);
         horizontalLayout_19->setSpacing(6);
         horizontalLayout_19->setContentsMargins(11, 11, 11, 11);
@@ -713,13 +767,40 @@ public:
         horizontalLayout_19->setContentsMargins(0, 0, 0, 0);
         label_30 = new QLabel(horizontalLayoutWidget_19);
         label_30->setObjectName(QStringLiteral("label_30"));
+        label_30->setMaximumSize(QSize(60, 200));
 
         horizontalLayout_19->addWidget(label_30);
 
-        config_workingState_LE = new QLineEdit(horizontalLayoutWidget_19);
-        config_workingState_LE->setObjectName(QStringLiteral("config_workingState_LE"));
+        status_workingState_TE = new QTextEdit(horizontalLayoutWidget_19);
+        status_workingState_TE->setObjectName(QStringLiteral("status_workingState_TE"));
+        status_workingState_TE->setMaximumSize(QSize(250, 16777215));
 
-        horizontalLayout_19->addWidget(config_workingState_LE);
+        horizontalLayout_19->addWidget(status_workingState_TE);
+
+        frame_11 = new QFrame(tab_21);
+        frame_11->setObjectName(QStringLiteral("frame_11"));
+        frame_11->setGeometry(QRect(10, 120, 311, 101));
+        frame_11->setFrameShape(QFrame::StyledPanel);
+        frame_11->setFrameShadow(QFrame::Raised);
+        horizontalLayoutWidget = new QWidget(frame_11);
+        horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(0, 0, 311, 101));
+        horizontalLayout_8 = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout_8->setSpacing(6);
+        horizontalLayout_8->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
+        label_38 = new QLabel(horizontalLayoutWidget);
+        label_38->setObjectName(QStringLiteral("label_38"));
+        label_38->setMaximumSize(QSize(60, 16777215));
+
+        horizontalLayout_8->addWidget(label_38);
+
+        status_error_TE = new QTextEdit(horizontalLayoutWidget);
+        status_error_TE->setObjectName(QStringLiteral("status_error_TE"));
+        status_error_TE->setMaximumSize(QSize(250, 16777215));
+
+        horizontalLayout_8->addWidget(status_error_TE);
 
         positionAndStatus_TabWidget->addTab(tab_21, QString());
         tab = new QWidget();
@@ -731,12 +812,12 @@ public:
         label_13->setScaledContents(true);
         label_14 = new QLabel(tab);
         label_14->setObjectName(QStringLiteral("label_14"));
-        label_14->setGeometry(QRect(60, 50, 210, 210));
+        label_14->setGeometry(QRect(60, 50, 200, 200));
         label_14->setPixmap(QPixmap(QString::fromUtf8("../../rotary_table_gui/pictures/rt/rt_gif.gif")));
         label_14->setScaledContents(true);
         label_15 = new QLabel(tab);
         label_15->setObjectName(QStringLiteral("label_15"));
-        label_15->setGeometry(QRect(50, 370, 221, 61));
+        label_15->setGeometry(QRect(50, 370, 200, 60));
         label_15->setPixmap(QPixmap(QString::fromUtf8("../../rotary_table_gui/pictures/sensodrive_rgb kopie.gif")));
         label_15->setScaledContents(true);
         positionAndStatus_TabWidget->addTab(tab, QString());
@@ -788,7 +869,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        control_Tabwidget->setCurrentIndex(1);
+        control_Tabwidget->setCurrentIndex(2);
         positionAndStatus_TabWidget->setCurrentIndex(1);
 
 
@@ -813,13 +894,19 @@ public:
         label_26->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Working state</span></p></body></html>", 0));
         control_Tabwidget->setTabText(control_Tabwidget->indexOf(tab_2), QApplication::translate("MainWindow", "  Configuration ", 0));
         label_6->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Relative position control</span></p></body></html>", 0));
-        relativeControl_slider_PB->setText(QApplication::translate("MainWindow", "PushButton", 0));
-        relativeControl_input_PB->setText(QApplication::translate("MainWindow", "PushButton", 0));
+        relativeControl_slider_PB->setText(QApplication::translate("MainWindow", "OK", 0));
+        relativeControl_input_PB->setText(QApplication::translate("MainWindow", "OK", 0));
         label_7->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Absolute position control</span></p></body></html>", 0));
-        absoluteControl_slider_PB->setText(QApplication::translate("MainWindow", "PushButton", 0));
-        absoluteControl_input_PB->setText(QApplication::translate("MainWindow", "PushButton", 0));
+        absoluteControl_slider_PB->setText(QApplication::translate("MainWindow", "OK", 0));
+        absoluteControl_input_PB->setText(QApplication::translate("MainWindow", "OK", 0));
+        label_40->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Smooth tune position</span></p></body></html>", 0));
+        smooth_minusOne_PB->setText(QApplication::translate("MainWindow", "-1\302\260", 0));
+        smooth_minusHalf_PB->setText(QApplication::translate("MainWindow", "-0.1\302\260", 0));
+        label_41->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">&lt;- | -&gt;</p></body></html>", 0));
+        smooth_plusHalf_PB->setText(QApplication::translate("MainWindow", "+0.1\302\260", 0));
+        smooth_plusOne_PB->setText(QApplication::translate("MainWindow", "+1\302\260", 0));
         label_8->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Edit max velocity [deg/s]</span></p></body></html>", 0));
-        MaxVelocity_input_PB->setText(QApplication::translate("MainWindow", "PushButton", 0));
+        MaxVelocity_input_PB->setText(QApplication::translate("MainWindow", "OK", 0));
         label_25->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Edit direction of rotation</span></p></body></html>", 0));
         direction_LEFT_CB->setText(QString());
         direction_LEFT_PB->setText(QApplication::translate("MainWindow", "<- LEFT", 0));
@@ -848,7 +935,8 @@ public:
         label_39->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[\302\260C]</span></p></body></html>", 0));
         label_36->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[\302\260C]</span></p></body></html>", 0));
         label_37->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[mA]</span></p></body></html>", 0));
-        label_30->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Current<br/>Working state</span></p></body></html>", 0));
+        label_30->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Current<br/>Working<br/>state</span></p></body></html>", 0));
+        label_38->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Current<br/>Error</span></p></body></html>", 0));
         positionAndStatus_TabWidget->setTabText(positionAndStatus_TabWidget->indexOf(tab_21), QApplication::translate("MainWindow", "    Status    ", 0));
         label_13->setText(QString());
         label_14->setText(QString());

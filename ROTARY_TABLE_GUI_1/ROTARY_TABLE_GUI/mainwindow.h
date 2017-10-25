@@ -54,6 +54,14 @@ private slots:
 
     void on_direction_RIGHT_CB_toggled(bool checked);
 
+    void on_smooth_plusHalf_PB_clicked();
+
+    void on_smooth_plusOne_PB_clicked();
+
+    void on_smooth_minusHalf_PB_clicked();
+
+    void on_smooth_minusOne_PB_clicked();
+
 private:
     Ui::MainWindow *ui;
 

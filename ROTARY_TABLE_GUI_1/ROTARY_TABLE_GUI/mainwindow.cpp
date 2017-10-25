@@ -216,3 +216,23 @@ void MainWindow::on_centralStop_PB_clicked(){
 }
 
 
+
+void MainWindow::on_smooth_plusHalf_PB_clicked()
+{
+
+}
+
+void MainWindow::on_smooth_plusOne_PB_clicked()
+{
+
+}
+
+void MainWindow::on_smooth_minusHalf_PB_clicked()
+{
+
+}
+
+void MainWindow::on_smooth_minusOne_PB_clicked()
+{
+
+}
