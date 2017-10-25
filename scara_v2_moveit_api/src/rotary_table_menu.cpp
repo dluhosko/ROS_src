@@ -23,13 +23,13 @@ int main(int argc, char **argv){
     ids.push_back(0x210);
     ids.push_back(0x211);
     ids.push_back(0x212);
-//    try {
+    try {
         can->initCAN("can0", ids, 100);
     
-//    } catch(std::exception& e){
-//            ROS_ERROR("%s", e.what());
-//        return -1;
-//    }
+    } catch(std::exception& e){
+            ROS_ERROR("CAN NOT OPENED due to exeption : %s", e.what());
+        return -1;
+    }
 
     ROS_WARN("Init publishers:");
         currentRotationInDeg_pub = n.advertise<std_msgs::Int32>("currentAngleDeg_RT",1000);
@@ -49,21 +49,22 @@ int main(int argc, char **argv){
         ROS_INFO("rotate_DEC_RT");
         workingStateCommand_sub = nn.subscribe("set_working_mode_RT",1000,workingStateCommandCallback);
         ROS_INFO("set_working_mode_RT");
+        exitProgram_sub = nn.subscribe("exitProgram_RT",1000,exitProgramCallback);
 
     while (ros::ok()){
 
-        ROS_WARN("1");
+        if(exit_program)
+            break;
+
         can->readCAN(&frame);
         decodeCANmsg(&frame);
         //requestTemperature();
 
-        ROS_WARN("2");
-        //sleep(5);
-
         ros::spinOnce();
         loop_rate.sleep();
-        ROS_WARN("3");
     }
+
+    can->closeCAN();
 
 
     return 0;

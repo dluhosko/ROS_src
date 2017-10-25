@@ -8,21 +8,24 @@
 #include <ros/ros.h>
 #include <std_msgs/Int32.h>
 #include <std_msgs/String.h>
+#include <std_msgs/Bool.h>
 #include "scara_v2_moveit_api/pose_velocity_direction.h"
 #include "scara_v2_moveit_api/pose_and_gripperState.h"
 #include "scara_v2_moveit_api/status_rt.h"
 #include <can_interface/can_interface.h>
 
 //*********************************** Global Variables ****************************************//
+bool exit_program = 0;
 int i = 0;
 std_msgs::Int32 int32_msg;
 scara_v2_moveit_api::pose_velocity_direction posVelDir_msg;
 scara_v2_moveit_api::status_rt status_msg;
 ros::Publisher currentRotationInDeg_pub, currentVelocityInDeg_pub, currentWorkingState_pub, currentError_pub, tempAndCurrentStatus_pub;
-ros::Subscriber rotateCommand_sub, workingStateCommand_sub;
+ros::Subscriber rotateCommand_sub, workingStateCommand_sub, exitProgram_sub;
 Can_interface *can;
 
 //************************************* Functions *********************************************//
+//! \Brief Sets 0 to every uint8_t elemet of array of size size_of_array
 void clearArray(uint8_t *array, int size_of_array){
 
     for (int i=0;i<size_of_array;i++){
@@ -31,7 +34,10 @@ void clearArray(uint8_t *array, int size_of_array){
 
 }
 
+//! \Brief According to inputNumber this function sends hexadecimal number with id=0x200 via CAN to RT
 void sendDesiredWorkingState(int inputNumber){
+
+    /** Description of each inputNumber is explained in workingStateCommandCallback*/
 
     uint8_t data_to_send[8];            //Create data array to be send
     can_frame frame;                    //Create CAN frame
@@ -47,7 +53,10 @@ void sendDesiredWorkingState(int inputNumber){
             memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to be send to array of size 8
             memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+            if (can->writeCAN(&frame) == -1 ){                              //Write CAN message to CAN bus
+                ROS_INFO("CAN write OK");
+            } else
+                ROS_INFO("CAN write not OK");
             break;
         }
         case 2: //READY
@@ -58,7 +67,7 @@ void sendDesiredWorkingState(int inputNumber){
             memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
             memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+            can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
             break;
         }
         case 3: //ON
@@ -69,7 +78,7 @@ void sendDesiredWorkingState(int inputNumber){
             memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
             memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+            can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
             break;
         }
         case 4: //ERROR
@@ -80,7 +89,7 @@ void sendDesiredWorkingState(int inputNumber){
             memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
             memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+            can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
             break;
         }
         default:
@@ -91,7 +100,7 @@ void sendDesiredWorkingState(int inputNumber){
             memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
             memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-            //can->writeCAN(&frame);                                          //write CAN message to CAN bus
+            can->writeCAN(&frame);                                          //write CAN message to CAN bus
             sleep(1);
 
             clearArray(data_to_send,8);
@@ -99,14 +108,16 @@ void sendDesiredWorkingState(int inputNumber){
             memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
             memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-            //can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+            can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
             break;
         }
     }
 
-}   //Just uncomment can->writeCAN
+}
 
+//! \Brief According to ID of input frame it decodes the incomming CAN message and sends it to GUI
 void decodeCANmsg(can_frame *frame){
+
 
     switch (frame->can_id){
         case 0x210:     //Status answer
@@ -188,15 +199,18 @@ void decodeCANmsg(can_frame *frame){
         }
         default:
         {
-            ROS_ERROR("Not defined ID of message ... please check documentation for %x",frame->can_id);
+
+            ROS_ERROR("ID: %x",frame->can_id);
+
             break;
         }
     }
 
-    ROS_ERROR("Pato sedi vedla mna");
+    //ROS_ERROR("Pato sedi vedla mna");
 
 }
 
+//! \Brief Sends a request message to RT to get response of current temperatures
 void requestTemperature(){
 
     if (i == 20){
@@ -212,11 +226,44 @@ void requestTemperature(){
     }
     i++;
 
+}               //******************************************** DOKONCIT !!!!!!! *****************************************//
+
+//! \Brief Check and modify inputNumber(float) between down and up limit
+float inLimits_float(float inputNumber, float downLimit, float upLimit){
+
+    if (inputNumber < downLimit){
+        ROS_WARN("down limit(%f) reached !",downLimit);
+        return downLimit;
+    }else if (inputNumber >= upLimit){
+        ROS_WARN("up limit(%f) reached !",upLimit);
+        return upLimit;
+    }else{
+        return -1;
+    }
+
 }
 
+//! \Brief Check and modify inputNumber(int) between down and up limit
+int inLimits_int(int inputNumber, int downLimit, int upLimit){
+
+    if (inputNumber <= downLimit){
+        ROS_WARN("down limit(%d) reached !",downLimit);
+        return downLimit;
+    }else if (inputNumber >= upLimit){
+        ROS_WARN("up limit(%d) reached !",upLimit);
+        return upLimit;
+    }else{
+        return -1;
+    }
+
+}
+
+//! \Brief According to desiredDirection it sends CAN message to RT to change direction of rotation
 bool changeDirection(bool desiredDirection){
 
-    /** Direction 0 - clockwise, 1 - anticlockwise **/
+    /**_____________Description of input values:____________________**/
+    /**      desiredDirection- Clockwise (0) Anticlockwise(1)       **/
+    /*****************************************************************/
     static bool lastDirection = false;
 
     if (desiredDirection != lastDirection){
@@ -242,17 +289,24 @@ bool changeDirection(bool desiredDirection){
         return false;
     }
 
-}   /** Zistit ako len jednoducho otocit smer otacania -> ake parametre pouzit **/
+}   //****************** Zistit ako len jednoducho otocit smer otacania -> ake parametre pouzit ***********//
 
 //************************************** Callbacks ********************************************//
+//! \Brief This function is called immediately after an incomming message of rotation+velocity+direction has arrived from GUI
 void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction desiredPositionVelocityDirection){
 
+    /**_____________Description of input values:_____________**/
+    /**      rotation is in [increment]                      **/
+    /**      velocity is in [rotations per minute]           **/
+    /**      direction- Clockwise (0) Anticlockwise(1)       **/
+    /**********************************************************/
 
-    //Direction 0x226!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    int rot = desiredPositionVelocityDirection.rotation;
-    int vel = desiredPositionVelocityDirection.velocity;
+    int rot = inLimits_int(desiredPositionVelocityDirection.rotation,0,3600);
+    int vel = (int)(inLimits_float(desiredPositionVelocityDirection.velocity, 0.0, 60.0) + 0.5);
     bool dir = desiredPositionVelocityDirection.direction;
+    ROS_INFO("des rot =%f , des vel=%f(%d) des dir=%d",rot/10.0,desiredPositionVelocityDirection.velocity,vel,dir);
     uint8_t data[8];
+
 //    if (changeDirection(dir)){
 //        ROS_INFO("sleep for 3 seconds");
 //        sleep(3);
@@ -266,16 +320,37 @@ void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction de
     frame.can_dlc = 4;              //Define lenght of CAN message
     memcpy(&frame.data, data, sizeof(data));    //Copy data to CAN frame
 
-    //for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-    //can->writeCAN(&frame);        //Send message via CAN
+    for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
+    can->writeCAN(&frame);        //Send message via CAN
 
 }   /**************    Direction to solve (225) !!!!   ****************/
 
+//! \Brief This function is called immediately after an incomming message of change of working state has arrived from GUI
 void workingStateCommandCallback(const std_msgs::Int32 mode){
+
+    /**_____________Description of mode:_____________________**/
+    /**      mode == 1  =>  0x10                             **/
+    /**      mode == 2  =>  0x12                             **/
+    /**      mode == 3  =>  0x14                             **/
+    /**      mode == 4  =>  0x1f                             **/
+    /**********************************************************/
 
     ROS_INFO("workingStateCommandCallback : desired mode=%d",mode.data);
     sendDesiredWorkingState(mode.data);
 
 }
+
+//! \Brief This function is called immediately after an incomming message of exit program has arrived from GUI
+void exitProgramCallback(const std_msgs::Bool exitCommand){
+
+    /**_____________Description of mode:_____________________**/
+    /**      exitCommand == true  =>  exit main              **/
+    /**********************************************************/
+    ROS_INFO("%s",exitCommand.data ? "Exit program":"Not exit program");
+    exit_program = exitCommand.data;
+
+}
+
+
 
 #endif //PROJECT_ROTARY_TABLE_MENU_H

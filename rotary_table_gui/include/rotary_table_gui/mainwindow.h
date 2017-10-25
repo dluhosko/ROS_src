@@ -84,6 +84,7 @@ private slots:
     void on_direction_RIGHT_CB_toggled(bool checked);
 
     //Custom functions
+    void display_exit_of_program();
 
     void sendWorkingMode(const int modeSelect);
 
@@ -91,22 +92,28 @@ private slots:
 
     void rotateImg(double angle);
 
+    void displayCurrentWorkingStatus(int num1, int num2, int num3, int num4, int numberOfMessage);
+
+    void displayCurrentWorkingError(int num1, int num2, int num3, int num4, int numberOfMessage);
+
 private:
     Ui::MainWindow *ui;
 
     ros::AsyncSpinner *aspinner;
 
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
+    int centralStopCounter = 0;
     double currentAngleDeg = 0.0, currentVelocityDeg = 0.0;
     char hexString[16];
 
+    std_msgs::Bool bool_msg;
     std_msgs::Int32 int32_msg;
     std_msgs::UInt8MultiArray uInt8MultiArray_msg;
     std_msgs::String string_msg;
     scara_msgs::pose_velocity_direction pose_velocity_direction_msg;
     scara_msgs::status_rt status_msg;
 
-    ros::Publisher rotate_DEC_pub, rotate_HEX_pub, workingState_pub, useless_pub;
+    ros::Publisher rotate_DEC_pub, rotate_HEX_pub, workingState_pub, exitProgram_pub;
     ros::Subscriber currentAngleDeg_sub, currentVelocityPerMinute_sub, currentState_sub, currentError_sub, status_sub, useless_sub;
 
 };

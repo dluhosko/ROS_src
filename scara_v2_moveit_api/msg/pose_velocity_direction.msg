@@ -1,3 +1,3 @@
 int32 rotation
-int32 velocity
+float64 velocity
 bool direction
