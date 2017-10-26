@@ -104,13 +104,15 @@ private slots:
 
     void displayCurrentWorkingError(int num1, int num2, int num3, int num4, int numberOfMessage);
 
+    double dmod(double x, long long mod);
+
 private:
     Ui::MainWindow *ui;
 
     ros::AsyncSpinner *aspinner;
 
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
-    int centralStopCounter = 0;
+    int centralStopCounter = 0, currentAngleInt = 0;
     double currentAngleDeg = 0.0, currentVelocityDeg = 0.0;
     char hexString[16];
 

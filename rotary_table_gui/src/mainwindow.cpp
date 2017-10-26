@@ -102,11 +102,8 @@ void MainWindow::on_relativeControl_slider_SLIDER_actionTriggered(int action){
 
 void MainWindow::on_relativeControl_slider_PB_clicked(){
 
-    if (currentAngleDeg >= 360.0){
-        currentAngleDeg = currentAngleDeg - 360.0;
-    }else if (currentAngleDeg <= 0.0){
-        currentAngleDeg = currentAngleDeg + 360.0;
-    }
+    double desiredAngle;
+
 
     ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg");
     ui->desiredPositionDeg_LCD->display(currentAngleDeg);
@@ -119,7 +116,7 @@ void MainWindow::on_relativeControl_slider_PB_clicked(){
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
 
-}
+}    //doriesit aby sa maximalne poslalo 360 stupnov a poriesit prepocet curentAngleDeg na rozsah 0-360 a vypocitat desiredPositionDeg (tiez rozsah 0-360)
 
 void MainWindow::on_relativeControl_input_PB_clicked(){
 
@@ -127,6 +124,15 @@ void MainWindow::on_relativeControl_input_PB_clicked(){
         currentAngleDeg = currentAngleDeg - 360.0;
     }else if (currentAngleDeg < 0.0){
         currentAngleDeg = currentAngleDeg + 360.0;
+    }
+
+    if (ui->relativeControl_input_LE->text().toDouble() >= 360.0){
+        ui->relativeControl_input_LE->setText(QString::number(360.0));
+        ROS_INFO("upper limit");
+    }else if (ui->relativeControl_input_LE->text().toDouble() <= 0.0){
+        ui->relativeControl_input_LE->setText(QString::number(0.0));
+        ROS_INFO("down limit");
+
     }
 
     ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_input_LE->text().toDouble()) + " deg");
@@ -141,7 +147,7 @@ void MainWindow::on_relativeControl_input_PB_clicked(){
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
-}
+}   //doriesit aby sa maximalne poslalo 360 stupnov a poriesit prepocet curentAngleDeg na rozsah 0-360 a vypocitat desiredPositionDeg (tiez rozsah 0-360)
 /*****************************************************/
 
 
@@ -175,7 +181,7 @@ void MainWindow::on_absoluteControl_slider_PB_clicked(){
 
 
 
-}
+}   //prepocet ziadanej hodnoty na rozsah 0-360
 
 void MainWindow::on_absoluteControl_input_PB_clicked(){
 
@@ -202,7 +208,7 @@ void MainWindow::on_absoluteControl_input_PB_clicked(){
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
-}
+}   //Prepocet ziadanej hodnoty na rozsah 0-360
 /*****************************************************/
 
 
@@ -773,6 +779,10 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
 
 
 }
+
+double MainWindow::dmod(double x, long long mod){
+    return static_cast<long long>(x) % mod + x - static_cast<long long>(x);
+}
 /*****************************************************/
 
 
@@ -782,14 +792,39 @@ void MainWindow::CurrentAngleCallback(const std_msgs::Int32 currentAngle){
 
     /**    Current angle is in increments. So [Deg] = [Increment] * 0.1  **/
 
-    ROS_INFO("Current angle callback %.1f",(double)(currentAngle.data)/10.0);
+    //ROS_INFO("Current angle callback %.1f",(double)(currentAngle.data)/10.0);
     rotateImg((double)(currentAngle.data)/10.0);
     currentAngleDeg = (double)(currentAngle.data)/10.0; //Globalna premenna v ktorej je ulozena aktualna pozicia
+    int k;
+    currentAngleInt = currentAngle.data;
+    if (currentAngleInt < 0){
+        ROS_INFO("Current angle less than 0 (%d)",currentAngleInt);
+        k = -(currentAngleInt/3600);
+        currentAngleInt = (k+1)*3600 + currentAngleInt;
+        ROS_INFO("Current angle modified to (%d)",currentAngleInt);
+    }
+
+    if (currentAngleInt >= 3600){
+        ROS_INFO("Angle is over 3600 (%d)",currentAngleInt);
+        currentAngleInt = currentAngleInt % 3600;
+        ROS_INFO("Angle is over 3600, modif angle is %d",currentAngleInt);
+    }else{
+        ROS_INFO("Angle OK %d",currentAngleInt);
+    }
+
+
+
+    if (currentAngleDeg >= 360.0){
+        currentAngleDeg = currentAngleDeg - 360.0;
+    }else if (currentAngleDeg <= 0.0){
+        currentAngleDeg = currentAngleDeg + 360.0;
+    }
+
 
     ui->currentPositionDeg_LCD->display(currentAngleDeg);
     ui->currentPositionRad_LCD->display(currentAngleDeg*DEG_TO_RAD);
 
-}
+}   //Asi tu doriesit aby current angle deg bolo v rozsahu 0-360
 
 void MainWindow::CurrentVelocityCallback(const std_msgs::Int32 currentVelocity){
 
