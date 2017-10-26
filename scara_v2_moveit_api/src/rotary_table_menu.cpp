@@ -20,11 +20,12 @@ int main(int argc, char **argv){
 
     can = new Can_interface();
     std::vector<int > ids;
-    ids.push_back(0x210);
-    ids.push_back(0x211);
-    ids.push_back(0x212);
+    //ids.push_back(0x210);
+    //ids.push_back(0x211);
+    //ids.push_back(0x212);
+    ids.push_back(0x1111);
     try {
-        can->initCAN("can0", ids, 100);
+        can->initCAN("can0", ids, -1);
     
     } catch(std::exception& e){
             ROS_ERROR("CAN NOT OPENED due to exeption : %s", e.what());
@@ -53,11 +54,23 @@ int main(int argc, char **argv){
 
     while (ros::ok()){
 
-        if(exit_program)
-            break;
+       // if(exit_program)
+         //   break;
 
-        can->readCAN(&frame);
-        decodeCANmsg(&frame);
+        ROS_WARN("start cyklu");
+        int a= can->readCAN(&frame);
+
+        ROS_ERROR("citanie");
+        ROS_INFO("a=%d",a);
+        ROS_INFO("id =%x" ,frame.can_id);
+        int kkt = frame.can_id;
+        ROS_INFO("kkt %x", kkt);
+        ROS_INFO("dlc =%x ",frame.can_dlc);
+        for (int i=0;i<8;i++){
+            ROS_INFO("data %x",frame.data[i]);
+        }
+        ROS_INFO("************************");
+       // decodeCANmsg(&frame);
         //requestTemperature();
 
         ros::spinOnce();

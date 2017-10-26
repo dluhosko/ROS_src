@@ -27,7 +27,6 @@ Can_interface *can;
 //************************************* Functions *********************************************//
 //! \Brief Sets 0 to every uint8_t elemet of array of size size_of_array
 void clearArray(uint8_t *array, int size_of_array){
-
     for (int i=0;i<size_of_array;i++){
         array[i] = 0;
     }
@@ -42,32 +41,73 @@ void sendDesiredWorkingState(int inputNumber){
     uint8_t data_to_send[8];            //Create data array to be send
     can_frame frame;                    //Create CAN frame
     frame.can_id = 0x200;               //Define ID of frame
-    frame.can_dlc = 1;                  //Define Length of frame
+    frame.can_dlc = 0x1;                  //Define Length of frame
 
     switch (inputNumber){
         case 1: //OFF
         {
             ROS_INFO("desired state OFF");
-            clearArray(data_to_send,8);
-            int data = 0x10;                                                  //10
-            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to be send to array of size 8
-            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+
+               for (int i = 0; i < 8; i++) frame.data[i] = 0;
+            frame.data[0] = 0x0;
+            ROS_ERROR("jebo zapisal can id %x dlc %x", frame.can_id, frame.can_dlc);
+
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-            if (can->writeCAN(&frame) == -1 ){                              //Write CAN message to CAN bus
-                ROS_INFO("CAN write OK");
-            } else
-                ROS_INFO("CAN write not OK");
+
+               int a = can->writeCAN(&frame);
+               ROS_INFO("zapisanych bytov = %d", a);
+               //ROS_ERROR("zapis can id %x dlc %x", frame.can_id, frame.can_dlc);
+
+               if (a > -1) {                              //Write CAN message to CAN bus
+                   ROS_INFO("CAN write OK");
+               } else
+                   ROS_INFO("CAN write not OK");
+
+
+             /*  ROS_WARN("start cyklu");
+               int citanie= can->readCAN(&frame);
+
+               ROS_ERROR("citanie");
+               ROS_INFO("a=%d",citanie);
+               ROS_ERROR("jebo precital id =%x size %d",frame.can_id, sizeof(frame.can_id));
+               int kkt = frame.can_id;
+               ROS_INFO("kkt %x", kkt);
+               ROS_INFO("dlc =%x ",frame.can_dlc);
+               for (int i=0;i<8;i++){
+                   ROS_INFO("data %x",frame.data[i]);
+              }*/
+
+
+            ROS_WARN("koniec");
+
             break;
         }
         case 2: //READY
         {
             ROS_INFO("desired state READY");
             clearArray(data_to_send,8);
-            int data = 0x12;                                                   //12
-            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
-            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+           // int data = 0x12;                                                   //12
+           // memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
+           // memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            for (int i = 0; i < 8; i++) frame.data[i] = 0;
+
+           frame.data[0] = 0x12;
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
             can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+
+          /*  ROS_WARN("start cyklu");
+            int citanie= can->readCAN(&frame);
+
+            ROS_ERROR("citanie");
+            ROS_INFO("a=%d",citanie);
+            ROS_ERROR("jebo precital id =%x size %d",frame.can_id, sizeof(frame.can_id));
+            int kkt = frame.can_id;
+            ROS_INFO("kkt %x", kkt);
+            ROS_INFO("dlc =%x ",frame.can_dlc);
+            for (int i=0;i<8;i++) {
+                ROS_INFO("data %x", frame.data[i]);
+            }*/
+            ROS_WARN("koniec");
             break;
         }
         case 3: //ON
@@ -79,6 +119,7 @@ void sendDesiredWorkingState(int inputNumber){
             memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
             can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+
             break;
         }
         case 4: //ERROR
@@ -319,6 +360,14 @@ void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction de
     frame.can_id = 0x201;           //Define header of CAN message
     frame.can_dlc = 4;              //Define lenght of CAN message
     memcpy(&frame.data, data, sizeof(data));    //Copy data to CAN frame
+    for (int i = 0; i < 8; i++) frame.data[i] = 0;
+
+    frame.data[0] = 0x90;
+    frame.data[1] = 0x01;
+    frame.data[2] = 0x00;
+    frame.data[3] = 0x01;
+
+
 
     for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
     can->writeCAN(&frame);        //Send message via CAN

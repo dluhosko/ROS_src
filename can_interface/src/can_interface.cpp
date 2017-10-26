@@ -21,6 +21,7 @@ bool Can_interface::initCAN(std::string dev, std::vector<int> read_can_id, int t
 		  soc = socket( PF_CAN, SOCK_RAW, CAN_RAW);
 		    if(soc < 0){
 		    	err += "socket does not create - " + std::string(strerror(errno));
+				ROS_ERROR("%s", err.c_str());
 		    	throw Can_exception(err.c_str());
 		        return false;
 		    }
@@ -34,10 +35,12 @@ bool Can_interface::initCAN(std::string dev, std::vector<int> read_can_id, int t
 		   if(ret != 0){
 		        close(soc);
 		        err += "ioctl - " + std::string(strerror(errno));
-		       	throw Can_exception(err.c_str());
+			   ROS_ERROR("%s", err.c_str());
+
+			   throw Can_exception(err.c_str());
 		    }
 	
-		   struct can_filter rfilter[read_can_id.size()];
+		  /* struct can_filter rfilter[read_can_id.size()];
 
 			for (int i = 0; i < read_can_id.size(); i++){
 		 		rfilter[i].can_id   = read_can_id[i]; //sem id toho co chces dostavat
@@ -47,8 +50,10 @@ bool Can_interface::initCAN(std::string dev, std::vector<int> read_can_id, int t
 		 	if(setsockopt(soc, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter))){
 		 		close(soc);
 		 		 err += "setsockopt - " + std::string(strerror(errno));
-		 		throw Can_exception(err.c_str());
-		 	}
+				ROS_ERROR("%s", err.c_str());
+
+				throw Can_exception(err.c_str());
+		 	}*/
 
 		   can_err_mask_t err_mask =
 		      ( CAN_ERR_TX_TIMEOUT   /* TX timeout (by netdevice driver) */
@@ -64,13 +69,15 @@ bool Can_interface::initCAN(std::string dev, std::vector<int> read_can_id, int t
 
 		    ret = setsockopt(soc, SOL_CAN_RAW, CAN_RAW_ERR_FILTER,  //naco ukladas navratovu hodnotu ked ju nikde okrem podmienky nepouzijes?
 		       &err_mask, sizeof(err_mask));
-		    
+
 		    if(ret != 0){
 		        close(soc);
 		        err += "setsockopt - " + std::string(strerror(errno));
-		        throw Can_exception(err.c_str());
+				ROS_ERROR("%s", err.c_str());
+
+				throw Can_exception(err.c_str());
 		    }
-				
+
 
 		    struct sockaddr_can addr = {0};
 		    addr.can_family = AF_CAN;
@@ -80,7 +87,9 @@ bool Can_interface::initCAN(std::string dev, std::vector<int> read_can_id, int t
 		    if(ret != 0){
 				        close(soc);
 				        err += "bind - " + std::string(strerror(errno));
-				       		        throw Can_exception(err.c_str());
+				ROS_ERROR("%s", err.c_str());
+
+				throw Can_exception(err.c_str());
 				    }
 
 		    if (timeout >= 0){
@@ -91,7 +100,9 @@ bool Can_interface::initCAN(std::string dev, std::vector<int> read_can_id, int t
 		  		if (setsockopt (soc, SOL_SOCKET, SO_RCVTIMEO, (char *)&tm, sizeof(tm)) < 0){
 		  			close(soc);
 		  			 err += "setsockopt - " + std::string(strerror(errno));
-		  			 throw Can_exception(err.c_str());
+					ROS_ERROR("%s", err.c_str());
+
+					throw Can_exception(err.c_str());
 				}
 		    }
 		    isActive = true;
@@ -119,12 +130,15 @@ int Can_interface::writeCAN(can_frame *frame){
 		try{
 			int ret = write(soc,frame,sizeof(struct can_frame));
 					if (ret < 0){
+						ROS_ERROR("%s", strerror(errno));
 						closeCAN();
 						throw Can_exception(strerror(errno));
 					}
 			return ret;
 		} catch(std::exception& e){
 			std::string err(e.what());
+			ROS_ERROR("%s", err.c_str());
+
 			closeCAN();
 			throw Can_exception(("CAN not is ready: " + err).c_str());
 		}

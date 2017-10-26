@@ -102,52 +102,49 @@ void MainWindow::on_relativeControl_slider_SLIDER_actionTriggered(int action){
 
 void MainWindow::on_relativeControl_slider_PB_clicked(){
 
-    double desiredAngle;
+    if (directionOfRotation){
+    desiredAngleInt = currentAngleInt + ui->relativeControl_slider_SLIDER->value();
+    }else{
+        desiredAngleInt = currentAngleInt - ui->relativeControl_slider_SLIDER->value();
+    }
+    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
-
+    //GUI
     ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg");
-    ui->desiredPositionDeg_LCD->display(currentAngleDeg);
-    ui->desiredPositionRad_LCD->display(currentAngleDeg * DEG_TO_RAD);
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
+    ui->desiredPositionRad_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
     ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
-
+    //ROS
     pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_slider_SLIDER->value());  //deg
     pose_velocity_direction_msg.velocity = (ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
 
-}    //doriesit aby sa maximalne poslalo 360 stupnov a poriesit prepocet curentAngleDeg na rozsah 0-360 a vypocitat desiredPositionDeg (tiez rozsah 0-360)
+}
 
 void MainWindow::on_relativeControl_input_PB_clicked(){
 
-    if (currentAngleDeg >= 360.0){
-        currentAngleDeg = currentAngleDeg - 360.0;
-    }else if (currentAngleDeg < 0.0){
-        currentAngleDeg = currentAngleDeg + 360.0;
+    //ROS_INFO("double = %f , int = %d",ui->relativeControl_input_LE->text().toDouble()*10.0,(int)(ui->relativeControl_input_LE->text().toDouble()*10.0));
+    if (directionOfRotation){
+        desiredAngleInt = currentAngleInt + (int)(ui->relativeControl_input_LE->text().toDouble()*10.0);
+    }else{
+        desiredAngleInt = currentAngleInt - (int)(ui->relativeControl_input_LE->text().toDouble()*10.0);
     }
+    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
-    if (ui->relativeControl_input_LE->text().toDouble() >= 360.0){
-        ui->relativeControl_input_LE->setText(QString::number(360.0));
-        ROS_INFO("upper limit");
-    }else if (ui->relativeControl_input_LE->text().toDouble() <= 0.0){
-        ui->relativeControl_input_LE->setText(QString::number(0.0));
-        ROS_INFO("down limit");
-
-    }
-
-    ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_input_LE->text().toDouble()) + " deg");
-    ui->desiredPositionDeg_LCD->display(currentAngleDeg);
-    ui->desiredPositionRad_LCD->display(currentAngleDeg * DEG_TO_RAD);
-
-    ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_input_LE->text().toDouble()) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
-
+    //GUI
+    ui->relativeControl_slider_LE->setText(QString::number(desiredAngleInt/10.0) + " deg");
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
+    ui->desiredPositionRad_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
+    ui->status_TE->append("Moving[relative] to " + QString::number(desiredAngleInt/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+    //ROS
     pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_input_LE->text().toDouble()*10); //deg
-    //ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
     pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble()*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
-}   //doriesit aby sa maximalne poslalo 360 stupnov a poriesit prepocet curentAngleDeg na rozsah 0-360 a vypocitat desiredPositionDeg (tiez rozsah 0-360)
+}
 /*****************************************************/
 
 
@@ -161,11 +158,15 @@ void MainWindow::on_absoluteControl_slider_SLIDER_actionTriggered(int action){
 
 void MainWindow::on_absoluteControl_slider_PB_clicked(){
 
+
+    desiredAngleInt = ui->absoluteControl_slider_SLIDER->value();
+    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
+
     //GUI
-    ui->absoluteControl_slider_LE->setText(QString::number(ui->absoluteControl_slider_SLIDER->value()/10.0) + " deg");
-    ui->desiredPositionDeg_LCD->display(ui->absoluteControl_slider_SLIDER->value()/10.0);
-    ui->desiredPositionRad_LCD->display((ui->absoluteControl_slider_SLIDER->value()/10.0)*DEG_TO_RAD);
-    ui->status_TE->append("Moving[absolute] to " + QString::number(ui->absoluteControl_slider_SLIDER->value()/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+    ui->absoluteControl_slider_LE->setText(QString::number(desiredAngleInt/10.0) + " deg");
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
+    ui->desiredPositionRad_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
+    ui->status_TE->append("Moving[absolute] to " + QString::number(desiredAngleInt/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
 
     double desiredRotation = (double)(ui->absoluteControl_slider_SLIDER->value())/10.0;
     ROS_INFO("desrot=%f currentrot=%f",desiredRotation,currentAngleDeg);
@@ -215,37 +216,53 @@ void MainWindow::on_absoluteControl_input_PB_clicked(){
 /**************** Smooth tune ************************/
 void MainWindow::on_smooth_plusHalf_PB_clicked(){
 
-    ui->desiredPositionDeg_LCD->display(currentAngleDeg);
-    ui->desiredPositionRad_LCD->display(currentAngleDeg * DEG_TO_RAD);
-    ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
+    desiredAngleInt = currentAngleInt + 1;
+    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
+    //GUI
+    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
+    ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
+    //ROS
     pose_velocity_direction_msg.rotation = 1; //deg=step*10
     pose_velocity_direction_msg.velocity = 20*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = true;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
-}
+}   //step by 0.1 degree
 
 void MainWindow::on_smooth_plusOne_PB_clicked(){
 
-    ui->desiredPositionDeg_LCD->display(currentAngleDeg);
-    ui->desiredPositionRad_LCD->display(currentAngleDeg * DEG_TO_RAD);
-    ui->status_TE->append("Moving[relative] to " + QString::number(1) + " deg in direction RIGHT");
+    desiredAngleInt = currentAngleInt + 10;
+    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
+    //GUI
+    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
+    ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
+    //ROS
     pose_velocity_direction_msg.rotation = 10; //deg=step*10
     pose_velocity_direction_msg.velocity = 20*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = true;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
-}
+}   //step by 1 degree
 
 void MainWindow::on_smooth_minusHalf_PB_clicked(){
 
-    ui->desiredPositionDeg_LCD->display(currentAngleDeg);
-    ui->desiredPositionRad_LCD->display(currentAngleDeg * DEG_TO_RAD);
-    ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction LEFT");
+    desiredAngleInt = currentAngleInt - 1;
+    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
+
+    //GUI
+    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
+    ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
+    //ROS
     pose_velocity_direction_msg.rotation = 1; //deg=step*10
     pose_velocity_direction_msg.velocity = 20*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = false;
@@ -256,10 +273,16 @@ void MainWindow::on_smooth_minusHalf_PB_clicked(){
 
 void MainWindow::on_smooth_minusOne_PB_clicked(){
 
-    ui->desiredPositionDeg_LCD->display(currentAngleDeg);
-    ui->desiredPositionRad_LCD->display(currentAngleDeg * DEG_TO_RAD);
-    ui->status_TE->append("Moving[relative] to " + QString::number(1) + " deg in direction LEFT");
 
+    desiredAngleInt = currentAngleInt - 10;
+    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
+
+    //GUI
+    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
+    ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
+    //ROS
     pose_velocity_direction_msg.rotation = 10; //deg=step*10
     pose_velocity_direction_msg.velocity = 20*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = false;
@@ -783,6 +806,29 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
 double MainWindow::dmod(double x, long long mod){
     return static_cast<long long>(x) % mod + x - static_cast<long long>(x);
 }
+
+int MainWindow::normalizeToRange2PI(int inputNumber){
+
+    int modifiedAngleInt = inputNumber, k=0;
+
+    if (modifiedAngleInt < 0){
+        ROS_INFO("Current angle less than 0 (%d)",modifiedAngleInt);
+        k = -(modifiedAngleInt/3600);
+        modifiedAngleInt = (k+1)*3600 + modifiedAngleInt;
+        ROS_INFO("Current angle modified to (%d)",modifiedAngleInt);
+    }
+
+    if (modifiedAngleInt >= 3600){
+        ROS_INFO("Angle is over 3600 (%d)",modifiedAngleInt);
+        modifiedAngleInt = modifiedAngleInt % 3600;
+        ROS_INFO("Angle is over 3600, modif angle is %d",modifiedAngleInt);
+    }else{
+        ROS_INFO("Angle OK %d",modifiedAngleInt);
+    }
+
+    return modifiedAngleInt;
+
+}
 /*****************************************************/
 
 
@@ -793,38 +839,13 @@ void MainWindow::CurrentAngleCallback(const std_msgs::Int32 currentAngle){
     /**    Current angle is in increments. So [Deg] = [Increment] * 0.1  **/
 
     //ROS_INFO("Current angle callback %.1f",(double)(currentAngle.data)/10.0);
-    rotateImg((double)(currentAngle.data)/10.0);
     currentAngleDeg = (double)(currentAngle.data)/10.0; //Globalna premenna v ktorej je ulozena aktualna pozicia
-    int k;
-    currentAngleInt = currentAngle.data;
-    if (currentAngleInt < 0){
-        ROS_INFO("Current angle less than 0 (%d)",currentAngleInt);
-        k = -(currentAngleInt/3600);
-        currentAngleInt = (k+1)*3600 + currentAngleInt;
-        ROS_INFO("Current angle modified to (%d)",currentAngleInt);
-    }
+    currentAngleInt = normalizeToRange2PI(currentAngle.data);
+    rotateImg((double)(currentAngleInt)/10.0);
+    ui->currentPositionDeg_LCD->display(currentAngleInt/10.0);
+    ui->currentPositionRad_LCD->display(currentAngleInt/10.0*DEG_TO_RAD);
 
-    if (currentAngleInt >= 3600){
-        ROS_INFO("Angle is over 3600 (%d)",currentAngleInt);
-        currentAngleInt = currentAngleInt % 3600;
-        ROS_INFO("Angle is over 3600, modif angle is %d",currentAngleInt);
-    }else{
-        ROS_INFO("Angle OK %d",currentAngleInt);
-    }
-
-
-
-    if (currentAngleDeg >= 360.0){
-        currentAngleDeg = currentAngleDeg - 360.0;
-    }else if (currentAngleDeg <= 0.0){
-        currentAngleDeg = currentAngleDeg + 360.0;
-    }
-
-
-    ui->currentPositionDeg_LCD->display(currentAngleDeg);
-    ui->currentPositionRad_LCD->display(currentAngleDeg*DEG_TO_RAD);
-
-}   //Asi tu doriesit aby current angle deg bolo v rozsahu 0-360
+}   //Budem pracovat s current state ako s INTEGEROM !!!!!!!!!!!!!!!
 
 void MainWindow::CurrentVelocityCallback(const std_msgs::Int32 currentVelocity){
 

@@ -106,13 +106,15 @@ private slots:
 
     double dmod(double x, long long mod);
 
+    int normalizeToRange2PI(int inputNumber);
+
 private:
     Ui::MainWindow *ui;
 
     ros::AsyncSpinner *aspinner;
 
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
-    int centralStopCounter = 0, currentAngleInt = 0;
+    int centralStopCounter = 0, currentAngleInt = 0, desiredAngleInt = 0;
     double currentAngleDeg = 0.0, currentVelocityDeg = 0.0;
     char hexString[16];
 
