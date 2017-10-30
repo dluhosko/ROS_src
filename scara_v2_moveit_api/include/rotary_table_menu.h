@@ -14,6 +14,10 @@
 #include "scara_v2_moveit_api/status_rt.h"
 #include <can_interface/can_interface.h>
 
+//*********************************** Global constants ****************************************//
+const int MIN_VELOCITY = 0, MAX_VELOCITY = 60;
+
+
 //*********************************** Global Variables ****************************************//
 bool exit_program = 0;
 int i = 0;
@@ -33,6 +37,8 @@ void clearArray(uint8_t *array, int size_of_array){
 
 }
 
+
+
 //! \Brief According to inputNumber this function sends hexadecimal number with id=0x200 via CAN to RT
 void sendDesiredWorkingState(int inputNumber){
 
@@ -47,88 +53,44 @@ void sendDesiredWorkingState(int inputNumber){
         case 1: //OFF
         {
             ROS_INFO("desired state OFF");
-
-               for (int i = 0; i < 8; i++) frame.data[i] = 0;
             frame.data[0] = 0x0;
-            ROS_ERROR("jebo zapisal can id %x dlc %x", frame.can_id, frame.can_dlc);
-
+            for (int i = 1; i < 8; i++) frame.data[i] = 0;
+            ROS_WARN("Zapis CAN:  id %x dlc %x", frame.can_id, frame.can_dlc);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
 
                int a = can->writeCAN(&frame);
-               ROS_INFO("zapisanych bytov = %d", a);
-               //ROS_ERROR("zapis can id %x dlc %x", frame.can_id, frame.can_dlc);
-
                if (a > -1) {                              //Write CAN message to CAN bus
                    ROS_INFO("CAN write OK");
                } else
                    ROS_INFO("CAN write not OK");
-
-
-             /*  ROS_WARN("start cyklu");
-               int citanie= can->readCAN(&frame);
-
-               ROS_ERROR("citanie");
-               ROS_INFO("a=%d",citanie);
-               ROS_ERROR("jebo precital id =%x size %d",frame.can_id, sizeof(frame.can_id));
-               int kkt = frame.can_id;
-               ROS_INFO("kkt %x", kkt);
-               ROS_INFO("dlc =%x ",frame.can_dlc);
-               for (int i=0;i<8;i++){
-                   ROS_INFO("data %x",frame.data[i]);
-              }*/
-
-
-            ROS_WARN("koniec");
-
             break;
         }
         case 2: //READY
         {
             ROS_INFO("desired state READY");
-            clearArray(data_to_send,8);
-           // int data = 0x12;                                                   //12
-           // memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
-           // memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
-            for (int i = 0; i < 8; i++) frame.data[i] = 0;
-
            frame.data[0] = 0x12;
+            for (int i = 1; i < 8; i++) frame.data[i] = 0;
+            ROS_WARN("Zapis CAN:  id %x dlc %x", frame.can_id, frame.can_dlc);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
             can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
-
-          /*  ROS_WARN("start cyklu");
-            int citanie= can->readCAN(&frame);
-
-            ROS_ERROR("citanie");
-            ROS_INFO("a=%d",citanie);
-            ROS_ERROR("jebo precital id =%x size %d",frame.can_id, sizeof(frame.can_id));
-            int kkt = frame.can_id;
-            ROS_INFO("kkt %x", kkt);
-            ROS_INFO("dlc =%x ",frame.can_dlc);
-            for (int i=0;i<8;i++) {
-                ROS_INFO("data %x", frame.data[i]);
-            }*/
-            ROS_WARN("koniec");
             break;
         }
         case 3: //ON
         {
             ROS_INFO("desired state ON");
-            clearArray(data_to_send,8);
-            int data = 0x14;                                                //14
-            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
-            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            frame.data[0] = 0x14;
+            for (int i = 1; i < 8; i++) frame.data[i] = 0;
+            ROS_WARN("Zapis CAN:  id %x dlc %x", frame.can_id, frame.can_dlc);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
             can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
-
             break;
         }
         case 4: //ERROR
         {
             ROS_INFO("desired state ERROR");
-            clearArray(data_to_send,8);
-            int data = 0x1f;                                                //1f
-            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
-            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            frame.data[0] = 0x1f;
+            for (int i = 1; i < 8; i++) frame.data[i] = 0;
+            ROS_WARN("Zapis CAN:  id %x dlc %x", frame.can_id, frame.can_dlc);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
             can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
             break;
@@ -136,20 +98,24 @@ void sendDesiredWorkingState(int inputNumber){
         default:
         {
             ROS_ERROR("Invalid number");
-            clearArray(data_to_send,8);
-            int data = 0x12;                                                //12 -> go back to ready
-            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
-            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
-            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-            can->writeCAN(&frame);                                          //write CAN message to CAN bus
-            sleep(1);
-
-            clearArray(data_to_send,8);
-            data = 0x10;                                                    //10 -> go back to stop
-            memcpy(data_to_send,&data,1*sizeof(uint8_t));                   //Fill data to by send to array of size 8
-            memcpy(&frame.data, data_to_send,sizeof(data_to_send));         //Create can message (copy array of size 8 to can structure)
+            frame.data[0] = 0x12;
+            for (int i = 1; i < 8; i++) frame.data[i] = 0;
+            ROS_WARN("Zapis CAN:  id %x dlc %x", frame.can_id, frame.can_dlc);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
             can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+            sleep(1);
+            can->writeCAN(&frame);
+            sleep(1);
+
+            frame.data[0] = 0x10;
+            for (int i = 1; i < 8; i++) frame.data[i] = 0;
+            ROS_WARN("Zapis CAN:  id %x dlc %x", frame.can_id, frame.can_dlc);
+            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
+            can->writeCAN(&frame);                                                  //Write CAN message to CAN bus
+            sleep(1);
+            can->writeCAN(&frame);
+            sleep(1);
+            ROS_ERROR("Rotary table is now in OFF state ( due to bad input number)");
             break;
         }
     }
@@ -159,95 +125,95 @@ void sendDesiredWorkingState(int inputNumber){
 //! \Brief According to ID of input frame it decodes the incomming CAN message and sends it to GUI
 void decodeCANmsg(can_frame *frame){
 
-
+    ROS_INFO("input id %x",frame->can_id);
     switch (frame->can_id){
         case 0x210:     //Status answer
         {
+            ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
-            uint8_t data_from_can[8];
-            clearArray(data_from_can,8);
-            memcpy(data_from_can,frame->data,8*sizeof(uint8_t));
-
             int32_msg.data = 0;                                         //Send STATUS
-            int32_msg.data = frame->data[1] << 4 | frame->data[0];      //Posibility 1 (Status msg)
-            memcpy(&int32_msg.data,data_from_can,2*sizeof(uint8_t));    //Posibility 2 (Status msg)
+            memcpy(&int32_msg.data,frame->data,2*sizeof(uint8_t));    //Posibility 2 (Status msg)
             currentWorkingState_pub.publish(int32_msg);                       //Send status msg
             ROS_INFO("Sending STATUS msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
 
             int32_msg.data = 0;                                         //Send ERROR
-            int32_msg.data = frame->data[3] << 4 | frame->data[2];      //Posibility 1 (Error msg)
-            memcpy(&int32_msg.data,data_from_can+2,2*sizeof(uint8_t));  //Posibility 2 (Error msg)
+            memcpy(&int32_msg.data,frame->data+2,2*sizeof(uint8_t));  //Posibility 2 (Error msg)
             currentError_pub.publish(int32_msg);
             ROS_INFO("Sending ERROR msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
             break;
         }
         case 0x211:     //Position and Velocity answer
         {
+            ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
-            uint8_t data_from_can[8];
-            clearArray(data_from_can,8);
-            memcpy(data_from_can,frame->data,8*sizeof(uint8_t));
-
             int32_msg.data = 0;                                         //Current Position
-            memcpy(&int32_msg.data,data_from_can,2*sizeof(uint8_t));    //Posibility 2
+            memcpy(&int32_msg.data,frame->data,2*sizeof(uint8_t));    //Posibility 2
             currentRotationInDeg_pub.publish(int32_msg);
-            ROS_INFO("Sending current POSITION dec=%d (hex=%x) [inc]",int32_msg.data,int32_msg.data);
+            //ROS_INFO("Sending current POSITION dec=%d (hex=%x) [inc]",int32_msg.data,int32_msg.data);
 
             int32_msg.data = 0;                                         //Current Difference to desired angle
-            memcpy(&int32_msg.data,data_from_can+2,2*sizeof(uint8_t));  //Posibility 2
-            ROS_INFO("Differece between current and desired angle dec=%d (hex=%x) [inc]",int32_msg.data,int32_msg.data);
+            memcpy(&int32_msg.data,frame->data+2,2*sizeof(uint8_t));  //Posibility 2
+            //ROS_INFO("Differece between current and desired angle dec=%d (hex=%x) [inc]",int32_msg.data,int32_msg.data);
 
             int32_msg.data = 0;                                         //Desired max velocity
-            memcpy(&int32_msg.data,data_from_can+4,2*sizeof(uint8_t));  //Posibility 2
+            memcpy(&int32_msg.data,frame->data+4,2*sizeof(uint8_t));  //Posibility 2
             //currentRotationInDeg_pub.publish(int32_msg);
-            ROS_INFO("Desired max velocity dec=%d (hex=%x) [1/min]",int32_msg.data,int32_msg.data);
+            //ROS_INFO("Desired max velocity dec=%d (hex=%x) [1/min]",int32_msg.data,int32_msg.data);
 
             int32_msg.data = 0;                                         //Current velocity
-            memcpy(&int32_msg.data,data_from_can+6,2*sizeof(uint8_t));  //Posibility 2
-            currentRotationInDeg_pub.publish(int32_msg);
-            ROS_INFO("Desired max velocity dec=%d (hex=%x) [1/min]",int32_msg.data,int32_msg.data);
+            memcpy(&int32_msg.data,frame->data+6,2*sizeof(uint8_t));  //Posibility 2
+            currentVelocityInDeg_pub.publish(int32_msg);
+            //ROS_INFO("Desired max velocity dec=%d (hex=%x) [1/min]",int32_msg.data,int32_msg.data);
             break;
         }
         case 0x212:     //Basic Position and Revolution answer
         {
+            ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
-            uint8_t data_from_can[8];
-            clearArray(data_from_can,8);
-            memcpy(data_from_can,frame->data,8*sizeof(uint8_t));
-
             int actualBasicPosition;                                    //Actual Basic Position
-            memcpy(&actualBasicPosition, data_from_can, 4*sizeof(uint8_t));
+            memcpy(&actualBasicPosition, frame->data, 4*sizeof(uint8_t));
             ROS_INFO("Actual Basic Position is %d",actualBasicPosition);
 
             int revolutionCounter;                                      //Revolution counter (not implemented in CAN)
-            memcpy(&revolutionCounter,data_from_can+4,4*sizeof(uint8_t));
+            memcpy(&revolutionCounter,frame->data+4,4*sizeof(uint8_t));
             ROS_INFO("Revolution counter is %d  [rev]",actualBasicPosition);
             break;
         }
         case 0x21e:
         {
+            ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
-            uint8_t data_from_can[8];
-            clearArray(data_from_can,8);
-            memcpy(data_from_can,frame->data,8*sizeof(uint8_t));
-
-            memcpy(&status_msg.power_stage_temperature, data_from_can, 2*sizeof(uint8_t));
-            memcpy(&status_msg.microprocessor_temperature, data_from_can+2, 2*sizeof(uint8_t));
-            memcpy(&status_msg.chopper_temperature, data_from_can+4, 2*sizeof(uint8_t));
-            memcpy(&status_msg.filtered_motor_current, data_from_can+6, 2*sizeof(uint8_t));
+            memcpy(&status_msg.power_stage_temperature, frame->data, 2*sizeof(uint8_t));
+            memcpy(&status_msg.microprocessor_temperature, frame->data+2, 2*sizeof(uint8_t));
+            memcpy(&status_msg.chopper_temperature, frame->data+4, 2*sizeof(uint8_t));
+            memcpy(&status_msg.filtered_motor_current, frame->data+6, 2*sizeof(uint8_t));
             tempAndCurrentStatus_pub.publish(status_msg);
             break;
         }
         default:
         {
-
-            ROS_ERROR("ID: %x",frame->can_id);
-
+            //ROS_ERROR("ID: %x",frame->can_id);
+            //Just test
+//            int status_data = 0x4400;
+//            int error_data = 0x0804;
+//            ROS_INFO("status = %d error = %d",status_data,error_data);
+//            memcpy(frame->data , &status_data,2*sizeof(uint8_t));
+//            memcpy(frame->data+2 , &error_data,2*sizeof(uint8_t));
+//            for (int i = 0; i < 4; i++) ROS_INFO("%X", frame->data[i]);
+//
+//            //decompose data
+//            int32_msg.data = 0;                                         //Send STATUS
+//            memcpy(&int32_msg.data,frame->data,2*sizeof(uint8_t));    //Posibility 2 (Status msg)
+//            currentWorkingState_pub.publish(int32_msg);                       //Send status msg
+//            ROS_INFO("Sending STATUS msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
+//
+//            int32_msg.data = 0;                                         //Send ERROR
+//            memcpy(&int32_msg.data,frame->data+2,2*sizeof(uint8_t));  //Posibility 2 (Error msg)
+//            currentError_pub.publish(int32_msg);
+//            ROS_INFO("Sending ERROR msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
             break;
         }
     }
-
-    //ROS_ERROR("Pato sedi vedla mna");
 
 }
 
@@ -257,13 +223,15 @@ void requestTemperature(){
     if (i == 20){
         uint8_t data[8];
         clearArray(data,8);
-        can_frame frame;                //Create CAN frame
-        frame.can_id = 0x20e;           //Define header of CAN message
-        frame.can_dlc = 0;              //Define lenght of CAN message
-        memcpy(&frame.data, data, sizeof(data));    //Copy data to CAN frame
+        can_frame frame;                                //Create CAN frame
+        frame.can_id = 0x20e;                           //Define header of CAN message
+        frame.can_dlc = 0;                              //Define lenght of CAN message
+        memcpy(&frame.data, data, sizeof(data));        //Copy data to CAN frame
+        for (int i = 0; i < 8; i++) frame.data[i] = 0;  //Set zeros to data
 
         for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-        //can->writeCAN(&frame);        //Send message via CAN
+        can->writeCAN(&frame);        //Send message via CAN
+        i = 0;
     }
     i++;
 
@@ -279,7 +247,7 @@ float inLimits_float(float inputNumber, float downLimit, float upLimit){
         ROS_WARN("up limit(%f) reached !",upLimit);
         return upLimit;
     }else{
-        return -1;
+        return inputNumber;
     }
 
 }
@@ -294,8 +262,31 @@ int inLimits_int(int inputNumber, int downLimit, int upLimit){
         ROS_WARN("up limit(%d) reached !",upLimit);
         return upLimit;
     }else{
-        return -1;
+        return inputNumber;
     }
+
+}
+
+int normalizeToRange2PI(int inputNumber){
+
+    int modifiedAngleInt = inputNumber, k=0;
+
+    if (modifiedAngleInt < 0){
+        ROS_INFO("Current angle less than 0 (%d)",modifiedAngleInt);
+        k = -(modifiedAngleInt/3600);
+        modifiedAngleInt = (k+1)*3600 + modifiedAngleInt;
+        ROS_INFO("Current angle modified to (%d)",modifiedAngleInt);
+    }
+
+    if (modifiedAngleInt >= 3600){
+        ROS_INFO("Angle is over 3600 (%d)",modifiedAngleInt);
+        modifiedAngleInt = modifiedAngleInt % 3600;
+        ROS_INFO("Angle is over 3600, modif angle is %d",modifiedAngleInt);
+    }else{
+        ROS_INFO("Angle OK %d",modifiedAngleInt);
+    }
+
+    return modifiedAngleInt;
 
 }
 
@@ -338,39 +329,34 @@ void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction de
 
     /**_____________Description of input values:_____________**/
     /**      rotation is in [increment]                      **/
+    /**      1 increment == 0.1 degrees                      **/
     /**      velocity is in [rotations per minute]           **/
     /**      direction- Clockwise (0) Anticlockwise(1)       **/
     /**********************************************************/
 
-    int rot = inLimits_int(desiredPositionVelocityDirection.rotation,0,3600);
-    int vel = (int)(inLimits_float(desiredPositionVelocityDirection.velocity, 0.0, 60.0) + 0.5);
+    //ROS_INFO("des rot =%d , des vel=%d des dir=%d", desiredPositionVelocityDirection.rotation, desiredPositionVelocityDirection.velocity, desiredPositionVelocityDirection.direction);
+    int rot = normalizeToRange2PI(desiredPositionVelocityDirection.rotation);
+    int vel = inLimits_int(desiredPositionVelocityDirection.velocity, 0, 500);
     bool dir = desiredPositionVelocityDirection.direction;
-    ROS_INFO("des rot =%f , des vel=%f(%d) des dir=%d",rot/10.0,desiredPositionVelocityDirection.velocity,vel,dir);
+    ROS_INFO("des rot =%d , des vel=%d des dir=%d", rot, vel, dir);
     uint8_t data[8];
 
-//    if (changeDirection(dir)){
-//        ROS_INFO("sleep for 3 seconds");
-//        sleep(3);
-//    }
+    if (changeDirection(dir)){
+        ROS_INFO("sleep for 1 second");
+        sleep(1);
+    }
 
     memcpy(data,&rot,2*sizeof(uint8_t));
     memcpy(data+2,&vel,2*sizeof(uint8_t));
 
-    can_frame frame;                //Create CAN frame
-    frame.can_id = 0x201;           //Define header of CAN message
-    frame.can_dlc = 4;              //Define lenght of CAN message
-    memcpy(&frame.data, data, sizeof(data));    //Copy data to CAN frame
-    for (int i = 0; i < 8; i++) frame.data[i] = 0;
-
-    frame.data[0] = 0x90;
-    frame.data[1] = 0x01;
-    frame.data[2] = 0x00;
-    frame.data[3] = 0x01;
-
-
-
-    for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-    can->writeCAN(&frame);        //Send message via CAN
+    can_frame frame;                                //Create CAN frame
+    frame.can_id = 0x201;                           //Define header of CAN message
+    frame.can_dlc = 4;                              //Define lenght of CAN message
+    memcpy(&frame.data, data, sizeof(data));        //Copy data to CAN frame
+    for (int i = 4; i < 8; i++) frame.data[i] = 0;  //Set 0 to unwanted bytes
+    for (int i = 0; i < 8; i++)
+        ROS_INFO("%X", frame.data[i]);              //Display CAN data to send
+    can->writeCAN(&frame);                          //Send message via CAN
 
 }   /**************    Direction to solve (225) !!!!   ****************/
 

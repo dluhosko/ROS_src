@@ -4,13 +4,14 @@
     <generated>
       <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_status_rt" />
       <config projectName="Project" targetName="polled_camera_generate_messages_eus" />
+      <config projectName="Project" targetName="gazebo_msgs_gencpp" />
       <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_pose_velocity_direction" />
       <config projectName="Project" targetName="control_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="scara_msgs_gencpp" />
       <config projectName="Project" targetName="gazebo_ros_camera_utils" />
+      <config projectName="Project" targetName="move_group_interface5_rt" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_nodejs" />
       <config projectName="Project" targetName="gazebo_ros_hand_of_god" />
-      <config projectName="Project" targetName="map_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="map_msgs_generate_messages_py" />
       <config projectName="Project" targetName="control_toolbox_generate_messages_cpp" />
       <config projectName="Project" targetName="gazebo_ros_gencfg" />
@@ -28,7 +29,7 @@
       <config projectName="Project" targetName="control_msgs_generate_messages_py" />
       <config projectName="Project" targetName="gazebo_tutorials" />
       <config projectName="Project" targetName="scara_msgs_genpy" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="gazebo_msgs_genlisp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ApplyJointEffort" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_DeleteModel" />
       <config projectName="Project" targetName="scara_msgs_generate_messages" />
@@ -43,9 +44,10 @@
       <config projectName="Project" targetName="geometry_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="gazebo_ros_joint_trajectory" />
       <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_target_pose" />
+      <config projectName="Project" targetName="gazebo_ros_openni_kinect" />
       <config projectName="Project" targetName="gazebo_msgs_genpy" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetLinkProperties" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gencpp" />
+      <config projectName="Project" targetName="actionlib_generate_messages_nodejs" />
       <config projectName="Project" targetName="trajectory_msgs_generate_messages_py" />
       <config projectName="Project" targetName="tf_generate_messages_py" />
       <config projectName="Project" targetName="gazebo_msgs_generate_messages_cpp" />
@@ -53,7 +55,7 @@
       <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_set_parameters" />
       <config projectName="Project" targetName="tf_generate_messages_cpp" />
       <config projectName="Project" targetName="gtest_main" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetPhysicsProperties" />
+      <config projectName="Project" targetName="moveit_ros_manipulation_gencfg" />
       <config projectName="Project" targetName="pub_joint_trajectory_test" />
       <config projectName="Project" targetName="gazebo_ros_projector" />
       <config projectName="Project" targetName="roscpp_generate_messages_py" />
@@ -92,7 +94,7 @@
       <config projectName="Project" targetName="diagnostic_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ApplyBodyWrench" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="move_group_interface5_rt" />
+      <config projectName="Project" targetName="gazebo_ros_camera" />
       <config projectName="Project" targetName="std_srvs_generate_messages_cpp" />
       <config projectName="Project" targetName="octomap_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="move_group_interface4_position_control" />
@@ -113,15 +115,15 @@
       <config projectName="Project" targetName="control_toolbox_generate_messages_py" />
       <config projectName="Project" targetName="diagnostic_msgs_generate_messages_py" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="gripper_control" />
       <config projectName="Project" targetName="tf_listener" />
-      <config projectName="Project" targetName="gazebo_msgs_gencpp" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_nodejs" />
       <config projectName="Project" targetName="nodelet_generate_messages_py" />
       <config projectName="Project" targetName="diagnostic_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="matlabtalker" />
       <config projectName="Project" targetName="IK_test_real_scara" />
       <config projectName="Project" targetName="shape_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="moveit_ros_manipulation_gencfg" />
       <config projectName="Project" targetName="octomap_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetPhysicsProperties" />
       <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_basic_info" />
@@ -132,7 +134,7 @@
       <config projectName="Project" targetName="set_model_state-test" />
       <config projectName="Project" targetName="nodelet_generate_messages_eus" />
       <config projectName="Project" targetName="gazebo_ros_ft_sensor" />
-      <config projectName="Project" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gennodejs" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="test_can" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_eus" />
@@ -150,19 +152,20 @@
       <config projectName="Project" targetName="scara_v2_moveit_api_genlisp" />
       <config projectName="Project" targetName="gazebo_ros_joint_pose_trajectory" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetModelState" />
+      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="matlab_communication_tryout" />
       <config projectName="Project" targetName="diagnostic_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ContactsState" />
       <config projectName="Project" targetName="gazebo_plugins_gencfg" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_LinkState" />
       <config projectName="Project" targetName="scara_ros_test_node" />
-      <config projectName="Project" targetName="control_toolbox_generate_messages_nodejs" />
+      <config projectName="Project" targetName="tf_broadcaster" />
       <config projectName="Project" targetName="gazebo_ros_force" />
       <config projectName="Project" targetName="move_group_interface2" />
       <config projectName="Project" targetName="move_group_interface1" />
       <config projectName="Project" targetName="menu_tryout_1" />
       <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_py" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gennodejs" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetLinkState" />
       <config projectName="Project" targetName="gazebo_ros_block_laser" />
       <config projectName="Project" targetName="gazebo_ros_f3d" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetModelConfiguration" />
@@ -201,10 +204,8 @@
       <config projectName="Project" targetName="gazebo_ros_prosilica" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="scara_msgs_genlisp" />
-      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetLinkState" />
-      <config projectName="Project" targetName="gazebo_msgs_genlisp" />
+      <config projectName="Project" targetName="scara_colision_object" />
       <config projectName="Project" targetName="_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="_catkin_empty_exported_target" />
       <config projectName="Project" targetName="default_robot_hw_sim" />
       <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_geneus" />
@@ -233,14 +234,14 @@
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_GetModelState" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_eus" />
       <config projectName="Project" targetName="moveit_ros_planning_gencfg" />
-      <config projectName="Project" targetName="gazebo_ros_openni_kinect" />
+      <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetPhysicsProperties" />
       <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
       <config projectName="Project" targetName="dynamic_reconfigure_gencfg" />
       <config projectName="Project" targetName="_scara_msgs_generate_messages_check_deps_pose_velocity_direction" />
       <config projectName="Project" targetName="visualization_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="MultiCameraPlugin" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="tf_broadcaster" />
+      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_gencpp" />
       <config projectName="Project" targetName="control_toolbox_generate_messages_lisp" />
       <config projectName="Project" targetName="scara_v2_moveit_api_generate_messages_cpp" />
       <config projectName="Project" targetName="gazebo_ros_gpu_laser" />
@@ -250,12 +251,11 @@
       <config projectName="Project" targetName="gazebo_ros_template" />
       <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_scara_button_commands" />
       <config projectName="Project" targetName="map_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="diagnostic_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="scara_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="gazebo_ros_skid_steer_drive" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_SetJointTrajectory" />
-      <config projectName="Project" targetName="gazebo_ros_camera" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="octomap_msgs_generate_messages_py" />
       <config projectName="Project" targetName="std_msgs_generate_messages_py" />
@@ -263,10 +263,10 @@
       <config projectName="Project" targetName="gazebo_ros_range" />
       <config projectName="Project" targetName="moveit_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="scara_v2_moveit_api_genpy" />
-      <config projectName="Project" targetName="scara_v2_with_gripper_moveit_config_generate_messages_nodejs" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_cpp" />
       <config projectName="Project" targetName="gazebo_ros_bumper" />
       <config projectName="Project" targetName="run_tests" />
+      <config projectName="Project" targetName="std_srvs_generate_messages_lisp" />
       <config projectName="Project" targetName="polled_camera_generate_messages_lisp" />
       <config projectName="Project" targetName="octomap_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_py" />
@@ -297,27 +297,27 @@
       <config projectName="Project" targetName="scara_msgs_geneus" />
       <config projectName="Project" targetName="scara_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="controller_manager_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="scara_colision_object" />
-      <config projectName="Project" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="gazebo_ros_control" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="gazebo_ros_utils" />
       <config projectName="Project" targetName="_scara_msgs_generate_messages_check_deps_pose_and_gripperState" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_JointRequest" />
-      <config projectName="Project" targetName="actionlib_generate_messages_nodejs" />
       <config projectName="Project" targetName="download_extra_data" />
       <config projectName="Project" targetName="vision_reconfigure" />
       <config projectName="Project" targetName="_scara_v2_moveit_api_generate_messages_check_deps_SimpleService" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_py" />
       <config projectName="Project" targetName="_gazebo_msgs_generate_messages_check_deps_ODEJointProperties" />
       <config projectName="Project" targetName="gazebo_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="control_toolbox_generate_messages_nodejs" />
       <config projectName="Project" targetName="matlab_ROS_com_tryout" />
       <config projectName="Project" targetName="bond_generate_messages_nodejs" />
       <config projectName="Project" targetName="object_recognition_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="camera_synchronizer" />
-      <config projectName="Project" targetName="std_srvs_generate_messages_lisp" />
+      <config projectName="Project" targetName="map_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="gazebo_ros_depth_camera" />
       <config projectName="Project" targetName="control_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
     </generated>
   </component>
@@ -328,13 +328,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/usb_to_can0" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/ROTARY_TABLE_GUI.pro.user" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/ROTARY_TABLE_GUI.pro.user" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/can_interface/include/can_interface/can_interface.h" afterPath="$PROJECT_DIR$/can_interface/include/can_interface/can_interface.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/can_interface/src/can_interface.cpp" afterPath="$PROJECT_DIR$/can_interface/src/can_interface.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" afterPath="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" afterPath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/user_interface/mainwindow.ui" afterPath="$PROJECT_DIR$/rotary_table_gui/user_interface/mainwindow.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_msgs/msg/pose_velocity_direction.msg" afterPath="$PROJECT_DIR$/scara_msgs/msg/pose_velocity_direction.msg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_velocity_direction.msg" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_velocity_direction.msg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -354,56 +355,72 @@
       <file leaf-file-name="rotary_table_menu.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state relative-caret-position="153">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="can_interface.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/can_interface/include/can_interface/can_interface.h">
+      <file leaf-file-name="rotary_table_menu.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-317">
-              <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="can_interface.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/can_interface/src/can_interface.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="69" column="35" lean-forward="false" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+            <state relative-caret-position="933">
+              <caret line="160" column="42" lean-forward="false" selection-start-line="160" selection-start-column="42" selection-end-line="160" selection-end-column="42" />
               <folding>
-                <element signature="e#191#231#0" expanded="true" />
+                <element signature="e#1059#1351#0" expanded="false" />
+                <element signature="e#10260#11007#0" expanded="false" />
+                <element signature="e#11131#11556#0" expanded="false" />
+                <element signature="e#11558#11972#0" expanded="false" />
+                <element signature="e#11974#12659#0" expanded="false" />
+                <element signature="e#12661#13894#0" expanded="false" />
+                <element signature="e#14004#15985#0" expanded="false" />
+                <element signature="e#16058#16749#0" expanded="false" />
+                <element signature="e#16751#17230#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.h" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/linux/can/error.h">
+      <file leaf-file-name="mainwindow.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rotary_table_menu.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="361" column="45" lean-forward="false" selection-start-line="361" selection-start-column="45" selection-end-line="361" selection-end-column="45" />
+            <state relative-caret-position="207">
+              <caret line="916" column="74" lean-forward="true" selection-start-line="916" selection-start-column="74" selection-end-line="916" selection-end-column="74" />
               <folding>
-                <element signature="e#12338#12754#0" expanded="false" />
-                <element signature="e#12756#13161#0" expanded="false" />
-                <element signature="e#13163#14396#0" expanded="false" />
-                <element signature="e#16348#17039#0" expanded="false" />
-                <element signature="e#17041#17520#0" expanded="false" />
+                <element signature="e#2111#2368#0" expanded="false" />
+                <element signature="e#2370#2576#0" expanded="false" />
+                <element signature="e#2578#2778#0" expanded="false" />
+                <element signature="e#2780#2986#0" expanded="false" />
+                <element signature="e#3046#3313#0" expanded="false" />
+                <element signature="e#3315#4493#0" expanded="false" />
+                <element signature="e#4495#5800#0" expanded="false" />
+                <element signature="e#5859#6125#0" expanded="false" />
+                <element signature="e#6127#7939#0" expanded="false" />
+                <element signature="e#7941#9802#0" expanded="false" />
+                <element signature="e#9861#10673#0" expanded="false" />
+                <element signature="e#10696#11453#0" expanded="false" />
+                <element signature="e#11477#12235#0" expanded="false" />
+                <element signature="e#12237#12997#0" expanded="false" />
+                <element signature="e#13057#13736#0" expanded="false" />
+                <element signature="e#13795#14139#0" expanded="false" />
+                <element signature="e#14141#14428#0" expanded="false" />
+                <element signature="e#14430#14703#0" expanded="false" />
+                <element signature="e#14705#14977#0" expanded="false" />
+                <element signature="e#15036#15451#0" expanded="false" />
+                <element signature="e#15453#15914#0" expanded="false" />
+                <element signature="e#15974#16460#0" expanded="false" />
+                <element signature="e#16462#16583#0" expanded="false" />
+                <element signature="e#16585#17069#0" expanded="false" />
+                <element signature="e#17071#17319#0" expanded="false" />
+                <element signature="e#17321#26909#0" expanded="false" />
+                <element signature="e#26911#32323#0" expanded="false" />
+                <element signature="e#32325#32452#0" expanded="false" />
+                <element signature="e#32454#33161#0" expanded="false" />
+                <element signature="e#33221#33878#0" expanded="false" />
+                <element signature="e#33880#34347#0" expanded="false" />
+                <element signature="e#34349#35162#0" expanded="false" />
+                <element signature="e#35164#35947#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -412,8 +429,8 @@
       <file leaf-file-name="mainwindow.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1944">
-              <caret line="108" column="45" lean-forward="false" selection-start-line="108" selection-start-column="45" selection-end-line="108" selection-end-column="45" />
+            <state relative-caret-position="277">
+              <caret line="116" column="94" lean-forward="false" selection-start-line="116" selection-start-column="94" selection-end-line="116" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -430,14 +447,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>char_1B</find>
-      <find>SIZE_OF_1B_MESSAGE</find>
-      <find>hexaNumber</find>
-      <find>data</find>
-      <find>convertCANmsg</find>
-      <find>fillEmptyBytesInCANmsg</find>
-      <find>char2uint8_t</find>
-      <find>currentWorkingState_sub</find>
       <find>hex2dec</find>
       <find>le</find>
       <find>status_sub</find>
@@ -460,6 +469,14 @@
       <find>ui-&gt;relativeControl_slider_LE-&gt;setText(QString::number(ui-&gt;relativ</find>
       <find>decode</find>
       <find>desiredAngle</find>
+      <find>max veloci</find>
+      <find>changeDirection</find>
+      <find>currentRotationInDeg_pub</find>
+      <find>CurrentVelocityCallback</find>
+      <find>currentVelocityInDeg_pub</find>
+      <find>currentVelocityPerMinute_RT</find>
+      <find>Desired max velocity dec</find>
+      <find>no error</find>
     </findStrings>
     <replaceStrings>
       <replace>scara_v2_moveit_config</replace>
@@ -521,14 +538,14 @@
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/msg/status_rt.msg" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/scara_msgs/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_velocity_direction.msg" />
-        <option value="$PROJECT_DIR$/scara_msgs/msg/pose_velocity_direction.msg" />
-        <option value="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
-        <option value="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
         <option value="$PROJECT_DIR$/can_interface/include/can_interface/can_interface.h" />
         <option value="$PROJECT_DIR$/can_interface/src/can_interface.cpp" />
+        <option value="$PROJECT_DIR$/scara_msgs/msg/pose_velocity_direction.msg" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_velocity_direction.msg" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
+        <option value="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
+        <option value="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
       </list>
     </option>
   </component>
@@ -540,7 +557,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1345" />
+    <option name="x" value="1089" />
     <option name="y" value="24" />
     <option name="width" value="1855" />
     <option name="height" value="1056" />
@@ -616,28 +633,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_moveit_api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2704,14 +2699,11 @@
       <workItem from="1508923433823" duration="19819000" />
       <workItem from="1508956055789" duration="5684000" />
       <workItem from="1509012094520" duration="10470000" />
-      <workItem from="1509044224953" duration="2658000" />
-    </task>
-    <task id="LOCAL-00041" summary="README - modified">
-      <created>1503302090557</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1503302090557</updated>
+      <workItem from="1509044224953" duration="3397000" />
+      <workItem from="1509363405287" duration="3677000" />
+      <workItem from="1509363589660" duration="973000" />
+      <workItem from="1509364645612" duration="1005000" />
+      <workItem from="1509382709860" duration="10267000" />
     </task>
     <task id="LOCAL-00042" summary="README - modified">
       <created>1503302172580</created>
@@ -3049,14 +3041,21 @@
       <option name="project" value="LOCAL" />
       <updated>1509019439698</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="CAN KONECNE FUGUJE !!!!!!&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status,, calculate temperature and current in 0x226, and some other things with 0x226">
+      <created>1509047015292</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1509047015293</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="921624000" />
+    <option name="totallyTimeSpent" value="938285000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1345" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="1089" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19868995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -3105,7 +3104,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Qtcreator project" />
     <MESSAGE value="before simulink build" />
     <MESSAGE value="my pc + senso pc" />
     <MESSAGE value="SENSO PC + MY PC sync  + get information tab completed!" />
@@ -3130,11 +3128,12 @@
     <MESSAGE value="Done: decoding STATUS and ERROR - OK, change LE-&gt;TE -OK, write to TE - OK&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status, add TE error log, calculate temperature and current in 0x226, and some other things with 0x226" />
     <MESSAGE value="Done:  change LE-&gt;TE -OK, add TE error log,  added smooth positioning&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status,, calculate temperature and current in 0x226, and some other things with 0x226" />
     <MESSAGE value="Done:  change LE-&gt;TE -OK, add TE error log,  added smooth positioning&#10;Modified rotary table GUI -&gt; changing current angle from double to INT !!!!&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status,, calculate temperature and current in 0x226, and some other things with 0x226" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done:  change LE-&gt;TE -OK, add TE error log,  added smooth positioning&#10;Modified rotary table GUI -&gt; changing current angle from double to INT !!!!&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status,, calculate temperature and current in 0x226, and some other things with 0x226" />
+    <MESSAGE value="CAN KONECNE FUGUJE !!!!!!&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status,, calculate temperature and current in 0x226, and some other things with 0x226" />
+    <option name="LAST_COMMIT_MESSAGE" value="CAN KONECNE FUGUJE !!!!!!&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status,, calculate temperature and current in 0x226, and some other things with 0x226" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="52" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3418,20 +3417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_msgs/msg/pose_velocity_direction.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_velocity_direction.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///opt/ros/kinetic/include/std_msgs/Int32.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-342">
@@ -3467,99 +3452,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="108" column="45" lean-forward="false" selection-start-line="108" selection-start-column="45" selection-end-line="108" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/can_interface/include/can_interface/can_interface.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-317">
+        <state relative-caret-position="846">
           <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/can_interface/src/can_interface.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="69" column="35" lean-forward="false" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
-          <folding>
-            <element signature="e#191#231#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="177" column="77" lean-forward="false" selection-start-line="177" selection-start-column="77" selection-end-line="177" selection-end-column="77" />
-          <folding>
-            <element signature="e#2111#2368#0" expanded="false" />
-            <element signature="e#2370#2576#0" expanded="false" />
-            <element signature="e#2578#2778#0" expanded="false" />
-            <element signature="e#2780#2986#0" expanded="false" />
-            <element signature="e#3046#3313#0" expanded="false" />
-            <element signature="e#3315#4482#0" expanded="false" />
-            <element signature="e#4484#5778#0" expanded="false" />
-            <element signature="e#5837#6103#0" expanded="false" />
-            <element signature="e#7487#8701#0" expanded="false" />
-            <element signature="e#9681#10476#0" expanded="false" />
-            <element signature="e#10499#11295#0" expanded="false" />
-            <element signature="e#11297#12095#0" expanded="false" />
-            <element signature="e#12155#12784#0" expanded="false" />
-            <element signature="e#12843#13187#0" expanded="false" />
-            <element signature="e#13189#13476#0" expanded="false" />
-            <element signature="e#13478#13751#0" expanded="false" />
-            <element signature="e#13753#14025#0" expanded="false" />
-            <element signature="e#14084#14499#0" expanded="false" />
-            <element signature="e#14501#14962#0" expanded="false" />
-            <element signature="e#15022#15508#0" expanded="false" />
-            <element signature="e#15510#15631#0" expanded="false" />
-            <element signature="e#15633#16117#0" expanded="false" />
-            <element signature="e#16119#16367#0" expanded="false" />
-            <element signature="e#16369#25857#0" expanded="false" />
-            <element signature="e#25859#31267#0" expanded="false" />
-            <element signature="e#31269#31396#0" expanded="false" />
-            <element signature="e#31398#32095#0" expanded="false" />
-            <element signature="e#32155#32806#0" expanded="false" />
-            <element signature="e#32875#33340#0" expanded="false" />
-            <element signature="e#33342#34153#0" expanded="false" />
-            <element signature="e#34155#34936#0" expanded="false" />
-            <element signature="e#34938#35662#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/include/linux/can/error.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="864">
           <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_msgs/msg/pose_velocity_direction.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_velocity_direction.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/can_interface/src/can_interface.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="170" column="19" lean-forward="false" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="361" column="45" lean-forward="false" selection-start-line="361" selection-start-column="45" selection-end-line="361" selection-end-column="45" />
+        <state relative-caret-position="933">
+          <caret line="160" column="42" lean-forward="false" selection-start-line="160" selection-start-column="42" selection-end-line="160" selection-end-column="42" />
           <folding>
-            <element signature="e#12338#12754#0" expanded="false" />
-            <element signature="e#12756#13161#0" expanded="false" />
-            <element signature="e#13163#14396#0" expanded="false" />
-            <element signature="e#16348#17039#0" expanded="false" />
-            <element signature="e#17041#17520#0" expanded="false" />
+            <element signature="e#1059#1351#0" expanded="false" />
+            <element signature="e#10260#11007#0" expanded="false" />
+            <element signature="e#11131#11556#0" expanded="false" />
+            <element signature="e#11558#11972#0" expanded="false" />
+            <element signature="e#11974#12659#0" expanded="false" />
+            <element signature="e#12661#13894#0" expanded="false" />
+            <element signature="e#14004#15985#0" expanded="false" />
+            <element signature="e#16058#16749#0" expanded="false" />
+            <element signature="e#16751#17230#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="116" column="94" lean-forward="false" selection-start-line="116" selection-start-column="94" selection-end-line="116" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="916" column="74" lean-forward="true" selection-start-line="916" selection-start-column="74" selection-end-line="916" selection-end-column="74" />
+          <folding>
+            <element signature="e#2111#2368#0" expanded="false" />
+            <element signature="e#2370#2576#0" expanded="false" />
+            <element signature="e#2578#2778#0" expanded="false" />
+            <element signature="e#2780#2986#0" expanded="false" />
+            <element signature="e#3046#3313#0" expanded="false" />
+            <element signature="e#3315#4493#0" expanded="false" />
+            <element signature="e#4495#5800#0" expanded="false" />
+            <element signature="e#5859#6125#0" expanded="false" />
+            <element signature="e#6127#7939#0" expanded="false" />
+            <element signature="e#7941#9802#0" expanded="false" />
+            <element signature="e#9861#10673#0" expanded="false" />
+            <element signature="e#10696#11453#0" expanded="false" />
+            <element signature="e#11477#12235#0" expanded="false" />
+            <element signature="e#12237#12997#0" expanded="false" />
+            <element signature="e#13057#13736#0" expanded="false" />
+            <element signature="e#13795#14139#0" expanded="false" />
+            <element signature="e#14141#14428#0" expanded="false" />
+            <element signature="e#14430#14703#0" expanded="false" />
+            <element signature="e#14705#14977#0" expanded="false" />
+            <element signature="e#15036#15451#0" expanded="false" />
+            <element signature="e#15453#15914#0" expanded="false" />
+            <element signature="e#15974#16460#0" expanded="false" />
+            <element signature="e#16462#16583#0" expanded="false" />
+            <element signature="e#16585#17069#0" expanded="false" />
+            <element signature="e#17071#17319#0" expanded="false" />
+            <element signature="e#17321#26909#0" expanded="false" />
+            <element signature="e#26911#32323#0" expanded="false" />
+            <element signature="e#32325#32452#0" expanded="false" />
+            <element signature="e#32454#33161#0" expanded="false" />
+            <element signature="e#33221#33878#0" expanded="false" />
+            <element signature="e#33880#34347#0" expanded="false" />
+            <element signature="e#34349#35162#0" expanded="false" />
+            <element signature="e#35164#35947#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -103,11 +103,12 @@ void MainWindow::on_relativeControl_slider_SLIDER_actionTriggered(int action){
 void MainWindow::on_relativeControl_slider_PB_clicked(){
 
     if (directionOfRotation){
-    desiredAngleInt = currentAngleInt + ui->relativeControl_slider_SLIDER->value();
+    desiredAngleInt += ui->relativeControl_slider_SLIDER->value();
     }else{
-        desiredAngleInt = currentAngleInt - ui->relativeControl_slider_SLIDER->value();
+        desiredAngleInt -= ui->relativeControl_slider_SLIDER->value();
     }
     desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
+
 
     //GUI
     ui->relativeControl_slider_LE->setText(QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg");
@@ -116,10 +117,11 @@ void MainWindow::on_relativeControl_slider_PB_clicked(){
     ui->status_TE->append("Moving[relative] to " + QString::number(ui->relativeControl_slider_SLIDER->value()/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
     //ROS
     pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_slider_SLIDER->value());  //deg
-    pose_velocity_direction_msg.velocity = (ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; // deg/s -> rots/min
+    pose_velocity_direction_msg.velocity = floor((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
+    rotateImg(desiredAngleInt/10.0);
 
 }
 
@@ -127,9 +129,9 @@ void MainWindow::on_relativeControl_input_PB_clicked(){
 
     //ROS_INFO("double = %f , int = %d",ui->relativeControl_input_LE->text().toDouble()*10.0,(int)(ui->relativeControl_input_LE->text().toDouble()*10.0));
     if (directionOfRotation){
-        desiredAngleInt = currentAngleInt + (int)(ui->relativeControl_input_LE->text().toDouble()*10.0);
+        desiredAngleInt += (int)(ui->relativeControl_input_LE->text().toDouble()*10.0);
     }else{
-        desiredAngleInt = currentAngleInt - (int)(ui->relativeControl_input_LE->text().toDouble()*10.0);
+        desiredAngleInt -= (int)(ui->relativeControl_input_LE->text().toDouble()*10.0);
     }
     desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
@@ -140,9 +142,11 @@ void MainWindow::on_relativeControl_input_PB_clicked(){
     ui->status_TE->append("Moving[relative] to " + QString::number(desiredAngleInt/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
     //ROS
     pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_input_LE->text().toDouble()*10); //deg
-    pose_velocity_direction_msg.velocity = ui->MaxVelocity_input_LE->text().toDouble()*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg
+    pose_velocity_direction_msg.velocity = (int)(ui->MaxVelocity_input_LE->text().toDouble()*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); //deg
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
+
+    rotateImg(desiredAngleInt/10.0);
 
 }
 /*****************************************************/
@@ -158,31 +162,40 @@ void MainWindow::on_absoluteControl_slider_SLIDER_actionTriggered(int action){
 
 void MainWindow::on_absoluteControl_slider_PB_clicked(){
 
-
-    desiredAngleInt = ui->absoluteControl_slider_SLIDER->value();
-    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
+    int desiredAngleAbsolute = ui->absoluteControl_slider_SLIDER->value();
+    desiredAngleAbsolute = normalizeToRange2PI(desiredAngleAbsolute);
 
     //GUI
-    ui->absoluteControl_slider_LE->setText(QString::number(desiredAngleInt/10.0) + " deg");
-    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
-    ui->desiredPositionRad_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
-    ui->status_TE->append("Moving[absolute] to " + QString::number(desiredAngleInt/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
+    ui->absoluteControl_slider_LE->setText(QString::number(desiredAngleAbsolute/10.0) + " deg");
+    ui->desiredPositionDeg_LCD->display(desiredAngleAbsolute/10.0);
+    ui->desiredPositionRad_LCD->display(desiredAngleAbsolute/10.0 * DEG_TO_RAD);
+    ui->status_TE->append("Moving[absolute] to " + QString::number(desiredAngleAbsolute/10.0) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
 
-    double desiredRotation = (double)(ui->absoluteControl_slider_SLIDER->value())/10.0;
-    ROS_INFO("desrot=%f currentrot=%f",desiredRotation,currentAngleDeg);
     if (directionOfRotation){
-        pose_velocity_direction_msg.rotation = (int)((desiredRotation - currentAngleDeg)*10.0);
+        if (desiredAngleAbsolute >= desiredAngleInt){
+            pose_velocity_direction_msg.rotation = desiredAngleAbsolute - desiredAngleInt ;
+        }else if (desiredAngleAbsolute < desiredAngleInt){
+            pose_velocity_direction_msg.rotation = 3600 - (desiredAngleInt - desiredAngleAbsolute);
+        }
     }else{
-        pose_velocity_direction_msg.rotation = (int)(((360-desiredRotation)+currentAngleDeg)*10.0);
+        if (desiredAngleAbsolute <= desiredAngleInt){
+            pose_velocity_direction_msg.rotation = desiredAngleInt - desiredAngleAbsolute;
+        }else if (desiredAngleAbsolute > desiredAngleInt){
+            pose_velocity_direction_msg.rotation = 3600 - (desiredAngleAbsolute - desiredAngleInt);
+        }
     }
-    ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
-    pose_velocity_direction_msg.velocity = (ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; // deg/s -> rots/min
+
+    ROS_INFO("desired angle= %d current angle = %d angle to rotate = %d",desiredAngleAbsolute, desiredAngleInt, pose_velocity_direction_msg.rotation);
+    desiredAngleInt = desiredAngleAbsolute;
+    pose_velocity_direction_msg.velocity = (int)((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
+    rotateImg(desiredAngleAbsolute/10.0);
 
 
-}   //prepocet ziadanej hodnoty na rozsah 0-360
+
+}
 
 void MainWindow::on_absoluteControl_input_PB_clicked(){
 
@@ -191,49 +204,42 @@ void MainWindow::on_absoluteControl_input_PB_clicked(){
     while (temp1 >=360){
         temp1-=360;
     }
+    int desiredAngleAbsolute = floor(temp1*10);
 
     ui->absoluteControl_slider_LE->setText(QString::number(temp1) + " deg");
     ui->desiredPositionDeg_LCD->display(temp1);
     ui->desiredPositionRad_LCD->display(temp1*DEG_TO_RAD);
     ui->status_TE->append("Moving[absolute] to " + QString::number(temp1) + " deg in direction " + QString(directionOfRotation ? "RIGHT":"LEFT"));
 
-    double desiredRotation = temp1;
-    ROS_INFO("desrot=%f currentrot=%f",desiredRotation,currentAngleDeg);
+
     if (directionOfRotation){
-        pose_velocity_direction_msg.rotation = (int)((desiredRotation - currentAngleDeg)*10.0);
+        if (desiredAngleAbsolute >= desiredAngleInt){
+            pose_velocity_direction_msg.rotation = desiredAngleAbsolute - desiredAngleInt ;
+        }else if (desiredAngleAbsolute < desiredAngleInt){
+            pose_velocity_direction_msg.rotation = 3600 - (desiredAngleInt - desiredAngleAbsolute);
+        }
     }else{
-        pose_velocity_direction_msg.rotation = (int)(((360-desiredRotation)+currentAngleDeg)*10.0);
+        if (desiredAngleAbsolute <= desiredAngleInt){
+            pose_velocity_direction_msg.rotation = desiredAngleInt - desiredAngleAbsolute;
+        }else if (desiredAngleAbsolute > desiredAngleInt){
+            pose_velocity_direction_msg.rotation = 3600 - (desiredAngleAbsolute - desiredAngleInt);
+        }
     }
-    ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
-    pose_velocity_direction_msg.velocity = (ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; // deg/s -> rots/min
+    ROS_INFO("desired angle= %d current angle = %d angle to rotate = %d",desiredAngleAbsolute, desiredAngleInt, pose_velocity_direction_msg.rotation);
+    //ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
+    desiredAngleInt = desiredAngleAbsolute;
+    pose_velocity_direction_msg.velocity = (int)((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
-}   //Prepocet ziadanej hodnoty na rozsah 0-360
+    rotateImg(abs(ui->absoluteControl_input_LE->text().toDouble()));
+
+}
 /*****************************************************/
 
 
 /**************** Smooth tune ************************/
 void MainWindow::on_smooth_plusHalf_PB_clicked(){
-
-    desiredAngleInt = currentAngleInt + 1;
-    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
-
-    //GUI
-    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
-    ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
-    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
-    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
-    //ROS
-    pose_velocity_direction_msg.rotation = 1; //deg=step*10
-    pose_velocity_direction_msg.velocity = 20*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg/s -> ot/min
-    pose_velocity_direction_msg.direction = true;
-    rotate_DEC_pub.publish(pose_velocity_direction_msg);
-    ROS_INFO_STREAM(pose_velocity_direction_msg);
-
-}   //step by 0.1 degree
-
-void MainWindow::on_smooth_plusOne_PB_clicked(){
 
     desiredAngleInt = currentAngleInt + 10;
     desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
@@ -245,16 +251,16 @@ void MainWindow::on_smooth_plusOne_PB_clicked(){
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
     //ROS
     pose_velocity_direction_msg.rotation = 10; //deg=step*10
-    pose_velocity_direction_msg.velocity = 20*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg/s -> ot/min
+    pose_velocity_direction_msg.velocity = 60; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = true;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
 }   //step by 1 degree
 
-void MainWindow::on_smooth_minusHalf_PB_clicked(){
+void MainWindow::on_smooth_plusOne_PB_clicked(){
 
-    desiredAngleInt = currentAngleInt - 1;
+    desiredAngleInt = currentAngleInt + 100;
     desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
     //GUI
@@ -263,16 +269,15 @@ void MainWindow::on_smooth_minusHalf_PB_clicked(){
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
     //ROS
-    pose_velocity_direction_msg.rotation = 1; //deg=step*10
-    pose_velocity_direction_msg.velocity = 20*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg/s -> ot/min
-    pose_velocity_direction_msg.direction = false;
+    pose_velocity_direction_msg.rotation = 100; //deg=step*10
+    pose_velocity_direction_msg.velocity = 60; //deg/s -> ot/min
+    pose_velocity_direction_msg.direction = true;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
 
-}
+}   //step by 10 degree
 
-void MainWindow::on_smooth_minusOne_PB_clicked(){
-
+void MainWindow::on_smooth_minusHalf_PB_clicked(){
 
     desiredAngleInt = currentAngleInt - 10;
     desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
@@ -284,7 +289,27 @@ void MainWindow::on_smooth_minusOne_PB_clicked(){
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
     //ROS
     pose_velocity_direction_msg.rotation = 10; //deg=step*10
-    pose_velocity_direction_msg.velocity = 20*DEGREES_per_SECOND_TO_ROTATIONperMINUTE; //deg/s -> ot/min
+    pose_velocity_direction_msg.velocity = 60; //deg/s -> ot/min
+    pose_velocity_direction_msg.direction = false;
+    rotate_DEC_pub.publish(pose_velocity_direction_msg);
+    ROS_INFO_STREAM(pose_velocity_direction_msg);
+
+}
+
+void MainWindow::on_smooth_minusOne_PB_clicked(){
+
+
+    desiredAngleInt = currentAngleInt - 100;
+    desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
+
+    //GUI
+    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
+    ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
+    ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
+    //ROS
+    pose_velocity_direction_msg.rotation = 100; //deg=step*10
+    pose_velocity_direction_msg.velocity = 60; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = false;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     ROS_INFO_STREAM(pose_velocity_direction_msg);
@@ -298,12 +323,12 @@ void MainWindow::on_smooth_minusOne_PB_clicked(){
 void MainWindow::on_MaxVelocity_input_PB_clicked(){
 
     //GUI
-    ui->maxVelocityDeg_LCD->display(ui->MaxVelocity_input_LE->text().toDouble());
-    ui->maxVelocityRad_LCD->display(ui->MaxVelocity_input_LE->text().toDouble()*DEG_TO_RAD);
+    ui->maxVelocityDeg_LCD->display((int)(ui->MaxVelocity_input_LE->text().toDouble()));
+    ui->maxVelocityRad_LCD->display((int)((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE));
     ui->status_TE->append("Max velocity set to " + ui->MaxVelocity_input_LE->text() + " deg/s");
 
-    pose_velocity_direction_msg.velocity = (float)((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
-    ROS_INFO("rots per minute = %f",pose_velocity_direction_msg.velocity);
+    pose_velocity_direction_msg.velocity = (int)((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
+    ROS_INFO("rots per minute = %d",(int)(pose_velocity_direction_msg.velocity));
 
 
 }
@@ -455,43 +480,43 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
     switch (num4){
         case 0xe:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
+            //ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
+            //ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
             ROS_INFO("RSG Mode: CAN and Test CPU Watchdog Successful");
             break;
         }
         case 0xc:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
             ROS_INFO("RSG Mode: CAN and Test CPU Watchdog Successful");
             break;
         }
         case 0xa:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Referencing Successful"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and ref.success"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Referencing Successful"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and ref.success"));
             ROS_INFO("RSG Mode: CAN and Referencing Successful");
             break;
         }
         case 0x8:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
             ROS_INFO("RSG Mode: CAN");
             break;
         }
         case 0x4:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
             ROS_INFO("Test CPU Watchdog Successful");
             break;
         }
         case 0x2:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
             ROS_INFO("Referencing Successful");
             break;
         }
@@ -512,57 +537,57 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
     switch (num3){
         case 0x7:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and "
-                                                                                                                               "Warning of 90% overload level before error"
-                                                                                                                               "and State: Ready"));
-            ui->status_workingState_TE->setText(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload,Ready"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and "
+//                                                                                                                               "Warning of 90% overload level before error"
+//                                                                                                                               "and State: Ready"));
+//            ui->status_workingState_TE->setText(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload,Ready"));
             ROS_INFO(" Position reached and Warning of 90% overload level before error and State: Ready");
             break;
         }
         case 0x6:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and "
-                                                                                                                               "Warning of 90% overload level before error"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and "
+//                                                                                                                               "Warning of 90% overload level before error"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload"));
             ROS_INFO("Position reached and Warning of 90% overload level before error");
             break;
         }
         case 0x5:
         {
 
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and State: Ready"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,Ready"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and State: Ready"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,Ready"));
             ROS_INFO("Position reached and State: Ready");
             break;
         }
         case 0x4:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
             ROS_INFO("Position reached");
             break;
         }
         case 0x3:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error and"
-                                                                                                                               "State: Ready"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" 90%overload,Ready"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error and"
+//                                                                                                                               "State: Ready"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" 90%overload,Ready"));
             ROS_INFO("Warning of 90% overload level before error and State: Ready");
             break;
         }
         case 0x2:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
             ROS_INFO("Warning of 90% overload level before error");
             break;
         }
         case 0x1:
         {
-            ui->config_workingState_TE->setTextColor(QColor("orange"));
-            ui->status_workingState_TE->setTextColor(QColor("orange"));
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
+//            ui->config_workingState_TE->setTextColor(QColor("orange"));
+//            ui->status_workingState_TE->setTextColor(QColor("orange"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
             ROS_INFO("State: Ready");
             break;
         }
@@ -584,10 +609,10 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
     switch (num2){
         case 0x8:
         {
-            ui->config_workingState_TE->setTextColor(QColor("red"));
-            ui->status_workingState_TE->setTextColor(QColor("red"));
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
+//            ui->config_workingState_TE->setTextColor(QColor("red"));
+//            ui->status_workingState_TE->setTextColor(QColor("red"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
             ROS_INFO("State: Error");
         }
         case 0x0:
@@ -607,35 +632,35 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
     switch (num1){
         case 0x8:
         {
-            ui->config_workingState_TE->setTextColor(QColor("green"));
-            ui->status_workingState_TE->setTextColor(QColor("green"));
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
+//            ui->config_workingState_TE->setTextColor(QColor("green"));
+//            ui->status_workingState_TE->setTextColor(QColor("green"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
             ROS_INFO("State: Running");
             break;
         }
         case 0x4:
         {
-            ui->config_workingState_TE->setTextColor(QColor("orange"));
-            ui->status_workingState_TE->setTextColor(QColor("orange"));
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
+//            ui->config_workingState_TE->setTextColor(QColor("orange"));
+//            ui->status_workingState_TE->setTextColor(QColor("orange"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
             ROS_INFO("State: Homing");
             break;
         }
         case 0x2:
         {
-            ui->config_workingState_TE->setTextColor(QColor("orange"));
-            ui->status_workingState_TE->setTextColor(QColor("orange"));
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
+//            ui->config_workingState_TE->setTextColor(QColor("orange"));
+//            ui->status_workingState_TE->setTextColor(QColor("orange"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
             ROS_INFO("State: Homing");
             break;
         }
         case 0x0:
         {
-            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
-            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
+//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
+//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
             ROS_INFO("State: Homing");
             break;
         }
@@ -795,8 +820,8 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
     }
 
     if (num4 == 0 && num3 == 0 && num2 == 0 && num1 == 0){
-        ui->status_error_TE->setTextColor(QColor("green"));
-        ui->status_error_TE->append(" No errors");
+        //ui->status_error_TE->setTextColor(QColor("green"));
+        //ui->status_error_TE->append(" No errors");
         ROS_INFO("No errors");
     }
 
@@ -812,18 +837,18 @@ int MainWindow::normalizeToRange2PI(int inputNumber){
     int modifiedAngleInt = inputNumber, k=0;
 
     if (modifiedAngleInt < 0){
-        ROS_INFO("Current angle less than 0 (%d)",modifiedAngleInt);
+        //ROS_INFO("Current angle less than 0 (%d)",modifiedAngleInt);
         k = -(modifiedAngleInt/3600);
         modifiedAngleInt = (k+1)*3600 + modifiedAngleInt;
-        ROS_INFO("Current angle modified to (%d)",modifiedAngleInt);
+        //ROS_INFO("Current angle modified to (%d)",modifiedAngleInt);
     }
 
     if (modifiedAngleInt >= 3600){
-        ROS_INFO("Angle is over 3600 (%d)",modifiedAngleInt);
+        //ROS_INFO("Angle is over 3600 (%d)",modifiedAngleInt);
         modifiedAngleInt = modifiedAngleInt % 3600;
-        ROS_INFO("Angle is over 3600, modif angle is %d",modifiedAngleInt);
+        //ROS_INFO("Angle is over 3600, modif angle is %d",modifiedAngleInt);
     }else{
-        ROS_INFO("Angle OK %d",modifiedAngleInt);
+        //ROS_INFO("Angle OK %d",modifiedAngleInt);
     }
 
     return modifiedAngleInt;
@@ -841,18 +866,18 @@ void MainWindow::CurrentAngleCallback(const std_msgs::Int32 currentAngle){
     //ROS_INFO("Current angle callback %.1f",(double)(currentAngle.data)/10.0);
     currentAngleDeg = (double)(currentAngle.data)/10.0; //Globalna premenna v ktorej je ulozena aktualna pozicia
     currentAngleInt = normalizeToRange2PI(currentAngle.data);
-    rotateImg((double)(currentAngleInt)/10.0);
-    ui->currentPositionDeg_LCD->display(currentAngleInt/10.0);
-    ui->currentPositionRad_LCD->display(currentAngleInt/10.0*DEG_TO_RAD);
+    //rotateImg((double)(currentAngleInt)/10.0);
+    //ui->currentPositionDeg_LCD->display(currentAngleInt/10.0);
+    //ui->currentPositionRad_LCD->display(currentAngleInt/10.0*DEG_TO_RAD);
 
-}   //Budem pracovat s current state ako s INTEGEROM !!!!!!!!!!!!!!!
+}
 
 void MainWindow::CurrentVelocityCallback(const std_msgs::Int32 currentVelocity){
 
     /**  Current velocity is in 1/min  **/
 
     currentVelocityDeg = currentVelocity.data*ROTATIONperMINUTE_TO_DEGREES_per_SECOND;  //Globalna premenna v ktorej je ulozena aktualna rychlost
-    ROS_INFO("Current velocity callback %.1f",currentVelocityDeg);
+    //ROS_INFO("Current velocity callback %.1f",currentVelocityDeg);
     ui->currentVelocityDeg_LCD->display(currentVelocityDeg);
     ui->currentVelocityRad_LCD->display(currentVelocity.data);
 
@@ -868,7 +893,7 @@ void MainWindow::CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkin
     hexa_number2 = (currentWorkingState.data & 0xf0)>>4;
     hexa_number3 = (currentWorkingState.data & 0xf00)>>8;
     hexa_number4 = (currentWorkingState.data & 0xf000)>>12;
-    ROS_INFO("First hexa = %x, second hexa = %x, thris hexa = %x, fourth hexa = %x",hexa_number1, hexa_number2, hexa_number3, hexa_number4);
+    //ROS_INFO("First hexa = %x, second hexa = %x, thris hexa = %x, fourth hexa = %x",hexa_number1, hexa_number2, hexa_number3, hexa_number4);
     displayCurrentWorkingStatus(hexa_number1,hexa_number2,hexa_number3,hexa_number4,numberOfMessage);
     numberOfMessage++;
 
@@ -883,7 +908,7 @@ void MainWindow::CurrentWorkingErrorCallback(const std_msgs::Int32 currentWorkin
     hexa_number2 = (currentWorkingError.data & 0xf0)>>4;
     hexa_number3 = (currentWorkingError.data & 0xf00)>>8;
     hexa_number4 = (currentWorkingError.data & 0xf000)>>12;
-    ROS_INFO("First hexa = %x, second hexa = %x, thris hexa = %x, fourth hexa = %x",hexa_number1, hexa_number2, hexa_number3, hexa_number4);
+    //ROS_INFO("First hexa = %x, second hexa = %x, thris hexa = %x, fourth hexa = %x",hexa_number1, hexa_number2, hexa_number3, hexa_number4);
     displayCurrentWorkingError(hexa_number1,hexa_number2,hexa_number3,hexa_number4,numberOfMessage);
     numberOfMessage++;
 

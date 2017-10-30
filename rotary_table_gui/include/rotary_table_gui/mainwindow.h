@@ -114,7 +114,7 @@ private:
     ros::AsyncSpinner *aspinner;
 
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
-    int centralStopCounter = 0, currentAngleInt = 0, desiredAngleInt = 0;
+    int centralStopCounter = 0, currentAngleInt = 0, desiredAngleInt = 0, currentAngleHelp = 0;
     double currentAngleDeg = 0.0, currentVelocityDeg = 0.0;
     char hexString[16];
 
