@@ -328,11 +328,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/mainwindow.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/ROTARY_TABLE_GUI" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/ROTARY_TABLE_GUI" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/moc_mainwindow.o" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/moc_mainwindow.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/ROTARY_TABLE_GUI.pro.user" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/ROTARY_TABLE_GUI.pro.user" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.cpp" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.h" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.ui" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/ROTARY_TABLE_GUI/mainwindow.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/moc_mainwindow.cpp" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/moc_mainwindow.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/ui_mainwindow.h" afterPath="$PROJECT_DIR$/ROTARY_TABLE_GUI_1/build-ROTARY_TABLE_GUI-Desktop_Qt_5_7_0_GCC_64bit-Debug/ui_mainwindow.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" afterPath="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" afterPath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/user_interface/mainwindow.ui" afterPath="$PROJECT_DIR$/rotary_table_gui/user_interface/mainwindow.ui" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -351,27 +360,28 @@
       <file leaf-file-name="rotary_table_menu.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="50" column="106" lean-forward="false" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="106" />
+            <state relative-caret-position="178">
+              <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rotary_table_menu.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rotary_table_menu.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="380" column="0" lean-forward="false" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
+            <state relative-caret-position="2430">
+              <caret line="140" column="48" lean-forward="true" selection-start-line="140" selection-start-column="48" selection-end-line="140" selection-end-column="48" />
               <folding>
-                <element signature="e#1086#1378#0" expanded="false" />
-                <element signature="e#11158#11583#0" expanded="false" />
-                <element signature="e#11585#11999#0" expanded="false" />
-                <element signature="e#12001#12686#0" expanded="false" />
-                <element signature="e#12688#13921#0" expanded="false" />
-                <element signature="e#14031#16012#0" expanded="false" />
-                <element signature="e#16085#16776#0" expanded="false" />
-                <element signature="e#16778#16833#0" expanded="false" />
+                <element signature="e#9110#9826#0" expanded="false" />
+                <marker date="1509464536087" expanded="false" signature="1307:1378" ph="{...}" />
+                <marker date="1509464536087" expanded="false" signature="10094:10375" ph="{...}" />
+                <marker date="1509464536087" expanded="false" signature="10509:10791" ph="{...}" />
+                <marker date="1509464536087" expanded="false" signature="10833:11478" ph="{...}" />
+                <marker date="1509464536087" expanded="false" signature="11623:12713" ph="{...}" />
+                <marker date="1509464536087" expanded="false" signature="13158:14804" ph="{...}" />
+                <marker date="1509464536087" expanded="false" signature="15059:15568" ph="{...}" />
+                <marker date="1509464536087" expanded="false" signature="15846:16156" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -380,53 +390,55 @@
       <file leaf-file-name="mainwindow.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="842" column="0" lean-forward="true" selection-start-line="842" selection-start-column="0" selection-end-line="842" selection-end-column="0" />
+            <state relative-caret-position="178">
+              <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="22" />
               <folding>
-                <element signature="e#2385#2642#0" expanded="false" />
-                <element signature="e#2644#2850#0" expanded="false" />
-                <element signature="e#2852#3052#0" expanded="false" />
-                <element signature="e#3054#3260#0" expanded="false" />
-                <element signature="e#3320#3587#0" expanded="false" />
-                <element signature="e#3589#4767#0" expanded="false" />
-                <element signature="e#4769#6074#0" expanded="false" />
-                <element signature="e#6133#6399#0" expanded="false" />
-                <element signature="e#6401#8213#0" expanded="false" />
-                <element signature="e#8215#10076#0" expanded="false" />
-                <element signature="e#10135#10947#0" expanded="false" />
-                <element signature="e#10970#11727#0" expanded="false" />
-                <element signature="e#11751#12509#0" expanded="false" />
-                <element signature="e#12511#13271#0" expanded="false" />
-                <element signature="e#13331#14010#0" expanded="false" />
-                <element signature="e#14069#14413#0" expanded="false" />
-                <element signature="e#14415#14702#0" expanded="false" />
-                <element signature="e#14704#14977#0" expanded="false" />
-                <element signature="e#14979#15251#0" expanded="false" />
-                <element signature="e#15310#15725#0" expanded="false" />
-                <element signature="e#15727#16188#0" expanded="false" />
-                <element signature="e#16248#16734#0" expanded="false" />
-                <element signature="e#16736#16857#0" expanded="false" />
-                <element signature="e#16859#17343#0" expanded="false" />
-                <element signature="e#17345#17593#0" expanded="false" />
-                <element signature="e#17595#27083#0" expanded="false" />
-                <element signature="e#27085#32497#0" expanded="false" />
-                <element signature="e#32499#32626#0" expanded="false" />
-                <element signature="e#32628#33335#0" expanded="false" />
-                <element signature="e#36419#37076#0" expanded="false" />
-                <element signature="e#37078#37549#0" expanded="false" />
-                <element signature="e#37551#38120#0" expanded="false" />
-                <element signature="e#38122#38654#0" expanded="false" />
-                <element signature="e#38656#39323#0" expanded="false" />
+                <element signature="e#2546#2803#0" expanded="false" />
+                <element signature="e#2805#3011#0" expanded="false" />
+                <element signature="e#3013#3213#0" expanded="false" />
+                <element signature="e#3215#3421#0" expanded="false" />
+                <element signature="e#3479#3654#0" expanded="false" />
+                <element signature="e#3712#3979#0" expanded="false" />
+                <element signature="e#3981#5159#0" expanded="false" />
+                <element signature="e#5161#6466#0" expanded="false" />
+                <element signature="e#6525#6791#0" expanded="false" />
+                <element signature="e#6793#8605#0" expanded="false" />
+                <element signature="e#8607#10468#0" expanded="false" />
+                <element signature="e#10527#11339#0" expanded="false" />
+                <element signature="e#11362#12119#0" expanded="false" />
+                <element signature="e#12143#12901#0" expanded="false" />
+                <element signature="e#12903#13663#0" expanded="false" />
+                <element signature="e#13723#14402#0" expanded="false" />
+                <element signature="e#14461#14805#0" expanded="false" />
+                <element signature="e#14807#15094#0" expanded="false" />
+                <element signature="e#15096#15369#0" expanded="false" />
+                <element signature="e#15371#15643#0" expanded="false" />
+                <element signature="e#15702#16117#0" expanded="false" />
+                <element signature="e#16119#16580#0" expanded="false" />
+                <element signature="e#16640#17126#0" expanded="false" />
+                <element signature="e#17128#17249#0" expanded="false" />
+                <element signature="e#17251#17735#0" expanded="false" />
+                <element signature="e#17737#17985#0" expanded="false" />
+                <element signature="e#17987#27475#0" expanded="false" />
+                <element signature="e#27477#32889#0" expanded="false" />
+                <element signature="e#32891#33018#0" expanded="false" />
+                <element signature="e#33020#33727#0" expanded="false" />
+                <element signature="e#33729#36751#0" expanded="false" />
+                <element signature="e#36811#37468#0" expanded="false" />
+                <element signature="e#37470#37941#0" expanded="false" />
+                <element signature="e#37943#38512#0" expanded="false" />
+                <element signature="e#38514#39046#0" expanded="false" />
+                <element signature="e#39048#39715#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainwindow.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mainwindow.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="123" column="187" lean-forward="false" selection-start-line="123" selection-start-column="187" selection-end-line="123" selection-end-column="187" />
+            <state relative-caret-position="368">
+              <caret line="137" column="76" lean-forward="true" selection-start-line="137" selection-start-column="76" selection-end-line="137" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -443,8 +455,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>currentStatus</find>
-      <find>current</find>
       <find>number</find>
       <find>pose_velocity_direction</find>
       <find>currentStatus_pub</find>
@@ -473,6 +483,8 @@
       <find>currentAngleDeg</find>
       <find>currentAngleInt</find>
       <find>display(currentVelocity.data);</find>
+      <find>input id</find>
+      <find>rotate_HEX_pub</find>
     </findStrings>
     <replaceStrings>
       <replace>scara_v2_moveit_config</replace>
@@ -538,10 +550,10 @@
         <option value="$PROJECT_DIR$/can_interface/src/can_interface.cpp" />
         <option value="$PROJECT_DIR$/scara_msgs/msg/pose_velocity_direction.msg" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/msg/pose_velocity_direction.msg" />
-        <option value="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
-        <option value="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
+        <option value="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
+        <option value="$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h" />
       </list>
     </option>
   </component>
@@ -2767,14 +2779,7 @@
       <workItem from="1509364645612" duration="1005000" />
       <workItem from="1509382709860" duration="10376000" />
       <workItem from="1509435498926" duration="4130000" />
-      <workItem from="1509459475520" duration="3300000" />
-    </task>
-    <task id="LOCAL-00044" summary="README - modified">
-      <created>1503302472385</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1503302472385</updated>
+      <workItem from="1509459475520" duration="4641000" />
     </task>
     <task id="LOCAL-00045" summary="README - modified">
       <created>1503303548173</created>
@@ -3112,11 +3117,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509439538074</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="DONE: timer working - set values to be displayed in timer&#10;&#10;TO DO: find out how to set direction of rotation,">
+      <created>1509463492538</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1509463492539</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="945824000" />
+    <option name="totallyTimeSpent" value="947165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1089" y="24" width="1855" height="1056" extended-state="6" />
@@ -3168,7 +3180,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SENSO PC + MY PC sync  + get information tab completed!" />
     <MESSAGE value="added collision objects to moveit!" />
     <MESSAGE value="Added virtual cube to project.. not tested yet" />
     <MESSAGE value="Added virtual cube to project.. not tested yet (small change)" />
@@ -3193,7 +3204,8 @@
     <MESSAGE value="CAN KONECNE FUGUJE !!!!!!&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status,, calculate temperature and current in 0x226, and some other things with 0x226" />
     <MESSAGE value="GUI and menu of rotaty table OK.&#10;&#10;TO DO: find out how to set direction of rotation, calculate temperature and current in 0x226" />
     <MESSAGE value="DONE: timer working&#10;&#10;TO DO: find out how to set direction of rotation,  set values to be displayed in timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="DONE: timer working&#10;&#10;TO DO: find out how to set direction of rotation,  set values to be displayed in timer" />
+    <MESSAGE value="DONE: timer working - set values to be displayed in timer&#10;&#10;TO DO: find out how to set direction of rotation," />
+    <option name="LAST_COMMIT_MESSAGE" value="DONE: timer working - set values to be displayed in timer&#10;&#10;TO DO: find out how to set direction of rotation," />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3551,79 +3563,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="123" column="187" lean-forward="false" selection-start-line="123" selection-start-column="187" selection-end-line="123" selection-end-column="187" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="842" column="0" lean-forward="true" selection-start-line="842" selection-start-column="0" selection-end-line="842" selection-end-column="0" />
-          <folding>
-            <element signature="e#2385#2642#0" expanded="false" />
-            <element signature="e#2644#2850#0" expanded="false" />
-            <element signature="e#2852#3052#0" expanded="false" />
-            <element signature="e#3054#3260#0" expanded="false" />
-            <element signature="e#3320#3587#0" expanded="false" />
-            <element signature="e#3589#4767#0" expanded="false" />
-            <element signature="e#4769#6074#0" expanded="false" />
-            <element signature="e#6133#6399#0" expanded="false" />
-            <element signature="e#6401#8213#0" expanded="false" />
-            <element signature="e#8215#10076#0" expanded="false" />
-            <element signature="e#10135#10947#0" expanded="false" />
-            <element signature="e#10970#11727#0" expanded="false" />
-            <element signature="e#11751#12509#0" expanded="false" />
-            <element signature="e#12511#13271#0" expanded="false" />
-            <element signature="e#13331#14010#0" expanded="false" />
-            <element signature="e#14069#14413#0" expanded="false" />
-            <element signature="e#14415#14702#0" expanded="false" />
-            <element signature="e#14704#14977#0" expanded="false" />
-            <element signature="e#14979#15251#0" expanded="false" />
-            <element signature="e#15310#15725#0" expanded="false" />
-            <element signature="e#15727#16188#0" expanded="false" />
-            <element signature="e#16248#16734#0" expanded="false" />
-            <element signature="e#16736#16857#0" expanded="false" />
-            <element signature="e#16859#17343#0" expanded="false" />
-            <element signature="e#17345#17593#0" expanded="false" />
-            <element signature="e#17595#27083#0" expanded="false" />
-            <element signature="e#27085#32497#0" expanded="false" />
-            <element signature="e#32499#32626#0" expanded="false" />
-            <element signature="e#32628#33335#0" expanded="false" />
-            <element signature="e#36419#37076#0" expanded="false" />
-            <element signature="e#37078#37549#0" expanded="false" />
-            <element signature="e#37551#38120#0" expanded="false" />
-            <element signature="e#38122#38654#0" expanded="false" />
-            <element signature="e#38656#39323#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="50" column="106" lean-forward="false" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="106" />
+        <state relative-caret-position="178">
+          <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="380" column="0" lean-forward="false" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
+        <state relative-caret-position="2430">
+          <caret line="140" column="48" lean-forward="true" selection-start-line="140" selection-start-column="48" selection-end-line="140" selection-end-column="48" />
           <folding>
-            <element signature="e#1086#1378#0" expanded="false" />
-            <element signature="e#11158#11583#0" expanded="false" />
-            <element signature="e#11585#11999#0" expanded="false" />
-            <element signature="e#12001#12686#0" expanded="false" />
-            <element signature="e#12688#13921#0" expanded="false" />
-            <element signature="e#14031#16012#0" expanded="false" />
-            <element signature="e#16085#16776#0" expanded="false" />
-            <element signature="e#16778#16833#0" expanded="false" />
+            <element signature="e#9110#9826#0" expanded="false" />
+            <marker date="1509464536087" expanded="false" signature="1307:1378" ph="{...}" />
+            <marker date="1509464536087" expanded="false" signature="10094:10375" ph="{...}" />
+            <marker date="1509464536087" expanded="false" signature="10509:10791" ph="{...}" />
+            <marker date="1509464536087" expanded="false" signature="10833:11478" ph="{...}" />
+            <marker date="1509464536087" expanded="false" signature="11623:12713" ph="{...}" />
+            <marker date="1509464536087" expanded="false" signature="13158:14804" ph="{...}" />
+            <marker date="1509464536087" expanded="false" signature="15059:15568" ph="{...}" />
+            <marker date="1509464536087" expanded="false" signature="15846:16156" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="e#2546#2803#0" expanded="false" />
+            <element signature="e#2805#3011#0" expanded="false" />
+            <element signature="e#3013#3213#0" expanded="false" />
+            <element signature="e#3215#3421#0" expanded="false" />
+            <element signature="e#3479#3654#0" expanded="false" />
+            <element signature="e#3712#3979#0" expanded="false" />
+            <element signature="e#3981#5159#0" expanded="false" />
+            <element signature="e#5161#6466#0" expanded="false" />
+            <element signature="e#6525#6791#0" expanded="false" />
+            <element signature="e#6793#8605#0" expanded="false" />
+            <element signature="e#8607#10468#0" expanded="false" />
+            <element signature="e#10527#11339#0" expanded="false" />
+            <element signature="e#11362#12119#0" expanded="false" />
+            <element signature="e#12143#12901#0" expanded="false" />
+            <element signature="e#12903#13663#0" expanded="false" />
+            <element signature="e#13723#14402#0" expanded="false" />
+            <element signature="e#14461#14805#0" expanded="false" />
+            <element signature="e#14807#15094#0" expanded="false" />
+            <element signature="e#15096#15369#0" expanded="false" />
+            <element signature="e#15371#15643#0" expanded="false" />
+            <element signature="e#15702#16117#0" expanded="false" />
+            <element signature="e#16119#16580#0" expanded="false" />
+            <element signature="e#16640#17126#0" expanded="false" />
+            <element signature="e#17128#17249#0" expanded="false" />
+            <element signature="e#17251#17735#0" expanded="false" />
+            <element signature="e#17737#17985#0" expanded="false" />
+            <element signature="e#17987#27475#0" expanded="false" />
+            <element signature="e#27477#32889#0" expanded="false" />
+            <element signature="e#32891#33018#0" expanded="false" />
+            <element signature="e#33020#33727#0" expanded="false" />
+            <element signature="e#33729#36751#0" expanded="false" />
+            <element signature="e#36811#37468#0" expanded="false" />
+            <element signature="e#37470#37941#0" expanded="false" />
+            <element signature="e#37943#38512#0" expanded="false" />
+            <element signature="e#38514#39046#0" expanded="false" />
+            <element signature="e#39048#39715#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotary_table_gui/include/rotary_table_gui/mainwindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="137" column="76" lean-forward="true" selection-start-line="137" selection-start-column="76" selection-end-line="137" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>

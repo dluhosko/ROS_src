@@ -63,7 +63,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_1">
      <attribute name="title">
@@ -542,7 +542,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_1">
      <attribute name="title">
@@ -662,14 +662,14 @@
         <item>
          <widget class="QLabel" name="label_20">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Position [deg/s]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Rotation [deg/s]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="label_21">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Position [rad/s]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Rotation [rots/min]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -935,6 +935,9 @@
           </property>
          </widget>
         </item>
+        <item row="3" column="1">
+         <widget class="QLCDNumber" name="filteredMotorCurrent_LCD"/>
+        </item>
         <item row="1" column="1">
          <widget class="QLCDNumber" name="status_MicroprocesorTemp_LCD"/>
         </item>
@@ -944,9 +947,6 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Microprocessor&lt;br/&gt;Temperature&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QLCDNumber" name="filteredMotorCurrent_LCD"/>
         </item>
         <item row="0" column="2">
          <widget class="QLabel" name="label_35">
@@ -979,6 +979,13 @@
          <widget class="QLabel" name="label_37">
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;[mA]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Get Info</string>
           </property>
          </widget>
         </item>

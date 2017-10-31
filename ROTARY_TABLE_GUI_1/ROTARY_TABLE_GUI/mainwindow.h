@@ -67,6 +67,8 @@ private slots:
 
     //void displayCurrentValues();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     int timerId;

@@ -125,7 +125,7 @@ void sendDesiredWorkingState(int inputNumber){
 //! \Brief According to ID of input frame it decodes the incomming CAN message and sends it to GUI
 void decodeCANmsg(can_frame *frame){
 
-    ROS_INFO("input id %x",frame->can_id);
+    //ROS_INFO("input id %x",frame->can_id);
     switch (frame->can_id){
         case 0x210:     //Status answer
         {
@@ -192,25 +192,6 @@ void decodeCANmsg(can_frame *frame){
         }
         default:
         {
-            //ROS_ERROR("ID: %x",frame->can_id);
-            //Just test
-//            int status_data = 0x4400;
-//            int error_data = 0x0804;
-//            ROS_INFO("status = %d error = %d",status_data,error_data);
-//            memcpy(frame->data , &status_data,2*sizeof(uint8_t));
-//            memcpy(frame->data+2 , &error_data,2*sizeof(uint8_t));
-//            for (int i = 0; i < 4; i++) ROS_INFO("%X", frame->data[i]);
-//
-//            //decompose data
-//            int32_msg.data = 0;                                         //Send STATUS
-//            memcpy(&int32_msg.data,frame->data,2*sizeof(uint8_t));    //Posibility 2 (Status msg)
-//            currentWorkingState_pub.publish(int32_msg);                       //Send status msg
-//            ROS_INFO("Sending STATUS msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
-//
-//            int32_msg.data = 0;                                         //Send ERROR
-//            memcpy(&int32_msg.data,frame->data+2,2*sizeof(uint8_t));  //Posibility 2 (Error msg)
-//            currentError_pub.publish(int32_msg);
-//            ROS_INFO("Sending ERROR msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
             break;
         }
     }
@@ -220,7 +201,6 @@ void decodeCANmsg(can_frame *frame){
 //! \Brief Sends a request message to RT to get response of current temperatures
 void requestTemperature(){
 
-    if (i == 20){
         uint8_t data[8];
         clearArray(data,8);
         can_frame frame;                                //Create CAN frame
@@ -228,12 +208,8 @@ void requestTemperature(){
         frame.can_dlc = 0;                              //Define lenght of CAN message
         memcpy(&frame.data, data, sizeof(data));        //Copy data to CAN frame
         for (int i = 0; i < 8; i++) frame.data[i] = 0;  //Set zeros to data
-
         for (int i = 0; i < 8; i++) ROS_INFO("%X", frame.data[i]);
-        can->writeCAN(&frame);        //Send message via CAN
-        i = 0;
-    }
-    i++;
+        can->writeCAN(&frame);                          //Send message via CAN
 
 }               //******************************************** DOKONCIT !!!!!!! *****************************************//
 
@@ -376,6 +352,9 @@ void workingStateCommandCallback(const std_msgs::Int32 mode){
 }
 
 void tempAndCurrCallback(const std_msgs::Bool mode){
+
+    if (mode.data)
+        requestTemperature();
 
 }
 

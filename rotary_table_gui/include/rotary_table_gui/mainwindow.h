@@ -94,6 +94,8 @@ private slots:
 
     void on_smooth_minusOne_PB_clicked();
 
+    void on_pushButton_clicked();
+
     //Custom functions
     void display_exit_of_program();
 
@@ -133,7 +135,7 @@ private:
     scara_msgs::pose_velocity_direction pose_velocity_direction_msg;
     scara_msgs::status_rt status_msg;
 
-    ros::Publisher rotate_DEC_pub, rotate_HEX_pub, workingState_pub, exitProgram_pub;
+    ros::Publisher rotate_DEC_pub, rotate_HEX_pub,  temperatureAndCurrent_pub, workingState_pub, exitProgram_pub;
     ros::Subscriber currentAngleDeg_sub, currentVelocityPerMinute_sub, currentState_sub, currentError_sub, status_sub, useless_sub;
 };
 

@@ -151,13 +151,14 @@ public:
     QLCDNumber *status_ChopperTemp_LCD;
     QLCDNumber *status_powerStageTemp_LCD;
     QLabel *label_34;
+    QLCDNumber *filteredMotorCurrent_LCD;
     QLCDNumber *status_MicroprocesorTemp_LCD;
     QLabel *label_32;
-    QLCDNumber *filteredMotorCurrent_LCD;
     QLabel *label_35;
     QLabel *label_39;
     QLabel *label_36;
     QLabel *label_37;
+    QPushButton *pushButton;
     QFrame *frame_10;
     QWidget *horizontalLayoutWidget_19;
     QHBoxLayout *horizontalLayout_19;
@@ -716,6 +717,11 @@ public:
 
         gridLayout->addWidget(label_34, 3, 0, 1, 1);
 
+        filteredMotorCurrent_LCD = new QLCDNumber(gridLayoutWidget);
+        filteredMotorCurrent_LCD->setObjectName(QStringLiteral("filteredMotorCurrent_LCD"));
+
+        gridLayout->addWidget(filteredMotorCurrent_LCD, 3, 1, 1, 1);
+
         status_MicroprocesorTemp_LCD = new QLCDNumber(gridLayoutWidget);
         status_MicroprocesorTemp_LCD->setObjectName(QStringLiteral("status_MicroprocesorTemp_LCD"));
 
@@ -725,11 +731,6 @@ public:
         label_32->setObjectName(QStringLiteral("label_32"));
 
         gridLayout->addWidget(label_32, 1, 0, 1, 1);
-
-        filteredMotorCurrent_LCD = new QLCDNumber(gridLayoutWidget);
-        filteredMotorCurrent_LCD->setObjectName(QStringLiteral("filteredMotorCurrent_LCD"));
-
-        gridLayout->addWidget(filteredMotorCurrent_LCD, 3, 1, 1, 1);
 
         label_35 = new QLabel(gridLayoutWidget);
         label_35->setObjectName(QStringLiteral("label_35"));
@@ -751,6 +752,11 @@ public:
         label_37->setObjectName(QStringLiteral("label_37"));
 
         gridLayout->addWidget(label_37, 3, 2, 1, 1);
+
+        pushButton = new QPushButton(gridLayoutWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+
+        gridLayout->addWidget(pushButton, 4, 1, 1, 1);
 
         frame_10 = new QFrame(tab_21);
         frame_10->setObjectName(QStringLiteral("frame_10"));
@@ -917,8 +923,8 @@ public:
         label_12->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [deg]</span></p></body></html>", 0));
         label_11->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [rad]</span></p></body></html>", 0));
         label_19->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Max enabled velocity</span></p></body></html>", 0));
-        label_20->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [deg/s]</span></p></body></html>", 0));
-        label_21->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Position [rad/s]</span></p></body></html>", 0));
+        label_20->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Rotation [deg/s]</span></p></body></html>", 0));
+        label_21->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Rotation [rots/min]</span></p></body></html>", 0));
         label_22->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Current velocity</span></p></body></html>", 0));
         label_23->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Rotation [deg/s]</span></p></body></html>", 0));
         label_24->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Rotation [rots/min]</span></p></body></html>", 0));
@@ -935,6 +941,7 @@ public:
         label_39->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[\302\260C]</span></p></body></html>", 0));
         label_36->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[\302\260C]</span></p></body></html>", 0));
         label_37->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">[mA]</span></p></body></html>", 0));
+        pushButton->setText(QApplication::translate("MainWindow", "Get Info", 0));
         label_30->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Current<br/>Working<br/>state</span></p></body></html>", 0));
         label_38->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Current<br/>Error</span></p></body></html>", 0));
         positionAndStatus_TabWidget->setTabText(positionAndStatus_TabWidget->indexOf(tab_21), QApplication::translate("MainWindow", "    Status    ", 0));

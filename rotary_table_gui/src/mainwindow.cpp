@@ -24,34 +24,36 @@ MainWindow::MainWindow(QWidget *parent) :
     aspinner->start();
 
     ROS_WARN("Init publishers:");
-    rotate_DEC_pub = n.advertise<scara_msgs::pose_velocity_direction>("rotate_DEC_RT",1000);
-    ROS_INFO("rotate_DEC_RT");
-    rotate_HEX_pub = n.advertise<std_msgs::String>("rotate_HEX_RT",1000);
-    ROS_INFO("rotate_HEX_RT");
-    workingState_pub = n.advertise<std_msgs::Int32>("set_working_mode_RT",1000);
-    ROS_INFO("set_working_mode_RT");
-    exitProgram_pub = n.advertise<std_msgs::Bool>("exitProgram_RT",1000);
-    ROS_INFO("exitProgram_RT");
-//    rotate_HEX_pub = n4.advertise<std_msgs::Int32>("useless_pub",1000);
-//    ROS_INFO("useless_pub_RT");
+        rotate_DEC_pub = n.advertise<scara_msgs::pose_velocity_direction>("rotate_DEC_RT",1000);
+        ROS_INFO("rotate_DEC_RT");
+        rotate_HEX_pub = n.advertise<std_msgs::String>("rotate_HEX_RT",1000);
+        ROS_INFO("rotate_HEX_RT");
+        workingState_pub = n.advertise<std_msgs::Int32>("set_working_mode_RT",1000);
+        ROS_INFO("set_working_mode_RT");
+        exitProgram_pub = n.advertise<std_msgs::Bool>("exitProgram_RT",1000);
+        ROS_INFO("exitProgram_RT");
+        temperatureAndCurrent_pub = n.advertise<std_msgs::Bool>("requestTemperatureAndCurrent",1000);
+        ROS_INFO("requestTemperatureAndCurrent");
 
     ROS_WARN("Init subscribers:");
-    currentAngleDeg_sub = nn.subscribe("currentAngleDeg_RT",1000,&MainWindow::CurrentAngleCallback, this);
-    ROS_INFO("currentAngleDeg_RT");
-    currentState_sub = nn.subscribe("currentWorkingState_RT",1000,&MainWindow::CurrentWorkingStateCallback, this);
-    ROS_INFO("currentWorkingState_RT");
-    currentError_sub = nn.subscribe("currentWorkingError_RT",1000,&MainWindow::CurrentWorkingErrorCallback, this);
-    ROS_INFO("currentWorkingError_RT");
-    currentVelocityPerMinute_sub = nn.subscribe("currentVelocityPerMinute_RT",1000,&MainWindow::CurrentVelocityCallback, this);
-    ROS_INFO("currentVelocityPerMinute_RT");
-    status_sub = nn.subscribe("currentStatus_RT",1000,&MainWindow::CurrentStatusCallback, this);
-    ROS_INFO("currentStatus_RT");
+        currentAngleDeg_sub = nn.subscribe("currentAngleDeg_RT",1000,&MainWindow::CurrentAngleCallback, this);
+        ROS_INFO("currentAngleDeg_RT");
+        currentState_sub = nn.subscribe("currentWorkingState_RT",1000,&MainWindow::CurrentWorkingStateCallback, this);
+        ROS_INFO("currentWorkingState_RT");
+        currentError_sub = nn.subscribe("currentWorkingError_RT",1000,&MainWindow::CurrentWorkingErrorCallback, this);
+        ROS_INFO("currentWorkingError_RT");
+        currentVelocityPerMinute_sub = nn.subscribe("currentVelocityPerMinute_RT",1000,&MainWindow::CurrentVelocityCallback, this);
+        ROS_INFO("currentVelocityPerMinute_RT");
+        status_sub = nn.subscribe("currentStatus_RT",1000,&MainWindow::CurrentStatusCallback, this);
+        ROS_INFO("currentStatus_RT");
+    ROS_WARN("");
+    ROS_WARN("************************* Init end  ********************************");
+    ROS_WARN("");
 
     ui->direction_RIGHT_CB->setChecked(true);
     ui->direction_LEFT_CB->setChecked(false);
 
     timer = new QTimer(this);
-    //connect(timer, SIGNAL(timeout()), this, SLOT(displayCurrentValues()));
     connect(timer, &QTimer::timeout, this, &MainWindow::displayCurrentValues);
     timer->start(100);
 
@@ -97,9 +99,16 @@ void MainWindow::on_config_ERROR_PB_clicked(){
     sendWorkingMode(4);
 
 }
-
 /*****************************************************/
 
+/************ Request temp and curr *****************/
+void MainWindow::on_pushButton_clicked(){
+
+    bool_msg.data = true;
+    temperatureAndCurrent_pub.publish(bool_msg);
+
+}
+/*****************************************************/
 
 /**************** Relative Control *******************/
 void MainWindow::on_relativeControl_slider_SLIDER_actionTriggered(int action){

@@ -13,11 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //connect(timer, SIGNAL(timeout()), this, SLOT(displayCurrentValues()));
     //timer->start(1000);
 
-    QTimer *timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(update()));
-    timer->start(1000);
 
-    timerId = startTimer(1000);
 }
 
 MainWindow::~MainWindow()
@@ -259,3 +255,8 @@ void MainWindow::displayCurrentValues(QTimerEvent *event){
 
 
 
+
+void MainWindow::on_pushButton_clicked()
+{
+
+}
