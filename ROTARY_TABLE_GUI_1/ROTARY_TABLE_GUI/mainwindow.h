@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDebug>
 
 
 const double RAD_TO_DEG = 57.2957795130;
@@ -18,6 +19,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+    QTimer *timer;
 
 private slots:
     void on_config_OFF_PB_clicked();
@@ -62,11 +65,16 @@ private slots:
 
     void on_smooth_minusOne_PB_clicked();
 
+    //void displayCurrentValues();
+
 private:
     Ui::MainWindow *ui;
+    int timerId;
 
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
     double currentAngleDeg = 0.0, currentAngleRad = 0.0;
+protected:
+    void displayCurrentValues(QTimerEvent *event);
 };
 
 #endif // MAINWINDOW_H

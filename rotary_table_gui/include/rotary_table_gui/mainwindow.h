@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtCore>
 #include "ros/ros.h"
 #include "ros/publisher.h"
 #include "ros/subscriber.h"
@@ -36,6 +37,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+    QTimer *timer;
 
     //Callbacks
     void CurrentAngleCallback(const std_msgs::Int32 currentAngle);
@@ -108,6 +111,8 @@ private slots:
 
     int normalizeToRange2PI(int inputNumber);
 
+    void displayCurrentValues();
+
 private:
     Ui::MainWindow *ui;
 
@@ -127,7 +132,6 @@ private:
 
     ros::Publisher rotate_DEC_pub, rotate_HEX_pub, workingState_pub, exitProgram_pub;
     ros::Subscriber currentAngleDeg_sub, currentVelocityPerMinute_sub, currentState_sub, currentError_sub, status_sub, useless_sub;
-
 };
 
 #endif // MAINWINDOW_H

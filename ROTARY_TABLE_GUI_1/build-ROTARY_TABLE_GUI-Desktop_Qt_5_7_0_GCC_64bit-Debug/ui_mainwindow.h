@@ -907,7 +907,7 @@ public:
         smooth_plusOne_PB->setText(QApplication::translate("MainWindow", "+1\302\260", 0));
         label_8->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Edit max velocity [deg/s]</span></p></body></html>", 0));
         MaxVelocity_input_PB->setText(QApplication::translate("MainWindow", "OK", 0));
-        label_25->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Edit direction of rotation</span></p></body></html>", 0));
+        label_25->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Edit direction of rotation</span></p></body></html>", 0));
         direction_LEFT_CB->setText(QString());
         direction_LEFT_PB->setText(QApplication::translate("MainWindow", "<- LEFT", 0));
         direction_RIGHT_PB->setText(QApplication::translate("MainWindow", "RIGHT ->", 0));

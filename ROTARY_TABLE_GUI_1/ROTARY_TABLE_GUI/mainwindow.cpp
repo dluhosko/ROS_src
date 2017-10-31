@@ -1,11 +1,23 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+   // timer = new QTimer();
+    //connect(timer, SIGNAL(timeout()), this, SLOT(displayCurrentValues()));
+    //timer->start(1000);
+
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(update()));
+    timer->start(1000);
+
+    timerId = startTimer(1000);
 }
 
 MainWindow::~MainWindow()
@@ -236,3 +248,14 @@ void MainWindow::on_smooth_minusOne_PB_clicked()
 {
 
 }
+
+void MainWindow::displayCurrentValues(QTimerEvent *event){
+
+   // ROS_WARN("Timer start");
+    qDebug() << "timer function";
+    ui->status_TE->append("timer!");
+
+}
+
+
+

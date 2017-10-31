@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <pluginlib/class_list_macros.h>
 #include <QStringList>
+#include <QtCore>
 #include <std_msgs/Int32.h>
 #include <std_msgs/String.h>
 #include "ros/ros.h"
@@ -49,10 +50,18 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->direction_RIGHT_CB->setChecked(true);
     ui->direction_LEFT_CB->setChecked(false);
 
+    timer = new QTimer(this);
+    //connect(timer, SIGNAL(timeout()), this, SLOT(displayCurrentValues()));
+    connect(timer, &QTimer::timeout, this, &MainWindow::displayCurrentValues);
+    timer->start(100);
+
+
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow(){
+
+    //killTimer(timerId);
+    timer->stop();
     delete ui;
 }
 
@@ -852,6 +861,14 @@ int MainWindow::normalizeToRange2PI(int inputNumber){
     }
 
     return modifiedAngleInt;
+
+}
+
+void MainWindow::displayCurrentValues(){
+
+    ROS_WARN("Timer start");
+    //ui->currentPositionDeg_LCD->display(999);
+
 
 }
 /*****************************************************/
