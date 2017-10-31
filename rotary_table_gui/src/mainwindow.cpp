@@ -489,43 +489,43 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
     switch (num4){
         case 0xe:
         {
-            //ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
-            //ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
             ROS_INFO("RSG Mode: CAN and Test CPU Watchdog Successful");
             break;
         }
         case 0xc:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
             ROS_INFO("RSG Mode: CAN and Test CPU Watchdog Successful");
             break;
         }
         case 0xa:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Referencing Successful"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and ref.success"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Referencing Successful"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and ref.success"));
             ROS_INFO("RSG Mode: CAN and Referencing Successful");
             break;
         }
         case 0x8:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
             ROS_INFO("RSG Mode: CAN");
             break;
         }
         case 0x4:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
             ROS_INFO("Test CPU Watchdog Successful");
             break;
         }
         case 0x2:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
             ROS_INFO("Referencing Successful");
             break;
         }
@@ -546,57 +546,57 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
     switch (num3){
         case 0x7:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and "
-//                                                                                                                               "Warning of 90% overload level before error"
-//                                                                                                                               "and State: Ready"));
-//            ui->status_workingState_TE->setText(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload,Ready"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and "
+                                                                                                                               "Warning of 90% overload level before error"
+                                                                                                                               "and State: Ready"));
+            ui->status_workingState_TE->setText(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload,Ready"));
             ROS_INFO(" Position reached and Warning of 90% overload level before error and State: Ready");
             break;
         }
         case 0x6:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and "
-//                                                                                                                               "Warning of 90% overload level before error"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and "
+                                                                                                                               "Warning of 90% overload level before error"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload"));
             ROS_INFO("Position reached and Warning of 90% overload level before error");
             break;
         }
         case 0x5:
         {
 
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and State: Ready"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,Ready"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and State: Ready"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,Ready"));
             ROS_INFO("Position reached and State: Ready");
             break;
         }
         case 0x4:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
             ROS_INFO("Position reached");
             break;
         }
         case 0x3:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error and"
-//                                                                                                                               "State: Ready"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" 90%overload,Ready"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error and"
+                                                                                                                               "State: Ready"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" 90%overload,Ready"));
             ROS_INFO("Warning of 90% overload level before error and State: Ready");
             break;
         }
         case 0x2:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
             ROS_INFO("Warning of 90% overload level before error");
             break;
         }
         case 0x1:
         {
-//            ui->config_workingState_TE->setTextColor(QColor("orange"));
-//            ui->status_workingState_TE->setTextColor(QColor("orange"));
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
+            ui->config_workingState_TE->setTextColor(QColor("orange"));
+            ui->status_workingState_TE->setTextColor(QColor("orange"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
             ROS_INFO("State: Ready");
             break;
         }
@@ -618,10 +618,10 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
     switch (num2){
         case 0x8:
         {
-//            ui->config_workingState_TE->setTextColor(QColor("red"));
-//            ui->status_workingState_TE->setTextColor(QColor("red"));
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
+            ui->config_workingState_TE->setTextColor(QColor("red"));
+            ui->status_workingState_TE->setTextColor(QColor("red"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
             ROS_INFO("State: Error");
         }
         case 0x0:
@@ -641,35 +641,35 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
     switch (num1){
         case 0x8:
         {
-//            ui->config_workingState_TE->setTextColor(QColor("green"));
-//            ui->status_workingState_TE->setTextColor(QColor("green"));
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
+            ui->config_workingState_TE->setTextColor(QColor("green"));
+            ui->status_workingState_TE->setTextColor(QColor("green"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
             ROS_INFO("State: Running");
             break;
         }
         case 0x4:
         {
-//            ui->config_workingState_TE->setTextColor(QColor("orange"));
-//            ui->status_workingState_TE->setTextColor(QColor("orange"));
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
+            ui->config_workingState_TE->setTextColor(QColor("orange"));
+            ui->status_workingState_TE->setTextColor(QColor("orange"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
             ROS_INFO("State: Homing");
             break;
         }
         case 0x2:
         {
-//            ui->config_workingState_TE->setTextColor(QColor("orange"));
-//            ui->status_workingState_TE->setTextColor(QColor("orange"));
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
+            ui->config_workingState_TE->setTextColor(QColor("orange"));
+            ui->status_workingState_TE->setTextColor(QColor("orange"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
             ROS_INFO("State: Homing");
             break;
         }
         case 0x0:
         {
-//            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
-//            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
+            ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
+            ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
             ROS_INFO("State: Homing");
             break;
         }
@@ -866,8 +866,52 @@ int MainWindow::normalizeToRange2PI(int inputNumber){
 
 void MainWindow::displayCurrentValues(){
 
-    ROS_WARN("Timer start");
-    //ui->currentPositionDeg_LCD->display(999);
+    static uint8_t last_status_hexa_number1 = 255, last_status_hexa_number2 = 255, last_status_hexa_number3 = 255, last_status_hexa_number4 = 255;
+    static uint8_t last_error_hexa_number1 = 255, last_error_hexa_number2 = 255, last_error_hexa_number3 = 255, last_error_hexa_number4 = 255;
+    static int last_power_stage_temperature = 255, last_microprocessor_temperature = 255, last_chopper_temperature = 255, last_filtered_motor_current = 255;
+
+    //Position
+    ui->currentPositionDeg_LCD->display(currentAngleInt/10.0);
+    ui->currentPositionRad_LCD->display(currentAngleInt/10.0*DEG_TO_RAD);
+
+    //velocity
+    ui->currentVelocityDeg_LCD->display(currentVelocityDeg);
+    ui->currentVelocityRad_LCD->display(currentVelocityDeg*DEGREES_per_SECOND_TO_ROTATIONperMINUTE);
+
+    //Status
+    if ((status_hexa_number1 != last_status_hexa_number1) || (status_hexa_number2 != last_status_hexa_number2) || (status_hexa_number3 != last_status_hexa_number3) || (status_hexa_number4 != last_status_hexa_number4)){
+        ROS_INFO("Status change");
+        displayCurrentWorkingStatus(status_hexa_number1, status_hexa_number2, status_hexa_number3, status_hexa_number4,statusNumberOfMessage);
+        statusNumberOfMessage++;
+        last_status_hexa_number1 = status_hexa_number1;
+        last_status_hexa_number2 = status_hexa_number2;
+        last_status_hexa_number3 = status_hexa_number3;
+        last_status_hexa_number4 = status_hexa_number4;
+    }
+    //Error
+    if ((error_hexa_number1 != last_error_hexa_number1) || (error_hexa_number2 != last_error_hexa_number2) || (error_hexa_number3 != last_error_hexa_number3) || (error_hexa_number4 != last_error_hexa_number4)){
+        ROS_INFO("Error change");
+        displayCurrentWorkingError(error_hexa_number1, error_hexa_number2, error_hexa_number3, error_hexa_number4,errorNumberOfMessage);
+        errorNumberOfMessage++;
+        last_error_hexa_number1 = error_hexa_number1;
+        last_error_hexa_number2 = error_hexa_number2;
+        last_error_hexa_number3 = error_hexa_number3;
+        last_error_hexa_number4 = error_hexa_number4;
+    }
+
+    //Temperature and Current
+    if ((power_stage_temperature != last_power_stage_temperature) || (microprocessor_temperature != last_microprocessor_temperature) || (chopper_temperature != last_chopper_temperature) || (filtered_motor_current != last_filtered_motor_current)){
+        ROS_INFO("Temperature or Current change");
+        ui->status_powerStageTemp_LCD->display(power_stage_temperature);
+        ui->status_MicroprocesorTemp_LCD->display(microprocessor_temperature);
+        ui->status_ChopperTemp_LCD->display(chopper_temperature);
+        ui->filteredMotorCurrent_LCD->display(filtered_motor_current);
+        last_power_stage_temperature = power_stage_temperature;
+        last_microprocessor_temperature = microprocessor_temperature;
+        last_chopper_temperature = chopper_temperature;
+        last_filtered_motor_current = filtered_motor_current;
+    }
+
 
 
 }
@@ -895,39 +939,37 @@ void MainWindow::CurrentVelocityCallback(const std_msgs::Int32 currentVelocity){
 
     currentVelocityDeg = currentVelocity.data*ROTATIONperMINUTE_TO_DEGREES_per_SECOND;  //Globalna premenna v ktorej je ulozena aktualna rychlost
     //ROS_INFO("Current velocity callback %.1f",currentVelocityDeg);
-    ui->currentVelocityDeg_LCD->display(currentVelocityDeg);
-    ui->currentVelocityRad_LCD->display(currentVelocity.data);
+    //ui->currentVelocityDeg_LCD->display(currentVelocityDeg);
+    //ui->currentVelocityRad_LCD->display(currentVelocity.data);
 
 }
 
 void MainWindow::CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkingState){
 
     ROS_INFO("Current working state in hexa =%x",currentWorkingState.data);
-    static int numberOfMessage = 1;
-    uint8_t hexa_number1 = 0, hexa_number2 = 0, hexa_number3 = 0, hexa_number4 = 0;
+    status_hexa_number1 = 0;
+    status_hexa_number2 = 0;
+    status_hexa_number3 = 0;
+    status_hexa_number4 = 0;
     //Decompose hexa numbers
-    hexa_number1 = (currentWorkingState.data & 0xf);
-    hexa_number2 = (currentWorkingState.data & 0xf0)>>4;
-    hexa_number3 = (currentWorkingState.data & 0xf00)>>8;
-    hexa_number4 = (currentWorkingState.data & 0xf000)>>12;
-    //ROS_INFO("First hexa = %x, second hexa = %x, thris hexa = %x, fourth hexa = %x",hexa_number1, hexa_number2, hexa_number3, hexa_number4);
-    displayCurrentWorkingStatus(hexa_number1,hexa_number2,hexa_number3,hexa_number4,numberOfMessage);
-    numberOfMessage++;
+    status_hexa_number1 = (currentWorkingState.data & 0xf);
+    status_hexa_number2 = (currentWorkingState.data & 0xf0)>>4;
+    status_hexa_number3 = (currentWorkingState.data & 0xf00)>>8;
+    status_hexa_number4 = (currentWorkingState.data & 0xf000)>>12;
 
 }
 
 void MainWindow::CurrentWorkingErrorCallback(const std_msgs::Int32 currentWorkingError){
 
     ROS_INFO("Current working error callback %x",currentWorkingError.data);
-    static int numberOfMessage = 1;
-    uint8_t hexa_number1 = 0, hexa_number2 = 0, hexa_number3 = 0, hexa_number4 = 0;
-    hexa_number1 = (currentWorkingError.data & 0xf);
-    hexa_number2 = (currentWorkingError.data & 0xf0)>>4;
-    hexa_number3 = (currentWorkingError.data & 0xf00)>>8;
-    hexa_number4 = (currentWorkingError.data & 0xf000)>>12;
-    //ROS_INFO("First hexa = %x, second hexa = %x, thris hexa = %x, fourth hexa = %x",hexa_number1, hexa_number2, hexa_number3, hexa_number4);
-    displayCurrentWorkingError(hexa_number1,hexa_number2,hexa_number3,hexa_number4,numberOfMessage);
-    numberOfMessage++;
+    error_hexa_number1 = 0;
+    error_hexa_number2 = 0;
+    error_hexa_number3 = 0;
+    error_hexa_number4 = 0;
+    error_hexa_number1 = (currentWorkingError.data & 0xf);
+    error_hexa_number2 = (currentWorkingError.data & 0xf0)>>4;
+    error_hexa_number3 = (currentWorkingError.data & 0xf00)>>8;
+    error_hexa_number4 = (currentWorkingError.data & 0xf000)>>12;
 
 }
 
@@ -937,10 +979,10 @@ void MainWindow::CurrentStatusCallback(const scara_msgs::status_rt status){
     status.microprocessor_temperature,status.microprocessor_temperature,status.chopper_temperature,status.chopper_temperature,
     status.filtered_motor_current, status.filtered_motor_current);
 
-    ui->status_powerStageTemp_LCD->display(status.power_stage_temperature);
-    ui->status_MicroprocesorTemp_LCD->display(status.microprocessor_temperature);
-    ui->status_ChopperTemp_LCD->display(status.chopper_temperature);
-    ui->filteredMotorCurrent_LCD->display(status.filtered_motor_current);
+    power_stage_temperature = status.power_stage_temperature;
+    microprocessor_temperature = status.microprocessor_temperature;
+    chopper_temperature = status.chopper_temperature;
+    filtered_motor_current = status.filtered_motor_current;
 
 }   /** Bude treba preratat hodnotu  statusu na realne jednotky stupne a mA **/
 /*****************************************************/

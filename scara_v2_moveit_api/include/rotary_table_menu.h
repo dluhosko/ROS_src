@@ -25,7 +25,7 @@ std_msgs::Int32 int32_msg;
 scara_v2_moveit_api::pose_velocity_direction posVelDir_msg;
 scara_v2_moveit_api::status_rt status_msg;
 ros::Publisher currentRotationInDeg_pub, currentVelocityInDeg_pub, currentWorkingState_pub, currentError_pub, tempAndCurrentStatus_pub;
-ros::Subscriber rotateCommand_sub, workingStateCommand_sub, exitProgram_sub;
+ros::Subscriber rotateCommand_sub, workingStateCommand_sub, exitProgram_sub, temperatureAndCurrent_sub;
 Can_interface *can;
 
 //************************************* Functions *********************************************//
@@ -372,6 +372,10 @@ void workingStateCommandCallback(const std_msgs::Int32 mode){
 
     ROS_INFO("workingStateCommandCallback : desired mode=%d",mode.data);
     sendDesiredWorkingState(mode.data);
+
+}
+
+void tempAndCurrCallback(const std_msgs::Bool mode){
 
 }
 

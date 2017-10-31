@@ -119,7 +119,10 @@ private:
     ros::AsyncSpinner *aspinner;
 
     bool directionOfRotation = true;                //directionOfRotation=true ->right     directionOfRotation=false->left
-    int centralStopCounter = 0, currentAngleInt = 0, desiredAngleInt = 0, currentAngleHelp = 0;
+    uint8_t status_hexa_number1 = 0, status_hexa_number2 = 0, status_hexa_number3 = 0, status_hexa_number4 = 0;
+    uint8_t error_hexa_number1 = 0, error_hexa_number2 = 0, error_hexa_number3 = 0, error_hexa_number4 = 0;
+    int centralStopCounter = 0, currentAngleInt = 0, desiredAngleInt = 0,  power_stage_temperature = 0, microprocessor_temperature = 0, chopper_temperature = 0, filtered_motor_current = 0;
+    int statusNumberOfMessage = 1, errorNumberOfMessage = 1, currentAngleHelp = 0;
     double currentAngleDeg = 0.0, currentVelocityDeg = 0.0;
     char hexString[16];
 

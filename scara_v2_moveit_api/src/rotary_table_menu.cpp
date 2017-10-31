@@ -10,7 +10,7 @@ int main(int argc, char **argv){
 
     ros::init(argc, argv, "menu_node");
     ros::NodeHandle n, nn;
-    ros::Rate loop_rate(2);
+    ros::Rate loop_rate(20);
     ros::AsyncSpinner spinner(1);
     spinner.start();
 
@@ -25,7 +25,7 @@ int main(int argc, char **argv){
     ids.push_back(0x21e);
 
     try {
-        can->initCAN("can0", ids, -1);
+        can->initCAN("can0", ids, 10);
 
     } catch(std::exception& e){
             ROS_ERROR("CAN NOT OPENED due to exeption : %s", e.what());
@@ -48,7 +48,11 @@ int main(int argc, char **argv){
         ROS_INFO("rotate_DEC_RT");
         workingStateCommand_sub = nn.subscribe("set_working_mode_RT",1000,workingStateCommandCallback);
         ROS_INFO("set_working_mode_RT");
+        temperatureAndCurrent_sub = nn.subscribe("requestTemperatureAndCurrent", 1000, tempAndCurrCallback);
+        ROS_INFO("requestTemperatureAndCurrent");
         exitProgram_sub = nn.subscribe("exitProgram_RT",1000,exitProgramCallback);
+        ROS_INFO("exitProgram_RT");
+
 
 
     while (ros::ok()){
