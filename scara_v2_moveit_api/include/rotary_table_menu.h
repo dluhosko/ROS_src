@@ -129,22 +129,22 @@ void decodeCANmsg(can_frame *frame){
     switch (frame->can_id){
         case 0x210:     //Status answer
         {
-            ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
+            //ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
             int32_msg.data = 0;                                         //Send STATUS
             memcpy(&int32_msg.data,frame->data,2*sizeof(uint8_t));    //Posibility 2 (Status msg)
             currentWorkingState_pub.publish(int32_msg);                       //Send status msg
-            ROS_INFO("Sending STATUS msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
+            //ROS_INFO("Sending STATUS msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
 
             int32_msg.data = 0;                                         //Send ERROR
             memcpy(&int32_msg.data,frame->data+2,2*sizeof(uint8_t));  //Posibility 2 (Error msg)
             currentError_pub.publish(int32_msg);
-            ROS_INFO("Sending ERROR msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
+            //ROS_INFO("Sending ERROR msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
             break;
         }
         case 0x211:     //Position and Velocity answer
         {
-            ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
+            //ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
             int32_msg.data = 0;                                         //Current Position
             memcpy(&int32_msg.data,frame->data,2*sizeof(uint8_t));    //Posibility 2
@@ -168,20 +168,20 @@ void decodeCANmsg(can_frame *frame){
         }
         case 0x212:     //Basic Position and Revolution answer
         {
-            ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
+            //ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
             int actualBasicPosition;                                    //Actual Basic Position
             memcpy(&actualBasicPosition, frame->data, 4*sizeof(uint8_t));
-            ROS_INFO("Actual Basic Position is %d",actualBasicPosition);
+            //ROS_INFO("Actual Basic Position is %d",actualBasicPosition);
 
             int revolutionCounter;                                      //Revolution counter (not implemented in CAN)
             memcpy(&revolutionCounter,frame->data+4,4*sizeof(uint8_t));
-            ROS_INFO("Revolution counter is %d  [rev]",actualBasicPosition);
+            //ROS_INFO("Revolution counter is %d  [rev]",actualBasicPosition);
             break;
         }
         case 0x21e:
         {
-            ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
+            //ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
             memcpy(&status_msg.power_stage_temperature, frame->data, 2*sizeof(uint8_t));
             memcpy(&status_msg.microprocessor_temperature, frame->data+2, 2*sizeof(uint8_t));
@@ -266,39 +266,6 @@ int normalizeToRange2PI(int inputNumber){
 
 }
 
-//! \Brief According to desiredDirection it sends CAN message to RT to change direction of rotation
-bool changeDirection(bool desiredDirection){
-
-    /**_____________Description of input values:____________________**/
-    /**      desiredDirection- Clockwise (0) Anticlockwise(1)       **/
-    /*****************************************************************/
-    static bool lastDirection = false;
-
-    if (desiredDirection != lastDirection){
-        ROS_INFO("Changing direction");
-
-        lastDirection = desiredDirection;
-        int direction = (int)desiredDirection;
-        int angle = 360, cycleTime = 5000, stopTime = 5000;         //Angle????
-        uint8_t data[8];
-        clearArray(data,8);
-
-        can_frame frame;                //Create CAN frame
-        frame.can_id = 0x226;           //Define header of CAN message
-        frame.can_dlc = 8;              //Define lenght of CAN message
-        memcpy(data,&angle,2*sizeof(uint8_t));
-        memcpy(data+2,&cycleTime,2*sizeof(uint8_t));
-        memcpy(data+4,&stopTime,2*sizeof(uint8_t));
-        memcpy(data+6,&direction,2*sizeof(uint8_t));
-
-        for (int i=0;i<8;i++) ROS_INFO("%x",data[i]);
-        return true;
-    }else{
-        return false;
-    }
-
-}   //****************** Zistit ako len jednoducho otocit smer otacania -> ake parametre pouzit ***********//
-
 //************************************** Callbacks ********************************************//
 //! \Brief This function is called immediately after an incomming message of rotation+velocity+direction has arrived from GUI
 void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction desiredPositionVelocityDirection){
@@ -317,10 +284,10 @@ void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction de
     ROS_INFO("des rot =%d , des vel=%d des dir=%d", rot, vel, dir);
     uint8_t data[8];
 
-    if (changeDirection(dir)){
-        ROS_INFO("sleep for 1 second");
-        sleep(1);
+    if (!dir){   //change the direction of the rotation
+        rot = -rot;
     }
+    //ROS_INFO("rot = %d (%x)",rot,rot);
 
     memcpy(data,&rot,2*sizeof(uint8_t));
     memcpy(data+2,&vel,2*sizeof(uint8_t));
@@ -333,6 +300,7 @@ void rotateCommandCallback(const scara_v2_moveit_api::pose_velocity_direction de
     for (int i = 0; i < 8; i++)
         ROS_INFO("%X", frame.data[i]);              //Display CAN data to send
     can->writeCAN(&frame);                          //Send message via CAN
+
 
 }   /**************    Direction to solve (225) !!!!   ****************/
 

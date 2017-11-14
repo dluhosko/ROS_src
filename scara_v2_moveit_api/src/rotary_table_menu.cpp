@@ -61,10 +61,7 @@ int main(int argc, char **argv){
             break;
 
         int a= can->readCAN(&frame);
-
-       decodeCANmsg(&frame);
-       //requestTemperature();
-
+        decodeCANmsg(&frame);
 
         ros::spinOnce();
         loop_rate.sleep();
