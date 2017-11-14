@@ -252,6 +252,18 @@
         <axis xyz="0 0 0" />
     </joint>
 
+    <!--***************** Transmision definitions *******************************-->
+    <transmission name="tran1rt">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="rotary_table_joint">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor1">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <!--*************************************************************************-->
 
 
 
