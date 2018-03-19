@@ -407,7 +407,7 @@ int main(int argc, char **argv){
                                     satisfieJointLimits = kinematic_state->satisfiesBounds();
                                     if (kinematic_state->satisfiesBounds()){
                                         IK_mode = 1;
-                                        success = move_group.plan(my_plan);
+                                        success = static_cast<bool>(move_group.plan(my_plan));
                                         if (success){
                                             ROS_INFO("Succesful plan! .. moving to place");
                                             move_group.asyncExecute(my_plan);

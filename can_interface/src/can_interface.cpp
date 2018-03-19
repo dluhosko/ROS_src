@@ -13,9 +13,9 @@
 
 //------------------------------------------------------------------------
 // Support functions
-//------------------------------------------------------------------------
-
-bool Can_interface::initCAN(std::string dev, std::vector<int> read_can_id, int timeout){
+//------------------------------------------------------x4]
+//
+bool Can_interface::initCAN(std::string dev, std::vector<int> read_can_id, int timeout){\
 
 		std::string err = "init error - ";
 		  soc = socket( PF_CAN, SOCK_RAW, CAN_RAW);

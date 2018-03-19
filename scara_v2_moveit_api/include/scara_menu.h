@@ -75,7 +75,7 @@ bool jointModeControll (moveit::planning_interface::MoveGroupInterface *move_gro
     //*****************************************************************************************************************//
 
     ROS_INFO("joint mode controll");
-    success = move_group->plan(my_plan);
+    success = static_cast<bool>(move_group->plan(my_plan));
     if (!success){
         ROS_ERROR("Could not create a plan!");
         return false;
@@ -116,7 +116,7 @@ void prepareValuesForPickOrPlace(moveit::planning_interface::MoveGroupInterface 
 
 bool setValuesForPickOrPlace(moveit::planning_interface::MoveGroupInterface *move_group){
 
-    success = move_group->plan(my_plan);
+    success = static_cast<bool>(move_group->plan(my_plan));
     if (!success){
         ROS_ERROR("Something went wrong in pick or place");
         return false;
@@ -482,7 +482,7 @@ bool goBackSomeSteps(moveit::planning_interface::MoveGroupInterface *move_group,
     }
     jointControl_jointValues = plan->trajectory_.joint_trajectory.points[number].positions;
     move_group->setJointValueTarget(jointControl_jointValues);
-    success = move_group->plan(my_plan);
+    success = static_cast<bool>(move_group->plan(my_plan));
     if (!success){
         ROS_ERROR("Could not create a plan!");
         return false;
