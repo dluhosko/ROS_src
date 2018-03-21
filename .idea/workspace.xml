@@ -329,9 +329,7 @@
   <component name="ChangeListManager">
     <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h" afterPath="$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_gui/src/mainwindow.cpp" afterPath="$PROJECT_DIR$/scara_gui/src/mainwindow.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/rotary_table_menu.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -350,8 +348,8 @@
       <file leaf-file-name="mainwindow.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+            <state relative-caret-position="750">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -360,8 +358,8 @@
       <file leaf-file-name="mainwindow.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scara_gui/src/mainwindow.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="127" column="29" lean-forward="true" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
+            <state relative-caret-position="320">
+              <caret line="147" column="102" lean-forward="false" selection-start-line="147" selection-start-column="102" selection-end-line="147" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -378,8 +376,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>memcp</find>
-      <find>read_can_id</find>
       <find>desired state READY</find>
       <find>ui-&gt;relativeControl_slider_LE-&gt;setText(QString::number(ui-&gt;relativ</find>
       <find>decode</find>
@@ -408,6 +404,8 @@
       <find>rotary_table_jo</find>
       <find>callbac</find>
       <find>callback</find>
+      <find>callbacks</find>
+      <find>gripperCommandCallback</find>
     </findStrings>
     <replaceStrings>
       <replace>scara_v2_moveit_config</replace>
@@ -488,10 +486,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="992" />
-    <option name="y" value="52" />
-    <option name="width" value="928" />
-    <option name="height" value="1028" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -2675,14 +2673,7 @@
       <workItem from="1521406564143" duration="631000" />
       <workItem from="1521442699259" duration="7837000" />
       <workItem from="1521460837252" duration="1218000" />
-      <workItem from="1521659445601" duration="2256000" />
-    </task>
-    <task id="LOCAL-00051" summary="new menu tryout (for cooperation with real GUI)">
-      <created>1503397874969</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1503397874970</updated>
+      <workItem from="1521659445601" duration="3560000" />
     </task>
     <task id="LOCAL-00052" summary="new menu tryout (for cooperation with real GUI) - added messages and ready for try out!">
       <created>1503408560608</created>
@@ -3020,17 +3011,24 @@
       <option name="project" value="LOCAL" />
       <updated>1521449329762</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="scara_gui - adding paralel thread">
+      <created>1521663805431</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1521663805432</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="983839000" />
+    <option name="totallyTimeSpent" value="985143000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="992" y="52" width="928" height="1028" extended-state="4" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37127072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17194323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24408603" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048780486" sideWeight="0.33370167" order="11" side_tool="true" content_ui="tabs" />
@@ -3097,7 +3095,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="scara_menu prebuild to simulation version  added rotary table GUI (qt version)" />
     <MESSAGE value="rotary_table_gui: added topics and switch" />
     <MESSAGE value="rotary_table_gui: added sending working mode select" />
     <MESSAGE value="rotary_table_gui: conversion dec2hex and hex2dec complete, CAN format complete" />
@@ -3122,7 +3119,8 @@
     <MESSAGE value="Modified RT  control in scara_v2_full_controll&#10;&#10;TO DO: modify  connect moveit and gazebo of RT, find out how to add RT to SCARA moveit." />
     <MESSAGE value="Created new SCARA and RT URDF files, created new SCARA and RT description, gazebo and controller&#10;&#10;TO DO: modify  connect moveit and gazebo of RT, find out how to add RT to SCARA moveit, modify SCARA and RT moveit config" />
     <MESSAGE value="SENSODRIVE 19.Mar" />
-    <option name="LAST_COMMIT_MESSAGE" value="SENSODRIVE 19.Mar" />
+    <MESSAGE value="scara_gui - adding paralel thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="scara_gui - adding paralel thread" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3526,16 +3524,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+        <state relative-caret-position="750">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_gui/src/mainwindow.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="127" column="29" lean-forward="true" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
+        <state relative-caret-position="320">
+          <caret line="147" column="102" lean-forward="false" selection-start-line="147" selection-start-column="102" selection-end-line="147" selection-end-column="102" />
           <folding />
         </state>
       </provider>
