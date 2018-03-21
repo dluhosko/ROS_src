@@ -133,6 +133,7 @@ void decodeCANmsg(can_frame *frame){
             for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
             int32_msg.data = 0;                                         //Send STATUS
             memcpy(&int32_msg.data,frame->data,2*sizeof(uint8_t));    //Posibility 2 (Status msg)
+
             currentWorkingState_pub.publish(int32_msg);                       //Send status msg
             //ROS_INFO("Sending STATUS msg dec=%d (hex=%x)",int32_msg.data,int32_msg.data);
 
@@ -145,7 +146,7 @@ void decodeCANmsg(can_frame *frame){
         case 0x211:     //Position and Velocity answer
         {
             //ROS_INFO("*** Received CAN msg *** [id = %x]",frame->can_id);
-            for (int i = 0; i < 8; i++) ROS_INFO("%X", frame->data[i]);
+            for (int i = 0; i <  8; i++) ROS_INFO("%X", frame->data[i]);
             int32_msg.data = 0;                                         //Current Position
             memcpy(&int32_msg.data,frame->data,2*sizeof(uint8_t));    //Posibility 2
             currentRotationInDeg_pub.publish(int32_msg);
