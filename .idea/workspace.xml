@@ -328,94 +328,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/CATKIN_IGNORE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/CATKIN_IGNORE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/android_apps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/.gradle/2.14.1/taskArtifacts/cache.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/CMakeLists.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/gradlew.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/package.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_foo/settings.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/CMakeLists.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/.idea/runConfigurations.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/proguard-rules.pro" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/androidTest/java/com/viktordluhosgmail/senso_teleop_gui/ExampleInstrumentedTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/java/com/viktordluhosgmail/senso_teleop_gui/Menu_activity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/java/com/viktordluhosgmail/senso_teleop_gui/Welcome_screen_activity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/layout/activity_menu_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/layout/activity_welcome_screen_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/app/src/test/java/com/viktordluhosgmail/senso_teleop_gui/ExampleUnitTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/gradle.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/gradlew.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/android_git/SENSO_teleop_GUI/settings.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_tutorial/package.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/.setup_assistant" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/CMakeLists.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/config/fake_controllers.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/config/joint_limits.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/config/kinematics.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/config/ompl_planning.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/config/scara_and_rt.srdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/default_warehouse_db.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/demo.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/fake_moveit_controller_manager.launch.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/joystick_control.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/move_group.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/moveit.rviz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/moveit_rviz.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/ompl_planning_pipeline.launch.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/planning_context.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/planning_pipeline.launch.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/run_benchmark_ompl.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/scara_and_rt_moveit_controller_manager.launch.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/scara_and_rt_moveit_sensor_manager.launch.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/sensor_manager.launch.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/setup_assistant.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/trajectory_execution.launch.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/warehouse.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/warehouse_settings.launch.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android_tutorial/android_git/android_apps" afterPath="$PROJECT_DIR$/android_tutorial/android_git/android_apps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/moveit.rviz" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/moveit.rviz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_with_gripper/urdf.rviz" afterPath="$PROJECT_DIR$/scara_v2_with_gripper/urdf.rviz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_v3_urdf.xacro" afterPath="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_v3_urdf.xacro" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -464,18 +380,18 @@
       <file leaf-file-name="scara_and_rt_urdf.xacro" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-227">
-              <caret line="900" column="20" lean-forward="false" selection-start-line="900" selection-start-column="16" selection-end-line="900" selection-end-column="20" />
+            <state relative-caret-position="187">
+              <caret line="923" column="17" lean-forward="true" selection-start-line="923" selection-start-column="17" selection-end-line="923" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scara_and_rt_v3_urdf.xacro" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_v3_urdf.xacro">
+      <file leaf-file-name="move_group_interface5_rt.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="426" column="19" lean-forward="false" selection-start-line="425" selection-start-column="17" selection-end-line="426" selection-end-column="19" />
+            <state relative-caret-position="349">
+              <caret line="97" column="19" lean-forward="true" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -588,9 +504,9 @@
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/rotary_table_menu.cpp" />
         <option value="$PROJECT_DIR$/scara_gui/include/scara_gui/mainwindow.h" />
         <option value="$PROJECT_DIR$/scara_gui/src/mainwindow.cpp" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro" />
         <option value="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_v3_urdf.xacro" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" />
       </list>
     </option>
   </component>
@@ -655,7 +571,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_with_gripper" />
+              <option name="myItemId" value="scara_v2_moveit_api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -673,29 +589,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scara_v2_with_gripper" />
+              <option name="myItemId" value="scara_v2_moveit_api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="urdf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scara_and_rt_moveit_config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -713,73 +611,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scara_and_rt_moveit_config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt_moveit_config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt_moveit_config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt_moveit_config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="scara_rt_v3_moveit_config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2866,14 +2698,7 @@
       <workItem from="1521442699259" duration="7837000" />
       <workItem from="1521460837252" duration="1218000" />
       <workItem from="1521659445601" duration="3807000" />
-      <workItem from="1524305728434" duration="3422000" />
-    </task>
-    <task id="LOCAL-00053" summary="GUI OK">
-      <created>1503428662389</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1503428662390</updated>
+      <workItem from="1524305728434" duration="4517000" />
     </task>
     <task id="LOCAL-00054" summary="reading out torques">
       <created>1503552594719</created>
@@ -3211,11 +3036,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521665110598</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Created new moveit package for scara and rt">
+      <created>1524309206611</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1524309206611</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="988812000" />
+    <option name="totallyTimeSpent" value="989907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -3288,7 +3120,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rotary_table_gui: added sending working mode select" />
     <MESSAGE value="rotary_table_gui: conversion dec2hex and hex2dec complete, CAN format complete" />
     <MESSAGE value="new cpp rotary_table_menu" />
     <MESSAGE value="rotary_table_gui : added relative and absolute control messages&#10;TO DO: stop and central stop&#10;also to finish rotary_table_menu" />
@@ -3313,7 +3144,8 @@
     <MESSAGE value="SENSODRIVE 19.Mar" />
     <MESSAGE value="scara_gui - adding paralel thread" />
     <MESSAGE value="scara_gui - new paralele thread finished - fully working" />
-    <option name="LAST_COMMIT_MESSAGE" value="scara_gui - new paralele thread finished - fully working" />
+    <MESSAGE value="Created new moveit package for scara and rt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new moveit package for scara and rt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3657,22 +3489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/config/controllers.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rt_moveit_config/config/joint_limits.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3729,18 +3545,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro">
+    <entry file="file://$PROJECT_DIR$/scara_and_rt_moveit_config/config/controllers.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-227">
-          <caret line="900" column="20" lean-forward="false" selection-start-line="900" selection-start-column="16" selection-end-line="900" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_v3_urdf.xacro">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="426" column="19" lean-forward="false" selection-start-line="425" selection-start-column="17" selection-end-line="426" selection-end-column="19" />
+        <state relative-caret-position="367">
+          <caret line="430" column="23" lean-forward="true" selection-start-line="430" selection-start-column="23" selection-end-line="430" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="923" column="17" lean-forward="true" selection-start-line="923" selection-start-column="17" selection-end-line="923" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="97" column="19" lean-forward="true" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
           <folding />
         </state>
       </provider>
