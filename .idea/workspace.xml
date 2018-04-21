@@ -331,7 +331,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android_tutorial/android_git/android_apps" afterPath="$PROJECT_DIR$/android_tutorial/android_git/android_apps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -367,11 +366,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scara_menu.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scara_menu.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="582" column="33" lean-forward="false" selection-start-line="582" selection-start-column="33" selection-end-line="582" selection-end-column="33" />
+            <state relative-caret-position="196">
+              <caret line="574" column="38" lean-forward="false" selection-start-line="574" selection-start-column="38" selection-end-line="574" selection-end-column="38" />
               <folding>
                 <element signature="e#47#75#0" expanded="true" />
               </folding>
@@ -379,11 +378,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scara_menu.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="scara_menu.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7398">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="558">
+              <caret line="556" column="37" lean-forward="true" selection-start-line="556" selection-start-column="37" selection-end-line="556" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -410,7 +409,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CurrentVelocityCallback</find>
       <find>currentVelocityInDeg_pub</find>
       <find>currentVelocityPerMinute_RT</find>
       <find>Desired max velocity dec</find>
@@ -440,6 +438,7 @@
       <find>joint mode contro</find>
       <find>calculate</find>
       <find>joint mode</find>
+      <find>start state</find>
     </findStrings>
     <replaceStrings>
       <replace>scara_v2_moveit_config</replace>
@@ -507,8 +506,8 @@
         <option value="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_urdf.xacro" />
         <option value="$PROJECT_DIR$/scara_v2_with_gripper/urdf/scara_and_rt_v3_urdf.xacro" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/move_group_interface5_rt.cpp" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h" />
       </list>
     </option>
   </component>
@@ -2682,14 +2681,7 @@
       <workItem from="1521442699259" duration="7837000" />
       <workItem from="1521460837252" duration="1218000" />
       <workItem from="1521659445601" duration="3807000" />
-      <workItem from="1524305728434" duration="13766000" />
-    </task>
-    <task id="LOCAL-00056" summary="Moveit demo_rviz change -&gt; Industrial filter - for 10ms sampling of trajectory planning">
-      <created>1503653422738</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1503653422739</updated>
+      <workItem from="1524305728434" duration="14377000" />
     </task>
     <task id="LOCAL-00057" summary="get_and_set">
       <created>1503666639998</created>
@@ -3027,17 +3019,24 @@
       <option name="project" value="LOCAL" />
       <updated>1524320174865</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="DEMO app modification - trajectory OK v1">
+      <created>1524323874015</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1524323874015</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="999156000" />
+    <option name="totallyTimeSpent" value="999767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22925764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.099344976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.068817206" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048780486" sideWeight="0.33370167" order="11" side_tool="true" content_ui="tabs" />
@@ -3083,7 +3082,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rotary_table_gui : added relative and absolute control messages&#10;TO DO: stop and central stop&#10;also to finish rotary_table_menu" />
     <MESSAGE value="TO DO:  finish rotary_table_menu -&gt; construct CAN messages, send CAN messages (include CAN library)" />
     <MESSAGE value="TO DO:  finish rotary_table_menu -&gt; construct CAN messages, send CAN messages (include CAN library)&#10;change states -&gt;to do!" />
     <MESSAGE value="Change states OK, Char msg converted to uint8_t message type&#10;TO DO:  finish rotary_table_menu -&gt; construct CAN messages, send CAN messages (include CAN library)" />
@@ -3108,7 +3106,8 @@
     <MESSAGE value="Created new moveit package for scara and rt" />
     <MESSAGE value="Created new moveit package for scara and rt - scara and rt control algoritms connected with moveit" />
     <MESSAGE value="DEMO app modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="DEMO app modification" />
+    <MESSAGE value="DEMO app modification - trajectory OK v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="DEMO app modification - trajectory OK v1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3527,21 +3526,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7398">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="582" column="33" lean-forward="false" selection-start-line="582" selection-start-column="33" selection-end-line="582" selection-end-column="33" />
+        <state relative-caret-position="196">
+          <caret line="574" column="38" lean-forward="false" selection-start-line="574" selection-start-column="38" selection-end-line="574" selection-end-column="38" />
           <folding>
             <element signature="e#47#75#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="556" column="37" lean-forward="true" selection-start-line="556" selection-start-column="37" selection-end-line="556" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -530,17 +530,17 @@ void setDesiredPosesDEMO(){
     desiredPositionsDEMO[0].y = 0.57;
     desiredPositionsDEMO[0].z = 1.04;
     //PrePick position
-    desiredPositionsDEMO[1].x = 0.4;
-    desiredPositionsDEMO[1].y = 0.24;
+    desiredPositionsDEMO[1].x = 0.496;
+    desiredPositionsDEMO[1].y = 0.25;
     desiredPositionsDEMO[1].z = 1.08;
     //Pick position
-    desiredPositionsDEMO[2].x = 0.4;
-    desiredPositionsDEMO[2].y = 0.24;
-    desiredPositionsDEMO[2].z = 1.02;
+    desiredPositionsDEMO[2].x = 0.496;
+    desiredPositionsDEMO[2].y = 0.25;
+    desiredPositionsDEMO[2].z = 1.06;
     //Work position
     desiredPositionsDEMO[3].x = 0.58;
     desiredPositionsDEMO[3].y = 0.59;
-    desiredPositionsDEMO[3].z = 1.04;
+    desiredPositionsDEMO[3].z = 1.08;
 
     //PrePlace position 1
     desiredPositionsDEMO[4].x = 0.51;
