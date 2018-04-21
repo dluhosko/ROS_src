@@ -41,7 +41,7 @@ void forceFeedbackThread(){
 
 int main(int argc, char **argv){
 
-    bool initStep = true, init = true, restart = true, initPoses = true;
+    bool initStep = true, init = true, restart = true, initPoses = true, rotate = false;
     bool satisfieJointLimits = false, errorInPose = false, initMode = false, replan = false, place_operation=false;
     int counter1 = 0, counter2 = 0,  help = 0, cc = -1, numOfPlacePos = 0, desiredJointsTeachSize = 0, teachPositionsHandSize = 0, demo_mode_special_counter=0;
 
@@ -159,7 +159,8 @@ int main(int argc, char **argv){
         }
         ROS_WARN("ID:[%d] => DEMO joint value: [%f , %f , %f]  DEMO position value [%f , %f , %f]",i,desiredJointsDEMO[i][0],desiredJointsDEMO[i][1],desiredJointsDEMO[i][2],desiredPositionsDEMO[i].x,desiredPositionsDEMO[i].y,desiredPositionsDEMO[i].z);
     }
-    //sleep(2);
+    string_msg.data="45_deg";
+    rt_rotate_cmd.publish(string_msg);
 
 
     //Waiting for subscribers
@@ -521,6 +522,7 @@ int main(int argc, char **argv){
                         gripper_pub.publish(gripper_state);
                         init = true;
                         pick = true;
+                        rotate = false;
                         demo_mode_special_counter=0;
                         break;
                     }
@@ -577,10 +579,17 @@ int main(int argc, char **argv){
                                 {
                                     DEMO_mode = 3;
                                     demo_mode_special_counter++;
+                                    rotate = true;
                                 }
                                     break;
                                 case 3:                             //Place position
                                 {
+                                    if (rotate){
+                                        rt_rotate_cmd.publish(string_msg);              //Rotary table rotate command - in work position
+                                        sleep(2);
+                                        rotate = false;
+                                    }
+
                                     if (counter2 < 3) {
                                         if (counter2 == 0) {
                                             DEMO_mode = 4 + numOfPlacePos * 2;
@@ -1396,23 +1405,23 @@ int main(int argc, char **argv){
                     count1++;
 
                     //Central stop - end of program!
-                    if (central_stop){
-                        selectedMode.data = 6;
-                        mode_pub.publish(selectedMode);
-                        for (int i=0;i<10;i++)
-                            sendJointPoses(&pose_pub,&acc_pub, &my_plan, 999);
-                        ROS_ERROR("CENTRAL STOP ! PROGRAM END !");
-                        return 0;
-                    }
+//                    if (central_stop){
+//                        selectedMode.data = 6;
+//                        mode_pub.publish(selectedMode);
+//                        for (int i=0;i<10;i++)
+//                            sendJointPoses(&pose_pub,&acc_pub, &my_plan, 999);
+//                        ROS_ERROR("CENTRAL STOP ! PROGRAM END !");
+//                        return 0;
+//                    }
 
                     //hold position while the movement in moveit isnt started
-                    if (!moveitState){
-                        sendJointPoses(&pose_pub, &acc_pub, &my_plan, 999);
-                        sendPositionToGUI(0,0,0);
-                    }else{
-                        ROS_INFO("Started moving in moveit ! Current joint states: %f %f %f",currentJointStates.position[0],
-                                 currentJointStates.position[1], currentJointStates.position[2]);
-                    }
+//                    if (!moveitState){
+//                        sendJointPoses(&pose_pub, &acc_pub, &my_plan, 999);
+//                        sendPositionToGUI(0,0,0);
+//                    }else{
+//                        ROS_INFO("Started moving in moveit ! Current joint states: %f %f %f",currentJointStates.position[0],
+//                                 currentJointStates.position[1], currentJointStates.position[2]);
+//                    }
 
                     //Start or continue for get_and_send_planned_path
 

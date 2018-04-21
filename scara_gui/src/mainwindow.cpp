@@ -1098,9 +1098,15 @@ void MainWindow::moveitJointStatesCallback(const sensor_msgs::JointState jointSt
     //ROS_INFO("Current joint states from moveit J1=%f J2=%f J3 =%f", jointState.position[0], jointState.position[1], jointState.position[2]);
     actualJointStates = jointState;
 
-    disp_curr_joint_pos_DEG[0] = jointState.position[0]*RAD_TO_DEG;
-    disp_curr_joint_pos_DEG[1] = jointState.position[1]*RAD_TO_DEG;
-    disp_curr_joint_pos_DEG[2] = jointState.position[2]*100;
+    //Len pre SCARU
+//    disp_curr_joint_pos_DEG[0] = jointState.position[0]*RAD_TO_DEG;
+//    disp_curr_joint_pos_DEG[1] = jointState.position[1]*RAD_TO_DEG;
+//    disp_curr_joint_pos_DEG[2] = jointState.position[2]*10;
+
+    //Pre SCARU s RT
+    disp_curr_joint_pos_DEG[0] = jointState.position[1]*RAD_TO_DEG;
+    disp_curr_joint_pos_DEG[1] = jointState.position[2]*RAD_TO_DEG;
+    disp_curr_joint_pos_DEG[2] = jointState.position[3]*10;
 
 }
 

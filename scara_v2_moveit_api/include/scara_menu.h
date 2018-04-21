@@ -54,6 +54,7 @@ std::vector<geometry_msgs::Point> teachPositions, cubePositions;
 std_msgs::Bool moveitMode, displayVirtualCube, displayCube;
 std_msgs::Byte selectedMode, gripper_state;
 std_msgs::Int32 centralStop_msg, errorCodeMsg, numOfCubesMsg;
+std_msgs::String string_msg;
 geometry_msgs::Point point, desiredPositions, acc, currentTeachPoint, lastTeachPoint, teachCubePositions;
 geometry_msgs::Pose endEffectorPose, pos_and_vel;
 geometry_msgs::PoseStamped ws1;
