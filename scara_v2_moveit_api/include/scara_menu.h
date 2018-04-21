@@ -30,6 +30,8 @@ bool start_state = false, teach_start_state = false, button_state = false, colis
 
 int IK_mode = 1, DEMO_mode = -1, teach_mode = -1, current_mode = 999, count1 = 0, last_trajectory_size = -5;
 int jointControl_counter = 0, positionControl_counter = 0, demoControl_counter = 0, teachMode_counter = 0, teachModeHand_counter = 0;
+int DEMO_pick_sequence[3] = {1,2,1};
+int DEMO_place_sequence[3] = {4,5,4};
 
 double x_offset, y_offset, z_offset, J3_position = 0.0;
 double max_torque_value = 3.5, torque_value = 0.0, maxJointDeviation = 0.1;
@@ -534,7 +536,7 @@ void setDesiredPosesDEMO(){
     //Pick position
     desiredPositionsDEMO[2].x = 0.4;
     desiredPositionsDEMO[2].y = 0.24;
-    desiredPositionsDEMO[2].z = 1.0;
+    desiredPositionsDEMO[2].z = 1.02;
     //Work position
     desiredPositionsDEMO[3].x = 0.58;
     desiredPositionsDEMO[3].y = 0.59;

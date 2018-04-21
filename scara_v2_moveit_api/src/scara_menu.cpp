@@ -42,8 +42,8 @@ void forceFeedbackThread(){
 int main(int argc, char **argv){
 
     bool initStep = true, init = true, restart = true, initPoses = true;
-    bool satisfieJointLimits = false, errorInPose = false, initMode = false, replan = false;
-    int counter1 = 0, help = 0, cc = -1, numOfPlacePos = 0, desiredJointsTeachSize = 0, teachPositionsHandSize = 0;
+    bool satisfieJointLimits = false, errorInPose = false, initMode = false, replan = false, place_operation=false;
+    int counter1 = 0, counter2 = 0,  help = 0, cc = -1, numOfPlacePos = 0, desiredJointsTeachSize = 0, teachPositionsHandSize = 0, demo_mode_special_counter=0;
 
     ros::init(argc, argv, "menu_node");
     ros::NodeHandle n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,n12,n13,n14,n15,n16;
@@ -521,6 +521,7 @@ int main(int argc, char **argv){
                         gripper_pub.publish(gripper_state);
                         init = true;
                         pick = true;
+                        demo_mode_special_counter=0;
                         break;
                     }
 
@@ -548,12 +549,64 @@ int main(int argc, char **argv){
 
                         if (executionOK){
 
-                            sleep(0.5);
-                            if(DEMO_mode<19){
-                                DEMO_mode++;
-                            }else{
-                                DEMO_mode=0;
+                            switch (demo_mode_special_counter) {
+                                case 0:                             //Home position
+                                {
+                                    DEMO_mode = 0;
+                                    demo_mode_special_counter++;
+                                }
+                                    break;
+                                case 1:                             //Pick position
+                                {
+                                    if (counter2 < 3) {
+                                        if (counter2 == 0) {
+                                            DEMO_mode = 1;
+                                        } else if (counter2 == 1) {
+                                            DEMO_mode = 2;
+                                        } else if (counter2 == 2) {
+                                            DEMO_mode = 1;
+                                        }
+                                        counter2++;
+                                    } else {
+                                        demo_mode_special_counter++;
+                                        counter2 = 0;
+                                    }
+                                }
+                                    break;
+                                case 2:                             //Work position
+                                {
+                                    DEMO_mode = 3;
+                                    demo_mode_special_counter++;
+                                }
+                                    break;
+                                case 3:                             //Place position
+                                {
+                                    if (counter2 < 3) {
+                                        if (counter2 == 0) {
+                                            DEMO_mode = 4 + numOfPlacePos * 2;
+                                        } else if (counter2 == 1) {
+                                            DEMO_mode = 5 + numOfPlacePos * 2;
+                                        } else if (counter2 == 2) {
+                                            DEMO_mode = 4 + numOfPlacePos * 2;
+                                        }
+                                        counter2++;
+                                    } else {
+                                        demo_mode_special_counter = 0;
+                                        DEMO_mode = 0;
+                                        counter2 = 0;
+                                        if (numOfPlacePos == 7)
+                                            numOfPlacePos = 0;
+                                        else
+                                            numOfPlacePos++;
+                                    }
+                                }
+                                    break;
+                                default:
+                                    break;
                             }
+
+
+
 
 
 //                            if (DEMO_mode == 2){            //pick
