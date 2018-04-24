@@ -3,9 +3,7 @@ Panels:
     Help Height: 84
     Name: Displays
     Property Tree Widget:
-      Expanded:
-        - /MotionPlanning1/Scene Geometry1
-        - /MotionPlanning1/Planning Request1
+      Expanded: ~
       Splitter Ratio: 0.742560029
     Tree Height: 318
   - Class: rviz/Help
@@ -603,6 +601,160 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: visualization_marker
+      Name: Marker
+      Namespaces:
+        namespace0: true
+        namespace1: true
+        namespace11: true
+        namespace12: true
+        namespace13: true
+        namespace14: true
+        namespace15: true
+        namespace16: true
+        namespace17: true
+        namespace18: true
+        namespace2: true
+        namespace3: true
+        namespace4: true
+        namespace5: true
+        namespace6: true
+        namespace7: true
+        namespace8: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        BaseBox:
+          Value: false
+        CentralStop1:
+          Value: false
+        CentralStop2:
+          Value: false
+        GripperBase:
+          Value: false
+        GripperLeft:
+          Value: false
+        GripperRight:
+          Value: false
+        ScaraBase:
+          Value: false
+        ScaraLink1:
+          Value: false
+        ScaraLink2:
+          Value: false
+        base:
+          Value: false
+        baseCircle:
+          Value: false
+        motorShaftLink:
+          Value: false
+        pickHole1:
+          Value: false
+        pickHole2:
+          Value: false
+        pickHole3:
+          Value: false
+        pickHole4:
+          Value: false
+        pickHole5:
+          Value: false
+        pickHole6:
+          Value: false
+        pickHole7:
+          Value: false
+        pickHole8:
+          Value: false
+        placeBox:
+          Value: false
+        placeHole1:
+          Value: false
+        placeHole2:
+          Value: false
+        placeHole3:
+          Value: false
+        placeHole4:
+          Value: false
+        placeHole5:
+          Value: false
+        placeHole6:
+          Value: false
+        placeHole7:
+          Value: false
+        placeHole8:
+          Value: false
+        rotationDisc:
+          Value: false
+        tool0:
+          Value: false
+        world:
+          Value: false
+      Marker Scale: 0.200000003
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          BaseBox:
+            CentralStop1:
+              {}
+            CentralStop2:
+              {}
+            ScaraBase:
+              ScaraLink1:
+                ScaraLink2:
+                  GripperBase:
+                    GripperLeft:
+                      {}
+                    GripperRight:
+                      {}
+                    tool0:
+                      {}
+            base:
+              baseCircle:
+                motorShaftLink:
+                  rotationDisc:
+                    pickHole1:
+                      {}
+                    pickHole2:
+                      {}
+                    pickHole3:
+                      {}
+                    pickHole4:
+                      {}
+                    pickHole5:
+                      {}
+                    pickHole6:
+                      {}
+                    pickHole7:
+                      {}
+                    pickHole8:
+                      {}
+            placeBox:
+              placeHole1:
+                {}
+              placeHole2:
+                {}
+              placeHole3:
+                {}
+              placeHole4:
+                {}
+              placeHole5:
+                {}
+              placeHole6:
+                {}
+              placeHole7:
+                {}
+              placeHole8:
+                {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -619,41 +771,41 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.97499728
+      Distance: 3.08216071
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.150099397
-        Y: 0.524943471
-        Z: 1.53482017e-06
+        X: -0.0930473804
+        Y: 0.596333742
+        Z: 2.23517986e-07
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.604796827
+      Pitch: 0.604797542
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 0.471766919
+      Yaw: 0.0267696567
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: true
-  Height: 1028
+    collapsed: false
+  Height: 1056
   Help:
     collapsed: false
-  Hide Left Dock: true
+  Hide Left Dock: false
   Hide Right Dock: false
   MotionPlanning:
-    collapsed: true
+    collapsed: false
   MotionPlanning - Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002b8000003befc0200000007fb000000100044006900730070006c0061007900730000000028000001d3000000d700fffffffb0000000800480065006c00700000000342000000bb0000007300fffffffb0000000a0056006900650077007300000003b0000000b0000000ad00fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb0000002e004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d00200053006c00690064006500720000000000ffffffff0000004a00fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670000000201000001e5000001cc00ffffff000003a0000003be00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002b8000003dafc0200000007fb000000100044006900730070006c0061007900730100000028000001d3000000d700fffffffb0000000800480065006c00700000000342000000bb0000007300fffffffb0000000a0056006900650077007300000003b0000000b0000000ad00fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb0000002e004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d00200053006c00690064006500720000000000ffffffff0000004a00fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067010000020100000201000001cc00ffffff00000481000003da00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 928
-  X: 992
+  Width: 1855
+  X: 65
   Y: 24
