@@ -1,13 +1,6 @@
 #include "../include/scara_gui/mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <pluginlib/class_list_macros.h>
-#include <QStringList>
-#include <QtCore>
-#include <std_msgs/Int32.h>
-
-#include "ros/ros.h"
-
 
 double teachedPositions[HEIGHT][WIDTH];
 
@@ -145,7 +138,7 @@ void MainWindow::on_jointControl_Start_PushButton_3_clicked(){
     //Display on GUI
     ui->jointControl_J1_LineEdit->setText(QString::number(ui->jointControl_J1_Slider_3->value() / 100.0) + "rad");
     ui->jointControl_J2_LineEdit->setText(QString::number(ui->jointControl_J2_Slider_3->value() / 100.0) + "rad");
-    ui->jointControl_J3_LineEdit->setText(QString::number(ui->jointControl_J3_Slider_3->value()) + "mm");
+    ui->jointControl_J3_LineEdit->setText(QString::number(ui->jointControl_J3_Slider_3->value()) + "cm");
     ui->status_gripper_OnOff_3->display(gripperState);
 
     //Send to ROS

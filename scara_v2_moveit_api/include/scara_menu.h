@@ -863,8 +863,8 @@ void jointControlCallback(const geometry_msgs::PointStamped pointStamped){
     jointControl_jointValues[1] = pointStamped.point.y;
     if (pointStamped.point.z > 0.04)
         jointControl_jointValues[2] = 0.04;
-    else if (pointStamped.point.z < 0.0)
-        jointControl_jointValues[2] = 0.0;
+    else if (pointStamped.point.z < -0.04)
+        jointControl_jointValues[2] = -0.04;
     else
         jointControl_jointValues[2] = pointStamped.point.z;
 
