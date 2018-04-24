@@ -566,6 +566,10 @@ int main(int argc, char **argv){
                                         } else if (counter2 == 1) {
                                             DEMO_mode = 2;
                                         } else if (counter2 == 2) {
+                                            sleep(0.5);
+                                            gripper_state.data = 1;     //Pick
+                                            gripper_pub.publish(gripper_state);
+                                            sleep(0.5);
                                             DEMO_mode = 1;
                                         }
                                         counter2++;
@@ -596,6 +600,10 @@ int main(int argc, char **argv){
                                         } else if (counter2 == 1) {
                                             DEMO_mode = 5 + numOfPlacePos * 2;
                                         } else if (counter2 == 2) {
+                                            sleep(0.5);
+                                            gripper_state.data = 0;         //place
+                                            gripper_pub.publish(gripper_state);
+                                            sleep(1.5);
                                             DEMO_mode = 4 + numOfPlacePos * 2;
                                         }
                                         counter2++;

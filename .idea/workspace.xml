@@ -341,6 +341,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/moveit.rviz" afterPath="$PROJECT_DIR$/scara_rt_v3_moveit_config/launch/moveit.rviz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/include/multiple_cylinder_publisher_scara_v3.h" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/include/multiple_cylinder_publisher_scara_v3.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cylinder_publisher_scara_v3.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cylinder_publisher_scara_v3.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" afterPath="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -366,21 +367,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multiple_cylinder_publisher_scara_v3.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cylinder_publisher_scara_v3.cpp">
+      <file leaf-file-name="scara_menu.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+            <state relative-caret-position="1322">
+              <caret line="588" column="49" lean-forward="false" selection-start-line="588" selection-start-column="49" selection-end-line="588" selection-end-column="49" />
+              <folding>
+                <element signature="e#47#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scara_menu.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="838" column="0" lean-forward="true" selection-start-line="838" selection-start-column="0" selection-end-line="838" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multiple_cylinder_publisher_scara_v3.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="multiple_cylinder_publisher_scara_v3.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cylinder_publisher_scara_v3.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multiple_cylinder_publisher_scara_v3.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/multiple_cylinder_publisher_scara_v3.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="177" column="37" lean-forward="true" selection-start-line="177" selection-start-column="37" selection-end-line="177" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="195" column="18" lean-forward="true" selection-start-line="195" selection-start-column="18" selection-end-line="195" selection-end-column="18" />
               <folding>
                 <element signature="e#152#172#0" expanded="true" />
               </folding>
@@ -503,11 +526,11 @@
         <option value="$PROJECT_DIR$/scara_gui/src/mainwindow.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/launch/scara_menu_rt_colision.launch" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/cylinder_publisher_scara_v3.cpp" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/multiple_cylinder_publisher_scara_v3.h" />
         <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cylinder_publisher_scara_v3.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp" />
+        <option value="$PROJECT_DIR$/scara_v2_moveit_api/include/multiple_cylinder_publisher_scara_v3.h" />
       </list>
     </option>
   </component>
@@ -2722,14 +2745,7 @@
       <workItem from="1521460837252" duration="1218000" />
       <workItem from="1521659445601" duration="3807000" />
       <workItem from="1524305728434" duration="17681000" />
-      <workItem from="1524551842681" duration="4426000" />
-    </task>
-    <task id="LOCAL-00060" summary="new GUI">
-      <created>1503847571020</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1503847571020</updated>
+      <workItem from="1524551842681" duration="7304000" />
     </task>
     <task id="LOCAL-00061" summary="GUI displays jointStates">
       <created>1503866702342</created>
@@ -3067,17 +3083,24 @@
       <option name="project" value="LOCAL" />
       <updated>1524552695642</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="SENSODRIVE - node for publishing cylinders is publishing cylinders to moveit  -&gt;TODO : add functions to hide and display cylinders">
+      <created>1524556310441</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1524556310441</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1007497000" />
+    <option name="totallyTimeSpent" value="1010375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23689957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23689957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.068817206" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048780486" sideWeight="0.33370167" order="11" side_tool="true" content_ui="tabs" />
@@ -3123,7 +3146,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change states OK, Char msg converted to uint8_t message type&#10;TO DO:  finish decoding CAN messages and sending them to ROS messages" />
     <MESSAGE value="Done: subscriber to Status and Error from CAN, modified SENSODRIVE logo, adjust rotary table disk&#10;&#10;TO DO: test the incomming signals from RT and then modify STATUS and ERROR decoding in GUI, change line edit to text edit and -&gt; then write current status to text edit, find out how to set direction of rotation" />
     <MESSAGE value="Done: subscriber to Status and Error from CAN, modified SENSODRIVE logo, adjust rotary table disk&#10;&#10;TO DO: test the incomming signals from RT and then modify STATUS and ERROR decoding in GUI, change line edit to text edit and -&gt; then write current status to text edit, find out how to set direction of rotation`" />
     <MESSAGE value="Done: decoding STATUS and ERROR - OK, change LE-&gt;TE -OK, write to TE - OK&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status, add TE error log, calculate temperature and current in 0x226, and some other things with 0x226" />
@@ -3148,7 +3170,8 @@
     <MESSAGE value="DEMO app modification - trajectory OK v2" />
     <MESSAGE value="DEMO app ready - odladene trajektorie, pridany launch file, odchytane niektore bugy v GUI" />
     <MESSAGE value="SENSODRIVE - created new  node for publishing cylinders" />
-    <option name="LAST_COMMIT_MESSAGE" value="SENSODRIVE - created new  node for publishing cylinders" />
+    <MESSAGE value="SENSODRIVE - node for publishing cylinders is publishing cylinders to moveit  -&gt;TODO : add functions to hide and display cylinders" />
+    <option name="LAST_COMMIT_MESSAGE" value="SENSODRIVE - node for publishing cylinders is publishing cylinders to moveit  -&gt;TODO : add functions to hide and display cylinders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3282,6 +3305,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1008">
           <caret line="56" column="76" lean-forward="false" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3430,6 +3454,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3453,6 +3478,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="988">
           <caret line="1145" column="44" lean-forward="true" selection-start-line="1145" selection-start-column="44" selection-end-line="1145" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3469,16 +3495,6 @@
         <state relative-caret-position="54">
           <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="1408" column="33" lean-forward="false" selection-start-line="1408" selection-start-column="33" selection-end-line="1408" selection-end-column="33" />
-          <folding>
-            <element signature="e#47#75#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3514,14 +3530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6586">
-          <caret line="957" column="23" lean-forward="false" selection-start-line="957" selection-start-column="5" selection-end-line="957" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_colision_object.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1404">
@@ -3546,24 +3554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2512">
-          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/multiple_cylinder_publisher_scara_v3.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="177" column="37" lean-forward="true" selection-start-line="177" selection-start-column="37" selection-end-line="177" selection-end-column="37" />
-          <folding>
-            <element signature="e#152#172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/launch/scara_gui_menu.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3572,11 +3562,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cube_publisher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2512">
+          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/scara_menu.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="838" column="0" lean-forward="true" selection-start-line="838" selection-start-column="0" selection-end-line="838" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/scara_menu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1322">
+          <caret line="588" column="49" lean-forward="false" selection-start-line="588" selection-start-column="49" selection-end-line="588" selection-end-column="49" />
+          <folding>
+            <element signature="e#47#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/src/multiple_cylinder_publisher_scara_v3.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+        <state relative-caret-position="360">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scara_v2_moveit_api/include/multiple_cylinder_publisher_scara_v3.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="195" column="18" lean-forward="true" selection-start-line="195" selection-start-column="18" selection-end-line="195" selection-end-column="18" />
+          <folding>
+            <element signature="e#152#172#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

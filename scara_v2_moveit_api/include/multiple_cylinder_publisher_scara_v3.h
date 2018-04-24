@@ -7,10 +7,13 @@
 
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include "std_msgs/Byte.h"
 #include <geometric_shapes/solid_primitive_dims.h>
 #include <visualization_msgs/Marker.h>
 
 const double pi_value = 3.14159265359;
+int index_of_picked_cube = 0;
+bool attach_to_tool = false;
 
 
 //! \Brief Generates the parent frame of pick cylinders
@@ -131,9 +134,14 @@ void generate_pick_cylinders(ros::Publisher *marker_pub, int index_of_cylinder, 
     marker.scale.x = 0.015;
     marker.scale.y = 0.015;
     marker.scale.z = 0.03;
-    marker.color.a = 1.0; // Don't forget to set the alpha! ->na skytie objektov!!!!!!!!!!!
+    if (index_of_cylinder>index_of_picked_cylinder){
+        marker.color.a = 1.0;
+    }else{
+        marker.color.a = 0.0;
+    }
+
     marker.color.r = 1.0;
-    marker.color.g = 1.0;
+    marker.color.g = 0.0;
     marker.color.b = 0.0;
     marker.lifetime = ros::Duration();
     marker_pub->publish( marker );
@@ -161,9 +169,18 @@ void generate_place_cylinders(ros::Publisher *marker_pub, int index_of_cylinder,
     marker.scale.x = 0.015;
     marker.scale.y = 0.015;
     marker.scale.z = 0.03;
-    marker.color.a = 1.0; // Don't forget to set the alpha! ->na skytie objektov!!!!!!!!!!!
+    if (index_of_cylinder<=index_of_placed_cylinder){
+        marker.color.a = 1.0;
+    }else{
+        marker.color.a = 0.0;
+    }
+    if ((index_of_cylinder==index_of_placed_cylinder) && attach_to_tool){
+        marker.color.a = 0.0;
+    }else if ((index_of_cylinder==index_of_placed_cylinder) && !attach_to_tool){
+        marker.color.a = 1.0;
+    }
     marker.color.r = 1.0;
-    marker.color.g = 1.0;
+    marker.color.g = 0.0;
     marker.color.b = 0.0;
     marker.lifetime = ros::Duration();
     marker_pub->publish( marker );
@@ -190,12 +207,29 @@ void generate_attached_cylinder(ros::Publisher *marker_pub, bool attach_state){
     marker.scale.x = 0.015;
     marker.scale.y = 0.015;
     marker.scale.z = 0.03;
-    marker.color.a = 1.0; // Don't forget to set the alpha! ->na skytie objektov!!!!!!!!!!!
+    if  (attach_state){
+        marker.color.a = 1.0;
+    }else{
+        marker.color.a = 0.0;
+    }
     marker.color.r = 1.0;
-    marker.color.g = 1.0;
+    marker.color.g = 0.0;
     marker.color.b = 0.0;
     marker.lifetime = ros::Duration();
     marker_pub->publish( marker );
+
+}
+
+//! \Brief Callback from gripper state
+void gripperCallback(const std_msgs::Byte gripper_state){
+
+    ROS_INFO("Gripper state callback [%d]",gripper_state.data);
+    if (gripper_state.data == 1){
+        index_of_picked_cube++;
+        attach_to_tool=true;
+    }else{
+        attach_to_tool=false;
+    }
 
 }
 

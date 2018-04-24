@@ -3,7 +3,9 @@ Panels:
     Help Height: 84
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /MotionPlanning1
+        - /MotionPlanning1/Scene Robot1
       Splitter Ratio: 0.742560029
     Tree Height: 318
   - Class: rviz/Help
@@ -409,7 +411,7 @@ Visualization Manager:
             Show Trail: false
         Robot Alpha: 1
         Show Robot Collision: false
-        Show Robot Visual: true
+        Show Robot Visual: false
       Value: true
     - Alpha: 1
       Class: rviz/RobotModel
@@ -771,25 +773,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 3.08216071
+      Distance: 2.59680939
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.0930473804
-        Y: 0.596333742
+        X: 0.0312869549
+        Y: 0.592948258
         Z: 2.23517986e-07
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.604797542
+      Pitch: 0.744797409
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 0.0267696567
+      Yaw: 6.2749548
     Saved: ~
 Window Geometry:
   Displays:
