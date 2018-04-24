@@ -11,7 +11,7 @@ int main(int argc, char **argv){
     ros::Rate loop_rate(30);
 
     ros::Publisher vis_pub = n.advertise<visualization_msgs::Marker>( "visualization_marker", 1 );
-    ros::Subscriber gripperState_sub = nn.subscribe("gripperState",1000, gripperCallback);
+    ros::Subscriber gripperState_sub = nn.subscribe("attachToGripper",1000, gripperCallback);
 
 
     while(ros::ok()) {

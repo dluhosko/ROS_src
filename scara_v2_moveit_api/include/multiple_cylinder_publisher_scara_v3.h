@@ -8,12 +8,13 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 #include "std_msgs/Byte.h"
+#include "std_msgs/Bool.h"
 #include <geometric_shapes/solid_primitive_dims.h>
 #include <visualization_msgs/Marker.h>
 
 const double pi_value = 3.14159265359;
 int index_of_picked_cube = 0;
-bool attach_to_tool = false;
+bool attach_to_tool = false, hide_and_reset=false;
 
 
 //! \Brief Generates the parent frame of pick cylinders
@@ -22,19 +23,19 @@ std::string generate_pick_frame (int number){
     if (number == 1){
         return "pickHole1";
     }else if (number == 2){
-        return "pickHole2";
+        return "pickHole8";
     }else if (number == 3){
-        return "pickHole3";
+        return "pickHole7";
     }else if (number == 4){
-        return "pickHole4";
+        return "pickHole6";
     }else if (number == 5){
         return "pickHole5";
     }else if (number == 6){
-        return "pickHole6";
+        return "pickHole4";
     }else if (number == 7){
-        return "pickHole7";
+        return "pickHole3";
     }else if (number == 8){
-        return "pickHole8";
+        return "pickHole2";
     }else{
         return "No valid index of cube!";
     }
@@ -140,6 +141,10 @@ void generate_pick_cylinders(ros::Publisher *marker_pub, int index_of_cylinder, 
         marker.color.a = 0.0;
     }
 
+    if (hide_and_reset){
+        marker.color.a = 0.0;
+    }
+
     marker.color.r = 1.0;
     marker.color.g = 0.0;
     marker.color.b = 0.0;
@@ -179,6 +184,9 @@ void generate_place_cylinders(ros::Publisher *marker_pub, int index_of_cylinder,
     }else if ((index_of_cylinder==index_of_placed_cylinder) && !attach_to_tool){
         marker.color.a = 1.0;
     }
+    if (hide_and_reset){
+        marker.color.a = 0.0;
+    }
     marker.color.r = 1.0;
     marker.color.g = 0.0;
     marker.color.b = 0.0;
@@ -212,6 +220,9 @@ void generate_attached_cylinder(ros::Publisher *marker_pub, bool attach_state){
     }else{
         marker.color.a = 0.0;
     }
+    if (hide_and_reset){
+        marker.color.a = 0.0;
+    }
     marker.color.r = 1.0;
     marker.color.g = 0.0;
     marker.color.b = 0.0;
@@ -223,12 +234,18 @@ void generate_attached_cylinder(ros::Publisher *marker_pub, bool attach_state){
 //! \Brief Callback from gripper state
 void gripperCallback(const std_msgs::Byte gripper_state){
 
-    ROS_INFO("Gripper state callback [%d]",gripper_state.data);
+    //ROS_INFO("Gripper state callback [%d]",gripper_state.data);
     if (gripper_state.data == 1){
         index_of_picked_cube++;
         attach_to_tool=true;
+        hide_and_reset=false;
+    }else if (gripper_state.data ==0) {
+        attach_to_tool = false;
+        hide_and_reset = false;
     }else{
         attach_to_tool=false;
+        index_of_picked_cube=0;
+        hide_and_reset = true;
     }
 
 }

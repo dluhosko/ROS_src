@@ -52,7 +52,7 @@ std::vector<geometry_msgs::Point> desiredPositionsDEMO(20);
 std::vector<geometry_msgs::Point> teachPositions, cubePositions;
 
 std_msgs::Bool moveitMode, displayVirtualCube, displayCube;
-std_msgs::Byte selectedMode, gripper_state;
+std_msgs::Byte selectedMode, gripper_state, attachToGripper_msg;
 std_msgs::Int32 centralStop_msg, errorCodeMsg, numOfCubesMsg;
 std_msgs::String string_msg;
 geometry_msgs::Point point, desiredPositions, acc, currentTeachPoint, lastTeachPoint, teachCubePositions;
