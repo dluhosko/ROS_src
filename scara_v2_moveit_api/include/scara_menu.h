@@ -531,12 +531,12 @@ void setDesiredPosesDEMO(){
     desiredPositionsDEMO[0].y = 0.57;
     desiredPositionsDEMO[0].z = 1.04;
     //PrePick position
-    desiredPositionsDEMO[1].x = 0.496;
-    desiredPositionsDEMO[1].y = 0.25;
+    desiredPositionsDEMO[1].x = 0.49;
+    desiredPositionsDEMO[1].y = 0.26;
     desiredPositionsDEMO[1].z = 1.08;
     //Pick position
-    desiredPositionsDEMO[2].x = 0.496;
-    desiredPositionsDEMO[2].y = 0.25;
+    desiredPositionsDEMO[2].x = 0.49;
+    desiredPositionsDEMO[2].y = 0.26;
     desiredPositionsDEMO[2].z = 1.06;
     //Work position
     desiredPositionsDEMO[3].x = 0.58;
@@ -544,39 +544,39 @@ void setDesiredPosesDEMO(){
     desiredPositionsDEMO[3].z = 1.08;
 
     //PrePlace position 1
-    desiredPositionsDEMO[4].x = 0.51;
-    desiredPositionsDEMO[4].y = 0.87;
+    desiredPositionsDEMO[4].x = 0.508;
+    desiredPositionsDEMO[4].y = 0.865;
     desiredPositionsDEMO[4].z = 1.04;
     //Place position 1
-    desiredPositionsDEMO[5].x = 0.51;
-    desiredPositionsDEMO[5].y = 0.87;
+    desiredPositionsDEMO[5].x = 0.508;
+    desiredPositionsDEMO[5].y = 0.865;
     desiredPositionsDEMO[5].z = 1.00;
 
     //PrePlace position 2
-    desiredPositionsDEMO[6].x = 0.51;
-    desiredPositionsDEMO[6].y = 0.93;
+    desiredPositionsDEMO[6].x = 0.508;
+    desiredPositionsDEMO[6].y = 0.92;
     desiredPositionsDEMO[6].z = 1.04;
     //Place position 2
-    desiredPositionsDEMO[7].x = 0.51;
-    desiredPositionsDEMO[7].y = 0.93;
+    desiredPositionsDEMO[7].x = 0.508;
+    desiredPositionsDEMO[7].y = 0.92;
     desiredPositionsDEMO[7].z = 1.00;
 
     //PrePlace position 3
-    desiredPositionsDEMO[8].x = 0.47;
+    desiredPositionsDEMO[8].x = 0.468;
     desiredPositionsDEMO[8].y = 0.87;
     desiredPositionsDEMO[8].z = 1.04;
     //Place position 3
-    desiredPositionsDEMO[9].x = 0.47;
+    desiredPositionsDEMO[9].x = 0.468;
     desiredPositionsDEMO[9].y = 0.87;
     desiredPositionsDEMO[9].z = 1.00;
 
     //PrePlace position 4
-    desiredPositionsDEMO[10].x = 0.47;
-    desiredPositionsDEMO[10].y = 0.93;
+    desiredPositionsDEMO[10].x = 0.465;
+    desiredPositionsDEMO[10].y = 0.92;
     desiredPositionsDEMO[10].z = 1.04;
     //Place position 4
-    desiredPositionsDEMO[11].x = 0.47;
-    desiredPositionsDEMO[11].y = 0.93;
+    desiredPositionsDEMO[11].x = 0.465;
+    desiredPositionsDEMO[11].y = 0.92;
     desiredPositionsDEMO[11].z = 1.00;
 
     //PrePlace position 5
@@ -589,12 +589,12 @@ void setDesiredPosesDEMO(){
     desiredPositionsDEMO[13].z = 1.00;
 
     //PrePlace position 6
-    desiredPositionsDEMO[14].x = 0.43;
-    desiredPositionsDEMO[14].y = 0.93;
+    desiredPositionsDEMO[14].x = 0.426;
+    desiredPositionsDEMO[14].y = 0.925;
     desiredPositionsDEMO[14].z = 1.04;
     //Place position 6
-    desiredPositionsDEMO[15].x = 0.43;
-    desiredPositionsDEMO[15].y = 0.93;
+    desiredPositionsDEMO[15].x = 0.426;
+    desiredPositionsDEMO[15].y = 0.925;
     desiredPositionsDEMO[15].z = 1.00;
 
     //PrePlace position 7
@@ -608,11 +608,11 @@ void setDesiredPosesDEMO(){
 
     //PrePlace position 8
     desiredPositionsDEMO[18].x = 0.39;
-    desiredPositionsDEMO[18].y = 0.93;
+    desiredPositionsDEMO[18].y = 0.928;
     desiredPositionsDEMO[18].z = 1.04;
     //Place position 8
     desiredPositionsDEMO[19].x = 0.39;
-    desiredPositionsDEMO[19].y = 0.93;
+    desiredPositionsDEMO[19].y = 0.928;
     desiredPositionsDEMO[19].z = 1.00;
 
 }
