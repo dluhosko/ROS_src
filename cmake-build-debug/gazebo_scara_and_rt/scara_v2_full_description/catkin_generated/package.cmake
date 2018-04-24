@@ -10,4 +10,7 @@ set(scara_v2_full_description_EXEC_DEPENDS "joint_state_publisher" "robot_state_
 set(scara_v2_full_description_RUN_DEPENDS "joint_state_publisher" "robot_state_publisher" "rviz")
 set(scara_v2_full_description_TEST_DEPENDS )
 set(scara_v2_full_description_DOC_DEPENDS )
+set(scara_v2_full_description_URL_WEBSITE "")
+set(scara_v2_full_description_URL_BUGTRACKER "")
+set(scara_v2_full_description_URL_REPOSITORY "")
 set(scara_v2_full_description_DEPRECATED "")

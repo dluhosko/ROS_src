@@ -71,6 +71,13 @@ CATKIN_BLACKLIST_PACKAGES:STRING=
 //Catkin enable testing
 CATKIN_ENABLE_TESTING:BOOL=ON
 
+//path to which gradle configuration and artifacts are deployed
+// in your workspace
+CATKIN_GLOBAL_GRADLE_DESTINATION:PATH=share/gradle
+
+//path to which maven artifacts are deployed in your workspace
+CATKIN_GLOBAL_MAVEN_DESTINATION:PATH=share/maven
+
 //Catkin skip testing
 CATKIN_SKIP_TESTING:BOOL=OFF
 
@@ -335,7 +342,7 @@ can_interface_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/can
 can_interface_DIR:PATH=/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/can_interface/cmake
 
 //Dependencies for the target
-can_interface_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+can_interface_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
 
 //Value Computed by CMake
 can_interface_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/can_interface
@@ -360,6 +367,9 @@ gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
 
 //The directory containing a CMake configuration file for geneus.
 geneus_DIR:PATH=/opt/ros/kinetic/share/geneus/cmake
+
+//The directory containing a CMake configuration file for genjava.
+genjava_DIR:PATH=/opt/ros/kinetic/share/genjava/cmake
 
 //The directory containing a CMake configuration file for genlisp.
 genlisp_DIR:PATH=/opt/ros/kinetic/share/genlisp/cmake
@@ -509,6 +519,9 @@ rosgraph_DIR:PATH=/opt/ros/kinetic/share/rosgraph/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
 
+//The directory containing a CMake configuration file for rosjava_build_tools.
+rosjava_build_tools_DIR:PATH=/opt/ros/kinetic/share/rosjava_build_tools/cmake
+
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/kinetic/share/roslib/cmake
 
@@ -533,6 +546,12 @@ rqt_gui_DIR:PATH=/opt/ros/kinetic/share/rqt_gui/cmake
 //The directory containing a CMake configuration file for rqt_gui_cpp.
 rqt_gui_cpp_DIR:PATH=/opt/ros/kinetic/share/rqt_gui_cpp/cmake
 
+//Value Computed by CMake
+rt_moveit_config_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/rt_moveit_config
+
+//Value Computed by CMake
+rt_moveit_config_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/rt_moveit_config
+
 //The directory containing a CMake configuration file for rviz.
 rviz_DIR:PATH=/opt/ros/kinetic/share/rviz/cmake
 
@@ -556,6 +575,12 @@ scara_msgs_DIR:PATH=/home/viktor/catkin_ws/src/cmake-build-debug/devel/share/sca
 
 //Value Computed by CMake
 scara_msgs_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/scara_msgs
+
+//Value Computed by CMake
+scara_rt_v3_moveit_config_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/scara_rt_v3_moveit_config
+
+//Value Computed by CMake
+scara_rt_v3_moveit_config_SOURCE_DIR:STATIC=/home/viktor/catkin_ws/src/scara_rt_v3_moveit_config
 
 //Value Computed by CMake
 scara_v2_full_control_BINARY_DIR:STATIC=/home/viktor/catkin_ws/src/cmake-build-debug/gazebo_scara_and_rt/scara_v2_full_control
@@ -682,7 +707,7 @@ Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
 Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
-CATKIN_ENV:INTERNAL=
+CATKIN_ENV:INTERNAL=/home/viktor/catkin_ws/src/cmake-build-debug/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/viktor/catkin_ws/src/cmake-build-debug/test_results
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
@@ -786,7 +811,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -10,4 +10,7 @@ set(scara_v2_full_control_EXEC_DEPENDS "controller_manager" "joint_state_control
 set(scara_v2_full_control_RUN_DEPENDS "controller_manager" "joint_state_controller" "robot_state_publisher" "rqt_gui" "effort_controllers")
 set(scara_v2_full_control_TEST_DEPENDS )
 set(scara_v2_full_control_DOC_DEPENDS )
+set(scara_v2_full_control_URL_WEBSITE "http://http://gazebosim.org/w/index.php?title=Tutorials/1.9/Using_A_URDF_In_Gazebo")
+set(scara_v2_full_control_URL_BUGTRACKER "https://github.com/osrf/gazebo_ros_demos/issues")
+set(scara_v2_full_control_URL_REPOSITORY "https://github.com/osrf/gazebo_ros_demos")
 set(scara_v2_full_control_DEPRECATED "")

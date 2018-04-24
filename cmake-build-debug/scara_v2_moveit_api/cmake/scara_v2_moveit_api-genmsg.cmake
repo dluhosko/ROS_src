@@ -7,6 +7,7 @@ set(MSG_I_FLAGS "-Iscara_v2_moveit_api:/home/viktor/catkin_ws/src/scara_v2_movei
 # Find all generators
 find_package(gencpp REQUIRED)
 find_package(geneus REQUIRED)
+find_package(genjava REQUIRED)
 find_package(genlisp REQUIRED)
 find_package(gennodejs REQUIRED)
 find_package(genpy REQUIRED)
@@ -38,7 +39,7 @@ add_custom_target(_scara_v2_moveit_api_generate_messages_check_deps_${_filename}
 )
 
 #
-#  langs = gencpp;geneus;genlisp;gennodejs;genpy
+#  langs = gencpp;geneus;genjava;genlisp;gennodejs;genpy
 #
 
 ### Section generating for lang: gencpp
@@ -154,6 +155,63 @@ add_dependencies(scara_v2_moveit_api_geneus scara_v2_moveit_api_generate_message
 
 # register target for catkin_package(EXPORTED_TARGETS)
 list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS scara_v2_moveit_api_generate_messages_eus)
+
+### Section generating for lang: genjava
+### Generating Messages
+_generate_msg_java(scara_v2_moveit_api
+  "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_v2_moveit_api
+)
+_generate_msg_java(scara_v2_moveit_api
+  "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_v2_moveit_api
+)
+_generate_msg_java(scara_v2_moveit_api
+  "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/status_rt.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_v2_moveit_api
+)
+
+### Generating Services
+_generate_srv_java(scara_v2_moveit_api
+  "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_v2_moveit_api
+)
+
+### Generating Module File
+_generate_module_java(scara_v2_moveit_api
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_v2_moveit_api
+  "${ALL_GEN_OUTPUT_FILES_java}"
+)
+
+add_custom_target(scara_v2_moveit_api_generate_messages_java
+  DEPENDS ${ALL_GEN_OUTPUT_FILES_java}
+)
+add_dependencies(scara_v2_moveit_api_generate_messages scara_v2_moveit_api_generate_messages_java)
+
+# add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_and_gripperState.msg" NAME_WE)
+add_dependencies(scara_v2_moveit_api_generate_messages_java _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/pose_velocity_direction.msg" NAME_WE)
+add_dependencies(scara_v2_moveit_api_generate_messages_java _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/msg/status_rt.msg" NAME_WE)
+add_dependencies(scara_v2_moveit_api_generate_messages_java _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_v2_moveit_api/srv/SimpleService.srv" NAME_WE)
+add_dependencies(scara_v2_moveit_api_generate_messages_java _scara_v2_moveit_api_generate_messages_check_deps_${_filename})
+
+# target for backward compatibility
+add_custom_target(scara_v2_moveit_api_genjava)
+add_dependencies(scara_v2_moveit_api_genjava scara_v2_moveit_api_generate_messages_java)
+
+# register target for catkin_package(EXPORTED_TARGETS)
+list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS scara_v2_moveit_api_generate_messages_java)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
@@ -366,6 +424,26 @@ if(TARGET actionlib_msgs_generate_messages_eus)
 endif()
 if(TARGET scara_msgs_generate_messages_eus)
   add_dependencies(scara_v2_moveit_api_generate_messages_eus scara_msgs_generate_messages_eus)
+endif()
+
+if(genjava_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_v2_moveit_api)
+  # install generated code
+  install(
+    DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_v2_moveit_api
+    DESTINATION ${genjava_INSTALL_DIR}
+  )
+endif()
+if(TARGET std_msgs_generate_messages_java)
+  add_dependencies(scara_v2_moveit_api_generate_messages_java std_msgs_generate_messages_java)
+endif()
+if(TARGET sensor_msgs_generate_messages_java)
+  add_dependencies(scara_v2_moveit_api_generate_messages_java sensor_msgs_generate_messages_java)
+endif()
+if(TARGET actionlib_msgs_generate_messages_java)
+  add_dependencies(scara_v2_moveit_api_generate_messages_java actionlib_msgs_generate_messages_java)
+endif()
+if(TARGET scara_msgs_generate_messages_java)
+  add_dependencies(scara_v2_moveit_api_generate_messages_java scara_msgs_generate_messages_java)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/scara_v2_moveit_api)

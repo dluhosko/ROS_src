@@ -7,6 +7,7 @@ set(MSG_I_FLAGS "-Iscara_msgs:/home/viktor/catkin_ws/src/scara_msgs/msg;-Istd_ms
 # Find all generators
 find_package(gencpp REQUIRED)
 find_package(geneus REQUIRED)
+find_package(genjava REQUIRED)
 find_package(genlisp REQUIRED)
 find_package(gennodejs REQUIRED)
 find_package(genpy REQUIRED)
@@ -38,7 +39,7 @@ add_custom_target(_scara_msgs_generate_messages_check_deps_${_filename}
 )
 
 #
-#  langs = gencpp;geneus;genlisp;gennodejs;genpy
+#  langs = gencpp;geneus;genjava;genlisp;gennodejs;genpy
 #
 
 ### Section generating for lang: gencpp
@@ -154,6 +155,63 @@ add_dependencies(scara_msgs_geneus scara_msgs_generate_messages_eus)
 
 # register target for catkin_package(EXPORTED_TARGETS)
 list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS scara_msgs_generate_messages_eus)
+
+### Section generating for lang: genjava
+### Generating Messages
+_generate_msg_java(scara_msgs
+  "/home/viktor/catkin_ws/src/scara_msgs/msg/robot_info.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_msgs
+)
+_generate_msg_java(scara_msgs
+  "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_msgs
+)
+_generate_msg_java(scara_msgs
+  "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_msgs
+)
+_generate_msg_java(scara_msgs
+  "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_msgs
+)
+
+### Generating Services
+
+### Generating Module File
+_generate_module_java(scara_msgs
+  ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_msgs
+  "${ALL_GEN_OUTPUT_FILES_java}"
+)
+
+add_custom_target(scara_msgs_generate_messages_java
+  DEPENDS ${ALL_GEN_OUTPUT_FILES_java}
+)
+add_dependencies(scara_msgs_generate_messages scara_msgs_generate_messages_java)
+
+# add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/robot_info.msg" NAME_WE)
+add_dependencies(scara_msgs_generate_messages_java _scara_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_velocity_direction.msg" NAME_WE)
+add_dependencies(scara_msgs_generate_messages_java _scara_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/pose_and_gripperState.msg" NAME_WE)
+add_dependencies(scara_msgs_generate_messages_java _scara_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/viktor/catkin_ws/src/scara_msgs/msg/status_rt.msg" NAME_WE)
+add_dependencies(scara_msgs_generate_messages_java _scara_msgs_generate_messages_check_deps_${_filename})
+
+# target for backward compatibility
+add_custom_target(scara_msgs_genjava)
+add_dependencies(scara_msgs_genjava scara_msgs_generate_messages_java)
+
+# register target for catkin_package(EXPORTED_TARGETS)
+list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS scara_msgs_generate_messages_java)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
@@ -348,6 +406,17 @@ if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/sc
 endif()
 if(TARGET std_msgs_generate_messages_eus)
   add_dependencies(scara_msgs_generate_messages_eus std_msgs_generate_messages_eus)
+endif()
+
+if(genjava_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_msgs)
+  # install generated code
+  install(
+    DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/scara_msgs
+    DESTINATION ${genjava_INSTALL_DIR}
+  )
+endif()
+if(TARGET std_msgs_generate_messages_java)
+  add_dependencies(scara_msgs_generate_messages_java std_msgs_generate_messages_java)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/scara_msgs)

@@ -10,4 +10,7 @@ set(scara_v2_moveit_api_EXEC_DEPENDS "moveit_msgs" "moveit_core" "moveit_ros_pla
 set(scara_v2_moveit_api_RUN_DEPENDS "moveit_msgs" "moveit_core" "moveit_ros_planning_interface" "roscpp" "std_msgs" "sensor_msgs" "message_runtime" "pose_and_gripperState" "pose_velocity_direction" "genmsgs" "scara_msgs" "tf")
 set(scara_v2_moveit_api_TEST_DEPENDS )
 set(scara_v2_moveit_api_DOC_DEPENDS )
+set(scara_v2_moveit_api_URL_WEBSITE "")
+set(scara_v2_moveit_api_URL_BUGTRACKER "")
+set(scara_v2_moveit_api_URL_REPOSITORY "")
 set(scara_v2_moveit_api_DEPRECATED "")

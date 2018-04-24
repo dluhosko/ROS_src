@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /home/viktor/catkin_ws/src/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/home/viktor/clion-2016.3.3/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -67,6 +78,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,28 +109,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/viktor/clion-2016.3.3/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target install
 install: preinstall
@@ -112,26 +122,16 @@ install/fast: preinstall/fast
 	/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/viktor/clion-2016.3.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,124 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-scara_msgs_gennodejs: scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+scara_msgs_generate_messages_eus: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/rule
 
-.PHONY : scara_msgs_gennodejs
+.PHONY : scara_msgs_generate_messages_eus
 
 # fast build rule for target.
-scara_msgs_gennodejs/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build
-.PHONY : scara_msgs_gennodejs/fast
-
-# Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-scara_msgs_generate_messages_nodejs: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : scara_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-scara_msgs_generate_messages_nodejs/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build
-.PHONY : scara_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/rule
-
-# Convenience name for target.
-scara_msgs_genlisp: scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/rule
-
-.PHONY : scara_msgs_genlisp
-
-# fast build rule for target.
-scara_msgs_genlisp/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/build
-.PHONY : scara_msgs_genlisp/fast
-
-# Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule
-
-# Convenience name for target.
-scara_msgs_generate_messages: scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule
-
-.PHONY : scara_msgs_generate_messages
-
-# fast build rule for target.
-scara_msgs_generate_messages/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/build
-.PHONY : scara_msgs_generate_messages/fast
-
-# Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-scara_msgs_generate_messages_py: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule
-
-.PHONY : scara_msgs_generate_messages_py
-
-# fast build rule for target.
-scara_msgs_generate_messages_py/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build
-.PHONY : scara_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule
-.PHONY : scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule
-
-# Convenience name for target.
-_scara_msgs_generate_messages_check_deps_robot_info: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule
-
-.PHONY : _scara_msgs_generate_messages_check_deps_robot_info
-
-# fast build rule for target.
-_scara_msgs_generate_messages_check_deps_robot_info/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/build.make scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/build
-.PHONY : _scara_msgs_generate_messages_check_deps_robot_info/fast
-
-# Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/rule
-
-# Convenience name for target.
-scara_msgs_gencpp: scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/rule
-
-.PHONY : scara_msgs_gencpp
-
-# fast build rule for target.
-scara_msgs_gencpp/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/build
-.PHONY : scara_msgs_gencpp/fast
-
-# Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
-
-# Convenience name for target.
-scara_msgs_genpy: scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
-
-.PHONY : scara_msgs_genpy
-
-# fast build rule for target.
-scara_msgs_genpy/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_genpy.dir/build.make scara_msgs/CMakeFiles/scara_msgs_genpy.dir/build
-.PHONY : scara_msgs_genpy/fast
+scara_msgs_generate_messages_eus/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build
+.PHONY : scara_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_velocity_direction.dir/rule:
@@ -301,19 +196,34 @@ _scara_msgs_generate_messages_check_deps_pose_velocity_direction/fast:
 .PHONY : _scara_msgs_generate_messages_check_deps_pose_velocity_direction/fast
 
 # Convenience name for target.
-scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/rule
-.PHONY : scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/rule
+scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/rule
 
 # Convenience name for target.
-_scara_msgs_generate_messages_check_deps_status_rt: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/rule
+scara_msgs_gencpp: scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/rule
 
-.PHONY : _scara_msgs_generate_messages_check_deps_status_rt
+.PHONY : scara_msgs_gencpp
 
 # fast build rule for target.
-_scara_msgs_generate_messages_check_deps_status_rt/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/build.make scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/build
-.PHONY : _scara_msgs_generate_messages_check_deps_status_rt/fast
+scara_msgs_gencpp/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_gencpp.dir/build
+.PHONY : scara_msgs_gencpp/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_java_gradle.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_java_gradle.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_java_gradle.dir/rule
+
+# Convenience name for target.
+scara_msgs_generate_messages_java_gradle: scara_msgs/CMakeFiles/scara_msgs_generate_messages_java_gradle.dir/rule
+
+.PHONY : scara_msgs_generate_messages_java_gradle
+
+# fast build rule for target.
+scara_msgs_generate_messages_java_gradle/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_java_gradle.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_java_gradle.dir/build
+.PHONY : scara_msgs_generate_messages_java_gradle/fast
 
 # Convenience name for target.
 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_pose_and_gripperState.dir/rule:
@@ -331,19 +241,34 @@ _scara_msgs_generate_messages_check_deps_pose_and_gripperState/fast:
 .PHONY : _scara_msgs_generate_messages_check_deps_pose_and_gripperState/fast
 
 # Convenience name for target.
-scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/rule:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/rule
-.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/rule
+scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule
+.PHONY : scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule
 
 # Convenience name for target.
-scara_msgs_generate_messages_eus: scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/rule
+_scara_msgs_generate_messages_check_deps_robot_info: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/rule
 
-.PHONY : scara_msgs_generate_messages_eus
+.PHONY : _scara_msgs_generate_messages_check_deps_robot_info
 
 # fast build rule for target.
-scara_msgs_generate_messages_eus/fast:
-	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_eus.dir/build
-.PHONY : scara_msgs_generate_messages_eus/fast
+_scara_msgs_generate_messages_check_deps_robot_info/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/build.make scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_robot_info.dir/build
+.PHONY : _scara_msgs_generate_messages_check_deps_robot_info/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+scara_msgs_generate_messages_py: scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/rule
+
+.PHONY : scara_msgs_generate_messages_py
+
+# fast build rule for target.
+scara_msgs_generate_messages_py/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_py.dir/build
+.PHONY : scara_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_lisp.dir/rule:
@@ -361,6 +286,51 @@ scara_msgs_generate_messages_lisp/fast:
 .PHONY : scara_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule
+
+# Convenience name for target.
+scara_msgs_generate_messages: scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/rule
+
+.PHONY : scara_msgs_generate_messages
+
+# fast build rule for target.
+scara_msgs_generate_messages/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages.dir/build
+.PHONY : scara_msgs_generate_messages/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_genjava.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_genjava.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_genjava.dir/rule
+
+# Convenience name for target.
+scara_msgs_genjava: scara_msgs/CMakeFiles/scara_msgs_genjava.dir/rule
+
+.PHONY : scara_msgs_genjava
+
+# fast build rule for target.
+scara_msgs_genjava/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_genjava.dir/build.make scara_msgs/CMakeFiles/scara_msgs_genjava.dir/build
+.PHONY : scara_msgs_genjava/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_java.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_java.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_java.dir/rule
+
+# Convenience name for target.
+scara_msgs_generate_messages_java: scara_msgs/CMakeFiles/scara_msgs_generate_messages_java.dir/rule
+
+.PHONY : scara_msgs_generate_messages_java
+
+# fast build rule for target.
+scara_msgs_generate_messages_java/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_java.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_java.dir/build
+.PHONY : scara_msgs_generate_messages_java/fast
+
+# Convenience name for target.
 scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/rule:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/rule
 .PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/rule
@@ -374,6 +344,36 @@ scara_msgs_generate_messages_cpp: scara_msgs/CMakeFiles/scara_msgs_generate_mess
 scara_msgs_generate_messages_cpp/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_cpp.dir/build
 .PHONY : scara_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+scara_msgs_gennodejs: scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/rule
+
+.PHONY : scara_msgs_gennodejs
+
+# fast build rule for target.
+scara_msgs_gennodejs/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_gennodejs.dir/build
+.PHONY : scara_msgs_gennodejs/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/rule
+
+# Convenience name for target.
+scara_msgs_genlisp: scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/rule
+
+.PHONY : scara_msgs_genlisp
+
+# fast build rule for target.
+scara_msgs_genlisp/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/build.make scara_msgs/CMakeFiles/scara_msgs_genlisp.dir/build
+.PHONY : scara_msgs_genlisp/fast
 
 # Convenience name for target.
 scara_msgs/CMakeFiles/scara_msgs_geneus.dir/rule:
@@ -390,34 +390,82 @@ scara_msgs_geneus/fast:
 	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_geneus.dir/build.make scara_msgs/CMakeFiles/scara_msgs_geneus.dir/build
 .PHONY : scara_msgs_geneus/fast
 
+# Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
+
+# Convenience name for target.
+scara_msgs_genpy: scara_msgs/CMakeFiles/scara_msgs_genpy.dir/rule
+
+.PHONY : scara_msgs_genpy
+
+# fast build rule for target.
+scara_msgs_genpy/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_genpy.dir/build.make scara_msgs/CMakeFiles/scara_msgs_genpy.dir/build
+.PHONY : scara_msgs_genpy/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/rule
+.PHONY : scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/rule
+
+# Convenience name for target.
+_scara_msgs_generate_messages_check_deps_status_rt: scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/rule
+
+.PHONY : _scara_msgs_generate_messages_check_deps_status_rt
+
+# fast build rule for target.
+_scara_msgs_generate_messages_check_deps_status_rt/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/build.make scara_msgs/CMakeFiles/_scara_msgs_generate_messages_check_deps_status_rt.dir/build
+.PHONY : _scara_msgs_generate_messages_check_deps_status_rt/fast
+
+# Convenience name for target.
+scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
+.PHONY : scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+scara_msgs_generate_messages_nodejs: scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : scara_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+scara_msgs_generate_messages_nodejs/fast:
+	cd /home/viktor/catkin_ws/src/cmake-build-debug && $(MAKE) -f scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build.make scara_msgs/CMakeFiles/scara_msgs_generate_messages_nodejs.dir/build
+.PHONY : scara_msgs_generate_messages_nodejs/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... install/local"
-	@echo "... scara_msgs_gennodejs"
 	@echo "... test"
-	@echo "... scara_msgs_generate_messages_nodejs"
-	@echo "... install"
-	@echo "... scara_msgs_genlisp"
-	@echo "... scara_msgs_generate_messages"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... scara_msgs_generate_messages_py"
-	@echo "... _scara_msgs_generate_messages_check_deps_robot_info"
-	@echo "... scara_msgs_gencpp"
-	@echo "... scara_msgs_genpy"
-	@echo "... _scara_msgs_generate_messages_check_deps_pose_velocity_direction"
-	@echo "... _scara_msgs_generate_messages_check_deps_status_rt"
-	@echo "... _scara_msgs_generate_messages_check_deps_pose_and_gripperState"
+	@echo "... edit_cache"
 	@echo "... scara_msgs_generate_messages_eus"
+	@echo "... _scara_msgs_generate_messages_check_deps_pose_velocity_direction"
+	@echo "... scara_msgs_gencpp"
+	@echo "... scara_msgs_generate_messages_java_gradle"
+	@echo "... _scara_msgs_generate_messages_check_deps_pose_and_gripperState"
+	@echo "... _scara_msgs_generate_messages_check_deps_robot_info"
+	@echo "... scara_msgs_generate_messages_py"
+	@echo "... install/strip"
 	@echo "... scara_msgs_generate_messages_lisp"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... scara_msgs_generate_messages"
+	@echo "... scara_msgs_genjava"
+	@echo "... scara_msgs_generate_messages_java"
 	@echo "... scara_msgs_generate_messages_cpp"
+	@echo "... scara_msgs_gennodejs"
+	@echo "... scara_msgs_genlisp"
 	@echo "... scara_msgs_geneus"
+	@echo "... scara_msgs_genpy"
+	@echo "... install"
+	@echo "... _scara_msgs_generate_messages_check_deps_status_rt"
+	@echo "... scara_msgs_generate_messages_nodejs"
+	@echo "... install/local"
 .PHONY : help
 
 

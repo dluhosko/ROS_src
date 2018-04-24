@@ -10,4 +10,7 @@ set(scara_msgs_EXEC_DEPENDS "roscpp" "std_msgs" "message_runtime" "pose_and_grip
 set(scara_msgs_RUN_DEPENDS "roscpp" "std_msgs" "message_runtime" "pose_and_gripperState" "pose_velocity_direction" "robot_info" "genmsgs")
 set(scara_msgs_TEST_DEPENDS )
 set(scara_msgs_DOC_DEPENDS )
+set(scara_msgs_URL_WEBSITE "")
+set(scara_msgs_URL_BUGTRACKER "")
+set(scara_msgs_URL_REPOSITORY "")
 set(scara_msgs_DEPRECATED "")

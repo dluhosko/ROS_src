@@ -5,7 +5,9 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
+subdirs(rt_moveit_config)
 subdirs(scara_and_rt_moveit_config)
+subdirs(scara_rt_v3_moveit_config)
 subdirs(gazebo_scara_and_rt/scara_v2_full_control)
 subdirs(gazebo_scara_and_rt/scara_v2_full_description)
 subdirs(gazebo_scara_and_rt/scara_v2_full_gazebo)

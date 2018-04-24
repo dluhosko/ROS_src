@@ -10,4 +10,7 @@ set(scara_v2_full_gazebo_EXEC_DEPENDS "gazebo_plugins" "gazebo_ros" "gazebo_ros_
 set(scara_v2_full_gazebo_RUN_DEPENDS "gazebo_plugins" "gazebo_ros" "gazebo_ros_control" "scara_v2_control" "scara_v2_description" "xacro")
 set(scara_v2_full_gazebo_TEST_DEPENDS )
 set(scara_v2_full_gazebo_DOC_DEPENDS )
+set(scara_v2_full_gazebo_URL_WEBSITE "")
+set(scara_v2_full_gazebo_URL_BUGTRACKER "")
+set(scara_v2_full_gazebo_URL_REPOSITORY "")
 set(scara_v2_full_gazebo_DEPRECATED "")
