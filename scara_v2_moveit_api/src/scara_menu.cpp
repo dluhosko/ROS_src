@@ -97,6 +97,11 @@ int main(int argc, char **argv){
     ros::Publisher numOfCubes_pub = n16.advertise<std_msgs::Int32>("numberOfTeachedPoints",1000); //Simulacia
     ros::Publisher rt_rotate_cmd = n16.advertise<std_msgs::String>("commandForRotaryTable",1000);
     ros::Publisher attach_to_gripper_pub= n16.advertise<std_msgs::Byte>("attachToGripper",1000);
+    //Rotary table
+    ros::Publisher rotateCommand_pub = n1.advertise<scara_v2_moveit_api::pose_velocity_direction>("rotate_DEC_RT",1000);
+    rt_msg.rotation = 450;
+    rt_msg.velocity = 10;
+    rt_msg.direction = false;
     ROS_INFO("Init subscribers");
     //Subscriber
     ros::Subscriber modeSelect_sub = nn1.subscribe("modeSelectGUI",1000,modeSelectCallback);
@@ -609,7 +614,9 @@ int main(int argc, char **argv){
                                     if (rotate) {
                                         rt_rotate_cmd.publish(
                                                 string_msg);              //Rotary table rotate command - in work position
-                                        sleep(5);
+                                        sleep(2);
+                                        rotateCommand_pub.publish(rt_msg);
+                                        sleep(3);
                                         rotate = false;
                                     }
 

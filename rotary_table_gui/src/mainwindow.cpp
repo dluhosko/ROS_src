@@ -1,11 +1,5 @@
 #include "../include/rotary_table_gui/mainwindow.h"
 #include "ui_mainwindow.h"
-#include <pluginlib/class_list_macros.h>
-#include <QStringList>
-#include <QtCore>
-#include <std_msgs/Int32.h>
-#include <std_msgs/String.h>
-#include "ros/ros.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -137,7 +131,7 @@ void MainWindow::on_relativeControl_slider_PB_clicked(){
     pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_slider_SLIDER->value());  //deg
     pose_velocity_direction_msg.velocity = floor((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
-    ROS_INFO_STREAM(pose_velocity_direction_msg);
+    //ROS_INFO_STREAM(pose_velocity_direction_msg);
 
     rotateImg(desiredAngleInt/10.0);
 
@@ -162,7 +156,7 @@ void MainWindow::on_relativeControl_input_PB_clicked(){
     pose_velocity_direction_msg.rotation = (int)(ui->relativeControl_input_LE->text().toDouble()*10); //deg
     pose_velocity_direction_msg.velocity = (int)(ui->MaxVelocity_input_LE->text().toDouble()*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); //deg
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
-    ROS_INFO_STREAM(pose_velocity_direction_msg);
+    //ROS_INFO_STREAM(pose_velocity_direction_msg);
 
     rotateImg(desiredAngleInt/10.0);
 
@@ -203,11 +197,11 @@ void MainWindow::on_absoluteControl_slider_PB_clicked(){
         }
     }
 
-    ROS_INFO("desired angle= %d current angle = %d angle to rotate = %d",desiredAngleAbsolute, desiredAngleInt, pose_velocity_direction_msg.rotation);
+    //ROS_INFO("desired angle= %d current angle = %d angle to rotate = %d",desiredAngleAbsolute, desiredAngleInt, pose_velocity_direction_msg.rotation);
     desiredAngleInt = desiredAngleAbsolute;
     pose_velocity_direction_msg.velocity = (int)((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
-    ROS_INFO_STREAM(pose_velocity_direction_msg);
+    //ROS_INFO_STREAM(pose_velocity_direction_msg);
 
     rotateImg(desiredAngleAbsolute/10.0);
 
@@ -243,12 +237,12 @@ void MainWindow::on_absoluteControl_input_PB_clicked(){
             pose_velocity_direction_msg.rotation = 3600 - (desiredAngleAbsolute - desiredAngleInt);
         }
     }
-    ROS_INFO("desired angle= %d current angle = %d angle to rotate = %d",desiredAngleAbsolute, desiredAngleInt, pose_velocity_direction_msg.rotation);
+    //ROS_INFO("desired angle= %d current angle = %d angle to rotate = %d",desiredAngleAbsolute, desiredAngleInt, pose_velocity_direction_msg.rotation);
     //ROS_INFO("desired rotation msg %d",pose_velocity_direction_msg.rotation);
     desiredAngleInt = desiredAngleAbsolute;
     pose_velocity_direction_msg.velocity = (int)((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
-    ROS_INFO_STREAM(pose_velocity_direction_msg);
+    //ROS_INFO_STREAM(pose_velocity_direction_msg);
 
     rotateImg(abs(ui->absoluteControl_input_LE->text().toDouble()));
 
@@ -263,16 +257,16 @@ void MainWindow::on_smooth_plusHalf_PB_clicked(){
     desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
     //GUI
-    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
+    //ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
     ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
     //ROS
     pose_velocity_direction_msg.rotation = 10; //deg=step*10
-    pose_velocity_direction_msg.velocity = 60; //deg/s -> ot/min
+    pose_velocity_direction_msg.velocity = 30; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = true;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
-    ROS_INFO_STREAM(pose_velocity_direction_msg);
+    //ROS_INFO_STREAM(pose_velocity_direction_msg);
 
 }   //step by 1 degree
 
@@ -282,16 +276,16 @@ void MainWindow::on_smooth_plusOne_PB_clicked(){
     desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
     //GUI
-    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
+    //ROS_INFO("[RT-GUI] : desiredAngleInt = %d",desiredAngleInt);
     ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
     //ROS
     pose_velocity_direction_msg.rotation = 100; //deg=step*10
-    pose_velocity_direction_msg.velocity = 60; //deg/s -> ot/min
+    pose_velocity_direction_msg.velocity = 30; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = true;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
-    ROS_INFO_STREAM(pose_velocity_direction_msg);
+    //ROS_INFO_STREAM(pose_velocity_direction_msg);
 
 }   //step by 10 degree
 
@@ -301,16 +295,16 @@ void MainWindow::on_smooth_minusHalf_PB_clicked(){
     desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
     //GUI
-    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
+    //ROS_INFO("[RT-GUI] : desiredAngleInt = %d",desiredAngleInt);
     ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
     //ROS
     pose_velocity_direction_msg.rotation = 10; //deg=step*10
-    pose_velocity_direction_msg.velocity = 60; //deg/s -> ot/min
+    pose_velocity_direction_msg.velocity = 30; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = false;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
-    ROS_INFO_STREAM(pose_velocity_direction_msg);
+    //ROS_INFO_STREAM(pose_velocity_direction_msg);
 
 }
 
@@ -321,16 +315,16 @@ void MainWindow::on_smooth_minusOne_PB_clicked(){
     desiredAngleInt = normalizeToRange2PI(desiredAngleInt);
 
     //GUI
-    ROS_INFO("desiredAngleInt = %d",desiredAngleInt);
+    //ROS_INFO("[RT-GUI] : desiredAngleInt = %d",desiredAngleInt);
     ui->status_TE->append("Moving[relative] to " + QString::number(0.1) + " deg in direction RIGHT");
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0);
     ui->desiredPositionDeg_LCD->display(desiredAngleInt/10.0 * DEG_TO_RAD);
     //ROS
     pose_velocity_direction_msg.rotation = 100; //deg=step*10
-    pose_velocity_direction_msg.velocity = 60; //deg/s -> ot/min
+    pose_velocity_direction_msg.velocity = 30; //deg/s -> ot/min
     pose_velocity_direction_msg.direction = false;
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
-    ROS_INFO_STREAM(pose_velocity_direction_msg);
+    //ROS_INFO_STREAM(pose_velocity_direction_msg);
 
 }
 /*****************************************************/
@@ -346,7 +340,7 @@ void MainWindow::on_MaxVelocity_input_PB_clicked(){
     ui->status_TE->append("Max velocity set to " + ui->MaxVelocity_input_LE->text() + " deg/s");
 
     pose_velocity_direction_msg.velocity = (int)((ui->MaxVelocity_input_LE->text().toDouble())*DEGREES_per_SECOND_TO_ROTATIONperMINUTE); // deg/s -> rots/min
-    ROS_INFO("rots per minute = %d",(int)(pose_velocity_direction_msg.velocity));
+    //ROS_INFO("rots per minute = %d",(int)(pose_velocity_direction_msg.velocity));
 
 
 }
@@ -500,42 +494,42 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
         {
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
-            ROS_INFO("RSG Mode: CAN and Test CPU Watchdog Successful");
+            //ROS_INFO("RSG Mode: CAN and Test CPU Watchdog Successful");
             break;
         }
         case 0xc:
         {
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Test CPU Watchdog Successful"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and CPU"));
-            ROS_INFO("RSG Mode: CAN and Test CPU Watchdog Successful");
+            //ROS_INFO("RSG Mode: CAN and Test CPU Watchdog Successful");
             break;
         }
         case 0xa:
         {
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN and Referencing Successful"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN and ref.success"));
-            ROS_INFO("RSG Mode: CAN and Referencing Successful");
+            //ROS_INFO("RSG Mode: CAN and Referencing Successful");
             break;
         }
         case 0x8:
         {
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG Mode: CAN"));
-            ROS_INFO("RSG Mode: CAN");
+            //ROS_INFO("RSG Mode: CAN");
             break;
         }
         case 0x4:
         {
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Test CPU Watchdog Successful"));
-            ROS_INFO("Test CPU Watchdog Successful");
+            //ROS_INFO("Test CPU Watchdog Successful");
             break;
         }
         case 0x2:
         {
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing Successful"));
-            ROS_INFO("Referencing Successful");
+            //ROS_INFO("Referencing Successful");
             break;
         }
         case 0x0:
@@ -559,7 +553,7 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
                                                                                                                                "Warning of 90% overload level before error"
                                                                                                                                "and State: Ready"));
             ui->status_workingState_TE->setText(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload,Ready"));
-            ROS_INFO(" Position reached and Warning of 90% overload level before error and State: Ready");
+            //ROS_INFO(" Position reached and Warning of 90% overload level before error and State: Ready");
             break;
         }
         case 0x6:
@@ -567,7 +561,7 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and "
                                                                                                                                "Warning of 90% overload level before error"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,90%overload"));
-            ROS_INFO("Position reached and Warning of 90% overload level before error");
+            //ROS_INFO("Position reached and Warning of 90% overload level before error");
             break;
         }
         case 0x5:
@@ -575,14 +569,14 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
 
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached and State: Ready"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" pos.reach,Ready"));
-            ROS_INFO("Position reached and State: Ready");
+            //ROS_INFO("Position reached and State: Ready");
             break;
         }
         case 0x4:
         {
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Position reached"));
-            ROS_INFO("Position reached");
+            //ROS_INFO("Position reached");
             break;
         }
         case 0x3:
@@ -590,14 +584,14 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error and"
                                                                                                                                "State: Ready"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" 90%overload,Ready"));
-            ROS_INFO("Warning of 90% overload level before error and State: Ready");
+            //ROS_INFO("Warning of 90% overload level before error and State: Ready");
             break;
         }
         case 0x2:
         {
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Warning of 90% overload level before error"));
-            ROS_INFO("Warning of 90% overload level before error");
+            //ROS_INFO("Warning of 90% overload level before error");
             break;
         }
         case 0x1:
@@ -606,7 +600,7 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
             ui->status_workingState_TE->setTextColor(QColor("orange"));
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Ready"));
-            ROS_INFO("State: Ready");
+            //ROS_INFO("State: Ready");
             break;
         }
         case 0x0:
@@ -631,7 +625,7 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
             ui->status_workingState_TE->setTextColor(QColor("red"));
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Error"));
-            ROS_INFO("State: Error");
+            //ROS_INFO("State: Error");
         }
         case 0x0:
         {
@@ -654,7 +648,7 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
             ui->status_workingState_TE->setTextColor(QColor("green"));
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Running"));
-            ROS_INFO("State: Running");
+            //ROS_INFO("State: Running");
             break;
         }
         case 0x4:
@@ -663,7 +657,7 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
             ui->status_workingState_TE->setTextColor(QColor("orange"));
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Homing"));
-            ROS_INFO("State: Homing");
+            //ROS_INFO("State: Homing");
             break;
         }
         case 0x2:
@@ -672,14 +666,14 @@ void MainWindow::displayCurrentWorkingStatus(int num1, int num2, int num3, int n
             ui->status_workingState_TE->setTextColor(QColor("orange"));
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Referencing"));
-            ROS_INFO("State: Homing");
+            //ROS_INFO("State: Homing");
             break;
         }
         case 0x0:
         {
             ui->config_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
             ui->status_workingState_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" State: Start"));
-            ROS_INFO("State: Homing");
+            //ROS_INFO("State: Homing");
             break;
         }
         default:
@@ -701,7 +695,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" RSG delayed more than 1 rotation"));
-            ROS_WARN("RSG delayed more than 1 rotation");
+            //ROS_WARN("RSG delayed more than 1 rotation");
             break;
         }
         case 0x0:
@@ -723,7 +717,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Overtemperature in Brake Chopper"));
-            ROS_WARN("Overtemperature in Brake Chopper");
+            //ROS_WARN("Overtemperature in Brake Chopper");
             break;
         }
         case 0x4:
@@ -731,7 +725,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Referencing error"));
-            ROS_WARN("Referencing error");
+            //ROS_WARN("Referencing error");
             break;
         }
         case 0x2:
@@ -739,7 +733,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Motor Overload Error"));
-            ROS_WARN("Motor Overload Error");
+            //ROS_WARN("Motor Overload Error");
             break;
         }
         case 0x0:
@@ -761,7 +755,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Hall Sensors swapped / Encoder fault (reset only by reboot)"));
-            ROS_WARN("Hall Sensors swapped / Encoder fault (reset only by reboot)");
+            //ROS_WARN("Hall Sensors swapped / Encoder fault (reset only by reboot)");
             break;
         }
         case 0x2:
@@ -769,7 +763,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" CAN Bus Error"));
-            ROS_WARN("CAN Bus Error");
+            //ROS_WARN("CAN Bus Error");
             break;
         }
         case 0x1:
@@ -777,7 +771,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Hall Sensor Fault"));
-            ROS_WARN("Hall Sensor Fault");
+            //ROS_WARN("Hall Sensor Fault");
             break;
         }
         case 0x0:
@@ -799,7 +793,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Over temperature in Output Stage"));
-            ROS_WARN("Over temperature in Output Stage");
+            //ROS_WARN("Over temperature in Output Stage");
             break;
         }
         case 0x4:
@@ -807,7 +801,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Supply Voltage too Low"));
-            ROS_WARN("Supply Voltage too Low");
+            //ROS_WARN("Supply Voltage too Low");
             break;
         }
         case 0x2:
@@ -815,7 +809,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Supply Voltage too High"));
-            ROS_WARN("Supply Voltage too High");
+            //ROS_WARN("Supply Voltage too High");
             break;
         }
         case 0x1:
@@ -823,7 +817,7 @@ void MainWindow::displayCurrentWorkingError(int num1, int num2, int num3, int nu
             ui->status_TE->setTextColor(QColor("red"));
             ui->status_TE->append("FATAL ERROR !! please check the status tab");
             ui->status_error_TE->append(QString("[") +QString::number(numberOfMessage) + QString("]") + QString(" Over current in Output Stage"));
-            ROS_WARN("Over current in Output Stage");
+            //ROS_WARN("Over current in Output Stage");
             break;
         }
         case 0x0:
@@ -889,7 +883,7 @@ void MainWindow::displayCurrentValues(){
 
     //Status
     if ((status_hexa_number1 != last_status_hexa_number1) || (status_hexa_number2 != last_status_hexa_number2) || (status_hexa_number3 != last_status_hexa_number3) || (status_hexa_number4 != last_status_hexa_number4)){
-        ROS_INFO("Status change");
+        //ROS_INFO("Status change");
         displayCurrentWorkingStatus(status_hexa_number1, status_hexa_number2, status_hexa_number3, status_hexa_number4,statusNumberOfMessage);
         statusNumberOfMessage++;
         last_status_hexa_number1 = status_hexa_number1;
@@ -899,7 +893,7 @@ void MainWindow::displayCurrentValues(){
     }
     //Error
     if ((error_hexa_number1 != last_error_hexa_number1) || (error_hexa_number2 != last_error_hexa_number2) || (error_hexa_number3 != last_error_hexa_number3) || (error_hexa_number4 != last_error_hexa_number4)){
-        ROS_INFO("Error change");
+        //ROS_INFO("Error change");
         displayCurrentWorkingError(error_hexa_number1, error_hexa_number2, error_hexa_number3, error_hexa_number4,errorNumberOfMessage);
         errorNumberOfMessage++;
         last_error_hexa_number1 = error_hexa_number1;
@@ -910,7 +904,7 @@ void MainWindow::displayCurrentValues(){
 
     //Temperature and Current
     if ((power_stage_temperature != last_power_stage_temperature) || (microprocessor_temperature != last_microprocessor_temperature) || (chopper_temperature != last_chopper_temperature) || (filtered_motor_current != last_filtered_motor_current)){
-        ROS_INFO("Temperature or Current change");
+        //ROS_INFO("Temperature or Current change");
         ui->status_powerStageTemp_LCD->display(power_stage_temperature);
         ui->status_MicroprocesorTemp_LCD->display(microprocessor_temperature);
         ui->status_ChopperTemp_LCD->display(chopper_temperature);
@@ -955,7 +949,7 @@ void MainWindow::CurrentVelocityCallback(const std_msgs::Int32 currentVelocity){
 
 void MainWindow::CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkingState){
 
-    ROS_INFO("Current working state in hexa =%x",currentWorkingState.data);
+    //ROS_INFO("Current working state in hexa =%x",currentWorkingState.data);
     status_hexa_number1 = 0;
     status_hexa_number2 = 0;
     status_hexa_number3 = 0;
@@ -970,7 +964,7 @@ void MainWindow::CurrentWorkingStateCallback(const std_msgs::Int32 currentWorkin
 
 void MainWindow::CurrentWorkingErrorCallback(const std_msgs::Int32 currentWorkingError){
 
-    ROS_INFO("Current working error callback %x",currentWorkingError.data);
+    //ROS_INFO("Current working error callback %x",currentWorkingError.data);
     error_hexa_number1 = 0;
     error_hexa_number2 = 0;
     error_hexa_number3 = 0;
@@ -984,15 +978,15 @@ void MainWindow::CurrentWorkingErrorCallback(const std_msgs::Int32 currentWorkin
 
 void MainWindow::CurrentStatusCallback(const scara_msgs::status_rt status){
 
-    ROS_INFO("Status msg: temp1 = %x(%d), temp2=%x(%d), temp3=%x(%d), current=%x(%d)",status.power_stage_temperature,status.power_stage_temperature,
-    status.microprocessor_temperature,status.microprocessor_temperature,status.chopper_temperature,status.chopper_temperature,
-    status.filtered_motor_current, status.filtered_motor_current);
+    //ROS_INFO("Status msg: temp1 = %x(%d), temp2=%x(%d), temp3=%x(%d), current=%x(%d)",status.power_stage_temperature,status.power_stage_temperature,
+    //status.microprocessor_temperature,status.microprocessor_temperature,status.chopper_temperature,status.chopper_temperature,
+    //status.filtered_motor_current, status.filtered_motor_current);
 
     power_stage_temperature = status.power_stage_temperature;
     microprocessor_temperature = status.microprocessor_temperature;
     chopper_temperature = status.chopper_temperature;
     filtered_motor_current = status.filtered_motor_current;
 
-}   /** Bude treba preratat hodnotu  statusu na realne jednotky stupne a mA **/
+}
 /*****************************************************/
 
