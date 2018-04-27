@@ -338,6 +338,7 @@
     <list default="true" id="40875215-c5ab-41e3-ae13-5f1ad948e6ee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android_tutorial/android_git/android_apps" afterPath="$PROJECT_DIR$/android_tutorial/android_git/android_apps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" afterPath="$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -368,8 +369,8 @@
       <file leaf-file-name="mainwindow.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="295" column="0" lean-forward="false" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="307" column="4" lean-forward="false" selection-start-line="307" selection-start-column="4" selection-end-line="307" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -2785,14 +2786,7 @@
       <workItem from="1524305728434" duration="17681000" />
       <workItem from="1524551842681" duration="20926000" />
       <workItem from="1524639179431" duration="4507000" />
-      <workItem from="1524808335801" duration="17000" />
-    </task>
-    <task id="LOCAL-00066" summary="added collision objects to moveit!">
-      <created>1505071047115</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1505071047115</updated>
+      <workItem from="1524808335801" duration="643000" />
     </task>
     <task id="LOCAL-00067" summary="Added virtual cube to project.. not tested yet">
       <created>1505207248041</created>
@@ -3130,17 +3124,24 @@
       <option name="project" value="LOCAL" />
       <updated>1524644388636</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="SENSODRIVE - FINAL COMMIT !!!!!!!">
+      <created>1524808368764</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1524808368764</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1028521000" />
+    <option name="totallyTimeSpent" value="1029147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2183406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2183406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.068817206" sideWeight="0.66629833" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048780486" sideWeight="0.33370167" order="11" side_tool="true" content_ui="tabs" />
@@ -3186,7 +3187,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CAN KONECNE FUGUJE !!!!!!&#10;&#10;TO DO: test the incomming signals from RT , find out how to set direction of rotation, change LE to TE in working status,, calculate temperature and current in 0x226, and some other things with 0x226" />
     <MESSAGE value="GUI and menu of rotaty table OK.&#10;&#10;TO DO: find out how to set direction of rotation, calculate temperature and current in 0x226" />
     <MESSAGE value="DONE: timer working&#10;&#10;TO DO: find out how to set direction of rotation,  set values to be displayed in timer" />
     <MESSAGE value="DONE: timer working - set values to be displayed in timer&#10;&#10;TO DO: find out how to set direction of rotation," />
@@ -3211,7 +3211,8 @@
     <MESSAGE value="SENSODRIVE - MOVEIT spolupracuje s GUI a aj s kockami!!! **DOLADENE POLOHY**" />
     <MESSAGE value="SENSODRIVE - uprava PID controlera" />
     <MESSAGE value="SENSODRIVE - SCARA simulation with REAL RT !!!!! FINAL!!!!!&#10;-Modified RT gui and rt menu&#10;-SCARA menu - added publisher for RT control" />
-    <option name="LAST_COMMIT_MESSAGE" value="SENSODRIVE - SCARA simulation with REAL RT !!!!! FINAL!!!!!&#10;-Modified RT gui and rt menu&#10;-SCARA menu - added publisher for RT control" />
+    <MESSAGE value="SENSODRIVE - FINAL COMMIT !!!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="SENSODRIVE - FINAL COMMIT !!!!!!!" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -3616,8 +3617,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rotary_table_gui/src/mainwindow.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="295" column="0" lean-forward="false" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="307" column="4" lean-forward="false" selection-start-line="307" selection-start-column="4" selection-end-line="307" selection-end-column="4" />
           <folding />
         </state>
       </provider>

@@ -306,6 +306,7 @@ void MainWindow::on_smooth_minusHalf_PB_clicked(){
     rotate_DEC_pub.publish(pose_velocity_direction_msg);
     //ROS_INFO_STREAM(pose_velocity_direction_msg);
 
+
 }
 
 void MainWindow::on_smooth_minusOne_PB_clicked(){
